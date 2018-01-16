@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+
+		<agreement id="agr28824.etf">
+			<agreementId id="agr28824.id">2562</agreementId>
+		</agreement>
+
+		<exposureEventDetail id="model">
+			<column>Model</column>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="agr28824.event">
+		</exposureEventDetail>
+
+		<exposureEventDetail id="VMDelivery.agreementRequirement.611550.80">
+			<action>VM Delivery(Excess)</action>
+			<agreementRequirement>-611,550.80</agreementRequirement>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="VMCall.agreementRequirement.1388449.21">
+			<action>VM Call(Deficit)</action>
+			<agreementRequirement>1,388,449.21</agreementRequirement>
+			<model>o1</model>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="VMDelivery.agreementRequirement.2000000.01">
+			<action>VM Delivery(Excess)</action>
+			<agreementRequirement>-2,000,000.01</agreementRequirement>
+			<model>o2</model>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="cashDelivery.agreementRequirement.1000000.01">
+			<action>Cash Delivery(Excess)</action>
+			<agreementRequirement>-1,000,000.01</agreementRequirement>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="cashDelivery.agreementRequirement.2000000.01">
+			<action>Cash Delivery(Excess)</action>
+			<agreementRequirement>-2,000,000.01</agreementRequirement>
+			<model>o2</model>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="cashCall.agreementRequirement.1000000.00">
+			<action>Cash Call(Deficit)</action>
+			<agreementRequirement>1,000,000.00</agreementRequirement>
+			<model>o1</model>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="FeeDelivery.agreementRequirement.1036283.91">
+			<action>Fee Delivery(Excess)</action>
+			<agreementRequirement>-1,036,283.91</agreementRequirement>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="FeeDelivery.agreementRequirement.2000000.00">
+			<action>Fee Delivery(Excess)</action>
+			<agreementRequirement>-2,000,000.00</agreementRequirement>
+			<model>o2</model>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="FeeCall.agreementRequirement.963716.09">
+			<action>Fee Call(Deficit)</action>
+			<agreementRequirement>963,716.09</agreementRequirement>
+			<model>o1</model>
+		</exposureEventDetail>
+
+
+		<marginLetter id="createStatementNotificationLetter">
+			<letterType>Statement Notification</letterType>
+			<letterSetupDetails>
+				<emailAttachments>
+					<assetHoldingsandValuationReport>true</assetHoldingsandValuationReport>
+				</emailAttachments>
+			</letterSetupDetails>
+		</marginLetter>
+
+
+		<assetBookingSummary id="asset.type.CASH.EUR">
+			<assetType>CASH-EUR</assetType>
+		</assetBookingSummary>
+
+		<cashMovementSummary id="cash.eur.pay.fee.autobook.1440456">
+			<Amount>-1,440,456.00</Amount>
+			<movement>Pay</movement>
+			<bookingSource>Auto Book</bookingSource>
+			<bookingType>Fee</bookingType>
+			<status>System Draft</status>
+			<model>o2</model>
+		</cashMovementSummary>
+
+		<cashMovementSummary id="cash.eur.receive.fee.autobook.694095.31">
+			<Amount>694,095.31</Amount>
+			<movement>Receive</movement>
+			<bookingSource>Auto Book</bookingSource>
+			<bookingType>Fee</bookingType>
+			<status>System Draft</status>
+			<model>o1</model>
+		</cashMovementSummary>
+
+
+
+	</scenarioData>
+</dataBean>

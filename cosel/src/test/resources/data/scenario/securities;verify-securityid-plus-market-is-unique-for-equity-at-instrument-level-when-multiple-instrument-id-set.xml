@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <instrument id="equityinstrument">
+            <assetClass>qtp_equity</assetClass>
+            <assetType>qtp_equity_usd</assetType>
+            <instrumentId>
+            <type>ISIN</type>
+            <value id="equityinstrument.id" random="true"/>
+            </instrumentId>
+            <market>USA</market>
+            <instrumentId>
+            <type>CUSIP</type>
+            <value id="equityinstrument.id2" random="true"/>
+            </instrumentId>
+            <market>USA</market>
+            <description id="equityinstrument.des" random="true"/>
+            <issuer>
+            <filter>QTP_Eligible_Issuer4</filter>
+            <linkText>QTP_Eligible_Issuer4</linkText>
+            </issuer>
+            <maturityDate>T+100</maturityDate>
+            <priceSource>
+            <priceSourceName>Default</priceSourceName>
+            <dirtyPrice>1</dirtyPrice>
+            <lastPriceChange>T</lastPriceChange>
+            <priceDate>T</priceDate>
+            </priceSource>
+            <issueDate>T</issueDate>
+            <securityStatus>Approved</securityStatus>
+        </instrument>
+
+        <securitySearch id="equitySearch">
+            <instrument>
+            <type>Starting with</type>
+            <filter ref="equityinstrument.id"/>
+            <linkText ref="equityinstrument.id"/>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="equitySearchWillBeApproved">
+        <instrument ref="equityinstrument.id"/>
+        </securitySearchResult>
+
+        <securitySearch id="equitySearchId2">
+            <instrument>
+            <type>Starting with</type>
+            <filter ref="equityinstrument.id2"/>
+            <linkText ref="equityinstrument.id2"/>
+            </instrument>
+        </securitySearch>
+
+        <instrument id="equityinstrumentDuplicate">
+            <assetClass>qtp_equity</assetClass>
+            <assetType>qtp_equity_usd</assetType>
+            <instrumentId>
+            <type>RIC</type>
+            <value id="equityinstrument.id"/>
+            </instrumentId>
+            <market>USA</market>
+            <description id="equityinstrument.des" random="true"/>
+            <issuer>
+            <filter>QTP_Eligible_Issuer4</filter>
+            <linkText>QTP_Eligible_Issuer4</linkText>
+            </issuer>
+            <maturityDate>T+100</maturityDate>
+            <priceSource>
+            <priceSourceName>Default</priceSourceName>
+            <dirtyPrice>1</dirtyPrice>
+            <lastPriceChange>T</lastPriceChange>
+            <priceDate>T</priceDate>
+            </priceSource>
+            <issueDate>T</issueDate>
+            <securityStatus>Approved</securityStatus>
+        </instrument>
+
+        <instrument id="equityInstrumentISIN">
+            <assetClass>qtp_equity</assetClass>
+            <assetType>qtp_equity_usd</assetType>
+            <instrumentId>
+            <type>ISIN</type>
+            <value id="equityinstrument.id3" random="true" prefix="equity_"/>
+            </instrumentId>
+            <market>USA</market>
+            <description id="equityinstrument.des" random="true"/>
+            <issuer>
+            <filter>QTP_Eligible_Issuer4</filter>
+            <linkText>QTP_Eligible_Issuer4</linkText>
+            </issuer>
+            <maturityDate>T+100</maturityDate>
+            <priceSource>
+            <priceSourceName>Default</priceSourceName>
+            <dirtyPrice>1</dirtyPrice>
+            <lastPriceChange>T</lastPriceChange>
+            <priceDate>T</priceDate>
+            </priceSource>
+            <issueDate>T</issueDate>
+            <securityStatus>Approved</securityStatus>
+        </instrument>
+
+        <instrument id="equityInstrumentABC">
+            <assetClass>qtp_equity</assetClass>
+            <assetType>qtp_equity_usd</assetType>
+            <instrumentId>
+            <type>ABC</type>
+            <value id="equityInstrument.id3" random="true" prefix="equity_"/>
+            </instrumentId>
+            <market>RRR</market>
+            <description id="equityInstrument.des" random="true"/>
+            <issuer>
+            <filter>QTP_Eligible_Issuer4</filter>
+            <linkText>QTP_Eligible_Issuer4</linkText>
+            </issuer>
+            <maturityDate>T+100</maturityDate>
+            <priceSource>
+            <priceSourceName>Default</priceSourceName>
+            <dirtyPrice>1</dirtyPrice>
+            <lastPriceChange>T</lastPriceChange>
+            <priceDate>T</priceDate>
+            </priceSource>
+            <issueDate>T</issueDate>
+            <securityStatus>Approved</securityStatus>
+        </instrument>
+
+
+    </scenarioData>
+
+</dataBean>
+

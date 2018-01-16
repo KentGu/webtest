@@ -1,0 +1,892 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/etdagreement.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+
+        <stpConfigurations id="set.stp.on">
+            <enableStp>Yes</enableStp>
+            <stpRule>All</stpRule>
+        </stpConfigurations>
+        <cashflowRule id="cashflow.rule.partial.physical">
+            <cashflowRuleName id="cashflow.rule" random="true"/>
+            <cashflowField>
+                <cashflowFieldName>Upfront Fee</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>PAI</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Transfer Value</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Banked Coupon</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Initial Coupon</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Credit Event Cash Amount</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Succession Event Cash Amount</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Reset to Par</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>IM Interest</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>NDF Cashflow</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>CashflowMisc1</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>CashflowMisc2</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>CashflowMisc3</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Realised P&amp;L</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Unrealised P&amp;L</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Total Fees Cleared</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Realised P&amp;L ETD</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Commission &amp; Fees</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Option Premium</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Long Option Value</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Short Option Value</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>IM Securities Balance</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>IM Cash Balance</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>IM DCVM</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+        </cashflowRule>
+
+        <agreement id="add.member.etd.agreement.allow.adj.and.no.calc">
+            <principal>
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter>QTPPrincipal</filter>
+                <linkText>QTPPrincipal</linkText>
+            </principal>
+            <counterparty>
+                <criteria>Containing</criteria>
+                <type>Long Name</type>
+                <filter>QTPCounterparty</filter>
+                <linkText>QTPCounterparty</linkText>
+            </counterparty>
+            <businessLine>ETD</businessLine>
+            <!--<ccp ref="ccp.lch.name"/>-->
+            <principalRole>Member</principalRole>
+            <agreementDescription id="agr.desc.id" random="true" prefix="EtdAdjAgrDesc"/>
+            <agreementName random="true" prefix="EtdAdjAgrName"/>
+            <externalId id="agr.ext.id" random="true" prefix="EtdAdjAgrExtId"/>
+            <agreementDate>T</agreementDate>
+            <nettingIAandMtM>Not-Net</nettingIAandMtM>
+            <cashflowRule ref="cashflow.rule"/>
+            <defaultFund>Net DF/IM</defaultFund>
+            <fxRate>qtp_FxRate</fxRate>
+            <marginType>Hedge</marginType>
+            <statementCalc>No Calc</statementCalc>
+            <allowAdj>true</allowAdj>
+            <callFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </callFrequency>
+            <holidayCentre ref="hc.europe.name"/>
+            <model>
+                <modelCategory>
+                    <modelName>model1</modelName>
+                    <modelDecription>m1desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                    <modelBaseCurrency>USD</modelBaseCurrency>
+                    <masterModel>false</masterModel>
+                </modelCategory>
+                <modelCategory>
+                    <modelName>model2</modelName>
+                    <modelDecription>m2desc</modelDecription>
+                    <modelCategory>SEG</modelCategory>
+                    <modelBaseCurrency>GBP</modelBaseCurrency>
+                    <masterModel>false</masterModel>
+                </modelCategory>
+                <modelCategory>
+                    <modelName>model3</modelName>
+                    <modelDecription>m3desc</modelDecription>
+                    <modelCategory>abc</modelCategory>
+                    <modelBaseCurrency>EUR</modelBaseCurrency>
+                    <masterModel>false</masterModel>
+                </modelCategory>
+            </model>
+            <applicableBalanceInterestCalculation>Ending Balance</applicableBalanceInterestCalculation>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="cash.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="bond.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="bond.usd.name"/>
+                    <!--<applicableParty></applicableParty>-->
+                    <applicableType>IM</applicableType>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <!--<model>model1 sec</model>-->
+                <model>
+                    <modelName>model1</modelName>
+                    <modelDecription>m1desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>Cash</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter>Standard</filter>
+                    <linkText>Standard</linkText>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model1</modelName>
+                    <modelDecription>m1desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>IM</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model1</modelName>
+                    <modelDecription>m1desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>IM</bookingType>
+                <direction>Pledge In/Pledge Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model1</modelName>
+                    <modelDecription>m1desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>Cash Interest</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model1</modelName>
+                    <modelDecription>m1desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>IM Interest</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model1</modelName>
+                    <modelDecription>m1desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>Capital Charge</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model1</modelName>
+                    <modelDecription>m1desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>Physical Cashflow</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model2</modelName>
+                    <modelDecription>m2desc</modelDecription>
+                    <modelCategory>SEG</modelCategory>
+                </model>
+                <bookingType>Cash</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model2</modelName>
+                    <modelDecription>m2desc</modelDecription>
+                    <modelCategory>SEG</modelCategory>
+                </model>
+                <bookingType>IM</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model2</modelName>
+                    <modelDecription>m2desc</modelDecription>
+                    <modelCategory>SEG</modelCategory>
+                </model>
+                <bookingType>IM</bookingType>
+                <direction>Pledge In/Pledge Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model2</modelName>
+                    <modelDecription>m2desc</modelDecription>
+                    <modelCategory>SEG</modelCategory>
+                </model>
+                <bookingType>Cash Interest</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model2</modelName>
+                    <modelDecription>m2desc</modelDecription>
+                    <modelCategory>SEG</modelCategory>
+                </model>
+                <bookingType>IM Interest</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model2</modelName>
+                    <modelDecription>m2desc</modelDecription>
+                    <modelCategory>SEG</modelCategory>
+                </model>
+                <bookingType>Capital Charge</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model2</modelName>
+                    <modelDecription>m2desc</modelDecription>
+                    <modelCategory>SEG</modelCategory>
+                </model>
+                <bookingType>Physical Cashflow</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model3</modelName>
+                    <modelDecription>m3desc</modelDecription>
+                    <modelCategory>abc</modelCategory>
+                </model>
+                <bookingType>Cash</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model3</modelName>
+                    <modelDecription>m3desc</modelDecription>
+                    <modelCategory>abc</modelCategory>
+                </model>
+                <bookingType>IM</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model3</modelName>
+                    <modelDecription>m3desc</modelDecription>
+                    <modelCategory>abc</modelCategory>
+                </model>
+                <bookingType>IM</bookingType>
+                <direction>Pledge In/Pledge Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model3</modelName>
+                    <modelDecription>m3desc</modelDecription>
+                    <modelCategory>abc</modelCategory>
+                </model>
+                <bookingType>Cash Interest</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model3</modelName>
+                    <modelDecription>m3desc</modelDecription>
+                    <modelCategory>abc</modelCategory>
+                </model>
+                <bookingType>IM Interest</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model3</modelName>
+                    <modelDecription>m3desc</modelDecription>
+                    <modelCategory>abc</modelCategory>
+                </model>
+                <bookingType>Capital Charge</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model3</modelName>
+                    <modelDecription>m3desc</modelDecription>
+                    <modelCategory>abc</modelCategory>
+                </model>
+                <bookingType>Physical Cashflow</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementStatus>Pending</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <statementStatus>Approved</statementStatus>
+            <agreementId id="etd.allow.adj.no.calc.agreement.id"/>
+        </agreement>
+
+        <feedEtdBalances id="feed.etd.balance.for.model1">
+            <agreement_id></agreement_id>
+            <legal_id ref="agr.ext.id"/>
+            <principal></principal>
+            <counterparty></counterparty>
+            <system></system>
+            <prin_branch></prin_branch>
+            <cpty_branch></cpty_branch>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <cashflowPhysical>111</cashflowPhysical>
+            <initialCoupon>-100</initialCoupon>
+            <bankedCoupon>-100</bankedCoupon>
+            <pai>-100</pai>
+            <upfrontFee>-100</upfrontFee>
+            <unrealisedPandLCleared>-100</unrealisedPandLCleared>
+            <realisedPandLCleared>-100</realisedPandLCleared>
+            <totalFeesCleared>-100</totalFeesCleared>
+            <netPandLCleared>222</netPandLCleared>
+            <totalNetPandL>333</totalNetPandL>
+            <realisedPandLETD>-100</realisedPandLETD>
+            <commissionAndFees>-100</commissionAndFees>
+            <openingBalance>-100</openingBalance>
+            <optionPremium>-100</optionPremium>
+            <cashAmounts>-100</cashAmounts>
+            <endingBalance>444</endingBalance>
+            <OTE>-14000</OTE>
+            <TE>555</TE>
+            <LOV>-100</LOV>
+            <SOV>-100</SOV>
+            <NOV>666</NOV>
+            <NLV>777</NLV>
+            <IMR>100</IMR>
+            <MMR>-100</MMR>
+            <IM_SecuritiesBalance>-100</IM_SecuritiesBalance>
+            <IM_CashBalance>-100</IM_CashBalance>
+            <IM_DCVM>-100</IM_DCVM>
+            <ED>888</ED>
+            <DFR>-100</DFR>
+            <DF_Securities_Balance>-200</DF_Securities_Balance>
+            <DF_Cash_Balance>-300</DF_Cash_Balance>
+            <DF_ED>999</DF_ED>
+        </feedEtdBalances>
+
+        <feedResult id="feed.successful.1.unsuccessful.0">
+            <successfullyImported>1</successfullyImported>
+            <unsuccessfulImports>0</unsuccessfulImports>
+        </feedResult>
+
+        <exposureEventDetail id="expand.cashflow.agreement.level.1">
+            <action>Cashflow Delivery(Excess)</action>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="expand.cashflow.category.level.SEC.1">
+            <action>Cashflow Delivery(Excess)</action>
+            <modelCategory>SEC</modelCategory>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="model.level.model1.400" apply="true">
+            <modelCategory>SEC</modelCategory>
+            <model>model1</model>
+            <action>Cashflow Delivery(Excess)</action>
+            <sysCalculatedAmount>400.00</sysCalculatedAmount>
+            <eventId id="event.id1"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="model1.cashflow.delivery.excess.event.completed">
+            <action>Cashflow Delivery(Excess)</action>
+            <callStatus>Completed</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="expand.cashflow.agreement.level.2">
+            <action>Cashflow Call(Deficit)</action>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="expand.cashflow.category.level.SEC.2">
+            <action>Cashflow Call(Deficit)</action>
+            <modelCategory>SEC</modelCategory>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="model.level.model1.-400" apply="true">
+            <modelCategory>SEC</modelCategory>
+            <model>model1</model>
+            <action>Cashflow Call(Deficit)</action>
+            <sysCalculatedAmount>-400.00</sysCalculatedAmount>
+            <eventId id="event.id2"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="model1.cashflow.call.deficit.event.completed">
+            <action>Cashflow Call(Deficit)</action>
+            <callStatus>Completed</callStatus>
+        </exposureEventDetail>
+
+        <etdAgreementStatement id="select.model1">
+            <etdAssetHoldingSummary>
+                <agreementBaseCurrency>USD</agreementBaseCurrency>
+                <etdModelAndModelCategoryAssetHoldingSummary>
+                    <modelCategory>SEC</modelCategory>
+                    <model>model1</model>
+                    <desc>m1desc</desc>
+                </etdModelAndModelCategoryAssetHoldingSummary>
+            </etdAssetHoldingSummary>
+        </etdAgreementStatement>
+
+        <etdAgreementStatement id="expand.category.SEC.USD">
+            <etdAssetHoldingSummary>
+                <agreementBaseCurrency>USD</agreementBaseCurrency>
+                <etdModelAndModelCategoryAssetHoldingSummary>
+                    <modelCategory>SEC</modelCategory>
+                </etdModelAndModelCategoryAssetHoldingSummary>
+            </etdAssetHoldingSummary>
+        </etdAgreementStatement>
+
+        <assetBookingSummary id="CashUSDType">
+            <assetType>qtp_cash_usd</assetType>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="BondUSDType">
+            <assetType>qtp_bond_usd</assetType>
+        </assetBookingSummary>
+
+        <cashMovementDetail id="add.linked.event.cashflow.booking.wire.out">
+            <movementType>Wire Out</movementType>
+            <bookingType>Cashflow</bookingType>
+            <amount>-400</amount>
+            <event>Cashflow Delivery(Excess)</event>
+        </cashMovementDetail>
+
+        <cashMovementDetail id="add.linked.event.cashflow.booking.wire.in">
+            <movementType>Wire In</movementType>
+            <bookingType>Cashflow</bookingType>
+            <amount>400</amount>
+            <event>Cashflow Call(Deficit)</event>
+        </cashMovementDetail>
+
+        <agreementStatement id="model1.value.ed.pendinged.imsecurities.imcash.and.currented">
+            <marginCallCalculation>
+                <etdReq>
+                    <pendingExcessOrDeficit>888</pendingExcessOrDeficit>
+                    <imSecuritiesMarginExcessOrDeficit>-100</imSecuritiesMarginExcessOrDeficit>
+                    <imCashMarginExcessOrDeficit>-100</imCashMarginExcessOrDeficit>
+                    <currentExcessOrDeficit>888</currentExcessOrDeficit>
+                    <adj>
+                        <excessOrDeficit>
+                            <adjustmentAmount>888</adjustmentAmount>
+                        </excessOrDeficit>
+                    </adj>
+                </etdReq>
+            </marginCallCalculation>
+        </agreementStatement>
+
+        <agreementStatement id="modify.initial.coupon.adj.value.to.-200">
+            <marginCallCalculation>
+                <etdReq>
+                    <adj>
+                        <coupon>
+                            <adjustmentAmount>-200</adjustmentAmount>
+                            <comment>updatevalue</comment>
+                        </coupon>
+                    </adj>
+                </etdReq>
+            </marginCallCalculation>
+        </agreementStatement>
+
+        <agreementStatement id="modify.option.premium.adj.value.to.-300">
+            <marginCallCalculation>
+                <etdReq>
+                    <adj>
+                        <optionPremium>
+                            <adjustmentAmount>-300</adjustmentAmount>
+                            <comment>updatevalue</comment>
+                        </optionPremium>
+                    </adj>
+                </etdReq>
+            </marginCallCalculation>
+        </agreementStatement>
+
+        <agreementStatement id="modify.im.securities.adj.value.to.-400">
+            <marginCallCalculation>
+                <etdReq>
+                    <adj>
+                        <imSecuritiesBalance>
+                            <adjustmentAmount>-400</adjustmentAmount>
+                            <comment>updatevalue</comment>
+                        </imSecuritiesBalance>
+                    </adj>
+                </etdReq>
+            </marginCallCalculation>
+        </agreementStatement>
+
+        <agreementStatement id="modify.im.dcvm.adj.value.to.-500">
+            <marginCallCalculation>
+                <etdReq>
+                    <adj>
+                        <imDCVM>
+                            <adjustmentAmount>-500</adjustmentAmount>
+                            <comment>updatevalue</comment>
+                        </imDCVM>
+                    </adj>
+                </etdReq>
+            </marginCallCalculation>
+        </agreementStatement>
+
+        <agreementStatement id="model1.value.of.im.securities.changed.to.-400">
+            <marginCallCalculation>
+                <etdReq>
+                    <pendingExcessOrDeficit>888</pendingExcessOrDeficit>
+                    <imSecuritiesMarginExcessOrDeficit>-400</imSecuritiesMarginExcessOrDeficit>
+                    <imCashMarginExcessOrDeficit>-100</imCashMarginExcessOrDeficit>
+                    <currentExcessOrDeficit>888</currentExcessOrDeficit>
+                    <adj>
+                        <excessOrDeficit>
+                            <adjustmentAmount>888</adjustmentAmount>
+                        </excessOrDeficit>
+                    </adj>
+                </etdReq>
+            </marginCallCalculation>
+        </agreementStatement>
+
+        <bookingDetail id="add.booking1.cash.usd.cash.wire.in.100">
+            <assetType ref="cash.usd.name"/>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <cashAmount>100</cashAmount>
+                    <movement>Wire In</movement>
+                </bookingInformationDetail>
+                <settlementStatusInfo>
+                    <settlementStatus>Pending</settlementStatus>
+                </settlementStatusInfo>
+            </bookingInformation>
+            <save>save</save>
+        </bookingDetail>
+
+        <bookingDetail id="add.booking2.cash.usd.cash.wire.in.200">
+            <assetType ref="cash.usd.name"/>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <cashAmount>200</cashAmount>
+                    <movement>Wire In</movement>
+                </bookingInformationDetail>
+                <settlementStatusInfo>
+                    <settlementStatus>Pending</settlementStatus>
+                </settlementStatusInfo>
+            </bookingInformation>
+            <save>save</save>
+        </bookingDetail>
+
+        <assetBookingSummary id="edit.booking2">
+            <nominalAmount>200</nominalAmount>
+        </assetBookingSummary>
+
+        <bookingDetail id="approve.to.authorised.status">
+            <bookingInformation>
+                <settlementStatusInfo>
+                    <settlementStatus>Authorised</settlementStatus>
+                </settlementStatusInfo>
+            </bookingInformation>
+            <save>save</save>
+        </bookingDetail>
+
+        <bookingDetail id="approve.to.pending.release.status">
+            <bookingInformation>
+                <settlementStatusInfo>
+                    <settlementStatus>Pending Release</settlementStatus>
+                </settlementStatusInfo>
+            </bookingInformation>
+            <save>save</save>
+        </bookingDetail>
+
+        <bookingDetail id="approve.to.pending.settlement.status">
+            <bookingInformation>
+                <settlementStatusInfo>
+                    <settlementStatus>Pending Settlement</settlementStatus>
+                </settlementStatusInfo>
+            </bookingInformation>
+            <save>save</save>
+        </bookingDetail>
+
+        <bookingDetail id="approve.to.settled.status">
+            <bookingInformation>
+                <settlementStatusInfo>
+                    <settlementStatus>Settled</settlementStatus>
+                </settlementStatusInfo>
+            </bookingInformation>
+            <save>save</save>
+        </bookingDetail>
+
+        <bookingDetail id="add.booking3.cash.usd.im.wire.in.300">
+            <assetType ref="cash.usd.name"/>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <imAmount>300</imAmount>
+                    <movement>Wire In</movement>
+                </bookingInformationDetail>
+                <settlementStatusInfo>
+                    <settlementStatus>Pending</settlementStatus>
+                </settlementStatusInfo>
+            </bookingInformation>
+            <save>save</save>
+        </bookingDetail>
+
+        <assetBookingSummary id="edit.booking3">
+            <nominalAmount>300</nominalAmount>
+        </assetBookingSummary>
+
+        <bookingDetail id="add.booking4.cash.usd.im.wire.in.400">
+            <assetType ref="cash.usd.name"/>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <imAmount>400</imAmount>
+                    <movement>Wire In</movement>
+                </bookingInformationDetail>
+                <settlementStatusInfo>
+                    <settlementStatus>Pending</settlementStatus>
+                </settlementStatusInfo>
+            </bookingInformation>
+            <save>save</save>
+        </bookingDetail>
+
+        <assetBookingSummary id="edit.booking4">
+            <nominalAmount>400</nominalAmount>
+        </assetBookingSummary>
+
+        <bookingDetail id="add.booking5.bond.usd.pledge.in.500">
+            <assetType ref="bond.usd.name"/>
+            <instrumentSearch>
+                <instrumentId>
+                    <type>Starting with</type>
+                    <filter ref="bond.instrument1.name"/>
+                    <linkText ref="bond.instrument1.name"/>
+                </instrumentId>
+                <linkText ref="bond.instrument1.name"/>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <imAmount>500</imAmount>
+                    <movement>Pledge In</movement>
+                </bookingInformationDetail>
+                <settlementStatusInfo>
+                    <settlementStatus>Pending</settlementStatus>
+                </settlementStatusInfo>
+            </bookingInformation>
+            <save>save</save>
+        </bookingDetail>
+
+        <assetBookingSummary id="edit.booking5">
+            <assetType ref="bond.usd.name"/>
+            <nominalAmount>500</nominalAmount>
+        </assetBookingSummary>
+
+        <bookingDetail id="add.booking6.bond.usd.pledge.out.-100">
+            <assetType ref="bond.usd.name"/>
+            <instrumentSearch>
+                <instrumentId>
+                    <type>Starting with</type>
+                    <filter ref="bond.instrument1.name"/>
+                    <linkText ref="bond.instrument1.name"/>
+                </instrumentId>
+                <linkText ref="bond.instrument1.name"/>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <imAmount>100</imAmount>
+                    <movement>Pledge Out</movement>
+                </bookingInformationDetail>
+                <settlementStatusInfo>
+                    <settlementStatus>Pending</settlementStatus>
+                </settlementStatusInfo>
+            </bookingInformation>
+            <save>save</save>
+        </bookingDetail>
+
+        <assetBookingSummary id="edit.booking6">
+            <assetType ref="bond.usd.name"/>
+            <nominalAmount>-100</nominalAmount>
+        </assetBookingSummary>
+
+
+        <agreement id="approve.agreement.to.approved.status">
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+        <agreementStatement id="model1.value.of.pending.ed.-12.im.seurities.-800.im.cash.-800.changed">
+            <marginCallCalculation>
+                <etdReq>
+                    <pendingExcessOrDeficit>-12</pendingExcessOrDeficit>
+                    <imSecuritiesMarginExcessOrDeficit>-800</imSecuritiesMarginExcessOrDeficit>
+                    <imCashMarginExcessOrDeficit>-800</imCashMarginExcessOrDeficit>
+                    <currentExcessOrDeficit>888</currentExcessOrDeficit>
+                    <adj>
+                        <excessOrDeficit>
+                            <adjustmentAmount>888</adjustmentAmount>
+                        </excessOrDeficit>
+                    </adj>
+                </etdReq>
+            </marginCallCalculation>
+        </agreementStatement>
+
+    </scenarioData>
+</dataBean>

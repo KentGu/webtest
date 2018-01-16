@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/exposureManagement.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <agreement id="agr24368.fcm">
+            <agreementId id="agrid">2611</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="vm.nocall">
+            <action>IM ITM No Calls</action>
+            <callStatus>No Call Required</callStatus>
+            <agreementRequirement>0.00</agreementRequirement>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.call.agreementRequirement.4k">
+            <action>VM Call(Deficit)</action>
+            <callStatus>Pending Review</callStatus>
+            <agreementRequirement>4,000.00</agreementRequirement>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="tsa.delivery.agreementRequirement.4k">
+            <action>Cashflow Delivery(Excess)</action>
+            <callStatus>Pending Review</callStatus>
+            <agreementRequirement>-4,000.00</agreementRequirement>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="makeBooking">
+            <action apply="false">Make Booking</action>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="makeInstrumentBooking">
+            <action apply="false">Make Instrument Booking</action>
+        </exposureEventDetail>
+
+        <exposureEventSearch id="delivery.search">
+            <action>Delivery</action>
+        </exposureEventSearch>
+
+        <exposureEventSearch id="clearAction.search">
+            <action></action>
+        </exposureEventSearch>
+
+        <bookingDetail id="vm.call.value.4k">
+            <bookingInformation>
+                <bookingInformationDetail plusButtonIsDisplay="true" deleteButtonIsDisplay="true">                    <bookingMovement>VM Call(Deficit)</bookingMovement>
+                    <movement>Call</movement>
+                    <value>4,000.00</value>
+                    <requiredAmount>4,000.00</requiredAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="tsa.delivery.OtherCashAdjustments.pay.value.1m">
+            <bookingInformation>
+                <bookingInformationDetail plusButtonIsDisplay="false" deleteButtonIsDisplay="false">
+                    <bookingMovement>Cashflow Delivery(Excess)</bookingMovement>
+                    <movement>Pay</movement>
+                    <movementIsDisabled>true</movementIsDisabled>
+                    <component>Other Cash Adjustments</component>
+                    <componentIsDisabled>true</componentIsDisabled>
+                    <value>1,000.00</value>
+                    <requiredAmount>-1,000.00</requiredAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="tsa.delivery.BankedCoupon.pay.value.1m">
+            <bookingInformation>
+                <bookingInformationDetail plusButtonIsDisplay="false" deleteButtonIsDisplay="false">
+                    <bookingMovement>Cashflow Delivery(Excess)</bookingMovement>
+                    <movement>Pay</movement>
+                    <movementIsDisabled>true</movementIsDisabled>
+                    <component>Banked Coupon</component>
+                    <componentIsDisabled>true</componentIsDisabled>
+                    <value>1,000.00</value>
+                    <requiredAmount>-1,000.00</requiredAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="tsa.delivery.IMInterest.pay.value.1m">
+            <bookingInformation>
+                <bookingInformationDetail plusButtonIsDisplay="false" deleteButtonIsDisplay="false">
+                    <bookingMovement>Cashflow Delivery(Excess)</bookingMovement>
+                    <movement>Pay</movement>
+                    <movementIsDisabled>true</movementIsDisabled>
+                    <component>IM Interest</component>
+                    <componentIsDisabled>true</componentIsDisabled>
+                    <value>3,000.00</value>
+                    <requiredAmount>-3,000.00</requiredAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="tsa.delivery.UpfrontFee.receive.value.1m">
+            <bookingInformation>
+                <bookingInformationDetail plusButtonIsDisplay="false" deleteButtonIsDisplay="false">
+                    <bookingMovement>Cashflow Delivery(Excess)</bookingMovement>
+                    <movement>Receive</movement>
+                    <movementIsDisabled>true</movementIsDisabled>
+                    <component>Upfront Fee</component>
+                    <componentIsDisabled>true</componentIsDisabled>
+                    <value>1,000.00</value>
+                    <requiredAmount>1,000.00</requiredAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+
+        <bookingDetail id="tsa.delivery.OtherCashAdjustments.pay.notional.900">
+            <instrumentSearch>
+                <instrument>
+                    <filter>CASH-USD</filter>
+                    <!--<linkText>CASH-USD</linkText>-->
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Cashflow Delivery(Excess)</bookingMovement>
+                    <component>Other Cash Adjustments</component>
+                    <nominalAmount>900</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="tsa.delivery.BankedCoupon.pay.notional.1000">
+            <instrumentSearch>
+                <instrument>
+                    <filter>CASH-USD</filter>
+                    <!--<linkText>CASH-USD</linkText>-->
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Cashflow Delivery(Excess)</bookingMovement>
+                    <component>Banked Coupon</component>
+                    <nominalAmount>1000</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="tsa.delivery.IMInterest.pay.notional.3100">
+            <instrumentSearch>
+                <instrument>
+                    <filter>CASH-USD</filter>
+                    <!--<linkText>CASH-USD</linkText>-->
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Cashflow Delivery(Excess)</bookingMovement>
+                    <component>IM Interest</component>
+                    <nominalAmount>3100</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="tsa.delivery.UpfrontFee.receive.notional.1000">
+            <instrumentSearch>
+                <instrument>
+                    <filter>CASH-USD</filter>
+                    <!--<linkText>CASH-USD</linkText>-->
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Cashflow Delivery(Excess)</bookingMovement>
+                    <component>Upfront Fee</component>
+                    <nominalAmount>1000</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <exposureEventDetail id="tsa.delivery.agreementRequirement.4k.completed">
+            <action>Cashflow Delivery(Excess)</action>
+            <callStatus>Completed</callStatus>
+            <agreementRequirement>-4,000.00</agreementRequirement>
+        </exposureEventDetail>
+
+    </scenarioData>
+</dataBean>

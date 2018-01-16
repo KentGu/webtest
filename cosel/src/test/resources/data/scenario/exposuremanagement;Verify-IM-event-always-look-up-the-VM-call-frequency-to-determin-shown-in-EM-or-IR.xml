@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/exposureManagement.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <agreement id="agr28189.otc.not.net">
+            <agreementId id="agrid">2568</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="im.delivery.1m.checkLRFP.LRFD.NotifyBy.ResolveBy">
+            <action>IM Delivery</action>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <lrfp>Daily</lrfp>
+            <lrfd></lrfd>
+            <notifyBy>10:15 CET</notifyBy>
+            <resolveBy>14:00 CET Same Day</resolveBy>
+        </exposureEventDetail>
+
+        <internalReviewSearch id="agr28189.search.deliveryEvent">
+            <agreementId ref="agrid"/>
+            <tabPage>Delivery &amp; Return</tabPage>
+        </internalReviewSearch>
+
+        <internalReviewSummary variation="noRecord" id="internalReview.delivery.noRecord">
+        </internalReviewSummary>
+
+
+        <dailyExposureReportFilter id="report.searchbyAgr28189Description">
+            <agreementDescription>
+                <filter>28189_1</filter>
+            </agreementDescription>
+        </dailyExposureReportFilter>
+
+        <variable id="dailyExposureReportPath" />
+        <reportValidationRules id="dailyExposureReport.rule.sameAsIMCallScheduleSetting.daily">
+        <reportValidationRule>
+            <operator>=</operator>
+            <count>1</count>
+            <field>
+                <fieldName>Action</fieldName>
+                <value>IM Delivery</value>
+            </field>
+            <field>
+                <fieldName>LRFP</fieldName>
+                <value>Daily</value>
+            </field>
+            <field>
+                <fieldName>LRFD</fieldName>
+                <value></value>
+            </field>
+            <field>
+                <fieldName>Notification Time</fieldName>
+                <value>10:15 CET</value>
+            </field>
+            <field>
+                <fieldName>Resolve By</fieldName>
+                <value>14:00 CET Same Day</value>
+            </field>
+        </reportValidationRule>
+        </reportValidationRules>
+
+        <agreement id="agr28189.vmLegalReviewFrequencyDaily.imLegalReviewFrequencyMonthly">
+            <nettingIAandMtM>Not-Net</nettingIAandMtM>
+            <vmCallFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </vmCallFrequency>
+            <imCallFrequency>
+                <legalReviewFrequency>Monthly_1st</legalReviewFrequency>
+                <adjustType>RollBackward</adjustType>
+            </imCallFrequency>
+        </agreement>
+
+        <agreement id="agr28189">
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+        <exposureEventDetail apply="false" id="im.delivery.event.notDisplay">
+            <action>IM Delivery</action>
+        </exposureEventDetail>
+
+        <internalReviewSummary id="internalReview.delivery.checkLRFP.LRFD.NotifyBy.ResolveBy.sameAsIMCallScheduleSetting">
+            <action>IM Delivery</action>
+            <lrfp>Monthly</lrfp>
+            <lrfd>1st Mon</lrfd>
+            <notifyBy>10:15 CET</notifyBy>
+            <resolveBy>14:00 CET Same Day</resolveBy>
+        </internalReviewSummary>
+
+        <variable id="dailyExposureReportPath2" />
+        <reportValidationRules id="dailyExposureReport.rule.sameAsIMCallScheduleSetting.monthly">
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Action</fieldName>
+                    <value>IM Delivery</value>
+                </field>
+                <field>
+                    <fieldName>LRFP</fieldName>
+                    <value>Monthly</value>
+                </field>
+                <field>
+                    <fieldName>LRFD</fieldName>
+                    <value>1st Mon</value>
+                </field>
+                <field>
+                    <fieldName>Notification Time</fieldName>
+                    <value>10:15 CET</value>
+                </field>
+                <field>
+                    <fieldName>Resolve By</fieldName>
+                    <value>14:00 CET Same Day</value>
+                </field>
+            </reportValidationRule>
+        </reportValidationRules>
+
+        <!--<variable id="dailyExposureReportPath2" />-->
+        <!--<reportValidationRules id="dailyExposureReport.rule.sameAsIMCallScheduleSetting.monthly">-->
+            <!--<reportValidationRule>-->
+                <!--<operator>=</operator>-->
+                <!--<count>1</count>-->
+                <!--<field>-->
+                    <!--<fieldName>Action</fieldName>-->
+                    <!--<value>IM Delivery</value>-->
+                <!--</field>-->
+                <!--<field>-->
+                    <!--<fieldName>LRFP</fieldName>-->
+                    <!--<value>Daily</value>-->
+                <!--</field>-->
+                <!--<field>-->
+                    <!--<fieldName>LRFD</fieldName>-->
+                    <!--<value></value>-->
+                <!--</field>-->
+                <!--<field>-->
+                    <!--<fieldName>Notification Time</fieldName>-->
+                    <!--<value>10:15 CET</value>-->
+                <!--</field>-->
+                <!--<field>-->
+                    <!--<fieldName>Resolve By</fieldName>-->
+                    <!--<value>14:00 CET Same Day</value>-->
+                <!--</field>-->
+            <!--</reportValidationRule>-->
+        <!--</reportValidationRules>-->
+
+
+
+    </scenarioData>
+</dataBean>

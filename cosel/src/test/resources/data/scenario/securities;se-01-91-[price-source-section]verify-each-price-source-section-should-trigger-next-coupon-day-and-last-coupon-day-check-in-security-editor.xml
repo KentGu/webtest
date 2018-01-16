@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+
+<scenarioData>
+        <instrument id="bondinstrument">
+            <assetClass>qtp_bond</assetClass>
+            <assetType>qtp_bond_usd</assetType>
+            <instrumentId>
+                <value id="bondinstrument.id" random="true" prefix="bond_"/>
+            </instrumentId>
+            <market>USA</market>
+            <description id="bondinstrument.des" random="true"/>
+            <issuer>
+                <filter>QTP_Eligible_Issuer4</filter>
+                <linkText>QTP_Eligible_Issuer4</linkText>
+            </issuer>
+            <maturityDate>T+100</maturityDate>
+            <currencyOfDenomination>USD</currencyOfDenomination>
+            <manuallyOverrideLastCouponDate>true</manuallyOverrideLastCouponDate>
+            <nextCouponDate>T</nextCouponDate>
+            <manuallyOverrideNextCouponDate>true</manuallyOverrideNextCouponDate>
+            <lastCouponDate>T+100</lastCouponDate>
+            <accrualBasis>Act/Act</accrualBasis>
+            <couponRate>0</couponRate>
+            <maturityDate>T</maturityDate>
+            <recordDate>T</recordDate>
+            <issueDate>T</issueDate>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <instrument id="bondinstrument.id">
+            <validationError>
+                <context>Last Coupon Date is not valid</context>
+            </validationError>
+            <validationError>
+                <context>Last Coupon Date is after Next Coupon Date</context>
+            </validationError>
+        </instrument>
+
+
+        <instrument id="bondinstrument2">
+            <assetClass>qtp_bond</assetClass>
+            <assetType>qtp_bond_usd</assetType>
+            <instrumentId>
+                <value id="bondinstrument.id" random="true" prefix="bond_"/>
+            </instrumentId>
+            <market>USA</market>
+            <description id="bondinstrument.des" random="true"/>
+            <issuer>
+                <filter>QTP_Eligible_Issuer4</filter>
+                <linkText>QTP_Eligible_Issuer4</linkText>
+            </issuer>
+            <maturityDate>T+100</maturityDate>
+            <currencyOfDenomination>USD</currencyOfDenomination>
+            <manuallyOverrideLastCouponDate>true</manuallyOverrideLastCouponDate>
+            <nextCouponDate>T+1</nextCouponDate>
+            <manuallyOverrideNextCouponDate>true</manuallyOverrideNextCouponDate>
+            <lastCouponDate>T</lastCouponDate>
+            <accrualBasis>Act/Act</accrualBasis>
+            <couponRate>0</couponRate>
+            <recordDate>T</recordDate>
+            <issueDate>T</issueDate>
+
+        </instrument>
+
+        <securitySearch id="SecuritySearch">
+            <instrument>
+                <type>Starting with</type>
+                <filter ref="bondinstrument.id"/>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="SearchWillBeApprovedBond">
+            <instrument ref="bondinstrument.id"/>
+        </securitySearchResult>
+
+        <securitySearchResult id="SearchSecurity">
+            <instrument ref="bondinstrument.id"/>
+        </securitySearchResult>
+
+
+    <instrument id="instrument.Check.CouponDaysCount">
+        <couponDayCount>0</couponDayCount>
+    </instrument>
+
+    <instrument id="instrument.edit">
+        <manuallyOverrideLastCouponDate>true</manuallyOverrideLastCouponDate>
+        <nextCouponDate>T</nextCouponDate>
+        <manuallyOverrideNextCouponDate>true</manuallyOverrideNextCouponDate>
+        <lastCouponDate>T+100</lastCouponDate>
+        <securityStatus>Save</securityStatus>
+    </instrument>
+
+    <instrument id="bondinstrument.id">
+        <validationError>
+            <context>Last Coupon Date is not valid</context>
+        </validationError>
+        <validationError>
+            <context>Last Coupon Date is after Next Coupon Date</context>
+        </validationError>
+    </instrument>
+
+    </scenarioData>
+
+
+        </dataBean>

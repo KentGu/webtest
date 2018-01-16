@@ -1,0 +1,66 @@
+Target DataBase: COLLINE2014_1_0_BASE_0423/creditderivative/@ora11g  172.20.20.34:1521
+1410845592.462,1410845712.237,External Exposures Reset 4,119.775,,
+1410845723.087,1410845783.802,Recalculate Workflow 1,60.715,,
+1410845796.119,1410845796.119,Recalculate based on Day change 1,0,,
+1410845809.784,1410845816.996,Recalculate Interest Manager 4,7.212,,
+1410845827.989,1410845827.989,Approve All Organisations 3,0,,
+1410845843.878,1410845843.878,Approve All Agreements 3,0,,
+1410845858.127,1410845858.127,Approve All Statements 7,0,,
+1410845873.353,1410847659.887,Auto Email Call/Recall 1,1786.534,,
+1410847670.536,1410847727.422,Auto Email Statement Notification 1,56.886,,
+Sorry, no more waiting. Import Counterparty Amount 3,  TIME_Execute = 800.310090162, TIME4TASKEXECUTION =800.
+1410847738.200,1410848538.510090162,Import Counterparty Amount 3,800.310090162s time out,,
+1410848549.632,1410848549.632,Auto Book Cash 1,0,,
+1410848564.084,1410849590.104,Auto Email Interest Statement 1,1026.020,,
+1410849600.806,1410855254.541,Distribute UDL 1,5653.735,,
+1410855265.590,1410855646.649,Recalculate Securities 1,381.059,,
+1410857458.452,1410857864.286,Recalculate Statements 1,405.834,,
+1410857875.555,1410857875.555,Process Outstanding 1,0,,
+1410857890.203,1410857890.203,Process Approve Trade Settlements 1,0,,
+1410857905.202,1410857905.202,Process Approve Settlements 4,0,,
+1410857920.077,1410857926.579,Net Older Collateral Bookings 1,6.502,,
+1410857937.178,1410858109.126,Settlement Risk 1,171.948,,
+1410858119.857,1410858142.976,Apply Effective and Maturity dates 1,23.119,,
+1410858154.233,1410858239.274,Dashboard Refresh 1,85.041,,
+1410858254.293,1410858254.293,Reset Total Settlement Amount 4,0,,
+1410858265.412,1410858265.412,Todays Events Reset 1,0,,
+1410858280.375,1410858280.375,Start-Up Dashboard Reset 1,0,,
+Sorry, no more waiting. Import Counterparty Amount 1,  TIME_Execute = 7200.678161171, TIME4TASKEXECUTION =7200.
+1410858295.433,1410865496.111161171,Import Counterparty Amount 1,7200.678161171s time out,,
+1410865506.671,1410865827.656,Import Organisations 3,320.985,,
+1410865839.126,1410865997.314,Import Organisations 4,158.188,,
+1410866008.346,1410867522.102,Import Agreements 2,1513.756,,
+Sorry, no more waiting. Import Agreement Ratings 1,  TIME_Execute = 500.716237777, TIME4TASKEXECUTION =500.
+1410867533.455,1410868034.171237777,Import Agreement Ratings 1,500.716237777s time out,,
+1410868044.703,1410868536.425,Import Agreement UDF 1,491.722,,
+1410872147.209,1410872211.534,Import Collateral Booking 3,64.325,,
+Sorry, no more waiting. Import Assets 1,  TIME_Execute = 400.630580983, TIME4TASKEXECUTION =400.
+1410872222.965,1410872623.595580983,Import Assets 1,400.630580983s time out,,
+Sorry, no more waiting. Import Asset Pricing 10,  TIME_Execute = 301.000507147, TIME4TASKEXECUTION =300.
+1410872634.152,1410872935.152507147,Import Asset Pricing 10,301.000507147s time out,,
+2014-09-16 09:09:10,2014-09-16 09:09:10,Import Asset Ratings 1,Not Triggered
+2014-09-16 09:09:35,2014-09-16 09:09:35,Import Inventory Manager 1,Not Triggered
+2014-09-16 09:10:00,2014-09-16 09:10:00,Import Repo/ETF/SBL Trades 1,Not Triggered
+2014-09-16 09:10:25,2014-09-16 09:10:25,Import Delta Repo/ETF/SBL Trades 1,Not Triggered
+2014-09-16 09:10:50,2014-09-16 09:10:50,Import Repo/ETF/SBL Trades 2,Not Triggered
+2014-09-16 09:11:15,2014-09-16 09:11:15,Import Repo/ETF/SBL MtM 1,Not Triggered
+2014-09-16 09:11:40,2014-09-16 09:11:40,Import Repo Settlement 1,Not Triggered
+2014-09-16 09:12:05,2014-09-16 09:12:05,Import Trades 1,Not Triggered
+2014-09-16 09:12:30,2014-09-16 09:12:30,Import Trades 2,Not Triggered
+2014-09-16 09:12:55,2014-09-16 09:12:55,Import Trades 3,Not Triggered
+2014-09-16 09:13:20,2014-09-16 09:13:20,Import Trades 4,Not Triggered
+2014-09-16 09:13:45,2014-09-16 09:13:45,Import MtM 1,Not Triggered
+2014-09-16 09:14:10,2014-09-16 09:14:10,Import Delta Inventory Manager 1,Not Triggered
+2014-09-16 09:14:35,2014-09-16 09:14:35,Import Delta Repo/ETF/SBL Trades 2,Not Triggered
+2014-09-16 09:15:00,2014-09-16 09:15:00,Import Delta Trade 2,Not Triggered
+2014-09-16 09:15:25,2014-09-16 09:15:25,Import Delta Trade 3,Not Triggered
+2014-09-16 09:15:51,2014-09-16 09:15:51,Import External Independent Amounts 5,Not Triggered
+2014-09-16 09:16:16,2014-09-16 09:16:16,Import NAV 1,Not Triggered
+2014-09-16 09:16:41,2014-09-16 09:16:41,Import Portfolio TSA 1,Not Triggered
+2014-09-16 09:17:06,2014-09-16 09:17:06,Import Settlement Instructions 1,Not Triggered
+2014-09-16 09:17:31,2014-09-16 09:17:31,Remove Mature Assets 1,Not Triggered
+2014-09-16 09:17:56,2014-09-16 09:17:56,Remove Mature Trades 1,Not Triggered
+2014-09-16 09:18:21,2014-09-16 09:18:21,Reset Trading Inactive 1,Not Triggered
+2014-09-16 09:18:46,2014-09-16 09:18:46,Import FX Rates 3,Not Triggered
+2014-09-16 09:19:11,2014-09-16 09:19:11,Import Interest Rates 3,Not Triggered
+2014-09-16 09:19:36,2014-09-16 09:19:36,Empty Task,Not Triggered

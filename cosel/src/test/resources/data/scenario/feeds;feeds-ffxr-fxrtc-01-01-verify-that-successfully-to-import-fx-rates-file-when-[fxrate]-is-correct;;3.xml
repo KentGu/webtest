@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/feeds.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <fxRateSet id="base.fx.rate.set">
+            <fxRateSetName id="base.fx.rate.set.name" prefix="testing_" random="true"/>
+            <fxUpdatePermission id="base.fx.rate.set.permission">*</fxUpdatePermission>
+        </fxRateSet>
+
+        <feedFxRate id="feed.fx.rate.bid.0.5">
+            <fxRateSet ref="base.fx.rate.set.name"/>
+            <fxRate id="feed.fx.rate.1.bid">-0.5</fxRate>
+            <fxRateOffer id="feed.fx.rate.1.offer">0.8322</fxRateOffer>
+            <currency id="feed.fx.rate.1.riskccy">AUD</currency>
+            <rateType>Inverse</rateType>
+        </feedFxRate>
+
+        <fxRateSet id="check.fx.rate.bid.0.5">
+            <fxRateSetName ref="base.fx.rate.set.name"/>
+            <fxUpdatePermission ref="base.fx.rate.set.permission"/>
+            <fxRate>
+                <riskCurrency ref="feed.fx.rate.1.riskccy"/>
+                <bid ref="feed.fx.rate.1.bid"/>
+                <offer ref="feed.fx.rate.1.offer"/>
+                <rateType>Inverse</rateType>
+            </fxRate>
+        </fxRateSet>
+
+        <feedFxRate id="feed.fx.rate.bid.12345">
+            <fxRateSet ref="base.fx.rate.set.name"/>
+            <fxRate id="feed.fx.rate.2.bid">12345</fxRate>
+            <fxRateOffer id="feed.fx.rate.2.offer">0.1</fxRateOffer>
+            <currency id="feed.fx.rate.2.riskccy">AUD</currency>
+            <rateType>Inverse</rateType>
+        </feedFxRate>
+
+        <fxRateSet id="check.fx.rate.bid.12345">
+            <fxRateSetName ref="base.fx.rate.set.name"/>
+            <fxUpdatePermission ref="base.fx.rate.set.permission"/>
+            <fxRate>
+                <riskCurrency ref="feed.fx.rate.2.riskccy"/>
+                <bid ref="feed.fx.rate.2.bid"/>
+                <offer ref="feed.fx.rate.2.offer"/>
+                <rateType>Inverse</rateType>
+            </fxRate>
+        </fxRateSet>
+
+        <feedResult id="feed.success1">
+            <fileUploaded/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedResult id="feed.success2">
+            <fileUploaded/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+    </scenarioData>
+</dataBean>

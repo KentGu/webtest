@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <securitySearch id="26619.bond.usd">
+            <matured>All</matured>
+            <instrument>
+                <filter id="26619.bond.usd.id">26619_bond_usd_1</filter>
+                <!--<linkText ref="26527.bond.usd"/>-->
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="26619.bond.usd.approve">
+            <instrument ref="26619.bond.usd.id"/>
+        </securitySearchResult>
+
+        <instrument id="26619.bond.usd.changeRecordDate.tMinus5.changeMaturityDate.tPlus5">
+            <recordDate>t-5</recordDate>
+            <maturityDate>t+5</maturityDate>
+        </instrument>
+
+        <securitySearch id="26619.equity.usd">
+            <matured>All</matured>
+            <instrument>
+                <filter id="26619.equity.usd.id">26619_equity_usd_1</filter>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="26619.equity.usd.approve">
+            <instrument ref="26619.equity.usd.id"/>
+        </securitySearchResult>
+
+        <instrument id="26619.equity.usd.changeRecordDate.tMinus10">
+            <recordDate>t-10</recordDate>
+        </instrument>
+
+        <agreement id="agr26619.otc.net">
+            <agreementId id="agrId">2664</agreementId>
+        </agreement>
+
+        <agreement id="equity.usd.EligibilityRule">
+            <collateralAssetClass name="equity.class">
+                <collateralAssetClassName>qtp_equity</collateralAssetClassName>
+                <collateralAssetType name="equity.type">
+                    <collateralAssetTypeName>qtp_equity_usd</collateralAssetTypeName>
+                    <!--<eligibilityRule>-->
+                        <!--<eligibleCurrency>GBP</eligibleCurrency>-->
+                    <!--</eligibilityRule>-->
+                </collateralAssetType>
+            </collateralAssetClass>
+        </agreement>
+
+        <agreement id="equity.usd.EligibilityRule.EligibleCurrencies.GBP">
+            <collateralAssetClass name="equity.class">
+                <collateralAssetClassName >qtp_equity</collateralAssetClassName>
+                <collateralAssetType name="equity.type">
+                    <collateralAssetTypeName>qtp_equity_usd</collateralAssetTypeName>
+                    <eligibilityRule>
+                        <eligibleCurrency>GBP</eligibleCurrency>
+                    </eligibilityRule>
+                </collateralAssetType>
+            </collateralAssetClass>
+        </agreement>
+
+        <agreement id="agr26619">
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Approved</statementStatus>
+         </agreement>
+
+        <substitutionEventSearch id="agr26619.recall">
+            <agreementId ref="agrId"/>
+            <substitution>Recall</substitution>
+        </substitutionEventSearch>
+
+        <substitutionEventDetail id="equity.usd">
+            <instrumentId id="equ.usd.id">26619_equity_usd_1,m1</instrumentId>
+        </substitutionEventDetail>
+
+        <substitutionEventDetail id="bond.usd">
+            <instrumentId id="bond.usd.id">26619_bond_usd_1,m1</instrumentId>
+        </substitutionEventDetail>
+
+        <substitutionEventDetail id="cash.usd">
+            <instrumentId ref="cash.usd1.name"/>
+        </substitutionEventDetail>
+
+        <exposureEventDetail id="source">
+            <column>Source</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="sub">
+            <column>Sub</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subReq.agreementRequirement.2m.source.System">
+            <action>Substitution Request</action>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <source>System</source>
+            <element ref="equ.usd.id"/>
+            <sub variation="circle"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subCon.agreementRequirement.-2m.source.System">
+            <action>Substitution Confirmation</action>
+            <agreementRequirement>-2,000,000.00</agreementRequirement>
+            <source>System</source>
+            <element ref="equ.usd.id"/>
+            <sub variation="circle"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subCon.agreementRequirement.-3m.source.System">
+            <action>Substitution Confirmation</action>
+            <agreementRequirement>-3,000,000.00</agreementRequirement>
+            <source>System</source>
+            <element ref="equ.usd.id"/>
+            <sub variation="circle"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subCon.agreementRequirement.-1.5m.source.System">
+            <action>Substitution Confirmation</action>
+            <agreementRequirement>-1,500,000.00</agreementRequirement>
+            <source>System</source>
+            <element ref="bond.usd.id"/>
+            <sub variation="circle"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subReq.agreementRequirement.1.5m.source.System">
+            <action>Substitution Request</action>
+            <agreementRequirement>1,500,000.00</agreementRequirement>
+            <source>System</source>
+            <element ref="bond.usd.id"/>
+            <sub variation="circle"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subReq.agreementRequirement.0.source.manual.element.bond">
+            <action>Substitution Request</action>
+            <agreementRequirement>0.00</agreementRequirement>
+            <source>Manual</source>
+            <element variation="multiple" ref="bond.usd.id"/>
+            <sub variation="circle"/>
+            <eventId id="subEvent.manual"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subReq.agreementRequirement.0.source.manual.element.equity">
+            <element variation="multiple" ref="equ.usd.id"/>
+            <eventId ref="subEvent.manual"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subReq.agreementRequirement.0.source.manual.element.cash">
+            <element variation="multiple" ref="cash.usd1.name"/>
+            <eventId ref="subEvent.manual"/>
+        </exposureEventDetail>
+
+        <assetBookingSummary id="asset.type.equity.usd">
+            <assetType ref="equity.usd.name"/>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="asset.type.CASH.USD">
+            <assetType ref="cash.usd1.name"/>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="equity.return.1m.Pending">
+            <assetType ref="equity.usd.name"/>
+            <instrumentId>26619_equity_usd_1</instrumentId>
+            <movement>Return</movement>
+            <nominalAmount>-1,000,000.00</nominalAmount>
+            <status>Pending</status>
+        </assetBookingSummary>
+
+        <bookingDetail id="equity.return.1m.ChangeToCancelled">
+            <bookingInformation>
+                <settlementStatusInfo>
+                    <settlementStatus>Cancelled</settlementStatus>
+                    <settlementComment>t</settlementComment>
+                </settlementStatusInfo>
+            </bookingInformation>
+            <save>save</save>
+        </bookingDetail>
+
+        <assetBookingSummary id="CASH.USD.delivery.3m">
+            <assetType ref="cash.usd1.name"/>
+            <movement>Delivery</movement>
+            <nominalAmount>3,000,000.00</nominalAmount>
+            <status>Pending</status>
+        </assetBookingSummary>
+        
+        <bookingDetail id="CASH.USD.delivery.4m">
+            <bookingInformation>
+                <settlementStatusInfo>
+                    <settlementStatus>Query</settlementStatus>
+                    <settlementComment>t</settlementComment>
+                </settlementStatusInfo>
+                <bookingInformationDetail>
+                    <nominalAmount>4m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <save>save</save>
+        </bookingDetail>
+
+    </scenarioData>
+</dataBean>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+
+        <taskSchedulerDetail id="task.scheduler.import.external.IA">
+            <type>Task Manager</type>
+            <taskName>Import External Independent Amounts</taskName>
+            <additionalInfo id="task.scheduler.import.external.IA.server.path">/home/ec2-user/TaskScheduler/ImportExternalIA</additionalInfo>
+        </taskSchedulerDetail>
+
+        <feedExternalIA id="task.feed.external.IA">
+            <AGREEMENTID></AGREEMENTID>
+            <legal_id></legal_id>
+            <PRODUCT></PRODUCT>
+            <AMOUNT></AMOUNT>
+            <CURRENCY></CURRENCY>
+            <ValuationDate></ValuationDate>
+            <externalSystem></externalSystem>
+            <scaleUp></scaleUp>
+            <Model></Model>
+            <payParty></payParty>
+        </feedExternalIA>
+
+        <feedExternalIA id="task.feed.modified.incorrect.staging.report">
+            <rowNumber>2</rowNumber>
+            <failureReason ref="failure.reason1"/>
+            <AGREEMENTID></AGREEMENTID>
+            <legal_id>F13658AgrForExtIAExtId</legal_id>
+            <PRODUCT>QTP</PRODUCT>
+            <AMOUNT></AMOUNT>
+            <CURRENCY></CURRENCY>
+            <ValuationDate></ValuationDate>
+            <externalSystem></externalSystem>
+            <scaleUp></scaleUp>
+            <Model></Model>
+            <payParty></payParty>
+        </feedExternalIA>
+
+        <feedExternalIA id="task.feed.modified.correct.staging.report">
+            <rowNumber>2</rowNumber>
+            <failureReason ref="failure.reason2"/>
+            <AGREEMENTID></AGREEMENTID>
+            <legal_id>F13658AgrForExtIAExtId</legal_id>
+            <PRODUCT>QTP</PRODUCT>
+            <AMOUNT>99.35</AMOUNT>
+            <CURRENCY></CURRENCY>
+            <ValuationDate></ValuationDate>
+            <externalSystem></externalSystem>
+            <scaleUp></scaleUp>
+            <Model></Model>
+            <payParty></payParty>
+        </feedExternalIA>
+
+        <reportValidationRules id="reportRule1">
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field><fieldName>Row number</fieldName><value>2</value></field>
+                <field><fieldName>Failure reason</fieldName><value id="failure.reason1">[Column: 4] amount - Field is compulsory but no value was found</value></field>
+                <field><fieldName>AGREEMENTID</fieldName><value></value></field>
+                <field><fieldName>legal_id</fieldName><value></value></field>
+                <field><fieldName>PRODUCT</fieldName><value></value></field>
+                <field><fieldName>AMOUNT</fieldName><value></value></field>
+                <field><fieldName>CURRENCY</fieldName><value></value></field>
+                <field><fieldName>ValuationDate</fieldName><value></value></field>
+                <field><fieldName>externalSystem</fieldName><value></value></field>
+                <field><fieldName>scaleUp</fieldName><value></value></field>
+                <field><fieldName>Model</fieldName><value></value></field>
+                <field><fieldName>payParty</fieldName><value></value></field>
+            </reportValidationRule>
+        </reportValidationRules>
+
+        <reportValidationRules id="reportRule2">
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field><fieldName>Row number</fieldName><value>2</value></field>
+                <field><fieldName>Failure reason</fieldName><value id="failure.reason2">[Column: 4] amount - Field is compulsory but no value was found</value></field>
+                <field><fieldName>AGREEMENTID</fieldName><value></value></field>
+                <field><fieldName>legal_id</fieldName><value>F13658AgrForExtIAExtId</value></field>
+                <field><fieldName>PRODUCT</fieldName><value>QTP</value></field>
+                <field><fieldName>AMOUNT</fieldName><value></value></field>
+                <field><fieldName>CURRENCY</fieldName><value></value></field>
+                <field><fieldName>ValuationDate</fieldName><value></value></field>
+                <field><fieldName>externalSystem</fieldName><value></value></field>
+                <field><fieldName>scaleUp</fieldName><value></value></field>
+                <field><fieldName>Model</fieldName><value></value></field>
+                <field><fieldName>payParty</fieldName><value></value></field>
+            </reportValidationRule>
+        </reportValidationRules>
+
+        <variable id="badStagingFeedReportPath"/>
+
+        <badStagingFeedReportFilter id="search.by.feed.external.ia">
+            <feedTask>Feed External IA</feedTask>
+        </badStagingFeedReportFilter>
+
+        <agreementSearchResult id = "search.agr.for.external.ia.feed.result">
+            <externalId>F13658AgrForExtIAExtId</externalId>
+        </agreementSearchResult>
+
+        <agreementSearch id = "search.agr.for.external.ia.feed">
+            <description>
+                <filter>F13658AgrForExtIADesc</filter>
+                <linkText>F13658AgrForExtIADesc</linkText>
+            </description>
+        </agreementSearch>
+
+        <agreementSearchResult id = "search.agr.for.external.ia.feed.result">
+            <externalId>F13658AgrForExtIAExtId</externalId>
+        </agreementSearchResult>
+
+        <agreementSummary id="external.ia.amount.99.35">
+            <collateralisedPortfolioDetails>
+                <product>
+                    <productName>QTP</productName>
+                    <upfrontCalculationMethodology>External IA</upfrontCalculationMethodology>
+                    <externalIADetail>
+                        <fixedValue>99.35</fixedValue>
+                    </externalIADetail>
+                </product>
+            </collateralisedPortfolioDetails>
+        </agreementSummary>
+
+        <variable id="file.name"/>
+
+        <taskSchedulerMessage id="task.scheduler.successful">
+            <message>Import External IA: Imported 1 External IA from :(\S+).xls</message>
+        </taskSchedulerMessage>
+
+    </scenarioData>
+</dataBean>

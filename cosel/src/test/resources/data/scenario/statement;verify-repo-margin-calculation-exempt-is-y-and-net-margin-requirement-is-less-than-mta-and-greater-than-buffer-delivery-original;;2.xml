@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns=""
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+		<agreementSearch id="filter.agmt.description">
+			<description><filter>32743_agmt</filter></description>
+		</agreementSearch>
+		<agreementSearchResult id="agreement.description">
+			<description>32743_agmt</description>
+		</agreementSearchResult>
+
+		<agreementExposureSummary id="reverse.repo">
+			<productList>
+				<productType>qtp_Pro2</productType>
+			</productList>
+		</agreementExposureSummary>
+
+		<tradeDetail id="reverse.repo.trade1.n">
+			<tradeInformation>
+				<tradeDate>t-1</tradeDate>
+				<startDate>t-1</startDate>
+				<endDate>t+100</endDate>
+				<tradeIdentifierPartyA id="trade1.ref" random="true" />
+				<partyABranchName ref="trade1.ref"/>
+				<partyBBranchName ref="trade1.ref"/>
+			</tradeInformation>
+			<securityInformation>
+				<instrumentId>
+					<filter>32743_ins1</filter>
+					<linkText>32743_ins1, m1, CUSIP</linkText>
+				</instrumentId>
+				<notional>7m</notional>
+				<haircut>100</haircut>
+			</securityInformation>
+			<cashInformation>
+				<cashAssetType>
+					<filter>CASH-USD</filter>
+					<linkText>CASH-USD</linkText>
+				</cashAssetType>
+				<openCash>0.1m</openCash>
+				<repoRate>100</repoRate>
+			</cashInformation>
+			<exposureInformation>
+				<valuationDate>T</valuationDate>
+			</exposureInformation>
+		</tradeDetail>
+
+		<tradeDetail id="trade1.detail.finra4210.haircut.buffer.-0.09m">
+			<securityInformation>
+				<finra4210HaircutBuffer>-90,000.00</finra4210HaircutBuffer>
+			</securityInformation>
+		</tradeDetail>
+		<tradeDetail id="trade2.detail.finra4210.haircut.buffer.-0.9m">
+			<securityInformation>
+				<finra4210HaircutBuffer>-900,000.00</finra4210HaircutBuffer>
+			</securityInformation>
+		</tradeDetail>
+		<tradeDetail id="trade3.detail.finra4210.haircut.buffer.0.09m">
+			<securityInformation>
+				<finra4210HaircutBuffer>90,000.00</finra4210HaircutBuffer>
+			</securityInformation>
+		</tradeDetail>
+		<tradeDetail id="trade4.detail.finra4210.haircut.buffer.0.9m">
+			<securityInformation>
+				<finra4210HaircutBuffer>900,000.00</finra4210HaircutBuffer>
+			</securityInformation>
+		</tradeDetail>
+
+		<agreementExposureSummary id="buy.sell">
+			<productList>
+				<productType>qtp_Pro3</productType>
+			</productList>
+		</agreementExposureSummary>
+
+		<tradeDetail id="buy.sell.trade2.n">
+			<tradeInformation>
+				<tradeDate>t-1</tradeDate>
+				<startDate>t-1</startDate>
+				<endDate>t+100</endDate>
+				<tradeIdentifierPartyA id="trade2.ref" random="true" />
+				<partyABranchName ref="trade2.ref"/>
+				<partyBBranchName ref="trade2.ref"/>
+			</tradeInformation>
+			<securityInformation>
+				<instrumentId>
+					<filter>32743_ins1</filter>
+					<linkText>32743_ins1, m1, CUSIP</linkText>
+				</instrumentId>
+				<notional>4m</notional>
+				<haircut>100</haircut>
+			</securityInformation>
+			<cashInformation>
+				<cashAssetType>
+					<filter>CASH-USD</filter>
+					<linkText>CASH-USD</linkText>
+				</cashAssetType>
+				<openCash>-1m</openCash>
+				<repoRate>100</repoRate>
+			</cashInformation>
+			<exposureInformation>
+				<valuationDate>T</valuationDate>
+			</exposureInformation>
+		</tradeDetail>
+
+		<agreementExposureSummary id="repo">
+			<productList>
+				<productType>qtp_Pro1</productType>
+			</productList>
+		</agreementExposureSummary>
+
+		<tradeDetail id="repo.trade3.y">
+			<tradeInformation>
+				<tradeDate>t-1</tradeDate>
+				<startDate>t-1</startDate>
+				<endDate>t+100</endDate>
+				<tradeIdentifierPartyA id="trade3.ref" random="true" />
+				<partyABranchName ref="trade3.ref"/>
+				<partyBBranchName ref="trade3.ref"/>
+			</tradeInformation>
+			<securityInformation>
+				<instrumentId>
+					<filter>32743_ins1</filter>
+					<linkText>32743_ins1, m1, CUSIP</linkText>
+				</instrumentId>
+				<notional>-2m</notional>
+				<haircut>100</haircut>
+				<tradeFinra4210Exempt>true</tradeFinra4210Exempt>
+			</securityInformation>
+			<cashInformation>
+				<cashAssetType>
+					<filter>CASH-USD</filter>
+					<linkText>CASH-USD</linkText>
+				</cashAssetType>
+				<openCash>0.1m</openCash>
+				<repoRate>100</repoRate>
+			</cashInformation>
+			<exposureInformation>
+				<valuationDate>T</valuationDate>
+			</exposureInformation>
+		</tradeDetail>
+		<agreementExposureSummary id="sell.buy">
+			<productList>
+				<productType>qtp_Pro4</productType>
+			</productList>
+		</agreementExposureSummary>
+
+		<tradeDetail id="sell.buy.trade4.y">
+			<tradeInformation>
+				<tradeDate>t-1</tradeDate>
+				<startDate>t-1</startDate>
+				<endDate>t+100</endDate>
+				<tradeIdentifierPartyA id="trade4.ref" random="true" />
+				<partyABranchName ref="trade4.ref"/>
+				<partyBBranchName ref="trade4.ref"/>
+			</tradeInformation>
+			<securityInformation>
+				<instrumentId>
+					<filter>32743_ins1</filter>
+					<linkText>32743_ins1, m1, CUSIP</linkText>
+				</instrumentId>
+				<notional>-3m</notional>
+				<haircut>100</haircut>
+				<tradeFinra4210Exempt>true</tradeFinra4210Exempt>
+			</securityInformation>
+			<cashInformation>
+				<cashAssetType>
+					<filter>CASH-USD</filter>
+					<linkText>CASH-USD</linkText>
+				</cashAssetType>
+				<openCash>1m</openCash>
+				<repoRate>100</repoRate>
+			</cashInformation>
+			<exposureInformation>
+				<valuationDate>T</valuationDate>
+			</exposureInformation>
+		</tradeDetail>
+
+		<agreementStatement id="statement.p.exempt.y.c.exempt.n.buffer0">
+			<exposureSummary>
+				<principalExempt>Y</principalExempt>
+				<counterpartyExempt>N</counterpartyExempt>
+				<principalFinra4210Buffer>0</principalFinra4210Buffer>
+				<counterpartyFinra4210Buffer>0</counterpartyFinra4210Buffer>
+			</exposureSummary>
+			<marginCallCalculation>
+				<repoReq>
+					<netMarginRequirement>-6,000,000.00</netMarginRequirement>
+				</repoReq>
+			</marginCallCalculation>
+		</agreementStatement>
+
+
+
+
+
+	</scenarioData>
+</dataBean>

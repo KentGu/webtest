@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/interestManager.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <agreement>
+            <principal>
+                <filter id="agreement.principal" ref="org.p1.lname"/>
+            </principal>
+            <counterparty>
+                <filter id="agreement.counterparty" ref="org.c1.lname"/>
+            </counterparty>
+            <agreementDescription id="agreement.description">T30911_Agreement_Description</agreementDescription>
+            <collateralAssetClass>
+                <collateralAssetClassName id="agreement.asset.class.name" ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName id="agreement.asset.type.name" ref="cash.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <agreementId id="agreement.id">1501</agreementId>
+        </agreement>
+
+        <interestEventSearch id="net.interest.event.search">
+            <description>
+                <type>Exactly matching</type>
+                <filter ref="agreement.description"/>
+                <linkText ref="agreement.description"/>
+            </description>
+            <monthRange>
+                <startMonth>3/2017</startMonth>
+                <endMonth>3/2017</endMonth>
+            </monthRange>
+        </interestEventSearch>
+
+        <interestEventDetail id="net.interest.event">
+            <tabName>Pay</tabName>
+            <eventId>6503</eventId>
+            <principal ref="agreement.principal"/>
+            <description ref="agreement.description"/>
+            <cashAssetType ref="agreement.asset.type.name"/>
+            <startDate>3/1/2017</startDate>
+            <endDate>4/3/2017</endDate>
+            <calculatedInterestAmount>-7,333.26</calculatedInterestAmount>
+            <whtAmount>0</whtAmount>
+            <interestSource>Net Interest</interestSource>
+            <agreedInterestAmount>-7333.26</agreedInterestAmount>
+            <agreedWHTAmount>0.00</agreedWHTAmount>
+            <!--<settlementDate>4/10/2017</settlementDate>-->
+            <resetDate>4/3/2017</resetDate>
+        </interestEventDetail>
+
+        <agreementSearch id="search.otc.net.interest.agreement">
+            <systemId ref="agreement.id"/>
+        </agreementSearch>
+
+        <agreementSearchResult id="search.result.otc.net.interest.agreement">
+            <agreementId ref="agreement.id"/>
+        </agreementSearchResult>
+
+        <assetBookingSummary id="qtp.cash.usd">
+            <assetType ref="cash.usd.name"/>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="call.cash.booking">
+            <bookingId>1001</bookingId>
+        </assetBookingSummary>
+
+        <bookingDetail id="flush.cash.booking">
+            <bookingInformation>
+                <flushed>true</flushed>
+            </bookingInformation>
+            <save>save</save>
+        </bookingDetail>
+    </scenarioData>
+</dataBean>

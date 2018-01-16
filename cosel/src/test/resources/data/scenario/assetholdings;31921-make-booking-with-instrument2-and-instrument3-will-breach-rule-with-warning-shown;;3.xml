@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+
+		<agreementSearch id="search.agreement.by.agreement.description">
+			<description>
+				<filter>31921agreement</filter>
+			</description>
+		</agreementSearch>
+
+		<agreementSearchResult id="agreement.search.result">
+			<description>31921agreement</description>
+		</agreementSearchResult>
+
+
+		<assetBookingSummary id="bondusd.type">
+			<assetType>qtp_equity_gbp</assetType>
+		</assetBookingSummary>
+
+
+		<bookingDetail id="booking.with.instrument3.call.1m">
+			<instrumentSearch>
+				<instrumentId>
+					<filter>31921equityinstrument3</filter>
+				</instrumentId>
+				<linkText>31921equityinstrument3</linkText>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>1m</nominalAmount>
+					<movement>Call</movement>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+		<eligibilityRuleBreached id="beached.rule.with.instrument3.eligibility.rule.not.met">
+			<instrumentId>31921equityinstrument3</instrumentId>
+			<rule>Instrument eligibility rule not met</rule>
+		</eligibilityRuleBreached>
+
+
+
+
+	</scenarioData>
+</dataBean>

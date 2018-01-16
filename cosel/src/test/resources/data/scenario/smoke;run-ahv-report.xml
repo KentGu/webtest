@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xsi:noNamespaceSchemaLocation="http://artifactory.london.lombardrisk.com:8081/artifactory/libs-snapshot-local/com/lombardrisk/cobiz/1.0.0-SNAPSHOT/cobiz-1.0.0-SNAPSHOT.jar!/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/smoke.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+
+        <agreement id="smoke.agreement.for.ahv">
+            <principal>
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter>AlexPrcPrimaryC</filter>
+                <linkText>AlexPrcPrimaryC</linkText>
+            </principal>
+            <counterparty>
+                <criteria>Containing</criteria>
+                <type>Long Name</type>
+                <filter>QTPCounterparty</filter>
+                <linkText>QTPCounterparty</linkText>
+            </counterparty>
+            <agreementDescription Id="smoke.agreement.for.ahv.desc" random="true" suffix="SmokeOTCagr4Desc"/>
+            <agreementName random="true"/>
+            <externalId random="true"/>
+            <agreementDate>T</agreementDate>
+            <nettingIAandMtM>Net</nettingIAandMtM>
+            <!--<grossCalc>Net</grossCalc>-->
+            <interestCalc>Net</interestCalc>
+            <callFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </callFrequency>
+            <holidayCentre ref="hc.europe.name"/>
+            <product id="pro1">
+                <productName ref="product.test1.name"/>
+            </product>
+            <!--<interest>true</interest>-->
+            <!--<interestCalculationsMethod>Simple</interestCalculationsMethod>-->
+            <!--<calculationRule>First of the Month</calculationRule>-->
+            <!--<payMethod>Physical Payment</payMethod>-->
+            <!--<receiveMethod>Capitalise</receiveMethod>-->
+            <!--<interestSettlementDate>T+2</interestSettlementDate>-->
+            <collateralAssetClass>
+                <collateralAssetClassName ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="cash.usd.name"/>
+                    <!--<interestRule>-->
+                    <!--<agreementRate ref="SmokeInterestRateName"/>-->
+                    <!--</interestRule>-->
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="bond.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="bond.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="equity.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="equity.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vcr.name"/>
+                    <linkText ref="payInstrBucket.vcr.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vrd.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.pay.name"/>
+                    <linkText ref="payInstrBucket.pay.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.rec.name"/>
+                    <linkText ref="payInstrBucket.rec.name"/>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementStatus>Pending</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <statementStatus>Approved</statementStatus>
+            <agreementId id="smoke.agreement.for.ahv.id"/>
+        </agreement>
+
+        <assetBookingSummary id="CashUSDType">
+            <assetType ref="cash.usd.name"/>
+        </assetBookingSummary>
+
+        <bookingDetail id="booking.ahv">
+            <assetType ref="cash.usd.name"/>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <nominalAmount>1000000</nominalAmount>
+                    <movement>Call</movement>
+                </bookingInformationDetail>
+                <settlementDate>T-31</settlementDate>
+            </bookingInformation>
+            <alertHandling>
+                <!--<content>[/s/S]*</content>-->
+                <accept>true</accept>
+            </alertHandling>
+            <save>save</save>
+            <bookingId id="booking.ahv.id"/>
+        </bookingDetail>
+
+        <assetHoldingsAndValuationReportFilter id="SearchAHVReportFilter">
+            <agreementDescription ref="smoke.agreement.for.ahv.desc"/>
+            <bookingType>--- ALL ---</bookingType>
+            <saveAsTemplate id="ahv.template1" random="true" preffix="smoketest"/>
+            <outputFormat>
+                <internalValue>Agreement</internalValue>
+                <displayValue>Agreement</displayValue>
+                <displayOrder>Column 1</displayOrder>
+                <groupLevel>Group Level 2</groupLevel>
+            </outputFormat>
+            <outputFormat>
+                <internalValue>Agreement Category</internalValue>
+                <displayValue>Agreement Category</displayValue>
+                <displayOrder>Column 2</displayOrder>
+                <groupLevel>Group Level 3</groupLevel>
+            </outputFormat>
+            <outputFormat>
+                <internalValue>Agreement Name</internalValue>
+                <displayValue>Agreement Name</displayValue>
+                <displayOrder>Column 3</displayOrder>
+            </outputFormat>
+        </assetHoldingsAndValuationReportFilter>
+
+        <variable id="ahvReportPath1" />
+        <savedReport id="ahvSaveReport1">
+            <reportResult>
+                <reportTypeName>Collateral Assets</reportTypeName>
+                <reportTemplateName>Asset Holdings and Valuation</reportTemplateName>
+                <reportId id="ahvReportId1"/>
+            </reportResult>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </savedReport>
+
+    </scenarioData>
+</dataBean>
+
+
+

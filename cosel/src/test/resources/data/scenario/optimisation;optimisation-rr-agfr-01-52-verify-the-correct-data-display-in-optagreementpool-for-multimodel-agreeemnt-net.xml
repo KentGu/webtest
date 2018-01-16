@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <fxRateSet>
+            <fxRateSetName>T27610_fxrate</fxRateSetName>
+            <fxRate>
+                <baseCurrency>USD</baseCurrency>
+                <riskCurrency>EUR</riskCurrency>
+                <bid>0.720228</bid>
+                <offer>0.720228</offer>
+                <rateType>Standard</rateType>
+            </fxRate>
+        </fxRateSet>
+
+        <agreement>
+            <agreementDescription id="agreement.description">T27610_Agreement_Description</agreementDescription>
+            <agreementId>2643</agreementId>
+        </agreement>
+
+        <optimisationRule id="opt.agreement.filter.rule">
+            <ruleName id="opt.agreement.filter.rule.name">T27610_Agreement_Filter</ruleName>
+            <optimisationFilterRuleAttribute>
+                <attributeName>Agreement Description</attributeName>
+                <attributeDetail>
+                    <operator>Equal</operator>
+                    <inputValue ref="agreement.description"/>
+                </attributeDetail>
+                <groupAndOr>End</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </optimisationRule>
+
+        <optimisationRule id="optimisation.rule">
+            <ruleName id="optimisation.rule.name">T27610_Opt_Rule</ruleName>
+            <dataParameters>
+                <agreementFilterRule>
+                    <filter ref="opt.agreement.filter.rule.name"/>
+                    <linkText ref="opt.agreement.filter.rule.name"/>
+                </agreementFilterRule>
+            </dataParameters>
+            <runParameters>
+                <algorithm>Rank Allocation</algorithm>
+            </runParameters>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </optimisationRule>
+
+        <optimisationRuleDetail id="run.optimisation.rule">
+            <ruleName ref="optimisation.rule.name"/>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </optimisationRuleDetail>
+
+        <databaseQuery id="check.opt.agreement.pool">
+            <sqlQuery>
+                <content>SELECT AGREEMENTID,ACTIONNAME,APPLICABILITY,REQUIREMENT,CURRENCY,FXSET,RANK FROM OptAgreementPool WHERE INVOCATIONRUNID = (SELECT max(INVOCATIONRUNID) FROM OPTAGREEMENTPOOL)</content>
+            </sqlQuery>
+            <resultId id="check.opt.agreement.pool.result.id"/>
+        </databaseQuery>
+
+        <databaseQueryResult id="opt.agreement.pool.result">
+            <resultId ref="check.opt.agreement.pool.result.id"/>
+            <databaseQueryResultRow>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName></databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue></databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+            </databaseQueryResultRow>
+        </databaseQueryResult>
+
+        <databaseQuery id="check.opt.booking.pool">
+            <sqlQuery>
+                <content>SELECT AGREEMENTID,ASSETID,BOOKED,APPLICABILITY FROM OPTBOOKING WHERE INVOCATIONRUNID = (SELECT max(INVOCATIONRUNID) FROM OPTBOOKING)</content>
+            </sqlQuery>
+            <resultId id="check.opt.booking.pool.result.id"/>
+        </databaseQuery>
+
+        <databaseQueryResult id="opt.booking.pool.result">
+            <resultId ref="check.opt.booking.pool.result.id"/>
+            <databaseQueryResultRow>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName></databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue></databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+            </databaseQueryResultRow>
+        </databaseQueryResult>
+
+    </scenarioData>
+</dataBean>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+
+		<agreement id="agr32126.notnet.templateNotApply.onlyTickPVForInstrument">
+			<agreementId id="agr32126.1.id">2552</agreementId>
+		</agreement>
+
+		<agreement id="agr32126.notnet.templateApply.onlyTickCVIForInstrument">
+			<agreementId id="agr32126.2.id">2553</agreementId>
+		</agreement>
+
+		<agreement id="agr32126.3">
+			<agreementId id="agr32126.3.id">2554</agreementId>
+		</agreement>
+
+		<agreement id="agr32126.4">
+			<agreementId id="agr32126.4.id">2555</agreementId>
+		</agreement>
+
+		<securitySearch id="instrument.bond.usd">
+			<instrument>
+				<filter>bond_usd_32126</filter>
+			</instrument>
+		</securitySearch>
+
+		<securitySearchResult id="instrument.bond.usd.searchResult">
+			<instrument>bond_usd_32126</instrument>
+		</securitySearchResult>
+
+		<instrument id="instrument.bond.usd.category.B">
+			<assetClassification>
+				<assetClassificationName id="ClassificationName.32124">TestAC_32124</assetClassificationName>
+				<assetcategory id="assetcategory.32124.B">B_32124</assetcategory>
+			</assetClassification>
+		</instrument>
+
+		<assetBookingSummary id="asset.type.bond.USD">
+			<assetType ref="bond.usd.name"/>
+		</assetBookingSummary>
+
+		<assetBookingSummary id="booking1.bond.USD.call.1m">
+			<assetType ref="bond.usd.name"/>
+			<movement>Call</movement>
+		</assetBookingSummary>
+		
+		<bookingDetail id="booking1.bond.USD.call.category.B">
+			<instrumentDetails>
+				<assetClassification>
+					<assetcategory ref="assetcategory.32124.B"/>
+					<assetClassificationName ref="ClassificationName.32124"/>
+				</assetClassification>
+			</instrumentDetails>
+		</bookingDetail>
+
+	<assetBookingSummary id="booking2.bond.USD.delivery.1m">
+		<assetType ref="bond.usd.name"/>
+		<movement>Delivery</movement>
+	</assetBookingSummary>
+
+		<bookingDetail id="booking2.bond.USD.delivery.category.B">
+			<instrumentDetails>
+				<assetClassification>
+					<assetcategory ref="assetcategory.32124.B"/>
+					<assetClassificationName ref="ClassificationName.32124"/>
+				</assetClassification>
+			</instrumentDetails>
+		</bookingDetail>
+
+		<instrument id="instrument.bond.usd.category.A">
+			<assetClassification>
+				<assetClassificationName id="ClassificationName.32124">TestAC_32124</assetClassificationName>
+				<assetcategory id="assetcategory.32124.A">A_32124</assetcategory>
+			</assetClassification>
+		</instrument>
+
+		<eligibilityRulesTemplateSearch id="ERT.32126">
+			<eligibilityRulesTemplateName>
+				<filter id="ERT.32126">ERT_32126</filter>
+				<linkText ref="ERT_32126"/>
+			</eligibilityRulesTemplateName>
+		</eligibilityRulesTemplateSearch>
+		
+		<eligibilityRulesTemplate id="ERT.categoryB.bond.usd.selectNullParty">
+			<templateName ref="ERT.32126"/>
+			<collateralAssetClassification>
+				<assetCategoryName ref="assetcategory.32124.B"/>
+			</collateralAssetClassification>
+		</eligibilityRulesTemplate>
+		
+		<eligibilityRulesTemplate id="ERT.categoryB.bond.usd.selectPV">
+			<collateralAssetClassification>
+				<assetCategoryName ref="assetcategory.32124.B"/>
+				<applicableParty>P</applicableParty>
+				<applicableType>VM</applicableType>
+			</collateralAssetClassification>
+			<alertHandling>
+				<accept>true</accept>
+			</alertHandling>
+			<alertHandling>
+				<accept>true</accept>
+			</alertHandling>
+		</eligibilityRulesTemplate>
+
+		<instrument id="errorMsg.agreementNotEligibleForAssetCategoryB">
+			<validationError>Cannot Change Asset Classification TestAC_32124, it has the following dependencies on 'Agreement Bookings': Dependent  AgreementId: 2556, AgreementId: 2557. The agreement is not eligible for Asset Category.</validationError>
+		</instrument>
+
+		<eligibilityRulesTemplate id="ERT.categoryB.bond.usd.selectPV.original">
+			<templateName ref="ERT.32126"/>
+			<collateralAssetClassification name="B_32124">
+				<assetCategoryName ref="assetcategory.32124.B"/>
+			</collateralAssetClassification>
+		</eligibilityRulesTemplate>
+
+		<eligibilityRulesTemplate id="ERT.categoryB.bond.usd.selectCI">
+			<collateralAssetClassification name="B_32124">
+				<assetCategoryName ref="assetcategory.32124.B"/>
+				<applicableParty>C</applicableParty>
+				<applicableType>IM</applicableType>
+			</collateralAssetClassification>
+			<alertHandling>
+				<accept>true</accept>
+			</alertHandling>
+			<alertHandling>
+				<accept>true</accept>
+			</alertHandling>
+		</eligibilityRulesTemplate>
+
+		<eligibilityRulesTemplate id="ERT.categoryB.bond.usd.selectCI.original">
+			<templateName ref="ERT.32126"/>
+			<collateralAssetClassification name="B_32124">
+				<assetCategoryName ref="assetcategory.32124.B"/>
+			</collateralAssetClassification>
+		</eligibilityRulesTemplate>
+
+		<eligibilityRulesTemplate id="ERT.categoryB.bond.usd.selectCV">
+			<collateralAssetClassification name="B_32124">
+				<assetCategoryName ref="assetcategory.32124.B"/>
+				<applicableParty>C</applicableParty>
+				<applicableType>VM</applicableType>
+			</collateralAssetClassification>
+			<alertHandling>
+				<accept>true</accept>
+			</alertHandling>
+			<alertHandling>
+				<accept>true</accept>
+			</alertHandling>
+		</eligibilityRulesTemplate>
+
+		<eligibilityRulesTemplate id="ERT.32126.approve">
+			<templateName ref="ERT_32126"/>
+		</eligibilityRulesTemplate>
+
+		<agreement id="agr32126.templateNotApply.3">
+		</agreement>
+
+		<agreement id="agr32126.templateApply.3">
+			<eligibilityRulesTemplate ref="ERT.32126"/>
+		</agreement>
+
+		<bookingDetail id="booking3.bond.usd.delivery.1m">
+			<assetType ref="bond.usd.name"/>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>1m</nominalAmount>
+					<movement>Delivery</movement>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>save</save>
+			<alertHandling>
+				<accept>true</accept>
+			</alertHandling>
+		</bookingDetail>
+
+		<agreement id="agr32126.templateNotApply.4">
+		</agreement>
+
+		<agreement id="agr32126.templateApply.4">
+			<eligibilityRulesTemplate ref="ERT.32126"/>
+		</agreement>
+
+		<bookingDetail id="booking4.bond.usd.delivery.1m">
+			<assetType ref="bond.usd.name"/>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>1m</nominalAmount>
+					<movement>Delivery</movement>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>save</save>
+			<alertHandling>
+				<accept>true</accept>
+			</alertHandling>
+		</bookingDetail>
+
+		<assetBookingSummary id="booking3.bond.USD.delivery.1m.open">
+			<assetType ref="bond.usd.name"/>
+			<movement>Delivery</movement>
+		</assetBookingSummary>
+
+		<bookingDetail id="booking3.bond.USD.delivery.category.B">
+			<instrumentDetails>
+				<assetClassification>
+					<assetcategory ref="assetcategory.32124.B"/>
+					<assetClassificationName ref="ClassificationName.32124"/>
+				</assetClassification>
+			</instrumentDetails>
+		</bookingDetail>
+
+		<assetBookingSummary id="booking4.bond.USD.delivery.1m.open">
+			<assetType ref="bond.usd.name"/>
+			<movement>Delivery</movement>
+		</assetBookingSummary>
+
+		<bookingDetail id="booking4.bond.USD.delivery.category.B">
+			<instrumentDetails>
+				<assetClassification>
+					<assetcategory ref="assetcategory.32124.B"/>
+					<assetClassificationName ref="ClassificationName.32124"/>
+				</assetClassification>
+			</instrumentDetails>
+		</bookingDetail>
+
+		<eligibilityRulesTemplate id="ERT.categoryA.bond.usd.selectCV">
+			<templateName ref="ERT.32126"/>
+			<collateralAssetClassification name="A_32124">
+				<assetCategoryName id="assetcategory.32124.A">A_32124</assetCategoryName>
+			</collateralAssetClassification>
+		</eligibilityRulesTemplate>
+
+		<eligibilityRulesTemplate id="ERT.categoryA.bond.usd.selectPandC">
+			<collateralAssetClassification name="A_32124">
+				<assetCategoryName id="assetcategory.32124.A">A_32124</assetCategoryName>
+				<applicableParty>P</applicableParty>
+				<applicableParty>C</applicableParty>
+				<applicableType>VM</applicableType>
+			</collateralAssetClassification>
+			<alertHandling>
+				<accept>true</accept>
+			</alertHandling>
+			<alertHandling>
+				<accept>true</accept>
+			</alertHandling>
+		</eligibilityRulesTemplate>
+
+		<securitySearchResult id="instrument.bond.usd.amended">
+			<instrument>bond_usd_32126</instrument>
+			<status>Amended</status>
+		</securitySearchResult>
+
+	</scenarioData>
+</dataBean>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+		<agreement id="agr32119.notnet">
+			<agreementId id="agr32119.id">2511</agreementId>
+		</agreement>
+
+		<assetBookingSummary id="asset.type.CASH.USD">
+			<assetType id="CASH.USD">CASH-USD</assetType>
+		</assetBookingSummary>
+
+
+		<bookingDetail id="booking1.cash.usd.call.vm.1000.1150.im.1000.1251.settlementDate.dayBeforeT">
+			<assetType ref="CASH.USD"/>
+			<bookingInformation>
+				<settlementDate>t-1</settlementDate>
+				<bookingInformationDetail>
+					<vmAmount>1000.1150</vmAmount>
+					<imAmount>1000.1251</imAmount>
+					<movement>Call</movement>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>save</save>
+			<alertHandling>
+				<accept>true</accept>
+			</alertHandling>
+		</bookingDetail>
+
+		<bookingDetail id="booking2.cash.usd.call.vm.2000.1250.im.2000.1150.settlementDate.t">
+			<assetType ref="CASH.USD"/>
+			<bookingInformation>
+				<settlementDate>t</settlementDate>
+				<bookingInformationDetail>
+					<vmAmount>2000.1250</vmAmount>
+					<imAmount>2000.1150</imAmount>
+					<movement>Call</movement>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>save</save>
+			<alertHandling>
+				<accept>true</accept>
+			</alertHandling>
+		</bookingDetail>
+
+		<bookingDetail id="booking3.cash.usd.call.vm.3000.1250.im.3000.1250.settlementDate.dayAfterT">
+			<assetType ref="CASH.USD"/>
+			<bookingInformation>
+				<settlementDate>t+1</settlementDate>
+				<bookingInformationDetail>
+					<vmAmount>3000.1250</vmAmount>
+					<imAmount>3000.1250</imAmount>
+					<movement>Call</movement>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>save</save>
+			<alertHandling>
+				<accept>true</accept>
+			</alertHandling>
+		</bookingDetail>
+
+		<agreement id="agr32119">
+			<agreementStatus>Pending</agreementStatus>
+			<agreementStatus>Approved</agreementStatus>
+			<statementStatus>Pending</statementStatus>
+			<statementStatus>Approved</statementStatus>
+		</agreement>
+
+		<exposureEventDetail id="return.agreementRequirement.12000.73">
+			<action>Return</action>
+			<agreementRequirement>-12,000.73</agreementRequirement>
+		</exposureEventDetail>
+
+		<bookingDetail id="goToBookingEditorPageWithoutSave">
+			<instrumentSearch>
+				<instrumentId>
+					<filter ref="CASH.USD"/>
+					<linkText ref="CASH.USD"/>
+				</instrumentId>
+			</instrumentSearch>
+			<save>notSaveOrCancel</save>
+		</bookingDetail>
+
+		<bookingDetail id="MaxVMReturnHolding.6000.36.MaxVMReturnAvailable.3000.24.MaxIMReturnHolding.6000.37.MaxIMReturnAvailable.3000.24">
+		<agreementOverview>
+			<maxVMReturnHolding>-6,000.36</maxVMReturnHolding>
+			<maxVMReturnAvailable>-3,000.24</maxVMReturnAvailable>
+			<maxIMReturnHolding>-6,000.37</maxIMReturnHolding>
+			<maxIMReturnAvailable>-3,000.24</maxIMReturnAvailable>
+		</agreementOverview>
+		</bookingDetail>
+
+		<bookingDetail id="AddBooking1.vm.3000.2451.im.3000.2451">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<vmAmount>3000.2451</vmAmount>
+					<imAmount>3000.2451</imAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>saveAndNext</save>
+		</bookingDetail>
+
+
+		<bookingDetail id="NominalAmountExceedRange.6000.48.VmExceedRange.3000.24.ImExceedRange.3000.24">
+			<validationError>
+				<context>Nominal Amount needs to be in the range of -6,000.48 to 6,000.48</context>
+			</validationError>
+			<validationError>
+				<context>VM Par Amount needs to be in the range of -3,000.24 to 3,000.24</context>
+			</validationError>
+			<validationError>
+				<context>IM Par Amount needs to be in the range of -3,000.24 to 3,000.24</context>
+			</validationError>
+		</bookingDetail>
+
+		<bookingDetail id="EditBooking1.settlementDate.t-1">
+			<bookingInformation>
+				<settlementDate>t-1</settlementDate>
+				<settlementDateAlertHandling>
+					<accept>true</accept>
+				</settlementDateAlertHandling>
+			</bookingInformation>
+			<save>notSaveOrCancel</save>
+		</bookingDetail>
+
+		<bookingDetail id="MaxVMReturnHolding.6000.36.MaxVMReturnAvailable.1000.12.MaxIMReturnHolding.6000.37.MaxIMReturnAvailable.1000.13">
+			<agreementOverview>
+				<maxVMReturnHolding>-6,000.36</maxVMReturnHolding>
+				<maxVMReturnAvailable>-1,000.12</maxVMReturnAvailable>
+				<maxIMReturnHolding>-6,000.37</maxIMReturnHolding>
+				<maxIMReturnAvailable>-1,000.13</maxIMReturnAvailable>
+			</agreementOverview>
+		</bookingDetail>
+
+		<bookingDetail id="EditBooking1.vm.1000.1251.im.1000.1350">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<vmAmount>1000.1251</vmAmount>
+					<imAmount>1000.1350</imAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>saveAndNext</save>
+			<alertHandling>
+				<accept>true</accept>
+			</alertHandling>
+		</bookingDetail>
+
+
+		<bookingDetail id="NominalAmountExceedRange.2000.25.VmExceedRange.1000.12.ImExceedRange.1000.13">
+			<validationError>
+				<context>Nominal Amount needs to be in the range of -2,000.25 to 2,000.25</context>
+			</validationError>
+			<validationError>
+				<context>VM Par Amount needs to be in the range of -1,000.12 to 1,000.12</context>
+			</validationError>
+			<validationError>
+				<context>IM Par Amount needs to be in the range of -1,000.13 to 1,000.13</context>
+			</validationError>
+		</bookingDetail>
+
+		<bookingDetail id="EditBooking1.settlementDate.tPlus1">
+			<bookingInformation>
+				<settlementDate>t+1</settlementDate>
+			</bookingInformation>
+			<save>notSaveOrCancel</save>
+		</bookingDetail>
+
+		<bookingDetail id="MaxVMReturnHolding.6000.36.MaxVMReturnAvailable.6000.36.MaxIMReturnHolding.6000.37.MaxIMReturnAvailable.6000.37">
+			<agreementOverview>
+				<maxVMReturnHolding>-6,000.36</maxVMReturnHolding>
+				<maxVMReturnAvailable>-6,000.36</maxVMReturnAvailable>
+				<maxIMReturnHolding>-6,000.37</maxIMReturnHolding>
+				<maxIMReturnAvailable>-6,000.37</maxIMReturnAvailable>
+			</agreementOverview>
+		</bookingDetail>
+
+		<bookingDetail id="EditBooking1.vm.6000.3651.im.6000.3750">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<vmAmount>6000.3651</vmAmount>
+					<imAmount>6000.3750</imAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>saveAndComplete</save>
+			<alertHandling>
+				<accept>true</accept>
+			</alertHandling>
+		</bookingDetail>
+
+		<bookingDetail id="NominalAmountExceedRange.12000.73.VmExceedRange.6000.36.ImExceedRange.6000.37">
+			<validationError>
+				<context>Nominal Amount needs to be in the range of -12,000.73 to 12,000.73</context>
+			</validationError>
+			<validationError>
+				<context>VM Par Amount needs to be in the range of -6,000.36 to 6,000.36</context>
+			</validationError>
+			<validationError>
+				<context>IM Par Amount needs to be in the range of -6,000.37 to 6,000.37</context>
+			</validationError>
+		</bookingDetail>
+
+		<bookingDetail id="EditBooking1.vm.6000.3650.im.6000.3651">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<vmAmount>6000.3650</vmAmount>
+					<imAmount>6000.3651</imAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>saveAndComplete</save>
+			<alertHandling>
+				<accept>true</accept>
+			</alertHandling>
+		</bookingDetail>
+
+		<exposureEventDetail id="event.return.callStatus.completed">
+			<action>Return</action>
+			<callStatus>Completed</callStatus>
+		</exposureEventDetail>
+
+	</scenarioData>
+</dataBean>

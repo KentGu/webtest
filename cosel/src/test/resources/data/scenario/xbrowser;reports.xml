@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/xbrowser.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <assetHoldingsAndValuationReportFilter id="ahvReport1">
+            <!--<principal>-->
+                <!--<criteria>Containing</criteria>-->
+                <!--<type>Code</type>-->
+                <!--<filter ref="org.p1.code"/>-->
+                <!--<linkText ref="org.p1.code"/>-->
+            <!--</principal>-->
+            <!--<counterparty>-->
+                <!--<criteria>Containing</criteria>-->
+                <!--<type>Code</type>-->
+                <!--<filter ref="org.c1.code"/>-->
+                <!--<linkText ref="org.c1.code"/>-->
+            <!--</counterparty>-->
+            <!--<assetType>-->
+                <!--<filter ref="cash.usd.name"/>-->
+                <!--<linkText ref="cash.usd.name"/>-->
+            <!--</assetType>-->
+            <assetType>
+                <filter>CASH-EUR</filter>
+                <linkText>CASH-EUR</linkText>
+            </assetType>
+            <!--<positionType>Held</positionType>-->
+            <!--<callStatus>Pending</callStatus>-->
+            <!--<bookingCategory>Collateral</bookingCategory>-->
+            <!--<bookingType>VM</bookingType>-->
+            <!--<bookingType>IM</bookingType>-->
+            <!--<agreementDescription>-->
+                <!--<filter>AHVreport</filter>-->
+                <!--<linkText>AHVreport</linkText>-->
+            <!--</agreementDescription>-->
+            <businessLine>OTC</businessLine>
+            <businessLine>--- ALL ---</businessLine>
+            <!--<ccp>-->
+                <!--<filter>LCH</filter>-->
+                <!--<linkText>LCH</linkText>-->
+            <!--</ccp>-->
+            <!--<ccp>-->
+                <!--<filter>ICE</filter>-->
+                <!--<linkText>ICE</linkText>-->
+            <!--</ccp>-->
+            <agreementBaseCurrency>USD</agreementBaseCurrency>
+            <agreementStatus>Draft</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <reportingCurrency>USD</reportingCurrency>
+            <!--<maturityDateFrom>12/06/2016</maturityDateFrom>-->
+            <!--<maturityDateTo>12/06/2099</maturityDateTo>-->
+            <!--<settlementDateFrom>12/06/2000</settlementDateFrom>-->
+            <!--<settlementDateTo>12/06/2099</settlementDateTo>-->
+            <!--<creationDateFrom>12/06/2000</creationDateFrom>-->
+            <!--<creationDateTo>12/06/2099</creationDateTo>-->
+            <region>R1</region>
+            <!--<group>smoke</group>-->
+            <!--<group>smoke2</group>-->
+            <!--<linkageSet>L1</linkageSet>-->
+            <!--<linkageSet>L2</linkageSet>-->
+            <!--<statementSet>-&#45;&#45;ALL-&#45;&#45;</statementSet>-->
+            <!--<custodian>QTPCustodian</custodian>-->
+            <!--<ssiValue check="true">-->
+                <!--<ssiHeader>Account Number</ssiHeader>-->
+                <!--<ssiValue>111</ssiValue>-->
+            <!--</ssiValue>-->
+            <!--<addtitionalInfo1>-->
+                <!--<type>Starting with</type>-->
+                <!--<filter>test</filter>-->
+                <!--<linkText>test</linkText>-->
+            <!--</addtitionalInfo1>-->
+            <!--<addtitionalInfo2>-->
+                <!--<type>Starting with</type>-->
+                <!--<filter>test</filter>-->
+                <!--<linkText>test</linkText>-->
+            <!--</addtitionalInfo2>-->
+            <!--<marginType>Net</marginType>-->
+            <!--<netBy>Bucket</netBy>-->
+            <!--<rehypothecated>Yes</rehypothecated>-->
+            <!--<includeSubAgreement></includeSubAgreement>-->
+            <!--<outputFormat>-->
+                <!--<internalValue>Linkage Set</internalValue>-->
+                <!--&lt;!&ndash;<displayValue>Issuer</displayValue>&ndash;&gt;-->
+                <!--<displayOrder>Column 1</displayOrder>-->
+            <!--</outputFormat>-->
+            <!--<outputFormat>-->
+                <!--<internalValue></internalValue>-->
+                <!--&lt;!&ndash;<displayValue>Description</displayValue>&ndash;&gt;-->
+                <!--<displayOrder>Column 1</displayOrder>-->
+            <!--</outputFormat>-->
+            <saveAsTemplate id="ahvtemplate1" random="true" />
+        </assetHoldingsAndValuationReportFilter>
+        <variable id="ahvtemplate1.id" ref="ahvtemplate1" />
+        <variable id="ahvReportPath" />
+        <savedReport id="ahvSaveReport1">
+            <reportResult>
+                <reportTypeName>Collateral Assets</reportTypeName>
+                <reportTemplateName>Asset Holdings and Valuation</reportTemplateName>
+                <reportId id="ahvReportId1"/>
+            </reportResult>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </savedReport>
+        <savedReport id="ahvSaveReport2">
+            <reportResult>
+                <reportTypeName>Collateral Assets</reportTypeName>
+                <reportTemplateName>Asset Holdings and Valuation</reportTemplateName>
+                <reportId>2554</reportId>
+            </reportResult>
+            <!--<reportResult>-->
+                <!--<reportId>2647</reportId>-->
+            <!--</reportResult>-->
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </savedReport>
+    </scenarioData>
+</dataBean>

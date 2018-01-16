@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+
+		<agreementSearch id="search.agreement.by.agreement.description">
+			<description>
+				<filter id="agrDesc1">21713_1</filter>
+			</description>
+		</agreementSearch>
+
+		<agreementSearchResult id="agreement.search.result">
+			<description ref="agrDesc1"/>
+		</agreementSearchResult>
+		<!--<agreement id="agreement.notnet.GrossIM1">-->
+			<!--<principal>-->
+				<!--<filter ref="org.p1.lname"/>-->
+				<!--<linkText ref="org.p1.lname"/>-->
+			<!--</principal>-->
+			<!--<counterparty>-->
+				<!--<filter ref="org.c1.lname"/>-->
+				<!--<linkText ref="org.c1.lname"/>-->
+			<!--</counterparty>-->
+			<!--<agreementDescription id="agr.desc" prefix="21713_notnet_GrossIM1"/>-->
+			<!--<agreementDate>T</agreementDate>-->
+			<!--<baseCurrency>USD</baseCurrency>-->
+			<!--<reciprocity>Bilateral</reciprocity>-->
+			<!--<nettingIAandMtM>Not-Net</nettingIAandMtM>-->
+			<!--<grossCalc>Gross IM</grossCalc>-->
+			<!--<vmCallFrequency>-->
+				<!--<legalReviewFrequency>Daily</legalReviewFrequency>-->
+			<!--</vmCallFrequency>-->
+			<!--<imCallFrequency>-->
+				<!--<legalReviewFrequency>Daily</legalReviewFrequency>-->
+			<!--</imCallFrequency>-->
+			<!--<holidayCentre ref="hc.europe.name"/>-->
+			<!--<product>-->
+				<!--<productName ref="product.test1.name"/>-->
+			<!--</product>-->
+			<!--<collateralAssetClass>-->
+				<!--<collateralAssetClassName>qtp_cash</collateralAssetClassName>-->
+				<!--<collateralAssetType>-->
+					<!--<collateralAssetTypeName>qtp_cash_usd</collateralAssetTypeName>-->
+				<!--</collateralAssetType>-->
+				<!--<collateralAssetType>-->
+					<!--<collateralAssetTypeName>CASH-USD</collateralAssetTypeName>-->
+				<!--</collateralAssetType>-->
+			<!--</collateralAssetClass>-->
+			<!--<settlementBucket>-->
+				<!--<bookingType>VM</bookingType>-->
+				<!--<direction>Call/Return</direction>-->
+				<!--<bucket>-->
+					<!--<filter ref="payInstrBucket.vcr.name"/>-->
+					<!--<linkText ref="payInstrBucket.vcr.name"/>-->
+				<!--</bucket>-->
+			<!--</settlementBucket>-->
+			<!--<settlementBucket>-->
+				<!--<bookingType>VM</bookingType>-->
+				<!--<direction>Delivery/Recall</direction>-->
+				<!--<bucket>-->
+					<!--<filter ref="payInstrBucket.vcr.name"/>-->
+					<!--<linkText ref="payInstrBucket.vcr.name"/>-->
+				<!--</bucket>-->
+			<!--</settlementBucket>-->
+			<!--<settlementBucket>-->
+				<!--<bookingType>IM</bookingType>-->
+				<!--<direction>Call/Return</direction>-->
+				<!--<bucket>-->
+					<!--<filter ref="payInstrBucket.vcr.name"/>-->
+					<!--<linkText ref="payInstrBucket.vcr.name"/>-->
+				<!--</bucket>-->
+			<!--</settlementBucket>-->
+			<!--<settlementBucket>-->
+				<!--<bookingType>IM</bookingType>-->
+				<!--<direction>Delivery/Recall</direction>-->
+				<!--<bucket>-->
+					<!--<filter ref="payInstrBucket.vcr.name"/>-->
+					<!--<linkText ref="payInstrBucket.vcr.name"/>-->
+				<!--</bucket>-->
+			<!--</settlementBucket>-->
+			<!--<settlementBucket>-->
+				<!--<bookingType>VM Interest</bookingType>-->
+				<!--<direction>Pay</direction>-->
+				<!--<bucket>-->
+					<!--<filter ref="payInstrBucket.pay.name"/>-->
+					<!--<linkText ref="payInstrBucket.pay.name"/>-->
+				<!--</bucket>-->
+			<!--</settlementBucket>-->
+			<!--<settlementBucket>-->
+				<!--<bookingType>VM Interest</bookingType>-->
+				<!--<direction>Receive</direction>-->
+				<!--<bucket>-->
+					<!--<filter ref="payInstrBucket.rec.name"/>-->
+					<!--<linkText ref="payInstrBucket.rec.name"/>-->
+				<!--</bucket>-->
+			<!--</settlementBucket>-->
+			<!--<settlementBucket>-->
+				<!--<bookingType>IM Interest</bookingType>-->
+				<!--<direction>Pay</direction>-->
+				<!--<bucket>-->
+					<!--<filter ref="payInstrBucket.pay.name"/>-->
+					<!--<linkText ref="payInstrBucket.pay.name"/>-->
+				<!--</bucket>-->
+			<!--</settlementBucket>-->
+			<!--<settlementBucket>-->
+				<!--<bookingType>IM Interest</bookingType>-->
+				<!--<direction>Receive</direction>-->
+				<!--<bucket>-->
+					<!--<filter ref="payInstrBucket.rec.name"/>-->
+					<!--<linkText ref="payInstrBucket.rec.name"/>-->
+				<!--</bucket>-->
+			<!--</settlementBucket>-->
+			<!--<letterAndDeliveryGroupDetails>-->
+				<!--<letterDistributionMedium>Email</letterDistributionMedium>-->
+			<!--</letterAndDeliveryGroupDetails>-->
+			<!--<agreementId id="agmt.id"/>-->
+		<!--</agreement>-->
+
+		<agreementExposureSummary id="product.qtp">
+			<productList>
+				<productType ref="product.test1.name" />
+			</productList>
+		</agreementExposureSummary>
+
+		<tradeDetail id="trade1.cptyAmount.2k">
+			<tradeInformation>
+				<tradeDate>T</tradeDate>
+				<maturityDate>T+1000</maturityDate>
+				<effectiveDate>T</effectiveDate>
+				<tradeIdentifierPartyA random="true"/>
+				<partyABranchName>a</partyABranchName>
+				<partyBBranchName>b</partyBBranchName>
+			</tradeInformation>
+			<valuationInformation>
+				<counterPartyValuationAmount>
+					<amount>2000</amount>
+				</counterPartyValuationAmount>
+				<valuationDate>T</valuationDate>
+			</valuationInformation>
+			<collateralInformation>
+				<dealLevelUpfront>true</dealLevelUpfront>
+				<dealLevelType>Independent Amount</dealLevelType>
+				<dealLevelAmount>-5000</dealLevelAmount>
+			</collateralInformation>
+		</tradeDetail>
+		<tradeDetail id="trade2.cptyAmount.5k">
+			<tradeInformation>
+				<tradeDate>T</tradeDate>
+				<maturityDate>T+1000</maturityDate>
+				<effectiveDate>T</effectiveDate>
+				<tradeIdentifierPartyA random="true"/>
+				<partyABranchName>a</partyABranchName>
+				<partyBBranchName>b</partyBBranchName>
+			</tradeInformation>
+			<valuationInformation>
+				<counterPartyValuationAmount>
+					<amount>5000</amount>
+				</counterPartyValuationAmount>
+				<valuationDate>T</valuationDate>
+			</valuationInformation>
+			<collateralInformation>
+				<dealLevelUpfront>true</dealLevelUpfront>
+				<dealLevelType>Independent Amount</dealLevelType>
+				<dealLevelAmount>1000</dealLevelAmount>
+			</collateralInformation>
+		</tradeDetail>
+
+		<assetBookingSummary id="asset.type.CASH.USD">
+			<assetType>CASH-USD</assetType>
+		</assetBookingSummary>
+		<assetBookingSummary id="asset.type.qtp.cash.usd">
+			<assetType>qtp_cash_usd</assetType>
+		</assetBookingSummary>
+
+		<bookingDetail id="booking1.call.imAmount.2k">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<vmAmount>0</vmAmount>
+					<imAmount>2000</imAmount>
+					<movement>Call</movement>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+		<bookingDetail id="booking2.call.vmAmount.3k">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<vmAmount>3000</vmAmount>
+					<imAmount>0</imAmount>
+					<movement>Call</movement>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+	<agreement id="agr21713">
+		<agreementStatus>Pending</agreementStatus>
+		<agreementStatus>Approved</agreementStatus>
+		<statementStatus>Pending</statementStatus>
+		<statementStatus>Approved</statementStatus>
+	</agreement>
+
+		<exposureEventDetail id="IMDelivery.-5k">
+			<callStatus>Pending Review</callStatus>
+			<action>IM Delivery</action>
+			<agreementRequirement>-5,000.00</agreementRequirement>
+			<model></model>
+		</exposureEventDetail>
+		<exposureEventDetail id="IMReturn.-1k">
+			<callStatus>Pending Review</callStatus>
+			<action>IM Return</action>
+			<agreementRequirement>-1,000.00</agreementRequirement>
+		</exposureEventDetail>
+		<exposureEventDetail id="VMDelivery.-7k">
+			<callStatus>Pending Review</callStatus>
+			<action>VM Delivery</action>
+			<agreementRequirement>-7,000.00</agreementRequirement>
+		</exposureEventDetail>
+		<exposureEventDetail id="VMReturn.-3k">
+			<callStatus>Pending Review</callStatus>
+			<action>VM Return</action>
+			<agreementRequirement>-3,000.00</agreementRequirement>
+		</exposureEventDetail>
+
+		<bookingDetail id="bulk.booking.with.VM.Cash.delivery.-7k">
+			<instrumentSearch>
+				<instrument>
+					<filter>CASH-USD</filter>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<vmAmount>7k</vmAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<exposureManagementMessage id="warning.message.with.Cash.vmAmountCheck">
+			<messageDetail>
+				<index>1.1</index>
+				<message>VM Notional needs to be in the range of -0 to 0.</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<bookingDetail id="bulk.booking.with.VM.Cash.return.-3k">
+			<instrumentSearch>
+				<instrument>
+					<filter>CASH-USD</filter>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<vmAmount>3k</vmAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="bulk.booking.with.IM.Cash.delivery.-5k">
+			<instrumentSearch>
+				<instrument>
+					<filter>CASH-USD</filter>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<imAmount>5k</imAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+
+		<assetBookingSummary id="asset.booking.summary.cash.vm.amount.3k.return">
+			<vmCollateralValue>3,000.00</vmCollateralValue>
+			<movement>Return</movement>
+		</assetBookingSummary>
+
+		<assetBookingSummary id="asset.booking.summary.cash.im.amount.5k.delivery">
+			<imCollateralValue>5,000.00</imCollateralValue>
+			<movement>Delivery</movement>
+		</assetBookingSummary>
+
+
+
+	</scenarioData>
+</dataBean>

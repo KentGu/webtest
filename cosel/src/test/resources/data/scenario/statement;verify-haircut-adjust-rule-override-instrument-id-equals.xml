@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns=""
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+		<agreementSearch id="filter.agmt.description">
+			<description><filter>32652_agmt</filter></description>
+		</agreementSearch>
+		<agreementSearchResult id="agreement.description">
+			<description>32652_agmt</description>
+		</agreementSearchResult>
+
+		<agreementStatement id="agreement.statement.info">
+			<assetHoldingsSummary>
+				<mktValueOfAssetsHeldByPrincipal>4000000</mktValueOfAssetsHeldByPrincipal>
+				<adjustedCollateralValuePrincipal>700000</adjustedCollateralValuePrincipal>
+				<mktValueOfAssetsHeldByCounterparty>-12000000</mktValueOfAssetsHeldByCounterparty>
+				<adjustedCollateralValueCounterparty>-4000000</adjustedCollateralValueCounterparty>
+			</assetHoldingsSummary>
+		</agreementStatement>
+		<collateralAssetHoldingSummary id="asset.holding.summary">
+			<collateralAssetHoldingSummaryList>
+				<assetClass>qtp_bond</assetClass>
+				<assetTypeHoldingSummaryList>
+					<assetType>qtp_bond_usd</assetType>
+					<held>true</held>
+					<marketValue>4000000</marketValue>
+					<collateralValue>700000</collateralValue>
+				</assetTypeHoldingSummaryList>
+				<assetTypeHoldingSummaryList>
+					<assetType>qtp_bond_usd</assetType>
+					<delivery>true</delivery>
+					<marketValue>-12000000</marketValue>
+					<collateralValue>-4000000</collateralValue>
+				</assetTypeHoldingSummaryList>
+			</collateralAssetHoldingSummaryList>
+		</collateralAssetHoldingSummary>
+
+		<assetBookingSummary id="security.summary.ins1">
+			<assetType>qtp_bond_usd</assetType>
+			<instrumentId>32652_ins1</instrumentId>
+			<valuationPercentage>20.00</valuationPercentage>
+		</assetBookingSummary>
+		<assetBookingSummary id="security.summary.ins2">
+			<assetType>qtp_bond_usd</assetType>
+			<instrumentId>32652_ins2</instrumentId>
+			<valuationPercentage>30.00</valuationPercentage>
+		</assetBookingSummary>
+		<assetBookingSummary id="security.summary.ins3">
+			<assetType>qtp_bond_usd</assetType>
+			<instrumentId>32652_ins3</instrumentId>
+			<valuationPercentage>50.00</valuationPercentage>
+		</assetBookingSummary>
+		<assetBookingSummary id="security.summary.booking3">
+			<bookingId>509</bookingId>
+			<marketValue>-4,000,000.00</marketValue>
+			<collateralValue>-800,000.00</collateralValue>
+			<collateralValueBaseCCy>-800,000.00</collateralValueBaseCCy>
+		</assetBookingSummary>
+		<assetBookingSummary  id="security.summary.booking1">
+			<bookingId>507</bookingId>
+			<marketValue>2,000,000.00</marketValue>
+			<collateralValue>400,000.00</collateralValue>
+			<collateralValueBaseCCy>400,000.00</collateralValueBaseCCy>
+		</assetBookingSummary>
+		<assetBookingSummary  id="security.summary.booking4">
+			<bookingId>510</bookingId>
+			<marketValue>-2,000,000.00</marketValue>
+			<collateralValue>-600,000.00</collateralValue>
+			<collateralValueBaseCCy>-1,200,000.00</collateralValueBaseCCy>
+		</assetBookingSummary>
+		<assetBookingSummary id="security.summary.booking2">
+			<bookingId>508</bookingId>
+			<marketValue>1,000,000.00</marketValue>
+			<collateralValue>150,000.00</collateralValue>
+			<collateralValueBaseCCy>300,000.00</collateralValueBaseCCy>
+		</assetBookingSummary>
+		<assetBookingSummary  id="security.summary.booking5">
+			<bookingId>511</bookingId>
+			<marketValue>-4,000,000.00</marketValue>
+			<collateralValue>-2,000,000.00</collateralValue>
+			<collateralValueBaseCCy>-2,000,000.00</collateralValueBaseCCy>
+		</assetBookingSummary>
+
+	</scenarioData>
+</dataBean>

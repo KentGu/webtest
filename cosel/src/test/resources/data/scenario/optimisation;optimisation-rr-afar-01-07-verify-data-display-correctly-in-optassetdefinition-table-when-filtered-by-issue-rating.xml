@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/optimisation.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <instrument>
+            <assetClass id="instrument.usd.1.asset.class">qtp_bond</assetClass>
+            <assetType id="instrument.usd.1.asset.type">qtp_bond_usd</assetType>
+            <instrumentId>
+                <type>CUSIP</type>
+                <value id="instrument.usd.1.id">T27416_bond_usd_inst_1</value>
+            </instrumentId>
+            <issueRating>
+                <agency>SandP</agency>
+                <rating>A</rating>
+            </issueRating>
+            <issueRating>
+                <agency>MOODYS</agency>
+                <rating>Baa1</rating>
+            </issueRating>
+            <issueRating>
+                <agency>Fitch</agency>
+                <rating>CCC</rating>
+            </issueRating>
+        </instrument>
+
+        <instrument>
+            <assetClass id="instrument.usd.2.asset.class">qtp_bond</assetClass>
+            <assetType id="instrument.usd.2.asset.type">qtp_bond_usd</assetType>
+            <instrumentId>
+                <type>CUSIP</type>
+                <value id="instrument.usd.2.id">T27416_bond_usd_inst_2</value>
+            </instrumentId>
+            <issueRating>
+                <agency>SandP</agency>
+                <rating>B</rating>
+            </issueRating>
+            <issueRating>
+                <agency>MOODYS</agency>
+                <rating>A1</rating>
+            </issueRating>
+            <issueRating>
+                <agency>Fitch</agency>
+                <rating>C</rating>
+            </issueRating>
+        </instrument>
+
+        <instrument>
+            <assetClass id="instrument.gbp.1.asset.class">qtp_bond</assetClass>
+            <assetType id="instrument.gbp.1.asset.type">qtp_bond_gbp</assetType>
+            <instrumentId>
+                <type>CUSIP</type>
+                <value id="instrument.gbp.1.id">T27416_bond_gbp_inst_1</value>
+            </instrumentId>
+            <issueRating>
+                <agency>SandP</agency>
+                <rating>C</rating>
+            </issueRating>
+            <issueRating>
+                <agency>MOODYS</agency>
+                <rating>Caa1</rating>
+            </issueRating>
+            <issueRating>
+                <agency>Fitch</agency>
+                <rating>AA</rating>
+            </issueRating>
+        </instrument>
+
+        <instrument>
+            <assetClass id="instrument.gbp.2.asset.class">qtp_bond</assetClass>
+            <assetType id="instrument.gbp.2.asset.type">qtp_bond_gbp</assetType>
+            <instrumentId>
+                <type>CUSIP</type>
+                <value id="instrument.gbp.2.id">T27416_bond_gbp_inst_2</value>
+            </instrumentId>
+            <issueRating>
+                <agency>SandP</agency>
+                <rating>A</rating>
+            </issueRating>
+            <issueRating>
+                <agency>MOODYS</agency>
+                <rating>Aa1</rating>
+            </issueRating>
+            <issueRating>
+                <agency>Fitch</agency>
+                <rating>BB</rating>
+            </issueRating>
+        </instrument>
+
+        <instrument>
+            <assetClass id="instrument.eur.1.asset.class">qtp_bond</assetClass>
+            <assetType id="instrument.eur.1.asset.type">qtp_bond_eur2</assetType>
+            <instrumentId>
+                <type>CUSIP</type>
+                <value id="instrument.eur.1.id">T27416_bond_eur_inst_1</value>
+            </instrumentId>
+            <issueRating>
+                <agency>SandP</agency>
+                <rating>BBB+</rating>
+            </issueRating>
+            <issueRating>
+                <agency>MOODYS</agency>
+                <rating>A1</rating>
+            </issueRating>
+            <issueRating>
+                <agency>Fitch</agency>
+                <rating>CCC</rating>
+            </issueRating>
+        </instrument>
+
+        <instrument>
+            <assetClass id="instrument.eur.2.asset.class">qtp_bond</assetClass>
+            <assetType id="instrument.eur.2.asset.type">qtp_bond_eur2</assetType>
+            <instrumentId>
+                <type>CUSIP</type>
+                <value id="instrument.eur.2.id">T27416_bond_eur_inst_2</value>
+            </instrumentId>
+            <issueRating>
+                <agency>SandP</agency>
+                <rating>A</rating>
+            </issueRating>
+            <issueRating>
+                <agency>MOODYS</agency>
+                <rating>B2</rating>
+            </issueRating>
+            <issueRating>
+                <agency>Fitch</agency>
+                <rating>BBB</rating>
+            </issueRating>
+        </instrument>
+
+        <agreement>
+            <agreementDescription id="agreement.1.description">T27416_Agreement_Description1</agreementDescription>
+            <agreementId id="agreement.1.id">2601</agreementId>
+        </agreement>
+
+        <agreement>
+            <agreementDescription id="agreement.2.description">T27416_Agreement_Description2</agreementDescription>
+            <agreementId id="agreement.2.id">2602</agreementId>
+        </agreement>
+
+        <optimisationRule id="opt.asset.filter">
+            <ruleName id="opt.asset.filter.name">T27416_Asset_Filter</ruleName>
+            <optimisationFilterRuleAttribute>
+                <openBracket>(</openBracket>
+                <attributeName>Issue Rating</attributeName>
+                <attributeDetail>
+                    <type>SandP</type>
+                    <operator>Equal</operator>
+                    <selectedValue>A</selectedValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail>
+                    <type>MOODYS</type>
+                    <operator>Not Equal</operator>
+                    <selectedValue>A1</selectedValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail>
+                    <type>MOODYS</type>
+                    <operator>Greater Than</operator>
+                    <selectedValue>B1</selectedValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail>
+                    <type>Fitch</type>
+                    <operator>Not Equal</operator>
+                    <selectedValue>C</selectedValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail>
+                    <type>Fitch</type>
+                    <operator>Less Than Equal</operator>
+                    <selectedValue>BB</selectedValue>
+                </attributeDetail>
+                <closeBracket>)</closeBracket>
+                <bracketAndOr>Or</bracketAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute>
+                <openBracket>(</openBracket>
+                <attributeName>Issue Rating</attributeName>
+                <attributeDetail>
+                    <type>SandP</type>
+                    <operator>Not Equal</operator>
+                    <selectedValue>B</selectedValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail>
+                    <type>SandP</type>
+                    <operator>Less Than</operator>
+                    <selectedValue>AA</selectedValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail>
+                    <type>MOODYS</type>
+                    <operator>Greater Than Equal</operator>
+                    <selectedValue>Baa1</selectedValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail>
+                    <type>Fitch</type>
+                    <operator>Equal</operator>
+                    <selectedValue>CCC</selectedValue>
+                </attributeDetail>
+                <closeBracket>)</closeBracket>
+                <bracketAndOr>And</bracketAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute>
+                <attributeName>Instrument ID</attributeName>
+                <attributeDetail>
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <filter>T27416</filter>
+                        <selectOption ref="instrument.usd.1.id"/>
+                        <selectOption ref="instrument.usd.2.id"/>
+                        <selectOption ref="instrument.gbp.1.id"/>
+                        <selectOption ref="instrument.gbp.2.id"/>
+                        <selectOption ref="instrument.eur.1.id"/>
+                        <selectOption ref="instrument.eur.2.id"/>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+                <groupAndOr>End</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <minimunNotional>200000000</minimunNotional>
+            <includeCollineData>true</includeCollineData>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </optimisationRule>
+
+        <optimisationRule id="opt.agreement.filter">
+            <ruleName id="opt.agreement.filter.name">T27416_Agreement_Filter</ruleName>
+            <optimisationFilterRuleAttribute>
+                <attributeName>Agreement Description</attributeName>
+                <attributeDetail>
+                    <operator>Equal</operator>
+                    <inputValue ref="agreement.2.description"/>
+                </attributeDetail>
+                <groupAndOr>Or</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute>
+                <attributeName>Agreement ID</attributeName>
+                <attributeDetail>
+                    <operator>Equal</operator>
+                    <inputValue ref="agreement.1.id"/>
+                </attributeDetail>
+                <groupAndOr>End</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </optimisationRule>
+
+        <optimisationRule id="optimisation.rule">
+            <ruleName id="optimisation.rule.name">T27416_Optimisation_Rule</ruleName>
+            <dataParameters>
+                <assetFilterRule>
+                    <filter ref="opt.asset.filter.name"/>
+                    <linkText ref="opt.asset.filter.name"/>
+                </assetFilterRule>
+                <agreementFilterRule>
+                    <filter ref="opt.agreement.filter.name"/>
+                    <linkText ref="opt.agreement.filter.name"/>
+                </agreementFilterRule>
+            </dataParameters>
+            <optimisationParameters>
+                <assumeSweepOfExistingBooking>false</assumeSweepOfExistingBooking>
+                <outgoingAssetsRule>true</outgoingAssetsRule>
+            </optimisationParameters>
+            <runParameters>
+                <algorithm>Rank Allocation</algorithm>
+                <reportingCurrency>USD</reportingCurrency>
+            </runParameters>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </optimisationRule>
+
+        <optimisationRuleDetail id="run.optimisation.rule">
+            <ruleName ref="optimisation.rule.name"/>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </optimisationRuleDetail>
+
+        <databaseQuery id="check.opt.asset.definition">
+            <sqlQuery>
+                <content>SELECT INSTRUMENTID,ASSETCLASS,ASSETTYPE,ISSUERATING FROM OptAssetDefinition WHERE INVOCATIONRUNID = (SELECT max(INVOCATIONRUNID) FROM OptAssetDefinition)</content>
+            </sqlQuery>
+            <resultId id="check.opt.asset.definition.result"/>
+        </databaseQuery>
+
+        <databaseQueryResult id="opt.asset.definition.result">
+            <resultId ref="check.opt.asset.definition.result"/>
+            <databaseQueryResultRow>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>INSTRUMENTID</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="instrument.usd.1.id"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ASSETCLASS</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="instrument.usd.1.asset.class"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ASSETTYPE</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="instrument.usd.1.asset.type"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ISSUERATING</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>6|8|18</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+            </databaseQueryResultRow>
+            <databaseQueryResultRow apply="false">
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>INSTRUMENTID</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="instrument.usd.2.id"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ASSETCLASS</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="instrument.usd.2.asset.class"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ASSETTYPE</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="instrument.usd.2.asset.type"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ISSUERATING</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue></databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+            </databaseQueryResultRow>
+            <databaseQueryResultRow apply="false">
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>INSTRUMENTID</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="instrument.gbp.1.id"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ASSETCLASS</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="instrument.gbp.1.asset.class"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ASSETTYPE</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="instrument.gbp.1.asset.type"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ISSUERATING</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue></databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+            </databaseQueryResultRow>
+            <databaseQueryResultRow>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>INSTRUMENTID</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="instrument.gbp.2.id"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ASSETCLASS</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue id="instrument.gbp.2.asset.class"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ASSETTYPE</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue id="instrument.gbp.2.asset.type"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ISSUERATING</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>2|6|12</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+            </databaseQueryResultRow>
+            <databaseQueryResultRow>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>INSTRUMENTID</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="instrument.eur.1.id"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ASSETCLASS</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="instrument.eur.1.asset.class"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ASSETTYPE</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="instrument.eur.1.asset.type"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ISSUERATING</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>5|8|18</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+            </databaseQueryResultRow>
+            <databaseQueryResultRow apply="false">
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>INSTRUMENTID</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="instrument.eur.2.id"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ASSETCLASS</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="instrument.eur.2.asset.class"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ASSETTYPE</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="instrument.eur.2.asset.type"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ISSUERATING</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue></databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+            </databaseQueryResultRow>
+        </databaseQueryResult>
+    </scenarioData>
+</dataBean>

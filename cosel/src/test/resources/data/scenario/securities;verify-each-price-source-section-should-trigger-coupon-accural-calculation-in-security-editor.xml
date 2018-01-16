@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+
+    <scenarioData>
+        <instrument id="bondinstrument">
+        <assetClass>qtp_bond</assetClass>
+        <assetType>qtp_bond_usd</assetType>
+        <instrumentId>
+        <value id="bondinstrument.id" random="true" prefix="bond_"/>
+        </instrumentId>
+        <market>USA</market>
+        <description id="bondinstrument.des" random="true"/>
+        <issuer>
+        <filter>QTP_Eligible_Issuer4</filter>
+        <linkText>QTP_Eligible_Issuer4</linkText>
+        </issuer>
+        <maturityDate>01/01/2099</maturityDate>
+        <currencyOfDenomination>USD</currencyOfDenomination>>
+        <manuallyOverrideLastCouponDate>true</manuallyOverrideLastCouponDate>
+        <nextCouponDate>t-1</nextCouponDate>
+        <manuallyOverrideNextCouponDate>true</manuallyOverrideNextCouponDate>
+        <lastCouponDate>t-1</lastCouponDate>
+        <couponRate>0.36</couponRate>
+        <accrualBasis>30/360</accrualBasis>
+        <recordDate>01/01/2050</recordDate>
+        <currencyOfDenomination>GBP</currencyOfDenomination>
+        <issueDate>T</issueDate>
+        <securityStatus>Approved</securityStatus>
+        </instrument>
+
+        <securitySearch id="SecuritySearch">
+        <instrument>
+        <type>Starting with</type>
+        <filter ref="bondinstrument.id"/>
+        <linkText ref="bondinstrument.id"/>
+        </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="SearchWillBeApproved">
+        <instrument ref="bondinstrument.id"/>
+        </securitySearchResult>
+
+        <securitySearchResult id="SearchSecurity">
+        <instrument ref="bondinstrument.id"/>
+        </securitySearchResult>
+
+        <instrument id="instrument.Check">
+        <couponDayCount>1</couponDayCount>
+        <couponAccrual>0.0010000</couponAccrual>
+        </instrument>
+
+        <instrument id="instrument.edit">
+        <accrualBasis>30/360</accrualBasis>
+        <manuallyOverrideLastCouponDate>true</manuallyOverrideLastCouponDate>
+        <nextCouponDate>t-1</nextCouponDate>
+        <manuallyOverrideNextCouponDate>true</manuallyOverrideNextCouponDate>
+        <lastCouponDate>t-1</lastCouponDate>
+        <couponRate>0.72</couponRate>
+        <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <instrument id="Coupon.Accual.Check.0.002">
+        <couponAccrual>0.0020000</couponAccrual>
+        <couponDayCount>1</couponDayCount>
+        </instrument>
+
+        <instrument id="bondinstrument2">
+        <assetClass>qtp_bond</assetClass>
+        <assetType>qtp_bond_usd</assetType>
+        <instrumentId>
+        <value id="bondinstrument2.id" random="true" prefix="bond_"/>
+        </instrumentId>
+        <market>USA</market>
+        <description id="bondinstrument2.des" random="true"/>
+        <issuer>
+        <filter>QTP_Eligible_Issuer4</filter>
+        <linkText>QTP_Eligible_Issuer4</linkText>
+        </issuer>
+        <maturityDate>01/01/2099</maturityDate>
+            <couponRate>0</couponRate>
+        <currencyOfDenomination>USD</currencyOfDenomination>
+        <manuallyOverrideLastCouponDate>true</manuallyOverrideLastCouponDate>
+        <nextCouponDate>t-14</nextCouponDate>
+        <manuallyOverrideNextCouponDate>true</manuallyOverrideNextCouponDate>
+        <lastCouponDate>t-14</lastCouponDate>
+        <accrualBasis>30E/365</accrualBasis>
+        <recordDate>03/20/2050</recordDate>
+        <issueDate>T</issueDate>
+        <securityStatus>Approved</securityStatus>
+        </instrument>
+
+        <securitySearch id="SecuritySearchBond2">
+        <instrument>
+        <type>Starting with</type>
+        <filter ref="bondinstrument2.id"/>
+        <linkText ref="bondinstrument2.id"/>
+        </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="SearchWillBeApprovedBond2">
+        <instrument ref="bondinstrument2.id"/>
+        </securitySearchResult>
+
+        <securitySearchResult id="SearchSecurity2">
+        <instrument ref="bondinstrument2.id"/>
+        </securitySearchResult>
+
+        <instrument id="instrument.Check.Bond2">
+        <couponDayCount>13</couponDayCount>
+        </instrument>
+
+        <instrument id="AccrualBases.30E/Act">
+        <accrualBasis>30E/Act</accrualBasis>
+        <manuallyOverrideLastCouponDate>true</manuallyOverrideLastCouponDate>
+        <lastCouponDate>t-14</lastCouponDate>
+        <manuallyOverrideNextCouponDate>true</manuallyOverrideNextCouponDate>
+        <nextCouponDate>t-14</nextCouponDate>
+            <couponRate>0</couponRate>
+            <issueDate>T</issueDate>
+        <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <instrument id="AccrualBasis30E/Act.check">
+        <couponDayCount>13</couponDayCount>
+        </instrument>
+
+        <instrument id="AccrualBases.Act/360">
+            <manuallyOverrideLastCouponDate>true</manuallyOverrideLastCouponDate>
+            <lastCouponDate>t-14</lastCouponDate>
+            <manuallyOverrideNextCouponDate>true</manuallyOverrideNextCouponDate>
+            <nextCouponDate>t-14</nextCouponDate>
+        <accrualBasis>Act/360</accrualBasis>
+            <couponRate>0</couponRate>
+            <issueDate>T</issueDate>
+        <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <instrument id="AccrualBases.Act/360.check">
+        <couponDayCount>14</couponDayCount>
+        </instrument>
+
+        <instrument id="AccrualBases.Act/365">
+        <accrualBasis>Act/365</accrualBasis>
+            <couponRate>0</couponRate>
+            <issueDate>T</issueDate>
+        <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <instrument id="AccrualBases.Act/365.check">
+        <couponDayCount>14</couponDayCount>
+        </instrument>
+
+        <instrument id="instrument.ChangeCouponRate">
+            <accrualBasis>30/360</accrualBasis>
+            <couponRate>0.36</couponRate>
+            <issueDate>T</issueDate>
+        <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <instrument id="Coupon.Rate.check">
+        <couponDayCount>2</couponDayCount>
+        <couponAccrual>0.0020000</couponAccrual>
+        </instrument>
+
+        <instrument id="instrument.EmptyCouponRate">
+            <couponRate>0</couponRate>
+        <manuallyOverrideLastCouponDate>true</manuallyOverrideLastCouponDate>
+            <lastCouponDate>t</lastCouponDate>
+        <manuallyOverrideNextCouponDate>true</manuallyOverrideNextCouponDate>
+            <nextCouponDate>t</nextCouponDate>
+        </instrument>
+
+        <instrument id="Coupon.RateEmpty.check">
+        <couponDayCount>0</couponDayCount>
+        </instrument>
+
+
+    </scenarioData>
+
+        </dataBean>

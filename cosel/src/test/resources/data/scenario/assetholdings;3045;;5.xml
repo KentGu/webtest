@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+
+
+		<agreementSearch id="search.notnetagreement.by.agreement.description">
+			<description>
+				<filter>3045notnetagreement</filter>
+			</description>
+		</agreementSearch>
+
+		<agreementSearchResult id="notnetagreement.search.result">
+			<description>3045notnetagreement</description>
+		</agreementSearchResult>
+
+		<exposureEventDetail id="even.with.vmcall.2m">
+			<action>VM Call</action>
+			<agreementRequirement>2,000,000.00</agreementRequirement>
+		</exposureEventDetail>
+
+
+
+		<bookingDetail id="bulk.booking.with.3045.instrument1.1m.call">
+			<instrumentSearch>
+				<instrument>
+					<filter>3045bondinstrument1</filter>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<vmAmount>1m</vmAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="bulk.booking.with.3045.instrument2.1m.call">
+			<instrumentSearch>
+				<instrument>
+					<filter>3045bondinstrument2</filter>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<vmAmount>1m</vmAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+
+		<exposureManagementMessage id="warning.message.with.error.instrument1.notnetagreement">
+			<messageDetail>
+				<index>1.1</index>
+				<message>This instrument is not eligible as it has been included in "Exclude Instrument rule" (Rule Detail: 3045bondinstrument1-null) (Source: Agreement).</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+
+
+		<exposureManagementMessage id="warning.message.with.error.instrument2.notnetagreement">
+			<messageDetail>
+				<index>1</index>
+				<message>3045notnetagreement/QTPPrincipal/QTPCounterparty/515: Attempting to make a booking that does not meet the Required Amount. (Expected: 2,000,000.00, Actual: 1,000,000.00) Continue?</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+
+
+
+
+
+
+
+	</scenarioData>
+</dataBean>

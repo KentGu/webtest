@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns=""
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+		<agreementSearch id="filter.agmt.description">
+			<description><filter>32665_agmt</filter></description>
+		</agreementSearch>
+		<agreementSearchResult id="agreement.description">
+			<description>32665_agmt</description>
+		</agreementSearchResult>
+
+		<agreementStatement id="agreement.statement.info">
+			<assetHoldingsSummary>
+				<mktValueOfAssetsHeldByPrincipal>3000000</mktValueOfAssetsHeldByPrincipal>
+				<adjustedCollateralValuePrincipal>2300000</adjustedCollateralValuePrincipal>
+				<mktValueOfAssetsHeldByCounterparty>-9000000</mktValueOfAssetsHeldByCounterparty>
+				<adjustedCollateralValueCounterparty>-5400000</adjustedCollateralValueCounterparty>
+			</assetHoldingsSummary>
+		</agreementStatement>
+
+		<assetBookingSummary id="security.summary.ins1">
+			<assetType>qtp_bond_usd</assetType>
+			<instrumentId>32665_ins1</instrumentId>
+			<valuationPercentage>70.00</valuationPercentage>
+			<marketValue>-2,000,000.00</marketValue>
+			<collateralValueBaseCCy>-1,700,000.00</collateralValueBaseCCy>
+		</assetBookingSummary>
+		<assetBookingSummary id="security.summary.ins2">
+			<assetType>qtp_bond_usd</assetType>
+			<instrumentId>32665_ins2</instrumentId>
+			<valuationPercentage>50.00</valuationPercentage>
+			<marketValue>-2,000,000.00</marketValue>
+			<collateralValueBaseCCy>-1,400,000.00</collateralValueBaseCCy>
+		</assetBookingSummary>
+
+		<marginLetter id="margin.letter.return">
+			<requestTypeAndAssetSelection>
+				<eligibleAssetSelection>
+					<movementType>RETURNS</movementType>
+					<movementAssets>
+						<eligibleAsset>
+							<instrumentId>32665_ins1</instrumentId>
+						</eligibleAsset>
+						<eligibleAssetSelectionDetail>
+							<norminalAmountRequired>1m</norminalAmountRequired>
+						</eligibleAssetSelectionDetail>
+					</movementAssets>
+					<movementAssets>
+						<eligibleAsset>
+							<instrumentId>32665_ins2</instrumentId>
+						</eligibleAsset>
+						<eligibleAssetSelectionDetail>
+							<norminalAmountRequired>2m</norminalAmountRequired>
+							<alertHandling>
+								<accept>true</accept>
+							</alertHandling>
+						</eligibleAssetSelectionDetail>
+					</movementAssets>
+				</eligibleAssetSelection>
+			</requestTypeAndAssetSelection>
+		</marginLetter>
+		<marginLetterSummary id="margin.return.letter.summary.booking">
+			<assetsDetails>
+				<eligibleAssetSelection>
+					<movementAssets>
+						<eligibleAsset>
+							<instrumentId>32665_ins1</instrumentId>
+							<valuation>70.00</valuation>
+							<nativeCollateralValue>-700,000.00</nativeCollateralValue>
+						</eligibleAsset>
+					</movementAssets>
+					<movementAssets>
+						<eligibleAsset>
+							<instrumentId>32665_ins2</instrumentId>
+							<valuation>80.00</valuation>
+							<nativeCollateralValue>-1,600,000.00</nativeCollateralValue>
+						</eligibleAsset>
+					</movementAssets>
+				</eligibleAssetSelection>
+			</assetsDetails>
+		</marginLetterSummary>
+
+		<marginLetter id="margin.letter.recall">
+			<requestTypeAndAssetSelection>
+				<eligibleAssetSelection>
+					<movementType>Recalls</movementType>
+					<movementAssets>
+						<eligibleAsset>
+							<instrumentId>32665_ins1</instrumentId>
+						</eligibleAsset>
+						<eligibleAssetSelectionDetail>
+							<norminalAmountRequired>3m</norminalAmountRequired>
+						</eligibleAssetSelectionDetail>
+					</movementAssets>
+					<movementAssets>
+						<eligibleAsset>
+							<instrumentId>32665_ins2</instrumentId>
+						</eligibleAsset>
+						<eligibleAssetSelectionDetail>
+							<norminalAmountRequired>3m</norminalAmountRequired>
+						</eligibleAssetSelectionDetail>
+					</movementAssets>
+				</eligibleAssetSelection>
+			</requestTypeAndAssetSelection>
+		</marginLetter>
+		<marginLetterSummary id="margin.recall.letter.summary.booking">
+			<assetsDetails>
+				<eligibleAssetSelection>
+					<movementAssets>
+						<eligibleAsset>
+							<instrumentId>32665_ins1</instrumentId>
+							<valuation>80.00</valuation>
+							<baseCollateralValue>2,400,000.00</baseCollateralValue>
+						</eligibleAsset>
+					</movementAssets>
+					<movementAssets>
+						<eligibleAsset>
+							<instrumentId>32665_ins2</instrumentId>
+							<valuation>50.00</valuation>
+							<baseCollateralValue>3,000,000.00</baseCollateralValue>
+						</eligibleAsset>
+					</movementAssets>
+				</eligibleAssetSelection>
+			</assetsDetails>
+		</marginLetterSummary>
+
+	</scenarioData>
+</dataBean>

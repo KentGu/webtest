@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <securitySearch id="26540.bond.usd">
+            <matured>All</matured>
+            <instrument>
+                <filter id="26540.bond.usd.id">26540_bond_usd_1</filter>
+                <!--<linkText ref="26527.bond.usd"/>-->
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="26540.bond.usd.approve">
+            <instrument ref="26540.bond.usd.id"/>
+        </securitySearchResult>
+
+        <instrument id="26540.bond.usd.changeRecordDate.tMinus6.changeMaturityDate.tPlus6">
+            <recordDate>t-6</recordDate>
+            <maturityDate>t+6</maturityDate>
+        </instrument>
+
+         <securitySearch id="26540.bond.usd.2">
+            <matured>All</matured>
+            <instrument>
+                <filter id="26540.bond.usd.id.2">26540_bond_usd_2</filter>
+                <!--<linkText ref="26527.bond.usd"/>-->
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="26540.bond.usd.approve.2">
+            <instrument ref="26540.bond.usd.id.2"/>
+        </securitySearchResult>
+
+        <instrument id="26540.bond.usd.2.changeRecordDate.tMinus6.changeMaturityDate.tPlus6">
+            <recordDate>t-6</recordDate>
+            <maturityDate>t+6</maturityDate>
+        </instrument>
+
+        <agreement id="agr26540.otc.multiModel.net">
+            <agreementId id="agrId">3014</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="subReq.4m.top">
+            <action>Substitution Request</action>
+            <agreementRequirement>4,000,000.00</agreementRequirement>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="source">
+            <column>Source</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subReq.m1.bond.usd.2.agreementRequirement.4m">
+            <action>Substitution Request</action>
+            <agreementRequirement>4,000,000.00</agreementRequirement>
+            <model>m1</model>
+            <element id="bond.usd.2">26540_bond_usd_2,m2</element>
+            <source>System</source>
+            <eventId id="event2"/>
+            <!--<eventId id="event2">58198</eventId>-->
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subReq.m1.bond.usd.1.agreementRequirement.4m">
+            <action>Substitution Request</action>
+            <agreementRequirement>4,000,000.00</agreementRequirement>
+            <model>m1</model>
+            <element id="bond.usd.1">26540_bond_usd_1,m1</element>
+            <source>System</source>
+            <eventId id="event1"/>
+            <!--<eventId id="event1">58196</eventId>-->
+        </exposureEventDetail>
+
+         <substitutionEventSearch id="agr26540.return">
+            <agreementId ref="agrId"/>
+            <substitution>Return</substitution>
+        </substitutionEventSearch>
+
+        <substitutionEventDetail id="agr26540.subEvent">
+            <agrId ref="agrId"/>
+        </substitutionEventDetail>
+
+        <substitutionEventDetail id="subReq.m2.bond.gbp.1">
+            <instrumentId id="bond.gbp.1">26540_bond_gbp_1,m1</instrumentId>
+        </substitutionEventDetail>
+
+        <substitutionEventDetail id="subReq.m2.bond.gbp.2">
+            <instrumentId id="bond.gbp.2">26540_bond_gbp_2,m2</instrumentId>
+        </substitutionEventDetail>
+
+        <exposureEventDetail id="subCon.0m.top">
+            <action>Substitution Confirmation</action>
+            <agreementRequirement>0.00</agreementRequirement>
+            <source>Manual</source>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subCon.m2.bond.usd.2.agreementRequirement.0m">
+            <action>Substitution Confirmation</action>
+            <agreementRequirement>0.00</agreementRequirement>
+            <model>m2</model>
+            <element ref="bond.gbp.2"/>
+            <source>Manual</source>
+            <eventId id="event4"/>
+            <!--<eventId id="event4">58202</eventId>-->
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subCon.m2.bond.usd.1.agreementRequirement.0m">
+            <action>Substitution Confirmation</action>
+            <agreementRequirement>0.00</agreementRequirement>
+            <model>m2</model>
+            <element ref="bond.gbp.1"/>
+            <source>Manual</source>
+            <eventId id="event3"/>
+            <!--<eventId id="event3">58200</eventId>-->
+        </exposureEventDetail>
+
+        <bookingDetail id="subReq.recall.bond.usd.1.movementAndInstrumentNotEditable">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <model>m1</model>
+                    <instrumentId disable="true" ref="bond.usd.1"/>
+                    <eventId ref="event1"/>
+                    <movement>Recall</movement>
+                    <movementIsDisabled>true</movementIsDisabled>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subReq.delivery.event1.movementNotEditable">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <model>m1</model>
+                    <instrumentId></instrumentId>
+                    <eventId ref="event1"/>
+                    <movement>Delivery</movement>
+                    <movementIsDisabled>true</movementIsDisabled>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subReq.recall.bond.usd.2.movementAndInstrumentNotEditable">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <model>m1</model>
+                    <instrumentId disable="true" ref="bond.usd.2"/>
+                    <eventId ref="event2"/>
+                    <movement>Recall</movement>
+                    <movementIsDisabled>true</movementIsDisabled>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subReq.delivery.event2.movementNotEditable">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <model>m1</model>
+                    <instrumentId></instrumentId>
+                    <eventId ref="event2"/>
+                    <movement>Delivery</movement>
+                    <movementIsDisabled>true</movementIsDisabled>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+
+        <bookingDetail id="subCon.return.bond.gbp.1.movementAndInstrumentNotEditable">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <model>m2</model>
+                    <instrumentId disable="true" ref="bond.gbp.1"/>
+                    <eventId ref="event3"/>
+                    <movement>Return</movement>
+                    <movementIsDisabled>true</movementIsDisabled>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subCon.call.event3.movementNotEditable">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <model>m2</model>
+                    <instrumentId></instrumentId>
+                    <eventId ref="event3"/>
+                    <movement>Call</movement>
+                    <movementIsDisabled>true</movementIsDisabled>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subCon.return.bond.gbp.2.movementAndInstrumentNotEditable">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <model>m2</model>
+                    <instrumentId disable="true" ref="bond.gbp.2"/>
+                    <eventId ref="event4"/>
+                    <movement>Return</movement>
+                    <movementIsDisabled>true</movementIsDisabled>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subCon.call.event4.movementNotEditable">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <model>m2</model>
+                    <instrumentId></instrumentId>
+                    <eventId ref="event4"/>
+                    <movement>Call</movement>
+                    <movementIsDisabled>true</movementIsDisabled>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+
+
+
+
+
+        <bookingDetail id="subReq.recall.bond.usd.1.notional.2m.event1">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <model>m1</model>
+                    <instrumentId ref="bond.usd.1"/>
+                    <eventId ref="event1"/>
+                    <movement>Recall</movement>
+                    <nominalAmount>2m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subReq.delivery.bond.usd.3.notional.3m.event1">
+            <instrumentSearch>
+                <instrument>
+                    <filter id="bond.usd.3">26540_bond_usd_3,m3</filter>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <model>m1</model>
+                    <instrumentId></instrumentId>
+                    <eventId ref="event1"/>
+                    <movement>Delivery</movement>
+                    <nominalAmount>3m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subReq.recall.bond.usd.2.notional.2m.event2">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <model>m1</model>
+                    <instrumentId ref="bond.usd.2"/>
+                    <eventId ref="event2"/>
+                    <movement>Recall</movement>
+                    <nominalAmount>2m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+         <bookingDetail id="subCon.return.bond.gbp.1.notional.3m.event3">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <model>m2</model>
+                    <instrumentId ref="bond.gbp.1"/>
+                    <eventId ref="event3"/>
+                    <movement>Return</movement>
+                    <nominalAmount>3m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subCon.call.bond.gbp.3.notional.2m.event3">
+            <instrumentSearch>
+                <instrument>
+                    <filter id="bond.gbp.3">26540_bond_gbp_3,m3</filter>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <model>m2</model>
+                    <instrumentId></instrumentId>
+                    <eventId ref="event3"/>
+                    <movement>Call</movement>
+                    <nominalAmount>2m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subCon.call.cash.gbp.notional.2m.event4">
+            <instrumentSearch>
+                <instrument>
+                    <filter>CASH-GBP</filter>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <model>m2</model>
+                    <instrumentId></instrumentId>
+                    <eventId ref="event4"/>
+                    <movement>Call</movement>
+                    <nominalAmount>2m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <exposureManagementMessage id="overrideWarning">
+            <messageDetail>
+                <overrideWarning>true</overrideWarning>
+            </messageDetail>
+            <messageDetail>
+                <overrideWarning>true</overrideWarning>
+            </messageDetail>
+            <messageDetail>
+                <overrideWarning>true</overrideWarning>
+            </messageDetail>
+            <messageDetail>
+                <overrideWarning>true</overrideWarning>
+            </messageDetail>
+            <messageDetail>
+                <overrideWarning>true</overrideWarning>
+            </messageDetail>
+        </exposureManagementMessage>
+
+
+        <exposureEventDetail id="subReq.m1.bond.usd.2.agreementRequirement.4m.PartiallyBooked">
+            <action>Substitution Request</action>
+            <agreementRequirement>4,000,000.00</agreementRequirement>
+            <model>m1</model>
+            <callStatus>Partially Booked</callStatus>
+            <element id="bond.usd.2">26540_bond_usd_2,m2</element>
+            <source>System</source>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subReq.m1.bond.usd.1.agreementRequirement.4m.PartiallyBooked">
+            <action>Substitution Request</action>
+            <agreementRequirement>4,000,000.00</agreementRequirement>
+            <model>m1</model>
+            <callStatus>Partially Booked</callStatus>
+            <element id="bond.usd.1">26540_bond_usd_1,m1</element>
+            <source>System</source>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subCon.m2.bond.usd.2.agreementRequirement.0m.PartiallyBooked">
+            <action>Substitution Confirmation</action>
+            <agreementRequirement>0.00</agreementRequirement>
+            <model>m2</model>
+            <callStatus>Partially Booked</callStatus>
+            <element ref="bond.gbp.2"/>
+            <source>Manual</source>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subCon.m2.bond.usd.1.agreementRequirement.0m.PartiallyBooked">
+            <action>Substitution Confirmation</action>
+            <agreementRequirement>0.00</agreementRequirement>
+            <model>m2</model>
+            <callStatus>Partially Booked</callStatus>
+            <element ref="bond.gbp.1"/>
+            <source>Manual</source>
+        </exposureEventDetail>
+
+        <assetBookingSummary id="asset.type.bond.usd">
+            <assetType ref="bond.usd.name"/>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="asset.type.bond.gbp">
+            <assetType ref="bond.gbp.name"/>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="asset.type.CASH.GBP">
+            <assetType>CASH-GBP</assetType>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="bond.usd.1.recall.nominalAmount.2m">
+            <instrumentId ref="26540.bond.usd.id"/>
+            <movement>Recall</movement>
+            <nominalAmount>2,000,000.00</nominalAmount>
+        </assetBookingSummary>
+        
+        <bookingDetail id="booking.event1">
+            <bookingInformation>
+                <eventId ref="event1"/>
+            </bookingInformation>
+        </bookingDetail>
+
+        <assetBookingSummary id="bond.usd.3.delivery.nominalAmount.3m">
+            <instrumentId id="26540.bond.usd.id.3">26540_bond_usd_3</instrumentId>
+            <movement>Delivery</movement>
+            <nominalAmount>-3,000,000.00</nominalAmount>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="bond.usd.2.recall.nominalAmount.2m">
+            <instrumentId ref="26540.bond.usd.id.2"/>
+            <movement>Recall</movement>
+            <nominalAmount>2,000,000.00</nominalAmount>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="bond.gbp.1.return.nominalAmount.3m">
+            <instrumentId>26540_bond_gbp_1</instrumentId>
+            <movement>Return</movement>
+            <nominalAmount>-3,000,000.00</nominalAmount>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="bond.gbp.3.call.nominalAmount.2m">
+            <instrumentId>26540_bond_gbp_3</instrumentId>
+            <movement>Call</movement>
+            <nominalAmount>2,000,000.00</nominalAmount>
+        </assetBookingSummary>
+
+        <bookingDetail id="booking.event2">
+            <bookingInformation>
+                <eventId ref="event2"/>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="booking.event3">
+            <bookingInformation>
+                <eventId ref="event3"/>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="booking.event4">
+            <bookingInformation>
+                <eventId ref="event4"/>
+            </bookingInformation>
+        </bookingDetail>
+
+        <assetBookingSummary id="CASH.GBP.call.nominalAmount.2m">
+            <movement>Call</movement>
+            <nominalAmount>2,000,000.00</nominalAmount>
+        </assetBookingSummary>
+
+    </scenarioData>
+</dataBean>

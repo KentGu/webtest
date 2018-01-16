@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/xbrowser.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <systemPreference id="systemPreference">
+            <!--<messaging>-->
+                <!--<suspendOutgoingMessaging>false</suspendOutgoingMessaging>-->
+            <!--</messaging>-->
+            <!--<applicationPreferences>-->
+                <!--<theme>Colline</theme>-->
+                <!--<logInPageMessage>test</logInPageMessage>-->
+                <!--<homePageMessage>test</homePageMessage>-->
+                <!--<errorReportingEmailAddress>test@hostname</errorReportingEmailAddress>-->
+                <!--<errorReportTelephoneNumber>10</errorReportTelephoneNumber>-->
+                <!--<errorReportAdditionalText>error</errorReportAdditionalText>-->
+                <!--<sessionTimeOut>30</sessionTimeOut>-->
+                <!--<exposureStatementMaxTableItems>100</exposureStatementMaxTableItems>-->
+                <!--<maxWaitTimeForGui>2</maxWaitTimeForGui>-->
+                <!--<maxWaitTimeForReport>10</maxWaitTimeForReport>-->
+                <!--<maxWaitTimeForTask>10</maxWaitTimeForTask>-->
+                <!--<zipFormatReportsForTask>true</zipFormatReportsForTask>-->
+                <!--<thresholdToZipReports>500</thresholdToZipReports>-->
+                <!--<minimumValidationCheck>false</minimumValidationCheck>-->
+                <!--<enableAmountAbbreviations>true</enableAmountAbbreviations>-->
+                <!--<csvSeparator>Comma</csvSeparator>-->
+                <!--<enableAutomaticBookingApproval>true</enableAutomaticBookingApproval>-->
+                <!--<tolarance>100</tolarance>-->
+                <!--<tolaranceCurrency>EUR</tolaranceCurrency>-->
+            <!--</applicationPreferences>-->
+            <!--<communication>-->
+                <!--<enableExternalDelivery>false</enableExternalDelivery>-->
+                <!--<externalFileLocation>C:</externalFileLocation>-->
+            <!--</communication>-->
+            <labels>
+                <legalDisclaimerHeader>legalDisclaimerHeader</legalDisclaimerHeader>
+                <legalDisclaimerFooter>legalDisclaimerFooter</legalDisclaimerFooter>
+                <headerFooterFontSize>8</headerFooterFontSize>
+                <footerMarginSize>51</footerMarginSize>
+            </labels>
+            <emailInformation>
+                <smtpServerAddress>172.20.20.143</smtpServerAddress>
+            </emailInformation>
+        </systemPreference>
+        <taskSchedulerDetail id="importAgreementsInfo1">
+            <taskName>Import Agreements</taskName>
+        </taskSchedulerDetail>
+        <taskSchedulerDetail id="importAgreements1Info1">
+            <taskName>Import Agreements 1</taskName>
+            <category>Admin</category>
+            <frequency>Daily</frequency>
+            <startTime>
+                <startTimeHour>17</startTimeHour>
+                <startTimeMinute>20</startTimeMinute>
+                <timeZone>CET</timeZone>
+            </startTime>
+            <endTime>18</endTime>
+            <repeatInterval>0:05</repeatInterval>
+            <priority>1</priority>
+            <additionalInfo>/home/test</additionalInfo>
+            <!--<active>true</active>-->
+            <preTaskScriptFile>1</preTaskScriptFile>
+            <postTaskScriptFile>2</postTaskScriptFile>
+            <misc1>mic1</misc1>
+            <misc2>mic2</misc2>
+        </taskSchedulerDetail>
+        <systemStaticData id="schemeId">
+            <type>Scheme</type>
+            <dataName random="true" id="schemeIdName" />
+            <description ref="schemeIdName" />
+            <status>enabled</status>
+        </systemStaticData>
+        <systemStaticData id="schemeDateId">
+            <type ref="schemeIdName" />
+            <dataName random="true" id="schemeDateIdName" />
+            <description ref="schemeDateIdName" />
+            <status>enabled</status>
+        </systemStaticData>
+        <eventLogSearch id="eventLogSearch1">
+            <source>TaskScheduler</source>
+            <level>info</level>
+        </eventLogSearch>
+        <approvalProfile id="approveProfile1">
+            <profileLimit>
+                <profileName random="true" id="profileName1" />
+                <profileLimit>10m</profileLimit>
+            </profileLimit>
+        </approvalProfile>
+        <administerRole id="role1">
+            <newRoleName random="true" id="roleName1" />
+        </administerRole>
+        <user id="userId1">
+            <username random="true" id="userName1" />
+            <password random="true" id="passWord1" />
+            <confirmPassword ref="passWord1" />
+            <role>admin</role>
+            <role>user</role>
+            <role ref="roleName1" />
+            <approvalProfile>
+                <pay ref="profileName1"/>
+                <receive ref="profileName1"/>
+            </approvalProfile>
+            <preferences>
+                <collateralRegion>ALL</collateralRegion>
+                <collateralGroup>ALL</collateralGroup>
+            </preferences>
+        </user>
+    </scenarioData>
+</dataBean>

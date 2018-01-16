@@ -1,0 +1,1465 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="http://artifactory.london.lombardrisk.com:8081/artifactory/libs-snapshot-local/com/lombardrisk/cobiz/14.1.0-SNAPSHOT/cobiz-14.1.0-SNAPSHOT.jar!/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/lettercompare.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <agreementSearch id="agr.search.501">
+            <systemId id="agr.501.id">501</systemId>
+        </agreementSearch>
+        <agreementSearchResult id="agr.searchresult.501">
+            <agreementId ref="agr.501.id"/>
+        </agreementSearchResult>
+        <marginLetter id="margin.letter.501">
+            <letterType>Margin Call</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <exposuresReport>true</exposuresReport>
+                </emailAttachments>
+            </letterSetupDetails>
+        </marginLetter>
+        <variable id="file.501"/>
+
+        <agreementSearch id="agr.search.502">
+            <systemId id="agr.502.id">502</systemId>
+        </agreementSearch>
+        <agreementSearchResult id="agr.searchresult.502">
+            <agreementId ref="agr.502.id"/>
+        </agreementSearchResult>
+        <marginLetter id="margin.letter.502">
+            <letterType>Margin Recall</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <exposuresReport>true</exposuresReport>
+                </emailAttachments>
+            </letterSetupDetails>
+            <requestTypeAndAssetSelection>
+                <eligibleAssetSelection>
+                    <movementType>ReCalls</movementType>
+                    <bookAll>true</bookAll>
+                </eligibleAssetSelection>
+            </requestTypeAndAssetSelection>
+        </marginLetter>
+        <variable id="file.502"/>
+
+        <agreementSearch id="agr.search.503">
+            <systemId id="agr.503.id">503</systemId>
+        </agreementSearch>
+        <agreementSearchResult id="agr.searchresult.503">
+            <agreementId ref="agr.503.id"/>
+        </agreementSearchResult>
+        <marginLetter id="margin.letter.503">
+            <letterType>Margin Call &amp; Recall</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <exposuresReport>true</exposuresReport>
+                </emailAttachments>
+            </letterSetupDetails>
+            <requestTypeAndAssetSelection>
+                <eligibleAssetSelection>
+                    <movementType>ReCalls</movementType>
+                    <bookAll>true</bookAll>
+                </eligibleAssetSelection>
+            </requestTypeAndAssetSelection>
+        </marginLetter>
+        <variable id="file.503"/>
+
+        <agreementSearch id="agr.search.504">
+            <systemId id="agr.504.id">504</systemId>
+        </agreementSearch>
+        <agreementSearchResult id="agr.searchresult.504">
+            <agreementId ref="agr.504.id"/>
+        </agreementSearchResult>
+        <marginLetter id="margin.letter.504">
+            <letterType>Margin Delivery</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <exposuresReport>true</exposuresReport>
+                </emailAttachments>
+            </letterSetupDetails>
+            <requestTypeAndAssetSelection>
+                <eligibleAssetSelection>
+                    <movementType>Deliveries</movementType>
+                    <movementAssets>
+                        <instrumentSelectionSearch>
+                            <assetType>Cash-USD</assetType>
+                            <position>All</position>
+                        </instrumentSelectionSearch>
+                        <instrumentSelectionSearchResult>
+                            <assetType>Cash-USD</assetType>
+                            <instrumentId>Cash-USD</instrumentId>
+                        </instrumentSelectionSearchResult>
+                        <eligibleAssetSelectionDetail>
+                            <applyBookingAmount>true</applyBookingAmount>
+                            <alertHandling>
+                                <accept>true</accept>
+                            </alertHandling>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                </eligibleAssetSelection>
+                <alertHandling>
+                    <accept>true</accept>
+                </alertHandling>
+            </requestTypeAndAssetSelection>
+        </marginLetter>
+        <variable id="file.504"/>
+
+        <agreementSearch id="agr.search.505">
+            <systemId id="agr.505.id">505</systemId>
+        </agreementSearch>
+        <agreementSearchResult id="agr.searchresult.505">
+            <agreementId ref="agr.505.id"/>
+        </agreementSearchResult>
+        <marginLetter id="margin.letter.505">
+            <letterType>Margin Return</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <exposuresReport>true</exposuresReport>
+                </emailAttachments>
+            </letterSetupDetails>
+            <requestTypeAndAssetSelection>
+                <eligibleAssetSelection>
+                    <movementType>RETURNS</movementType>
+                    <bookAll>true</bookAll>
+                </eligibleAssetSelection>
+            </requestTypeAndAssetSelection>
+        </marginLetter>
+        <variable id="file.505"/>
+
+        <agreementSearch id="agr.search.506">
+            <systemId id="agr.506.id">506</systemId>
+        </agreementSearch>
+        <agreementSearchResult id="agr.searchresult.506">
+            <agreementId ref="agr.506.id"/>
+        </agreementSearchResult>
+        <marginLetter id="margin.letter.506">
+            <letterType>Margin Return &amp; Delivery</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <exposuresReport>true</exposuresReport>
+                </emailAttachments>
+            </letterSetupDetails>
+            <requestTypeAndAssetSelection>
+                <eligibleAssetSelection>
+                    <movementType>RETURNS</movementType>
+                    <bookAll>true</bookAll>
+                </eligibleAssetSelection>
+                <eligibleAssetSelection>
+                    <movementType>Deliveries</movementType>
+                    <movementAssets>
+                        <instrumentSelectionSearch>
+                            <assetType>Cash-USD</assetType>
+                            <position>All</position>
+                        </instrumentSelectionSearch>
+                        <instrumentSelectionSearchResult>
+                            <assetType>Cash-USD</assetType>
+                            <instrumentId>Cash-USD</instrumentId>
+                        </instrumentSelectionSearchResult>
+                        <eligibleAssetSelectionDetail>
+                            <applyBookingAmount>true</applyBookingAmount>
+                            <alertHandling>
+                                <accept>true</accept>
+                            </alertHandling>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                </eligibleAssetSelection>
+            </requestTypeAndAssetSelection>
+        </marginLetter>
+        <variable id="file.506"/>
+
+        <agreementSearch id="agr.search.507">
+            <systemId id="agr.507.id">507</systemId>
+        </agreementSearch>
+        <agreementSearchResult id="agr.searchresult.507">
+            <agreementId ref="agr.507.id"/>
+        </agreementSearchResult>
+        <marginLetter id="margin.letter.507">
+            <letterType>VM Call</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <exposuresReport>true</exposuresReport>
+                </emailAttachments>
+            </letterSetupDetails>
+        </marginLetter>
+        <variable id="file.507"/>
+
+        <agreementSearch id="agr.search.1001">
+            <systemId id="agr.1001.id">1001</systemId>
+        </agreementSearch>
+        <agreementSearchResult id="agr.searchresult.1001">
+            <agreementId ref="agr.1001.id"/>
+        </agreementSearchResult>
+        <marginLetter id="margin.letter.1001">
+            <letterType>VM Recall</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <exposuresReport>true</exposuresReport>
+                </emailAttachments>
+            </letterSetupDetails>
+        </marginLetter>
+        <variable id="file.1001"/>
+
+        <agreementSearch id="agr.search.1002">
+            <systemId id="agr.1002.id">1002</systemId>
+        </agreementSearch>
+        <agreementSearchResult id="agr.searchresult.1002">
+            <agreementId ref="agr.1002.id"/>
+        </agreementSearchResult>
+        <marginLetter id="margin.letter.1002">
+            <letterType>VM Call &amp; Recall</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <exposuresReport>true</exposuresReport>
+                </emailAttachments>
+            </letterSetupDetails>
+        </marginLetter>
+        <variable id="file.1002"/>
+
+        <agreementSearch id="agr.search.1003">
+            <systemId id="agr.1003.id">1003</systemId>
+        </agreementSearch>
+        <agreementSearchResult id="agr.searchresult.1003">
+            <agreementId ref="agr.1003.id"/>
+        </agreementSearchResult>
+        <marginLetter id="margin.letter.1003">
+            <letterType>VM Delivery</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <exposuresReport>true</exposuresReport>
+                </emailAttachments>
+            </letterSetupDetails>
+            <requestTypeAndAssetSelection>
+                <eligibleAssetSelection>
+                    <movementType>Deliveries</movementType>
+                    <movementAssets>
+                        <instrumentSelectionSearch>
+                            <assetType>Cash-USD</assetType>
+                            <position>All</position>
+                        </instrumentSelectionSearch>
+                        <instrumentSelectionSearchResult>
+                            <assetType>Cash-USD</assetType>
+                            <instrumentId>Cash-USD</instrumentId>
+                        </instrumentSelectionSearchResult>
+                        <eligibleAssetSelectionDetail>
+                            <applyBookingAmount>true</applyBookingAmount>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                </eligibleAssetSelection>
+            </requestTypeAndAssetSelection>
+        </marginLetter>
+        <variable id="file.1003"/>
+
+        <agreementSearch id="agr.search.1004">
+            <systemId id="agr.1004.id">1004</systemId>
+        </agreementSearch>
+        <agreementSearchResult id="agr.searchresult.1004">
+            <agreementId ref="agr.1004.id"/>
+        </agreementSearchResult>
+        <marginLetter id="margin.letter.1004">
+            <letterType>VM Return</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <exposuresReport>true</exposuresReport>
+                </emailAttachments>
+            </letterSetupDetails>
+            <requestTypeAndAssetSelection>
+                <eligibleAssetSelection>
+                    <movementType>RETURNS</movementType>
+                    <bookAll>true</bookAll>
+                </eligibleAssetSelection>
+            </requestTypeAndAssetSelection>
+        </marginLetter>
+        <variable id="file.1004"/>
+
+        <agreementSearch id="agr.search.1005">
+            <systemId id="agr.1005.id">1005</systemId>
+        </agreementSearch>
+        <agreementSearchResult id="agr.searchresult.1005">
+            <agreementId ref="agr.1005.id"/>
+        </agreementSearchResult>
+        <marginLetter id="margin.letter.1005">
+            <letterType>VM Return &amp; Delivery</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <exposuresReport>true</exposuresReport>
+                </emailAttachments>
+            </letterSetupDetails>
+            <requestTypeAndAssetSelection>
+                <eligibleAssetSelection>
+                    <movementType>RETURNS</movementType>
+                    <bookAll>true</bookAll>
+                </eligibleAssetSelection>
+                <eligibleAssetSelection>
+                    <movementType>Deliveries</movementType>
+                    <movementAssets>
+                        <instrumentSelectionSearch>
+                            <assetType>Cash-USD</assetType>
+                            <position>All</position>
+                        </instrumentSelectionSearch>
+                        <instrumentSelectionSearchResult>
+                            <assetType>Cash-USD</assetType>
+                            <instrumentId>Cash-USD</instrumentId>
+                        </instrumentSelectionSearchResult>
+                        <eligibleAssetSelectionDetail>
+                            <applyBookingAmount>true</applyBookingAmount>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                </eligibleAssetSelection>
+            </requestTypeAndAssetSelection>
+        </marginLetter>
+        <variable id="file.1005"/>
+
+        <agreementSearch id="agr.search.1006">
+            <systemId id="agr.1006.id">1006</systemId>
+        </agreementSearch>
+        <agreementSearchResult id="agr.searchresult.1006">
+            <agreementId ref="agr.1006.id"/>
+        </agreementSearchResult>
+        <marginLetter id="margin.letter.1006">
+            <letterType>IM Call</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <exposuresReport>true</exposuresReport>
+                </emailAttachments>
+            </letterSetupDetails>
+        </marginLetter>
+        <variable id="file.1006"/>
+
+        <agreementSearch id="agr.search.1007">
+            <systemId id="agr.1007.id">1007</systemId>
+        </agreementSearch>
+        <agreementSearchResult id="agr.searchresult.1007">
+            <agreementId ref="agr.1007.id"/>
+        </agreementSearchResult>
+        <marginLetter id="margin.letter.1007">
+            <letterType>IM Recall</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <exposuresReport>true</exposuresReport>
+                </emailAttachments>
+            </letterSetupDetails>
+            <requestTypeAndAssetSelection>
+                <eligibleAssetSelection>
+                    <movementType>Recalls</movementType>
+                    <bookAll>true</bookAll>
+                </eligibleAssetSelection>
+            </requestTypeAndAssetSelection>
+        </marginLetter>
+        <variable id="file.1007"/>
+
+        <agreementSearch id="agr.search.1008">
+            <systemId id="agr.1008.id">1008</systemId>
+        </agreementSearch>
+        <agreementSearchResult id="agr.searchresult.1008">
+            <agreementId ref="agr.1008.id"/>
+        </agreementSearchResult>
+        <marginLetter id="margin.letter.1008">
+            <letterType>IM Call &amp; Recall</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <exposuresReport>true</exposuresReport>
+                </emailAttachments>
+            </letterSetupDetails>
+            <requestTypeAndAssetSelection>
+                <eligibleAssetSelection>
+                    <movementType>Recalls</movementType>
+                    <bookAll>true</bookAll>
+                </eligibleAssetSelection>
+            </requestTypeAndAssetSelection>
+        </marginLetter>
+        <variable id="file.1008"/>
+
+        <agreementSearch id="agr.search.1009">
+            <systemId id="agr.1009.id">1009</systemId>
+        </agreementSearch>
+        <agreementSearchResult id="agr.searchresult.1009">
+            <agreementId ref="agr.1009.id"/>
+        </agreementSearchResult>
+        <marginLetter id="margin.letter.1009">
+            <letterType>IM Delivery</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <exposuresReport>true</exposuresReport>
+                </emailAttachments>
+            </letterSetupDetails>
+            <requestTypeAndAssetSelection>
+                <eligibleAssetSelection>
+                    <movementType>Deliveries</movementType>
+                    <movementAssets>
+                        <instrumentSelectionSearch>
+                            <assetType>Cash-USD</assetType>
+                            <position>All</position>
+                        </instrumentSelectionSearch>
+                        <instrumentSelectionSearchResult>
+                            <assetType>Cash-USD</assetType>
+                            <instrumentId>Cash-USD</instrumentId>
+                        </instrumentSelectionSearchResult>
+                        <eligibleAssetSelectionDetail>
+                            <applyBookingAmount>true</applyBookingAmount>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                </eligibleAssetSelection>
+            </requestTypeAndAssetSelection>
+        </marginLetter>
+        <variable id="file.1009"/>
+
+        <agreementSearch id="agr.search.1010">
+            <systemId id="agr.1010.id">1010</systemId>
+        </agreementSearch>
+        <agreementSearchResult id="agr.searchresult.1010">
+            <agreementId ref="agr.1010.id"/>
+        </agreementSearchResult>
+        <marginLetter id="margin.letter.1010">
+            <letterType>IM Return</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <exposuresReport>true</exposuresReport>
+                </emailAttachments>
+            </letterSetupDetails>
+            <requestTypeAndAssetSelection>
+                <eligibleAssetSelection>
+                    <movementType>RETURNS</movementType>
+                    <bookAll>true</bookAll>
+                </eligibleAssetSelection>
+            </requestTypeAndAssetSelection>
+        </marginLetter>
+        <variable id="file.1010"/>
+
+        <agreementSearch id="agr.search.1011">
+            <systemId id="agr.1011.id">1011</systemId>
+        </agreementSearch>
+        <agreementSearchResult id="agr.searchresult.1011">
+            <agreementId ref="agr.1011.id"/>
+        </agreementSearchResult>
+        <marginLetter id="margin.letter.1011">
+            <letterType>IM Return &amp; Delivery</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <exposuresReport>true</exposuresReport>
+                </emailAttachments>
+            </letterSetupDetails>
+            <requestTypeAndAssetSelection>
+                <eligibleAssetSelection>
+                    <movementType>RETURNS</movementType>
+                    <bookAll>true</bookAll>
+                </eligibleAssetSelection>
+                <eligibleAssetSelection>
+                    <movementType>Deliveries</movementType>
+                    <movementAssets>
+                        <instrumentSelectionSearch>
+                            <assetType>Cash-USD</assetType>
+                            <position>All</position>
+                        </instrumentSelectionSearch>
+                        <instrumentSelectionSearchResult>
+                            <assetType>Cash-USD</assetType>
+                            <instrumentId>Cash-USD</instrumentId>
+                        </instrumentSelectionSearchResult>
+                        <eligibleAssetSelectionDetail>
+                            <applyBookingAmount>true</applyBookingAmount>
+                            <alertHandling>
+                                <accept>true</accept>
+                            </alertHandling>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                </eligibleAssetSelection>
+            </requestTypeAndAssetSelection>
+        </marginLetter>
+        <variable id="file.1011"/>
+
+        <agreementSearch id="agr.search.1012">
+            <systemId id="agr.1012.id">1012</systemId>
+        </agreementSearch>
+        <agreementSearchResult id="agr.searchresult.1012">
+            <agreementId ref="agr.1012.id"/>
+        </agreementSearchResult>
+        <marginLetter id="margin.letter.1012">
+            <letterType>Full Dispute</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <exposuresReport>true</exposuresReport>
+                </emailAttachments>
+            </letterSetupDetails>
+            <letterSetupDetails>
+                <marginCall>
+                    <counterpartyDisputedAmt>200k</counterpartyDisputedAmt>
+                </marginCall>
+            </letterSetupDetails>
+        </marginLetter>
+        <variable id="file.1012"/>
+
+        <agreementSearch id="agr.search.1013">
+            <systemId id="agr.1013.id">1013</systemId>
+        </agreementSearch>
+        <agreementSearchResult id="agr.searchresult.1013">
+            <agreementId ref="agr.1013.id"/>
+        </agreementSearchResult>
+        <marginLetter id="margin.letter.1013">
+            <letterType>Substitution Request</letterType>
+            <requestTypeAndAssetSelection>
+                <eligibleAssetSelection>
+                    <movementType>Sub In</movementType>
+                    <movementAssets>
+                        <eligibleAsset>
+                            <instrumentId>Instrument_Bond_USD</instrumentId>
+                        </eligibleAsset>
+                        <eligibleAssetSelectionDetail>
+                            <vmNorminalAmountRequired>100k</vmNorminalAmountRequired>
+                            <alertHandling>
+                                <accept>true</accept>
+                            </alertHandling>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                    <movementAssets>
+                        <eligibleAsset>
+                            <instrumentId>Instrument_Bond_EUR</instrumentId>
+                        </eligibleAsset>
+                        <eligibleAssetSelectionDetail>
+                            <imNorminalAmountRequired>100k</imNorminalAmountRequired>
+                            <alertHandling>
+                                <accept>true</accept>
+                            </alertHandling>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                    <movementAssets>
+                        <eligibleAsset>
+                            <instrumentId>Instrument_Equity_JPY</instrumentId>
+                        </eligibleAsset>
+                        <eligibleAssetSelectionDetail>
+                            <vmNorminalAmountRequired>1k</vmNorminalAmountRequired>
+                            <alertHandling>
+                                <accept>true</accept>
+                            </alertHandling>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                    <movementAssets>
+                        <eligibleAsset>
+                            <instrumentId>Instrument_Equity_GBP</instrumentId>
+                        </eligibleAsset>
+                        <eligibleAssetSelectionDetail>
+                            <imNorminalAmountRequired>1k</imNorminalAmountRequired>
+                            <alertHandling>
+                                <accept>true</accept>
+                            </alertHandling>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                    <movementAssets>
+                        <eligibleAsset>
+                            <assetTypeName>Cash-GBP(VM, IM)</assetTypeName>
+                        </eligibleAsset>
+                        <eligibleAssetSelectionDetail>
+                            <imNorminalAmountRequired>100k</imNorminalAmountRequired>
+                            <alertHandling>
+                                <accept>true</accept>
+                            </alertHandling>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                    <movementAssets>
+                        <eligibleAsset>
+                            <assetTypeName>Cash-USD(VM, IM)</assetTypeName>
+                        </eligibleAsset>
+                        <eligibleAssetSelectionDetail>
+                            <vmNorminalAmountRequired>100k</vmNorminalAmountRequired>
+                            <alertHandling>
+                                <accept>true</accept>
+                            </alertHandling>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                </eligibleAssetSelection>
+                <eligibleAssetSelection>
+                    <movementType>Sub Out</movementType>
+                    <movementAssets>
+                        <instrumentSelectionSearch>
+                            <instrumentId>
+                                <filter>Instrument_Bond_USD</filter>
+                                <linkText>Instrument_Bond_USD</linkText>
+                            </instrumentId>
+                        </instrumentSelectionSearch>
+                        <instrumentSelectionSearchResult>
+                            <instrumentId>Instrument_Bond_USD</instrumentId>
+                        </instrumentSelectionSearchResult>
+                        <eligibleAsset>
+                            <instrumentId>Instrument_Bond_USD</instrumentId>
+                        </eligibleAsset>
+                        <eligibleAssetSelectionDetail>
+                            <vmNorminalAmountRequired>100k</vmNorminalAmountRequired>
+                            <alertHandling>
+                                <accept>true</accept>
+                            </alertHandling>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                </eligibleAssetSelection>
+            </requestTypeAndAssetSelection>
+        </marginLetter>
+        <variable id="file.1013"/>
+
+        <agreementSearch id="agr.search.1014">
+            <systemId id="agr.1014.id">1014</systemId>
+        </agreementSearch>
+        <agreementSearchResult id="agr.searchresult.1014">
+            <agreementId ref="agr.1014.id"/>
+        </agreementSearchResult>
+        <marginLetter id="margin.letter.1014">
+            <letterType>Substitution Confirmation</letterType>
+            <requestTypeAndAssetSelection>
+                <eligibleAssetSelection>
+                    <movementType>Sub Out</movementType>
+                    <movementAssets>
+                        <eligibleAsset>
+                            <instrumentId>Instrument_Bond_JPY</instrumentId>
+                        </eligibleAsset>
+                        <eligibleAssetSelectionDetail>
+                            <imNorminalAmountRequired>100k</imNorminalAmountRequired>
+                            <alertHandling>
+                                <accept>true</accept>
+                            </alertHandling>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                    <movementAssets>
+                        <eligibleAsset>
+                            <instrumentId>Instrument_Bond_GBP</instrumentId>
+                        </eligibleAsset>
+                        <eligibleAssetSelectionDetail>
+                            <vmNorminalAmountRequired>100k</vmNorminalAmountRequired>
+                            <alertHandling>
+                                <accept>true</accept>
+                            </alertHandling>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                    <movementAssets>
+                        <eligibleAsset>
+                            <instrumentId>Instrument_Equity_USD</instrumentId>
+                        </eligibleAsset>
+                        <eligibleAssetSelectionDetail>
+                            <vmNorminalAmountRequired>1k</vmNorminalAmountRequired>
+                            <alertHandling>
+                                <accept>true</accept>
+                            </alertHandling>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                    <movementAssets>
+                        <eligibleAsset>
+                            <instrumentId>Instrument_Equity_EUR</instrumentId>
+                        </eligibleAsset>
+                        <eligibleAssetSelectionDetail>
+                            <imNorminalAmountRequired>1k</imNorminalAmountRequired>
+                            <alertHandling>
+                                <accept>true</accept>
+                            </alertHandling>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                    <movementAssets>
+                        <eligibleAsset>
+                            <assetTypeName>Cash-JPY(VM, IM)</assetTypeName>
+                        </eligibleAsset>
+                        <eligibleAssetSelectionDetail>
+                            <vmNorminalAmountRequired>100k</vmNorminalAmountRequired>
+                            <alertHandling>
+                                <accept>true</accept>
+                            </alertHandling>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                    <movementAssets>
+                        <eligibleAsset>
+                            <assetTypeName>Cash-EUR(VM, IM)</assetTypeName>
+                        </eligibleAsset>
+                        <eligibleAssetSelectionDetail>
+                            <imNorminalAmountRequired>100k</imNorminalAmountRequired>
+                            <alertHandling>
+                                <accept>true</accept>
+                            </alertHandling>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                </eligibleAssetSelection>
+                <eligibleAssetSelection>
+                    <movementType>Sub In</movementType>
+                    <movementAssets>
+                        <instrumentSelectionSearch>
+                            <instrumentId>
+                                <filter>Instrument_Bond_EUR</filter>
+                                <linkText>Instrument_Bond_EUR</linkText>
+                            </instrumentId>
+                        </instrumentSelectionSearch>
+                        <instrumentSelectionSearchResult>
+                            <instrumentId>Instrument_Bond_EUR</instrumentId>
+                        </instrumentSelectionSearchResult>
+                        <eligibleAsset>
+                            <instrumentId>Instrument_Bond_EUR</instrumentId>
+                        </eligibleAsset>
+                        <eligibleAssetSelectionDetail>
+                            <imNorminalAmountRequired>100k</imNorminalAmountRequired>
+                            <alertHandling>
+                                <accept>true</accept>
+                            </alertHandling>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                </eligibleAssetSelection>
+            </requestTypeAndAssetSelection>
+        </marginLetter>
+        <variable id="file.1014"/>
+
+        <!--<agreementSearch id="agr.search.1021">-->
+        <!--<systemId id="agr.1021.id">1021</systemId>-->
+        <!--</agreementSearch>-->
+        <!--<agreementSearchResult id="agr.searchresult.1021">-->
+        <!--<agreementId ref="agr.1021.id"/>-->
+        <!--</agreementSearchResult>-->
+        <!--<marginLetter id="margin.letter.1021">-->
+        <!--<letterType>Substitution Confirmation</letterType>-->
+        <!--</marginLetter>-->
+        <!--<variable id="file.1021"/>-->
+
+        <agreementSearch id="agr.search.1025">
+            <systemId id="agr.1025.id">1025</systemId>
+        </agreementSearch>
+        <agreementSearchResult id="agr.searchresult.1025">
+            <agreementId ref="agr.1025.id"/>
+        </agreementSearchResult>
+        <marginLetter id="margin.letter.1025">
+            <letterType>Margin Call</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <exposuresReport>true</exposuresReport>
+                </emailAttachments>
+            </letterSetupDetails>
+        </marginLetter>
+        <variable id="file.1025"/>
+
+        <agreementSearch id="agr.search.1029">
+            <systemId id="agr.1029.id">1029</systemId>
+        </agreementSearch>
+        <agreementSearchResult id="agr.searchresult.1029">
+            <agreementId ref="agr.1029.id"/>
+        </agreementSearchResult>
+        <marginLetter id="margin.letter.vm.1029">
+            <letterType>VM Delivery</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <exposuresReport>true</exposuresReport>
+                </emailAttachments>
+            </letterSetupDetails>
+        </marginLetter>
+        <marginLetter id="margin.letter.im.1029">
+            <letterType>IM Delivery</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <exposuresReport>true</exposuresReport>
+                </emailAttachments>
+            </letterSetupDetails>
+        </marginLetter>
+        <variable id="file.1029"/>
+
+        <agreementSearch id="agr.search.1509">
+            <systemId id="agr.1509.id">1509</systemId>
+        </agreementSearch>
+        <agreementSearchResult id="agr.searchresult.1509">
+            <agreementId ref="agr.1509.id"/>
+        </agreementSearchResult>
+        <marginLetter id="margin.letter.callrecall.1509">
+            <letterType>VM Call &amp; Recall</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <exposuresReport>true</exposuresReport>
+                </emailAttachments>
+            </letterSetupDetails>
+            <requestTypeAndAssetSelection>
+                <eligibleAssetSelection>
+                    <movementType>Recalls</movementType>
+                    <movementAssets>
+                        <eligibleAsset>
+                            <instrumentId>Instrument_Bond_GBP</instrumentId>
+                        </eligibleAsset>
+                        <eligibleAssetSelectionDetail>
+                            <applyBookingAmount>true</applyBookingAmount>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                    <movementAssets>
+                        <eligibleAsset>
+                            <instrumentId>Instrument_Equity_EUR</instrumentId>
+                        </eligibleAsset>
+                        <eligibleAssetSelectionDetail>
+                            <applyBookingAmount>true</applyBookingAmount>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                </eligibleAssetSelection>
+            </requestTypeAndAssetSelection>
+        </marginLetter>
+        <marginLetter id="margin.letter.call.1509">
+            <letterType>VM Call</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <exposuresReport>true</exposuresReport>
+                </emailAttachments>
+            </letterSetupDetails>
+        </marginLetter>
+        <marginLetter id="margin.letter.recall.1509">
+            <letterType>VM Recall</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <exposuresReport>true</exposuresReport>
+                </emailAttachments>
+            </letterSetupDetails>
+            <requestTypeAndAssetSelection>
+                <eligibleAssetSelection>
+                    <movementType>Recalls</movementType>
+                    <movementAssets>
+                        <eligibleAsset>
+                            <instrumentId>Instrument_Bond_GBP</instrumentId>
+                        </eligibleAsset>
+                        <eligibleAssetSelectionDetail>
+                            <applyBookingAmount>true</applyBookingAmount>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                    <movementAssets>
+                        <eligibleAsset>
+                            <instrumentId>Instrument_Equity_EUR</instrumentId>
+                        </eligibleAsset>
+                        <eligibleAssetSelectionDetail>
+                            <applyBookingAmount>true</applyBookingAmount>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                </eligibleAssetSelection>
+            </requestTypeAndAssetSelection>
+        </marginLetter>
+        <variable id="file.1509"/>
+
+        <agreementSearch id="agr.search.1510">
+            <systemId id="agr.1510.id">1510</systemId>
+        </agreementSearch>
+        <agreementSearchResult id="agr.searchresult.1510">
+            <agreementId ref="agr.1510.id"/>
+        </agreementSearchResult>
+        <marginLetter id="margin.letter.deliveryreturn.1510">
+            <letterType>VM Return &amp; Delivery</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <exposuresReport>true</exposuresReport>
+                </emailAttachments>
+            </letterSetupDetails>
+            <requestTypeAndAssetSelection>
+                <eligibleAssetSelection>
+                    <movementType>RETURNS</movementType>
+                    <movementAssets>
+                        <eligibleAsset>
+                            <instrumentId>Instrument_Bond_GBP</instrumentId>
+                        </eligibleAsset>
+                        <eligibleAssetSelectionDetail>
+                            <applyBookingAmount>true</applyBookingAmount>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                    <movementAssets>
+                        <eligibleAsset>
+                            <instrumentId>Instrument_Equity_EUR</instrumentId>
+                        </eligibleAsset>
+                        <eligibleAssetSelectionDetail>
+                            <applyBookingAmount>true</applyBookingAmount>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                </eligibleAssetSelection>
+                <eligibleAssetSelection>
+                    <movementType>Deliveries</movementType>
+                    <movementAssets>
+                        <instrumentSelectionSearch>
+                            <assetType>Cash-USD</assetType>
+                            <position>All</position>
+                        </instrumentSelectionSearch>
+                        <instrumentSelectionSearchResult>
+                            <assetType>Cash-USD</assetType>
+                            <instrumentId>Cash-USD</instrumentId>
+                        </instrumentSelectionSearchResult>
+                        <eligibleAssetSelectionDetail>
+                            <applyBookingAmount>true</applyBookingAmount>
+                            <alertHandling>
+                                <accept>true</accept>
+                            </alertHandling>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                </eligibleAssetSelection>
+            </requestTypeAndAssetSelection>
+        </marginLetter>
+        <marginLetter id="margin.letter.delivery.1510">
+            <letterType>VM Delivery</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <exposuresReport>true</exposuresReport>
+                </emailAttachments>
+            </letterSetupDetails>
+            <requestTypeAndAssetSelection>
+                <eligibleAssetSelection>
+                    <movementType>Deliveries</movementType>
+                    <movementAssets>
+                        <instrumentSelectionSearch>
+                            <assetType>Cash-USD</assetType>
+                            <position>All</position>
+                        </instrumentSelectionSearch>
+                        <instrumentSelectionSearchResult>
+                            <assetType>Cash-USD</assetType>
+                            <instrumentId>Cash-USD</instrumentId>
+                        </instrumentSelectionSearchResult>
+                        <eligibleAssetSelectionDetail>
+                            <applyBookingAmount>true</applyBookingAmount>
+                            <alertHandling>
+                                <accept>true</accept>
+                            </alertHandling>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                </eligibleAssetSelection>
+            </requestTypeAndAssetSelection>
+        </marginLetter>
+        <marginLetter id="margin.letter.return.1510">
+            <letterType>VM Return</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <exposuresReport>true</exposuresReport>
+                </emailAttachments>
+            </letterSetupDetails>
+            <requestTypeAndAssetSelection>
+                <eligibleAssetSelection>
+                    <movementType>RETURNS</movementType>
+                    <movementAssets>
+                        <eligibleAsset>
+                            <instrumentId>Instrument_Bond_GBP</instrumentId>
+                        </eligibleAsset>
+                        <eligibleAssetSelectionDetail>
+                            <applyBookingAmount>true</applyBookingAmount>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                    <movementAssets>
+                        <eligibleAsset>
+                            <instrumentId>Instrument_Equity_EUR</instrumentId>
+                        </eligibleAsset>
+                        <eligibleAssetSelectionDetail>
+                            <applyBookingAmount>true</applyBookingAmount>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                </eligibleAssetSelection>
+            </requestTypeAndAssetSelection>
+        </marginLetter>
+        <variable id="file.1510"/>
+
+        <agreementSearch id="agr.search.1511">
+            <systemId id="agr.1511.id">1511</systemId>
+        </agreementSearch>
+        <agreementSearchResult id="agr.searchresult.1511">
+            <agreementId ref="agr.1511.id"/>
+        </agreementSearchResult>
+        <marginLetter id="margin.letter.1511">
+            <letterType>Margin Call</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <exposuresReport>true</exposuresReport>
+                </emailAttachments>
+            </letterSetupDetails>
+        </marginLetter>
+        <variable id="file.1511"/>
+
+        <agreementSearch id="agr.search.1512">
+            <systemId id="agr.1512.id">1512</systemId>
+        </agreementSearch>
+        <agreementSearchResult id="agr.searchresult.1512">
+            <agreementId ref="agr.1512.id"/>
+        </agreementSearchResult>
+        <marginLetter id="margin.letter.1512">
+            <letterType>Margin Recall</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <exposuresReport>true</exposuresReport>
+                </emailAttachments>
+            </letterSetupDetails>
+            <requestTypeAndAssetSelection>
+                <eligibleAssetSelection>
+                    <movementType>Recalls</movementType>
+                    <movementAssets>
+                        <eligibleAsset>
+                            <instrumentId>Instrument_Bond_EUR</instrumentId>
+                        </eligibleAsset>
+                        <eligibleAssetSelectionDetail>
+                            <applyBookingAmount>true</applyBookingAmount>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                    <movementAssets>
+                        <eligibleAsset>
+                            <instrumentId>Instrument_Equity_EUR</instrumentId>
+                        </eligibleAsset>
+                        <eligibleAssetSelectionDetail>
+                            <applyBookingAmount>true</applyBookingAmount>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                    <movementAssets>
+                        <eligibleAsset>
+                            <assetTypeName>Cash-EUR</assetTypeName>
+                        </eligibleAsset>
+                        <eligibleAssetSelectionDetail>
+                            <norminalAmountRequired>1000</norminalAmountRequired>
+                            <alertHandling>
+                                <accept>true</accept>
+                            </alertHandling>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                </eligibleAssetSelection>
+            </requestTypeAndAssetSelection>
+        </marginLetter>
+        <variable id="file.1512"/>
+
+        <agreementSearch id="agr.search.1513">
+            <systemId id="agr.1513.id">1513</systemId>
+        </agreementSearch>
+        <agreementSearchResult id="agr.searchresult.1513">
+            <agreementId ref="agr.1513.id"/>
+        </agreementSearchResult>
+        <marginLetter id="margin.letter.1513">
+            <letterType>Margin Call &amp; Recall</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <exposuresReport>true</exposuresReport>
+                </emailAttachments>
+            </letterSetupDetails>
+            <requestTypeAndAssetSelection>
+                <eligibleAssetSelection>
+                    <movementType>Recalls</movementType>
+                    <movementAssets>
+                        <eligibleAsset>
+                            <instrumentId>Instrument_Bond_EUR</instrumentId>
+                        </eligibleAsset>
+                        <eligibleAssetSelectionDetail>
+                            <applyBookingAmount>true</applyBookingAmount>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                    <movementAssets>
+                        <eligibleAsset>
+                            <instrumentId>Instrument_Equity_EUR</instrumentId>
+                        </eligibleAsset>
+                        <eligibleAssetSelectionDetail>
+                            <applyBookingAmount>true</applyBookingAmount>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                    <movementAssets>
+                        <eligibleAsset>
+                            <assetTypeName>Cash-EUR</assetTypeName>
+                        </eligibleAsset>
+                        <eligibleAssetSelectionDetail>
+                            <norminalAmountRequired>1000</norminalAmountRequired>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                </eligibleAssetSelection>
+            </requestTypeAndAssetSelection>
+        </marginLetter>
+        <variable id="file.1513"/>
+
+        <agreementSearch id="agr.search.1514">
+            <systemId id="agr.1514.id">1514</systemId>
+        </agreementSearch>
+        <agreementSearchResult id="agr.searchresult.1514">
+            <agreementId ref="agr.1514.id"/>
+        </agreementSearchResult>
+        <marginLetter id="margin.letter.1514">
+            <letterType>Margin Delivery</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <exposuresReport>true</exposuresReport>
+                </emailAttachments>
+            </letterSetupDetails>
+            <requestTypeAndAssetSelection>
+                <eligibleAssetSelection>
+                    <movementType>Deliveries</movementType>
+                    <movementAssets>
+                        <instrumentSelectionSearch>
+                            <assetType>Cash-USD</assetType>
+                            <position>All</position>
+                        </instrumentSelectionSearch>
+                        <instrumentSelectionSearchResult>
+                            <assetType>Cash-USD</assetType>
+                            <instrumentId>Cash-USD</instrumentId>
+                        </instrumentSelectionSearchResult>
+                        <eligibleAssetSelectionDetail>
+                            <applyBookingAmount>true</applyBookingAmount>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                </eligibleAssetSelection>
+                <alertHandling>
+                    <accept>true</accept>
+                </alertHandling>
+            </requestTypeAndAssetSelection>
+        </marginLetter>
+        <variable id="file.1514"/>
+
+        <agreementSearch id="agr.search.1516">
+            <systemId id="agr.1516.id">1516</systemId>
+        </agreementSearch>
+        <agreementSearchResult id="agr.searchresult.1516">
+            <agreementId ref="agr.1516.id"/>
+        </agreementSearchResult>
+        <marginLetter id="margin.letter.1516">
+            <letterType>Margin Return</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <exposuresReport>true</exposuresReport>
+                </emailAttachments>
+            </letterSetupDetails>
+            <requestTypeAndAssetSelection>
+                <eligibleAssetSelection>
+                    <movementType>RETURNS</movementType>
+                    <movementAssets>
+                        <eligibleAsset>
+                            <instrumentId>Instrument_Bond_EUR</instrumentId>
+                        </eligibleAsset>
+                        <eligibleAssetSelectionDetail>
+                            <applyBookingAmount>true</applyBookingAmount>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                    <movementAssets>
+                        <eligibleAsset>
+                            <instrumentId>Instrument_Equity_EUR</instrumentId>
+                        </eligibleAsset>
+                        <eligibleAssetSelectionDetail>
+                            <applyBookingAmount>true</applyBookingAmount>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                    <movementAssets>
+                        <eligibleAsset>
+                            <assetTypeName>Cash-EUR</assetTypeName>
+                        </eligibleAsset>
+                        <eligibleAssetSelectionDetail>
+                            <norminalAmountRequired>1000</norminalAmountRequired>
+                            <alertHandling>
+                                <accept>true</accept>
+                            </alertHandling>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                </eligibleAssetSelection>
+            </requestTypeAndAssetSelection>
+        </marginLetter>
+        <variable id="file.1516"/>
+
+        <agreementSearch id="agr.search.1517">
+            <systemId id="agr.1517.id">1517</systemId>
+        </agreementSearch>
+        <agreementSearchResult id="agr.searchresult.1517">
+            <agreementId ref="agr.1517.id"/>
+        </agreementSearchResult>
+        <marginLetter id="margin.letter.1517">
+            <letterType>Margin Return &amp; Delivery</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <exposuresReport>true</exposuresReport>
+                </emailAttachments>
+            </letterSetupDetails>
+            <requestTypeAndAssetSelection>
+                <eligibleAssetSelection>
+                    <movementType>RETURNS</movementType>
+                    <movementAssets>
+                        <eligibleAsset>
+                            <instrumentId>Instrument_Bond_EUR</instrumentId>
+                        </eligibleAsset>
+                        <eligibleAssetSelectionDetail>
+                            <applyBookingAmount>true</applyBookingAmount>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                    <movementAssets>
+                        <eligibleAsset>
+                            <instrumentId>Instrument_Equity_EUR</instrumentId>
+                        </eligibleAsset>
+                        <eligibleAssetSelectionDetail>
+                            <applyBookingAmount>true</applyBookingAmount>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                    <movementAssets>
+                        <eligibleAsset>
+                            <assetTypeName>Cash-EUR</assetTypeName>
+                        </eligibleAsset>
+                        <eligibleAssetSelectionDetail>
+                            <norminalAmountRequired>1000</norminalAmountRequired>
+                            <alertHandling>
+                                <accept>true</accept>
+                            </alertHandling>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                </eligibleAssetSelection>
+                <eligibleAssetSelection>
+                    <movementType>Deliveries</movementType>
+                    <movementAssets>
+                        <instrumentSelectionSearch>
+                            <assetType>Cash-USD</assetType>
+                            <position>All</position>
+                        </instrumentSelectionSearch>
+                        <instrumentSelectionSearchResult>
+                            <assetType>Cash-USD</assetType>
+                            <instrumentId>Cash-USD</instrumentId>
+                        </instrumentSelectionSearchResult>
+                        <eligibleAssetSelectionDetail>
+                            <applyBookingAmount>true</applyBookingAmount>
+                            <alertHandling>
+                                <accept>true</accept>
+                            </alertHandling>
+                        </eligibleAssetSelectionDetail>
+                    </movementAssets>
+                </eligibleAssetSelection>
+            </requestTypeAndAssetSelection>
+        </marginLetter>
+        <variable id="file.1517"/>
+
+        <interestEventSearch id="interest.search.1015">
+            <description>
+                <type>Starting with</type>
+                <filter id="agr.1015.desc">LC_InterestLetter_Physical</filter>
+            </description>
+
+            <month>This Month</month>
+        </interestEventSearch>
+        <interestEventDetail id="interest.vm.1015">
+            <description ref="agr.1015.desc"/>
+            <interestSource>VM Interest</interestSource>
+        </interestEventDetail>
+        <interestEventDetail id="interest.im.1015">
+            <description ref="agr.1015.desc"/>
+            <interestSource>IM Interest</interestSource>
+        </interestEventDetail>
+        <marginLetter id="margin.letter.1015"/>
+        <variable id="file.im.pay.1015"/>
+        <variable id="file.vm.pay.1015"/>
+        <variable id="file.im.receive.1015"/>
+        <variable id="file.vm.receive.1015"/>
+
+        <interestEventSearch id="interest.search.1016">
+            <description>
+                <type>Starting with</type>
+                <filter id="agr.1016.desc">LC_InterestLetter_Capitalised</filter>
+            </description>
+
+            <month>This Month</month>
+        </interestEventSearch>
+        <interestEventDetail id="interest.vm.1016">
+            <description ref="agr.1016.desc"/>
+            <interestSource>VM Interest</interestSource>
+        </interestEventDetail>
+        <interestEventDetail id="interest.im.1016">
+            <description ref="agr.1016.desc"/>
+            <interestSource>IM Interest</interestSource>
+        </interestEventDetail>
+        <variable id="file.im.pay.1016"/>
+        <variable id="file.vm.pay.1016"/>
+        <variable id="file.im.receive.1016"/>
+        <variable id="file.vm.receive.1016"/>
+
+        <interestEventSearch id="interest.search.1504">
+            <description>
+                <type>Starting with</type>
+                <filter id="agr.1504.desc">LC_Physical_Interest_Letter_UM</filter>
+            </description>
+
+            <month>This Month</month>
+        </interestEventSearch>
+        <interestEventDetail id="interest.net.1504">
+            <description ref="agr.1504.desc"/>
+            <interestSource>Net Interest</interestSource>
+        </interestEventDetail>
+        <variable id="file.im.pay.1504"/>
+        <variable id="file.vm.pay.1504"/>
+
+        <interestEventSearch id="interest.search.1508">
+            <description>
+                <type>Starting with</type>
+                <filter id="agr.1508.desc">LC_Capitalised_Interest_Letter_UM</filter>
+            </description>
+
+            <month>This Month</month>
+        </interestEventSearch>
+        <interestEventDetail id="interest.im.1508">
+            <description ref="agr.1508.desc"/>
+            <interestSource>IM Interest</interestSource>
+        </interestEventDetail>
+        <interestEventDetail id="interest.vm.1508">
+            <description ref="agr.1508.desc"/>
+            <interestSource>VM Interest</interestSource>
+        </interestEventDetail>
+        <variable id="file.im.pay.1508"/>
+        <variable id="file.vm.pay.1508"/>
+        <variable id="file.im.receive.1508"/>
+        <variable id="file.vm.receive.1508"/>
+
+        <marginLetter id="interest.letter"/>
+
+        <!--<systemPreference id="sys.pref.letter">-->
+        <!--<communication>-->
+        <!--<enableExternalDelivery>true</enableExternalDelivery>-->
+        <!--<externalFileLocation>/home/test/Feed</externalFileLocation>-->
+        <!--<letterAttachmentLocation>/home/test/Feed</letterAttachmentLocation>-->
+        <!--<temporaryLetterFolder>/home/test/Feed</temporaryLetterFolder>-->
+        <!--<uploadRootFolder>/home/test/Feed</uploadRootFolder>-->
+        <!--<defaultBackupFolder>/home/test/Feed</defaultBackupFolder>-->
+        <!--</communication>-->
+        <!--</systemPreference>-->
+        <agreementSearch id="agr.search.1017">
+            <systemId id="agr.1017.id">1017</systemId>
+        </agreementSearch>
+        <agreementSearchResult id="agr.searchresult.1017">
+            <agreementId ref="agr.1017.id"/>
+        </agreementSearchResult>
+        <assetBookingSummary id="asset.bond.jpy">
+            <assetType>Bond-JPY</assetType>
+            <movement>Call</movement>
+        </assetBookingSummary>
+        <assetBookingSummary id="asset.bond.gbp">
+            <assetType>Bond-GBP</assetType>
+            <movement>Call</movement>
+        </assetBookingSummary>
+        <assetBookingSummary id="asset.equity.jpy">
+            <assetType>Equity-JPY</assetType>
+            <movement>Delivery</movement>
+        </assetBookingSummary>
+        <assetBookingSummary id="asset.equity.gbp">
+            <assetType>Equity-GBP</assetType>
+            <movement>Delivery</movement>
+        </assetBookingSummary>
+        <assetBookingSummary id="asset.cash.usd">
+            <assetType>Cash-USD</assetType>
+            <movement>Delivery</movement>
+        </assetBookingSummary>
+        <assetBookingSummary id="asset.cash.eur">
+            <assetType>Cash-EUR</assetType>
+            <movement>Call</movement>
+        </assetBookingSummary>
+
+        <agreementSearch id="agr.search.2004">
+            <systemId id="agr.2004.id">2004</systemId>
+        </agreementSearch>
+        <agreementSearchResult id="agr.searchresult.2004">
+            <agreementId ref="agr.2004.id"/>
+        </agreementSearchResult>
+        <agreement id="agr.fun1.2001">
+            <principal>
+                <linkText>LetterCompareP1</linkText>
+            </principal>
+            <counterparty>
+                <linkText>LetterCompareC_Sub1</linkText>
+            </counterparty>
+            <agreementDescription>LC_Confirmation_Letter_UMBRELLA_F1</agreementDescription>
+            <agreementId>2001</agreementId>
+        </agreement>
+        <agreement id="agr.fun2.2002">
+            <principal>
+                <linkText>LetterCompareP2</linkText>
+            </principal>
+            <counterparty>
+                <linkText>LetterCompareC_Sub2</linkText>
+            </counterparty>
+            <agreementDescription>LC_Confirmation_Letter_UMBRELLA_F2</agreementDescription>
+            <agreementId>2002</agreementId>
+        </agreement>
+        <agreement id="agr.fun3.2003">
+            <principal>
+                <linkText>LetterCompareP3</linkText>
+            </principal>
+            <counterparty>
+                <linkText>LetterCompareC_Sub3</linkText>
+            </counterparty>
+            <agreementDescription>LC_Confirmation_Letter_UMBRELLA_F3</agreementDescription>
+            <agreementId>2003</agreementId>
+        </agreement>
+        <bookingDetail id="booking.2001.1">
+            <instrumentSearch>
+                <instrumentId>
+                    <filter>Instrument_Bond_GBP</filter>
+                    <linkText>Instrument_Bond_GBP</linkText>
+                </instrumentId>
+                <linkText>Instrument_Bond_GBP</linkText>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <movement>Call</movement>
+                    <vmAmount>1m</vmAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <save>save</save>
+        </bookingDetail>
+        <bookingDetail id="booking.2001.2">
+            <instrumentSearch>
+                <instrumentId>
+                    <filter>Instrument_Bond_GBP</filter>
+                    <linkText>Instrument_Bond_GBP</linkText>
+                </instrumentId>
+                <linkText>Instrument_Bond_GBP</linkText>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <movement>Call</movement>
+                    <imAmount>1m</imAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <save>save</save>
+        </bookingDetail>
+        <bookingDetail id="booking.2002.1">
+            <instrumentSearch>
+                <instrumentId>
+                    <filter>Instrument_Bond_GBP</filter>
+                    <linkText>Instrument_Bond_GBP</linkText>
+                </instrumentId>
+                <linkText>Instrument_Bond_GBP</linkText>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <movement>Delivery</movement>
+                    <vmAmount>0.5m</vmAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <save>save</save>
+        </bookingDetail>
+        <bookingDetail id="booking.2002.2">
+            <instrumentSearch>
+                <instrumentId>
+                    <filter>Instrument_Bond_GBP</filter>
+                    <linkText>Instrument_Bond_GBP</linkText>
+                </instrumentId>
+                <linkText>Instrument_Bond_GBP</linkText>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <movement>Delivery</movement>
+                    <imAmount>0.6m</imAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <save>save</save>
+        </bookingDetail>
+        <bookingDetail id="booking.2003.1">
+            <instrumentSearch>
+                <instrumentId>
+                    <filter>Instrument_Bond_GBP</filter>
+                    <linkText>Instrument_Bond_GBP</linkText>
+                </instrumentId>
+                <linkText>Instrument_Bond_GBP</linkText>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <movement>Call</movement>
+                    <vmAmount>2m</vmAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <save>save</save>
+        </bookingDetail>
+        <bookingDetail id="booking.2003.2">
+            <instrumentSearch>
+                <instrumentId>
+                    <filter>Instrument_Bond_GBP</filter>
+                    <linkText>Instrument_Bond_GBP</linkText>
+                </instrumentId>
+                <linkText>Instrument_Bond_GBP</linkText>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <movement>Return</movement>
+                    <vmAmount>1m</vmAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <save>save</save>
+        </bookingDetail>
+        <settlementStatusSearch id="settlement.search.2004">
+            <description>
+                <type>Starting with</type>
+                <filter>LC_Confirmation_Letter_UMBRELLA</filter>
+            </description>
+        </settlementStatusSearch>
+        <settlementStatusSummary id="settlement.asset.2004">
+            <assetType>Bond-GBP</assetType>
+        </settlementStatusSummary>
+    </scenarioData>
+</dataBean>

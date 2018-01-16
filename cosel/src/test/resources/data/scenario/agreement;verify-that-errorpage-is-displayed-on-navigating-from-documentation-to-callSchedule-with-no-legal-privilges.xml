@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/agreement.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+
+		<loginCredential id="privilege.user3">
+			<username>Auto</username>
+			<password>password</password>
+		</loginCredential>
+
+			<privileges id ="all.privileges.available3">
+			<privilegeType>Collateral</privilegeType>
+			<rolePrivilege>
+				<roleName>Automation</roleName>
+				<selectAll>true</selectAll>
+			</rolePrivilege>
+		</privileges>
+
+		<privileges id ="legaledit.prv.unavailable">
+			<privilegeType>Collateral</privilegeType>
+			<rolePrivilege>
+				<privilege>
+					<privilegeName>collateral.agreement.legal.edit</privilegeName>
+					<selected>false</selected>
+				</privilege>
+				<roleName>Automation</roleName>
+			</rolePrivilege>
+		</privileges>
+
+		<agreement id="agr.num.no.legal.prv">
+			<agreementId>38228</agreementId>
+		</agreement>
+
+		<agreement id="agr.callschedule.error.message">
+		<!--<errorMessage>Error: You don't have the required privilege to perform this operation</errorMessage>-->
+		</agreement>
+
+		<agreementSummary id="agr.summary.no.legal.prv">
+            <documentationDetails apply="true"></documentationDetails>
+		</agreementSummary>
+
+		<!--<privileges id ="documentation.privilege.unavailable">-->
+		<!--<privilegeType>Collateral</privilegeType>-->
+		<!--<rolePrivilege>-->
+		<!--	<roleName>Automation</roleName>-->
+		<!--<selectAll>false</selectAll>-->
+		<!--	<privilege>collateral.agreement.ops.field.contacts.edit</privilege>-->
+		<!--</rolePrivilege>-->
+		<!--	</privileges>-->
+
+		<!--<agreementSummary id="agr.all.prv.3001">-->
+			<!--<documentationDetails>-->
+				<!--<principalContact apply="false"></principalContact>-->
+				<!--<principalCCEmail apply="false"></principalCCEmail>-->
+				<!--<principalInterestcontact apply="false"></principalInterestcontact>-->
+				<!--<principalInterestCCEmail apply="false"></principalInterestCCEmail>-->
+				<!--<counterpartyContact apply="false"></counterpartyContact>-->
+				<!--<counterpartyCCEmail apply="false"></counterpartyCCEmail>-->
+				<!--<counterpartyInterestcontact apply="false"></counterpartyInterestcontact>-->
+				<!--<counterpartyInterestCCEmail apply="false"></counterpartyInterestCCEmail>-->
+			<!--</documentationDetails>-->
+		<!--</agreementSummary>-->
+
+		<!--<agreementSearch id="agr.no.doc.prv">
+                <description>Automation Test</description>
+            </agreementSearch>-->
+
+	</scenarioData>
+</dataBean>

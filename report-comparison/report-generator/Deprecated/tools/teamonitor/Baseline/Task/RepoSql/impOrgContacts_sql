@@ -1,0 +1,5 @@
+pre#OrgContact_Before#select count(*) from OrgAddress where ftp ='xxxxxxFTP'
+
+post#OrgContact_After#select count(*) from OrgAddress where ftp ='xxxxxxFTP'
+
+val#1#`expr ${OrgContact_After} - ${OrgContact_Before}`

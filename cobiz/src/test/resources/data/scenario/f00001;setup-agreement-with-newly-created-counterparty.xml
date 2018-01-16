@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xsi:noNamespaceSchemaLocation="../../../../main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/f00001.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+		<organisation id="org">
+			<longName id="cp.lname" random="true"/>
+			<shortName id="cp.sname" random="true"/>
+			<code id="cp.code" random="true"/>
+			<role ref="org.role.cr.name"/>
+			<role ref="org.role.cp.name"/>
+			<address>
+				<contact>someone</contact>
+				<address1>somewhere1</address1>
+				<address2>somewhere2</address2>
+				<address3>somewhere3</address3>
+				<address4>somewhere4</address4>
+				<address5>somewhere5</address5>
+				<title>manager</title>
+				<label>label</label>
+				<tel>12345678</tel>
+				<fax>12345678</fax>
+				<email>test@test.com</email>
+				<ftp>ftp://127.0.0.1</ftp>
+				<notes>some notes</notes>
+				<enable>true</enable>
+			</address>
+			<status>Approved</status>
+		</organisation>
+		<agreement id="agr">
+			<principal id="p1">
+				<criteria>Containing</criteria>
+				<type>Code</type>
+				<filter ref="org.p1.code"/>
+				<linkText ref="org.p1.code"/>
+			</principal>
+			<counterparty id="c">
+				<criteria>Containing</criteria>
+				<type>Long Name</type>
+				<filter ref="cp.lname"/>
+				<linkText ref="cp.lname"/>
+			</counterparty>
+			<agreementDescription random="true"/>
+			<agreementDate>T</agreementDate>
+			<holidayCentre ref="hc.europe.name"/>
+			<product id="p">
+				<productName ref="product.test1.name"/>
+			</product>
+			<settlementBucket>
+				<bookingType>Net</bookingType>
+				<direction>Call/Return</direction>
+				<bucket>
+					<filter ref="payInstrBucket.vcr.name"/>
+					<linkText ref="payInstrBucket.vcr.name"/>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>Net</bookingType>
+				<direction>Delivery/Recall</direction>
+				<bucket>
+					<filter ref="payInstrBucket.vrd.name"/>
+					<linkText ref="payInstrBucket.vrd.name"/>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>Interest</bookingType>
+				<direction>Pay</direction>
+				<bucket>
+					<filter ref="payInstrBucket.pay.name"/>
+					<linkText ref="payInstrBucket.pay.name"/>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>Interest</bookingType>
+				<direction>Receive</direction>
+				<bucket>
+					<filter ref="payInstrBucket.rec.name"/>
+					<linkText ref="payInstrBucket.rec.name"/>
+				</bucket>
+			</settlementBucket>
+			<letterDistributionMedium>Email</letterDistributionMedium>
+			<agreementStatus>Pending</agreementStatus>
+			<agreementStatus>Approved</agreementStatus>
+			<statementStatus>Pending</statementStatus>
+			<statementStatus>Approved</statementStatus>
+			<agreementId id="agmt.id"/>
+		</agreement>
+	</scenarioData>
+</dataBean>

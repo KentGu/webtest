@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <agreement id="agr26535.otc.notnet">
+            <agreementId id="agrid">2633</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="VM.Return.agreementRequirement.8m">
+            <action>VM Return</action>
+            <agreementRequirement>-8,000,000.00</agreementRequirement>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="IM.Return.agreementRequirement.10m">
+            <action>IM Return</action>
+            <agreementRequirement>-10,000,000.00</agreementRequirement>
+        </exposureEventDetail>
+
+        <substitutionEventSearch id="agr26535.return">
+            <substitution>Return</substitution>
+            <agreementId ref="agrid"/>
+        </substitutionEventSearch>
+
+        <substitutionEventDetail id="bond.usd.1">
+            <instrumentId>26535_bond_usd_1,m1</instrumentId>
+        </substitutionEventDetail>
+
+        <substitutionEventDetail id="bond.usd.2">
+            <instrumentId>26535_bond_usd_2,m2</instrumentId>
+        </substitutionEventDetail>
+
+         <exposureEventDetail id="subConfirmation.bond.usd.1">
+            <action>Substitution Confirmation</action>
+            <element variation="multiple">26535_bond_usd_1,m1</element>
+             <eventId id="subCon.eventId"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subConfirmation.bond.usd.2">
+            <element variation="multiple">26535_bond_usd_2,m2</element>
+            <eventId id="subCon.eventId"/>
+        </exposureEventDetail>
+
+        <bookingDetail id="subCon.firstLeg.bond.usd.1.return.vmAssetAvailable.4m.imAssetAvailable.5m">
+            <bookingInformation>
+                <bookingInformationDetail deleteButtonIsDisplay="true" plusButtonIsDisplay="false">
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <instrumentId disable="true">26535_bond_usd_1,m1</instrumentId>
+                    <movement>Return</movement>
+                    <movementIsDisabled>true</movementIsDisabled>
+                    <assetAvailable>9,000,000.00</assetAvailable>
+                    <vmAssetAvailable>4,000,000.00</vmAssetAvailable>
+                    <imAssetAvailable>5,000,000.00</imAssetAvailable>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subCon.firstLeg.bond.usd.2.return.vmAssetAvailable.4m.imAssetAvailable.5m">
+            <bookingInformation>
+                <bookingInformationDetail deleteButtonIsDisplay="true" plusButtonIsDisplay="true">
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <instrumentId disable="true">26535_bond_usd_2,m2</instrumentId>
+                    <movement>Return</movement>
+                    <movementIsDisabled>true</movementIsDisabled>
+                    <assetAvailable>9,000,000.00</assetAvailable>
+                    <vmAssetAvailable>4,000,000.00</vmAssetAvailable>
+                    <imAssetAvailable>5,000,000.00</imAssetAvailable>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subCon.secondLeg.call">
+            <bookingInformation>
+                <bookingInformationDetail deleteButtonIsDisplay="true" plusButtonIsDisplay="true">
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <instrumentId></instrumentId>
+                    <movement>Call</movement>
+                    <movementIsDisabled>true</movementIsDisabled>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subCon.firstLeg.bond.usd.1.return.vmNotional.2m">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <instrumentId>26535_bond_usd_1,m1</instrumentId>
+                    <vmAmount>2m</vmAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subCon.firstLeg.bond.usd.2.return.vmNotional.2m">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <instrumentId>26535_bond_usd_2,m2</instrumentId>
+                    <vmAmount>2m</vmAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subCon.secondLeg.cash.usd.vmNotional.3m">
+            <instrumentSearch>
+                <instrument>
+                    <filter>CASH-USD</filter>
+                    <!--<linkText>CASH-USD</linkText>-->
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <movement>Call</movement>
+                    <vmAmount>3m</vmAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <exposureManagementMessage id="netValueOfItemsBookedForDeliveryNotEqualToReceipt">
+            <messageDetail>
+                <overrideWarning>true</overrideWarning>
+                <index>1</index>
+                <type>Warning</type>
+                <message>The collateral booking cannot be completed. The net value of items booked for delivery is not equal to receipt. The VM difference is 1,000,000.00, IM difference is 0.00.</message>
+            </messageDetail>
+        </exposureManagementMessage>
+
+        <exposureEventDetail id="subConfirmation.firstLeg.4m.secondLeg.3m.PartiallyBooked">
+            <action>Substitution Confirmation</action>
+            <bookedAmountFirstLeg>-4,000,000.00</bookedAmountFirstLeg>
+            <bookedAmountSecondLeg>3,000,000.00</bookedAmountSecondLeg>
+            <callStatus>Partially Booked</callStatus>
+        </exposureEventDetail>
+
+
+        <bookingDetail id="subCon.firstLeg.bond.usd.1.historyBooking.return.vmNotional.2m">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Historical Booking of the event</bookingMovement>
+                    <instrumentId disable="true">26535_bond_usd_1,m1</instrumentId>
+                    <movement>Return</movement>
+                    <movementIsDisabled>true</movementIsDisabled>
+                    <nominalAmount>-2,000,000.00</nominalAmount>
+                    <vmAmount>-2,000,000.00</vmAmount>
+                    <imAmount>0.00</imAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subCon.firstLeg.bond.usd.2.historyBooking.return.vmNotional.2m">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Historical Booking of the event</bookingMovement>
+                    <instrumentId disable="true">26535_bond_usd_2,m2</instrumentId>
+                    <movement>Return</movement>
+                    <movementIsDisabled>true</movementIsDisabled>
+                    <nominalAmount>-2,000,000.00</nominalAmount>
+                    <vmAmount>-2,000,000.00</vmAmount>
+                    <imAmount>0.00</imAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subCon.secLeg.cash.historyBooking.call.vmNotional.3m">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Historical Booking of the event</bookingMovement>
+                    <instrumentId disable="true">CASH-USD</instrumentId>
+                    <movement>Call</movement>
+                    <movementIsDisabled>true</movementIsDisabled>
+                    <nominalAmount>3,000,000.00</nominalAmount>
+                    <vmAmount>3,000,000.00</vmAmount>
+                    <imAmount>0.00</imAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subCon.firstLeg.bond.usd.1.return.vmNotional.1m">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <vmValue>0.00</vmValue>
+                    <instrumentId>26535_bond_usd_1,m1</instrumentId>
+                    <vmAmount>1m</vmAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subCon.firstLeg.bond.usd.2.return.vmNotional.1m">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <instrumentId>26535_bond_usd_2,m2</instrumentId>
+                    <vmValue>0.00</vmValue>
+                    <vmAmount>1m</vmAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subCon.secondLeg.cash.usd.vmNotional.1m">
+            <instrumentSearch>
+                <instrument>
+                    <filter>CASH-USD</filter>
+                    <!--<linkText>CASH-USD</linkText>-->
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <movement>Call</movement>
+                    <vmValue>0.00</vmValue>
+                    <vmAmount>1m</vmAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <exposureManagementMessage id="netValueOfItemsBookedForDeliveryNotEqualToReceipt.vmDifference.2m">
+            <messageDetail>
+                <overrideWarning>true</overrideWarning>
+                <index>1</index>
+                <type>Warning</type>
+                <message>The collateral booking cannot be completed. The net value of items booked for delivery is not equal to receipt. The VM difference is 2,000,000.00, IM difference is 0.00.</message>
+            </messageDetail>
+        </exposureManagementMessage>
+
+        <exposureEventDetail id="subConfirmation.firstLeg.6m.secondLeg.4m.PartiallyBooked">
+            <action>Substitution Confirmation</action>
+            <bookedAmountFirstLeg>-6,000,000.00</bookedAmountFirstLeg>
+            <bookedAmountSecondLeg>4,000,000.00</bookedAmountSecondLeg>
+            <callStatus>Partially Booked</callStatus>
+        </exposureEventDetail>
+    </scenarioData>
+</dataBean>

@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/xbrowser.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <securitySearch id="securitysearchcondition1">
+            <instrument>
+                <filter>mengli_</filter>
+            </instrument>
+        </securitySearch>
+        <organisation id="org">
+            <longName id="cp.lname" random="true"/>
+            <shortName id="cp.sname" random="true"/>
+            <code id="cp.code" random="true"/>
+            <role ref="org.role.cr.name"/>
+            <role ref="org.role.cp.name"/>
+            <address>
+                <contact id="org.contact">someone</contact>
+                <address1>somewhere1</address1>
+                <address2>somewhere2</address2>
+                <address3>somewhere3</address3>
+                <address4>somewhere4</address4>
+                <address5>somewhere5</address5>
+                <title>manager</title>
+                <label>label</label>
+                <tel>12345678</tel>
+                <fax>12345678</fax>
+                <email>test@test.com</email>
+                <ftp>ftp://127.0.0.1</ftp>
+                <notes>some notes</notes>
+                <enable>true</enable>
+            </address>
+            <status>Approved</status>
+        </organisation>
+        <instrument id="bond_ins1">
+            <assetClass ref="bond.name"/>
+            <assetType ref="bond.usd.name"/>
+            <instrumentId>
+                <primary>true</primary>
+                <type>CUSIP</type>
+                <value id="bond_ins1_name" random="true"  prefix="mengli_"/>
+            </instrumentId>
+            <market>m1</market>
+            <description ref="bond_ins1_name"/>
+            <issuer>
+                <filter ref="org.issuer1.sname"/>
+                <linkText ref="org.issuer1.sname"/>
+            </issuer>
+            <maturityDate>T+90</maturityDate>
+            <priceSource>
+                <priceSourceName ref="ps.default.name"/>
+                <dirtyPrice>100</dirtyPrice>
+                <cleanPrice>100</cleanPrice>
+                <lastPriceChange>T</lastPriceChange>
+                <priceDate>T</priceDate>
+            </priceSource>
+            <couponRate>100</couponRate>
+            <issueDate>T</issueDate>
+            <securityStatus>Approved</securityStatus>
+        </instrument>
+        <instrument id="equity_ins1">
+            <assetClass ref="equity.name"/>
+            <assetType ref="equity.usd.name"/>
+            <instrumentId>
+                <primary>true</primary>
+                <type>CUSIP</type>
+                <value id="equity_ins1_name" random="true" prefix="mengli_"/>
+            </instrumentId>
+            <market>m1</market>
+            <description ref="equity_ins1_name"/>
+            <issuer>
+                <filter ref="org.issuer1.sname" />
+                <linkText ref="org.issuer1.sname" />
+            </issuer>
+            <maturityDate>T+90</maturityDate>
+            <priceSource>
+                <priceSourceName ref="ps.default.name"/>
+                <cleanPrice>1</cleanPrice>
+                <lastPriceChange>T</lastPriceChange>
+                <priceDate>T</priceDate>
+            </priceSource>
+            <couponRate>100</couponRate>
+            <issueDate>T</issueDate>
+            <securityStatus>Approved</securityStatus>
+        </instrument>
+        <agreement id="otc.agr1">
+            <principal id="otc_agr1_p1">
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter ref="org.p1.code"/>
+                <linkText ref="org.p1.code"/>
+            </principal>
+            <counterparty id="otc_agr1_c">
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter ref="org.c1.code"/>
+                <linkText ref="org.c1.code"/>
+            </counterparty>
+            <agreementDescription id="otc.agr.des" random="true" prefix="otcqtp_"/>
+            <agreementName ref="otc.agr.des"/>
+            <externalId ref="otc.agr.des"/>
+            <agreementDate>T</agreementDate>
+            <sendConfirmationLetterToCounterparty>true</sendConfirmationLetterToCounterparty>
+            <callFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </callFrequency>
+            <holidayCentre ref="hc.europe.name"/>
+            <product id="otc.pro1">
+                <productName ref="product.test1.name"/>
+            </product>
+
+            <collateralAssetClass>
+                <collateralAssetClassName ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="cash.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="bond.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="bond.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="equity.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="equity.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vcr.name"/>
+                    <linkText ref="payInstrBucket.vcr.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vrd.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.pay.name"/>
+                    <linkText ref="payInstrBucket.pay.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.rec.name"/>
+                    <linkText ref="payInstrBucket.rec.name"/>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementStatus>Pending</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <statementStatus>Approved</statementStatus>
+            <agreementId id="otc.agr1.id"/>
+        </agreement>
+        <agreementExposureSummary id="product1">
+            <productList>
+                <productType ref="product.test1.name" />
+            </productList>
+        </agreementExposureSummary>
+        <tradeDetail id="otc.trade1">
+            <tradeInformation>
+                <productType ref="product.test1.name"/>
+                <tradeDate>T</tradeDate>
+                <effectiveDate>T</effectiveDate>
+                <maturityDate>T+90</maturityDate>
+                <tradeIdentifierPartyA id="otc.trade.identify" random="true"/>
+                <partyABranchName ref="otc.trade.identify"/>
+                <partyBBranchName ref="otc.trade.identify"/>
+            </tradeInformation>
+            <valuationInformation>
+                <principalValuationAmount>
+                    <amount>1m</amount>
+                    <currency>USD</currency>
+                </principalValuationAmount>
+                <valuationDate>T</valuationDate>
+            </valuationInformation>
+            <collateralInformation>
+                <dealLevelUpfront>true</dealLevelUpfront>
+                <dealLevelType>Independent Amount</dealLevelType>
+                <dealLevelAmount>0.5m</dealLevelAmount>
+                <currency>USD</currency>
+            </collateralInformation>
+        </tradeDetail>
+        <assetBookingSummary id="cashbookingtype1">
+            <assetType ref="cash.usd.name"/>
+        </assetBookingSummary>
+        <assetBookingSummary id="bondbookingtype1">
+            <assetType ref="bond.usd.name" />
+        </assetBookingSummary>
+        <assetBookingSummary id="equitybookingtype1">
+            <assetType ref="equity.usd.name" />
+        </assetBookingSummary>
+        <bookingDetail id="otc.cashbooking1">
+            <assetType ref="cash.usd.name" />
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <nominalAmount>1m</nominalAmount>
+                    <movement>Call</movement>
+                </bookingInformationDetail>
+                <settlementDate>T</settlementDate>
+                <settlementDateAlertHandling>
+                    <accept>true</accept>
+                </settlementDateAlertHandling>
+            </bookingInformation>
+            <save>save</save>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </bookingDetail>
+        <bookingDetail id="otc.bondbooking1">
+            <assetType ref="bond.usd.name" />
+            <instrumentSearch>
+                <assetClass ref="bond.name" />
+                <assetType ref="bond.usd.name" />
+                <instrumentId>
+                    <filter ref="bond.instrument1.name"/>
+                </instrumentId>
+                <linkText ref="bond.instrument1.name"/>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <nominalAmount>1m</nominalAmount>
+                    <movement>Call</movement>
+                </bookingInformationDetail>
+                <settlementDate>T</settlementDate>
+                <settlementDateAlertHandling>
+                    <accept>true</accept>
+                </settlementDateAlertHandling>
+            </bookingInformation>
+            <save>save</save>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </bookingDetail>
+        <bookingDetail id="otc.equitybooking1">
+            <assetType ref="equity.usd.name" />
+            <instrumentSearch>
+                <assetClass ref="equity.name" />
+                <assetType ref="equity.usd.name" />
+                <instrumentId>
+                    <filter ref="equity.instrument1.name"/>
+                </instrumentId>
+                <linkText ref="equity.instrument1.name"/>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <nominalAmount>1m</nominalAmount>
+                    <movement>Call</movement>
+                </bookingInformationDetail>
+                <settlementDate>T</settlementDate>
+                <settlementDateAlertHandling>
+                    <accept>true</accept>
+                </settlementDateAlertHandling>
+            </bookingInformation>
+            <save>save</save>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </bookingDetail>
+        <cashMovementDetail id="otc.interest1">
+            <assetClass ref="cash.name"/>
+            <assetType ref="cash.usd.name"/>
+            <bookingType>Net Interest</bookingType>
+            <amount>1000</amount>
+            <movementType>Pay</movementType>
+            <settlementDate>T</settlementDate>
+        </cashMovementDetail>
+        <agreementSearch id="agmtsearchCondition1">
+            <description>
+                <filter>mengliqtp</filter>
+            </description>
+        </agreementSearch>
+        <agreementSearch id="agmtsearchCondition2">
+            <systemId ref="otc.agr1.id" />
+        </agreementSearch>
+        <agreementSearchResult id="agmtshortview1">
+            <principal ref="otc_agr1_p1" />
+            <counterparty ref="otc_agr1_c" />
+            <agreementId ref="otc.agr1.id" />
+        </agreementSearchResult>
+        <!--<agreementSearchResult id="agmtlongview1">
+            <principal ref="otc_agr1_p1" />
+            <counterparty ref="otc_agr1_c" />
+            <agreementId ref="otc.agr1.id" />
+            <businessLine>OTC</businessLine>
+            <status>Approved</status>
+        </agreementSearchResult> -->
+        <agreementStatement id="otc.ag1.statement">
+            <exposureSummary>
+                <principalPaysIndependentAmount>0.00</principalPaysIndependentAmount>
+                <counterpartyPaysIndependentAmount>500,000.00</counterpartyPaysIndependentAmount>
+                <itmExposure>1,000,000.00</itmExposure>
+                <otmExposure>0.00</otmExposure>
+                <totalExposureAmount>1,500,000.00</totalExposureAmount>
+            </exposureSummary>
+        </agreementStatement>
+
+        <agreementSearch id="agmtsearchConditionTEST">
+            <systemId>504</systemId>
+        </agreementSearch>
+        <agreementSearchResult id="searchresultTEST">
+            <principal>QTPPrincipal</principal>
+            <counterparty>QTPCounterparty</counterparty>
+            <!--<principal ref="org.p1.code" />
+            <counterparty ref="org.c1.code" />
+            <agreementId>504</agreementId> -->
+        </agreementSearchResult>
+
+
+        <agreement id="otc.agr8">
+            <principal id="otc.agr8.p1">
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter ref="org.p1.code"/>
+                <linkText ref="org.p1.code"/>
+            </principal>
+            <counterparty id="otc.agr8.c1">
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter ref="org.c1.code"/>
+                <linkText ref="org.c1.code"/>
+            </counterparty>
+            <agreementDescription id="otc.agr8.des">EM_agr</agreementDescription>
+            <agreementDate>T</agreementDate>
+            <sendConfirmationLetterToCounterparty>true</sendConfirmationLetterToCounterparty>
+            <callFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </callFrequency>
+            <holidayCentre ref="hc.europe.name"/>
+            <product id="otc.pro8">
+                <productName ref="product.test1.name"/>
+            </product>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="cash.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="bond.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="bond.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="equity.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="equity.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vcr.name"/>
+                    <linkText ref="payInstrBucket.vcr.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vrd.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.pay.name"/>
+                    <linkText ref="payInstrBucket.pay.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.rec.name"/>
+                    <linkText ref="payInstrBucket.rec.name"/>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementId id="otc.agr8.id"/>
+        </agreement>
+        <agreement id="otc.agr9">
+            <principal id="otc.agr9.p1">
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter ref="org.p1.code"/>
+                <linkText ref="org.p1.code"/>
+            </principal>
+            <counterparty id="otc.agr9.c1">
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter ref="org.c1.code"/>
+                <linkText ref="org.c1.code"/>
+            </counterparty>
+            <agreementDescription id="otc.agr9.des">EM_agr</agreementDescription>
+            <agreementDate>T</agreementDate>
+            <sendConfirmationLetterToCounterparty>true</sendConfirmationLetterToCounterparty>
+            <callFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </callFrequency>
+            <holidayCentre ref="hc.europe.name"/>
+            <product id="otc.pro9">
+                <productName ref="product.test1.name"/>
+            </product>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="cash.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="bond.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="bond.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="equity.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="equity.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vcr.name"/>
+                    <linkText ref="payInstrBucket.vcr.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vrd.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.pay.name"/>
+                    <linkText ref="payInstrBucket.pay.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.rec.name"/>
+                    <linkText ref="payInstrBucket.rec.name"/>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementId id="otc.agr9.id"/>
+        </agreement>
+
+        <tradeDetail id="otc.trade8">
+            <tradeInformation>
+                <productType ref="product.test1.name"/>
+                <tradeDate>T</tradeDate>
+                <effectiveDate>T</effectiveDate>
+                <maturityDate>T+90</maturityDate>
+                <tradeIdentifierPartyA id="otc.trade8.identify" random="true"/>
+                <partyABranchName ref="otc.trade8.identify"/>
+                <partyBBranchName ref="otc.trade8.identify"/>
+            </tradeInformation>
+            <valuationInformation>
+                <principalValuationAmount>
+                    <amount>3m</amount>
+                    <currency>USD</currency>
+                </principalValuationAmount>
+                <valuationDate>T</valuationDate>
+            </valuationInformation>
+        </tradeDetail>
+        <tradeDetail id="otc.trade9">
+            <tradeInformation>
+                <productType ref="product.test1.name"/>
+                <tradeDate>T</tradeDate>
+                <effectiveDate>T</effectiveDate>
+                <maturityDate>T+90</maturityDate>
+                <tradeIdentifierPartyA id="otc.trade9.identify" random="true"/>
+                <partyABranchName ref="otc.trade9.identify"/>
+                <partyBBranchName ref="otc.trade9.identify"/>
+            </tradeInformation>
+            <valuationInformation>
+                <principalValuationAmount>
+                    <amount>-4m</amount>
+                    <currency>USD</currency>
+                </principalValuationAmount>
+                <valuationDate>T</valuationDate>
+            </valuationInformation>
+        </tradeDetail>
+
+        <bookingDetail id="otc.cashbooking8">
+            <assetType ref="cash.usd.name" />
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <nominalAmount>1m</nominalAmount>
+                    <movement>Delivery</movement>
+                </bookingInformationDetail>
+                <settlementDate>T+1</settlementDate>
+                <!--<settlementDateAlertHandling>
+                    <accept>true</accept>
+                </settlementDateAlertHandling>-->
+            </bookingInformation>
+            <save>save</save>
+            <!--<alertHandling>
+                <accept>true</accept>
+            </alertHandling>-->
+        </bookingDetail>
+        <bookingDetail id="otc.cashbooking9">
+            <assetType ref="cash.usd.name" />
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <nominalAmount>1m</nominalAmount>
+                    <movement>Call</movement>
+                </bookingInformationDetail>
+                <settlementDate>T+1</settlementDate>
+                <!--<settlementDateAlertHandling>
+                    <accept>true</accept>
+                </settlementDateAlertHandling>-->
+            </bookingInformation>
+            <save>save</save>
+            <!--<alertHandling>
+                <accept>true</accept>
+            </alertHandling>-->
+        </bookingDetail>
+
+
+        <agreement id="approvetest">
+            <agreementStatus>Pending</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+
+
+    </scenarioData>
+</dataBean>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/taskScheduler.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <agreement>
+            <externalId id="T25621.agreement.external.id">T25621AgreementExternalID</externalId>
+            <agreementId id="T25621.agreement.id">519</agreementId>
+            <baseCurrency id="T25621.base.ccy" ref="ccy.usd.name"/>
+            <model>
+                <modelEligibilityRule>
+                    <modelName id="T25621.model.name">T25621Model</modelName>
+                </modelEligibilityRule>
+            </model>
+        </agreement>
+
+        <feedPortfolioTSA id="feed.tsa.upfront.fee">
+            <agreement_id ref="T25621.agreement.id"/>
+            <legal_id ref="T25621.agreement.external.id"/>
+            <component>Upfront Fee</component>
+            <amount id="upfront.fee.amnt">300</amount>
+            <currency ref="T25621.base.ccy"/>
+            <model ref="T25621.model.name"/>
+        </feedPortfolioTSA>
+        <feedPortfolioTSA id="feed.tsa.pai">
+            <agreement_id ref="T25621.agreement.id"/>
+            <legal_id ref="T25621.agreement.external.id"/>
+            <component>PAI</component>
+            <amount id="pai.amnt">300</amount>
+            <currency ref="T25621.base.ccy"/>
+            <model ref="T25621.model.name"/>
+        </feedPortfolioTSA>
+        <feedPortfolioTSA id="feed.tsa.transfer.value">
+            <agreement_id ref="T25621.agreement.id"/>
+            <legal_id ref="T25621.agreement.external.id"/>
+            <component>Transfer Value</component>
+            <amount id="transfer.value.amnt">300</amount>
+            <currency ref="T25621.base.ccy"/>
+            <model ref="T25621.model.name"/>
+        </feedPortfolioTSA>
+        <feedPortfolioTSA id="feed.tsa.banked.coupon">
+            <agreement_id ref="T25621.agreement.id"/>
+            <legal_id ref="T25621.agreement.external.id"/>
+            <component>Banked Coupon</component>
+            <amount id="banked.coupon.amnt">300</amount>
+            <currency ref="T25621.base.ccy"/>
+            <model ref="T25621.model.name"/>
+        </feedPortfolioTSA>
+        <feedPortfolioTSA id="feed.tsa.initial.coupon">
+            <agreement_id ref="T25621.agreement.id"/>
+            <legal_id ref="T25621.agreement.external.id"/>
+            <component>Initial Coupon</component>
+            <amount id="initial.coupon.amnt">300</amount>
+            <currency ref="T25621.base.ccy"/>
+            <model ref="T25621.model.name"/>
+        </feedPortfolioTSA>
+        <feedPortfolioTSA id="feed.tsa.credit.event.cash.amount">
+            <agreement_id ref="T25621.agreement.id"/>
+            <legal_id ref="T25621.agreement.external.id"/>
+            <component>Credit Event Cash Amount</component>
+            <amount id="credit.event.cash.amount.amnt">300</amount>
+            <currency ref="T25621.base.ccy"/>
+            <model ref="T25621.model.name"/>
+        </feedPortfolioTSA>
+        <feedPortfolioTSA id="feed.tsa.succession.event.cash.amount">
+            <agreement_id ref="T25621.agreement.id"/>
+            <legal_id ref="T25621.agreement.external.id"/>
+            <component>Succession Event Cash Amount</component>
+            <amount id="succession.event.cash.amount.amnt">300</amount>
+            <currency ref="T25621.base.ccy"/>
+            <model ref="T25621.model.name"/>
+        </feedPortfolioTSA>
+        <feedPortfolioTSA id="feed.tsa.reset.to.par">
+            <agreement_id ref="T25621.agreement.id"/>
+            <legal_id ref="T25621.agreement.external.id"/>
+            <component>Reset to Par</component>
+            <amount id="reset.to.par.amnt">300</amount>
+            <currency ref="T25621.base.ccy"/>
+            <model ref="T25621.model.name"/>
+        </feedPortfolioTSA>
+        <feedPortfolioTSA id="feed.tsa.im.interest">
+            <agreement_id ref="T25621.agreement.id"/>
+            <legal_id ref="T25621.agreement.external.id"/>
+            <component>IM Interest</component>
+            <amount id="im.interest.amnt">300</amount>
+            <currency ref="T25621.base.ccy"/>
+            <model ref="T25621.model.name"/>
+        </feedPortfolioTSA>
+        <feedPortfolioTSA id="feed.tsa.ndf.cashflow">
+            <agreement_id ref="T25621.agreement.id"/>
+            <legal_id ref="T25621.agreement.external.id"/>
+            <component>NDF Cashflow</component>
+            <amount id="ndf.cashflow.amnt">300</amount>
+            <currency ref="T25621.base.ccy"/>
+            <model ref="T25621.model.name"/>
+        </feedPortfolioTSA>
+        <feedPortfolioTSA id="feed.tsa.tsa.misc1">
+            <agreement_id ref="T25621.agreement.id"/>
+            <legal_id ref="T25621.agreement.external.id"/>
+            <component>TSAMisc1</component>
+            <amount id="tsa.misc1.amnt">300</amount>
+            <currency ref="T25621.base.ccy"/>
+            <model ref="T25621.model.name"/>
+        </feedPortfolioTSA>
+        <feedPortfolioTSA id="feed.tsa.tsa.misc2">
+            <agreement_id ref="T25621.agreement.id"/>
+            <legal_id ref="T25621.agreement.external.id"/>
+            <component>TSAMisc2</component>
+            <amount id="tsa.misc2.amnt">300</amount>
+            <currency ref="T25621.base.ccy"/>
+            <model ref="T25621.model.name"/>
+        </feedPortfolioTSA>
+        <feedPortfolioTSA id="feed.tsa.tsa.misc3">
+            <agreement_id ref="T25621.agreement.id"/>
+            <legal_id ref="T25621.agreement.external.id"/>
+            <component>TSAMisc3</component>
+            <amount id="tsa.misc3.amnt">300</amount>
+            <currency ref="T25621.base.ccy"/>
+            <model ref="T25621.model.name"/>
+        </feedPortfolioTSA>
+
+        <feedStatus id="feed.portfolio.tsa.status">
+            <status>Successful</status>
+            <valuationFile ref="file.path"/>
+            <description>Portfolio Cashflow</description>
+            <successfulFeed>
+                <total>13</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <agreementSearch id="feed.portfolio.tsa.agreement.search">
+            <systemId ref="T25621.agreement.id"/>
+            <externalId>
+                <filter ref="T25621.agreement.external.id"/>
+                <linkText ref="T25621.agreement.external.id"/>
+            </externalId>
+        </agreementSearch>
+
+        <agreementSearchResult id="feed.portfolio.tsa.agreement.search.result">
+            <agreementId ref="T25621.agreement.id"/>
+        </agreementSearchResult>
+
+        <multiModelAgreementStatement id="feed.protfolio.tsa.agreement.statement">
+            <multimodelAssetHoldingSummary>
+                <modelName ref="T25621.model.name"/>
+            </multimodelAssetHoldingSummary>
+        </multiModelAgreementStatement>
+
+        <agreementStatement id="check.feed.protfolio.tsa.agreement.statement">
+            <marginCallCalculation>
+                <fcmReq>
+                    <totalSettlementAmount>3900</totalSettlementAmount>
+                    <totalResetToPar ref="reset.to.par.amnt"/>
+                    <totalInitialCoupon ref="initial.coupon.amnt"/>
+                    <otherCashAdjustments>1800</otherCashAdjustments>
+                    <bankedCoupon ref="banked.coupon.amnt"/>
+                    <pai ref="pai.amnt"/>
+                    <imInterest ref="im.interest.amnt"/>
+                    <ndfCashflow ref="ndf.cashflow.amnt"/>
+                    <upfrontFee ref="upfront.fee.amnt"/>
+                </fcmReq>
+            </marginCallCalculation>
+        </agreementStatement>
+
+        <taskSchedulerDetail id="task.feed.protfolio.tsa">
+            <type>Task Manager</type>
+            <taskName>Import Portfolio Cashflow</taskName>
+            <additionalInfo>/home/ec2-user/Feed/FeedPortfolioTSA</additionalInfo>
+        </taskSchedulerDetail>
+
+        <variable id="file.path"/>
+
+        <taskSchedulerMessage id="task.feed.protfolio.tsa.message">
+            <message>Import Portfolio (TSA|Cashflow): Imported 13 Portfolio (TSA|Cashflow) from :(\S+).xlsx</message>
+        </taskSchedulerMessage>
+    </scenarioData>
+</dataBean>

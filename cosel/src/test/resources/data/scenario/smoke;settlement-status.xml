@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/smoke.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+
+        <instrument id="SmokeBondInstr001">
+            <assetClass ref="bond.name"/>
+            <assetType ref="bond.usd.name"/>
+            <instrumentId>
+                <primary>true</primary>
+                <type>CUSIP</type>
+                <value id="SmokeBondInstr001Id" random="true"/>
+            </instrumentId>
+            <!--<market>m1</market>-->
+            <description>SmokeBondInstr001Desc</description>
+            <issuer>
+                <filter ref="org.issuer1.sname"/>
+                <linkText ref="org.issuer1.sname"/>
+            </issuer>
+            <maturityDate>T+1000</maturityDate>
+            <priceSource>
+                <priceSourceName>Default</priceSourceName>
+                <dirtyPrice>100</dirtyPrice>
+                <lastPriceChange>T</lastPriceChange>
+                <!--<priceLevel>Bid</priceLevel>-->
+                <priceDate>T</priceDate>
+            </priceSource>
+            <couponRate>0</couponRate>
+            <manuallyOverrideNextCouponDate>true</manuallyOverrideNextCouponDate>
+            <nextCouponDate>T</nextCouponDate>
+            <manuallyOverrideLastCouponDate>true</manuallyOverrideLastCouponDate>
+            <lastCouponDate>T</lastCouponDate>
+            <!--<recordDate>T</recordDate>-->
+            <issueDate>T</issueDate>
+            <!--<securityStatus>Approved</securityStatus>-->
+        </instrument>
+
+        <securitySearch id="SmokeBondInstr001Search">
+        <instrument>
+            <type>Starting with</type>
+            <filter ref="SmokeBondInstr001Id"/>
+            <linkText ref="SmokeBondInstr001Id"/>
+        </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="SmokeBondInstr001SearchResult">
+        <instrument ref="SmokeBondInstr001Id"/>
+        </securitySearchResult>
+
+
+        <instrument id="SmokeEquityInstr001">
+            <assetClass ref="equity.name"/>
+            <assetType ref="equity.usd.name"/>
+            <instrumentId>
+                <primary>true</primary>
+                <type>CUSIP</type>
+                <value id="SmokeEquityInstr001Id" random="true"/>
+            </instrumentId>
+            <!--<market>m1</market>-->
+            <description>SmokeEquityInstr001Desc</description>
+            <issuer>
+                <filter ref="org.issuer1.sname"/>
+                <linkText ref="org.issuer1.sname"/>
+            </issuer>
+            <maturityDate>T+1000</maturityDate>
+            <priceSource>
+                <priceSourceName>Default</priceSourceName>
+                <dirtyPrice>100</dirtyPrice>
+                <lastPriceChange>T</lastPriceChange>
+                <!--<priceLevel>Bid</priceLevel>-->
+                <priceDate>T</priceDate>
+            </priceSource>
+            <!--<recordDate>T</recordDate>-->
+            <issueDate>T</issueDate>
+            <!--<securityStatus>Approved</securityStatus>-->
+        </instrument>
+
+        <securitySearch id="SmokeEquityInstr001Search">
+            <instrument>
+                <type>Starting with</type>
+                <filter ref="SmokeEquityInstr001Id"/>
+                <linkText ref="SmokeEquityInstr001Id"/>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="SmokeEquityInstr001SearchResult">
+            <instrument ref="SmokeEquityInstr001Id"/>
+        </securitySearchResult>
+
+        <agreement id="SmokeOTCAgreement003">
+            <principal>
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter>AlexPrcPrimaryC</filter>
+                <linkText>AlexPrcPrimaryC</linkText>
+            </principal>
+            <counterparty>
+                <criteria>Containing</criteria>
+                <type>Long Name</type>
+                <filter>QTPCounterparty</filter>
+                <linkText>QTPCounterparty</linkText>
+            </counterparty>
+            <agreementDescription id="SmokeOTCagr3Desc" random="true" prefix="SmokeOTCagr3Desc"/>
+            <agreementName random="true"/>
+            <externalId random="true"/>
+            <agreementDate>T</agreementDate>
+            <nettingIAandMtM>Net</nettingIAandMtM>
+            <!--<grossCalc>Net</grossCalc>-->
+            <interestCalc>Net</interestCalc>
+            <callFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </callFrequency>
+            <holidayCentre ref="hc.europe.name"/>
+            <product id="pro1">
+                <productName ref="product.test1.name"/>
+            </product>
+            <!--<interest>true</interest>-->
+            <!--<interestCalculationsMethod>Simple</interestCalculationsMethod>-->
+            <!--<calculationRule>First of the Month</calculationRule>-->
+            <!--<payMethod>Physical Payment</payMethod>-->
+            <!--<receiveMethod>Capitalise</receiveMethod>-->
+            <!--<interestSettlementDate>T+2</interestSettlementDate>-->
+            <collateralAssetClass>
+                <collateralAssetClassName ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="cash.usd.name"/>
+                    <interestRule>
+                        <agreementRate ref="SmokeInterestRateName"/>
+                    </interestRule>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="bond.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="bond.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="equity.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="equity.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vcr.name"/>
+                    <linkText ref="payInstrBucket.vcr.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vrd.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.pay.name"/>
+                    <linkText ref="payInstrBucket.pay.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.rec.name"/>
+                    <linkText ref="payInstrBucket.rec.name"/>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementStatus>Pending</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <statementStatus>Approved</statementStatus>
+            <agreementId id="smoke.otc.agr3id"/>
+        </agreement>
+
+        <assetBookingSummary id="CashUSDType">
+            <assetType ref="cash.usd.name"/>
+        </assetBookingSummary>
+
+        <bookingDetail id="Smokebooking1">
+            <assetType ref="cash.usd.name"/>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <nominalAmount>1000000</nominalAmount>
+                    <movement>Call</movement>
+                </bookingInformationDetail>
+                <settlementDate>T</settlementDate>
+            </bookingInformation>
+            <alertHandling>
+                <!--<content>[/s/S]*</content>-->
+                <accept>true</accept>
+            </alertHandling>
+            <save>save</save>
+        </bookingDetail>
+
+        <assetBookingSummary id="BondUSDType">
+            <assetType ref="bond.usd.name"/>
+        </assetBookingSummary>
+
+        <bookingDetail id="Smokebooking2">
+            <assetType ref="bond.usd.name"/>
+            <instrumentSearch>
+                <instrumentId>
+                    <type>Starting with</type>
+                    <filter ref="SmokeBondInstr001Id"/>
+                    <linkText ref="SmokeBondInstr001Id"/>
+                </instrumentId>
+                <linkText ref="SmokeBondInstr001Id"/>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <nominalAmount>2000000</nominalAmount>
+                    <movement>Delivery</movement>
+                </bookingInformationDetail>
+                <settlementDate>T</settlementDate>
+            </bookingInformation>
+            <save>save</save>
+            <alertHandling>
+                <!--<content>[\s\S]*</content>-->
+                <accept>true</accept>
+            </alertHandling>
+            <!--<bookingId Id="Smokebooking2Id"/>-->
+        </bookingDetail>
+
+        <bookingDetail id="Smokebooking3">
+            <assetType ref="bond.usd.name"/>
+            <instrumentSearch>
+                <instrumentId>
+                    <type>Starting with</type>
+                    <filter ref="SmokeBondInstr001Id"/>
+                    <linkText ref="SmokeBondInstr001Id"/>
+                </instrumentId>
+                <linkText ref="SmokeBondInstr001Id"/>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <nominalAmount>500000</nominalAmount>
+                    <movement>Recall</movement>
+                </bookingInformationDetail>
+                <settlementDate>T</settlementDate>
+            </bookingInformation>
+            <save>save</save>
+            <alertHandling>
+                <!--<content>[\s\S]*</content>-->
+                <accept>true</accept>
+            </alertHandling>
+        </bookingDetail>
+
+        <assetBookingSummary id="EquityUSDType">
+            <assetType ref="equity.usd.name"/>
+        </assetBookingSummary>
+
+        <bookingDetail id="Smokebooking4">
+            <assetType ref="equity.usd.name"/>
+            <instrumentSearch>
+                <instrumentId>
+                    <type>Starting with</type>
+                    <filter ref="SmokeEquityInstr001Id"/>
+                    <linkText ref="SmokeEquityInstr001Id"/>
+                </instrumentId>
+                <linkText ref="SmokeEquityInstr001Id"/>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <nominalAmount>3000000</nominalAmount>
+                    <movement>Call</movement>
+                </bookingInformationDetail>
+                <settlementDate>T</settlementDate>
+            </bookingInformation>
+            <save>save</save>
+            <alertHandling>
+                <!--<content>[\s\S]*</content>-->
+                <accept>true</accept>
+            </alertHandling>
+        </bookingDetail>
+
+        <bookingDetail id="Smokebooking5">
+            <assetType ref="equity.usd.name"/>
+            <instrumentSearch>
+                <instrumentId>
+                    <type>Starting with</type>
+                    <filter ref="SmokeEquityInstr001Id"/>
+                    <linkText ref="SmokeEquityInstr001Id"/>
+                </instrumentId>
+                <linkText ref="SmokeEquityInstr001Id"/>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <nominalAmount>1500000</nominalAmount>
+                    <movement>Return</movement>
+                </bookingInformationDetail>
+                <settlementDate>T</settlementDate>
+            </bookingInformation>
+            <save>save</save>
+            <alertHandling>
+                <!--<content>[\s\S]*</content>-->
+                <accept>true</accept>
+            </alertHandling>
+        </bookingDetail>
+
+        <assetBookingSummary id="EditSmokebooking2Pending">
+            <!--<bookingId ref ="Smokebooking2Id"/>-->
+            <nominalAmount>-2,000,000.00</nominalAmount>
+            <status>Pending</status>
+        </assetBookingSummary>
+
+        <bookingDetail id="Smokebooking2Authorised">
+            <bookingInformation>
+                <settlementStatusInfo>
+                    <settlementStatus>Authorised</settlementStatus>
+                </settlementStatusInfo>
+            </bookingInformation>
+            <save>save</save>
+            <alertHandling>
+                <!--<content>[\s\S]*</content>-->
+                <accept>true</accept>
+            </alertHandling>
+        </bookingDetail>
+
+        <assetBookingSummary id="EditSmokebooking2Authorised">
+            <!--<bookingId ref ="Smokebooking2Id"/>-->
+            <nominalAmount>-2,000,000.00</nominalAmount>
+            <status>Authorised</status>
+        </assetBookingSummary>
+
+        <bookingDetail id="Smokebooking2PendingSettlement">
+            <bookingInformation>
+                <settlementStatusInfo>
+                    <settlementStatus>Pending Settlement</settlementStatus>
+                </settlementStatusInfo>
+            </bookingInformation>
+            <save>save</save>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </bookingDetail>
+
+        <assetBookingSummary id="EditSmokebooking2PendingSettlement">
+            <!--<bookingId ref ="Smokebooking2Id"/>-->
+            <nominalAmount>-2,000,000.00</nominalAmount>
+            <status>Pending Settlement</status>
+        </assetBookingSummary>
+
+        <bookingDetail id="Smokebooking2Outstanding">
+            <bookingInformation>
+                <settlementStatusInfo>
+                    <settlementStatus>Outstanding Settlement</settlementStatus>
+                </settlementStatusInfo>
+            </bookingInformation>
+            <save>save</save>
+            <alertHandling>
+                <content>[\s\S]*</content>
+                <accept>true</accept>
+            </alertHandling>
+        </bookingDetail>
+
+        <assetBookingSummary id="EditSmokebooking2Outstanding">
+            <!--<bookingId ref ="Smokebooking2Id"/>-->
+            <nominalAmount>-2,000,000.00</nominalAmount>
+            <status>Outstanding Settlement</status>
+        </assetBookingSummary>
+
+        <bookingDetail id="Smokebooking2Settled">
+            <bookingInformation>
+                <settlementStatusInfo>
+                    <settlementStatus>Settled</settlementStatus>
+                </settlementStatusInfo>
+            </bookingInformation>
+            <save>save</save>
+            <alertHandling>
+                <content>[\s\S]*</content>
+                <accept>true</accept>
+            </alertHandling>
+        </bookingDetail>
+
+
+        <settlementStatusSearch id="SettlementSearch001" >
+            <principal>
+                <type>Code</type>
+                <filter>AlexPrcPrimaryC</filter>
+                <linkText>AlexPrcPrimaryC</linkText>
+            </principal>
+            <counterparty>
+                <filter>QTPCounterparty</filter>
+                <linkText>QTPCounterparty</linkText>
+            </counterparty>
+            <description>
+                <type>Exactly matching</type>
+                <filter ref="SmokeOTCagr3Desc"/>
+            </description>
+            <settlementDateFrom>T-100</settlementDateFrom>
+            <settlementDateTo>T+100</settlementDateTo>
+        </settlementStatusSearch>
+
+        <settlementStatusSummary id="SettlementSearchResultBond.pending">
+            <assetClass ref="bond.name"/>
+            <assetType ref="bond.usd.name"/>
+            <received>true</received>
+            <delivery>true</delivery>
+            <pending>true</pending>
+        </settlementStatusSummary>
+
+        <settlementStatusSummary id="SettlementSearchResultCash.pending">
+            <assetClass ref="cash.name"/>
+            <assetType ref="cash.usd.name"/>
+            <received>true</received>
+            <pending>true</pending>
+        </settlementStatusSummary>
+
+        <settlementStatusSummary id="SettlementSearchResultEquity.pending">
+            <assetClass ref="equity.name"/>
+            <assetType ref="equity.usd.name"/>
+            <received>true</received>
+            <delivery>true</delivery>
+            <pending>true</pending>
+        </settlementStatusSummary>
+
+        <settlementStatusSummary id="SettlementSearchResultBond.authorised">
+            <assetClass ref="bond.name"/>
+            <assetType ref="bond.usd.name"/>
+            <received>true</received>
+            <delivery>true</delivery>
+            <authorised>true</authorised>
+        </settlementStatusSummary>
+
+        <settlementStatusSummary id="SettlementSearchResultCash.authorised">
+            <assetClass ref="cash.name"/>
+            <assetType ref="cash.usd.name"/>
+            <received>true</received>
+            <authorised>true</authorised>
+        </settlementStatusSummary>
+
+        <settlementStatusSummary id="SettlementSearchResultEquity.authorised">
+            <assetClass ref="equity.name"/>
+            <assetType ref="equity.usd.name"/>
+            <received>true</received>
+            <delivery>true</delivery>
+            <authorised>true</authorised>
+        </settlementStatusSummary>
+
+        <settlementStatusSummary id="SettlementSearchResultBond.pending.settlement">
+            <assetClass ref="bond.name"/>
+            <assetType ref="bond.usd.name"/>
+            <received>true</received>
+            <delivery>true</delivery>
+            <pendingSettlement>true</pendingSettlement>
+        </settlementStatusSummary>
+
+        <settlementStatusSummary id="SettlementSearchResultCash.pending.settlement">
+            <assetClass ref="cash.name"/>
+            <assetType ref="cash.usd.name"/>
+            <received>true</received>
+            <pendingSettlement>true</pendingSettlement>
+        </settlementStatusSummary>
+
+        <settlementStatusSummary id="SettlementSearchResultEquity.pending.settlement">
+            <assetClass ref="bond.name"/>
+            <assetType ref="bond.usd.name"/>
+            <received>true</received>
+            <delivery>true</delivery>
+            <pendingSettlement>true</pendingSettlement>
+        </settlementStatusSummary>
+
+    </scenarioData>
+</dataBean>

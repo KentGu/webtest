@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <optimisationRule id="filter.agreement.ori">
+            <ruleName>filter_agr_update</ruleName>
+            <optimisationFilterRuleAttribute name="filter.agr.name1">
+                <attributeName>Agreement Description</attributeName>
+                <attributeDetail name="detail.name1">
+                    <operator>Starts With</operator>
+                    <inputValue>agr</inputValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name2">
+                <attributeName>Region</attributeName>
+                <attributeDetail name="detail.name2">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>R1</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name3">
+                <attributeName>Principal</attributeName>
+                <attributeDetail name="detail.name3">
+                    <type>Short Name</type>
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>QTPPrincipal</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name4">
+                <attributeName>Business Line</attributeName>
+                <attributeDetail name="detail.name41">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>OTC</selectOption>
+                        <selectOption>Clearing</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name42">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>Repo</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name43">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>ETF</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name5">
+                <attributeName>Multi-Model</attributeName>
+                <attributeDetail name="detail.name5">
+                    <operator>Equal</operator>
+                    <selectedValue>Yes</selectedValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name6">
+                <attributeName>Agreement ID</attributeName>
+                <attributeDetail name="detail.name61">
+                    <operator>Equal</operator>
+                    <inputValue>1233</inputValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name62">
+                    <operator>Not Equal</operator>
+                    <inputValue>2345</inputValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name7">
+                <attributeName>Agreement Name</attributeName>
+                <attributeDetail name="detail.name71">
+                    <operator>Contains</operator>
+                    <inputValue>test</inputValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name72">
+                    <operator>Like</operator>
+                    <inputValue>TESTYYY</inputValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name8">
+                <attributeName>External ID</attributeName>
+                <attributeDetail name="detail.name81">
+                    <operator>Equal</operator>
+                    <inputValue>exccc</inputValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name82">
+                    <operator>Starts With</operator>
+                    <inputValue>treee</inputValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name9">
+                <attributeName>Legal Review Frequency</attributeName>
+                <attributeDetail name="detail.name91">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>Never</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name92">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>Quarterly</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name10">
+                <attributeName>Credit Support Documentation</attributeName>
+                <attributeDetail name="detail.name101">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>2001 Margin Provisions</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name102">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>ESLA 1996</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name11">
+                <attributeName>Author</attributeName>
+                <attributeDetail name="detail.name111">
+                    <operator>Equal</operator>
+                    <inputValue>atyuu</inputValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail  name="detail.name112">
+                    <operator>Contains</operator>
+                    <inputValue>errrr</inputValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name12">
+                <attributeName>Date</attributeName>
+                <attributeDetail name="detail.name121">
+                    <operator>Equal</operator>
+                    <inputValue>t</inputValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail  name="detail.name122">
+                    <operator>Not Equal</operator>
+                    <inputValue>t+20</inputValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name13">
+                <attributeName>Version</attributeName>
+                <attributeDetail name="detail.name131">
+                    <operator>Equal</operator>
+                    <inputValue>14.1</inputValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail  name="detail.name132">
+                    <operator>Not Equal</operator>
+                    <inputValue>15.0</inputValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name14">
+                <attributeName>Group</attributeName>
+                <attributeDetail name="detail.name141">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>smoke</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name142">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>smoke2</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name15">
+                <attributeName>Category</attributeName>
+                <attributeDetail name="detail.name151">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>Dollar Repo</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name152">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>Non Dollar Repo</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name16">
+                <attributeName>Linkage Set</attributeName>
+                <attributeDetail name="detail.name161">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>L1</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name162">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>L2</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name17">
+                <attributeName>Netting IA and MTM</attributeName>
+                <attributeDetail name="detail.name171">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>Net</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name172">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>Not-Net</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name18">
+                <attributeName>Gross Calc</attributeName>
+                <attributeDetail name="detail.name181">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>Gross</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name182">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>Gross IM</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name19">
+                <attributeName>Counterparty</attributeName>
+                <attributeDetail name="detail.name191">
+                    <type>Long Name</type>
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>QTPCounterparty2</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name192">
+                    <type>Short Name</type>
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>QTP_Cpty_RC</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name20">
+                <attributeName>Custodian</attributeName>
+                <attributeDetail name="detail.name201">
+                    <type>Short Name</type>
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>QTPCustodian</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name202">
+                    <type>Long Name</type>
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>QTPCustodian2</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name21">
+                <attributeName>CCP</attributeName>
+                <attributeDetail name="detail.name211">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>ICE</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name212">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>LCH</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name22">
+                <attributeName>Agreement Rank Number</attributeName>
+                <attributeDetail name="detail.name221">
+                    <operator>Equal</operator>
+                    <inputValue>1</inputValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name222">
+                    <operator>Less Than</operator>
+                    <inputValue>2</inputValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name23">
+                <attributeName>Umbrella</attributeName>
+                <attributeDetail name="detail.name231">
+                    <operator>Equal</operator>
+                    <selectedValue>Yes</selectedValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+        </optimisationRule>
+        <optimisationRule id="filter.agreement.update">
+            <ruleName id="rule.name">filter_agr_update</ruleName>
+            <optimisationFilterRuleAttribute name="filter.agr.name1">
+                <attributeName>Agreement Description</attributeName>
+                <openBracket></openBracket>
+                <attributeDetail name="detail.name1">
+                    <operator>Ends With</operator>
+                    <inputValue>test</inputValue>
+                </attributeDetail>
+                <closeBracket></closeBracket>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name2">
+                <attributeName>Region</attributeName>
+                <openBracket>(</openBracket>
+                <attributeDetail name="detail.name2">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>R2</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+                <closeBracket>)</closeBracket>
+                <bracketAndOr>Or</bracketAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name3">
+                <attributeName>Principal</attributeName>
+                <attributeDetail  name="detail.name3">
+                    <type>Long Name</type>
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <filter>QTPPrincipal2</filter>
+                        <selectOption>QTPPrincipal2</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name4">
+                <attributeName>Business Line</attributeName>
+                <attributeDetail name="detail.name41">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>Repo</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name42">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>Clearing</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name43">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>OTC</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+                <bracketAndOr>Or</bracketAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name5">
+                <attributeName>Multi-Model</attributeName>
+                <attributeDetail name="detail.name5">
+                    <operator>Not Equal</operator>
+                    <selectedValue>No</selectedValue>
+                </attributeDetail>
+                <groupAndOr>Or</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name6">
+                <attributeName>Agreement ID</attributeName>
+                <attributeDetail name="detail.name61">
+                    <operator>Not Equal</operator>
+                    <inputValue>33333</inputValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name62">
+                    <operator>Equal</operator>
+                    <inputValue>33366</inputValue>
+                </attributeDetail>
+                <groupAndOr>And</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name7">
+                <attributeName>Agreement Name</attributeName>
+                <attributeDetail name="detail.name71">
+                    <operator>Like</operator>
+                    <inputValue>sdss</inputValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name72">
+                    <operator>Starts With</operator>
+                    <inputValue>dsdsa</inputValue>
+                </attributeDetail>
+                <groupAndOr>Or</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name8">
+                <attributeName>External ID</attributeName>
+                <attributeDetail name="detail.name81">
+                    <operator>Not Equal</operator>
+                    <inputValue>WWWW</inputValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name82">
+                    <operator>Contains</operator>
+                    <inputValue>sssd</inputValue>
+                </attributeDetail>
+                <groupAndOr>And</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name9">
+                <attributeName>Legal Review Frequency</attributeName>
+                <attributeDetail name="detail.name91">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>Daily</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name92">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>Never</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+                <groupAndOr>Or</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name10">
+                <attributeName>Credit Support Documentation</attributeName>
+                <attributeDetail name="detail.name101">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>EMA CSD 2001</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name102">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>GMRA</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+                <groupAndOr>And</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name11">
+                <attributeName>Author</attributeName>
+                <attributeDetail name="detail.name111">
+                    <operator>Not Equal</operator>
+                    <inputValue>sssrrr</inputValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail  name="detail.name112">
+                    <operator>Starts With</operator>
+                    <inputValue>test</inputValue>
+                </attributeDetail>
+                <groupAndOr>Or</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name12">
+                <attributeName>Date</attributeName>
+                <attributeDetail name="detail.name121">
+                    <operator>Not Equal</operator>
+                    <inputValue>t+1</inputValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail  name="detail.name122">
+                    <operator>Equal</operator>
+                    <inputValue>t+2</inputValue>
+                </attributeDetail>
+                <groupAndOr>And</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name13">
+                <attributeName>Version</attributeName>
+                <attributeDetail name="detail.name131">
+                    <operator>Not Equal</operator>
+                    <inputValue>14.1.3</inputValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail  name="detail.name132">
+                    <operator>Equal</operator>
+                    <inputValue>15.1</inputValue>
+                </attributeDetail>
+                <groupAndOr>Or</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name14">
+                <attributeName>Group</attributeName>
+                <attributeDetail name="detail.name141">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>smoke2</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name142">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>smoke</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+                <groupAndOr>And</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name15">
+                <attributeName>Category</attributeName>
+                <attributeDetail name="detail.name151">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>IR Swaps</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name152">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>Dollar Repo</selectOption>
+                        <selectOption>Non Dollar Repo</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+                <groupAndOr>Or</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name16">
+                <attributeName>Linkage Set</attributeName>
+                <attributeDetail name="detail.name161">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>L3</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name162">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>L2</selectOption>
+                        <selectOption>L1</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name17">
+                <attributeName>Netting IA and MTM</attributeName>
+                <attributeDetail name="detail.name171">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>Auto-Net</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name172">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>Net</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name18">
+                <attributeName>Gross Calc</attributeName>
+                <attributeDetail name="detail.name181">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>Net</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name182">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>Gross</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name19">
+                <attributeName>Counterparty</attributeName>
+                <attributeDetail name="detail.name191">
+                    <type>Code</type>
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <filter>QTPCounterparty</filter>
+                        <selectOption>QTPCounterparty</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name192">
+                    <type>Long Name</type>
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <filter>QTPCounterparty2</filter>
+                        <selectOption>QTPCounterparty2</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name20">
+                <attributeName>Custodian</attributeName>
+                <attributeDetail name="detail.name201">
+                    <type>Long Name</type>
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>QTPCustodian2</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name202">
+                    <type>Code</type>
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>QTPCustodian</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name21">
+                <attributeName>CCP</attributeName>
+                <attributeDetail name="detail.name211">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>LCH</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name212">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>ICE</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name22">
+                <attributeName>Agreement Rank Number</attributeName>
+                <attributeDetail name="detail.name221">
+                    <operator>Not Equal</operator>
+                    <inputValue>3</inputValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name222">
+                    <operator>Less Than Equal</operator>
+                    <inputValue>4</inputValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.agr.name23">
+                <attributeName>Umbrella</attributeName>
+                <attributeDetail name="detail.name231">
+                    <operator>Not Equal</operator>
+                    <selectedValue>No</selectedValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </optimisationRule>
+
+
+
+
+        <auditOptimisationRuleReportFilter id="audit.optimisation.report.filter">
+            <operation>Modify</operation>
+            <ruleName>
+                <filter ref="rule.name"/>
+            </ruleName>
+        </auditOptimisationRuleReportFilter>
+        <variable id="auditReportPath"/>
+
+        <reportValidationRules id="reportRule">
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Agreement Description</value></field><field><fieldName>Element</fieldName><value>Close Bracket</value></field><field><fieldName>Value Before</fieldName><value>1</value></field><field><fieldName>Value After</fieldName><value>0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Agreement Description</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Starts With</value></field><field><fieldName>Value After</fieldName><value>Ends With</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Agreement Description</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value></value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Agreement Description</value></field><field><fieldName>Element</fieldName><value>Open Bracket</value></field><field><fieldName>Value Before</fieldName><value>1</value></field><field><fieldName>Value After</fieldName><value>0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Agreement Description</value></field><field><fieldName>Element</fieldName><value>Level Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value></value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Agreement Description</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>agr</value></field><field><fieldName>Value After</fieldName><value>test</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Region</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value></value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Region</value></field><field><fieldName>Element</fieldName><value>Open Bracket</value></field><field><fieldName>Value Before</fieldName><value>0</value></field><field><fieldName>Value After</fieldName><value>1</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Region</value></field><field><fieldName>Element</fieldName><value>Close Bracket</value></field><field><fieldName>Value Before</fieldName><value>0</value></field><field><fieldName>Value After</fieldName><value>1</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Region</value></field><field><fieldName>Element</fieldName><value>Level Joining Condition</value></field><field><fieldName>Value Before</fieldName><value></value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Business Line</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Business Line</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>OTC,Clearing</value></field><field><fieldName>Value After</fieldName><value>Repo</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Business Line</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Business Line</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>Repo</value></field><field><fieldName>Value After</fieldName><value>Clearing</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Business Line</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Business Line</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Business Line</value></field><field><fieldName>Element</fieldName><value>Level Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Business Line</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>ETF</value></field><field><fieldName>Value After</fieldName><value>OTC</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Business Line</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Principal</value></field><field><fieldName>Element</fieldName><value>Paired Attribute</value></field><field><fieldName>Value Before</fieldName><value>Short Name</value></field><field><fieldName>Value After</fieldName><value>Long Name</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Principal</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>QTPPrincipal</value></field><field><fieldName>Value After</fieldName><value>QTPPrincipal2</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Principal</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Multi-Model</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Multi-Model</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Multi-Model</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>Yes</value></field><field><fieldName>Value After</fieldName><value>No</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Agreement ID</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Not Equal</value></field><field><fieldName>Value After</fieldName><value>Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Agreement ID</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Agreement ID</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>2345</value></field><field><fieldName>Value After</fieldName><value>33366</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Agreement ID</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>1233</value></field><field><fieldName>Value After</fieldName><value>33333</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Agreement ID</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Agreement ID</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Agreement Name</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>test</value></field><field><fieldName>Value After</fieldName><value>sdss</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Agreement Name</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Contains</value></field><field><fieldName>Value After</fieldName><value>Like</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Agreement Name</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Agreement Name</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Agreement Name</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>TESTYYY</value></field><field><fieldName>Value After</fieldName><value>dsdsa</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Agreement Name</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Like</value></field><field><fieldName>Value After</fieldName><value>Starts With</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>External ID</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>exccc</value></field><field><fieldName>Value After</fieldName><value>WWWW</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>External ID</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>External ID</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>External ID</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>External ID</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>treee</value></field><field><fieldName>Value After</fieldName><value>sssd</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>External ID</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Starts With</value></field><field><fieldName>Value After</fieldName><value>Contains</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Legal Review Frequency</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Legal Review Frequency</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>Never</value></field><field><fieldName>Value After</fieldName><value>Daily</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Legal Review Frequency</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Credit Support Documentation</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Credit Support Documentation</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>2001 Margin Provisions</value></field><field><fieldName>Value After</fieldName><value>EMA CSD 2001</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Credit Support Documentation</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Legal Review Frequency</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>Quarterly</value></field><field><fieldName>Value After</fieldName><value>Never</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Legal Review Frequency</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Legal Review Frequency</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Not Equal</value></field><field><fieldName>Value After</fieldName><value>Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Credit Support Documentation</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>ESLA 1996</value></field><field><fieldName>Value After</fieldName><value>GMRA</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Credit Support Documentation</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Credit Support Documentation</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Not Equal</value></field><field><fieldName>Value After</fieldName><value>Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Date</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>t+20</value></field><field><fieldName>Value After</fieldName><value>t+2</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Date</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Date</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Not Equal</value></field><field><fieldName>Value After</fieldName><value>Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Author</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Author</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>atyuu</value></field><field><fieldName>Value After</fieldName><value>sssrrr</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Author</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Date</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>t</value></field><field><fieldName>Value After</fieldName><value>t+1</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Date</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Date</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Author</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Author</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>errrr</value></field><field><fieldName>Value After</fieldName><value>test</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Author</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Contains</value></field><field><fieldName>Value After</fieldName><value>Starts With</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Version</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Version</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Not Equal</value></field><field><fieldName>Value After</fieldName><value>Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Version</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>15.0</value></field><field><fieldName>Value After</fieldName><value>15.1</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Version</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>14.1</value></field><field><fieldName>Value After</fieldName><value>14.1.3</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Version</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Version</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Group</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Group</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Group</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>smoke</value></field><field><fieldName>Value After</fieldName><value>smoke2</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Group</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>smoke2</value></field><field><fieldName>Value After</fieldName><value>smoke</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Group</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Group</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Category</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>Dollar Repo</value></field><field><fieldName>Value After</fieldName><value>IR Swaps</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Category</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Category</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Category</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>Non Dollar Repo</value></field><field><fieldName>Value After</fieldName><value>Dollar Repo,Non Dollar Repo</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Category</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Not Equal</value></field><field><fieldName>Value After</fieldName><value>Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Category</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Linkage Set</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Linkage Set</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>L1</value></field><field><fieldName>Value After</fieldName><value>L3</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Linkage Set</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Netting IA and MTM</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Netting IA and MTM</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>Net</value></field><field><fieldName>Value After</fieldName><value>Auto-Net</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Netting IA and MTM</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Netting IA and MTM</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Not Equal</value></field><field><fieldName>Value After</fieldName><value>Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Netting IA and MTM</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>Not-Net</value></field><field><fieldName>Value After</fieldName><value>Net</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Linkage Set</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Linkage Set</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>L2</value></field><field><fieldName>Value After</fieldName><value>L1,L2</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Gross Calc</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>Gross</value></field><field><fieldName>Value After</fieldName><value>Net</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Gross Calc</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Gross Calc</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Gross Calc</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>Gross IM</value></field><field><fieldName>Value After</fieldName><value>Gross</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Gross Calc</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Not Equal</value></field><field><fieldName>Value After</fieldName><value>Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Counterparty</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Counterparty</value></field><field><fieldName>Element</fieldName><value>Paired Attribute</value></field><field><fieldName>Value Before</fieldName><value>Long Name</value></field><field><fieldName>Value After</fieldName><value>Code</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Counterparty</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>QTPCounterparty2</value></field><field><fieldName>Value After</fieldName><value>QTPCounterparty</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Counterparty</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Counterparty</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>QTP_Cpty_RC</value></field><field><fieldName>Value After</fieldName><value>QTPCounterparty2</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Counterparty</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Counterparty</value></field><field><fieldName>Element</fieldName><value>Paired Attribute</value></field><field><fieldName>Value Before</fieldName><value>Short Name</value></field><field><fieldName>Value After</fieldName><value>Long Name</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Custodian</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Custodian</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Custodian</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>QTPCustodian</value></field><field><fieldName>Value After</fieldName><value>QTPCustodian2</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Custodian</value></field><field><fieldName>Element</fieldName><value>Paired Attribute</value></field><field><fieldName>Value Before</fieldName><value>Short Name</value></field><field><fieldName>Value After</fieldName><value>Long Name</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>CCP</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>CCP</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>CCP</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>ICE</value></field><field><fieldName>Value After</fieldName><value>LCH</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Custodian</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Custodian</value></field><field><fieldName>Element</fieldName><value>Paired Attribute</value></field><field><fieldName>Value Before</fieldName><value>Long Name</value></field><field><fieldName>Value After</fieldName><value>Code</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Custodian</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>QTPCustodian2</value></field><field><fieldName>Value After</fieldName><value>QTPCustodian</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>CCP</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>LCH</value></field><field><fieldName>Value After</fieldName><value>ICE</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>CCP</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Umbrella</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>Yes</value></field><field><fieldName>Value After</fieldName><value>No</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Umbrella</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Agreement Rank Number</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>1</value></field><field><fieldName>Value After</fieldName><value>3</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Agreement Rank Number</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Agreement Rank Number</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Agreement Rank Number</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Less Than</value></field><field><fieldName>Value After</fieldName><value>Less Than Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>filter_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement filter</value></field><field><fieldName>Attribute</fieldName><value>Agreement Rank Number</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>2</value></field><field><fieldName>Value After</fieldName><value>4</value></field></reportValidationRule>
+
+        </reportValidationRules>
+
+    </scenarioData>
+</dataBean>

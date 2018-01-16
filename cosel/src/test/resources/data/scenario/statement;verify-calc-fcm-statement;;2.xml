@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns=""
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+		<agreementSearch id="filter.agmt.description">
+			<description><filter>11623_agmt</filter></description>
+		</agreementSearch>
+		<agreementSearchResult id="agreement.description">
+			<description>11623_agmt</description>
+		</agreementSearchResult>
+
+		<assetBookingSummary id="qtp.bond.usd">
+			<assetType>qtp_bond_usd</assetType>
+		</assetBookingSummary>
+		
+		<bookingDetail id="bond.call.im.3k">
+			<instrumentSearch>
+				<instrumentId>
+					<filter>qtp_Bond_Instrument</filter>
+					<linkText>qtp_Bond_Instrument</linkText>
+				</instrumentId>
+				<linkText>qtp_Bond_Instrument</linkText>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<imAmount>3000</imAmount>
+					<movement>Call</movement>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+		<bookingDetail id="bond.call.vm.2k">
+			<instrumentSearch>
+				<instrumentId>
+					<filter>qtp_Bond_Instrument</filter>
+					<linkText>qtp_Bond_Instrument</linkText>
+				</instrumentId>
+				<linkText>qtp_Bond_Instrument</linkText>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<vmAmount>2000</vmAmount>
+					<movement>Call</movement>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+		
+		<assetBookingSummary id="cash.usd">
+			<assetType>CASH-USD</assetType>
+		</assetBookingSummary>
+		
+		<bookingDetail id="cash.delivery.im.1k">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<imAmount>1000</imAmount>
+					<movement>Delivery</movement>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+		<bookingDetail id="cash.call.vm.2k">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<vmAmount>2000</vmAmount>
+					<movement>Call</movement>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+		<agreementExposureSummary id="product.QTP">
+			<productList>
+				<productType>QTP</productType>
+			</productList>
+		</agreementExposureSummary>
+
+		<tradeDetail id="trade1">
+			<tradeInformation>
+				<tradeDate>t</tradeDate>
+				<maturityDate>t+100</maturityDate>
+				<effectiveDate>t</effectiveDate>
+				<tradeIdentifierPartyA id="traderef1" random="true" />
+				<partyABranchName ref="traderef1" />
+				<partyBBranchName ref="traderef1" />
+			</tradeInformation>
+			<valuationInformation>
+				<independentValuationAmount>
+					<amount>80000</amount>
+				</independentValuationAmount>
+				<valuationDate>T</valuationDate>
+			</valuationInformation>
+			<ccpTradeInformation>
+				<tsaCurrency>USD</tsaCurrency>
+				<upfrontFee>2000</upfrontFee>
+				<upfrontFeeSettlementDate>t+1</upfrontFeeSettlementDate>
+			</ccpTradeInformation>
+		</tradeDetail>
+
+		<tradeDetail id="trade2">
+			<tradeInformation>
+				<tradeDate>t</tradeDate>
+				<maturityDate>t+100</maturityDate>
+				<effectiveDate>t</effectiveDate>
+				<tradeIdentifierPartyA id="traderef2" random="true" />
+				<partyABranchName ref="traderef2" />
+				<partyBBranchName ref="traderef2" />
+			</tradeInformation>
+			<valuationInformation>
+				<counterPartyValuationAmount>
+					<amount>10000</amount>
+				</counterPartyValuationAmount>
+				<valuationDate>T</valuationDate>
+			</valuationInformation>
+			<ccpTradeInformation>
+				<accruedCoupon><amount>1000</amount></accruedCoupon>
+				<tsaCurrency>USD</tsaCurrency>
+				<pai>1000</pai>
+				<resetToParAmount>1000</resetToParAmount>
+				<imInterest>-1000</imInterest>
+				<ndfCashflow>1000</ndfCashflow>
+				<initialCoupon>1000</initialCoupon>
+				<upfrontFee>1000</upfrontFee>
+				<creditEventCashAmount>2000</creditEventCashAmount>
+				<tsaMisc1>-1000</tsaMisc1>
+				<successionEventCashAmount>2000</successionEventCashAmount>
+				<tsaMisc2>-1000</tsaMisc2>
+				<transferValue>1000</transferValue>
+				<tsaMisc3>3000</tsaMisc3>
+				<bankedCoupon>1000</bankedCoupon>
+			</ccpTradeInformation>
+			<collateralInformation>
+				<dealLevelUpfront>true</dealLevelUpfront>
+				<dealLevelType>Independent Amount</dealLevelType>
+				<dealLevelAmount>1000</dealLevelAmount>
+			</collateralInformation>
+		</tradeDetail>
+
+
+
+		<agreementStatement id="statement.info">
+			<exposureSummary>
+				<principalPaysIndependentAmount>0.00</principalPaysIndependentAmount>
+				<counterpartyPaysIndependentAmount>1000.00</counterpartyPaysIndependentAmount>
+				<itmExposure>80000.00</itmExposure>
+				<otmExposure>-10000.00</otmExposure>
+				<totalExposureAmount>71000.00</totalExposureAmount>
+			</exposureSummary>
+			<assetHoldingsSummary>
+				<vmCollateralBalance>4000.00</vmCollateralBalance>
+				<vmCashBalance>2000.00</vmCashBalance>
+				<vmMarketValueOfCash>2000.00</vmMarketValueOfCash>
+				<vmSecuritiesBalance>2000.00</vmSecuritiesBalance>
+				<vmMarketValueOfSecurities>2000.00</vmMarketValueOfSecurities>
+				<imCollateralBalance>2000.00</imCollateralBalance>
+				<imCashBalance>-1000.00</imCashBalance>
+				<imMarketValueOfCash>-1000.00</imMarketValueOfCash>
+				<imSecuritiesBalance>3000.00</imSecuritiesBalance>
+				<imMarketValueOfSecurities>3000.00</imMarketValueOfSecurities>
+			</assetHoldingsSummary>
+			<marginCallCalculation>
+				<fcmReq>
+					<vmCashBalance>2000.00</vmCashBalance>
+					<vmSecuritiesCollateral>2000.00</vmSecuritiesCollateral>
+					<totalSettlementAmount>11000.00</totalSettlementAmount>
+					<totalResetToPar>1000.00</totalResetToPar>
+					<totalInitialCoupon>1000.00</totalInitialCoupon>
+					<otherCashAdjustments>6000.00</otherCashAdjustments>
+					<bankedCoupon>1000.00</bankedCoupon>
+					<pai>1000.00</pai>
+					<imInterest>-1000.00</imInterest>
+					<ndfCashflow>1000.00</ndfCashflow>
+					<upfrontFee>1000.00</upfrontFee>
+					<variationMargin>73000.00</variationMargin>
+					<mtmRequirement>70000.00</mtmRequirement>
+					<accruedCoupon>1000.00</accruedCoupon>
+					<unsettledUpfrontFee>2000.00</unsettledUpfrontFee>
+					<vmNetExcessOrDeficit>80000.00</vmNetExcessOrDeficit>
+					<imSecuritiesCollateral>3000.00</imSecuritiesCollateral>
+					<imCashBalance>-1000.00</imCashBalance>
+					<imRequirement>1000.00</imRequirement>
+					<imNetExcessOrDeficit>-1000.00</imNetExcessOrDeficit>
+					<cashAvailableForNetExcess>0.00</cashAvailableForNetExcess>
+					<netExcessOrDeficit>79000.00</netExcessOrDeficit>
+				</fcmReq>
+			</marginCallCalculation>
+		</agreementStatement>
+
+
+
+
+
+	</scenarioData>
+</dataBean>

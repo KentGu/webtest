@@ -1,0 +1,5 @@
+pre#Trade_Before#select count(1) from COLTRADES where traderef2 like 'PST_DeltaRepoTrade_%'
+
+post#Trade_After#select count(1) from COLTRADES where traderef2 like 'PST_DeltaRepoTrade_%'
+
+val#1#`expr ${Trade_After} - ${Trade_Before}`

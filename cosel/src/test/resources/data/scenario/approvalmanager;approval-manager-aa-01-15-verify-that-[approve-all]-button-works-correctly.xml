@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/approvalManager.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <agreementSearch id="search.otc.agreement">
+            <systemId id="search.otc.agreement.id">1002</systemId>
+            <principal>
+                <criteria>Exactly matching</criteria>
+                <filter id="search.otc.agreement.principal" ref="org.p1.lname"/>
+                <linkText ref="org.p1.lname"/>
+            </principal>
+            <counterparty>
+                <criteria>Exactly matching</criteria>
+                <filter id="search.otc.agreement.counterparty" ref="org.c1.lname"/>
+                <linkText ref="org.c1.lname"/>
+            </counterparty>
+            <description>
+                <type>Exactly matching</type>
+                <filter id="search.otc.agreement.description">T6762_Agreement_Description</filter>
+                <linkText ref="search.otc.agreement.description"/>
+            </description>
+            <externalId>
+                <type>Exactly matching</type>
+                <filter id="search.otc.agreement.external.id">T6762_Agreement_External_ID</filter>
+                <linkText ref="search.otc.agreement.external.id"/>
+            </externalId>
+        </agreementSearch>
+
+        <agreementSearchResult id="search.result.otc.agreement">
+            <principal ref="search.otc.agreement.principal"/>
+            <counterparty ref="search.otc.agreement.counterparty"/>
+            <description ref="search.otc.agreement.description"/>
+            <agreementId ref="search.otc.agreement.id"/>
+            <externalId ref="search.otc.agreement.external.id"/>
+        </agreementSearchResult>
+
+        <approvalManagerAgreementSearch id="approval.search.otc.agreement">
+            <principal>
+                <criteria>Exactly matching</criteria>
+                <filter ref="search.otc.agreement.principal"/>
+                <linkText ref="search.otc.agreement.principal"/>
+            </principal>
+            <counterparty>
+                <criteria>Exactly matching</criteria>
+                <filter ref="search.otc.agreement.counterparty"/>
+                <linkText ref="search.otc.agreement.counterparty"/>
+            </counterparty>
+            <description>
+                <type>Exactly matching</type>
+                <filter ref="search.otc.agreement.description"/>
+                <linkText ref="search.otc.agreement.description"/>
+            </description>
+            <systemId ref="search.otc.agreement.id"/>
+        </approvalManagerAgreementSearch>
+
+        <approvalManagerAgreementSearchResult id="approval.search.result.otc.agreement.cancel">
+            <alertHandling>
+                <accept>false</accept>
+                <content>^Do you want to approve all\?$</content>
+            </alertHandling>
+        </approvalManagerAgreementSearchResult>
+
+        <approvalManagerAgreementSearchResult id="approval.search.result.otc.agreement.ok">
+            <alertHandling>
+                <accept>true</accept>
+                <content>^Do you want to approve all\?$</content>
+            </alertHandling>
+        </approvalManagerAgreementSearchResult>
+
+        <agreementStatement id="otc.agreement.statement.pending">
+            <agreementAdmin>
+                <agreementStatus>Pending</agreementStatus>
+            </agreementAdmin>
+        </agreementStatement>
+
+        <agreementStatement id="otc.agreement.statement.approved">
+            <agreementAdmin>
+                <agreementStatus>Approved</agreementStatus>
+            </agreementAdmin>
+        </agreementStatement>
+    </scenarioData>
+</dataBean>

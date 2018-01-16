@@ -1,0 +1,96 @@
+0:Reports:Agreements Report:null:PSTTask_agmt
+0:Reports:Frequency Distribution:null:null
+0:Reports:Asset Holdings and Valuation Report:null:PSTTask_AHV
+0:Reports:Asset Management Report:null:PSTTask_AssetManagement
+0:Reports:Asset Settlements Report:null:PSTTask_AssetSettlements
+0:Reports:Audit Roles Administration Report:null:PSTTask_audRolesAdmin
+0:Reports:Audit User Administration Report:null:PSTTask_audUserAdmin
+0:Reports:Audit Agreements Report:null:PSTTask_AuditAgmt
+0:Reports:Audit Asset Definition Report:null:PSTTask_AudAssetDef
+0:Reports:Audit Assets Report:null:PSTTask_Audit Assets
+0:Reports:Audit Holiday Centres Report:null:PSTTask_AudHolidayCentres
+0:Reports:Audit Interest Rates Report:null:PSTTask_AudInterestRates
+0:Reports:Audit Organisations Report:null:PSTTask_AudOrg
+0:Reports:Audit Settlement Details Report:null:PSTTask_AudSettlDetails
+0:Reports:Audit Statements Report:null:PSTTask_AudStmt
+0:Reports:Audit Trades Report:null:PSTTask_AudTrades
+0:Reports:Concentration Limits Report:null:PSTTask_ConLimits
+0:Reports:Corporate Actions Report:null:PSTTask_CorActions
+0:Reports:Daily Exposure Report:null:PSTTask_DailyExposure
+0:Reports:Historical Exposure Report:null:PSTTask_HistoricalExposure
+0:Reports:Historical FX Rates Report:null:PSTTask_HistoricalFXRates
+0:Workflow:Recalculate Interest Manager:./RepoSql/recalculateinterestmanager_sql:null:1800
+0:Reports:Cash And Accrual Report:null:PSTTask_CashAndAccrual
+0:Reports:Historical Interest Rate Report:null:PSTTask_histir
+0:Reports:Ineligible Asset Report:null:PSTTask_IneligibleAsset
+0:Reports:Interest Applied Report:null:PSTTask_intapplied
+0:Reports:Interest Calculations Scheduled Report:null:PSTTask_intcal
+0:Reports:Interest Changes Report:null:PSTTask_InterestChanges
+0:Reports:Internal Review Report:null:PSTTask_InternalReview
+0:Reports:Licensing Report:null:PSTTask_Licensing
+0:Reports:MIS Report:null:PSTTask_mis
+0:Reports:Month End Report:null:PSTTask_month
+0:Reports:MtM Comparison Report:null:PSTTask_mtm
+0:Reports:Organisation Agreements Report:null:PSTTask_org
+0:Reports:Reconciliation Output Report:null:PSTTask_RecOutput
+0:Reports:Reconciliation Trades Output Report:null:PSTTask_RecTradeOutput
+0:Reports:Rehypothecation Eligibility Report:null:PSTTask_RehyEligibility
+0:Reports:Rejected Trades Report:null:PSTTask_RejectedTrades
+0:Reports:Security Instruments Report:null:PSTTask_securityInstruments
+0:Reports:Settlement Instructions Report:null:PSTTask_settinstr
+0:Reports:Stp Dashboard Report:null:PSTTask_stp
+0:Reports:TSA Report:null:PSTTask_TSA
+0:Reports:Trades Output Report:null:PSTTask_trade
+0:Reports:User Profile Report:null:PSTTask_userProfile
+0:Reports:What If Scenario Report:null:PSTTask_whatIf
+0:Workflow:Apply Effective and Maturity dates:./RepoSql/applyeffectiveandmaturitydates_sql:null
+0:Workflow:Approve All Organisations:./RepoSql/approveallorganisations_sql:null
+0:Workflow:Approve All Agreements:./RepoSql/approveallagreements_sql:null
+0:Workflow:Approve All Statements:./RepoSql/approveallstatements_sql:null:1800
+0:Workflow:Auto Email Call/Recall:./RepoSql/autoemailcallrecall_sql:null:1800
+0:Workflow:Auto Email Interest Statement:./RepoSql/autoemailintereststatement_sql:null:1800
+0:Workflow:External Exposures Reset:./RepoSql/externalexposurereset_sql:null
+0:Workflow:Cut-Off:./RepoSql/cutoff_sql:null
+0:Workflow:Distribute UDL:./RepoSql/distributeudl_sql:null
+0:Wor0flow:Net Older Collateral Bookings:./RepoSql/netoldercollateralbookings_sql:null:1800
+0:Workflow:Process Outstanding:./RepoSql/processoutstanding_sql:null
+0:Workflow:Process Approve Settlements:./RepoSql/processapprovesettlements_sql:null
+0:Workflow:Purge Feed Log:null:null
+0:Workflow:Purge Live Interest:null:null
+0:Workflow:Purge Self Service Attachments:null:null
+1:Task Manager:Import FX Rates:null:null
+0:Workflow:Recalculate Statements:./RepoSql/recalculatestatements_sql:null:1800
+0:Workflow:Remove Mature Assets:null:null
+0:Workflow:Remove Mature Trades:null:null
+0:Workflow:Remove Unused System Drafts:null:null
+0:Workflow:Start-Up Dashboard Reset:null:null
+0:Workflow:Todays Events Reset:null:null
+0:System:Purge Audit Log:null:null
+0:System:Purge Event Log:null:null
+0:System:Purge Reports:null:null
+0:Reconciliation:Purge Reconciliation:null:null
+0:Reconciliation:Run Reconciliation:null:null
+0:Task Manager:Import Agreement Ratings:./RepoSql/impAgreementRatings_sql:null
+0:Task Manager:Import Agreement UDF:./RepoSql/impAgreementUDF_sql:null
+0:Task Manager:Import Agreements:./RepoSql/impAgreements_sql:null
+0:Task Manager:Import Assets:./RepoSql/impAssets_sql:null
+0:Task Manager:Import Asset Pricing:./RepoSql/impAssetPricing_sql:null
+0:Task Manager:Import Collateral Booking:./RepoSql/impAssetBooking_sql:null:1800
+0:Task Manager:Import External Independent Amounts:./RepoSql/impExternal_IAs_sql:null
+0:Task Manager:Import Firm Position:./RepoSql/impFirmPosition_sql:null
+1:Task Manager:Import Interest Rates:./RepoSql/impInterestRate_sql:null
+0:Task Manager:Import NAV:./RepoSql/impNAV_sql:null
+0:Task Manager:Import MtM:./RepoSql/impMtM_sql:null
+0:Task Manager:Import Organisations 1:./RepoSql/impOrgRatings_sql:null
+0:Task Manager:Import Organisations 2:./RepoSql/impOrgContacts_sql:null
+0:Task Manager:Import Portfolio TSA:./RepoSql/impPortfolioTSA_sql:null
+0:Task Manager:Import Settlement Instructions:./RepoSql/impSettlementInstruction_sql:null
+1:Task Manager:Import Trades:./RepoSql/impTrade_sql:null
+0:Task Manager:Import Repo MtM:./RepoSql/impRepoMtM_sql:null
+0:Task Manager:Import Repo Settlement:./RepoSql/impRepoSettlement_sql:null 
+0:Task Manager:Import Repo Trades:./RepoSql/impRepoTrade_sql:null 
+0:Task Manager:Import Counterparty Amount:./RepoSql/impCounterpartyAmount_sql:null 
+0:Task Manager:Import Delta Inventory Manager:./RepoSql/impInventoryManager_sql:null
+0:Task Manager:Import Delta Repo Trades:./RepoSql/impDeltaRepoTrade_sql:null 
+1:Task Manager:Import Delta Trade:./RepoSql/impDeltaTrade_sql
+0:Admin:Empty Task:null:null

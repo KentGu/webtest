@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+
+        <feedRepoSettlement id="feed.repo.settlement">
+            <feedSystem></feedSystem>
+            <tradeRef></tradeRef>
+            <tradeRef2></tradeRef2>
+            <securitySettlementStartLeg></securitySettlementStartLeg>
+            <securitySettlementCloseLeg></securitySettlementCloseLeg>
+            <cashSettlementStartLeg></cashSettlementStartLeg>
+            <cashSettlementCloseLeg></cashSettlementCloseLeg>
+        </feedRepoSettlement>
+
+        <feedRepoSettlement id="feed.modified.incorrect.staging.report">
+            <rowNumber>2</rowNumber>
+            <failureReason ref="failure.reason1"/>
+            <feedSystem>QTP</feedSystem>
+            <tradeRef></tradeRef>
+            <tradeRef2></tradeRef2>
+            <securitySettlementStartLeg>Pending</securitySettlementStartLeg>
+            <securitySettlementCloseLeg>Settled</securitySettlementCloseLeg>
+            <cashSettlementStartLeg></cashSettlementStartLeg>
+            <cashSettlementCloseLeg></cashSettlementCloseLeg>
+        </feedRepoSettlement>
+
+        <feedRepoSettlement id="feed.modified.correct.staging.report">
+            <rowNumber>2</rowNumber>
+            <failureReason ref="failure.reason2"/>
+            <feedSystem>MANUAL</feedSystem>
+            <tradeRef>F13658RepoSettTradeRef</tradeRef>
+            <tradeRef2></tradeRef2>
+            <securitySettlementStartLeg>Pending</securitySettlementStartLeg>
+            <securitySettlementCloseLeg>Settled</securitySettlementCloseLeg>
+            <cashSettlementStartLeg></cashSettlementStartLeg>
+            <cashSettlementCloseLeg></cashSettlementCloseLeg>
+        </feedRepoSettlement>
+
+        <badStagingFeedReportFilter id="search.by.feed.repo.settlement">
+            <feedTask>Feed Repo Settlement</feedTask>
+        </badStagingFeedReportFilter>
+
+        <variable id="badStagingFeedReportPath"/>
+
+        <reportValidationRules id="reportRule1">
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Failure reason</fieldName>
+                    <value>[Column: 1] system - Field is compulsory but no value was found | [Column: 2] tradeRef - Field is compulsory but no value was found</value>
+                </field>
+                <field><fieldName>feedSystem</fieldName><value></value></field>
+                <field><fieldName>tradeRef</fieldName><value></value></field>
+                <field><fieldName>tradeRef2</fieldName><value></value></field>
+                <field><fieldName>securitySettlementStartLeg</fieldName><value></value></field>
+                <field><fieldName>securitySettlementCloseLeg</fieldName><value></value></field>
+                <field><fieldName>cashSettlementStartLeg</fieldName><value></value></field>
+                <field><fieldName>cashSettlementCloseLeg</fieldName><value></value></field>
+            </reportValidationRule>
+        </reportValidationRules>
+
+
+        <variable id="file.name"/>
+
+        <reportValidationRules id="reportRule2">
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Failure reason</fieldName>
+                    <value>[Column: 2] tradeRef - Field is compulsory but no value was found</value>
+                </field>
+                <field><fieldName>feedSystem</fieldName><value>QTP</value></field>
+                <field><fieldName>tradeRef</fieldName><value></value></field>
+                <field><fieldName>tradeRef2</fieldName><value></value></field>
+                <field><fieldName>securitySettlementStartLeg</fieldName><value>Pending</value></field>
+                <field><fieldName>securitySettlementCloseLeg</fieldName><value>Settled</value></field>
+                <field><fieldName>cashSettlementStartLeg</fieldName><value></value></field>
+                <field><fieldName>cashSettlementCloseLeg</fieldName><value></value></field>
+            </reportValidationRule>
+        </reportValidationRules>
+
+        <feedResult id="feed.result.parsing.error1">
+            <parsingFailures>1</parsingFailures>
+        </feedResult>
+
+        <feedResult id="feed.result.parsing.error2">
+            <parsingFailures>1</parsingFailures>
+        </feedResult>
+
+        <feedResult id="feed.result.successful">
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <agreementSearch id = "search.agr.for.repo.settlement.feed">
+            <description>
+                <filter>F13658AgrForRepoSettDesc</filter>
+                <linkText>F13658AgrForRepoSettDesc</linkText>
+            </description>
+        </agreementSearch>
+
+        <agreementSearchResult id = "search.agr.for.repo.settlement.feed.result">
+            <externalId>F13658AgrForRepoSettExtId</externalId>
+        </agreementSearchResult>
+
+        <agreementExposureSummary id="product.type.qtp.pro1">
+            <productList>
+                <productType ref="product.qtp.pro1.name"/>
+            </productList>
+        </agreementExposureSummary>
+
+        <tradeDetail id = "start.leg.pending.and.close.leg.settled">
+            <tradeInformation>
+                <productType ref="product.qtp.pro1.name"/>
+                <tradeIdentifierPartyA>F13658RepoSettTradeRef</tradeIdentifierPartyA>
+            </tradeInformation>
+            <securityInformation>
+                <settlementStatusStartLeg>Pending</settlementStatusStartLeg>
+                <settlementStatusCloseLeg>Settled</settlementStatusCloseLeg>
+            </securityInformation>
+        </tradeDetail>
+
+
+
+    </scenarioData>
+</dataBean>

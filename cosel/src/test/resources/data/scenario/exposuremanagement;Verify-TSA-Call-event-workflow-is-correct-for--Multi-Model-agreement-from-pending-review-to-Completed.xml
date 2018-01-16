@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/exposureManagement.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <agreement id="agr24084.multiModel.fcm">
+            <agreementId id="agrid">2581</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="model">
+            <column>Model</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="TSA.Call.top">
+            <action>Cashflow Call(Deficit)</action>
+            <agreementRequirement>2,891.15</agreementRequirement>
+            <model></model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="TSA.Call.top.agreementRequirement.2891.15.pendingReview">
+            <action>Cashflow Call(Deficit)</action>
+            <agreementRequirement>2,891.15</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <sysCalculatedAmount>2,891.15</sysCalculatedAmount>
+            <model></model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="TSA.Call.m2.agreementRequirement.1927.43.pendingReview">
+            <action>Cashflow Call(Deficit)</action>
+            <agreementRequirement>1,927.43</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <sysCalculatedAmount>1,927.43</sysCalculatedAmount>
+            <model>m2</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="TSA.Call.m1.agreementRequirement.694.10.pendingReview">
+            <action>Cashflow Call(Deficit)</action>
+            <agreementRequirement>694.10</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <sysCalculatedAmount>694.10</sysCalculatedAmount>
+            <model>m1</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="TSA.Call.m1.agreementRequirement.694.10.completed">
+            <action>Cashflow Call(Deficit)</action>
+            <agreementRequirement>694.10</agreementRequirement>
+            <sysCalculatedAmount>694.10</sysCalculatedAmount>
+            <model>m1</model>
+            <callStatus>Completed</callStatus>
+            <eventId ref="TSA.Call.m1.pendingReview.event"/>
+            <comments>t</comments>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="TSA.Call.m2.agreementRequirement.1927.43.completed">
+            <action>Cashflow Call(Deficit)</action>
+            <agreementRequirement>1,927.43</agreementRequirement>
+            <sysCalculatedAmount>1,927.43</sysCalculatedAmount>
+            <model>m2</model>
+            <callStatus>Completed</callStatus>
+            <comments>t</comments>
+            <eventId ref="TSA.Call.m2.pendingReview.event"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="TSA.Call.top.agreementRequirement.2891.15.completed.automaticallyChanged">
+            <action>Cashflow Call(Deficit)</action>
+            <agreementRequirement>2,891.15</agreementRequirement>
+            <sysCalculatedAmount>2,891.15</sysCalculatedAmount>
+            <callStatus>Completed</callStatus>
+            <eventId ref="TSA.Call.top.pendingReview.event"/>
+            <model></model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="TSA.Call.top.agreementRequirement.2891.15.pendingReview.newlyCreated">
+            <action>Cashflow Call(Deficit)</action>
+            <agreementRequirement>2,891.15</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <sysCalculatedAmount>2,891.15</sysCalculatedAmount>
+            <eventId id="TSA.Call.top.pendingReview.event"/>
+            <model></model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="TSA.Call.m2.agreementRequirement.1927.43.pendingReview.newlyCreated">
+            <action>Cashflow Call(Deficit)</action>
+            <agreementRequirement>1,927.43</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <sysCalculatedAmount>1,927.43</sysCalculatedAmount>
+            <eventId id="TSA.Call.m2.pendingReview.event"/>
+            <model>m2</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="TSA.Call.m1.agreementRequirement.694.10.pendingReview.newlyCreated">
+            <action>Cashflow Call(Deficit)</action>
+            <agreementRequirement>694.10</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <sysCalculatedAmount>694.10</sysCalculatedAmount>
+            <model>m1</model>
+            <eventId id="TSA.Call.m1.pendingReview.event"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="TSA.Call.top.agreementRequirement.2891.15.completed.withComment">
+            <action>Cashflow Call(Deficit)</action>
+            <agreementRequirement>2,891.15</agreementRequirement>
+            <sysCalculatedAmount>2,891.15</sysCalculatedAmount>
+            <model></model>
+            <eventId ref="TSA.Call.top.pendingReview.event"/>
+            <callStatus>Completed</callStatus>
+            <comments>t</comments>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="TSA.Call.m2.agreementRequirement.1927.43.completed.automaticallyChanged">
+            <action>Cashflow Call(Deficit)</action>
+            <agreementRequirement>1,927.43</agreementRequirement>
+            <sysCalculatedAmount>1,927.43</sysCalculatedAmount>
+            <model>m2</model>
+            <callStatus>Completed</callStatus>
+            <eventId ref="TSA.Call.m2.pendingReview.event"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="TSA.Call.m1.agreementRequirement.694.10.completed.automaticallyChanged">
+            <action>Cashflow Call(Deficit)</action>
+            <agreementRequirement>694.10</agreementRequirement>
+            <sysCalculatedAmount>694.10</sysCalculatedAmount>
+            <model>m1</model>
+            <callStatus>Completed</callStatus>
+            <eventId ref="TSA.Call.m1.pendingReview.event"/>
+        </exposureEventDetail>
+
+    </scenarioData>
+</dataBean>

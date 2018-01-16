@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/exposureManagement.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <agreement id="agr22502.otc.multiModel">
+            <agreementId id="agrid">2589</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="model">
+            <column>Model</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="call.top">
+            <action>Call</action>
+            <agreementRequirement>10,800,000.00</agreementRequirement>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="call.top.requirementAmount.10800000.pendingReview">
+            <action>Call</action>
+            <agreementRequirement>10,800,000.00</agreementRequirement>
+            <sysCalculatedAmount>10,800,000.00</sysCalculatedAmount>
+            <callStatus>Pending Review</callStatus>
+            <model></model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="call.m1.requirementAmount.3m.pendingReview">
+            <action>Call</action>
+            <agreementRequirement>3,000,000.00</agreementRequirement>
+            <sysCalculatedAmount>3,000,000.00</sysCalculatedAmount>
+            <callStatus>Pending Review</callStatus>
+            <model>m1</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="call.m2.requirementAmount.4.8m.pendingReview">
+            <action>Call</action>
+            <agreementRequirement>4,800,000.00</agreementRequirement>
+            <sysCalculatedAmount>4,800,000.00</sysCalculatedAmount>
+            <callStatus>Pending Review</callStatus>
+            <model>m2</model>
+        </exposureEventDetail>
+
+        <bookingDetail id="cash.eur.0.1m">
+            <instrumentSearch>
+                <instrument>
+                    <filter id="CASH.EUR">CASH-EUR</filter>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail clickPlusButton="true">
+                    <model>m1</model>
+                    <nominalAmount>0.1m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="cash.eur.0.4m">
+            <instrumentSearch>
+                <instrument>
+                    <filter ref="CASH.EUR"/>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail clickPlusButton="true">
+                    <model>m1</model>
+                    <nominalAmount>0.4m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="cash.eur.2.5m">
+            <instrumentSearch>
+                <instrument>
+                    <filter ref="CASH.EUR"/>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <model>m1</model>
+                    <nominalAmount>2.5m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="cash.usd.0.1m">
+            <instrumentSearch>
+                <instrument>
+                    <filter ref="cash.usd1.name"/>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail clickPlusButton="true">
+                    <model>m2</model>
+                    <nominalAmount>0.1m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="cash.usd.0.4m">
+            <instrumentSearch>
+                <instrument>
+                    <filter ref="cash.usd1.name"/>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail clickPlusButton="true">
+                    <model>m2</model>
+                    <nominalAmount>0.4m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="cash.usd.4.3m">
+            <instrumentSearch>
+                <instrument>
+                    <filter ref="cash.usd1.name"/>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <model>m2</model>
+                    <nominalAmount>4.3m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <exposureEventDetail id="call.top.requirementAmount.10800000.completed">
+            <action>Call</action>
+            <agreementRequirement>10,800,000.00</agreementRequirement>
+            <sysCalculatedAmount>10,800,000.00</sysCalculatedAmount>
+            <callStatus>Completed</callStatus>
+            <model></model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="call.m1.requirementAmount.3m.completed">
+            <action>Call</action>
+            <agreementRequirement>3,000,000.00</agreementRequirement>
+            <sysCalculatedAmount>3,000,000.00</sysCalculatedAmount>
+            <callStatus>Completed</callStatus>
+            <model>m1</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="call.m2.requirementAmount.4.8m.completed">
+            <action>Call</action>
+            <agreementRequirement>4,800,000.00</agreementRequirement>
+            <sysCalculatedAmount>4,800,000.00</sysCalculatedAmount>
+            <callStatus>Completed</callStatus>
+            <model>m2</model>
+        </exposureEventDetail>
+
+        <assetBookingSummary id="asset.type.CASH.USD">
+            <assetType ref="cash.usd1.name"/>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="booking.call.usd.0.1m">
+            <assetType ref="cash.usd1.name"/>
+            <movement>Call</movement>
+            <nominalAmount>100,000.00</nominalAmount>
+            <status>Pending</status>
+        </assetBookingSummary>
+
+        <bookingDetail id="booking.call.usd.0.1m.ChangeToCancelled">
+            <bookingInformation>
+                <settlementStatusInfo>
+                    <settlementStatus>Cancelled</settlementStatus>
+                    <settlementComment random="true"/>
+                </settlementStatusInfo>
+            </bookingInformation>
+            <save>save</save>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </bookingDetail>
+
+        <assetBookingSummary id="asset.type.CASH.EUR">
+            <assetType id="CASH.EUR">CASH-EUR</assetType>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="booking.call.eur.0.1m">
+            <assetType ref="CASH.EUR"/>
+            <movement>Call</movement>
+            <nominalAmount>100,000.00</nominalAmount>
+            <status>Pending</status>
+        </assetBookingSummary>
+
+        <bookingDetail id="booking.call.eur.0.1m.ChangeToCancelled">
+            <bookingInformation>
+                <settlementStatusInfo>
+                    <settlementStatus>Cancelled</settlementStatus>
+                    <settlementComment random="true"/>
+                </settlementStatusInfo>
+            </bookingInformation>
+            <save>save</save>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </bookingDetail>
+
+        <assetBookingSummary id="booking.call.eur.0.4m">
+            <assetType ref="CASH.EUR"/>
+            <movement>Call</movement>
+            <nominalAmount>400,000.00</nominalAmount>
+            <status>Pending</status>
+        </assetBookingSummary>
+
+        <bookingDetail id="booking.call.eur.0.4m.ChangeToCancelled">
+            <bookingInformation>
+                <settlementStatusInfo>
+                    <settlementStatus>Cancelled</settlementStatus>
+                    <settlementComment random="true"/>
+                </settlementStatusInfo>
+            </bookingInformation>
+            <save>save</save>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </bookingDetail>
+
+        <exposureEventDetail id="call.top.requirementAmount.10800000.MaginRequestIssued">
+            <action>Call</action>
+            <agreementRequirement>10,800,000.00</agreementRequirement>
+            <sysCalculatedAmount>10,800,000.00</sysCalculatedAmount>
+            <callStatus>Margin Request Issued</callStatus>
+            <model></model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="call.m1.requirementAmount.3m.MaginRequestIssued">
+            <action>Call</action>
+            <agreementRequirement>3,000,000.00</agreementRequirement>
+            <sysCalculatedAmount>3,000,000.00</sysCalculatedAmount>
+            <callStatus>Margin Request Issued</callStatus>
+            <model>m1</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="call.m2.requirementAmount.4.8m.MaginRequestIssued">
+            <action>Call</action>
+            <agreementRequirement>4,800,000.00</agreementRequirement>
+            <sysCalculatedAmount>4,800,000.00</sysCalculatedAmount>
+            <callStatus>Margin Request Issued</callStatus>
+            <model>m2</model>
+        </exposureEventDetail>
+
+        <assetBookingSummary id="booking.call.usd.0.4m">
+            <assetType ref="cash.usd1.name"/>
+            <movement>Call</movement>
+            <nominalAmount>400,000.00</nominalAmount>
+            <status>Pending</status>
+        </assetBookingSummary>
+
+        <bookingDetail id="booking.call.usd.0.4m.ChangeToCancelled">
+            <bookingInformation>
+                <settlementStatusInfo>
+                    <settlementStatus>Cancelled</settlementStatus>
+                    <settlementComment random="true"/>
+                </settlementStatusInfo>
+            </bookingInformation>
+            <save>save</save>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </bookingDetail>
+
+
+    </scenarioData>
+</dataBean>

@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/taskScheduler.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <instrument id="bond.usd.price.100.1">
+            <assetClass ref="bond.name"/>
+            <assetType ref="bond.usd.name"/>
+            <instrumentId>
+                <value>qtp-Bond-Usd-Instrument</value>
+            </instrumentId>
+            <market>qtp_Market</market>
+            <issuer>
+                <filter>QTP_Eligible_Issuer</filter>
+                <linkText>QTP_Eligible_Issuer</linkText>
+            </issuer>
+            <maturityDate>t-365</maturityDate>
+            <currencyOfDenomination>USD</currencyOfDenomination>
+            <priceSource>
+                <priceSourceName>Default</priceSourceName>
+                <dirtyPrice>100</dirtyPrice>
+                <cleanPrice>100</cleanPrice>
+                <lastPriceChange>t-365</lastPriceChange>
+                <priceDate>t-365</priceDate>
+            </priceSource>
+            <issueDate>t-365</issueDate>
+        </instrument>
+
+        <instrument id="bond.usd.price.100.2">
+            <assetClass ref="bond.name"/>
+            <assetType ref="bond.usd.name"/>
+            <instrumentId>
+                <value>qtp-Bond-Usd-Instrument1</value>
+            </instrumentId>
+            <market>qtp_Market</market>
+            <issuer>
+                <filter>QTP_Eligible_Issuer</filter>
+                <linkText>QTP_Eligible_Issuer</linkText>
+            </issuer>
+            <maturityDate>t-365</maturityDate>
+            <currencyOfDenomination>USD</currencyOfDenomination>
+            <priceSource>
+                <priceSourceName>Default</priceSourceName>
+                <dirtyPrice>100</dirtyPrice>
+                <cleanPrice>100</cleanPrice>
+                <lastPriceChange>t</lastPriceChange>
+                <priceDate>t-365</priceDate>
+            </priceSource>
+            <issueDate>t-365</issueDate>
+        </instrument>
+
+        <instrument id="bond.gbp.price.100">
+            <assetClass ref="bond.name"/>
+            <assetType ref="bond.gbp.name"/>
+            <instrumentId>
+                <value>qtp-Bond-Gbp-Instrument</value>
+            </instrumentId>
+            <market>qtp_Market</market>
+            <issuer>
+                <filter>QTP_Eligible_Issuer</filter>
+                <linkText>QTP_Eligible_Issuer</linkText>
+            </issuer>
+            <maturityDate>t-365</maturityDate>
+            <currencyOfDenomination>GBP</currencyOfDenomination>
+            <priceSource>
+                <priceSourceName>Default</priceSourceName>
+                <dirtyPrice>100</dirtyPrice>
+                <cleanPrice>100</cleanPrice>
+                <lastPriceChange>t</lastPriceChange>
+                <priceDate>t-365</priceDate>
+            </priceSource>
+            <couponRate>0</couponRate>
+            <issueDate>t-365</issueDate>
+        </instrument>
+
+        <instrument id="equity.usd.price.1.1">
+            <assetClass ref="equity.name"/>
+            <assetType ref="equity.usd.name"/>
+            <instrumentId>
+                <value>qtp-Equity-Usd-Instrument</value>
+            </instrumentId>
+            <market>qtp_Market</market>
+            <issuer>
+                <filter>QTP_Eligible_Issuer</filter>
+                <linkText>QTP_Eligible_Issuer</linkText>
+            </issuer>
+            <maturityDate>t-365</maturityDate>
+            <currencyOfDenomination>USD</currencyOfDenomination>
+            <priceSource>
+                <priceSourceName>Default</priceSourceName>
+                <dirtyPrice>1</dirtyPrice>
+            </priceSource>
+            <issueDate>t-365</issueDate>
+        </instrument>
+
+        <instrument id="equity.usd.price.1.2">
+            <assetClass ref="equity.name"/>
+            <assetType ref="equity.usd.name"/>
+            <instrumentId>
+                <value>qtp-Equity-Usd-Instrument1</value>
+            </instrumentId>
+            <market>qtp_Market</market>
+            <issuer>
+                <filter>QTP_Eligible_Issuer</filter>
+                <linkText>QTP_Eligible_Issuer</linkText>
+            </issuer>
+            <maturityDate>t-365</maturityDate>
+            <currencyOfDenomination>USD</currencyOfDenomination>
+            <priceSource>
+                <priceSourceName>Default</priceSourceName>
+                <dirtyPrice>1</dirtyPrice>
+            </priceSource>
+            <issueDate>t-365</issueDate>
+        </instrument>
+
+        <instrument id="equity.gbp.price.1">
+            <assetClass ref="equity.name"/>
+            <assetType ref="equity.usd.name"/>
+            <instrumentId>
+                <value>qtp-Equity-Gbp-Instrument</value>
+            </instrumentId>
+            <market>qtp_Market</market>
+            <issuer>
+                <filter>QTP_Eligible_Issuer</filter>
+                <linkText>QTP_Eligible_Issuer</linkText>
+            </issuer>
+            <maturityDate>t-365</maturityDate>
+            <currencyOfDenomination>GBP</currencyOfDenomination>
+            <priceSource>
+                <priceSourceName>Default</priceSourceName>
+                <dirtyPrice>1</dirtyPrice>
+            </priceSource>
+            <issueDate>t-365</issueDate>
+        </instrument>
+
+        <feedAgreement id="feed.otc.net.agreement.haircut.rule.on.bond.usd">
+            <legal_id id="feed.otc.net.agreement.haircut.rule.on.bond.usd.desc.external.id" random="true"/>
+            <principal ref="org.p1.lname"/>
+            <counterpartycode ref="org.c1.lname"/>
+            <agreement_description id="feed.otc.net.agreement.haircut.rule.on.bond.usd.desc" random="true" prefix="feed_agr1_"/>
+            <region ref="region.test1.name"/>
+            <businessLine>OTC</businessLine>
+            <status>67</status>
+            <master_documentation ref="master.documentation.1987.isda.master.name"/>
+            <credit_support_documentation ref="credit.documentation.margin.provisions.name"/>
+            <base_currency ref="ccy.usd.name"/>
+            <original_date random="true" variation="t"/>
+            <netting_MTM_And_IA>Net</netting_MTM_And_IA>
+            <holiday_centre ref="hc.test1.name"/>
+            <time_zone ref="system.staticData.timeZone.cet.name"/>
+            <frequency>Daily</frequency>
+            <frequency_start random="true" variation="t"/>
+            <non_workingday_adjusttype>RollForward</non_workingday_adjusttype>
+            <notification_time>13.00</notification_time>
+            <resolution_time>10.00</resolution_time>
+            <resolution_day>same</resolution_day>
+            <product>
+                <productName>QTP</productName>
+                <settlementPeriod>T</settlementPeriod>
+            </product>
+            <asset>
+                <assetName ref="bond.usd.name"/>
+                <settlementDateAbbriviated>T</settlementDateAbbriviated>
+                <applicableParty></applicableParty>
+                <applicableType></applicableType>
+                <haircutAdjustments>
+                    <haircutAdjustment>
+                        <adjustmentType id="otc.agr.1.haircut.1.adjust.type">Adjust</adjustmentType>
+                        <instrumentField id="otc.agr.1.haircut.1.instrument.filed">InstrumentId</instrumentField>
+                        <rule id="otc.agr.1.haircut.1.rule">Equal</rule>
+                        <value id="otc.agr.1.haircut.1.value">qtp-Bond-Usd-Instrument1(qtp_Market)</value>
+                        <valuePercentage id="otc.agr.1.haircut.1.value.percentage">1</valuePercentage>
+                    </haircutAdjustment>
+                    <haircutAdjustment>
+                        <adjustmentType id="otc.agr.1.haircut.2.adjust.type">Adjust</adjustmentType>
+                        <instrumentField id="otc.agr.1.haircut.2.instrument.filed">InstrumentId</instrumentField>
+                        <rule id="otc.agr.1.haircut.2.rule">NotEqual</rule>
+                        <value id="otc.agr.1.haircut.2.value">qtp-Bond-Usd-Instrument1(qtp_Market),qtp-Bond-Usd-Instrument2(qtp_Market)</value>
+                        <operation id="otc.agr.1.haircut.2.operation">Subtract</operation>
+                        <valuePercentage id="otc.agr.1.haircut.2.value.percentage">4</valuePercentage>
+                    </haircutAdjustment>
+                    <haircutAdjustment>
+                        <adjustmentType id="otc.agr.1.haircut.3.adjust.type">Adjust</adjustmentType>
+                        <instrumentField id="otc.agr.1.haircut.3.instrument.filed">Currency</instrumentField>
+                        <rule id="otc.agr.1.haircut.3.rule">Equal</rule>
+                        <value id="otc.agr.1.haircut.3.value">Principal Transfer Currency,Counterparty Transfer Currency,USD,GBP</value>
+                        <operation id="otc.agr.1.haircut.3.operation">Add</operation>
+                        <valuePercentage id="otc.agr.1.haircut.3.value.percentage">6</valuePercentage>
+                    </haircutAdjustment>
+                    <haircutAdjustment>
+                        <adjustmentType id="otc.agr.1.haircut.4.adjust.type">Adjust</adjustmentType>
+                        <instrumentField id="otc.agr.1.haircut.4.instrument.filed">Currency</instrumentField>
+                        <rule id="otc.agr.1.haircut.4.rule">NotEqual</rule>
+                        <value id="otc.agr.1.haircut.4.value">USD</value>
+                        <operation id="otc.agr.1.haircut.4.operation">Subtract</operation>
+                        <valuePercentage id="otc.agr.1.haircut.4.value.percentage">8</valuePercentage>
+                    </haircutAdjustment>
+                </haircutAdjustments>
+            </asset>
+            <rounding_delivery>Up</rounding_delivery>
+            <rounding_recall>Down</rounding_recall>
+            <settlementInstructions>
+                <settlementInstruction>
+                    <bookingType>Net</bookingType>
+                    <direction>Call/Return</direction>
+                    <bucket>VM Call/Return</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>Net</bookingType>
+                    <direction>Delivery/Recall</direction>
+                    <bucket>VM Recall/Delivery</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>Interest</bookingType>
+                    <direction>Pay</direction>
+                    <bucket>Pay</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>Interest</bookingType>
+                    <direction>Receive</direction>
+                    <bucket>Receive</bucket>
+                </settlementInstruction>
+            </settlementInstructions>
+            <distMedium>Email</distMedium>
+            <applyOrgCL>false</applyOrgCL>
+        </feedAgreement>
+
+        <taskSchedulerDetail id="task.feed.agreement">
+            <type>Task Manager</type>
+            <taskName>Import Agreements</taskName>
+            <additionalInfo id="task.feed.agreement.server.path">/home/ec2-user/Feed/FeedAgreement</additionalInfo>
+        </taskSchedulerDetail>
+
+        <variable id="file1"/>
+
+        <taskSchedulerMessage id="task.feed.agreement.message">
+            <message>Agreements: Import agreements: Imported 1 agreements from :(\S+).xlsx( \(Warning message appeared, please look up feed status for details\))?</message>
+        </taskSchedulerMessage>
+
+        <feedStatus id="feed.otc.net.agreement.haircut.rule.on.bond.usd.status">
+            <status>Successful</status>
+            <valuationFile ref="file"/>
+            <description>Agreements</description>
+            <successfulFeed>
+                <importType>Agreements</importType>
+                <valuationFile ref="file"/>
+                <total>1</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <agreementSearch id="otc.agreement.ultimate.parent.true.close.link.false.search">
+            <description>
+                <filter ref="feed.otc.agreement.ultimate.parent.true.close.link.false.agr.desc"/>
+            </description>
+        </agreementSearch>
+
+        <agreementSearchResult id="otc.agreement.ultimate.parent.true.close.link.false.search.result">
+            <description ref="feed.otc.agreement.ultimate.parent.true.close.link.false.agr.desc"/>
+        </agreementSearchResult>
+
+        <agreementSummary id="otc.net.agreement.haircut.rule.on.bond.usd.summary">
+            <principalAndCounterpartyHaircutAdjustmentRules>
+                <assetClass>qtp_bond</assetClass>
+                <assetType ref="bond.usd.name"/>
+                <type ref="otc.agr.1.haircut.1.adjust.type"/>
+                <instrumentField ref="otc.agr.1.haircut.1.instrument.filed"/>
+                <rule ref="otc.agr.1.haircut.1.rule"/>
+                <value ref="otc.agr.1.haircut.1.value"/>
+                <operation>Add</operation>
+                <valuePercentage ref="otc.agr.1.haircut.1.value.percentage"/>
+            </principalAndCounterpartyHaircutAdjustmentRules>
+            <principalAndCounterpartyHaircutAdjustmentRules>
+                <assetClass>qtp_bond</assetClass>
+                <assetType ref="bond.usd.name"/>
+                <type ref="otc.agr.1.haircut.2.adjust.type"/>
+                <instrumentField ref="otc.agr.1.haircut.2.instrument.filed"/>
+                <rule ref="otc.agr.1.haircut.2.rule"/>
+                <value ref="otc.agr.1.haircut.2.value"/>
+                <operation ref="otc.agr.1.haircut.2.operation"/>
+                <valuePercentage ref="otc.agr.1.haircut.2.value.percentage"/>
+            </principalAndCounterpartyHaircutAdjustmentRules>
+            <principalAndCounterpartyHaircutAdjustmentRules>
+                <assetClass>qtp_bond</assetClass>
+                <assetType ref="bond.usd.name"/>
+                <type ref="otc.agr.1.haircut.3.adjust.type"/>
+                <instrumentField ref="otc.agr.1.haircut.3.instrument.filed"/>
+                <rule ref="otc.agr.1.haircut.3.rule"/>
+                <value ref="otc.agr.1.haircut.3.value"/>
+                <operation ref="otc.agr.1.haircut.3.operation"/>
+                <valuePercentage ref="otc.agr.1.haircut.3.value.percentage"/>
+            </principalAndCounterpartyHaircutAdjustmentRules>
+            <principalAndCounterpartyHaircutAdjustmentRules>
+                <assetClass>qtp_bond</assetClass>
+                <assetType ref="bond.usd.name"/>
+                <type ref="otc.agr.1.haircut.4.adjust.type"/>
+                <instrumentField ref="otc.agr.1.haircut.4.instrument.filed"/>
+                <rule ref="otc.agr.1.haircut.4.rule"/>
+                <value ref="otc.agr.1.haircut.4.value"/>
+                <operation ref="otc.agr.1.haircut.4.operation"/>
+                <valuePercentage ref="otc.agr.1.haircut.4.value.percentage"/>
+            </principalAndCounterpartyHaircutAdjustmentRules>
+        </agreementSummary>
+
+        <feedAgreement id="feed.otc.net.agreement.haircut.rule.on.bond.usd.edit.rule">
+            <legal_id ref="feed.otc.net.agreement.haircut.rule.on.bond.usd.desc.external.id"/>
+            <asset>
+                <assetName ref="bond.usd.name"/>
+                <settlementDateAbbriviated>T</settlementDateAbbriviated>
+                <applicableParty></applicableParty>
+                <applicableType></applicableType>
+                <haircutAdjustments>
+                    <haircutAdjustment>
+                        <adjustmentType id="otc.agr.2.haircut.1.adjust.type">Override</adjustmentType>
+                        <instrumentField id="otc.agr.2.haircut.1.instrument.filed">InstrumentId</instrumentField>
+                        <rule id="otc.agr.2.haircut.1.rule">Equal</rule>
+                        <value id="otc.agr.2.haircut.1.value">qtp-Bond-Usd-Instrument1(qtp_Market)</value>
+                        <valuePercentage id="otc.agr.2.haircut.1.value.percentage">81</valuePercentage>
+                    </haircutAdjustment>
+                    <haircutAdjustment>
+                        <adjustmentType id="otc.agr.2.haircut.2.adjust.type">Override</adjustmentType>
+                        <instrumentField id="otc.agr.2.haircut.2.instrument.filed">InstrumentId</instrumentField>
+                        <rule id="otc.agr.2.haircut.2.rule">NotEqual</rule>
+                        <value id="otc.agr.2.haircut.2.value">qtp_Bond_Instrument(qtp_Market), qtp-Bond-Usd-Instrument1(qtp_Market), </value>
+                        <valuePercentage id="otc.agr.2.haircut.2.value.percentage">82</valuePercentage>
+                    </haircutAdjustment>
+                    <haircutAdjustment>
+                        <adjustmentType id="otc.agr.2.haircut.3.adjust.type">Override</adjustmentType>
+                        <instrumentField id="otc.agr.2.haircut.3.instrument.filed">Currency</instrumentField>
+                        <rule id="otc.agr.2.haircut.3.rule">Equal</rule>
+                        <value id="otc.agr.2.haircut.3.value">USD</value>
+                        <valuePercentage id="otc.agr.2.haircut.3.value.percentage">91</valuePercentage>
+                    </haircutAdjustment>
+                    <haircutAdjustment>
+                        <adjustmentType id="otc.agr.2.haircut.4.adjust.type">Override</adjustmentType>
+                        <instrumentField id="otc.agr.2.haircut.4.instrument.filed">Currency</instrumentField>
+                        <rule id="otc.agr.2.haircut.4.rule">Equal</rule>
+                        <value id="otc.agr.2.haircut.4.value">Principal Transfer Currency, Counterparty Transfer Currency, USD, GBP, </value>
+                        <valuePercentage id="otc.agr.2.haircut.4.value.percentage">92</valuePercentage>
+                    </haircutAdjustment>
+                </haircutAdjustments>
+            </asset>
+            <applyOrgCL>false</applyOrgCL>
+        </feedAgreement>
+
+        <variable id="file2"/>
+
+        <feedStatus id="feed.otc.net.agreement.haircut.rule.on.bond.usd.edit.rule.status">
+            <status>Successful</status>
+            <valuationFile ref="file2"/>
+            <description>Agreements</description>
+            <successfulFeed>
+                <importType>Agreements</importType>
+                <valuationFile ref="file2"/>
+                <total>1</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <agreementSummary id="otc.net.agreement.haircut.rule.on.bond.usd.edit.rule.summary">
+            <principalAndCounterpartyHaircutAdjustmentRules>
+                <assetClass>qtp_bond</assetClass>
+                <assetType ref="bond.usd.name"/>
+                <type ref="otc.agr.2.haircut.1.adjust.type"/>
+                <instrumentField ref="otc.agr.2.haircut.1.instrument.filed"/>
+                <rule ref="otc.agr.2.haircut.1.rule"/>
+                <value ref="otc.agr.2.haircut.1.value"/>
+                <valuePercentage ref="otc.agr.2.haircut.1.value.percentage"/>
+            </principalAndCounterpartyHaircutAdjustmentRules>
+            <principalAndCounterpartyHaircutAdjustmentRules>
+                <assetClass>qtp_bond</assetClass>
+                <assetType ref="bond.usd.name"/>
+                <type ref="otc.agr.2.haircut.2.adjust.type"/>
+                <instrumentField ref="otc.agr.2.haircut.2.instrument.filed"/>
+                <rule ref="otc.agr.2.haircut.2.rule"/>
+                <value>qtp_Bond_Instrument(qtp_Market),qtp-Bond-Usd-Instrument1(qtp_Market)</value>
+                <valuePercentage ref="otc.agr.2.haircut.2.value.percentage"/>
+            </principalAndCounterpartyHaircutAdjustmentRules>
+            <principalAndCounterpartyHaircutAdjustmentRules>
+                <assetClass>qtp_bond</assetClass>
+                <assetType ref="bond.usd.name"/>
+                <type ref="otc.agr.2.haircut.3.adjust.type"/>
+                <instrumentField ref="otc.agr.2.haircut.3.instrument.filed"/>
+                <rule ref="otc.agr.2.haircut.3.rule"/>
+                <value ref="otc.agr.2.haircut.3.value"/>
+                <valuePercentage ref="otc.agr.2.haircut.3.value.percentage"/>
+            </principalAndCounterpartyHaircutAdjustmentRules>
+            <principalAndCounterpartyHaircutAdjustmentRules>
+                <assetClass>qtp_bond</assetClass>
+                <assetType ref="bond.usd.name"/>
+                <type ref="otc.agr.2.haircut.4.adjust.type"/>
+                <instrumentField ref="otc.agr.2.haircut.4.instrument.filed"/>
+                <rule ref="otc.agr.2.haircut.4.rule"/>
+                <value>Principal Transfer Currency,Counterparty Transfer Currency,USD,GBP</value>
+                <valuePercentage ref="otc.agr.2.haircut.4.value.percentage"/>
+            </principalAndCounterpartyHaircutAdjustmentRules>
+        </agreementSummary>
+
+        <agreement id="otc.net.agreement.complete"/>
+
+    </scenarioData>
+</dataBean>

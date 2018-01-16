@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+
+        <feedAssetRating id="feed.asset.rating">
+            <EXTISIN></EXTISIN>
+            <MARKET></MARKET>
+            <RATING1></RATING1>
+            <RATING2></RATING2>
+            <RATING3></RATING3>
+            <RATING4></RATING4>
+            <RATING5></RATING5>
+            <RATING6></RATING6>
+        </feedAssetRating>
+
+        <feedAssetRating id="feed.modified.correct.staging.report">
+            <rowNumber>2</rowNumber>
+            <failureReason ref="failure.reason"/>
+            <EXTISIN>F13658InsForAssetRating</EXTISIN>
+            <MARKET>qtp_Market</MARKET>
+            <RATING1>A+</RATING1>
+            <RATING2>Aaa</RATING2>
+            <RATING3>AAA</RATING3>
+            <RATING4></RATING4>
+            <RATING5></RATING5>
+            <RATING6></RATING6>
+        </feedAssetRating>
+
+        <feedResult id="feed.result.successful">
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedResult id="feed.asset.rating.parsing">
+            <parsingFailures>1</parsingFailures>
+        </feedResult>
+
+        <badStagingFeedReportFilter id="search.by.feed.asset.ratings">
+            <feedTask>Feed Asset Ratings</feedTask>
+        </badStagingFeedReportFilter>
+
+        <variable id="badStagingFeedReportPath"/>
+
+        <reportValidationRules id="reportRule">
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field><fieldName>Row number</fieldName><value>2</value></field>
+                <field><fieldName>Failure reason</fieldName><value id="failure.reason">[Column: 1] EXTISIN : Field is compulsory but no value was found</value></field>
+                <field><fieldName>EXTISIN</fieldName><value></value></field>
+                <field><fieldName>MARKET</fieldName><value></value></field>
+                <field><fieldName>RATING1</fieldName><value></value></field>
+                <field><fieldName>RATING2</fieldName><value></value></field>
+                <field><fieldName>RATING3</fieldName><value></value></field>
+                <field><fieldName>RATING4</fieldName><value></value></field>
+                <field><fieldName>RATING5</fieldName><value></value></field>
+                <field><fieldName>RATING6</fieldName><value></value></field>
+            </reportValidationRule>
+        </reportValidationRules>
+
+        <variable id="file.name"/>
+
+        <securitySearch id="search.ins.F13658InsForAssetRating">
+            <instrument>
+                <filter>F13658InsForAssetRating</filter>
+                <linkText>F13658InsForAssetRating</linkText>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="search.ins.F13658InsForAssetRating.result">
+            <instrument>F13658InsForAssetRating</instrument>
+            <market>sh</market>
+        </securitySearchResult>
+
+        <instrument id="update.to.AAA.Aaa.A+">
+            <instrumentId>F13658InsForAssetRating</instrumentId>
+            <market>qtp_Market</market>
+            <issueRating>
+                <agency>SandP</agency>
+                <rating>AAA</rating>
+            </issueRating>
+            <issueRating>
+                <agency>MOODYS</agency>
+                <rating>Aaa</rating>
+            </issueRating>
+            <issueRating>
+                <agency>Fitch</agency>
+                <rating>A+</rating>
+            </issueRating>
+        </instrument>
+
+    </scenarioData>
+</dataBean>

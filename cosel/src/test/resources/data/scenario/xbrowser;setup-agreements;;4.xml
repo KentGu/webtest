@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/xbrowser.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/1)"/>-->
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <assetBookingSummary id="cashbookingtype1">
+            <assetType ref="cash.usd.name"/>
+        </assetBookingSummary>
+        <assetBookingSummary id="bondbookingtype1">
+            <assetType ref="bond.usd.name" />
+        </assetBookingSummary>
+        <assetBookingSummary id="equitybookingtype1">
+            <assetType ref="equity.usd.name" />
+        </assetBookingSummary>
+        <agreement id="repo.agr1">
+            <principal id="repo_agr1_p1">
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter ref="org.p1.code"/>
+                <linkText ref="org.p1.code"/>
+            </principal>
+            <counterparty id="repo_agr1_c">
+                <criteria>Containing</criteria>
+                <type>Long Name</type>
+                <filter ref="org.c1.code"/>
+                <linkText ref="org.c1.code"/>
+            </counterparty>
+            <businessLine>Repo</businessLine>
+            <agreementDescription random="true"  prefix="repoqtp_"/>
+            <agreementDate>T</agreementDate>
+            <callFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </callFrequency>
+            <holidayCentre ref="hc.europe.name"/>
+            <product>
+                <productName ref="product.pro1.name"/>
+            </product>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="cash.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="bond.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="bond.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="equity.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="equity.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vcr.name"/>
+                    <linkText ref="payInstrBucket.vcr.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vrd.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.pay.name"/>
+                    <linkText ref="payInstrBucket.pay.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.rec.name"/>
+                    <linkText ref="payInstrBucket.rec.name"/>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementStatus>Pending</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <statementStatus>Approved</statementStatus>
+            <agreementId id="repo.agmt.id1"/>
+        </agreement>
+        <agreementExposureSummary id="product3">
+            <productList>
+                <productType ref="product.pro1.name" />
+            </productList>
+        </agreementExposureSummary>
+        <tradeDetail id="repo.trade1">
+            <tradeInformation>
+                <productType ref="product.pro1.name"/>
+                <tradeDate>T</tradeDate>
+                <startDate>T</startDate>
+                <endDate>T+90</endDate>
+                <tradeIdentifierPartyA id="repo.trade.identify" random="true"/>
+                <partyABranchName ref="repo.trade.identify"/>
+                <partyBBranchName ref="repo.trade.identify"/>
+            </tradeInformation>
+            <securityInformation>
+                <instrumentId>
+                    <filter ref="bond.instrument1.name"/>
+                    <linkText ref="bond.instrument1.name"/>
+                </instrumentId>
+                <notional>1m</notional>
+            </securityInformation>
+            <cashInformation>
+                <cashAssetType>
+                    <filter ref="cash.usd.name"/>
+                    <linkText ref="cash.usd.name"/>
+                </cashAssetType>
+                <openCash>1m</openCash>
+                <repoRate>100</repoRate>
+            </cashInformation>
+            <exposureInformation>
+                <principalValuationAmount>
+                    <amount>1m</amount>
+                    <currency>USD</currency>
+                </principalValuationAmount>
+                <valuationDate>T</valuationDate>
+            </exposureInformation>
+            <alertHandling>
+                <!--<content>[/s/S]*</content>-->
+                <accept>true</accept>
+            </alertHandling>
+        </tradeDetail>
+        <bookingDetail id="repo.cashbooking1">
+            <assetType ref="cash.usd.name" />
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <nominalAmount>1m</nominalAmount>
+                    <movement>Delivery</movement>
+                </bookingInformationDetail>
+                <settlementDate>T</settlementDate>
+                <settlementDateAlertHandling>
+                    <accept>true</accept>
+                </settlementDateAlertHandling>
+            </bookingInformation>
+            <save>save</save>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </bookingDetail>
+        <bookingDetail id="repo.bondbooking1">
+            <assetType ref="bond.usd.name" />
+            <instrumentSearch>
+                <assetClass ref="bond.name" />
+                <assetType ref="bond.usd.name" />
+                <instrumentId>
+                    <filter ref="bond.instrument1.name"/>
+                </instrumentId>
+                <linkText ref="bond.instrument1.name" />
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <nominalAmount>1m</nominalAmount>
+                    <movement>Call</movement>
+                </bookingInformationDetail>
+                <settlementDate>T</settlementDate>
+                <settlementDateAlertHandling>
+                    <accept>true</accept>
+                </settlementDateAlertHandling>
+            </bookingInformation>
+            <save>save</save>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </bookingDetail>
+        <bookingDetail id="repo.equitybooking1">
+            <assetType ref="equity.usd.name" />
+            <instrumentSearch>
+                <assetClass ref="equity.name" />
+                <assetType ref="equity.usd.name" />
+                <instrumentId>
+                    <filter ref="equity.instrument1.name"/>
+                </instrumentId>
+                <linkText ref="equity.instrument1.name"/>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <nominalAmount>1m</nominalAmount>
+                    <movement>Delivery</movement>
+                </bookingInformationDetail>
+                <settlementDate>T</settlementDate>
+                <settlementDateAlertHandling>
+                    <accept>true</accept>
+                </settlementDateAlertHandling>
+            </bookingInformation>
+            <save>save</save>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </bookingDetail>
+        <cashMovementDetail id="repo.interest1">
+            <assetClass ref="cash.name"/>
+            <assetType ref="cash.usd.name"/>
+            <bookingType>Net Interest</bookingType>
+            <amount>1000</amount>
+            <movementType>Capitalise pay</movementType>
+            <settlementDate>T</settlementDate>
+        </cashMovementDetail>
+    </scenarioData>
+</dataBean>

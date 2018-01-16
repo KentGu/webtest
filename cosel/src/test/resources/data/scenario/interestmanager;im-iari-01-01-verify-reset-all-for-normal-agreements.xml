@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/interestManager.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <agreement>
+            <principal>
+                <linkText id="agreement.principal" ref="org.p1.lname"/>
+            </principal>
+            <counterparty>
+                <linkText id="agreement.counterparty" ref="org.c1.lname"/>
+            </counterparty>
+            <agreementDescription id="agreement.description">T4533_Agreement_Description</agreementDescription>
+            <agreementName id="agreement.name">T4533_Agreement_Name</agreementName>
+            <externalId id="agreement.external.id">T4533_External_ID</externalId>
+            <agreementId id="agreement.id">2002</agreementId>
+            <collateralAssetClass>
+                <collateralAssetClassName id="agreement.asset.class.name" ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName id="agreement.asset.type.name" ref="cash.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+        </agreement>
+
+        <interestEventSearch id="not.net.interest.event.search">
+            <description>
+                <type>Exactly matching</type>
+                <filter ref="agreement.description"/>
+                <linkText ref="agreement.description"/>
+            </description>
+            <dateRange>
+                <startDate>06/01/2014</startDate>
+                <endDate>06/30/2014</endDate>
+            </dateRange>
+        </interestEventSearch>
+
+        <interestEventDetail id="original.not.net.interest.event" name="check.event">
+            <eventId apply="true"/>
+            <principal ref="agreement.principal"/>
+            <!--<counterparty ref="agreement.counterparty"/>-->
+            <description ref="agreement.description"/>
+            <businessLine>OTC</businessLine>
+            <cashAssetType ref="agreement.asset.type.name"/>
+            <interestRule>First of the Month</interestRule>
+            <startDate>6/1/2014</startDate>
+            <endDate>6/30/2014</endDate>
+        </interestEventDetail>
+
+        <interestEventDetail id="before.email.and.apply.interest.movement.not.net.interest.pay.event" name="check.event">
+            <principal ref="agreement.principal"/>
+            <!--<counterparty ref="agreement.counterparty"/>-->
+            <description ref="agreement.description"/>
+            <businessLine>OTC</businessLine>
+            <cashAssetType ref="agreement.asset.type.name"/>
+            <interestRule>First of the Month</interestRule>
+            <startDate>6/1/2014</startDate>
+            <endDate>6/30/2014</endDate>
+            <calculatedInterestAmount>-6444.5</calculatedInterestAmount>
+            <whtAmount>1611.12</whtAmount>
+            <interestSource>VM Interest</interestSource>
+            <agreedInterestAmount>-6444.5</agreedInterestAmount>
+            <agreedWHTAmount>1611.12</agreedWHTAmount>
+            <deliveryStatus></deliveryStatus>
+            <interestMovementStatus></interestMovementStatus>
+        </interestEventDetail>
+
+        <interestEventDetail id="email.not.net.interest.pay.event" name="check.event">
+            <principal ref="agreement.principal"/>
+            <!--<counterparty ref="agreement.counterparty"/>-->
+            <description ref="agreement.description"/>
+            <businessLine>OTC</businessLine>
+            <cashAssetType ref="agreement.asset.type.name"/>
+            <interestRule>First of the Month</interestRule>
+            <startDate>6/1/2014</startDate>
+            <endDate>6/30/2014</endDate>
+            <deliveryStatus id="email.not.net.interest.pay.event.delivery.status"/>
+        </interestEventDetail>
+
+        <interestEventDetail id="apply.not.net.interest.pay.event" name="check.event">
+            <principal ref="agreement.principal"/>
+            <!--<counterparty ref="agreement.counterparty"/>-->
+            <description ref="agreement.description"/>
+            <businessLine>OTC</businessLine>
+            <cashAssetType ref="agreement.asset.type.name"/>
+            <interestRule>First of the Month</interestRule>
+            <startDate>6/1/2014</startDate>
+            <endDate>6/30/2014</endDate>
+            <interestMovementStatus id="apply.not.net.interest.pay.event.interest.movement.status"/>
+        </interestEventDetail>
+
+        <interestEventDetail id="after.email.and.apply.interest.movement.not.net.interest.pay.event" name="check.event">
+            <principal ref="agreement.principal"/>
+            <!--<counterparty ref="agreement.counterparty"/>-->
+            <description ref="agreement.description"/>
+            <businessLine>OTC</businessLine>
+            <cashAssetType ref="agreement.asset.type.name"/>
+            <interestRule>First of the Month</interestRule>
+            <startDate>6/1/2014</startDate>
+            <endDate>6/30/2014</endDate>
+            <calculatedInterestAmount>-6444.5</calculatedInterestAmount>
+            <whtAmount>1611.12</whtAmount>
+            <interestSource>VM Interest</interestSource>
+            <agreedInterestAmount>-6444.5</agreedInterestAmount>
+            <agreedWHTAmount>1611.12</agreedWHTAmount>
+            <!--<interestMovementStatus ref="apply.not.net.interest.pay.event.interest.movement.status"/>-->
+            <deliveryStatus ref="email.not.net.interest.pay.event.delivery.status"/>
+        </interestEventDetail>
+
+        <interestEventDetail id="before.email.and.apply.interest.movement.not.net.interest.capitalise.receive.event" name="check.event">
+            <principal ref="agreement.principal"/>
+            <!--<counterparty ref="agreement.counterparty"/>-->
+            <description ref="agreement.description"/>
+            <businessLine>OTC</businessLine>
+            <cashAssetType ref="agreement.asset.type.name"/>
+            <interestRule>First of the Month</interestRule>
+            <startDate>6/1/2014</startDate>
+            <endDate>6/30/2014</endDate>
+            <calculatedInterestAmount>12888.99</calculatedInterestAmount>
+            <whtAmount>-3222.25</whtAmount>
+            <interestSource>IM Interest</interestSource>
+            <agreedInterestAmount>12888.99</agreedInterestAmount>
+            <agreedWHTAmount>-3222.25</agreedWHTAmount>
+            <deliveryStatus></deliveryStatus>
+            <interestMovementStatus></interestMovementStatus>
+        </interestEventDetail>
+
+        <interestEventDetail id="email.not.net.interest.capitalise.receive.event" name="check.event">
+            <principal ref="agreement.principal"/>
+            <!--<counterparty ref="agreement.counterparty"/>-->
+            <description ref="agreement.description"/>
+            <businessLine>OTC</businessLine>
+            <cashAssetType ref="agreement.asset.type.name"/>
+            <interestRule>First of the Month</interestRule>
+            <startDate>6/1/2014</startDate>
+            <endDate>6/30/2014</endDate>
+            <deliveryStatus id="email.not.net.interest.capitalise.receive.event.delivery.status"/>
+        </interestEventDetail>
+
+        <interestEventDetail id="apply.not.net.interest.capitalise.receive.event" name="check.event">
+            <principal ref="agreement.principal"/>
+            <!--<counterparty ref="agreement.counterparty"/>-->
+            <description ref="agreement.description"/>
+            <businessLine>OTC</businessLine>
+            <cashAssetType ref="agreement.asset.type.name"/>
+            <interestRule>First of the Month</interestRule>
+            <startDate>6/1/2014</startDate>
+            <endDate>6/30/2014</endDate>
+            <interestMovementStatus id="apply.not.net.interest.capitalise.receive.event.interest.movement.status"/>
+        </interestEventDetail>
+
+        <interestEventDetail id="after.email.and.apply.interest.movement.not.net.interest.capitalise.receive.event" name="check.event">
+            <principal ref="agreement.principal"/>
+            <!--<counterparty ref="agreement.counterparty"/>-->
+            <description ref="agreement.description"/>
+            <businessLine>OTC</businessLine>
+            <cashAssetType ref="agreement.asset.type.name"/>
+            <interestRule>First of the Month</interestRule>
+            <startDate>6/1/2014</startDate>
+            <endDate>6/30/2014</endDate>
+            <calculatedInterestAmount>12888.99</calculatedInterestAmount>
+            <whtAmount>-3222.25</whtAmount>
+            <interestSource>IM Interest</interestSource>
+            <agreedInterestAmount>12888.99</agreedInterestAmount>
+            <agreedWHTAmount>-3222.25</agreedWHTAmount>
+            <!--<interestMovementStatus ref="apply.not.net.interest.capitalise.receive.event.interest.movement.status"/>-->
+            <deliveryStatus ref="email.not.net.interest.capitalise.receive.event.delivery.status"/>
+        </interestEventDetail>
+
+    </scenarioData>
+</dataBean>

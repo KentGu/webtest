@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <administerRole id="audit.administer.role.create">
+            <newRoleName id="audit.role.name" random="true" prefix="role_"/>
+        </administerRole>
+
+        <privileges id="audit.role.privilege.collateral">
+            <privilegeType>Collateral</privilegeType>
+            <rolePrivilege>
+                <roleName ref="audit.role.name"/>
+                <privilege>
+                    <privilegeName>collateral.agreement.approvedisable</privilegeName>
+                    <selected>true</selected>
+                </privilege>
+                <privilege>
+                    <privilegeName>collateral.agreement.assets.autobook.edit</privilegeName>
+                    <selected>true</selected>
+                </privilege>
+            </rolePrivilege>
+        </privileges>
+
+        <privileges id="audit.role.privilege.instrument.data">
+            <privilegeType>Instrument Data</privilegeType>
+            <rolePrivilege>
+                <roleName ref="audit.role.name"/>
+                <privilege>
+                    <privilegeName>instrumentdata.delete</privilegeName>
+                    <selected>true</selected>
+                </privilege>
+            </rolePrivilege>
+        </privileges>
+
+        <privileges id="audit.role.privilege.market.data">
+            <privilegeType>Market Data</privilegeType>
+            <rolePrivilege>
+                <roleName ref="audit.role.name"/>
+                <privilege>
+                    <privilegeName>marketdata.customfields.edit</privilegeName>
+                    <selected>true</selected>
+                </privilege>
+            </rolePrivilege>
+        </privileges>
+
+        <privileges id="audit.role.privilege.org">
+            <privilegeType>Organisation</privilegeType>
+            <rolePrivilege>
+                <roleName ref="audit.role.name"/>
+                <privilege>
+                    <privilegeName>organisation.feed</privilegeName>
+                    <selected>true</selected>
+                </privilege>
+            </rolePrivilege>
+        </privileges>
+
+        <privileges id="audit.role.privilege.reconciliation">
+            <privilegeType>Reconciliation</privilegeType>
+            <rolePrivilege>
+                <roleName ref="audit.role.name"/>
+                <privilege>
+                    <privilegeName>reconciliation.view</privilegeName>
+                    <selected>true</selected>
+                </privilege>
+            </rolePrivilege>
+        </privileges>
+
+        <privileges id="audit.role.privilege.report">
+            <privilegeType>Reports</privilegeType>
+            <rolePrivilege>
+                <roleName ref="audit.role.name"/>
+                <privilege>
+                    <privilegeName>reports.run</privilegeName>
+                    <selected>true</selected>
+                </privilege>
+            </rolePrivilege>
+        </privileges>
+
+        <privileges id="audit.role.privilege.static.data">
+            <privilegeType>Static Data</privilegeType>
+            <rolePrivilege>
+                <roleName ref="audit.role.name"/>
+                <privilege>
+                    <privilegeName>staticdata.holiday.edit</privilegeName>
+                    <selected>true</selected>
+                </privilege>
+            </rolePrivilege>
+        </privileges>
+
+        <privileges id="audit.role.privilege.reform">
+            <privilegeType>Reform</privilegeType>
+            <rolePrivilege>
+                <roleName ref="audit.role.name"/>
+                <privilege>
+                    <privilegeName>reform.assets.warningoverride</privilegeName>
+                    <selected>true</selected>
+                </privilege>
+            </rolePrivilege>
+        </privileges>
+
+        <privileges id="audit.role.privilege.systemadmin">
+            <privilegeType>System Admin</privilegeType>
+            <rolePrivilege>
+                <roleName ref="audit.role.name"/>
+                <privilege>
+                    <privilegeName>sysadmin.businessfrequence.edit</privilegeName>
+                    <selected>true</selected>
+                </privilege>
+            </rolePrivilege>
+        </privileges>
+
+        <privileges id="audit.role.privilege.self.service">
+            <privilegeType>Self Service</privilegeType>
+            <rolePrivilege>
+                <roleName ref="audit.role.name"/>
+                <privilege>
+                    <privilegeName>selfservice.client.agreements.view</privilegeName>
+                    <selected>true</selected>
+                </privilege>
+            </rolePrivilege>
+        </privileges>
+
+        <privileges id="audit.role.privilege.opt">
+            <privilegeType>Optimisation</privilegeType>
+            <rolePrivilege>
+                <roleName ref="audit.role.name"/>
+                <privilege>
+                    <privilegeName>optimization.rulestemplate.view</privilegeName>
+                    <selected>true</selected>
+                </privilege>
+            </rolePrivilege>
+        </privileges>
+
+        <auditRolesAdministrationReportFilter id="audit.role.administer.by.rolename">
+            <role ref="audit.role.name"/>
+            <startDate>t-1000</startDate>
+        </auditRolesAdministrationReportFilter>
+        <variable id="auditReportPath"/>
+        <reportValidationRules id="audit.role.administer.report.rule">
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Role</fieldName>
+                    <value ref="audit.role.name"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Privilege</fieldName>
+                    <value>collateral.agreement.assets.autobook.edit</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Role</fieldName>
+                    <value ref="audit.role.name"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Privilege</fieldName>
+                    <value>collateral.agreement.approvedisable</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Role</fieldName>
+                    <value ref="audit.role.name"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Privilege</fieldName>
+                    <value>instrumentdata.delete</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Role</fieldName>
+                    <value ref="audit.role.name"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Privilege</fieldName>
+                    <value>sysadmin.businessfrequence.edit</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Role</fieldName>
+                    <value ref="audit.role.name"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Privilege</fieldName>
+                    <value>marketdata.customfields.edit</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Role</fieldName>
+                    <value ref="audit.role.name"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Privilege</fieldName>
+                    <value>organisation.feed</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Role</fieldName>
+                    <value ref="audit.role.name"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Privilege</fieldName>
+                    <value>reconciliation.view</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Role</fieldName>
+                    <value ref="audit.role.name"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Privilege</fieldName>
+                    <value>reports.run</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Role</fieldName>
+                    <value ref="audit.role.name"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Privilege</fieldName>
+                    <value>staticdata.holiday.edit</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Role</fieldName>
+                    <value ref="audit.role.name"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Privilege</fieldName>
+                    <value>reform.assets.warningoverride</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Role</fieldName>
+                    <value ref="audit.role.name"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Privilege</fieldName>
+                    <value>selfservice.client.agreements.view</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Role</fieldName>
+                    <value ref="audit.role.name"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Privilege</fieldName>
+                    <value>optimization.rulestemplate.view</value>
+                </field>
+            </reportValidationRule>
+
+        </reportValidationRules>
+    </scenarioData>
+</dataBean>

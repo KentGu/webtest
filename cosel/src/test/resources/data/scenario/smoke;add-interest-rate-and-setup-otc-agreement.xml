@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xsi:noNamespaceSchemaLocation="http://artifactory.london.lombardrisk.com:8081/artifactory/libs-snapshot-local/com/lombardrisk/cobiz/1.0.0-SNAPSHOT/cobiz-1.0.0-SNAPSHOT.jar!/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../scenario/smoke;otc-organisation.xml" xpointer="element(/1/1)"/>-->
+    <!--<xi:include href="../scenario/smoke;otc-organisation-branch.xml" xpointer="element(/1/1)"/>-->
+    <xi:include href="../feature/smoke.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+
+<scenarioData>
+    <!--<interestRate>-->
+        <!--<interestRateName>SmokeInterestRate</interestRateName>-->
+        <!--<description>SmokeInterestRate</description>-->
+        <!--<refixFrequency>Daily</refixFrequency>-->
+        <!--<status>enabled</status>-->
+        <!--<type>Interest</type>-->
+    <!--</interestRate>-->
+    <agreement id="SmokeAgreement001">
+        <principal>
+            <criteria>Containing</criteria>
+            <type>Code</type>
+            <filter>1224-1</filter>
+            <linkText>1224-1</linkText>
+        </principal>
+        <counterparty>
+            <criteria>Containing</criteria>
+            <type>Long Name</type>
+            <filter>1224-2</filter>
+            <linkText>1224-2</linkText>
+        </counterparty>
+        <agreementDescription>SmokeOTCagr1Desc</agreementDescription>
+        <agreementName random="true"/>
+        <externalId random="true"/>
+        <agreementDate>T</agreementDate>
+        <nettingIAandMtM>Net</nettingIAandMtM>
+        <!--<grossCalc>Net</grossCalc>-->
+        <interestCalc>Net</interestCalc>
+        <callFrequency>
+            <legalReviewFrequency>Daily</legalReviewFrequency>
+        </callFrequency>
+        <holidayCentre ref="hc.europe.name"/>
+        <product id="pro1">
+            <productName ref="product.test1.name"/>
+        </product>
+            <!--<interest>true</interest>-->
+            <!--<interestCalculationsMethod>Simple</interestCalculationsMethod>-->
+            <!--<calculationRule>First of the Month</calculationRule>-->
+            <!--<payMethod>Physical Payment</payMethod>-->
+            <!--<receiveMethod>Capitalise</receiveMethod>-->
+            <!--<interestSettlementDate>T+2</interestSettlementDate>-->
+        <collateralAssetClass>
+            <collateralAssetClassName>Cash</collateralAssetClassName>
+            <collateralAssetType>
+                <collateralAssetTypeName>Cash-USD</collateralAssetTypeName>
+            </collateralAssetType>
+        </collateralAssetClass>
+        <collateralAssetClass>
+            <collateralAssetClassName>Bonds</collateralAssetClassName>
+            <collateralAssetType>
+                <collateralAssetTypeName>BOND-USD</collateralAssetTypeName>
+            </collateralAssetType>
+        </collateralAssetClass>
+        <collateralAssetClass>
+            <collateralAssetClassName>Equities</collateralAssetClassName>
+            <collateralAssetType>
+                <collateralAssetTypeName>Equity-GBP</collateralAssetTypeName>
+            </collateralAssetType>
+        </collateralAssetClass>
+        <settlementBucket>
+            <bookingType>Net</bookingType>
+            <direction>Call/Return</direction>
+            <bucket>
+                <filter ref="payInstrBucket.vcr.name"/>
+                <linkText ref="payInstrBucket.vcr.name"/>
+            </bucket>
+        </settlementBucket>
+        <settlementBucket>
+            <bookingType>Net</bookingType>
+            <direction>Delivery/Recall</direction>
+            <bucket>
+                <filter ref="payInstrBucket.vrd.name"/>
+                <linkText ref="payInstrBucket.vrd.name"/>
+            </bucket>
+        </settlementBucket>
+        <settlementBucket>
+            <bookingType>Interest</bookingType>
+            <direction>Pay</direction>
+            <bucket>
+                <filter ref="payInstrBucket.pay.name"/>
+                <linkText ref="payInstrBucket.pay.name"/>
+            </bucket>
+        </settlementBucket>
+        <settlementBucket>
+            <bookingType>Interest</bookingType>
+            <direction>Receive</direction>
+            <bucket>
+                <filter ref="payInstrBucket.rec.name"/>
+                <linkText ref="payInstrBucket.rec.name"/>
+            </bucket>
+        </settlementBucket>
+        <letterAndDeliveryGroupDetails>
+            <letterDistributionMedium>Email</letterDistributionMedium>
+        </letterAndDeliveryGroupDetails>
+        <agreementStatus>Pending</agreementStatus>
+        <agreementStatus>Approved</agreementStatus>
+        <statementStatus>Pending</statementStatus>
+        <statementStatus>Approved</statementStatus>
+        <agreementId id="smoke.otc.agr1id"/>
+    </agreement>
+    </scenarioData>
+    </dataBean>

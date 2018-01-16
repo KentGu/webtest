@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/feeds.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <feedSecurityTemplate id="feed.security.template.qtp.bond.usd">
+            <DRIF>2005-11-14</DRIF>
+            <ASSET_CLASS id="feed.security.template.qtp.bond.usd.asset.class" ref="bond.name"/>
+            <ASSET_TYPE id="feed.security.template.qtp.bond.usd.asset.type" ref="bond.usd.name"/>
+            <ISSUER id="feed.security.template.qtp.bond.usd.issuer" ref="org.issuer1.lname"/>
+            <MATY>2099-01-01</MATY>
+            <CCY id="feed.security.template.qtp.bond.usd.ccy" ref="ccy.usd.name"/>
+            <EXTISIN id="feed.security.template.qtp.bond.usd.instrument.id">T5668_QTP_BOND_USD_Instrument1_XML</EXTISIN>
+            <EXTISIN_TYPE id="feed.security.template.qtp.bond.usd.instrument.id.type">CUSIP</EXTISIN_TYPE>
+            <INSTRUMENT ref="feed.security.template.qtp.bond.usd.instrument.id"/>
+            <MARKET id="feed.security.template.qtp.bond.usd.market">automation</MARKET>
+            <COUNTRY_OF_ISSUE id="feed.security.template.qtp.bond.usd.country.of.issue">EU</COUNTRY_OF_ISSUE>
+            <assetClassification>
+                <assetClassificationName id="feed.security.template.qtp.bond.usd.asset.classification.name">T5668AssetClassification</assetClassificationName>
+                <assetCategory id="feed.security.template.qtp.bond.usd.asset.category">T5668_QTP</assetCategory>
+            </assetClassification>
+            <PRICE_SOURCE id="feed.security.template.qtp.bond.usd.price.source.name">Default</PRICE_SOURCE>
+            <EV_PRICE id="feed.security.template.qtp.bond.usd.clean.price">6</EV_PRICE>
+            <PRICE_LEVEL>Ofer</PRICE_LEVEL>
+            <UND_COUPON id="feed.security.template.qtp.bond.usd.coupon.rate">1</UND_COUPON>
+            <FREQUENCY>Annually</FREQUENCY>
+            <ACCRUAL_BASIS>ISMA-30/360 NONEOM</ACCRUAL_BASIS>
+            <NEXT_COUPON_DATE>2099-01-01</NEXT_COUPON_DATE>
+            <ACC_DDAT id="feed.security.template.qtp.bond.usd.coupon.accrual">2</ACC_DDAT>
+            <LAST_COUPON_DATE>2012-02-31</LAST_COUPON_DATE>
+            <INFLAT_RATIO id="feed.security.template.qtp.bond.usd.factor">3</INFLAT_RATIO>
+            <PRICE_FACTOR id="feed.security.template.qtp.bond.usd.price.factor">abc</PRICE_FACTOR>
+            <RECORD_DATE>2012-01-01</RECORD_DATE>
+            <ISSUE_DATE>2029-06-28</ISSUE_DATE>
+            <EX_DIV_DATE>2012-01-01</EX_DIV_DATE>
+            <rating>
+                <ratingName>RATING1</ratingName>
+                <ratingValue id="feed.security.template.qtp.bond.usd.rating1">A+</ratingValue>
+            </rating>
+            <rating>
+                <ratingName>RATING2</ratingName>
+                <ratingValue id="feed.security.template.qtp.bond.usd.rating2">Aa1</ratingValue>
+            </rating>
+            <rating>
+                <ratingName>RATING3</ratingName>
+                <ratingValue id="feed.security.template.qtp.bond.usd.rating3">A</ratingValue>
+            </rating>
+            <finra4210MinHaircut id="feed.security.template.qtp.bond.usd.fin.min.haircut">-5</finra4210MinHaircut>
+            <OUTSTANDING_ISSUANCE id="feed.security.template.qtp.bond.usd.outstanding.issuance">2</OUTSTANDING_ISSUANCE>
+            <NOTATION id="feed.security.template.qtp.bond.usd.notation">notation</NOTATION>
+            <MININUM_TRADABLE_AMNT id="feed.security.template.qtp.bond.usd.min.trade.amnt">5000</MININUM_TRADABLE_AMNT>
+            <MULTIPLE_TRADABLE_AMNT id="feed.security.template.qtp.bond.usd.multiple.trade.amnt">10000</MULTIPLE_TRADABLE_AMNT>
+            <PD id="feed.security.template.qtp.bond.usd.pd">2</PD>
+            <TRADED_INTEREST id="feed.security.template.qtp.bond.usd.trade.interest">1</TRADED_INTEREST>
+            <ADDITIONALINFO1 id="feed.security.template.qtp.bond.usd.add.info1">info1</ADDITIONALINFO1>
+            <ADDITIONALINFO2 id="feed.security.template.qtp.bond.usd.add.info2">info2</ADDITIONALINFO2>
+            <ADDITIONALINFO3 id="feed.security.template.qtp.bond.usd.add.info3">info3</ADDITIONALINFO3>
+            <ADDITIONALINFO4 id="feed.security.template.qtp.bond.usd.add.info4">info4</ADDITIONALINFO4>
+            <multipleId>
+                <idType id="feed.security.template.qtp.bond.usd.instrument.id.type.multi.1">ISIN</idType>
+                <idValue id="feed.security.template.qtp.bond.usd.instrument.id.multi.1">T5668_QTP_BOND_USD_Instrument1_XML_ISIN</idValue>
+            </multipleId>
+            <INUSE>true</INUSE>
+        </feedSecurityTemplate>
+
+        <feedResult id="feed.security.template.qtp.bond.usd.result">
+            <fileUploaded id="feed.security.template.qtp.bond.usd.result.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedStatus id="feed.security.template.qtp.bond.usd.status">
+            <status>Successful</status>
+            <valuationFile ref="feed.security.template.qtp.bond.usd.result.file"/>
+            <description>Security Template</description>
+            <successfulFeed apply="true">
+                <total>1</total>
+                <entry>
+                    <content>Last Coupon Date is not updated as the fed value is invalid</content>
+                    <content>Price Level is not updated as the fed value is invalid</content>
+                    <content>Price Factor is not updated as the fed value is invalid</content>
+                    <content>finra4210MinHaircut is invalid</content>
+                </entry>
+            </successfulFeed>
+        </feedStatus>
+
+        <securitySearch id="feed.security.template.qtp.bond.usd.search">
+            <instrumentId>
+                <filter ref="feed.security.template.qtp.bond.usd.instrument.id"/>
+            </instrumentId>
+        </securitySearch>
+
+        <securitySearchResult id="feed.security.template.qtp.bond.usd.search.result">
+            <assetClass ref="feed.security.template.qtp.bond.usd.asset.class"/>
+            <assetType ref="feed.security.template.qtp.bond.usd.asset.type"/>
+            <market ref="feed.security.template.qtp.bond.usd.market"/>
+            <instrument ref="feed.security.template.qtp.bond.usd.instrument.id"/>
+            <currency ref="feed.security.template.qtp.bond.usd.ccy"/>
+            <issuer ref="feed.security.template.qtp.bond.usd.issuer"/>
+            <description ref="feed.security.template.qtp.bond.usd.instrument.id"/>
+            <use>true</use>
+        </securitySearchResult>
+
+        <instrument id="check.feed.security.template.qtp.bond.usd">
+            <assetClass ref="feed.security.template.qtp.bond.usd.asset.class"/>
+            <assetType ref="feed.security.template.qtp.bond.usd.asset.type"/>
+            <assetClassification>
+                <assetClassificationName ref="feed.security.template.qtp.bond.usd.asset.classification.name"/>
+                <assetcategory ref="feed.security.template.qtp.bond.usd.asset.category"/>
+            </assetClassification>
+            <instrumentId>
+                <type>CUSIP</type>
+                <value ref="feed.security.template.qtp.bond.usd.instrument.id"/>
+            </instrumentId>
+            <instrumentId>
+                <type>ISIN</type>
+                <value ref="feed.security.template.qtp.bond.usd.instrument.id.multi.1"/>
+            </instrumentId>
+            <market ref="feed.security.template.qtp.bond.usd.market"/>
+            <maturityDate>1/1/2099</maturityDate>
+            <description ref="feed.security.template.qtp.bond.usd.instrument.id"/>
+            <issuer>
+                <linkText ref="feed.security.template.qtp.bond.usd.issuer"/>
+            </issuer>
+            <currencyOfDenomination ref="feed.security.template.qtp.bond.usd.ccy"/>
+            <countryOfIssue ref="ctr.eu.desc"/>
+            <priceSource>
+                <priceSourceName ref="feed.security.template.qtp.bond.usd.price.source.name"/>
+                <cleanPrice ref="feed.security.template.qtp.bond.usd.clean.price"/>
+                <dirtyPrice>96</dirtyPrice>
+                <!--<priceLevel>Mid</priceLevel>-->
+                <priceDate>11/14/2005</priceDate>
+            </priceSource>
+            <couponRate ref="feed.security.template.qtp.bond.usd.coupon.rate"/>
+            <couponFrequency>Annually</couponFrequency>
+            <accrualBasis>ISMA-30/360 NONEOM</accrualBasis>
+            <nextCouponDate>1/1/2099</nextCouponDate>
+            <couponAccrual ref="feed.security.template.qtp.bond.usd.coupon.accrual"/>
+            <factor ref="feed.security.template.qtp.bond.usd.factor"/>
+            <!--<priceFactor ref="feed.security.template.qtp.bond.usd.price.factor"/>-->
+            <probabilityofDefault ref="feed.security.template.qtp.bond.usd.pd"/>
+            <recordDate>1/1/2012</recordDate>
+            <issueDate>6/28/2029</issueDate>
+            <exDivDate>1/1/2012</exDivDate>
+            <!--<finra4210MinHaircut ref="feed.security.template.qtp.bond.usd.fin.min.haircut"/>-->
+            <issueRating>
+                <agency ref="org.rating.agency.sandp.name"/>
+                <rating ref="feed.security.template.qtp.bond.usd.rating3"/>
+            </issueRating>
+            <issueRating>
+                <agency ref="org.rating.agency.moodys.name"/>
+                <rating ref="feed.security.template.qtp.bond.usd.rating2"/>
+            </issueRating>
+            <issueRating>
+                <agency ref="org.rating.agency.fitch.name"/>
+                <rating ref="feed.security.template.qtp.bond.usd.rating1"/>
+            </issueRating>
+            <additionalInfo1 ref="feed.security.template.qtp.bond.usd.add.info1"/>
+            <additionalInfo2 ref="feed.security.template.qtp.bond.usd.add.info2"/>
+            <additionalInfo3 ref="feed.security.template.qtp.bond.usd.add.info3"/>
+            <additionalInfo4 ref="feed.security.template.qtp.bond.usd.add.info4"/>
+            <minimumTradableAmount ref="feed.security.template.qtp.bond.usd.min.trade.amnt"/>
+            <multipleTradableAmount ref="feed.security.template.qtp.bond.usd.multiple.trade.amnt"/>
+            <notation ref="feed.security.template.qtp.bond.usd.notation"/>
+            <tradedInterest ref="feed.security.template.qtp.bond.usd.trade.interest"/>
+            <outstandingIssuance ref="feed.security.template.qtp.bond.usd.outstanding.issuance"/>
+        </instrument>
+    </scenarioData>
+</dataBean>

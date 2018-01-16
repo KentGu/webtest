@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/taskScheduler.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <agreement>
+            <agreementDescription id="agreement.repo.description">T5185_Repo_Agreement</agreementDescription>
+            <externalId id="agreement.repo.external.id">T5185_Repo_Agreement_External_ID</externalId>
+            <agreementId id="agreement.repo.agreement.id">531</agreementId>
+        </agreement>
+
+        <feedNAV id="feed.nav.repo.agreement">
+            <agreementId ref="agreement.repo.agreement.id"/>
+            <legal_id ref="agreement.repo.external.id"/>
+            <principalNAV id="feed.nav.repo.agreement.principal.nav">888</principalNAV>
+            <principalCCy id="feed.nav.repo.agreement.principal.ccy" ref="ccy.usd.name"/>
+            <cptyNAV id="feed.nav.repo.agreement.cpty.nav">777</cptyNAV>
+            <cptyCCy id="feed.nav.repo.agreement.cpty.ccy" ref="ccy.gbp.name"/>
+        </feedNAV>
+
+        <feedStatus id="feed.nav.repo.agreement.status">
+            <status>Successful</status>
+            <description>NAV</description>
+            <valuationFile ref="file.path"/>
+            <successfulFeed>
+                <total>1</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <agreementSearch id="feed.nav.repo.agreement.search">
+            <systemId ref="agreement.repo.agreement.id"/>
+            <externalId>
+                <filter ref="agreement.repo.external.id"/>
+                <linkText ref="agreement.repo.external.id"/>
+            </externalId>
+            <description>
+                <filter ref="agreement.repo.description"/>
+                <linkText ref="agreement.repo.description"/>
+            </description>
+        </agreementSearch>
+
+        <agreementSearchResult id="feed.nav.repo.agreement.search.result">
+            <agreementId ref="agreement.repo.agreement.id"/>
+            <description ref="agreement.repo.description"/>
+            <!--<externalId ref="agreement.repo.external.id"/>-->
+        </agreementSearchResult>
+
+        <agreementSummary id="check.feed.nav.repo.agreement">
+            <documentationDetails>
+                <principalNAV>888.00 USD</principalNAV>
+                <counterpartyNAV>777.00 GBP</counterpartyNAV>
+            </documentationDetails>
+        </agreementSummary>
+
+        <taskSchedulerDetail id="task.feed.nav">
+            <type>Task Manager</type>
+            <taskName>Import NAV</taskName>
+            <additionalInfo id="task.feed.agreement.server.path">/home/ec2-user/Feed/FeedNAV</additionalInfo>
+        </taskSchedulerDetail>
+
+        <variable id="file.path"/>
+
+        <taskSchedulerMessage id="task.feed.nav.message">
+            <message>Import NAV: Imported 1 NAV from :(\S+).(\S+)</message>
+        </taskSchedulerMessage>
+    </scenarioData>
+</dataBean>

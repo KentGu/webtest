@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <interestRate id="interest.rate.create">
+            <interestRateName id="audit.interest.rate.create" random="true" prefix="interest.rate"/>
+            <description ref="audit.interest.rate.create"/>
+            <refixFrequency>Daily</refixFrequency>
+            <status>enabled</status>
+            <type>Interest</type>
+            <dailyInterestRate>
+                <date>05/10/2016</date>
+                <rate>10</rate>
+            </dailyInterestRate>
+            <dailyInterestRate>
+                <date>05/11/2016</date>
+                <rate>20</rate>
+            </dailyInterestRate>
+            <dailyInterestRate>
+                <date>05/9/2016</date>
+                <rate>30</rate>
+            </dailyInterestRate>
+        </interestRate>
+
+
+        <auditInterestRatesReportFilter id="audit.interests.rates.by.name">
+            <rateName ref="audit.interest.rate.create"/>
+            <startDate>t-1000</startDate>
+        </auditInterestRatesReportFilter>
+        <variable id="auditReportPath"/>
+        <reportValidationRules id="audit.interest.report.rule">
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Interest Rate</fieldName>
+                    <value ref="audit.interest.rate.create"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Description</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value ref="audit.interest.rate.create"/>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Interest Rate</fieldName>
+                    <value ref="audit.interest.rate.create"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>RateName</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value ref="audit.interest.rate.create"/>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Interest Rate</fieldName>
+                    <value ref="audit.interest.rate.create"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>RateType</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>Interest</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Interest Rate</fieldName>
+                    <value ref="audit.interest.rate.create"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>RefixFreq</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>Daily</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Interest Rate</fieldName>
+                    <value ref="audit.interest.rate.create"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Status</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>enabled</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Interest Rate</fieldName>
+                    <value ref="audit.interest.rate.create"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Rate</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>10.0</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Interest Rate</fieldName>
+                    <value ref="audit.interest.rate.create"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Rate</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>20.0</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Interest Rate</fieldName>
+                    <value ref="audit.interest.rate.create"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Rate</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>30.0</value>
+                </field>
+            </reportValidationRule>
+
+        </reportValidationRules>
+    </scenarioData>
+</dataBean>

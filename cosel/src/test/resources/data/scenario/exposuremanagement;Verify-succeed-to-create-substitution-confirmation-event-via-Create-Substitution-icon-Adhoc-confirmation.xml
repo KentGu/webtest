@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <securitySearch id="26494.bond.usd">
+            <matured>All</matured>
+            <instrument>
+                <filter id="26494.bond.usd.id">26494_bond_usd_1</filter>
+                <!--<linkText ref="26527.bond.usd"/>-->
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="26494.bond.usd.approve">
+            <instrument ref="26494.bond.usd.id"/>
+        </securitySearchResult>
+
+        <instrument id="26494.bond.usd.changeRecordDate.tPlus8">
+            <recordDate>t+8</recordDate>
+        </instrument>
+
+        <securitySearch id="26494.equity.usd">
+            <matured>All</matured>
+            <instrument>
+                <filter id="26494.equity.usd.id">26494_equity_usd_1</filter>
+                <!--<linkText ref="29482.equity.usd.id"/>-->
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="26494.equity.usd.approve">
+            <instrument ref="26494.equity.usd.id"/>
+        </securitySearchResult>
+
+        <instrument id="26494.equity.usd.changeRecordDate.tPlus7">
+            <recordDate>t+7</recordDate>
+        </instrument>
+
+        <eligibilityRulesTemplateSearch id="ERT.26494">
+            <eligibilityRulesTemplateName>
+                <filter id="ERT.26494">26494_EL</filter>
+                <linkText ref="ERT.26494"/>
+            </eligibilityRulesTemplateName>
+        </eligibilityRulesTemplateSearch>
+
+        <eligibilityRulesTemplate id="ERT.cash.usd.Select">
+            <templateName ref="ERT.26494"/>
+            <collateralAssetClass name="qtp_cash">
+                <collateralAssetClassName>qtp_cash</collateralAssetClassName>
+                <collateralAssetType name="CASH-USD">
+                    <collateralAssetTypeName>CASH-USD</collateralAssetTypeName>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </eligibilityRulesTemplate>
+
+        <eligibilityRulesTemplate id="ERT.cash.usd.notSelect">
+            <collateralAssetClass name="qtp_cash">
+                <collateralAssetClassName>qtp_cash</collateralAssetClassName>
+                <collateralAssetType name="CASH-USD" remove="true">
+                    <collateralAssetTypeName>CASH-USD</collateralAssetTypeName>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </eligibilityRulesTemplate>
+
+
+        <eligibilityRulesTemplate id="ERT.26494.approve">
+            <templateName ref="ERT.26494"/>
+        </eligibilityRulesTemplate>
+
+        <agreement id="agr26494">
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Approved</statementStatus>
+         </agreement>
+
+        <substitutionEventSearch id="agr26494.return">
+            <agreementId ref="agrid"/>
+            <substitution>Return</substitution>
+        </substitutionEventSearch>
+
+        <substitutionEventDetail id="equity.usd.notional.2m">
+            <instrumentId>26494_equity_usd_1,m1</instrumentId>
+            <assetHoldingsNotional>2,000,000.00</assetHoldingsNotional>
+        </substitutionEventDetail>
+
+        <substitutionEventDetail id="bond.usd.notional.1.5m">
+            <instrumentId>26494_bond_usd_1,m1</instrumentId>
+            <assetHoldingsNotional>1,500,000.00</assetHoldingsNotional>
+        </substitutionEventDetail>
+
+        <substitutionEventDetail id="cash.usd.notional.3.5m">
+            <instrumentId>CASH-USD</instrumentId>
+            <assetHoldingsNotional>3,500,000.00</assetHoldingsNotional>
+        </substitutionEventDetail>
+
+        <agreement id="agr26494.otc.net">
+            <agreementId id="agrid">2644</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="source">
+            <column>Source</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="ruleDetail">
+            <column>Rule Detail</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="reasonForSub">
+            <column>Reason for Sub</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="level">
+            <column>Level</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subCon.agreementRequirement.3.5m.cash.usd.reasonForSub.AssetTypeNotEligible">
+            <action>Substitution Confirmation</action>
+            <agreementRequirement>-3,500,000.00</agreementRequirement>
+            <element>CASH-USD</element>
+            <source>System</source>
+            <reasonForSub>Asset Type not eligible</reasonForSub>
+            <ruleDetail>CASH-USD</ruleDetail>
+            <level>Agreement</level>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subCon.agreementRequirement.3.5m.equity.usd.reasonForSub.RecordDatedue">
+            <action>Substitution Confirmation</action>
+            <agreementRequirement>-2,000,000.00</agreementRequirement>
+            <element>26494_equity_usd_1,m1</element>
+            <source>System</source>
+            <reasonForSub>Record Date due</reasonForSub>
+            <ruleDetail></ruleDetail>
+            <level></level>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subCon.agreementRequirement.0m.equity.usd.reasonForSub.null">
+            <action>Substitution Confirmation</action>
+            <agreementRequirement>0.00</agreementRequirement>
+            <element variation="multiple">26494_equity_usd_1,m1</element>
+            <source>Manual</source>
+            <reasonForSub></reasonForSub>
+            <ruleDetail></ruleDetail>
+            <level></level>
+            <eventId id="event"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subCon.agreementRequirement.0m.cash.usd.reasonForSub.null">
+            <element variation="multiple">CASH-USD</element>
+            <eventId ref="event"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subCon.agreementRequirement.0m.bond.usd.reasonForSub.null">
+            <element variation="multiple">26494_bond_usd_1,m1</element>
+            <eventId ref="event"/>
+        </exposureEventDetail>
+
+    </scenarioData>
+</dataBean>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+
+		<agreementSearch id="search.agreement.by.agreement.description">
+			<description>
+				<filter id="agrDesc1">21734_1</filter>
+			</description>
+		</agreementSearch>
+
+		<agreementSearchResult id="agreement.search.result">
+			<description ref="agrDesc1"/>
+		</agreementSearchResult>
+
+		<exposureEventDetail id="allEventForFCM">
+			<expand>true</expand>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="VMCall.net.agreementRequirement.1167180.77">
+			<action>VM Call(Deficit)</action>
+			<agreementRequirement>1,167,180.77</agreementRequirement>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="VMDelivery.m2.agreementRequirement.222468.44">
+			<action>VM Delivery(Excess)</action>
+			<agreementRequirement>-222,468.44</agreementRequirement>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="VMCall.m1.agreementRequirement.1000864.27">
+			<action>VM Call(Deficit)</action>
+			<agreementRequirement>1,000,864.27</agreementRequirement>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="IMDelivery.net.agreementRequirement.375197.85">
+			<action>IM Delivery</action>
+			<agreementRequirement>-375,197.85</agreementRequirement>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="IMRecall.m2.agreementRequirement.624802.15">
+			<action>IM Recall</action>
+			<agreementRequirement>624,802.15</agreementRequirement>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="IMReturn.m2.agreementRequirement.1000000">
+			<action>IM Return</action>
+			<agreementRequirement>-1,000,000.00</agreementRequirement>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="IMNoCall.m1.agreementRequirement.0.00">
+			<action>IM ITM No Calls</action>
+			<agreementRequirement>0.00</agreementRequirement>
+		</exposureEventDetail>
+
+
+
+		<!--<exposureEventDetail id="VMCall.net.CallStatusChangeToMarginRequestIssued.counterpartyAmountChangetoSameAsReqirementAmount">-->
+			<!--<callStatus>Margin Request Issued</callStatus>-->
+			<!--<counterpartyAmount>1,167,180.77</counterpartyAmount>-->
+		<!--</exposureEventDetail>-->
+
+		<exposureEventDetail id="VMDelivery.m2.CallStatusChangeToMarginRequestConfirmed.counterpartyAmountChangetoSameAsReqirementAmount">
+			<callStatus>Margin Request Confirmed</callStatus>
+			<counterpartyAmount>-222,468.44</counterpartyAmount>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="VMCall.m1.CallStatusChangeToMarginRequestIssued.counterpartyAmountChangetoSameAsReqirementAmount">
+			<callStatus>Margin Request Issued</callStatus>
+			<counterpartyAmount>1,000,864.27</counterpartyAmount>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="IMDelivery.net.CallStatusChangeToMarginRequestConfirmed.counterpartyAmountChangetoSameAsReqirementAmount">
+			<callStatus>Margin Request Confirmed</callStatus>
+			<counterpartyAmount>-375,197.85</counterpartyAmount>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="IMRecall.m2.CallStatusChangeToMarginRequestIssued.counterpartyAmountChangetoSameAsReqirementAmount">
+			<callStatus>Margin Request Issued</callStatus>
+			<counterpartyAmount>624,802.15</counterpartyAmount>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="IMReturn.m2.CallStatusChangeToMarginRequestConfirmed.counterpartyAmountChangetoSameAsReqirementAmount">
+			<callStatus>Margin Request Confirmed</callStatus>
+			<counterpartyAmount>-1,000,000.00</counterpartyAmount>
+		</exposureEventDetail>
+
+
+		<bookingDetail id="m1.vmCall.cash.usd.apply.m2.imReturn.cash.usd.apply">
+			<instrumentSearch>
+				<instrument>
+					<filter>CASH-USD</filter>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail clickApplyButton="true">
+					<model>m1</model>
+					<bookingMovement>VM Call(Deficit)</bookingMovement>
+				</bookingInformationDetail>
+				<bookingInformationDetail clickApplyButton="true">
+					<model>m2</model>
+					<bookingMovement>IM Return</bookingMovement>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id=" m2.imRecall.cash.eur.apply">
+			<instrumentSearch>
+				<instrument>
+					<filter>CASH-USD</filter>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail clickApplyButton="true">
+					<model>m2</model>
+					<bookingMovement>IM Recall</bookingMovement>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+
+		<exposureManagementMessage id="warning.message.SomeOfTheMultiModelBookingCannotBeMade">
+			<messageDetail>
+				<type>Warning</type>
+				<message>Some of the multi-model bookings cannot be made. Would you like to proceed with the remaining bookings?</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<exposureManagementMessage id="error.message.CapTSANotCorrect">
+			<messageDetail>
+				<type>Error</type>
+				<message>Unable to make booking as the Cashflow booking is not correct. Please review Cashflow and Exclude Cashflow Collateral, these should be equal.</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+
+
+
+	</scenarioData>
+</dataBean>

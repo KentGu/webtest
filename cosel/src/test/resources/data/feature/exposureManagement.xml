@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <!--<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>-->
+    <featureData>
+        <collateralPreference id="collateral.preference1">
+            <collateralRules>
+                <agreementFourEyes>false</agreementFourEyes>
+                <tradesFourEyes>false</tradesFourEyes>
+                <workflowFourEyes>false</workflowFourEyes>
+                <settlementStatusFourEyes>false</settlementStatusFourEyes>
+                <settlementDataFourEyes>false</settlementDataFourEyes>
+                <securitiesFourEyes>false</securitiesFourEyes>
+                <organisationFourEyes>false</organisationFourEyes>
+                <ruleTemplateFourEyes>false</ruleTemplateFourEyes>
+                <userAdministrationFourEyesFor>false</userAdministrationFourEyesFor>
+                <roleAdministrationFourEyes>false</roleAdministrationFourEyes>
+                <conditionSettlementStatusFourEyes>false</conditionSettlementStatusFourEyes>
+                <noAuthorisedStatus>false</noAuthorisedStatus>
+                <includePendingCancelled>false</includePendingCancelled>
+                <workflowOverwrite>false</workflowOverwrite>
+                <workflowWaive>false</workflowWaive>
+                <workflowDispute>false</workflowDispute>
+                <applyRoundingRuleToSubstitutionLetter>false</applyRoundingRuleToSubstitutionLetter>
+                <mandatoryCommentWhenDisputeCondition>false</mandatoryCommentWhenDisputeCondition>
+            </collateralRules>
+            <general>
+                <defaultPriceSource>Default</defaultPriceSource>
+            </general>
+        </collateralPreference>
+    </featureData>
+</dataBean>

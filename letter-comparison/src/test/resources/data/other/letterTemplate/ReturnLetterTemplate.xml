@@ -1,0 +1,1093 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tpl:Template xmlns:tpl="http://www.lombardrisk.com/collateral/letters/metadata/templates"
+		xmlns:cmn="http://www.lombardrisk.com/collateral/letters/metadata/common"
+		xmlns:fmt="http://www.lombardrisk.com/collateral/letters/metadata/formats"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		
+	<tpl:Header FormatRef="DefaultFormat">
+		<tpl:Row Order="1">
+			<cmn:Cell Order="1">
+				<cmn:Field Order="1" FieldType="SimpleVariable" Value="LetterHeader"/>
+			</cmn:Cell>
+		</tpl:Row>
+	</tpl:Header>
+	
+	<tpl:Body FormatRef="DefaultFormat">
+		<tpl:Block Order="1" Id="Address" Name="Address" PageBreak="true" Orientation="Portrait" Included="true" Customisable="false">
+			<tpl:Row Order="1">
+				<cmn:Cell Order="1">
+					<cmn:Field Order="1" FieldType="Static" Value=" "/>
+				</cmn:Cell>
+			</tpl:Row>
+			<tpl:Row Order="2">
+				<cmn:Cell Order="1">
+					<cmn:Field Order="1" FieldType="SimpleVariable" Value="PrcLogo" FormatRef="PrcLogoFormat"/>
+				</cmn:Cell>
+			</tpl:Row>
+			<tpl:Table Order="3" Id="Address" Name="ADDRESS" HeaderVisible="false">
+				<cmn:Columns>
+					<cmn:Column Order="1" Id="CptyAddress" Name="CPTY_ADDRESS" ColumnType="Static" DataType="String">
+						<cmn:Header Order="0">
+							<cmn:Field Order="1" FieldType="Static" Value=" "/>
+						</cmn:Header>
+					</cmn:Column>
+					<cmn:Column Order="2" Id="PrcAddress" Name="PRC_ADDRESS" ColumnType="Static" DataType="String" DataFormatRef="RightAlignColumnFormat">
+						<cmn:Header Order="0">
+							<cmn:Field Order="1" FieldType="Static" Value=" "/>
+						</cmn:Header>
+					</cmn:Column>				
+				</cmn:Columns>			
+			</tpl:Table>	
+			<tpl:Row Order="4">
+				<cmn:Cell Order="1">
+					<cmn:Field Order="1" FieldType="SimpleVariable" Value="LetterDate" FormatRef="RightAlignFormat"/>
+				</cmn:Cell>
+			</tpl:Row>
+		</tpl:Block>
+		<tpl:Block Order="2" Id="MainBody" Name="Main Body" PageBreak="false" Orientation="Portrait" Customisable="true" Included="true">
+			<tpl:Row Order="1">
+				<cmn:Cell Order="1">
+					<cmn:Field Order="1" FieldType="Static" Value="Dear "/>
+					<cmn:Field Order="2" FieldType="SimpleVariable" Value="CptyContactName"/>
+					<cmn:Field Order="3" FieldType="Static" Value=","/>
+				</cmn:Cell>
+			</tpl:Row>
+			<tpl:Row Order="2">
+				<cmn:Cell Order="1">
+					<cmn:Field Order="1" FieldType="Static" Value=" "/>
+				</cmn:Cell>
+			</tpl:Row>
+			<tpl:Row Order="3">
+				<cmn:Cell Order="1">
+					<cmn:Field Order="1" FieldType="Static" Value="Regarding margin return of collateral under the "/>
+					<cmn:Field Order="2" FieldType="SimpleVariable" Value="CrdSupDoc"/>
+					<cmn:Field Order="3" FieldType="Static" Value=" agreement, dated "/>
+					<cmn:Field Order="4" FieldType="SimpleVariable" Value="AgrDate"/>
+				</cmn:Cell>
+			</tpl:Row>
+			<tpl:Row Order="4">
+				<cmn:Cell Order="1">
+					<cmn:Field Order="1" FieldType="Static" Value="This statement incorporates the following "/>
+					<cmn:Field Order="2" FieldType="SimpleVariable" Value="PrcList"/>
+					<cmn:Field Order="3" FieldType="Static" Value=" and the following "/>
+					<cmn:Field Order="4" FieldType="SimpleVariable" Value="CptyList"/>
+					<cmn:Field Order="5" FieldType="Static" Value="."/>
+				</cmn:Cell>
+			</tpl:Row>
+			<tpl:Row Order="5">
+				<cmn:Cell Order="1">
+					<cmn:Field Order="1" FieldType="Static" Value=" " />
+				</cmn:Cell>
+			</tpl:Row>
+			<tpl:Row Order="6">
+				<cmn:Cell Order="1">
+					<cmn:Field Order="1" FieldType="Static" Value="Further to your request for "/>
+					<cmn:Field Order="2" FieldType="SimpleVariable" Value="BaseCcy"/>
+					<cmn:Field Order="3" FieldType="Static" Value=" "/>
+          			<cmn:Field Order="4" FieldType="SimpleVariable" Value="RequestAmnt"/>		
+          			<cmn:Field Order="5" FieldType="Static" Value=","/>		
+					<cmn:Field Order="6" FieldType="SimpleVariable" Value="PrcName"/>
+					<cmn:Field Order="7" FieldType="Static" Value=" agrees to deliver " />
+					<cmn:Field Order="8" FieldType="SimpleVariable" Value="BaseCcy"/>
+					<cmn:Field Order="9" FieldType="Static" Value=" "/>
+			    	<cmn:Field Order="10" FieldType="SimpleVariable" Value="MarginReturnAmnt"/>
+			    	<cmn:Field Order="11" FieldType="Static" Value=". "/>
+			    	<cmn:Field Order="12" FieldType="SimpleVariable" Value="DisputeStatement"/>
+				</cmn:Cell>
+			</tpl:Row>
+			<tpl:Row Order="7">
+				<cmn:Cell Order="1">
+					<cmn:Field Order="1" FieldType="Static" Value=" " />
+				</cmn:Cell>
+			</tpl:Row>
+			<tpl:Row Order="8">
+				<cmn:Cell Order="1">
+					<cmn:Field Order="1" FieldType="Static" Value="Return Requirements:"/>
+				</cmn:Cell>
+			</tpl:Row>
+			<tpl:Row Order="9">
+				<cmn:Cell Order="1">
+					<cmn:Field Order="1" FieldType="SimpleVariable" Value="PrcName"/>
+					<cmn:Field Order="2" FieldType="Static" Value=" will return to "/>
+					<cmn:Field Order="3" FieldType="SimpleVariable" Value="CptyName"/>
+					<cmn:Field Order="4" FieldType="Static" Value=" eligible collateral to the VM value of "/>
+					<cmn:Field Order="5" FieldType="SimpleVariable" Value="BaseCcy"/>
+					<cmn:Field Order="6" FieldType="Static" Value=" "/>
+					<cmn:Field Order="7" FieldType="SimpleVariable" Value="VmReturnAmnt"/>
+					<cmn:Field Order="8" FieldType="Static" Value=", IM value of "/>
+					<cmn:Field Order="9" FieldType="SimpleVariable" Value="BaseCcy"/>
+					<cmn:Field Order="10" FieldType="Static" Value=" "/>
+					<cmn:Field Order="11" FieldType="SimpleVariable" Value="ImReturnAmnt"/>
+				</cmn:Cell>
+			</tpl:Row>
+			
+			<tpl:Row Order="10">
+				<cmn:Cell Order="1">
+					<cmn:Field Order="1" FieldType="Static" Value=" "/>
+				</cmn:Cell>
+			</tpl:Row>
+
+			<tpl:FTable Order="11" Id="SubExposureAmount" Name="SUB_EXPOSURE_AMOUNT" ColumnNum="5">
+				<cmn:Rows>
+					<cmn:FRow Order="1" Id="Header" Header="true" FormatRef="TableHeaderFormat">
+						<cmn:Column Order="1" ColumnType="SimpleVariable" DataType="String" Value="" Width="0.3"/>
+						<cmn:Column Order="2" ColumnType="SimpleVariable" DataType="String" Value="" Width="0.1"/>
+						<cmn:Column Order="3" ColumnType="SimpleVariable" DataType="String" Value="Base Ccy" Width="0.1"/>
+						<cmn:Column Order="4" ColumnType="SimpleVariable" DataType="String" Value="Requirement Amount" Width="0.2"/>
+						<cmn:Column Order="5" ColumnType="SimpleVariable" DataType="String" Value="Umbrella Ccy Requirement Amount" Width="0.2"/>
+					</cmn:FRow>
+					<cmn:FRow Order="2" Id="SubEA" Name="SubEA">
+						<cmn:Column Order="1" ColumnType="SimpleVariable" DataType="String" Value="${Title}"/>
+						<cmn:Column Order="2" ColumnType="SimpleVariable" DataType="String" Value="${Event}"/>
+						<cmn:Column Order="3" ColumnType="SimpleVariable" DataType="String" Value="${SubBaseCcy}"/>
+						<cmn:Column Order="4" ColumnType="SimpleVariable" DataType="String" Value="${RequirementAmount}"/>
+						<cmn:Column Order="5" ColumnType="SimpleVariable" DataType="String" Value="${UmbrellaCcyRequirementAmount}"/>
+					</cmn:FRow>
+					<cmn:FRow Order="3" Id="Summary">
+						<cmn:Column Order="1" ColumnType="SimpleVariable" DataType="String" Value="${STitle}" DataFormatRef="TopBorderLineFormat"/>
+						<cmn:Column Order="2" ColumnType="SimpleVariable" DataType="String" Value="Delivery(Excess)" DataFormatRef="TopBorderLineFormat"/>
+						<cmn:Column Order="3" ColumnType="SimpleVariable" DataType="String" Value="${BaseCcy}" DataFormatRef="TopBorderLineFormat"/>
+						<cmn:Column Order="4" ColumnType="SimpleVariable" DataType="String" Value="" DataFormatRef="TopBorderLineFormat"/>
+						<cmn:Column Order="5" ColumnType="SimpleVariable" DataType="String" Value="${N_VmReturnAmnt}${+}${N_ImReturnAmnt}" DataFormatRef="TopBorderLineFormat"/>
+					</cmn:FRow>
+				</cmn:Rows>
+			</tpl:FTable>
+
+			<tpl:Row Order="12">
+				<cmn:Cell Order="1">
+					<cmn:Field Order="1" FieldType="LinkVariable" Value="EligibleReturnReq"/>
+				</cmn:Cell>
+			</tpl:Row>		
+			<tpl:Row Order="13">
+				<cmn:Cell Order="1">
+					<cmn:Field Order="1" FieldType="Static" Value=" "/>
+				</cmn:Cell>
+			</tpl:Row>					
+
+			<tpl:Table Order="14" Id="ReturnAssets" Name="RETURN_ASSETS" ReplacementShown="true" Description="">
+				<cmn:Title>
+					<cmn:Row Order="1">
+						<cmn:Cell Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="Review of assets (see statement for further information)"/>
+						</cmn:Cell>
+					</cmn:Row>
+					<cmn:Row Order="2">
+						<cmn:Cell Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value=" "/>
+						</cmn:Cell>
+					</cmn:Row>
+				</cmn:Title>
+				<cmn:Replacement>
+					<cmn:Row Order="1">
+						<cmn:Cell Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="WE ARE UNABLE TO CONFIRM COLLATERAL FOR DELIVERY AT THIS TIME. THIS INFORMATION IS TO FOLLOW."/>
+						</cmn:Cell>
+					</cmn:Row>
+				</cmn:Replacement>
+				<cmn:Columns>
+					<cmn:Column Order="1" Id="AssetType" Name="ASSET_TYPE" ColumnType="Static" DataType="String">
+						<cmn:Header Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="Asset Type"/>
+						</cmn:Header>
+					</cmn:Column>
+					<cmn:Column Order="2" Id="Description" Name="DESCRIPTION" ColumnType="Static" DataType="String">
+						<cmn:Header Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="Description"/>
+						</cmn:Header>
+					</cmn:Column>
+					<cmn:Column Order="3" Id="Nominal" Name="NOMINAL" ColumnType="Static" DataType="Float">
+						<cmn:Header Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="Nominal"/>
+						</cmn:Header>
+					</cmn:Column>
+					<cmn:Column Order="4" Id="Currency" Name="CCY" ColumnType="Static" DataType="String">
+						<cmn:Header Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="Ccy"/>
+						</cmn:Header>
+					</cmn:Column>
+					<cmn:Column Order="5" Id="SettDate" Name="SETT_DATE" ColumnType="Static" DataType="Date">
+						<cmn:Header Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="Settlement Date"/>
+						</cmn:Header>
+					</cmn:Column>
+				</cmn:Columns>
+			</tpl:Table>			
+
+			<tpl:Row Order="15">
+				<cmn:Cell Order="1">
+					<cmn:Field Order="1" FieldType="SimpleVariable" Value="Comments"/>
+				</cmn:Cell>
+			</tpl:Row>
+		</tpl:Block>
+		<tpl:Block Order="3" Id="ExposureDetails" Name="Exposure Details" PageBreak="true" Orientation="Portrait" Included="true" Customisable="false">
+			<tpl:Row Order="1">
+				<cmn:Cell Order="1">
+					<cmn:Field Order="1" FieldType="Static" Value="Rounding Amount: "/>
+					<cmn:Field Order="2" FieldType="SimpleVariable" Value="CptyRoundingAmnt"/>
+					<cmn:Field Order="3" FieldType="Static" Value=" Position ("/>
+					<cmn:Field Order="4" FieldType="SimpleVariable" Value="RoundingRule"/>
+					<cmn:Field Order="5" FieldType="Static" Value=")                   "/>
+					<cmn:Field Order="6" FieldType="Static" Value="Split The Difference Type:"/>
+					<cmn:Field Order="7" FieldType="SimpleVariable" Value="DiffType"/>
+					<cmn:Field Order="8" FieldType="Static" Value=" Value:"/>
+					<cmn:Field Order="9" FieldType="SimpleVariable" Value="DiffValue"/>
+					<cmn:Field Order="10" FieldType="Static" Value="                   IM Rounding Amount: "/>
+					<cmn:Field Order="11" FieldType="SimpleVariable" Value="CptyImRoundingAmnt"/>
+					<cmn:Field Order="12" FieldType="Static" Value=" Position ("/>
+					<cmn:Field Order="13" FieldType="SimpleVariable" Value="ImRoundingRule"/>
+					<cmn:Field Order="14" FieldType="Static" Value=")                   "/>
+					<cmn:Field Order="15" FieldType="Static" Value="IM Split The Difference Value: "/>
+					<cmn:Field Order="16" FieldType="SimpleVariable" Value="ImDiffValue"/>
+				</cmn:Cell>
+			</tpl:Row>
+			<tpl:Row Order="2">
+				<cmn:Cell Order="1">
+					<cmn:Field Order="1" FieldType="Static" Value=" "/>
+				</cmn:Cell>
+			</tpl:Row>
+			<tpl:Table Order="3" Id="ExposureDetails" Name="EXP_DETAILS" Description="" HeaderFormatRef="TableHeaderFormat">
+				<cmn:Prefix>
+					<cmn:Row Order="1">
+						<cmn:Cell Order="1">
+							<cmn:Field Order="1" FieldType="SimpleVariable" Value="AgreementDesc"/>
+						</cmn:Cell>
+						<cmn:Cell Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value=":"/>
+						</cmn:Cell>
+					</cmn:Row>
+					<cmn:Row Order="1">
+						<cmn:Cell Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value=" "/>
+						</cmn:Cell>
+					</cmn:Row>
+				</cmn:Prefix>
+				<cmn:Columns>
+					<cmn:Column Order="1" Id="Item" Name="ITEM" OrderBy="NONE" ColumnType="Static" DataType="String">
+						<cmn:Header Order="0">
+							<cmn:Field Order="1" FieldType="Static" Value=" "/>
+						</cmn:Header>
+					</cmn:Column>				
+					<cmn:Column Order="2" Id="PrcPosition" Name="PRC_POSITION" OrderBy="NONE" ColumnType="Static" DataType="Currency" HeaderFormatRef="RightAlignColumnFormat" DataFormatRef="RightAlignColumnFormat">
+						<cmn:Header Order="0">
+							<cmn:Field Order="1" FieldType="SimpleVariable" Value="PrcName"/>
+							<cmn:Field Order="2" FieldType="Static" Value=" Position ("/>
+							<cmn:Field Order="3" FieldType="SimpleVariable" Value="BaseCcy"/>
+							<cmn:Field Order="4" FieldType="Static" Value=")"/>
+						</cmn:Header>
+					</cmn:Column>
+					<cmn:Column Order="3" Id="CptyPosition" Name="CPTY_POSITION" OrderBy="NONE" ColumnType="Static" DataType="Currency" HeaderFormatRef="RightAlignColumnFormat" DataFormatRef="RightAlignColumnFormat">
+						<cmn:Header Order="0">
+							<cmn:Field Order="1" FieldType="SimpleVariable" Value="CptyName"/>
+							<cmn:Field Order="2" FieldType="Static" Value=" Position ("/>
+							<cmn:Field Order="3" FieldType="SimpleVariable" Value="BaseCcy"/>
+							<cmn:Field Order="4" FieldType="Static" Value=")"/>
+						</cmn:Header>
+					</cmn:Column>
+				</cmn:Columns>
+			</tpl:Table>
+			<tpl:Table Order="3" Id="VmExposureDetails" Name="VM_EXP_DETAILS" Description="" HeaderFormatRef="TableHeaderFormat">
+				<cmn:Prefix>
+					<cmn:Row Order="1">
+						<cmn:Cell Order="1">
+							<cmn:Field Order="1" FieldType="SimpleVariable" Value="AgreementDesc"/>
+						</cmn:Cell>
+						<cmn:Cell Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value=" VM:"/>
+						</cmn:Cell>
+					</cmn:Row>
+					<cmn:Row Order="1">
+						<cmn:Cell Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value=" "/>
+						</cmn:Cell>
+					</cmn:Row>
+				</cmn:Prefix>
+				<cmn:Columns>
+					<cmn:Column Order="1" Id="Item" Name="ITEM" OrderBy="NONE" ColumnType="Static" DataType="String">
+						<cmn:Header Order="0">
+							<cmn:Field Order="1" FieldType="Static" Value=" "/>
+						</cmn:Header>
+					</cmn:Column>				
+					<cmn:Column Order="2" Id="PrcPosition" Name="PRC_POSITION" OrderBy="NONE" ColumnType="Static" DataType="Currency" HeaderFormatRef="RightAlignColumnFormat" DataFormatRef="RightAlignColumnFormat">
+						<cmn:Header Order="0">
+							<cmn:Field Order="1" FieldType="SimpleVariable" Value="PrcName"/>
+							<cmn:Field Order="2" FieldType="Static" Value=" Position ("/>
+							<cmn:Field Order="3" FieldType="SimpleVariable" Value="BaseCcy"/>
+							<cmn:Field Order="4" FieldType="Static" Value=")"/>
+						</cmn:Header>
+					</cmn:Column>
+					<cmn:Column Order="3" Id="CptyPosition" Name="CPTY_POSITION" OrderBy="NONE" ColumnType="Static" DataType="Currency" HeaderFormatRef="RightAlignColumnFormat" DataFormatRef="RightAlignColumnFormat">
+						<cmn:Header Order="0">
+							<cmn:Field Order="1" FieldType="SimpleVariable" Value="CptyName"/>
+							<cmn:Field Order="2" FieldType="Static" Value=" Position ("/>
+							<cmn:Field Order="3" FieldType="SimpleVariable" Value="BaseCcy"/>
+							<cmn:Field Order="4" FieldType="Static" Value=")"/>
+						</cmn:Header>
+					</cmn:Column>
+				</cmn:Columns>
+			</tpl:Table>
+			<tpl:Table Order="3" Id="ImExposureDetails" Name="IM_EXP_DETAILS" Description="" HeaderFormatRef="TableHeaderFormat">
+				<cmn:Prefix>
+					<cmn:Row Order="1">
+						<cmn:Cell Order="1">
+							<cmn:Field Order="1" FieldType="SimpleVariable" Value="AgreementDesc"/>
+						</cmn:Cell>
+						<cmn:Cell Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="IM:"/>
+						</cmn:Cell>
+					</cmn:Row>
+					<cmn:Row Order="1">
+						<cmn:Cell Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value=" "/>
+						</cmn:Cell>
+					</cmn:Row>
+				</cmn:Prefix>
+				<cmn:Columns>
+					<cmn:Column Order="1" Id="Item" Name="ITEM" OrderBy="NONE" ColumnType="Static" DataType="String">
+						<cmn:Header Order="0">
+							<cmn:Field Order="1" FieldType="Static" Value=" "/>
+						</cmn:Header>
+					</cmn:Column>				
+					<cmn:Column Order="2" Id="PrcPosition" Name="PRC_POSITION" OrderBy="NONE" ColumnType="Static" DataType="Currency" HeaderFormatRef="RightAlignColumnFormat" DataFormatRef="RightAlignColumnFormat">
+						<cmn:Header Order="0">
+							<cmn:Field Order="1" FieldType="SimpleVariable" Value="PrcName"/>
+							<cmn:Field Order="2" FieldType="Static" Value=" Position ("/>
+							<cmn:Field Order="3" FieldType="SimpleVariable" Value="BaseCcy"/>
+							<cmn:Field Order="4" FieldType="Static" Value=")"/>
+						</cmn:Header>
+					</cmn:Column>
+					<cmn:Column Order="3" Id="CptyPosition" Name="CPTY_POSITION" OrderBy="NONE" ColumnType="Static" DataType="Currency" HeaderFormatRef="RightAlignColumnFormat" DataFormatRef="RightAlignColumnFormat">
+						<cmn:Header Order="0">
+							<cmn:Field Order="1" FieldType="SimpleVariable" Value="CptyName"/>
+							<cmn:Field Order="2" FieldType="Static" Value=" Position ("/>
+							<cmn:Field Order="3" FieldType="SimpleVariable" Value="BaseCcy"/>
+							<cmn:Field Order="4" FieldType="Static" Value=")"/>
+						</cmn:Header>
+					</cmn:Column>
+				</cmn:Columns>
+			</tpl:Table>
+			<tpl:Table Order="3" Id="RepoExposureDetails" Name="EXP_DETAILS" Description="" HeaderFormatRef="TableHeaderFormat">
+				<cmn:Columns>
+					<cmn:Column Order="1" Id="Item" Name="ITEM" OrderBy="NONE" ColumnType="Static" DataType="String">
+						<cmn:Header Order="0">
+							<cmn:Field Order="1" FieldType="Static" Value=" "/>
+						</cmn:Header>
+					</cmn:Column>				
+					<cmn:Column Order="2" Id="position" Name="POSITION" OrderBy="NONE" ColumnType="Static" DataType="Currency" HeaderFormatRef="RightAlignColumnFormat" DataFormatRef="RightAlignColumnFormat">
+						<cmn:Header Order="0">
+							<cmn:Field Order="1" FieldType="Static" Value="NET REQUIREMENT ("/>
+							<cmn:Field Order="2" FieldType="SimpleVariable" Value="BaseCcy"/>
+							<cmn:Field Order="3" FieldType="Static" Value=")"/>
+						</cmn:Header>
+					</cmn:Column>
+				</cmn:Columns>
+			</tpl:Table>
+
+		</tpl:Block>
+
+		<tpl:Block Order="4" Id="ExposureFundDetails" Name="Exposure Fund Details" PageBreak="true" Orientation="Portrait" Included="true" Customisable="false">
+			<tpl:Row Order="1">
+				<cmn:Cell Order="1">
+					<cmn:Field Order="1" FieldType="Static" Value="Rounding Amount: "/>
+					<cmn:Field Order="2" FieldType="SimpleVariable" Value="CptyRoundingAmnt"/>
+					<cmn:Field Order="3" FieldType="Static" Value=" ("/>
+					<cmn:Field Order="4" FieldType="SimpleVariable" Value="RoundingRule"/>
+					<cmn:Field Order="5" FieldType="Static" Value=")                   "/>
+					<cmn:Field Order="6" FieldType="Static" Value="Split The Difference Type:"/>
+					<cmn:Field Order="7" FieldType="SimpleVariable" Value="DiffType"/>
+					<cmn:Field Order="8" FieldType="Static" Value=" Value:"/>
+					<cmn:Field Order="9" FieldType="SimpleVariable" Value="DiffValue"/>
+					<cmn:Field Order="10" FieldType="Static" Value="                   IM Rounding Amount: "/>
+					<cmn:Field Order="11" FieldType="SimpleVariable" Value="CptyImRoundingAmnt"/>
+					<cmn:Field Order="12" FieldType="Static" Value=" ("/>
+					<cmn:Field Order="13" FieldType="SimpleVariable" Value="ImRoundingRule"/>
+					<cmn:Field Order="14" FieldType="Static" Value=")                   "/>
+					<cmn:Field Order="15" FieldType="Static" Value="IM Split The Difference Value: "/>
+					<cmn:Field Order="16" FieldType="SimpleVariable" Value="ImDiffValue"/>
+				</cmn:Cell>
+			</tpl:Row>
+			<tpl:Row Order="2">
+				<cmn:Cell Order="1">
+					<cmn:Field Order="1" FieldType="Static" Value=" "/>
+				</cmn:Cell>
+			</tpl:Row>
+
+<!--			<tpl:FTable Order="5" Id="ExposureFundDetails" Name="EXP_FUND_DETAILS" ColumnNum="3" MultiTable="true" PageTableNum="2">
+			
+				<cmn:Rows>
+
+					<cmn:FRow Id="Header" Order="1" Header="true" FormatRef="TableHeaderFormat">
+						<cmn:Column Order="1" ColumnType="SimpleVariable" DataType="String" Value=" "/>
+						<cmn:Column Order="2" ColumnType="SimpleVariable" DataType="String" Value="${PrefixPrinName} Position (${BaseCcy})"/>
+						<cmn:Column Order="3" ColumnType="SimpleVariable" DataType="String" Value="${PrefixCptyName} Position (${BaseCcy})"/>
+					</cmn:FRow>
+
+					<cmn:FRow Id="PrinIA" Order="1">
+						<cmn:Column Order="1" ColumnType="SimpleVariable" Value="${PrcName} I.A."/>
+						<cmn:Column Order="2" ColumnType="SimpleVariable" DataType="String" Value="${PrcIA_P}"/>
+						<cmn:Column Order="3" ColumnType="SimpleVariable" DataType="String" Value="${PrcIA_C}"/>
+					</cmn:FRow>
+
+					<cmn:FRow Id="CptyIA" Order="4">
+						<cmn:Column Order="1" ColumnType="SimpleVariable" Value="${CptyName} I.A."/> 
+						<cmn:Column Order="2" ColumnType="SimpleVariable" DataType="String" Value="${CptyIA_P}"/>
+						<cmn:Column Order="3" ColumnType="SimpleVariable" DataType="String" Value="${CptyIA_C}"/>
+					</cmn:FRow>
+
+					<cmn:FRow Id="TotalExp" Order="7">
+						<cmn:Column Order="1" ColumnType="SimpleVariable" DataType="String" Value="Total Exposure"/>
+						<cmn:Column Order="2" ColumnType="SimpleVariable" DataType="Currency" Value="${TotalExposure_P}"/>
+						<cmn:Column Order="3" ColumnType="SimpleVariable" DataType="Currency" Value="${TotalExposure_C}"/>
+					</cmn:FRow>
+
+					<cmn:FRow Id="MtmExp" Order="8">
+						<cmn:Column Order="1" ColumnType="SimpleVariable" DataType="String" Value="MTM Exposure"/>
+						<cmn:Column Order="2" ColumnType="SimpleVariable" DataType="String" Value="${MtmExposure_P}"/>
+						<cmn:Column Order="3" ColumnType="SimpleVariable" DataType="String" Value="${MtmExposure_C}"/>
+					</cmn:FRow>
+
+					<cmn:FRow Id="Threshold" Order="9">
+						<cmn:Column Order="1" ColumnType="SimpleVariable" DataType="String" Value="Threshold"/>
+						<cmn:Column Order="2" ColumnType="SimpleVariable" DataType="String" Value="${Threshold_P}"/>
+						<cmn:Column Order="3" ColumnType="SimpleVariable" DataType="String" Value="${Threshold_C}"/>
+					</cmn:FRow>
+
+					<cmn:FRow Id="MTA" Order="10">
+						<cmn:Column Order="1" ColumnType="SimpleVariable" DataType="String" Value="Min Transfer Amount"/>
+						<cmn:Column Order="2" ColumnType="SimpleVariable" DataType="String" Value="${MTA_P}"/>
+						<cmn:Column Order="3" ColumnType="SimpleVariable" DataType="String" Value="${MTA_C}"/>
+					</cmn:FRow>
+					
+					<cmn:FRow Id="MTA" Order="11">
+						<cmn:Column Order="1" ColumnType="SimpleVariable" DataType="String" Value="IM Min Transfer Amount"/>
+						<cmn:Column Order="2" ColumnType="SimpleVariable" DataType="String" Value="${IM_MTA_P}"/>
+						<cmn:Column Order="3" ColumnType="SimpleVariable" DataType="String" Value="${IM_MTA_C}"/>
+					</cmn:FRow>
+
+					<cmn:FRow Id="AEA" Order="12">
+						<cmn:Column Order="1" ColumnType="SimpleVariable" DataType="String" Value="Adjusted Exposure Amount"/>
+						<cmn:Column Order="2" ColumnType="SimpleVariable" DataType="String" Value="${AdjustedExposure_P}"/>
+						<cmn:Column Order="3" ColumnType="SimpleVariable" DataType="String" Value="${AdjustedExposure_C}"/>
+					</cmn:FRow>
+
+					<cmn:FRow Id="ConfirmedHeld" Order="13">
+						<cmn:Column Order="1" ColumnType="SimpleVariable" DataType="String" Value="Value of Confirmed Collateral Held"/>
+						<cmn:Column Order="2" ColumnType="SimpleVariable" DataType="String" Value="${ConfirmedColHeld_P}"/>
+						<cmn:Column Order="3" ColumnType="SimpleVariable" DataType="String" Value="${ConfirmedColHeld_C}"/>
+					</cmn:FRow>
+
+					<cmn:FRow Id="PendingHeld" Order="14">
+						<cmn:Column Order="1" ColumnType="SimpleVariable" DataType="String" Value="Value of Pending Collateral Held"/>
+						<cmn:Column Order="2" ColumnType="SimpleVariable" DataType="String" Value="${PendingColHeld_P}"/>
+						<cmn:Column Order="3" ColumnType="SimpleVariable" DataType="String" Value="${PendingColHeld_C}"/>
+					</cmn:FRow>
+
+					<cmn:FRow Id="ConfirmedDelivered" Order="15">
+						<cmn:Column Order="1" ColumnType="SimpleVariable" DataType="String" Value="Value of Confirmed Collateral Delivered"/>
+						<cmn:Column Order="2" ColumnType="SimpleVariable" DataType="String" Value="${ConfirmedColDelivered_P}"/>
+						<cmn:Column Order="3" ColumnType="SimpleVariable" DataType="String" Value="${ConfirmedColDelivered_C}"/>
+					</cmn:FRow>
+
+					<cmn:FRow Id="PendingDelivered" Order="16">
+						<cmn:Column Order="1" ColumnType="SimpleVariable" DataType="String" Value="Value of Pending Collateral Delivered"/>
+						<cmn:Column Order="2" ColumnType="SimpleVariable" DataType="String" Value="${PendingColDelivered_P}"/>
+						<cmn:Column Order="3" ColumnType="SimpleVariable" DataType="String" Value="${PendingColDelivered_C}"/>
+					</cmn:FRow>
+
+					<cmn:FRow Id="NetMR" Order="17">
+						<cmn:Column Order="1" ColumnType="SimpleVariable" DataType="String" Value="Net Margin Requirement"/>
+						<cmn:Column Order="2" ColumnType="SimpleVariable" DataType="String" Value="${NetMarginRequirement_P}"/>
+						<cmn:Column Order="3" ColumnType="SimpleVariable" DataType="String" Value="${NetMarginRequirement_C}"/>
+					</cmn:FRow>
+
+					<cmn:FRow Id="DeliveryAmt" Order="18">
+						<cmn:Column Order="1" ColumnType="SimpleVariable" DataType="String" Value="Delivery Amount"/>
+						<cmn:Column Order="2" ColumnType="SimpleVariable" DataType="String" Value="${DeliveryAmt_P}"/>
+						<cmn:Column Order="3" ColumnType="SimpleVariable" DataType="String" Value="${DeliveryAmt_C}"/>
+					</cmn:FRow>
+
+					<cmn:FRow Id="RecallAmt" Order="19">
+						<cmn:Column Order="1" ColumnType="SimpleVariable" DataType="String" Value="Recall Amount"/>
+						<cmn:Column Order="2" ColumnType="SimpleVariable" DataType="String" Value="${RecallAmt_P}"/>
+						<cmn:Column Order="3" ColumnType="SimpleVariable" DataType="String" Value="${RecallAmt_C}"/>
+					</cmn:FRow>
+
+				</cmn:Rows>
+			</tpl:FTable>  -->
+
+	    <tpl:Table Order="3" Id="ExposureFundDetails" Name="EXP_FUND_DETAILS" Description="" HeaderFormatRef="TableHeaderFormat" MultiTable="true" PageTableNum="2">
+	    		<cmn:Prefix>
+					<cmn:Row Order="1">
+						<cmn:Cell Order="1">
+							<cmn:Field Order="1" FieldType="SimpleVariable" Value="FundAgreementDescription"/>
+						</cmn:Cell>
+						<cmn:Cell Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value=":"/>
+						</cmn:Cell>
+					</cmn:Row>
+					<cmn:Row Order="1">
+						<cmn:Cell Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value=" "/>
+						</cmn:Cell>
+					</cmn:Row>
+				</cmn:Prefix>
+				<cmn:Columns>
+					<cmn:Column Order="1" Id="Item" Name="ITEM" OrderBy="NONE" ColumnType="Static" DataType="String">
+						<cmn:Header Order="0">
+							<cmn:Field Order="1" FieldType="Static" Value=" "/>
+						</cmn:Header>
+					</cmn:Column>				
+					<cmn:Column Order="2" Id="PrcPosition" Name="PRC_POSITION" OrderBy="NONE" ColumnType="Static" DataType="Currency" HeaderFormatRef="RightAlignColumnFormat" DataFormatRef="RightAlignColumnFormat">
+						<cmn:Header Order="0">
+							<cmn:Field Order="1" FieldType="FlexibleTableVariable" Value="PrefixPrinName"/>
+							<cmn:Field Order="2" FieldType="Static" Value=" Position ("/>
+							<cmn:Field Order="3" FieldType="FlexibleTableVariable" Value="FundBaseCcy"/>
+							<cmn:Field Order="4" FieldType="Static" Value=")"/>
+						</cmn:Header>
+					</cmn:Column>
+					<cmn:Column Order="3" Id="CptyPosition" Name="CPTY_POSITION" OrderBy="NONE" ColumnType="Static" DataType="Currency" HeaderFormatRef="RightAlignColumnFormat" DataFormatRef="RightAlignColumnFormat">
+						<cmn:Header Order="0">
+							<cmn:Field Order="1" FieldType="FlexibleTableVariable" Value="PrefixCptyName"/>
+							<cmn:Field Order="2" FieldType="Static" Value=" Position ("/>
+							<cmn:Field Order="3" FieldType="FlexibleTableVariable" Value="FundBaseCcy"/>
+							<cmn:Field Order="4" FieldType="Static" Value=")"/>
+						</cmn:Header>
+					</cmn:Column>
+				</cmn:Columns>
+			</tpl:Table>
+
+
+		</tpl:Block>
+
+
+
+		<tpl:Block Order="6" Id="LockupDetails" Name="Lockup Details" PageBreak="false" Orientation="Portrait" Included="true" Customisable="false">
+			<tpl:Table Order="1" Id="LockupDetails" Name="LOCKUP_DETAILS" Description="" HeaderVisible="false">
+				<cmn:Columns>
+					<cmn:Column Order="1" Id="Item" Name="ITEM" OrderBy="NONE" ColumnType="Static" DataType="String">
+						<cmn:Header Order="0">
+							<cmn:Field Order="1" FieldType="Static" Value=" "/>
+						</cmn:Header>
+					</cmn:Column>				
+					<cmn:Column Order="2" Id="PrcPosition" Name="PRC_POSITION" OrderBy="NONE" ColumnType="Static" DataType="Currency" DataFormatRef="RightAlignColumnFormat">
+						<cmn:Header Order="0">
+							<cmn:Field Order="1" FieldType="SimpleVariable" Value="PrcName"/>
+							<cmn:Field Order="2" FieldType="Static" Value=" ("/>
+							<cmn:Field Order="3" FieldType="SimpleVariable" Value="BaseCcy"/>
+							<cmn:Field Order="4" FieldType="Static" Value=")"/>
+						</cmn:Header>
+					</cmn:Column>
+					<cmn:Column Order="3" Id="CptyPosition" Name="CPTY_POSITION" OrderBy="NONE" ColumnType="Static" DataType="Currency" DataFormatRef="RightAlignColumnFormat">
+						<cmn:Header Order="0">
+							<cmn:Field Order="1" FieldType="SimpleVariable" Value="CptyName"/>
+							<cmn:Field Order="2" FieldType="Static" Value=" ("/>
+							<cmn:Field Order="3" FieldType="SimpleVariable" Value="BaseCcy"/>
+							<cmn:Field Order="4" FieldType="Static" Value=")"/>
+						</cmn:Header>
+					</cmn:Column>
+				</cmn:Columns>
+			</tpl:Table>
+		</tpl:Block>		
+
+		<tpl:Block Order="7" Id="LetterEnding" Name="Letter Ending" PageBreak="false" Orientation="Portrait" Included="true" Customisable="true">
+			<tpl:Row Order="1">
+				<cmn:Cell Order="1">
+					<cmn:Field Order="1" FieldType="Static" Value=" "/>
+				</cmn:Cell>
+			</tpl:Row>			
+			<tpl:Row Order="2">
+				<cmn:Cell Order="1">
+					<cmn:Field Order="1" FieldType="Static" Value="Please confirm your agreement to the above."/>
+				</cmn:Cell>
+			</tpl:Row>
+			<tpl:Row Order="3">
+				<cmn:Cell Order="1">
+					<cmn:Field Order="1" FieldType="Static" Value=" "/>
+				</cmn:Cell>
+			</tpl:Row>			
+			<tpl:Row Order="4">
+				<cmn:Cell Order="1">
+					<cmn:Field Order="1" FieldType="Static" Value="Yours sincerely"/>
+				</cmn:Cell>
+			</tpl:Row>
+			<tpl:Row Order="5">
+				<cmn:Cell Order="1">
+					<cmn:Field Order="1" FieldType="Static" Value=" "/>
+				</cmn:Cell>
+			</tpl:Row>
+			<tpl:Row Order="6">
+				<cmn:Cell Order="1">
+					<cmn:Field Order="1" FieldType="SimpleVariable" Value="PrcSecondLogo" FormatRef="SecondLogoFormat"/>
+				</cmn:Cell>
+			</tpl:Row>
+			<tpl:Row Order="7">
+				<cmn:Cell Order="1">
+					<cmn:Field Order="1" FieldType="SimpleVariable" Value="PrcContactSign" FormatRef="PrcContactSignFormat"/>
+					<cmn:Field Order="2" FieldType="SimpleVariable" Value="AddiPrcContactSign" FormatRef="AddiPrcContactSignFormat"/>
+				</cmn:Cell>
+			</tpl:Row>			
+			<tpl:Row Order="8">
+				<cmn:Cell Order="1">
+					<cmn:Field Order="1" FieldType="SimpleVariable" Value="PrcContactName"/>
+					<cmn:Field Order="2" FieldType="SimpleVariable" Value="AddiPrcContactName" FormatRef="AddiPrcContactFormat"/>
+				</cmn:Cell>
+			</tpl:Row>
+			<tpl:Row Order="9">
+				<cmn:Cell Order="1">
+					<cmn:Field Order="1" FieldType="SimpleVariable" Value="PrcContactTitle"/>
+					<cmn:Field Order="2" FieldType="SimpleVariable" Value="AddiPrcContactTitle" FormatRef="AddiPrcContactFormat"/>
+				</cmn:Cell>
+			</tpl:Row>
+		</tpl:Block>
+		<tpl:Block Order="8" Id="EligibleReturnReq" Name="Eligible return Requirements" PageBreak="true" Orientation="Landscape" Included="true" Customisable="false" TitleShown="true" LinkAvailable="true">
+			<tpl:Title FormatRef="BlockTitleFormat">
+				<tpl:Row>
+					<cmn:Cell>
+						<cmn:Field Order="1" FieldType="Static" Value="Eligible Collateral return requirements"/>
+					</cmn:Cell>
+				</tpl:Row>				
+			</tpl:Title>
+			<tpl:Link Id="EligibleReturnReq" FormatRef="BlockLinkFormat">
+				<tpl:Row>
+					<cmn:Cell Order="1">
+						<cmn:Field Order="1" FieldType="Static" Value="Please review the attached eligible Collateral return requirements sheet for details"/>
+					</cmn:Cell>
+				</tpl:Row>				
+			</tpl:Link>
+			<tpl:Table Order="1" Id="EligibleReturnReq" Name="ELIGIBLE_RETURN_REQ" Description="" HeaderFormatRef="TableHeaderFormat" DataFormatRef="EligibleReqTableDataFormat">
+				<cmn:Columns>
+					<cmn:Column Order="1" Id="AssetClass" Name="ASSET_CLASS" ColumnType="Static" DataType="String" GroupIndex="1" ShownByGroup="true" DataFormatRef="GroupColumnDataFormat">
+						<cmn:Header Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value=" "/>
+						</cmn:Header>
+					</cmn:Column>
+				  <cmn:Column Order="2" Id="AssetType" Name="ASSET_TYPE" ColumnType="Static" DataType="String">
+						<cmn:Header Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="Eligible Assets"/>
+						</cmn:Header>
+					</cmn:Column>
+				  <cmn:Column Order="3" Id="InstrumentId" Name="INST_ID" ColumnType="Static" DataType="String">
+					  <cmn:Header Order="1">
+						  <cmn:Field Order="1" FieldType="Static" Value="Instrument Id"/>
+					  </cmn:Header>
+				  </cmn:Column>
+				  <cmn:Column Order="4" Id="NominalAmt" Name="NOMINAL_AMT" ColumnType="Static" DataType="Float">
+					  <cmn:Header Order="1">
+						  <cmn:Field Order="1" FieldType="Static" Value="Nominal amt Required"/>
+					  </cmn:Header>
+				  </cmn:Column>
+				  <cmn:Column Order="5" Id="NativeCcy" Name="NATIVE_CCY" ColumnType="Static" DataType="String">
+					  <cmn:Header Order="1">
+						  <cmn:Field Order="1" FieldType="Static" Value="Native Currency"/>
+					  </cmn:Header>
+				  </cmn:Column>	
+				  <cmn:Column Order="6" Id="NativeValue" Name="NATIVE_VAL" ColumnType="Static" DataType="Float">
+					  <cmn:Header Order="1">
+						  <cmn:Field Order="1" FieldType="Static" Value="Native Collateral Value"/>
+					  </cmn:Header>
+				  </cmn:Column>
+				  <cmn:Column Order="7" Id="BaseCcy" Name="BASE_CCY" ColumnType="Static" DataType="String">
+					  <cmn:Header Order="1">
+						  <cmn:Field Order="1" FieldType="Static" Value="Base Currency"/>
+					  </cmn:Header>
+				  </cmn:Column>	
+				  <cmn:Column Order="8" Id="BaseValue" Name="BASE_VAL" ColumnType="Static" DataType="Float">
+					  <cmn:Header Order="1">
+						  <cmn:Field Order="1" FieldType="Static" Value="Base Collateral Value"/>
+					  </cmn:Header>
+				  </cmn:Column>					
+				  <cmn:Column Order="9" Id="Tenor" Name="TENOR" ColumnType="Static" DataType="String">
+						<cmn:Header Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="Tenor"/>
+						</cmn:Header>
+					</cmn:Column>
+					<cmn:Column Order="10" Id="ValuationPercentage" Name="VALUATION_PERCENTAGE" ColumnType="Static" DataType="Float">
+						<cmn:Header Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="Valuation %" />
+						</cmn:Header>
+					</cmn:Column>
+					<cmn:Column Order="11" Id="Comments" Name="COMMENTS" ColumnType="Static" DataType="String">
+						<cmn:Header Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="Comments"/>
+						</cmn:Header>
+					</cmn:Column>
+					<cmn:Column Order="12" Id="SettDate" Name="SETT_DATE" ColumnType="Static" DataType="Date">
+						<cmn:Header Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="Standard Settlement Date"/>
+						</cmn:Header>
+					</cmn:Column>
+				</cmn:Columns>
+			</tpl:Table>
+			<tpl:Table Order="1" Id="VMEligibleReturnReq" Name="VM_ELIGIBLE_RETURN_REQ" Description="" HeaderFormatRef="TableHeaderFormat" DataFormatRef="EligibleReqTableDataFormat">
+				<cmn:Prefix>
+					<cmn:Row Order="1">
+						<cmn:Cell Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="VM:"/>
+						</cmn:Cell>
+					</cmn:Row>
+				</cmn:Prefix>
+				<cmn:Columns>
+					<cmn:Column Order="1" Id="AssetClass" Name="ASSET_CLASS" ColumnType="Static" DataType="String" GroupIndex="1" ShownByGroup="true" DataFormatRef="GroupColumnDataFormat">
+						<cmn:Header Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value=" "/>
+						</cmn:Header>
+					</cmn:Column>
+				  <cmn:Column Order="2" Id="AssetType" Name="ASSET_TYPE" ColumnType="Static" DataType="String">
+						<cmn:Header Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="Eligible Assets"/>
+						</cmn:Header>
+					</cmn:Column>
+				  <cmn:Column Order="3" Id="InstrumentId" Name="INST_ID" ColumnType="Static" DataType="String">
+					  <cmn:Header Order="1">
+						  <cmn:Field Order="1" FieldType="Static" Value="Instrument Id"/>
+					  </cmn:Header>
+				  </cmn:Column>
+				  <cmn:Column Order="4" Id="VmNominalAmt" Name="VM_NOMINAL_AMT" ColumnType="Static" DataType="Float">
+					  <cmn:Header Order="1">
+						  <cmn:Field Order="1" FieldType="Static" Value="Nominal amt Required"/>
+					  </cmn:Header>
+				  </cmn:Column>
+				  <cmn:Column Order="5" Id="NativeCcy" Name="NATIVE_CCY" ColumnType="Static" DataType="String">
+					  <cmn:Header Order="1">
+						  <cmn:Field Order="1" FieldType="Static" Value="Native Currency"/>
+					  </cmn:Header>
+				  </cmn:Column>	
+				  <cmn:Column Order="6" Id="NativeVMValue" Name="NATIVE_VAL" ColumnType="Static" DataType="Float">
+					  <cmn:Header Order="1">
+						  <cmn:Field Order="1" FieldType="Static" Value="Native Collateral Value"/>
+					  </cmn:Header>
+				  </cmn:Column>
+				  <cmn:Column Order="7" Id="BaseCcy" Name="BASE_CCY" ColumnType="Static" DataType="String">
+					  <cmn:Header Order="1">
+						  <cmn:Field Order="1" FieldType="Static" Value="Base Currency"/>
+					  </cmn:Header>
+				  </cmn:Column>	
+				  <cmn:Column Order="8" Id="BaseVMValue" Name="BASE_VAL" ColumnType="Static" DataType="Float">
+					  <cmn:Header Order="1">
+						  <cmn:Field Order="1" FieldType="Static" Value="Base Collateral Value"/>
+					  </cmn:Header>
+				  </cmn:Column>					
+				  <cmn:Column Order="9" Id="Tenor" Name="TENOR" ColumnType="Static" DataType="String">
+						<cmn:Header Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="Tenor"/>
+						</cmn:Header>
+					</cmn:Column>
+					<cmn:Column Order="10" Id="ValuationPercentage" Name="VALUATION_PERCENTAGE" ColumnType="Static" DataType="Float">
+						<cmn:Header Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="Valuation %" />
+						</cmn:Header>
+					</cmn:Column>
+					<cmn:Column Order="11" Id="Comments" Name="COMMENTS" ColumnType="Static" DataType="String">
+						<cmn:Header Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="Comments"/>
+						</cmn:Header>
+					</cmn:Column>
+					<cmn:Column Order="12" Id="SettDate" Name="SETT_DATE" ColumnType="Static" DataType="Date">
+						<cmn:Header Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="Standard Settlement Date"/>
+						</cmn:Header>
+					</cmn:Column>
+				</cmn:Columns>
+			</tpl:Table>
+			<tpl:Table Order="1" Id="IMEligibleReturnReq" Name="IM_ELIGIBLE_RETURN_REQ" Description="" HeaderFormatRef="TableHeaderFormat" DataFormatRef="EligibleReqTableDataFormat">
+				<cmn:Prefix>
+					<cmn:Row Order="1">
+						<cmn:Cell Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="IM:"/>
+						</cmn:Cell>
+					</cmn:Row>
+				</cmn:Prefix>
+				<cmn:Columns>
+					<cmn:Column Order="1" Id="AssetClass" Name="ASSET_CLASS" ColumnType="Static" DataType="String" GroupIndex="1" ShownByGroup="true" DataFormatRef="GroupColumnDataFormat">
+						<cmn:Header Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value=" "/>
+						</cmn:Header>
+					</cmn:Column>
+				  <cmn:Column Order="2" Id="AssetType" Name="ASSET_TYPE" ColumnType="Static" DataType="String">
+						<cmn:Header Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="Eligible Assets"/>
+						</cmn:Header>
+					</cmn:Column>
+				  <cmn:Column Order="3" Id="InstrumentId" Name="INST_ID" ColumnType="Static" DataType="String">
+					  <cmn:Header Order="1">
+						  <cmn:Field Order="1" FieldType="Static" Value="Instrument Id"/>
+					  </cmn:Header>
+				  </cmn:Column>
+				  <cmn:Column Order="4" Id="ImNominalAmt" Name="IM_NOMINAL_AMT" ColumnType="Static" DataType="Float">
+					  <cmn:Header Order="1">
+						  <cmn:Field Order="1" FieldType="Static" Value="Nominal amt Required"/>
+					  </cmn:Header>
+				  </cmn:Column>
+				  <cmn:Column Order="5" Id="NativeCcy" Name="NATIVE_CCY" ColumnType="Static" DataType="String">
+					  <cmn:Header Order="1">
+						  <cmn:Field Order="1" FieldType="Static" Value="Native Currency"/>
+					  </cmn:Header>
+				  </cmn:Column>	
+				  <cmn:Column Order="6" Id="NativeIMValue" Name="NATIVE_VAL" ColumnType="Static" DataType="Float">
+					  <cmn:Header Order="1">
+						  <cmn:Field Order="1" FieldType="Static" Value="Native Collateral Value"/>
+					  </cmn:Header>
+				  </cmn:Column>
+				  <cmn:Column Order="7" Id="BaseCcy" Name="BASE_CCY" ColumnType="Static" DataType="String">
+					  <cmn:Header Order="1">
+						  <cmn:Field Order="1" FieldType="Static" Value="Base Currency"/>
+					  </cmn:Header>
+				  </cmn:Column>	
+				  <cmn:Column Order="8" Id="BaseIMValue" Name="BASE_VAL" ColumnType="Static" DataType="Float">
+					  <cmn:Header Order="1">
+						  <cmn:Field Order="1" FieldType="Static" Value="Base Collateral Value"/>
+					  </cmn:Header>
+				  </cmn:Column>					
+				  <cmn:Column Order="9" Id="Tenor" Name="TENOR" ColumnType="Static" DataType="String">
+						<cmn:Header Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="Tenor"/>
+						</cmn:Header>
+					</cmn:Column>
+					<cmn:Column Order="10" Id="ValuationPercentage" Name="VALUATION_PERCENTAGE" ColumnType="Static" DataType="Float">
+						<cmn:Header Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="Valuation %" />
+						</cmn:Header>
+					</cmn:Column>
+					<cmn:Column Order="11" Id="Comments" Name="COMMENTS" ColumnType="Static" DataType="String">
+						<cmn:Header Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="Comments"/>
+						</cmn:Header>
+					</cmn:Column>
+					<cmn:Column Order="12" Id="SettDate" Name="SETT_DATE" ColumnType="Static" DataType="Date">
+						<cmn:Header Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="Standard Settlement Date"/>
+						</cmn:Header>
+					</cmn:Column>
+				</cmn:Columns>
+			</tpl:Table>
+		</tpl:Block>		
+		<tpl:Block Order="9" Id="PayInst" Name="Payment Instructions" PageBreak="true" Orientation="Landscape" Included="true" Customisable="false" TitleShown="true">
+			<tpl:Title FormatRef="BlockTitleFormat">
+				<tpl:Row>
+					<cmn:Cell>
+						<cmn:Field Order="1" FieldType="SimpleVariable" Value="PrcName" />
+						<cmn:Field Order="2" FieldType="Static" Value=" "/>
+						<cmn:Field Order="3" FieldType="SimpleVariable" Value="PayInstBucket" />
+						<cmn:Field Order="4" FieldType="Static" Value=" settlement instructions per Collateral entry" />
+					</cmn:Cell>
+				</tpl:Row>
+			</tpl:Title>
+			<tpl:Table Order="1" Id="PayInst" Name="PAY_INST" Description="" HeaderFormatRef="TableHeaderFormat">
+				<cmn:Columns>
+					<cmn:Column Order="1" Id="AssetClass" Name="ASSET_CLASS" ColumnType="Static" DataType="String" GroupIndex="1" DataFormatRef="GroupColumnDataFormat">
+						<cmn:Header Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="Asset Class"/>
+						</cmn:Header>
+					</cmn:Column>
+					<cmn:Column Order="2" Id="AssetType" Name="ASSET_TYPE" ColumnType="Static" DataType="String">
+						<cmn:Header Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="Asset Type"/>
+						</cmn:Header>
+					</cmn:Column>
+					<cmn:Column Order="3" Id="PayInst" Name="PAY_INST" ColumnType="Dynamic" DataType="String"/>
+				</cmn:Columns>
+			</tpl:Table>
+			<tpl:Table Order="1" Id="VMPayInst" Name="VM_PAY_INST" Description="" HeaderFormatRef="TableHeaderFormat">
+				<cmn:Prefix>
+					<cmn:Row Order="1">
+						<cmn:Cell Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="VM:"/>
+						</cmn:Cell>
+					</cmn:Row>
+					<cmn:Row Order="2">
+						<cmn:Cell Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value=" "/>
+						</cmn:Cell>
+					</cmn:Row>
+				</cmn:Prefix>
+				<cmn:Columns>
+					<cmn:Column Order="1" Id="AssetClass" Name="ASSET_CLASS" ColumnType="Static" DataType="String" GroupIndex="1" DataFormatRef="GroupColumnDataFormat">
+						<cmn:Header Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="Asset Class"/>
+						</cmn:Header>
+					</cmn:Column>
+					<cmn:Column Order="2" Id="AssetType" Name="ASSET_TYPE" ColumnType="Static" DataType="String">
+						<cmn:Header Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="Asset Type"/>
+						</cmn:Header>
+					</cmn:Column>
+					<cmn:Column Order="3" Id="PayInst" Name="PAY_INST" ColumnType="Dynamic" DataType="String"/>
+				</cmn:Columns>
+			</tpl:Table>
+			<tpl:Table Order="1" Id="IMPayInst" Name="IM_PAY_INST" Description="" HeaderFormatRef="TableHeaderFormat">
+				<cmn:Prefix>
+					<cmn:Row Order="1">
+						<cmn:Cell Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="IM:"/>
+						</cmn:Cell>
+					</cmn:Row>
+					<cmn:Row Order="2">
+						<cmn:Cell Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value=" "/>
+						</cmn:Cell>
+					</cmn:Row>
+				</cmn:Prefix>
+				<cmn:Columns>
+					<cmn:Column Order="1" Id="AssetClass" Name="ASSET_CLASS" ColumnType="Static" DataType="String" GroupIndex="1" DataFormatRef="GroupColumnDataFormat">
+						<cmn:Header Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="Asset Class"/>
+						</cmn:Header>
+					</cmn:Column>
+					<cmn:Column Order="2" Id="AssetType" Name="ASSET_TYPE" ColumnType="Static" DataType="String">
+						<cmn:Header Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="Asset Type"/>
+						</cmn:Header>
+					</cmn:Column>
+					<cmn:Column Order="3" Id="PayInst" Name="PAY_INST" ColumnType="Dynamic" DataType="String"/>
+				</cmn:Columns>
+			</tpl:Table>
+		</tpl:Block>
+		<tpl:Block Order="9" Id="PayInstFund" Name="FundPayment Instructions" PageBreak="true" Orientation="Landscape" Included="true" Customisable="false" TitleShown="true">
+			<tpl:Title FormatRef="BlockTitleFormat">
+				<tpl:Row>
+					<cmn:Cell>
+					</cmn:Cell>
+				</tpl:Row>
+			</tpl:Title>
+			<tpl:Table Order="1" Id="PayInstFund" Name="PAY_INST_FUND" MultiTable="true" PageTableNum="1" Description="" HeaderFormatRef="TableHeaderFormat">
+				<cmn:Prefix>
+					<cmn:Row Order="1">
+						<cmn:Cell Order="1">
+							<cmn:Field Order="1" FieldType="SimpleVariable" Value="FundAgreementDescription" FormatRef="BlockTitleFormat"/>
+						</cmn:Cell>
+					</cmn:Row>
+					<cmn:Row Order="1">
+						<cmn:Cell Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value=" "/>
+						</cmn:Cell>
+					</cmn:Row>
+				</cmn:Prefix>
+				<cmn:Columns>
+					<cmn:Column Order="1" Id="AssetClass" Name="ASSET_CLASS" ColumnType="Static" DataType="String" GroupIndex="1" DataFormatRef="GroupColumnDataFormat">
+						<cmn:Header Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="Asset Class"/>
+						</cmn:Header>
+					</cmn:Column>
+					<cmn:Column Order="2" Id="AssetType" Name="ASSET_TYPE" ColumnType="Static" DataType="String">
+						<cmn:Header Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="Asset Type"/>
+						</cmn:Header>
+					</cmn:Column>
+					<cmn:Column Order="3" Id="PayInst" Name="PAY_INST" ColumnType="Dynamic" DataType="String"/>
+				</cmn:Columns>
+			</tpl:Table>
+			<tpl:Table Order="1" Id="VMPayInstFund" Name="VM_PAY_INST_FUND" MultiTable="true" PageTableNum="1" Description="" HeaderFormatRef="TableHeaderFormat">
+				<cmn:Prefix>
+					<cmn:Row Order="1">
+						<cmn:Cell Order="1">
+							<cmn:Field Order="1" FieldType="SimpleVariable" Value="FundAgreementDescription" FormatRef="BlockTitleFormat"/>
+						</cmn:Cell>
+					</cmn:Row>
+					<cmn:Row Order="1">
+						<cmn:Cell Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value=" VM: "/>
+						</cmn:Cell>
+					</cmn:Row>
+				</cmn:Prefix>
+				<cmn:Columns>
+					<cmn:Column Order="1" Id="AssetClass" Name="ASSET_CLASS" ColumnType="Static" DataType="String" GroupIndex="1" DataFormatRef="GroupColumnDataFormat">
+						<cmn:Header Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="Asset Class"/>
+						</cmn:Header>
+					</cmn:Column>
+					<cmn:Column Order="2" Id="AssetType" Name="ASSET_TYPE" ColumnType="Static" DataType="String">
+						<cmn:Header Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="Asset Type"/>
+						</cmn:Header>
+					</cmn:Column>
+					<cmn:Column Order="3" Id="PayInst" Name="PAY_INST" ColumnType="Dynamic" DataType="String"/>
+				</cmn:Columns>
+			</tpl:Table>
+			<tpl:Row Order="1">
+				<cmn:Cell Order="1">
+					<cmn:Field Order="1" FieldType="Static" Value=" "/>
+				</cmn:Cell>
+			</tpl:Row>
+			<tpl:Table Order="1" Id="IMPayInstFund" Name="IM_PAY_INST_FUND" MultiTable="true" PageTableNum="1" Description="" HeaderFormatRef="TableHeaderFormat">
+				<cmn:Prefix>
+					<cmn:Row Order="1">
+						<cmn:Cell Order="1">
+							<cmn:Field Order="1" FieldType="SimpleVariable" Value="FundAgreementDescription" FormatRef="BlockTitleFormat"/>
+						</cmn:Cell>
+					</cmn:Row>
+					<cmn:Row Order="1">
+						<cmn:Cell Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value=" IM: "/>
+						</cmn:Cell>
+					</cmn:Row>
+				</cmn:Prefix>
+				<cmn:Columns>
+					<cmn:Column Order="1" Id="AssetClass" Name="ASSET_CLASS" ColumnType="Static" DataType="String" GroupIndex="1" DataFormatRef="GroupColumnDataFormat">
+						<cmn:Header Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="Asset Class"/>
+						</cmn:Header>
+					</cmn:Column>
+					<cmn:Column Order="2" Id="AssetType" Name="ASSET_TYPE" ColumnType="Static" DataType="String">
+						<cmn:Header Order="1">
+							<cmn:Field Order="1" FieldType="Static" Value="Asset Type"/>
+						</cmn:Header>
+					</cmn:Column>
+					<cmn:Column Order="3" Id="PayInst" Name="PAY_INST" ColumnType="Dynamic" DataType="String"/>
+				</cmn:Columns>
+			</tpl:Table>
+		</tpl:Block>
+	</tpl:Body>
+	
+	<tpl:Footer FormatRef="DefaultFormat">
+		<tpl:Row Order="1">
+			<cmn:Cell Order="1">
+				<cmn:Field Order="1" FieldType="SimpleVariable" Value="LetterFooter" />
+			</cmn:Cell>
+		</tpl:Row>
+		<tpl:Row Order="2"  FormatRef="SoftwareVenderFormat">
+			<cmn:Cell Order="1">
+				<cmn:Field Order="1" FieldType="Static" Value="Powered by "/>
+				<cmn:Field Order="2" FieldType="SimpleVariable" Value="SoftwareVender"/>
+			</cmn:Cell>
+		</tpl:Row>
+	</tpl:Footer>	
+	
+	<tpl:Formats>
+		<fmt:Format Id="DefaultFormat" HAlign="Left" VAlign="Center" BorderWidth="0" ImageMaxWidth="110" ImageMaxHeight="110" LineColorAlternant="false" OddLineBackColor="255,255,255" EvenLineBackColor="210,210,210">
+			<fmt:Font Family="Times-Roman" Size="7" Bold="false" Italic="false" Underlined="false" ForeColor="0,0,0" BackColor="255,255,255"/>
+		</fmt:Format>
+		<fmt:Format Id="PrcLogoFormat" HAlign="Right" ImageMaxWidth="120" ImageMaxHeight="30"/>
+		<fmt:Format Id="SecondLogoFormat" HAlign="Right" ImageMaxWidth="60" ImageMaxHeight="60"/>
+		<fmt:Format Id="PrcContactSignFormat" HAlign="Left" ImageMaxWidth="60" ImageMaxHeight="60"/>
+		<fmt:Format Id="AddiPrcContactSignFormat" HAlign="Right" ImageMaxWidth="60" ImageMaxHeight="60"/>
+		<fmt:Format Id="RightAlignFormat" HAlign="Right"></fmt:Format>
+		<fmt:Format Id="RightAlignColumnFormat" HAlign="Right"></fmt:Format>
+		<fmt:Format Id="BlockTitleFormat" HAlign="Center">
+			<fmt:Font Bold="true"/>
+		</fmt:Format>
+		<fmt:Format Id="BlockLinkFormat">
+			<fmt:Font Underlined="true" ForeColor="0,0,255"/>
+		</fmt:Format>
+		<fmt:Format Id="SoftwareVenderFormat" HAlign="Center"></fmt:Format>
+		<fmt:Format Id="AddiPrcContactFormat" HAlign="Right"/>
+		<fmt:Format Id="TableHeaderFormat">
+			<fmt:Font ForeColor="255,255,255" BackColor="100,100,100"/>
+		</fmt:Format>
+		<fmt:Format Id="GroupColumnDataFormat">
+			<fmt:Font Bold="true"/>
+		</fmt:Format>
+		<fmt:Format Id="EligibleReqTableDataFormat" LineColorAlternant="true" OddLineBackColor="255,255,255" EvenLineBackColor="210,210,210"></fmt:Format>
+		<fmt:Format Id="TopBorderLineFormat" BorderWidthBottom="0" BorderWidthLeft="0" BorderWidthRight="0" BorderWidthTop="0.5"/>
+	</tpl:Formats>
+		
+	<tpl:Settings>
+		<tpl:DataPatterns>
+			<tpl:Pattern DataType="Integer" FormatPattern="#,##0"/>
+			<tpl:Pattern DataType="Float" FormatPattern="#,##0.00"/>
+			<tpl:Pattern DataType="Double" FormatPattern="#,##0.00"/>
+			<tpl:Pattern DataType="Currency" FormatPattern="#,##0.00"/>
+			<tpl:Pattern DataType="Date" FormatPattern="dd/MM/yy"/>
+			<tpl:Pattern DataType="Time" FormatPattern="HH:mm:ss"/>
+			<tpl:Pattern DataType="TimeStamp" FormatPattern="dd/MM/yy HH:mm:ss"/>
+		</tpl:DataPatterns>
+	</tpl:Settings>		
+</tpl:Template>		

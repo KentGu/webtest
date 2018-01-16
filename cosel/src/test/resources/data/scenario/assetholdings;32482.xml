@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+
+		<agreementSearch id="agreement.search.by.description">
+			<description>
+				<filter>32482agreement</filter>
+			</description>
+		</agreementSearch>
+
+		<agreementSearchResult id="agreement.search.result">
+			<description>32482agreement</description>
+		</agreementSearchResult>
+
+
+		<exposureEventDetail id="even.with.delivery.1m">
+			<action>Delivery(Excess)</action>
+			<agreementRequirement>-1,000,000.00</agreementRequirement>
+		</exposureEventDetail>
+
+
+
+		<bookingDetail id="bulk.booking.with.32482.instrument">
+			<instrumentSearch>
+				<instrument>
+					<filter>32482bondinstrument</filter>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>1m</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+
+		<exposureManagementMessage id="warning.message.with.instrument">
+			<messageDetail>
+				<index>1.1</index>
+				<message>The Issuer of this instrument is not eligible due to Close Link Correlation Rules. The Issuer has close links to the Principal or Counterparty (Rule Detail: ) (Actual: Issuer 32482org3roletypeissuer, Party 32482org1typeprincipalcloselinkorg3) (Source: Agreement).</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+
+
+
+	</scenarioData>
+</dataBean>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <agreementSearch id="filter.agmt.description">
+            <description>
+                <filter id="agrDesc1">16020_1</filter>
+            </description>
+        </agreementSearch>
+        <agreementSearchResult id="agreement.description">
+            <description ref="agrDesc1"/>
+        </agreementSearchResult>
+
+        <agreement>
+            <counterparty>
+                <linkText id="agreement.counterparty">QTPCounterparty</linkText>
+            </counterparty>
+            <!--<agreementId id="agreement.id">580</agreementId>-->
+            <externalId id="agreement.external.id">16020_1</externalId>
+        </agreement>
+
+        <exposureEventDetail id="Delivery.2m">
+            <action>Delivery</action>
+            <agreementRequirement>-2,000,000.00</agreementRequirement>
+            <eventId id="eventId.delivery"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="Return.1m">
+            <action>Return</action>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <eventId id="eventId.return"/>
+        </exposureEventDetail>
+
+        <feedAssetBooking id="feed.cash.Delivery.2k.withEventId">
+            <!--<agreementId ref="agreement.id"/>-->
+            <external_ID ref="agreement.external.id"/>
+            <!--<counterparty ref="agreement.counterparty"/>-->
+            <assetClass ref="cash.name"/>
+            <assetType>CASH-EUR</assetType>
+            <!--<instrumentID></instrumentID>-->
+            <parAmount id="feed.asset.booking.par.amnt">2000</parAmount>
+            <!--<imParAmount></imParAmount>-->
+            <movement id="feed.asset.booking.movement">Delivery</movement>
+            <settlementDate>2099-09-09</settlementDate>
+            <!--<valuationPerc></valuationPerc>-->
+            <settlementStatus>PENDING</settlementStatus>
+            <!--<description></description-->
+            <!--<description2></description2>-->
+            <!--<description3></description3>-->
+            <!--<settlementComment></settlementComment>-->
+            <!--<settlementDateAbbriviated></settlementDateAbbriviated>-->
+            <!--<creationDate></creationDate>-->
+            <!--<previousTicketId></previousTicketId>-->
+            <!--<moveDescription></moveDescription>-->
+            <!--<placeOfSettlement>place</placeOfSettlement>-->
+            <linkToEvent>true</linkToEvent>
+            <Event ref="eventId.delivery"/>
+            <!--<Model></Model>-->
+            <!--<resetDate></resetDate>-->
+            <!--<market></market>-->
+            <!--<WHT></WHT>-->
+            <!--<cashMovementType></cashMovementType>-->
+            <!--<component></component>-->
+            <!--<rehypothecated>true</rehypothecated>-->
+            <!--<assetOwner id="feed.asset.booking.asset.owner" ref="org.issuer1.lname"/>-->
+            <!--<BookingUDFFields>-->
+                <!--<udfName></udfName>-->
+                <!--<udfValue></udfValue>-->
+            <!--</BookingUDFFields>-->
+            <!--<postApprovalStatus></postApprovalStatus>-->
+        </feedAssetBooking>
+
+        <feedResult id="feed.cash.Delivery.2k.withEventId.passWithoutFullDisputeWarning">
+            <fileUploaded id="feed.asset.booking.result.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedStatus id="feed.cash.Delivery.2k.withEventId.statusResult.passWithoutFullDisputeWarning">
+            <status>Successful</status>
+            <valuationFile ref="feed.asset.booking.result.file"/>
+            <description>Asset Booking</description>
+            <successfulFeed>
+                <total>1</total>
+                <entry>
+                    <content>ParAmount:[!asset.booking.par.amnt!], : Attempting to make a booking for a full dispute event.</content>
+                    <parameter>
+                        <parameterName>!asset.booking.par.amnt!</parameterName>
+                        <parameterValue>2000.00</parameterValue>
+                    </parameter>
+                </entry>
+            </successfulFeed>
+        </feedStatus>
+
+
+        <assetBookingSummary id="feed.asset.booking.holding.summary.Delivery.withEventId">
+            <assetType>CASH-EUR</assetType>
+            <movement ref="feed.asset.booking.movement"/>
+            <status>Pending</status>
+            <bookingSource>Fed</bookingSource>
+            <marketValue>-2,000.00</marketValue>
+            <collateralValue>-2,000.00</collateralValue>
+        </assetBookingSummary>
+
+        <bookingDetail id="check.feed.asset.booking.detail.Delivery.withEventId">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <nominalAmount>-2000</nominalAmount>
+                    <movement>Delivery</movement>
+                </bookingInformationDetail>
+                <settlementDate>9/9/2099</settlementDate>
+                <bookingSource>Fed</bookingSource>
+                <settlementStatusInfo>
+                    <settlementStatus>Pending</settlementStatus>
+                </settlementStatusInfo>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="check.feed.asset.booking.detail.Return.withEventId">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <nominalAmount>-2000</nominalAmount>
+                    <movement>Return</movement>
+                </bookingInformationDetail>
+                <settlementDate>9/9/2099</settlementDate>
+                <bookingSource>Fed</bookingSource>
+                <settlementStatusInfo>
+                    <settlementStatus>Pending</settlementStatus>
+                </settlementStatusInfo>
+            </bookingInformation>
+        </bookingDetail>
+
+        <taskSchedulerDetail id="task.feed.asset.booking.delivery.withEventId.2k">
+            <type>Task Manager</type>
+            <taskName>Import Collateral Booking</taskName>
+            <additionalInfo>/home/ec2-user/Feed/AssetBooking</additionalInfo>
+        </taskSchedulerDetail>
+
+        <taskSchedulerMessage id="task.feed.asset.booking.message.delivery.withEventId.2k">
+            <!--<message>Asset Bookings: Import Asset Bookings: Imported 1 Asset Bookings from :(\S+).(\S+)</message>-->
+            <message>Import Asset Bookings: Imported 1 Asset Bookings \(Warning message appeared, please look up feed status for details\)</message>
+        </taskSchedulerMessage>
+        <variable id="file"/>
+
+        <feedStatus id="task.feed.cash.Delivery.2k.withEventId.statusResult.passWithoutFullDisputeWarning">
+            <status>Successful</status>
+            <valuationFile ref="file"/>
+            <description>Asset Booking</description>
+            <successfulFeed>
+                <total>1</total>
+                <entry>
+                    <content>ParAmount:[!asset.booking.par.amnt!], : Attempting to make a booking for a full dispute event.</content>
+                    <parameter>
+                        <parameterName>!asset.booking.par.amnt!</parameterName>
+                        <parameterValue>2000.00</parameterValue>
+                    </parameter>
+                </entry>
+            </successfulFeed>
+        </feedStatus>
+    </scenarioData>
+</dataBean>

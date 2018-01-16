@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/feeds.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <feedHolidayCentre id="feed.holiday.centres.new.year">
+            <city id="feed.holiday.centres.new.year.city">T5322CityCSV</city>
+            <date id="feed.holiday.centres.new.year.date">1992-01-01</date>
+            <description id="feed.holiday.centres.new.year.desc">New Year</description>
+        </feedHolidayCentre>
+
+        <feedResult id="feed.holiday.centres.new.year.result">
+            <fileUploaded id="feed.holiday.centres.new.year.result.file"/>
+            <unsuccessfulImports>0</unsuccessfulImports>
+        </feedResult>
+
+        <feedStatus id="feed.holiday.centres.new.year.status">
+            <status>Successful</status>
+            <valuationFile ref="feed.holiday.centres.new.year.result.file"/>
+            <description>feed holidays</description>
+            <successfulFeed>
+                <total>1</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <holidayCentre id="check.feed.holiday.centres.new.year">
+            <holidayCentreName ref="feed.holiday.centres.new.year.city"/>
+            <holidayCentreDescription ref="feed.holiday.centres.new.year.city"/>
+            <holiday>
+                <date ref="feed.holiday.centres.new.year.date"/>
+                <description ref="feed.holiday.centres.new.year.desc"/>
+            </holiday>
+        </holidayCentre>
+    </scenarioData>
+</dataBean>

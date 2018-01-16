@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/taskScheduler.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+
+        <taskSchedulerDetail id="task.feed.agreement">
+            <type>Task Manager</type>
+            <taskName>Import Agreements</taskName>
+            <additionalInfo id="task.feed.agreement.server.path">/home/ec2-user/Feed/FeedAgreement</additionalInfo>
+        </taskSchedulerDetail>
+
+        <variable id="file"/>
+
+        <taskSchedulerMessage id="task.feed.agreement.message">
+            <message>Agreements: Import agreements: Imported 1 agreements from :(\S+).xml( \(Warning message appeared, please look up feed status for details\))?</message>
+        </taskSchedulerMessage>
+
+        <feedAgreement id="feed.fcm.agreement.principal.transfer.ccy.gbp.counterparty.transfer.usd">
+            <principal ref="org.p1.lname"/>
+            <counterpartycode ref="org.c1.lname"/>
+            <businessLine>Clearing</businessLine>
+            <CCP>LCH</CCP>
+            <agreement_description id="feed.fcm.agreement.principal.transfer.ccy.gbp.counterparty.transfer.usd.desc" random="true" prefix="t32586_otcAgr_"/>
+            <region ref="region.test1.name"/>
+            <legal_id id="feed.fcm.agreement.principal.transfer.ccy.gbp.counterparty.transfer.usd.external.id">T32586_FCM_Not_Net_Agreement</legal_id>
+            <master_documentation ref="master.documentation.1987.isda.master.name"/>
+            <credit_support_documentation ref="credit.documentation.margin.provisions.name"/>
+            <netting_MTM_And_IA>Not-Net</netting_MTM_And_IA>
+            <TSA>true</TSA>
+            <TSARule ref="TSAruleName"/>
+            <prcTransferCcy id="feed.fcm.agreement.principal.transfer.ccy.gbp.counterparty.transfer.usd.prc.trans.ccy" ref="ccy.gbp.name"/>
+            <cptyTransferCcy id="feed.fcm.agreement.principal.transfer.ccy.gbp.counterparty.transfer.usd.cpty.trans.ccy" ref="ccy.usd.name"/>
+            <prcTerminationCcy id="feed.fcm.agreement.principal.transfer.ccy.gbp.counterparty.transfer.usd.prc.termi.ccy" ref="ccy.eur.name"/>
+            <cptyTerminationCcy></cptyTerminationCcy>
+            <base_currency ref="ccy.usd.name"/>
+            <original_date random="true" variation="t"/>
+            <im_frequency>Daily</im_frequency>
+            <frequency>Daily</frequency>
+            <im_frequency_start random="true" variation="t"/>
+            <frequency_start random="true" variation="t"/>
+            <im_notification_time>13.00</im_notification_time>
+            <notification_time>13.00</notification_time>
+            <im_resolution_time>10.00</im_resolution_time>
+            <resolution_time>10.00</resolution_time>
+            <im_resolution_day>same</im_resolution_day>
+            <resolution_day>same</resolution_day>
+            <time_zone ref="system.staticData.timeZone.cet.name"/>
+            <holiday_centre ref="hc.test1.name"/>
+            <non_workingday_adjusttype>None</non_workingday_adjusttype>
+            <product>
+                <productName ref="product.test1.name"/>
+                <settlementPeriod>T</settlementPeriod>
+            </product>
+            <asset>
+                <assetName ref="bond.usd.name"/>
+                <applicableType></applicableType>
+                <applicableParty></applicableParty>
+                <settlementDateAbbriviated>T</settlementDateAbbriviated>
+            </asset>
+            <rounding_delivery>Up</rounding_delivery>
+            <rounding_recall>Down</rounding_recall>
+            <settlementInstructions>
+                <settlementInstruction>
+                    <bookingType>VM</bookingType>
+                    <direction>Call/Return</direction>
+                    <bucket>VM Call/Return</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>VM</bookingType>
+                    <direction>Delivery/Recall</direction>
+                    <bucket>VM Recall/Delivery</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>IM</bookingType>
+                    <direction>Call/Return</direction>
+                    <bucket>IM Call/Return</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>IM</bookingType>
+                    <direction>Delivery/Recall</direction>
+                    <bucket>IM Recall/Delivery</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>VM Interest</bookingType>
+                    <direction>Pay</direction>
+                    <bucket>Pay</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>VM Interest</bookingType>
+                    <direction>Receive</direction>
+                    <bucket>Receive</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>IM Interest</bookingType>
+                    <direction>Pay</direction>
+                    <bucket>Pay</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>IM Interest</bookingType>
+                    <direction>Receive</direction>
+                    <bucket>Receive</bucket>
+                </settlementInstruction>
+            </settlementInstructions>
+            <distMedium>Email</distMedium>
+            <applyOrgCL>false</applyOrgCL>
+        </feedAgreement>
+
+        <feedStatus id="feed.fcm.agreement.principal.transfer.ccy.gbp.counterparty.transfer.usd.status">
+            <systemName>QTP</systemName>
+            <status>Successful</status>
+            <valuationFile ref="feed.fcm.agreement.principal.transfer.ccy.gbp.counterparty.transfer.usd.result.file"/>
+            <description>Agreements</description>
+            <successfulFeed>
+                <importType>Agreements</importType>
+                <valuationFile ref="feed.fcm.agreement.principal.transfer.ccy.gbp.counterparty.transfer.usd.result.file"/>
+                <total>1</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <agreementSearch id="feed.fcm.agreement.principal.transfer.ccy.gbp.counterparty.transfer.usd.search">
+            <description>
+                <filter ref="feed.fcm.agreement.principal.transfer.ccy.gbp.counterparty.transfer.usd.desc"/>
+                <linkText ref="feed.fcm.agreement.principal.transfer.ccy.gbp.counterparty.transfer.usd.desc"/>
+            </description>
+            <externalId ref="feed.fcm.agreement.principal.transfer.ccy.gbp.counterparty.transfer.usd.external.id"/>
+        </agreementSearch>
+
+        <agreementSearchResult id="feed.fcm.agreement.principal.transfer.ccy.gbp.counterparty.transfer.usd.search.result">
+            <description ref="feed.fcm.agreement.principal.transfer.ccy.gbp.counterparty.transfer.usd.desc"/>
+            <externalId ref="feed.fcm.agreement.principal.transfer.ccy.gbp.counterparty.transfer.usd.external.id"/>
+        </agreementSearchResult>
+
+        <agreement id="agreement.complete"/>
+
+        <agreementSummary id="feed.fcm.agreement.principal.transfer.ccy.gbp.counterparty.transfer.usd.summary">
+            <documentationDetails>
+                <vmPrincipalTransferCurrency ref="ccy.gbp.desc"/>
+                <vmCounterpartyTransferCurrency ref="ccy.usd.desc"/>
+                <principalTerminationCurrency ref="ccy.eur.desc"/>
+                <counterpartyTerminationCurrency> </counterpartyTerminationCurrency>
+            </documentationDetails>
+        </agreementSummary>
+        
+    </scenarioData>
+</dataBean>

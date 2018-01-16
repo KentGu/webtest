@@ -1,0 +1,5 @@
+pre#OrgRating_Before#select count(*) from OrgCreditRating
+
+post#OrgRating_After#select count(*) from OrgCreditRating
+
+val#1#`expr ${OrgRating_After} - ${OrgRating_Before}`

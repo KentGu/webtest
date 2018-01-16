@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/exposureManagement.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <agreement id="agr24092.multiModel.fcm">
+            <agreementId id="agrid">2582</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="model">
+            <column>Model</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="TSA.Delivery.top">
+            <action>Cashflow Delivery(Excess)</action>
+            <agreementRequirement>-2,388.45</agreementRequirement>
+            <model></model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="TSA.Delivery.top.agreementRequirement.2388.45.pendingReview">
+            <action>Cashflow Delivery(Excess)</action>
+            <agreementRequirement>-2,388.45</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model></model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="TSA.Delivery.m4.agreementRequirement.4000.pendingReview">
+            <action>Cashflow Delivery(Excess)</action>
+            <agreementRequirement>-4,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model>m4</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="TSA.Call.m3.agreementRequirement.3000.pendingReview">
+            <action>Cashflow Call(Deficit)</action>
+            <agreementRequirement>3,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model>m3</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="TSA.Delivery.m2.agreementRequirement.2000.pendingReview">
+            <action>Cashflow Delivery(Excess)</action>
+            <agreementRequirement>-2,000.00</agreementRequirement>
+            <model>m2</model>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="TSA.Call.m1.agreementRequirement.1000.pendingReview">
+            <action>Cashflow Call(Deficit)</action>
+            <agreementRequirement>1,000.00</agreementRequirement>
+            <model>m1</model>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="TSA.Call.m1.agreementRequirement.1000.waived">
+            <action>Cashflow Call(Deficit)</action>
+            <agreementRequirement>1,000.00</agreementRequirement>
+            <model>m1</model>
+            <comments>t</comments>
+            <callStatus>Waived</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="TSA.Delivery.m2.agreementRequirement.2000.waived">
+            <action>Cashflow Delivery(Excess)</action>
+            <agreementRequirement>-2,000.00</agreementRequirement>
+            <model>m2</model>
+            <callStatus>Waived</callStatus>
+            <comments>t</comments>
+        </exposureEventDetail>
+
+        <exposureEventSearch id="agr24092.completed">
+            <agrId ref="agrid"/>
+        </exposureEventSearch>
+
+        <exposureEventDetail id="TSA.Delivery.top.agreementRequirement.2388.45.completed.notdisplay" apply="false">
+            <action>Cashflow Delivery(Excess)</action>
+            <agreementRequirement>-2,388.45</agreementRequirement>
+            <callStatus>Completed</callStatus>
+            <model></model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="TSA.Call.m3.agreementRequirement.3000.completed">
+            <action>Cashflow Call(Deficit)</action>
+            <agreementRequirement>3,000.00</agreementRequirement>
+            <callStatus>Completed</callStatus>
+            <comments>t</comments>
+            <model>m3</model>
+        </exposureEventDetail>
+
+        <exposureEventSearch id="agr24092.allFilter">
+            <agrId ref="agrid"/>
+        </exposureEventSearch>
+
+        <exposureEventDetail id="TSA.Delivery.m4.agreementRequirement.4000.MarginRequestIssued">
+            <action>Cashflow Delivery(Excess)</action>
+            <agreementRequirement>-4,000.00</agreementRequirement>
+            <callStatus>Margin Request Issued</callStatus>
+            <model>m4</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="TSA.Delivery.m4.agreementRequirement.4000.MarginRequestConfirmed">
+            <action>Cashflow Delivery(Excess)</action>
+            <agreementRequirement>-4,000.00</agreementRequirement>
+            <callStatus>Margin Request Confirmed</callStatus>
+            <model>m4</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="TSA.Delivery.m4.agreementRequirement.4000.noCall">
+            <action>Cashflow Delivery(Excess)</action>
+            <agreementRequirement>-4,000.00</agreementRequirement>
+            <callStatus>No Call Required</callStatus>
+            <model>m4</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="TSA.Delivery.top.agreementRequirement.2388.45.completed">
+            <action>Cashflow Delivery(Excess)</action>
+            <agreementRequirement>-2,388.45</agreementRequirement>
+            <callStatus>Completed</callStatus>
+            <model></model>
+        </exposureEventDetail>
+
+
+    </scenarioData>
+</dataBean>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+		<loginCredential id="userWithoutAssetExcessbookingPrivilege">
+			<username>t10958</username>
+			<password>2</password>
+		</loginCredential>
+
+		<agreement id="agr10958.unmbrella.MultiFund">
+			<agreementId>2504</agreementId>
+		</agreement>
+
+		<exposureEventDetail id="allEventForFCM">
+			<expand>true</expand>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="DeliveryExcess.agreementRequirement.2m">
+			<action>Delivery(Excess)</action>
+			<agreementRequirement>-2,000,000.00</agreementRequirement>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="Delivery.agreementRequirement.2m">
+			<action>Delivery</action>
+			<agreementRequirement>-2,000,000.00</agreementRequirement>
+		</exposureEventDetail>
+
+
+		<bookingDetail id="deliveryBooking1.umAgr.bond.usd">
+			<instrumentSearch>
+				<instrument>
+					<filter>qtp-Bond-Usd-Instrument</filter>
+					<linkText>qtp-Bond-Usd-Instrument,qtp_Market</linkText>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>Delivery(Excess)</bookingMovement>
+					<bookingNumber>1.1</bookingNumber>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="deliveryBooking1.fundAgr.notional.700000">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>Delivery(Excess)</bookingMovement>
+					<bookingNumber>10958_um_1_fund1</bookingNumber>
+					<nominalAmount>700000</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="deliveryBooking1.umAgr.bond.usd.clickPlusButton">
+			<bookingInformation>
+				<bookingInformationDetail clickPlusButton="true">
+					<bookingMovement>Delivery(Excess)</bookingMovement>
+					<bookingNumber>1.1</bookingNumber>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="deliveryBooking2.umAgr.bond.usd">
+			<instrumentSearch>
+				<instrument>
+					<filter>qtp-Bond-Usd-Instrument</filter>
+					<linkText>qtp-Bond-Usd-Instrument,qtp_Market</linkText>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>Delivery(Excess)</bookingMovement>
+					<bookingNumber>1.2</bookingNumber>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="deliveryBooking2.fundAgr.notional.300000">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>Delivery(Excess)</bookingMovement>
+					<bookingNumber>10958_um_1_fund1</bookingNumber>
+					<valueToLocateBooking>1,300,000.00</valueToLocateBooking>
+					<nominalAmount>300000</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<exposureManagementMessage id="warning.message.bookingDoesNotMeetRequiredAmount">
+			<messageDetail>
+				<type>Warning</type>
+				<message>10958_um_1: Attempting to make a booking that does not meet the Required Amount. (Expected: -2,000,000.00, Actual: -1,000,000.00) Continue?</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<exposureManagementMessage id="overrideWarning">
+			<messageDetail>
+				<overrideWarning>true</overrideWarning>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<assetBookingSummary id="asset.type.bond.USD">
+			<assetType>qtp_bond_usd</assetType>
+		</assetBookingSummary>
+
+		<assetBookingSummary id="asset.booking.summary.bond.usd.nominal.0.7m.delivery">
+			<assetType>qtp_bond_usd</assetType>
+			<nominalAmount>-700,000.00</nominalAmount>
+			<movement>Delivery</movement>
+		</assetBookingSummary>
+
+		<assetBookingSummary id="asset.booking.summary.bond.usd.nominal.0.3m.delivery">
+			<assetType>qtp_bond_usd</assetType>
+			<nominalAmount>-300,000.00</nominalAmount>
+			<movement>Delivery</movement>
+		</assetBookingSummary>
+
+		<bookingDetail id="deliveryBooking3.umAgr.bond.usd">
+			<instrumentSearch>
+				<instrument>
+					<filter>qtp-Bond-Usd-Instrument</filter>
+					<linkText>qtp-Bond-Usd-Instrument,qtp_Market</linkText>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>Delivery(Excess)</bookingMovement>
+					<bookingNumber>1.1</bookingNumber>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="deliveryBooking3.fundAgr.notional.500000">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>Delivery(Excess)</bookingMovement>
+					<bookingNumber>10958_um_1_fund1</bookingNumber>
+					<nominalAmount>500000</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="deliveryBooking3.umAgr.bond.usd.clickPlusButton">
+			<bookingInformation>
+				<bookingInformationDetail clickPlusButton="true">
+					<bookingMovement>Delivery(Excess)</bookingMovement>
+					<bookingNumber>1.1</bookingNumber>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="deliveryBooking4.umAgr.bond.usd">
+			<instrumentSearch>
+				<instrument>
+					<filter>qtp-Bond-Usd-Instrument</filter>
+					<linkText>qtp-Bond-Usd-Instrument,qtp_Market</linkText>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>Delivery(Excess)</bookingMovement>
+					<bookingNumber>1.2</bookingNumber>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="deliveryBooking4.fundAgr.notional.800000">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>Delivery(Excess)</bookingMovement>
+					<bookingNumber>10958_um_1_fund1</bookingNumber>
+					<valueToLocateBooking>500,000.00</valueToLocateBooking>
+					<nominalAmount>800000</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<exposureManagementMessage id="warning.message.bookingExceedRequiredAmount">
+			<messageDetail>
+				<type>Error</type>
+				<message>Attempting to make a booking that exceeds the required amount (Expected: -2,000,000.00, Actual: -2,300,000.00). You do not have the privilege to make this booking.</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+
+
+
+	</scenarioData>
+</dataBean>

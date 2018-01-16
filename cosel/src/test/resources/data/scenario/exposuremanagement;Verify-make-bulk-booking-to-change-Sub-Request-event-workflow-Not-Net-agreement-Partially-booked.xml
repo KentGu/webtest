@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/exposureManagement.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <agreement id="agr26531.notnet">
+            <agreementId id="agrid">2596</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="Source">
+            <column>Source</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="bookedAmountFirstLeg">
+            <column>Booked Amount First Leg</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="bookedAmountSecondLeg">
+            <column>Booked Amount Second Leg</column>
+        </exposureEventDetail>
+
+        <substitutionEventSearch id="agr26531_recall">
+            <description>
+                <filter>26531_1</filter>
+                <linkText>26531_1</linkText>
+            </description>
+        </substitutionEventSearch>
+
+        <substitutionEventDetail id="bond.usd.1.recall">
+            <instrumentId id="26531_bond_usd_1">26531_bond_usd_1,m1</instrumentId>
+        </substitutionEventDetail>
+
+        <exposureEventDetail id="substitutionRequest.bond.usd.created">
+            <element ref="26531_bond_usd_1"/>
+            <action>Substitution Request</action>
+            <source>Manual</source>
+        </exposureEventDetail>
+
+        <bookingDetail id="firstLeg.Recall.bond.usd.vm.0.im.0">
+            <bookingInformation>
+                <bookingInformationDetail plusButtonIsDisplay="true" deleteButtonIsDisplay="true">
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <movement>Recall</movement>
+                    <movementIsDisabled>true</movementIsDisabled>
+                    <instrumentId disable="true" ref="26531_bond_usd_1"/>
+                    <vmValue>0.00</vmValue>
+                    <imValue>0.00</imValue>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="SecondLeg.Delivery">
+            <bookingInformation>
+                <bookingInformationDetail plusButtonIsDisplay="true" deleteButtonIsDisplay="true">
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <movement>Delivery</movement>
+                    <movementIsDisabled>true</movementIsDisabled>
+                    <instrumentId></instrumentId>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="bond.usd.AjaxSearchCheck">
+            <instrumentSearch>
+                <instrument>
+                    <filter>26531</filter>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <instrumentIdAjaxSearchList ref="26531_bond_usd_1"/>
+                </bookingInformationDetail>
+                <bookingInformationDetail>
+                    <instrumentIdAjaxSearchList ref="26531_bond_usd_1"/>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="cash.AjaxSearchCheck">
+            <instrumentSearch>
+                <instrument>
+                    <filter>CASH</filter>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <instrumentIdAjaxSearchList>CASH-USD</instrumentIdAjaxSearchList>
+                </bookingInformationDetail>
+                <bookingInformationDetail>
+                    <instrumentIdAjaxSearchList>CASH-GBP</instrumentIdAjaxSearchList>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+         <bookingDetail id="Recall.bond.usd.vmNotional.2m">
+            <bookingInformation>
+                <bookingInformationDetail clickPlusButton="true">
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <movement>Recall</movement>
+                    <vmAmount>2m</vmAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="Recall.bond.usd.imNotional.2m">
+            <instrumentSearch>
+                <instrument>
+                    <linkText ref="26531_bond_usd_1"/>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <instrumentId ref="26531_bond_usd_1"/>
+                    <movement>Recall</movement>
+                    <imAmount>2m</imAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="Delivery.cash.usd.vmNotional.4m">
+            <instrumentSearch>
+                <instrument>
+                    <filter>CASH-USD</filter>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <instrumentId></instrumentId>
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <movement>Delivery</movement>
+                    <vmAmount>4m</vmAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <exposureManagementMessage id="warning.message.leg1Andleg2Difference.-2m">
+            <messageDetail>
+                <level>Warning</level>
+                <message>The collateral booking cannot be completed. The net value of items booked for delivery is not equal to receipt. The VM difference is 2,000,000.00, IM difference is -2,000,000.00.</message>
+            </messageDetail>
+        </exposureManagementMessage>
+
+        <exposureManagementMessage id="overrideWarning">
+            <messageDetail>
+                <overrideWarning>true</overrideWarning>
+            </messageDetail>
+        </exposureManagementMessage>
+
+        <exposureEventDetail id="substitutionRequest.bond.usd.PartiallyBooked.firstLeg.4m.secondLeg.-4m">
+            <element ref="26531_bond_usd_1"/>
+            <action>Substitution Request</action>
+            <source>Manual</source>
+            <callStatus>Partially Booked</callStatus>
+            <bookedAmountFirstLeg>4,000,000.00</bookedAmountFirstLeg>
+            <bookedAmountSecondLeg>-4,000,000.00</bookedAmountSecondLeg>
+        </exposureEventDetail>
+
+        <bookingDetail id="Recall.bond.usd.vmNotional.1m">
+            <bookingInformation>
+                <bookingInformationDetail clickPlusButton="true">
+                    <instrumentId ref="26531_bond_usd_1"/>
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <requiredAmount>0.00</requiredAmount>
+                    <movement>Recall</movement>
+                    <vmAmount>1m</vmAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="Recall.bond.usd.imNotional.2m.newlyAdd">
+            <instrumentSearch>
+                <instrument>
+                    <linkText ref="26531_bond_usd_1"/>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <instrumentId ref="26531_bond_usd_1"/>
+                    <bookingNumber>1.3</bookingNumber>
+                    <requiredAmount>0.00</requiredAmount>
+                    <movement>Recall</movement>
+                    <imAmount>2m</imAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="Delivery.cash.usd.vmNotional.1m">
+            <instrumentSearch>
+                <instrument>
+                    <filter>CASH-USD</filter>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail clickPlusButton="true">
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <instrumentId></instrumentId>
+                    <movement>Delivery</movement>
+                    <vmAmount>1m</vmAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="Delivery.cash.usd.imNotional.2m">
+            <instrumentSearch>
+                <instrument>
+                    <filter>CASH-USD</filter>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <instrumentId></instrumentId>
+                    <movement>Delivery</movement>
+                    <imAmount>2m</imAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <exposureEventDetail id="substitutionRequest.bond.usd.PartiallyBooked.firstLeg.7m.secondLeg.-7m">
+            <element ref="26531_bond_usd_1"/>
+            <action>Substitution Request</action>
+            <source>Manual</source>
+            <callStatus>Partially Booked</callStatus>
+            <bookedAmountFirstLeg>7,000,000.00</bookedAmountFirstLeg>
+            <bookedAmountSecondLeg>-7,000,000.00</bookedAmountSecondLeg>
+        </exposureEventDetail>
+
+        <bookingDetail id="Recall.bond.usd.booking1.readonly">
+            <bookingInformation>
+                <settlementDate disable="true">t</settlementDate>
+                <bookingInformationDetail>
+                    <bookingMovement>Historical Booking of the event</bookingMovement>
+                    <instrumentId ref="26531_bond_usd_1"/>
+                    <movement>Recall</movement>
+                    <movementIsDisabled>true</movementIsDisabled>
+                    <nominalAmount disable="true">2,000,000.00</nominalAmount>
+                    <vmAmount disable="true">2,000,000.00</vmAmount>
+                    <imAmount disable="true">0.00</imAmount>
+                    <prcSSI disable="true">IM Recall/Delivery</prcSSI>
+                    <cptySSI disable="true">IM Recall/Delivery</cptySSI>
+                    <value disable="true">2,000,000.00</value>
+                    <vmValue disable="true">2,000,000.00</vmValue>
+                    <imValue disable="true">0.00</imValue>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="Recall.bond.usd.booking2.readonly">
+            <bookingInformation>
+                <settlementDate disable="true">t</settlementDate>
+                <bookingInformationDetail>
+                    <bookingMovement>Historical Booking of the event</bookingMovement>
+                    <instrumentId ref="26531_bond_usd_1"/>
+                    <movement>Recall</movement>
+                    <movementIsDisabled>true</movementIsDisabled>
+                    <nominalAmount disable="true">2,000,000.00</nominalAmount>
+                    <vmAmount disable="true">0.00</vmAmount>
+                    <imAmount disable="true">2,000,000.00</imAmount>
+                    <prcSSI disable="true">IM Recall/Delivery</prcSSI>
+                    <cptySSI disable="true">IM Recall/Delivery</cptySSI>
+                    <value disable="true">2,000,000.00</value>
+                    <vmValue disable="true">0.00</vmValue>
+                    <imValue disable="true">2,000,000.00</imValue>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="Delivery.cash.usd.booking3.readonly">
+            <bookingInformation>
+                <settlementDate disable="true">t</settlementDate>
+                <bookingInformationDetail>
+                    <bookingMovement>Historical Booking of the event</bookingMovement>
+                    <instrumentId>CASH-USD</instrumentId>
+                    <movement>Delivery</movement>
+                    <movementIsDisabled>true</movementIsDisabled>
+                    <nominalAmount disable="true">-4,000,000.00</nominalAmount>
+                    <vmAmount disable="true">-4,000,000.00</vmAmount>
+                    <imAmount disable="true">0.00</imAmount>
+                    <prcSSI disable="true">IM Recall/Delivery</prcSSI>
+                    <cptySSI disable="true">IM Recall/Delivery</cptySSI>
+                    <value disable="true">-4,000,000.00</value>
+                    <vmValue disable="true">-4,000,000.00</vmValue>
+                    <imValue disable="true">0.00</imValue>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+    </scenarioData>
+</dataBean>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/exposureManagement.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <agreement id="agr20782.multiModel.fcm">
+            <agreementId id="agrid">2665</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="model">
+            <column>Model</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="notificationStatus">
+            <column>Statement Notification Status</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.call.top">
+            <action>VM Call(Deficit)</action>
+            <agreementRequirement>2,030,399.14</agreementRequirement>
+            <model></model>
+            <eventId id="vm.call.top.event"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.call.top.agreementRequirement.2030399.14.pendingReview">
+            <action>VM Call(Deficit)</action>
+            <agreementRequirement>2,030,399.14</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model></model>
+            <eventId ref="vm.call.top.event"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.call.m1.agreementRequirement.1m.pendingReview">
+            <action>VM Call(Deficit)</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model>m1</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.call.top">
+            <action>IM Call</action>
+            <agreementRequirement>587,125.18</agreementRequirement>
+            <model></model>
+            <eventId id="im.call.top.event"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.call.top.agreementRequirement.587125.18.pendingReview">
+            <action>IM Call</action>
+            <agreementRequirement>587,125.18</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model></model>
+            <eventId ref="im.call.top.event"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.call.m2.agreementRequirement.0.7m.pendingReview">
+            <action>IM Call</action>
+            <agreementRequirement>700,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model>m2</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.call.top.agreementRequirement.2030399.14.MarginRequestIssued">
+            <action>VM Call(Deficit)</action>
+            <agreementRequirement>2,030,399.14</agreementRequirement>
+            <callStatus>Margin Request Issued</callStatus>
+            <model></model>
+            <eventId ref="vm.call.top.event"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.call.m1.agreementRequirement.1m.MarginRequestIssued">
+            <action>VM Call(Deficit)</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Margin Request Issued</callStatus>
+            <model>m1</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.call.top.agreementRequirement.587125.18.MarginRequestIssued">
+            <action>IM Call</action>
+            <agreementRequirement>587,125.18</agreementRequirement>
+            <callStatus>Margin Request Issued</callStatus>
+            <model></model>
+            <eventId ref="im.call.top.event"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.call.m2.agreementRequirement.0.7m.MarginRequestIssued">
+            <action>IM Call</action>
+            <agreementRequirement>700,000.00</agreementRequirement>
+            <callStatus>Margin Request Issued</callStatus>
+            <model>m2</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="counterpartyAmount.1.1m">
+            <counterpartyAmount>1.1m</counterpartyAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="counterpartyAmount.0.6m">
+            <counterpartyAmount>0.6m</counterpartyAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="autoBookAll.display">
+            <action apply="true">Auto Book All</action>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="autoBookAll.notDisplay">
+            <action apply="false">Auto Book All</action>
+        </exposureEventDetail>
+
+        <exposureManagementMessage id="im.call.vm.call.autoBookingSuccess">
+            <messageSummary>
+                <successfulAccount>2</successfulAccount>
+            </messageSummary>
+            <messageDetail>
+                <level>info</level>
+                <source>Auto Book</source>
+                <message>Princ:QTPPrincipal/Cpty:QTPCounterparty/Desc:20782_1/AgrId:2665/Event:Call CASH-GBP VM Call 1,100,000.00 auto booking created.</message>
+            </messageDetail>
+            <messageDetail>
+                <level>info</level>
+                <source>Auto Book</source>
+                <message>Princ:QTPPrincipal/Cpty:QTPCounterparty/Desc:20782_1/AgrId:2665/Event:Call CASH-AUD IM Call 700,000.00 auto booking created.</message>
+            </messageDetail>
+        </exposureManagementMessage>
+
+        <exposureEventDetail id="vm.call.top.agreementRequirement.2030399.14.Completed">
+            <action>VM Call(Deficit)</action>
+            <agreementRequirement>2,030,399.14</agreementRequirement>
+            <callStatus>Completed</callStatus>
+            <model></model>
+            <eventId ref="vm.call.top.event"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.call.m1.agreementRequirement.1m.Completed">
+            <action>VM Call(Deficit)</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Completed</callStatus>
+            <model>m1</model>
+        </exposureEventDetail>
+
+        <assetBookingSummary id="asset.type.CASH.GBP">
+            <assetType>CASH-GBP</assetType>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="asset.type.CASH.AUD">
+            <assetType>CASH-AUD</assetType>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="CASH.GBP.call.vm.1.1m.pending.autoBook">
+            <assetType>CASH-GBP</assetType>
+            <status>Pending</status>
+            <movement>Call</movement>
+            <bookingSource>Auto Book</bookingSource>
+            <vmMarketValue>1,100,000.00</vmMarketValue>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="CASH.AUD.call.vm.0.7m.systemDraft.autoBook">
+            <assetType>CASH-AUD</assetType>
+            <status>System Draft</status>
+            <movement>Call</movement>
+            <bookingSource>Auto Book</bookingSource>
+            <imMarketValue>700,000.00</imMarketValue>
+        </assetBookingSummary>
+
+
+    </scenarioData>
+</dataBean>

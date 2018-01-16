@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+
+		<agreementSearch id="filter.agmt.description">
+			<description><filter>32140_1</filter></description>
+		</agreementSearch>
+		<agreementSearchResult id="agreement.description">
+			<description id="agrDes">32140_1</description>
+		</agreementSearchResult>
+
+
+		<assetBookingSummary id="asset.type.CASH.USD">
+			<assetType>CASH-USD</assetType>
+		</assetBookingSummary>
+
+		<bookingDetail id="callBooking1.vmAmount.1000.1150.imAmount.1000.1251">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<vmAmount>1000.1150</vmAmount>
+					<imAmount>1000.1251</imAmount>
+					<movement>Call</movement>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+		<assetBookingSummary id="asset.booking1.summary.cash.call.nominalAmount.2000.24">
+			<nominalAmount>2,000.24</nominalAmount>
+			<vmMarketValue>1,000.12</vmMarketValue>
+			<imMarketValue>1,000.13</imMarketValue>
+			<movement>Call</movement>
+		</assetBookingSummary>
+
+		<cashMovementDetail id="payBooking2.Pay.VMInterest.2000.1250">
+			<movementType>Pay</movementType>
+			<bookingType>VM Interest</bookingType>
+			<amount>2000.1250</amount>
+		</cashMovementDetail>
+
+		<cashMovementDetail id="cappayBooking3.CapPay.IMInterest.3000.1251">
+			<movementType>Capitalise pay</movementType>
+			<bookingType>IM Interest</bookingType>
+			<amount>3000.1251</amount>
+		</cashMovementDetail>
+
+		<cashMovementSummary id="payBooking2ExpectedValue.VM.2000.12">
+			<bookingType>VM</bookingType>
+			<Amount>-2,000.12</Amount>
+		</cashMovementSummary>
+
+		<cashMovementSummary id="cappayBooking3ExpectedValue.IM.3000.13">
+			<bookingType>IM</bookingType>
+			<Amount>3,000.13</Amount>
+		</cashMovementSummary>
+
+		<collateralAssetHoldingSummary id="AllBookingExpectedValue.marketValue.5000.37">
+			<totalCollateralHeldByCouterparty>0.00</totalCollateralHeldByCouterparty>
+			<totalCollateralHeldByPrincipal>5,000.37</totalCollateralHeldByPrincipal>
+			<collateralAssetHoldingSummaryList>
+				<assetClass>qtp_cash</assetClass>
+				<assetTypeHoldingSummaryList>
+					<assetType>CASH-USD</assetType>
+					<marketValue>5,000.37</marketValue>
+					<vmcollateralValue>1,000.12</vmcollateralValue>
+					<imcollateralValue>4,000.25</imcollateralValue>
+				</assetTypeHoldingSummaryList>
+			</collateralAssetHoldingSummaryList>
+		</collateralAssetHoldingSummary>
+
+        <agreementStatement id="agrStatement32140.CheckHalfEvenRounding">
+			<assetHoldingsSummary>
+				<vmCollateralBalance>1000.12</vmCollateralBalance>
+				<vmCashBalance>1000.12</vmCashBalance>
+				<vmMarketValueOfCash>1000.12</vmMarketValueOfCash>
+				<vmSecuritiesBalance>0.00</vmSecuritiesBalance>
+				<vmMarketValueOfSecurities>0.00</vmMarketValueOfSecurities>
+				<imCollateralBalance>4000.25</imCollateralBalance>
+				<imCashBalance>4000.25</imCashBalance>
+				<imMarketValueOfCash>4000.25</imMarketValueOfCash>
+				<imSecuritiesBalance>0.00</imSecuritiesBalance>
+				<imMarketValueOfSecurities>0.00</imMarketValueOfSecurities>
+			</assetHoldingsSummary>
+			<marginCallCalculation>
+				<fcmReq>
+					<vmCashBalance>1000.12</vmCashBalance>
+					<vmSecuritiesCollateral>0.00</vmSecuritiesCollateral>
+					<totalSettlementAmount>0.00</totalSettlementAmount>
+					<variationMargin>0.00</variationMargin>
+					<vmNetExcessOrDeficit>-1000.12</vmNetExcessOrDeficit>
+					<imSecuritiesCollateral>0.00</imSecuritiesCollateral>
+					<imCashBalance>4000.25</imCashBalance>
+					<imRequirement>0.00</imRequirement>
+					<imNetExcessOrDeficit>-4000.25</imNetExcessOrDeficit>
+					<cashAvailableForNetExcess>4000.25</cashAvailableForNetExcess>
+					<netExcessOrDeficit>-5000.37</netExcessOrDeficit>
+				</fcmReq>
+			</marginCallCalculation>
+		</agreementStatement>
+
+		<assetSettlementReportFilter id="agr32140.DataWithHalfEvenRounding">
+			<agreementDescription>
+				<filter ref="agrDes"/>
+			</agreementDescription>
+			<settlementDateFrom>t-1000</settlementDateFrom>
+			<creationDateFrom>t-1000</creationDateFrom>
+		</assetSettlementReportFilter>
+		<variable id="assetSettlementReportPath"/>
+
+		<reportValidationRules id="reportRuleApplyHalfEvenRounding">
+			<reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Valuation</fieldName><value>100.00</value></field><field><fieldName>Nominal Amount</fieldName><value>3,000.13</value></field><field><fieldName>Reported Collateral Value</fieldName><value>3,000.13</value></field><field><fieldName>Issued Amount</fieldName><value>0.00</value></field><field><fieldName>Group Booking Collateral Value</fieldName><value>0.00</value></field><field><fieldName>Difference</fieldName><value>0.00</value></field><field><fieldName>IM Amount</fieldName><value></value></field><field><fieldName>VM Amount</fieldName><value></value></field></reportValidationRule>
+			<reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Valuation</fieldName><value>100.00</value></field><field><fieldName>Nominal Amount</fieldName><value>-2,000.13</value></field><field><fieldName>Reported Collateral Value</fieldName><value>-2,000.13</value></field><field><fieldName>Issued Amount</fieldName><value>0.00</value></field><field><fieldName>Group Booking Collateral Value</fieldName><value>0.00</value></field><field><fieldName>Difference</fieldName><value>0.00</value></field><field><fieldName>IM Amount</fieldName><value></value></field><field><fieldName>VM Amount</fieldName><value></value></field></reportValidationRule>
+			<reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Valuation</fieldName><value>100.00</value></field><field><fieldName>Nominal Amount</fieldName><value>2,000.24</value></field><field><fieldName>Reported Collateral Value</fieldName><value>2,000.24</value></field><field><fieldName>Issued Amount</fieldName><value>0.00</value></field><field><fieldName>Group Booking Collateral Value</fieldName><value>0.00</value></field><field><fieldName>Difference</fieldName><value>0.00</value></field><field><fieldName>IM Amount</fieldName><value>1,000.13</value></field><field><fieldName>VM Amount</fieldName><value>1,000.12</value></field></reportValidationRule>
+		</reportValidationRules>
+
+
+	</scenarioData>
+</dataBean>

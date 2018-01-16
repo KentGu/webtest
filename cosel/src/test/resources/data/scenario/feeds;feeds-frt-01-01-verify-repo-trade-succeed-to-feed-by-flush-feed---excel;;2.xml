@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/feeds.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <agreement>
+            <principal>
+                <linkText id="agreement.principal" ref="org.p1.lname"/>
+            </principal>
+            <counterparty>
+                <linkText id="agreement.counterparty" ref="org.c1.lname"/>
+            </counterparty>
+            <agreementDescription id="agreement.description">T18807Agreement</agreementDescription>
+            <externalId id="agreement.external.id">T18807AgreementExternalID</externalId>
+            <agreementId id="agreement.id">584</agreementId>
+            <baseCurrency id="agreement.ccy" ref="ccy.usd.name"/>
+            <product>
+                <productName id="agreement.product.name" ref="product.qtp.pro1.name"/>
+            </product>
+        </agreement>
+
+        <feedRepoTrade id="feed.repo.trade">
+            <legal_id ref="agreement.external.id"/>
+            <tradeRef id="feed.repo.trade.trade.ref" random="true" prefix="tradeRef_"/>
+            <tradeRef2 id="feed.repo.trade.trade.ref2" random="true" prefix="tradeRef2_"/>
+            <principal id="feed.repo.trade.principal" ref="agreement.principal"/>
+            <cptyRef></cptyRef>
+            <counterparty id="feed.repo.trade.counterparty" ref="agreement.counterparty"/>
+            <orgCode></orgCode>
+            <product id="feed.repo.trade.product" ref="agreement.product.name"/>
+            <underlying id="feed.repo.trade.underlying">underlying</underlying>
+            <strategy id="feed.repo.trade.strategy">strategy</strategy>
+            <tradeDate>2099-11-20</tradeDate>
+            <startDate>2099-11-20</startDate>
+            <endDate>2099-11-20</endDate>
+            <instrumentId id="feed.repo.trade.instrument.id">qtp-Bond-Usd-Instrument</instrumentId>
+            <notional id="feed.repo.trade.notional">1000</notional>
+            <couponAccrual id="feed.repo.trade.coupon.accrual">1500</couponAccrual>
+            <securityHaircut id="feed.repo.trade.security.haircut">2000</securityHaircut>
+            <tradePrice id="feed.repo.trade.trade.price">2500</tradePrice>
+            <cleanPrice id="feed.repo.trade.clean.price">3000</cleanPrice>
+            <priceSource id="feed.repo.trade.price.source">PS1</priceSource>
+            <securitySettlementStartLeg id="feed.repo.trade.security.settlement.start.leg">Settled</securitySettlementStartLeg>
+            <securitySettlementCloseLeg id="feed.repo.trade.security.settlement.close.leg">Settled</securitySettlementCloseLeg>
+            <cashAssetType id="feed.repo.trade.cash.asset.type" ref="cash.usd.name"/>
+            <openCash id="feed.repo.trade.open.cash">3500</openCash>
+            <repoInterestAccrued id="feed.repo.trade.repo.interest.accrued">10</repoInterestAccrued>
+            <repoRate id="feed.repo.trade.repo.rate">20</repoRate>
+            <closeCash id="feed.repo.trade.close.cash">30</closeCash>
+            <cashAccrualBasis id="feed.repo.trade.cash.accrual.basis">Act/360</cashAccrualBasis>
+            <cashHaircut id="feed.repo.trade.cash.haircut">40</cashHaircut>
+            <cashSettlementStartLeg id="feed.repo.trade.cash.settlement.start.leg">Settled</cashSettlementStartLeg>
+            <cashSettlementCloseLeg id="feed.repo.trade.cash.settlement.close.leg">Settled</cashSettlementCloseLeg>
+            <heldOverCouponAdj id="feed.repo.trade.held.over.coupon.adj">50</heldOverCouponAdj>
+            <couponReinvestment id="feed.repo.trade.coupon.reinvestment">60</couponReinvestment>
+            <mtmValuation id="feed.repo.trade.mtm.valuation">10000</mtmValuation>
+            <mtmValuationCcy id="feed.repo.trade.mtm.valuation.ccy" ref="ccy.usd.name"/>
+            <cptyMtmValuation id="feed.repo.trade.cpty.mtm.valuation">15000</cptyMtmValuation>
+            <cptyMtmValuationCcy id="feed.repo.trade.cpty.mtm.valuation.ccy" ref="ccy.eur.name"/>
+            <indepMtmValuation id="feed.repo.trade.indep.mtm.valuation">20000</indepMtmValuation>
+            <indepMtmValuationCcy id="feed.repo.trade.indep.mtm.valuation.ccy" ref="ccy.aud.name"/>
+            <valuationRule>C</valuationRule>
+            <operation>a</operation>
+            <mtmValuationDate>2099-11-20</mtmValuationDate>
+            <Comments id="feed.repo.trade.comments">Comments</Comments>
+            <system id="feed.repo.trade.system">QTP</system>
+            <misc1 id="feed.repo.trade.misc1">misc1</misc1>
+            <misc2 id="feed.repo.trade.misc2">misc2</misc2>
+            <misc3 id="feed.repo.trade.misc3">misc3</misc3>
+            <misc4 id="feed.repo.trade.misc4">misc4</misc4>
+            <misc5 id="feed.repo.trade.misc5">misc5</misc5>
+            <misc6 id="feed.repo.trade.misc6">misc6</misc6>
+            <misc7 id="feed.repo.trade.misc7">misc7</misc7>
+            <misc8 id="feed.repo.trade.misc8">misc8</misc8>
+            <misc9 id="feed.repo.trade.misc9">misc9</misc9>
+            <misc10 id="feed.repo.trade.misc10">misc10</misc10>
+            <misc11 id="feed.repo.trade.misc11">misc11</misc11>
+            <misc12 id="feed.repo.trade.misc12">misc12</misc12>
+            <misc13 id="feed.repo.trade.misc13">misc13</misc13>
+            <misc14 id="feed.repo.trade.misc14">misc14</misc14>
+            <misc15 id="feed.repo.trade.misc15">misc15</misc15>
+            <misc16 id="feed.repo.trade.misc16">misc16</misc16>
+            <misc17 id="feed.repo.trade.misc17">misc17</misc17>
+            <misc20 id="feed.repo.trade.misc20">misc20</misc20>
+            <misc21 id="feed.repo.trade.misc21">21</misc21>
+            <misc22 id="feed.repo.trade.misc22">22</misc22>
+            <misc23 id="feed.repo.trade.misc23">23</misc23>
+            <misc24 id="feed.repo.trade.misc24">24</misc24>
+            <misc25 id="feed.repo.trade.misc25">25</misc25>
+            <misc26 id="feed.repo.trade.misc26">26</misc26>
+            <misc27 id="feed.repo.trade.misc27">27</misc27>
+            <misc28 id="feed.repo.trade.misc28">28</misc28>
+            <misc29 id="feed.repo.trade.misc29">29</misc29>
+            <misc30 id="feed.repo.trade.misc30">30</misc30>
+            <system>QTP</system>
+        </feedRepoTrade>
+
+        <feedResult id="feed.repo.trade.result">
+            <fileUploaded id="feed.repo.trade.result.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedStatus id="feed.repo.trade.status">
+            <status>Successful</status>
+            <valuationFile ref="feed.repo.trade.result.file"/>
+            <successfulFeed>
+                <total>1</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <agreementSearch id="search.feed.repo.trade.agreement">
+            <systemId ref="agreement.id"/>
+        </agreementSearch>
+
+        <agreementSearchResult id="search.result.feed.repo.trade.agreement">
+            <agreementId ref="agreement.id"/>
+        </agreementSearchResult>
+
+        <agreementStatement id="check.feed.repo.trade.agreement.statement"/>
+
+        <agreementExposureSummary id="check.feed.repo.trade.exposure.summary">
+            <productList>
+                <productType ref="feed.repo.trade.product"/>
+            </productList>
+        </agreementExposureSummary>
+
+        <tradeSummary id="check.feed.repo.trade.trade.summary">
+            <tradeDetailList>
+                <tradeInformation>
+                    <productType ref="feed.repo.trade.product"/>
+                    <tradeIdentifierPartyA ref="feed.repo.trade.trade.ref"/>
+                    <startDate>11/20/2099</startDate>
+                    <endDate>11/20/2099</endDate>
+                    <valuationBaseCurrencyAmount>-18024.51</valuationBaseCurrencyAmount>
+                    <valuationBaseCurrency ref="agreement.ccy"/>
+                </tradeInformation>
+                <securityInformation>
+                    <instrumentId ref="feed.repo.trade.instrument.id"/>
+                    <notional ref="feed.repo.trade.notional"/>
+                    <cleanPrice ref="feed.repo.trade.clean.price"/>
+                    <allInPrice>57000</allInPrice>
+                    <netValueSecurityCurrency>
+                        <amount>0</amount>
+                        <currency ref="agreement.ccy"/>
+                    </netValueSecurityCurrency>
+                </securityInformation>
+                <cashInformation>
+                    <cashAssetType ref="feed.repo.trade.cash.asset.type"/>
+                    <openCash ref="feed.repo.trade.open.cash"/>
+                    <repoRate ref="feed.repo.trade.repo.rate"/>
+                    <netValueCashCurrency>
+                        <amount>0</amount>
+                        <currency ref="agreement.ccy"/>
+                    </netValueCashCurrency>
+                </cashInformation>
+            </tradeDetailList>
+        </tradeSummary>
+
+        <tradeDetail id="check.feed.repo.trade.detail">
+            <tradeInformation>
+                <productType ref="feed.repo.trade.product"/>
+                <strategy ref="feed.repo.trade.strategy"/>
+                <tradeDate>11/20/2099</tradeDate>
+                <startDate>11/20/2099</startDate>
+                <endDate>11/20/2099</endDate>
+                <underlying ref="feed.repo.trade.underlying"/>
+                <tradeIdentifierPartyA ref="feed.repo.trade.trade.ref"/>
+                <tradeIdentifier2PartyA ref="feed.repo.trade.trade.ref2"/>
+                <partyABranchName ref="feed.repo.trade.principal"/>
+                <!--<tradeIdentifierPartyB></tradeIdentifierPartyB>-->
+                <partyBBranchName ref="feed.repo.trade.counterparty"/>
+            </tradeInformation>
+            <securityInformation>
+                <instrumentId>
+                    <linkText>qtp-Bond-Usd-Instrument(primary key: qtp-Bond-Usd-Instrument)</linkText>
+                </instrumentId>
+                <notional ref="feed.repo.trade.notional"/>
+                <couponAccrual ref="feed.repo.trade.coupon.accrual"/>
+                <haircut ref="feed.repo.trade.security.haircut"/>
+                <tradePrice ref="feed.repo.trade.trade.price"/>
+                <cleanPrice ref="feed.repo.trade.clean.price"/>
+                <priceSource ref="feed.repo.trade.price.source"/>
+                <settlementStatusStartLeg ref="feed.repo.trade.security.settlement.start.leg"/>
+                <settlementStatusCloseLeg ref="feed.repo.trade.security.settlement.close.leg"/>
+            </securityInformation>
+            <cashInformation>
+                <cashAssetType>
+                    <linkText ref="feed.repo.trade.cash.asset.type"/>
+                </cashAssetType>
+                <openCash ref="feed.repo.trade.open.cash"/>
+                <repoInterestAccrued ref="feed.repo.trade.repo.interest.accrued"/>
+                <repoRate ref="feed.repo.trade.repo.rate"/>
+                <closeCash ref="feed.repo.trade.close.cash"/>
+                <accrualBasis ref="feed.repo.trade.cash.accrual.basis"/>
+                <haircut ref="feed.repo.trade.cash.haircut"/>
+                <settlementStatusStartLeg ref="feed.repo.trade.cash.settlement.start.leg"/>
+                <settlementStatusCloseLeg ref="feed.repo.trade.cash.settlement.close.leg"/>
+            </cashInformation>
+            <!--<adjustmentInformation>-->
+                <!--<heldOverCouponAdjustmentAgreementCurrency>-->
+                    <!--<amount ref="feed.repo.trade.held.over.coupon.adj"/>-->
+                    <!--<currency ref="agreement.ccy"/>-->
+                <!--</heldOverCouponAdjustmentAgreementCurrency>-->
+                <!--<couponReinvestmentAgreementCurrency>-->
+                    <!--<amount ref="feed.repo.trade.coupon.reinvestment"/>-->
+                    <!--<currency ref="agreement.ccy"/>-->
+                <!--</couponReinvestmentAgreementCurrency>-->
+            <!--</adjustmentInformation>-->
+            <exposureInformation>
+                <!--<principalValuationAmount>-->
+                    <!--<amount ref="feed.repo.trade.mtm.valuation"/>-->
+                    <!--<currency ref="feed.repo.trade.mtm.valuation.ccy"/>-->
+                <!--</principalValuationAmount>-->
+                <counterPartyValuationAmount>
+                    <amount ref="feed.repo.trade.cpty.mtm.valuation"/>
+                    <currency ref="feed.repo.trade.cpty.mtm.valuation.ccy"/>
+                </counterPartyValuationAmount>
+                <independentValuationAmount>
+                    <amount ref="feed.repo.trade.indep.mtm.valuation"/>
+                    <currency ref="feed.repo.trade.indep.mtm.valuation.ccy"/>
+                </independentValuationAmount>
+                <valutionAmountType>Counterparty Valuation Amount</valutionAmountType>
+                <sourceSystem ref="feed.repo.trade.system"/>
+                <valuationDate>11/20/2099</valuationDate>
+                <collateralComment ref="feed.repo.trade.comments"/>
+            </exposureInformation>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 1</fieldName>
+                <value ref="feed.repo.trade.misc1"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 2</fieldName>
+                <value ref="feed.repo.trade.misc2"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 3</fieldName>
+                <value ref="feed.repo.trade.misc3"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 4</fieldName>
+                <value ref="feed.repo.trade.misc4"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 5</fieldName>
+                <value ref="feed.repo.trade.misc5"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 6</fieldName>
+                <value ref="feed.repo.trade.misc6"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 7</fieldName>
+                <value ref="feed.repo.trade.misc7"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 8</fieldName>
+                <value ref="feed.repo.trade.misc8"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 9</fieldName>
+                <value ref="feed.repo.trade.misc9"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 10</fieldName>
+                <value ref="feed.repo.trade.misc10"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 11</fieldName>
+                <value ref="feed.repo.trade.misc11"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 12</fieldName>
+                <value ref="feed.repo.trade.misc12"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 13</fieldName>
+                <value ref="feed.repo.trade.misc13"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 14</fieldName>
+                <value ref="feed.repo.trade.misc14"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 15</fieldName>
+                <value ref="feed.repo.trade.misc15"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 16</fieldName>
+                <value ref="feed.repo.trade.misc16"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 17</fieldName>
+                <value ref="feed.repo.trade.misc17"/>
+            </tradeMiscellaneousFields>
+            <!--<tradeMiscellaneousFields>-->
+                <!--<fieldName>Misc 18</fieldName>-->
+                <!--<value ref="feed.repo.trade.misc18"/>-->
+            <!--</tradeMiscellaneousFields>-->
+            <!--<tradeMiscellaneousFields>-->
+                <!--<fieldName>Misc 19</fieldName>-->
+                <!--<value ref="feed.repo.trade.misc19"/>-->
+            <!--</tradeMiscellaneousFields>-->
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 20</fieldName>
+                <value ref="feed.repo.trade.misc20"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 21</fieldName>
+                <value ref="feed.repo.trade.misc21"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 22</fieldName>
+                <value ref="feed.repo.trade.misc22"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 23</fieldName>
+                <value ref="feed.repo.trade.misc23"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 24</fieldName>
+                <value ref="feed.repo.trade.misc24"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 25</fieldName>
+                <value ref="feed.repo.trade.misc25"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 26</fieldName>
+                <value ref="feed.repo.trade.misc26"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 27</fieldName>
+                <value ref="feed.repo.trade.misc27"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 28</fieldName>
+                <value ref="feed.repo.trade.misc28"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 29</fieldName>
+                <value ref="feed.repo.trade.misc29"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 30</fieldName>
+                <value ref="feed.repo.trade.misc30"/>
+            </tradeMiscellaneousFields>
+            <!--<tradeMiscellaneousFields>-->
+                <!--<fieldName>Misc MtM</fieldName>-->
+                <!--<value ref="feed.repo.trade.misc.mtm"/>-->
+            <!--</tradeMiscellaneousFields>-->
+        </tradeDetail>
+    </scenarioData>
+</dataBean>

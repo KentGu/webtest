@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/xbrowser.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/1)"/>-->
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <agreement id="fund1">
+            <principal>
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter ref="org.p1.code"/>
+                <linkText ref="org.p1.code"/>
+            </principal>
+            <counterparty>
+                <criteria>Containing</criteria>
+                <type>Long Name</type>
+                <filter ref="org.c1.code"/>
+                <linkText ref="org.c1.code"/>
+            </counterparty>
+            <agreementDescription id="fund1.des" random="true" prefix="fundqtp_"/>
+            <agreementDate>T</agreementDate>
+            <holidayCentre ref="hc.europe.name"/>
+            <product id="fund1.pro1">
+                <productName ref="product.test1.name"/>
+            </product>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="cash.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="bond.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="bond.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="equity.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="equity.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vcr.name"/>
+                    <linkText ref="payInstrBucket.vcr.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vrd.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.pay.name"/>
+                    <linkText ref="payInstrBucket.pay.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.rec.name"/>
+                    <linkText ref="payInstrBucket.rec.name"/>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementStatus>Pending</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <statementStatus>Approved</statementStatus>
+            <agreementId id="fund1.agmt.id1"/>
+        </agreement>
+        <agreement id="fund2">
+            <principal>
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter ref="org.p1.code"/>
+                <linkText ref="org.p1.code"/>
+            </principal>
+            <counterparty>
+                <criteria>Containing</criteria>
+                <type>Long Name</type>
+                <filter ref="org.c1.code"/>
+                <linkText ref="org.c1.code"/>
+            </counterparty>
+            <agreementDescription id="fund2.des" random="true" prefix="fundqtp_"/>
+            <agreementDate>T</agreementDate>
+            <holidayCentre ref="hc.europe.name"/>
+            <product id="fund2.pro1">
+                <productName ref="product.test1.name"/>
+            </product>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="cash.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="bond.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="bond.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="equity.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="equity.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vcr.name"/>
+                    <linkText ref="payInstrBucket.vcr.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vrd.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.pay.name"/>
+                    <linkText ref="payInstrBucket.pay.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.rec.name"/>
+                    <linkText ref="payInstrBucket.rec.name"/>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementStatus>Pending</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <statementStatus>Approved</statementStatus>
+            <agreementId id="fund2.agmt.id1"/>
+        </agreement>
+        <agreement id="umAgr">
+            <principal>
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter ref="org.p1.code"/>
+                <linkText ref="org.p1.code"/>
+            </principal>
+            <counterparty>
+                <criteria>Containing</criteria>
+                <type>Long Name</type>
+                <filter ref="org.c1.code"/>
+                <linkText ref="org.c1.code"/>
+            </counterparty>
+            <umbrellaAgreement>true</umbrellaAgreement>
+            <umbrellaRule ref="umbrella.rule.um.name"/>
+            <agreementDescription id="umAgr.des" random="true" prefix="umqtp_"/>
+            <agreementDate>T</agreementDate>
+            <holidayCentre ref="hc.europe.name"/>
+            <product id="fund.pro1">
+                <productName ref="product.test1.name"/>
+            </product>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="cash.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="bond.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="bond.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="equity.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="equity.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <subAgreement>
+                <type>Agreement Description</type>
+                <filter ref="fund1.des"/>
+                <linkText ref="fund1.des"/>
+            </subAgreement>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vcr.name"/>
+                    <linkText ref="payInstrBucket.vcr.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vrd.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.pay.name"/>
+                    <linkText ref="payInstrBucket.pay.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.rec.name"/>
+                    <linkText ref="payInstrBucket.rec.name"/>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementStatus>Pending</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <statementStatus>Approved</statementStatus>
+            <agreementId id="umAgr.agmt.id1"/>
+        </agreement>
+        <tradeDetail id="fund1.trade1">
+            <tradeInformation>
+                <productType ref="product.test1.name"/>
+                <tradeDate>T</tradeDate>
+                <effectiveDate>T</effectiveDate>
+                <maturityDate>T+90</maturityDate>
+                <tradeIdentifierPartyA id="fund1.trade.identify" random="true"/>
+                <partyABranchName ref="fund1.trade.identify"/>
+                <partyBBranchName ref="fund1.trade.identify"/>
+            </tradeInformation>
+            <valuationInformation>
+                <principalValuationAmount>
+                    <amount>1m</amount>
+                    <currency>USD</currency>
+                </principalValuationAmount>
+                <valuationDate>T</valuationDate>
+            </valuationInformation>
+            <collateralInformation>
+                <dealLevelUpfront>true</dealLevelUpfront>
+                <dealLevelType>Independent Amount</dealLevelType>
+                <dealLevelAmount>0.5m</dealLevelAmount>
+                <currency>USD</currency>
+            </collateralInformation>
+        </tradeDetail>
+        <bookingDetail id="um.cashbooking1">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <nominalAmount>1m</nominalAmount>
+                    <movement>Call</movement>
+                </bookingInformationDetail>
+                <settlementDate>T</settlementDate>
+            </bookingInformation>
+            <save>save</save>
+        </bookingDetail>
+        <bookingDetail id="um.bondbooking1">
+            <instrumentSearch>
+                <assetClass ref="bond.name" />
+                <assetType ref="bond.usd.name" />
+                <instrument>
+                    <filter ref="bond.instrument1.name"/>
+                    <linkText ref="bond.instrument1.name"/>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <nominalAmount>1m</nominalAmount>
+                    <movement>Call</movement>
+                </bookingInformationDetail>
+                <settlementDate>T</settlementDate>
+            </bookingInformation>
+            <save>save</save>
+        </bookingDetail>
+        <bookingDetail id="um.equitybooking1">
+            <instrumentSearch>
+                <assetClass ref="equity.name" />
+                <assetType ref="equity.usd.name" />
+                <instrument>
+                    <filter ref="equity.instrument1.name"/>
+                    <linkText ref="equity.instrument1.name"/>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+
+                    <nominalAmount>1m</nominalAmount>
+
+                    <movement>Delivery</movement>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <save>save</save>
+        </bookingDetail>
+    </scenarioData>
+</dataBean>

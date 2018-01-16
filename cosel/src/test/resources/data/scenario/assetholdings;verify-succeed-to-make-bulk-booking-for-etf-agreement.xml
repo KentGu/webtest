@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+
+		<agreementSearch id="filter.agmt.description">
+			<description>
+				<filter id="agrDesc1">28819_1</filter>
+			</description>
+		</agreementSearch>
+
+		<agreementSearchResult id="agreement.description">
+			<description ref="agrDesc1"/>
+		</agreementSearchResult>
+
+		<agreementExposureSummary id="ProductQTP">
+			<productList>
+				<productType>qtp_Etf</productType>
+			</productList>
+		</agreementExposureSummary>
+
+		<tradeDetail id="trade1Order1">
+			<tradeInformation>
+				<orderNumber>o1</orderNumber>
+				<tradeDate>T</tradeDate>
+				<endDate>T+1000</endDate>
+				<startDate>T</startDate>
+				<tradeIdentifierPartyA random="true"/>
+				<partyABranchName>a</partyABranchName>
+				<partyBBranchName>b</partyBBranchName>
+			</tradeInformation>
+			<securityInformation>
+				<instrumentId>
+					<filter ref="bond.instrument1.name" />
+					<linkText ref="bond.instrument1.name" />
+				</instrumentId>
+				<notional>1</notional>
+			</securityInformation>
+			<cashInformation>
+				<cashComponent>
+					<amount>1m</amount>
+					<currency>GBP</currency>
+				</cashComponent>
+				<fee>
+					<amount>1m</amount>
+					<currency>USD</currency>
+				</fee>
+			</cashInformation>
+			<exposureInformation>
+				<principalValuationAmount>
+					<amount>1m</amount>
+					<currency>EUR</currency>
+				</principalValuationAmount>
+				<valuationDate>T</valuationDate>
+			</exposureInformation>
+			<alertHandling>
+				<accept>true</accept>
+			</alertHandling>
+		</tradeDetail>
+
+		<tradeDetail id="trade2Order2">
+			<tradeInformation>
+				<orderNumber>o2</orderNumber>
+				<tradeDate>T</tradeDate>
+				<endDate>T+1000</endDate>
+				<startDate>T</startDate>
+				<tradeIdentifierPartyA random="true"/>
+				<partyABranchName>a</partyABranchName>
+				<partyBBranchName>b</partyBBranchName>
+			</tradeInformation>
+			<securityInformation>
+				<instrumentId>
+					<filter ref="bond.instrument1.name" />
+					<linkText ref="bond.instrument1.name" />
+				</instrumentId>
+				<notional>1</notional>
+			</securityInformation>
+			<cashInformation>
+				<cashComponent>
+					<amount>-2m</amount>
+					<currency>USD</currency>
+				</cashComponent>
+				<fee>
+					<amount>-1440456.01</amount>
+					<currency>EUR</currency>
+				</fee>
+			</cashInformation>
+			<exposureInformation>
+				<principalValuationAmount>
+					<amount>-2075300.01</amount>
+					<currency>GBP</currency>
+				</principalValuationAmount>
+				<valuationDate>T</valuationDate>
+			</exposureInformation>
+			<alertHandling>
+				<accept>true</accept>
+			</alertHandling>
+		</tradeDetail>
+
+		<agreement id="agr28819">
+			<agreementStatus>Pending</agreementStatus>
+			<agreementStatus>Approved</agreementStatus>
+			<statementStatus>Pending</statementStatus>
+			<statementStatus>Approved</statementStatus>
+		</agreement>
+
+		<exposureEventDetail id="allEventForETF">
+			<expand>true</expand>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="call.Amount.3352165.30">
+			<callStatus>Pending Review</callStatus>
+			<action>Call(Deficit)</action>
+			<agreementRequirement>3,352,165.30</agreementRequirement>
+		</exposureEventDetail>
+		<exposureEventDetail id="vmCall.Amount.1388449.21">
+			<callStatus>Pending Review</callStatus>
+			<action>VM Call(Deficit)</action>
+			<agreementRequirement>1,388,449.21</agreementRequirement>
+		</exposureEventDetail>
+		<exposureEventDetail id="feeCall.Amount.1m">
+			<callStatus>Pending Review</callStatus>
+			<action>Fee Call(Deficit)</action>
+			<agreementRequirement>1,000,000.00</agreementRequirement>
+		</exposureEventDetail>
+		<exposureEventDetail id="cashCall.Amount.963716.09">
+			<callStatus>Pending Review</callStatus>
+			<action>Cash Call(Deficit)</action>
+			<agreementRequirement>963,716.09</agreementRequirement>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="Delivery.Amount.6000000.02">
+			<callStatus>Pending Review</callStatus>
+			<action>Delivery(Excess)</action>
+			<agreementRequirement>-6,000,000.02</agreementRequirement>
+		</exposureEventDetail>
+		<exposureEventDetail id="vmDelivery.Amount.2000000.01">
+			<callStatus>Pending Review</callStatus>
+			<action>VM Delivery(Excess)</action>
+			<agreementRequirement>-2,000,000.01</agreementRequirement>
+		</exposureEventDetail>
+		<exposureEventDetail id="feeDelivery.Amount.2000000.01">
+			<callStatus>Pending Review</callStatus>
+			<action>Fee Delivery(Excess)</action>
+			<agreementRequirement>-2,000,000.01</agreementRequirement>
+		</exposureEventDetail>
+		<exposureEventDetail id="CashDelivery.Amount.2000000.00">
+			<callStatus>Pending Review</callStatus>
+			<action>Cash Delivery(Excess)</action>
+			<agreementRequirement>-2,000,000.00</agreementRequirement>
+		</exposureEventDetail>
+
+
+		<bookingDetail id="bulk.booking.with.feeCall.Cash.GBP.1037650">
+			<instrumentSearch>
+				<instrument>
+					<filter>CASH-GBP</filter>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>1,037,650.00</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+
+
+		<bookingDetail id="bulk.booking.with.feeDelivery.Cash.GBP.2075300.01">
+			<instrumentSearch>
+				<instrument>
+					<filter>CASH-GBP</filter>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>2,075,300.01</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+		
+		<bookingDetail id="feeCall.Receive.amount.1m">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<model>o1</model>
+					<bookingMovement>Fee Call(Deficit)</bookingMovement>
+					<movement>Receive</movement>
+					<requiredAmount>1,000,000.00</requiredAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="feeDelivery.Pay.amount.-2m">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<model>o2</model>
+					<bookingMovement>Fee Delivery(Excess)</bookingMovement>
+					<movement>Pay</movement>
+					<requiredAmount>-2,000,000.01</requiredAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<exposureEventDetail id="feeCallCompleted">
+			<callStatus>Completed</callStatus>
+			<action>Fee Call(Deficit)</action>
+			<agreementRequirement>1,000,000.00</agreementRequirement>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="feeDeliveryCompleted">
+			<callStatus>Completed</callStatus>
+			<action>Fee Delivery(Excess)</action>
+			<agreementRequirement>-2,000,000.01</agreementRequirement>
+		</exposureEventDetail>
+
+		<assetBookingSummary id="asset.type.CASH.GBP">
+			<assetType>CASH-GBP</assetType>
+		</assetBookingSummary>
+
+		<cashMovementSummary id="FeeReceive.Amount.1037650.00">
+			<model>o1</model>
+			<Amount>1,037,650.00</Amount>
+			<bookingType>Fee</bookingType>
+			<movement>Receive</movement>
+		</cashMovementSummary>
+
+		<cashMovementSummary id="FeePay.Amount.2075300.01">
+			<model>o2</model>
+			<Amount>-2,075,300.01</Amount>
+			<bookingType>Fee</bookingType>
+			<movement>Pay</movement>
+		</cashMovementSummary>
+
+
+
+
+
+
+
+
+	</scenarioData>
+</dataBean>

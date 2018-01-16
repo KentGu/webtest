@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/feeds.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <agreement>
+            <principal>
+                <linkText id="agreement.principal" ref="org.p1.lname"/>
+            </principal>
+            <counterparty>
+                <linkText id="agreement.counterparty" ref="org.c1.lname"/>
+            </counterparty>
+            <agreementId id="agreement.id">582</agreementId>
+            <agreementDescription id="agreement.description">T11294Agreement</agreementDescription>
+            <externalId id="agreement.external.id">T11294AgreementExternalID</externalId>
+            <product>
+                <productName id="agreement.product.name" ref="product.test1.name"/>
+            </product>
+            <model>
+                <modelEligibilityRule>
+                    <modelName id="agreement.model.name">T11294AgreementModel1</modelName>
+                </modelEligibilityRule>
+            </model>
+        </agreement>
+        
+        <feedTrade id="feed.trade">
+            <legal_id ref="agreement.external.id"/>
+            <principal id="feed.trade.principal" ref="agreement.principal"/>
+            <counterparty id="feed.trade.counterparty" ref="agreement.counterparty"/>
+            <system>Automation</system>
+            <product id="feed.trade.product" ref="product.test1.name"/>
+            <orgCode ref="org.c1.lname"/>
+            <tradeRef id="feed.trade.trade.ref1" random="true" prefix="tradeRefA-"/>
+            <tradeRef2 id="feed.trade.trade.ref2" random="true" prefix="rradeRefB-"/>
+            <dealDate>2099-11-20</dealDate>
+            <startDate>2099-11-20</startDate>
+            <endDate>2099-11-20</endDate>
+            <strikePrice id="feed.trade.strike.price">1000</strikePrice>
+            <tradeAction>S</tradeAction>
+            <stringMisc1>stringMisc1</stringMisc1>
+            <tradeActionOther>C</tradeActionOther>
+            <notional id="feed.trade.notional">2000</notional>
+            <notional2nd id="feed.trade.notional2">3000</notional2nd>
+            <currency id="feed.trade.notional.ccy" ref="ccy.usd.name"/>
+            <currency2nd id="feed.trade.notional2.ccy" ref="ccy.eur.name"/>
+            <mtmValuation id="feed.trade.mtm.valuation">4000</mtmValuation>
+            <mtmValuationDate>2099-11-20</mtmValuationDate>
+            <mtmValuationLocalSysCcy id="feed.trade.mtm.valuation.location.sys.ccy" ref="ccy.usd.name"/>
+            <indepMtmValuation id="feed.trade.indep.mtm.valuation">5000</indepMtmValuation>
+            <indepMtmValuationCcy id="feed.trade.indep.mtm.valuation.ccy" ref="ccy.usd.name"/>
+            <countryOfIssue id="feed.trade.country.of.issue" ref="ctr.us.name"/>
+            <underlyingDescription id="feed.trade.underlying.description">underlyingDesc</underlyingDescription>
+            <tradePrice id="feed.trade.trade.price">6000</tradePrice>
+            <dirtyMarketPrice id="feed.trade.dirty.market.price">7000</dirtyMarketPrice>
+            <cleanMarketPrice id="feed.trade.clean.market.price">8000</cleanMarketPrice>
+            <hairCut id="feed.trade.haircut">5</hairCut>
+            <priceChange id="feed.trade.price.change">1</priceChange>
+            <priceAge id="feed.trade.price.age">100</priceAge>
+            <coupon id="feed.trade.coupon">0.1</coupon>
+            <deliveryMethod id="feed.trade.delivery.method">deliveryMethod</deliveryMethod>
+            <descriptionId id="feed.trade.description.id" random="true"/>
+            <accrual id="feed.trade.accrual">0.2</accrual>
+            <principalDealLevelUpfront>true</principalDealLevelUpfront>
+            <principalDealLevelAmount>10000</principalDealLevelAmount>
+            <principalDealLevelCurrency ref="ccy.usd.name"/>
+            <principalDealLevelType>IA</principalDealLevelType>
+            <counterpartyDealLevelUpfront>true</counterpartyDealLevelUpfront>
+            <counterpartyDealLevelAmount>12000</counterpartyDealLevelAmount>
+            <counterpartyDealLevelCurrency ref="ccy.usd.name"/>
+            <counterpartyDealLevelType>lock up</counterpartyDealLevelType>
+            <strategy id="feed.trade.strategy">strategy</strategy>
+            <cptyRef ref="org.c1.lname"/>
+            <misc1 id="feed.trade.misc1">misc1</misc1>
+            <misc2 id="feed.trade.misc2">misc2</misc2>
+            <misc3 id="feed.trade.misc3">misc3</misc3>
+            <misc4 id="feed.trade.misc4">misc4</misc4>
+            <misc5 id="feed.trade.misc5">misc5</misc5>
+            <misc6 id="feed.trade.misc6">misc6</misc6>
+            <misc7 id="feed.trade.misc7">misc7</misc7>
+            <misc8 id="feed.trade.misc8">misc8</misc8>
+            <misc9 id="feed.trade.misc9">misc9</misc9>
+            <misc10 id="feed.trade.misc10">misc10</misc10>
+            <misc11 id="feed.trade.misc11">misc11</misc11>
+            <misc12 id="feed.trade.misc12">misc12</misc12>
+            <misc13 id="feed.trade.misc13">misc13</misc13>
+            <misc14 id="feed.trade.misc14">misc14</misc14>
+            <misc15 id="feed.trade.misc15">misc15</misc15>
+            <misc16 id="feed.trade.misc16">misc16</misc16>
+            <misc17 id="feed.trade.misc17">misc17</misc17>
+            <misc20 id="feed.trade.misc20">misc20</misc20>
+            <misc21 id="feed.trade.misc21">21</misc21>
+            <misc22 id="feed.trade.misc22">22</misc22>
+            <misc23 id="feed.trade.misc23">23</misc23>
+            <misc24 id="feed.trade.misc24">24</misc24>
+            <misc25 id="feed.trade.misc25">25</misc25>
+            <misc26 id="feed.trade.misc26">26</misc26>
+            <misc27 id="feed.trade.misc27">27</misc27>
+            <misc28 id="feed.trade.misc28">28</misc28>
+            <misc29 id="feed.trade.misc29">29</misc29>
+            <misc30 id="feed.trade.misc30">30</misc30>
+            <Comments id="feed.trade.comments">Comments</Comments>
+            <operation>a</operation>
+            <altMtmValuation id="feed.trade.alt.mtm.valuation">13000</altMtmValuation>
+            <altmtmValuationCcy id="feed.trade.alt.mtm.valuation.ccy" ref="ccy.usd.name"/>
+            <CCP ref="ccp.lch.name"/>
+            <upfrontFee id="feed.trade.upfront.fee">14000</upfrontFee>
+            <PAI id="feed.trade.pai">10</PAI>
+            <PAIRate id="feed.trade.pai.rate">0.5</PAIRate>
+            <transferValue id="feed.trade.transfer.value">15000</transferValue>
+            <TSACurrency id="feed.trade.tsa.ccy" ref="ccy.usd.name"/>
+            <fixedRate id="feed.trade.fixed.rate">0.6</fixedRate>
+            <floatingIndex id="feed.trade.floating.index">2</floatingIndex>
+            <bankedCoupon id="feed.trade.banked.coupon">1.5</bankedCoupon>
+            <accruedCoupon id="feed.trade.accrued.coupon">1.6</accruedCoupon>
+            <accruedCouponCcy id="feed.trade.accrued.coupon.ccy" ref="ccy.usd.name"/>
+            <fixedCoupon id="feed.trade.fixed.coupon">1.7</fixedCoupon>
+            <fixedCouponCcy id="feed.trade.fixed.coupon.ccy" ref="ccy.usd.name"/>
+            <floatingCoupon id="feed.trade.floating.coupon">1.8</floatingCoupon>
+            <floatingCouponCcy id="feed.trade.floating.coupon.ccy" ref="ccy.usd.name"/>
+            <clearedDate>2099-11-20</clearedDate>
+            <initialCoupon id="feed.trade.initial.counpon">1.9</initialCoupon>
+            <creditEventCashAmount id="feed.trade.credit.event.cash.amnt">2500</creditEventCashAmount>
+            <successionEventCashAmount id="feed.trade.succession.event.cash.amnt">3500</successionEventCashAmount>
+            <resetToParAmount id="feed.trade.reset.to.par.amount">4500</resetToParAmount>
+            <IMInterest id="feed.trade.im.interest">5500</IMInterest>
+            <NDFCashflow id="feed.trade.ndf.cashflow">6500</NDFCashflow>
+            <TSAMisc1 id="feed.trade.tsa.misc1">7500</TSAMisc1>
+            <TSAMisc2 id="feed.trade.tsa.misc2">8500</TSAMisc2>
+            <TSAMisc3 id="feed.trade.tsa.misc3">9500</TSAMisc3>
+            <upfrontFeeSettlementDate>2099-11-20</upfrontFeeSettlementDate>
+            <originalPartyB id="feed.trade.original.party.b" random="true" prefix="originalPartyB-"/>
+            <Model id="feed.trade.model" ref="agreement.model.name"/>
+        </feedTrade>
+
+        <feedResult id="feed.trade.result">
+            <fileUploaded id="feed.trade.result.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedStatus id="feed.trade.status">
+            <status>Successful</status>
+            <valuationFile ref="feed.trade.result.file"/>
+            <description>Trades</description>
+            <successfulFeed>
+                <total>1</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <agreementSearch id="search.feed.trade.agreement">
+            <systemId ref="agreement.id"/>
+        </agreementSearch>
+
+        <agreementSearchResult id="search.result.feed.trade.agreement">
+            <agreementId ref="agreement.id"/>
+        </agreementSearchResult>
+
+        <multiModelAgreementStatement id="feed.trade.agreement.model">
+            <multimodelAssetHoldingSummary>
+                <modelName ref="agreement.model.name"/>
+            </multimodelAssetHoldingSummary>
+        </multiModelAgreementStatement>
+
+        <agreementStatement id="check.feed.trade.agreement.statement">
+            <exposureSummary>
+                <itmExposure ref="feed.trade.mtm.valuation"/>
+                <!--<totalExposureAmount ref="feed.trade.mtm.valuation"/>-->
+                <totalExposureAmount>6000</totalExposureAmount>
+            </exposureSummary>
+            <marginCallCalculation>
+                <fcmReq>
+                    <totalSettlementAmount>63013.4</totalSettlementAmount>
+                    <totalResetToPar ref="feed.trade.reset.to.par.amount"/>
+                    <totalInitialCoupon ref="feed.trade.initial.counpon"/>
+                    <otherCashAdjustments>46500</otherCashAdjustments>
+                    <bankedCoupon ref="feed.trade.banked.coupon"/>
+                    <pai ref="feed.trade.pai"/>
+                    <imInterest ref="feed.trade.im.interest"/>
+                    <ndfCashflow ref="feed.trade.ndf.cashflow"/>
+                    <variationMargin>18001.6</variationMargin>
+                    <mtmRequirement ref="feed.trade.mtm.valuation"/>
+                    <accruedCoupon ref="feed.trade.accrued.coupon"/>
+                    <unsettledUpfrontFee ref="feed.trade.upfront.fee"/>
+                    <vmNetExcessOrDeficit>81015</vmNetExcessOrDeficit>
+                    <netExcessOrDeficit>81015</netExcessOrDeficit>
+                </fcmReq>
+            </marginCallCalculation>
+        </agreementStatement>
+
+        <agreementExposureSummary id="check.feed.trade.exposure.summary">
+            <productList>
+                <productType ref="agreement.product.name"/>
+                <alternativeAmounts ref="feed.trade.alt.mtm.valuation"/>
+                <nettedExposureAmounts ref="feed.trade.mtm.valuation"/>
+                <!--<collateralAmounts ref="feed.trade.mtm.valuation"/>-->
+                <collateralAmounts>6000</collateralAmounts>
+            </productList>
+            <portfolioTotals>
+                <alternativeAmounts ref="feed.trade.alt.mtm.valuation"/>
+                <nettedExposureAmounts ref="feed.trade.mtm.valuation"/>
+                <!--<collateralAmounts ref="feed.trade.mtm.valuation"/>-->
+                <collateralAmounts>6000</collateralAmounts>
+            </portfolioTotals>
+            <totalNettedCollateralAmount>
+                <amount ref="feed.trade.mtm.valuation"/>
+                <currency ref="ccy.usd.name"/>
+            </totalNettedCollateralAmount>
+            <totalSettlementAmountTSA>
+                <amount>63013.4</amount>
+            </totalSettlementAmountTSA>
+        </agreementExposureSummary>
+
+        <tradeSummary id="check.feed.trade.trade.summary">
+            <tradeDetailList>
+                <tradeInformation>
+                    <productType ref="feed.trade.product"/>
+                    <tradeIdentifierPartyA ref="feed.trade.trade.ref1"/>
+                    <tradeIdentifier2PartyA ref="feed.trade.trade.ref2"/>
+                    <strategy ref="feed.trade.strategy"/>
+                    <!--<tradeIdentifierPartyB></tradeIdentifierPartyB>-->
+                    <tradeDate>11/20/2099</tradeDate>
+                    <effectiveDate>11/20/2099</effectiveDate>
+                    <maturityDate>11/20/2099</maturityDate>
+                    <exchangedNotional1Amount ref="feed.trade.notional"/>
+                    <exchangedNotional1Currency ref="feed.trade.notional.ccy"/>
+                    <partyABranchName ref="feed.trade.principal"/>
+                    <partyBBranchName ref="feed.trade.counterparty"/>
+                    <strikePrice ref="feed.trade.strike.price"/>
+                    <buyOrSell>Sell</buyOrSell>
+                    <putOrCall>Call</putOrCall>
+                    <exchangedNotional2Amount ref="feed.trade.notional2"/>
+                    <exchangedNotional2Currency ref="feed.trade.notional2.ccy"/>
+                    <valuationNativeCurrencyAmount ref="feed.trade.mtm.valuation"/>
+                    <valuationNativeCurrency ref="feed.trade.mtm.valuation.location.sys.ccy"/>
+                    <alternativeValuationAmount ref="feed.trade.alt.mtm.valuation"/>
+                    <alternativeValuationCurrency ref="feed.trade.alt.mtm.valuation.ccy"/>
+                    <!--<valuationMethodApplied></valuationMethodApplied>-->
+                    <valuationBaseCurrencyAmount ref="feed.trade.mtm.valuation"/>
+                    <valuationBaseCurrency ref="feed.trade.mtm.valuation.location.sys.ccy"/>
+                    <!--<previousValuationAmount></previousValuationAmount>-->
+                    <!--<previousValuationCurrency></previousValuationCurrency>-->
+                    <!--<previousValuationDate></previousValuationDate>-->
+                    <principalValuationAmount ref="feed.trade.mtm.valuation"/>
+                    <principalValuationCurrency ref="feed.trade.mtm.valuation.location.sys.ccy"/>
+                    <!--<counterpartyValuationAmount></counterpartyValuationAmount>-->
+                    <!--<counterpartyValuationCurrency></counterpartyValuationCurrency>-->
+                    <independentValuationAmount ref="feed.trade.indep.mtm.valuation"/>
+                    <independentValuationCurrency ref="feed.trade.indep.mtm.valuation.ccy"/>
+                    <valuationDate>11/20/2099</valuationDate>
+                    <!--<dealLevelUpfronts></dealLevelUpfronts>-->
+                    <!--<dealLevelType></dealLevelType>-->
+                    <!--<dealLevelAmount></dealLevelAmount>-->
+                    <!--<dealLevelCurrency></dealLevelCurrency>-->
+                    <countryOfIssue ref="feed.trade.country.of.issue"/>
+                    <underlying ref="feed.trade.underlying.description"/>
+                    <tradeCleanPrice ref="feed.trade.trade.price"/>
+                    <marketDirtyPrice ref="feed.trade.dirty.market.price"/>
+                    <marketPrice ref="feed.trade.clean.market.price"/>
+                    <haircut ref="feed.trade.haircut"/>
+                    <priceAge ref="feed.trade.price.age"/>
+                    <priceChange ref="feed.trade.price.change"/>
+                    <coupon ref="feed.trade.coupon"/>
+                    <accrual ref="feed.trade.accrual"/>
+                    <originalPartyB ref="feed.trade.original.party.b"/>
+                    <tsaCurrency ref="feed.trade.tsa.ccy"/>
+                    <resetToParAmount ref="feed.trade.reset.to.par.amount"/>
+                    <initialCounpon ref="feed.trade.initial.counpon"/>
+                    <creditEventCashAmount ref="feed.trade.credit.event.cash.amnt"/>
+                    <successionEventCashAmount ref="feed.trade.succession.event.cash.amnt"/>
+                    <transferValue ref="feed.trade.transfer.value"/>
+                    <bankedCounpon ref="feed.trade.banked.coupon"/>
+                    <pai ref="feed.trade.pai"/>
+                    <imInterest ref="feed.trade.im.interest"/>
+                    <ndfCashflow ref="feed.trade.ndf.cashflow"/>
+                    <upfrontFee ref="feed.trade.upfront.fee"/>
+                    <upfrontFeeSettlementDate>11/20/2099</upfrontFeeSettlementDate>
+                    <paiRate ref="feed.trade.pai.rate"/>
+                    <fixedRate ref="feed.trade.fixed.rate"/>
+                    <floatingIndex ref="feed.trade.floating.index"/>
+                    <accruedCounpon ref="feed.trade.accrued.coupon"/>
+                    <accruedCouponCcy ref="feed.trade.accrued.coupon.ccy"/>
+                    <fixedCoupon ref="feed.trade.fixed.coupon"/>
+                    <fixedCouponCcy ref="feed.trade.fixed.coupon.ccy"/>
+                    <floatingCoupon ref="feed.trade.floating.coupon"/>
+                    <floatingCouponCcy ref="feed.trade.floating.coupon.ccy"/>
+                    <clearedDate>11/20/2099</clearedDate>
+                    <tsaMisc1 ref="feed.trade.tsa.misc1"/>
+                    <tsaMisc2 ref="feed.trade.tsa.misc2"/>
+                    <tsaMisc3 ref="feed.trade.tsa.misc3"/>
+                    <deliveryMethod ref="feed.trade.delivery.method"/>
+                    <!--<sourceSystem></sourceSystem>-->
+                    <!--<counterpartyExternalCode></counterpartyExternalCode>-->
+                    <descriptionID ref="feed.trade.description.id"/>
+                    <misc1 ref="feed.trade.misc1"/>
+                    <misc2 ref="feed.trade.misc2"/>
+                    <misc3 ref="feed.trade.misc3"/>
+                    <misc4 ref="feed.trade.misc4"/>
+                    <misc5 ref="feed.trade.misc5"/>
+                    <misc6 ref="feed.trade.misc6"/>
+                    <misc7 ref="feed.trade.misc7"/>
+                    <misc8 ref="feed.trade.misc8"/>
+                    <misc9 ref="feed.trade.misc9"/>
+                    <misc10 ref="feed.trade.misc10"/>
+                    <misc11 ref="feed.trade.misc11"/>
+                    <misc12 ref="feed.trade.misc12"/>
+                    <misc13 ref="feed.trade.misc13"/>
+                    <misc14 ref="feed.trade.misc14"/>
+                    <misc15 ref="feed.trade.misc15"/>
+                    <misc16 ref="feed.trade.misc16"/>
+                    <misc17 ref="feed.trade.misc17"/>
+                    <!--<misc18></misc18>-->
+                    <!--<misc19></misc19>-->
+                    <misc20 ref="feed.trade.misc20"/>
+                    <misc21 ref="feed.trade.misc21"/>
+                    <misc22 ref="feed.trade.misc22"/>
+                    <misc23 ref="feed.trade.misc23"/>
+                    <misc24 ref="feed.trade.misc24"/>
+                    <misc25 ref="feed.trade.misc25"/>
+                    <misc26 ref="feed.trade.misc26"/>
+                    <misc27 ref="feed.trade.misc27"/>
+                    <misc28 ref="feed.trade.misc28"/>
+                    <misc29 ref="feed.trade.misc29"/>
+                    <misc30 ref="feed.trade.misc30"/>
+                    <comment ref="feed.trade.comments"/>
+                </tradeInformation>
+            </tradeDetailList>
+        </tradeSummary>
+
+        <tradeDetail id="check.feed.trade.detail">
+            <tradeInformation>
+                <productType ref="feed.trade.product"/>
+                <strategy ref="feed.trade.strategy"/>
+                <tradeDate>11/20/2099</tradeDate>
+                <maturityDate>11/20/2099</maturityDate>
+                <effectiveDate>11/20/2099</effectiveDate>
+                <strikePrice ref="feed.trade.strike.price"/>
+                <exchangedNotional1Amount ref="feed.trade.notional"/>
+                <exchangedNotional2Amount ref="feed.trade.notional2"/>
+                <buyOrSell>Sell</buyOrSell>
+                <model ref="feed.trade.model"/>
+                <underlying ref="feed.trade.underlying.description"/>
+                <tradeIdentifier2PartyA ref="feed.trade.trade.ref1"/>
+                <tradeIdentifier2PartyA ref="feed.trade.trade.ref2"/>
+                <partyABranchName ref="feed.trade.principal"/>
+                <!--<tradeIdentifierPartyB></tradeIdentifierPartyB>-->
+                <partyBBranchName ref="feed.trade.counterparty"/>
+                <exchangedNotional1Currency ref="feed.trade.notional.ccy"/>
+                <exchangedNotional2Currency ref="feed.trade.notional2.ccy"/>
+            </tradeInformation>
+            <valuationInformation>
+                <principalValuationAmount>
+                    <amount ref="feed.trade.mtm.valuation"/>
+                    <currency ref="feed.trade.mtm.valuation.location.sys.ccy"/>
+                </principalValuationAmount>
+                <!--<counterPartyValuationAmount>-->
+                    <!--<amount></amount>-->
+                    <!--<currency></currency>-->
+                <!--</counterPartyValuationAmount>-->
+                <independentValuationAmount>
+                    <amount ref="feed.trade.indep.mtm.valuation"/>
+                    <currency ref="feed.trade.indep.mtm.valuation.ccy"/>
+                </independentValuationAmount>
+                <valuationNativeCurrencyAmount>
+                    <amount ref="feed.trade.mtm.valuation"/>
+                    <currency ref="feed.trade.mtm.valuation.location.sys.ccy"/>
+                </valuationNativeCurrencyAmount>
+                <alternativeValuationAmount>
+                    <amount ref="feed.trade.alt.mtm.valuation"/>
+                    <currency ref="feed.trade.alt.mtm.valuation.ccy"/>
+                </alternativeValuationAmount>
+                <!--<sourceSystem></sourceSystem>-->
+                <valuationDate>11/20/2099</valuationDate>
+                <!--<lockedTradeValues></lockedTradeValues>-->
+                <!--<allowFeedOverrrideLockedValues></allowFeedOverrrideLockedValues>-->
+                <!--<excludeValueFromCalculations></excludeValueFromCalculations>-->
+            </valuationInformation>
+            <ccpTradeInformation>
+                <paiRate ref="feed.trade.pai.rate"/>
+                <fixedRate ref="feed.trade.fixed.rate"/>
+                <floatingIndex ref="feed.trade.floating.index"/>
+                <accruedCoupon>
+                    <amount ref="feed.trade.accrued.coupon"/>
+                    <currency ref="feed.trade.accrued.coupon.ccy"/>
+                </accruedCoupon>
+                <fixedCoupon>
+                    <amount ref="feed.trade.fixed.coupon"/>
+                    <currency ref="feed.trade.fixed.coupon.ccy"/>
+                </fixedCoupon>
+                <floatingCoupon>
+                    <amount ref="feed.trade.floating.coupon"/>
+                    <currency ref="feed.trade.floating.coupon.ccy"/>
+                </floatingCoupon>
+                <clearedDate>11/20/2099</clearedDate>
+                <originalPartyB ref="feed.trade.original.party.b"/>
+                <tsaCurrency ref="feed.trade.tsa.ccy"/>
+                <resetToParAmount ref="feed.trade.reset.to.par.amount"/>
+                <initialCoupon ref="feed.trade.initial.counpon"/>
+                <creditEventCashAmount ref="feed.trade.credit.event.cash.amnt"/>
+                <successionEventCashAmount ref="feed.trade.succession.event.cash.amnt"/>
+                <transferValue ref="feed.trade.transfer.value"/>
+                <bankedCoupon ref="feed.trade.banked.coupon"/>
+                <pai ref="feed.trade.pai"/>
+                <imInterest ref="feed.trade.im.interest"/>
+                <ndfCashflow ref="feed.trade.ndf.cashflow"/>
+                <upfrontFee ref="feed.trade.upfront.fee"/>
+                <upfrontFeeSettlementDate>11/20/2099</upfrontFeeSettlementDate>
+                <tsaMisc1 ref="feed.trade.tsa.misc1"/>
+                <tsaMisc2 ref="feed.trade.tsa.misc2"/>
+                <tsaMisc3 ref="feed.trade.tsa.misc3"/>
+            </ccpTradeInformation>
+            <collateralInformation>
+                <!--<dealLevelUpfront></dealLevelUpfront>-->
+                <dealLevelType>Lock-up Margin</dealLevelType>
+                <!--<dealLevelAmount></dealLevelAmount>-->
+                <collateralComment ref="feed.trade.comments"/>
+                <!--<currency></currency>-->
+            </collateralInformation>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 1</fieldName>
+                <value ref="feed.trade.misc1"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 2</fieldName>
+                <value ref="feed.trade.misc2"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 3</fieldName>
+                <value ref="feed.trade.misc3"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 4</fieldName>
+                <value ref="feed.trade.misc4"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 5</fieldName>
+                <value ref="feed.trade.misc5"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 6</fieldName>
+                <value ref="feed.trade.misc6"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 7</fieldName>
+                <value ref="feed.trade.misc7"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 8</fieldName>
+                <value ref="feed.trade.misc8"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 9</fieldName>
+                <value ref="feed.trade.misc9"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 10</fieldName>
+                <value ref="feed.trade.misc10"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 11</fieldName>
+                <value ref="feed.trade.misc11"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 12</fieldName>
+                <value ref="feed.trade.misc12"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 13</fieldName>
+                <value ref="feed.trade.misc13"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 14</fieldName>
+                <value ref="feed.trade.misc14"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 15</fieldName>
+                <value ref="feed.trade.misc15"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 16</fieldName>
+                <value ref="feed.trade.misc16"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 17</fieldName>
+                <value ref="feed.trade.misc17"/>
+            </tradeMiscellaneousFields>
+            <!--<tradeMiscellaneousFields>-->
+                <!--<fieldName>Misc 18</fieldName>-->
+                <!--<value></value>-->
+            <!--</tradeMiscellaneousFields>-->
+            <!--<tradeMiscellaneousFields>-->
+                <!--<fieldName>Misc 19</fieldName>-->
+                <!--<value></value>-->
+            <!--</tradeMiscellaneousFields>-->
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 20</fieldName>
+                <value ref="feed.trade.misc20"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 21</fieldName>
+                <value ref="feed.trade.misc21"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 22</fieldName>
+                <value ref="feed.trade.misc22"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 23</fieldName>
+                <value ref="feed.trade.misc23"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 24</fieldName>
+                <value ref="feed.trade.misc24"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 25</fieldName>
+                <value ref="feed.trade.misc25"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 26</fieldName>
+                <value ref="feed.trade.misc26"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 27</fieldName>
+                <value ref="feed.trade.misc27"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 28</fieldName>
+                <value ref="feed.trade.misc28"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 29</fieldName>
+                <value ref="feed.trade.misc29"/>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 30</fieldName>
+                <value ref="feed.trade.misc30"/>
+            </tradeMiscellaneousFields>
+            <!--<tradeMiscellaneousFields>-->
+                <!--<fieldName>Misc MtM</fieldName>-->
+                <!--<value></value>-->
+            <!--</tradeMiscellaneousFields>-->
+        </tradeDetail>
+    </scenarioData>
+</dataBean>

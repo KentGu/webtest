@@ -1,0 +1,6 @@
+pre#STMT_NEED_RECAL_BEFORE#select count(distinct(agreementid)) as num1 from colstatementcalcreq inner join colagreementheader on colstatementcalcreq.agreementid=colagreementheader.id where colagreementheader.statusid =68
+
+post#STMT_NEED_RECAL_AFTER#select count(distinct(agreementid)) as num1 from colstatementcalcreq inner join colagreementheader on colstatementcalcreq.agreementid=colagreementheader.id where colagreementheader.statusid =68
+
+val#1#${STMT_NEED_RECAL_BEFORE} -gt 0
+val#1#${STMT_NEED_RECAL_AFTER} -eq 0

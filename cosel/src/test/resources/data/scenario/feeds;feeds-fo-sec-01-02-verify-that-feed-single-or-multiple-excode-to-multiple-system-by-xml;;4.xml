@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/feeds.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <feedOrganisation id="feed.organisation.external.code.existing.code">
+            <orgHeader>
+                <orgCode id="feed.organisation.external.code.existing.code.code">T30258Organisation_Code</orgCode>
+                <longName id="feed.organisation.external.code.existing.code.lname">T30258Organisation_LongName</longName>
+                <shortName id="feed.organisation.external.code.existing.code.sname">T30258Organisation_ShortName</shortName>
+            </orgHeader>
+            <orgRole id="feed.organisation.external.code.existing.code.role">Branch</orgRole>
+            <region id="feed.organisation.external.code.existing.code.region">ALL</region>
+            <externalCodes>
+                <externalCode>
+                    <system id="feed.organisation.external.code.external.system.1">MANUAL</system>
+                    <extCode id="feed.organisation.external.code.ext.code.1.1">T30258_Exist_External_Code</extCode>
+                    <operation>a</operation>
+                </externalCode>
+            </externalCodes>
+        </feedOrganisation>
+
+        <feedResult id="feed.organisation.external.code.existing.code.result">
+            <fileUploaded id="feed.organisation.external.code.existing.code.result.file"/>
+            <unsuccessfulImports>0</unsuccessfulImports>
+            <unchangedOrIgnoredImports>0</unchangedOrIgnoredImports>
+        </feedResult>
+
+        <feedStatus id="feed.organisation.external.code.existing.code.status">
+            <status>Successful</status>
+            <valuationFile ref="feed.organisation.external.code.existing.code.result.file"/>
+            <description>Organisation</description>
+            <successfulFeed apply="true">
+                <total>1</total>
+                <entry>
+                    <content>External Code T30258_Exist_External_Code already exists for system MANUAL in [T30258Organisation_LongName_Existed]</content>
+                </entry>
+            </successfulFeed>
+        </feedStatus>
+
+        <organisationSearch id="feed.organisation.external.code.existing.code.search">
+            <criteria>Exactly matching</criteria>
+            <type>Short Name</type>
+            <filter ref="feed.organisation.external.code.existing.code.sname"/>
+            <linkText ref="feed.organisation.external.code.existing.code.sname"/>
+        </organisationSearch>
+
+        <organisation id="check.feed.organisation.external.code.existing.code">
+            <shortName ref="feed.organisation.external.code.existing.code.sname"/>
+            <longName ref="feed.organisation.external.code.existing.code.lname"/>
+            <code ref="feed.organisation.external.code.existing.code.code"/>
+            <role ref="feed.organisation.external.code.existing.code.role"/>
+            <region ref="feed.organisation.external.code.existing.code.region"/>
+        </organisation>
+    </scenarioData>
+</dataBean>

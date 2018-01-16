@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/tier-calculation-rule.xml" xpointer="element(/1/1)"/>
+
+    <scenarioData>
+
+        <collateralStaticData id="col.model.cat">
+            <type>Model Category</type>
+            <!--<dataName id="model.cat.name" random="true" prefix="Category_USD_"/>-->
+            <dataName id="model.cat.name">Category_USD_4e1552fc3df7492eaa999d548dc660fa</dataName>
+            <description ref="model.cat.name"/>
+            <status>enabled</status>
+        </collateralStaticData>
+
+        <feedFxRate id="feed.USD.fx.rate">
+            <fxRate>1.000000</fxRate>
+            <currency id="model.usd.ccy.name">USD</currency>
+        </feedFxRate>
+        <feedFxRate id="feed.GBP.fx.rate">
+            <fxRate>0.640700</fxRate>
+            <currency id="model.gbp.ccy.name">GBP</currency>
+        </feedFxRate>
+        <feedFxRate id="feed.EUR.fx.rate">
+            <fxRate>0.920300</fxRate>
+            <currency id="model.eur.ccy.name">EUR</currency>
+        </feedFxRate>
+
+        <feedResult id="feed.fx.rate.result">
+            <successfullyImported>3</successfullyImported>
+            <unsuccessfulImports>0</unsuccessfulImports>
+        </feedResult>
+
+        <statementCalcRule id="rule.1">
+            <businessLine>ETD</businessLine>
+            <ruleName id="IOSCO.rule.name" random="true" prefix="Tier_IOSCO_"/>
+            <!--<ruleType>Tier</ruleType>-->
+            <ruleType>Statement</ruleType>
+            <ruleFileName>EtdStatement.drl</ruleFileName>
+            <!--<Jurisdiction ref="agreed.jurisdiction"/>-->
+            <Jurisdiction>IOSCO</Jurisdiction>
+        </statementCalcRule>
+
+        <statementCalcRule id="rule.2">
+            <businessLine>ETD</businessLine>
+            <ruleName id="Dodd.rule.name" random="true" prefix="Tier_Dodd_Frank_"/>
+            <!--<ruleType>Tier</ruleType>-->
+            <ruleType>Statement</ruleType>
+            <ruleFileName>EtdStatement.drl</ruleFileName>
+            <!--<Jurisdiction ref="other.jurisdiction"/>-->
+            <Jurisdiction>Dodd Frank</Jurisdiction>
+        </statementCalcRule>
+
+        <statementCalcRule id="rule.3">
+            <businessLine>ETD</businessLine>
+            <ruleName id="CSA.rule.name" random="true" prefix="Tier_CSA_"/>
+            <!--<ruleType>Tier</ruleType>-->
+            <ruleType>Statement</ruleType>
+            <ruleFileName>EtdStatement.drl</ruleFileName>
+            <Jurisdiction>Standard CSA</Jurisdiction>
+        </statementCalcRule>
+
+        <statementCalcRule id="rule.4">
+            <businessLine>ETD</businessLine>
+            <ruleName id="statement.rule.name" random="true" prefix="Statement_calc_"/>
+            <ruleType>Statement</ruleType>
+            <ruleFileName>EtdStatement.drl</ruleFileName>
+            <!--<Jurisdiction ref="agreed.jurisdiction"/>-->
+            <Jurisdiction>IOSCO</Jurisdiction>
+        </statementCalcRule>
+
+        <agreementSearch id="etd.agrmt.search">
+            <description>
+                <filter ref="etd.agrmt.desc"/>
+                <!--<filter id="etd.agrmt.desc">feed_etd_agr1_e0fc82925cee4b3d8f21d295fad7cc76</filter>-->
+            </description>
+        </agreementSearch>
+
+        <agreementSearchResult id="etd.agrmt.search.result">
+            <description ref="etd.agrmt.desc"/>
+        </agreementSearchResult>
+
+        <feedResult id="feed.etd.agrmt.result">
+            <successfullyImported>1</successfullyImported>
+            <unsuccessfulImports>0</unsuccessfulImports>
+        </feedResult>
+
+        <feedAgreement id="feed.etd.agreement">
+            <principal ref="org.p1.lname"/>
+            <principalRole>Broker</principalRole>
+            <counterpartycode ref="org.c1.lname"/>
+            <region ref="region.test1.name"/>
+            <principalContact ref="org.p1.lname"></principalContact>
+            <principalinterestcontact ref="org.p1.lname"></principalinterestcontact>
+            <cptyinterestcontact ref="org.c1.lname"></cptyinterestcontact>
+            <cptyContact ref="org.c1.lname"></cptyContact>
+            <agreement_description id="etd.agrmt.desc">ETD_Standard_8dc30137eec24b24ac2c438e0e2ab00c</agreement_description>
+            <!--<agreement_description id="etd.agrmt.desc" random="true" prefix="ETD_Standard_"></agreement_description>-->
+            <businessLine>ETD</businessLine>
+            <status>67</status>
+            <netting_Calc>Net</netting_Calc>
+            <netting_Interest>Net</netting_Interest>
+            <master_documentation ref="master.documentation.1987.isda.master.name"/>
+            <credit_support_documentation ref="credit.documentation.margin.provisions.name"/>
+            <base_currency id="agr.base.currency">USD</base_currency>
+            <marginType>Hedge</marginType>
+            <TSA>true</TSA>
+            <TSARule>QTP_TSA</TSARule>
+            <base_currency ref="ccy.usd.name"/>
+            <capitalCharge>false</capitalCharge>
+            <original_date random="true" variation="t"/>
+            <holiday_centre ref="hc.test1.name"/>
+            <time_zone ref="system.staticData.timeZone.cet.name"/>
+            <frequency>Daily</frequency>
+            <frequency_start random="true" variation="t"/>
+            <non_workingday_adjusttype>RollForward</non_workingday_adjusttype>
+            <notification_time>13.00</notification_time>
+            <resolution_time>10.00</resolution_time>
+            <resolution_day>same</resolution_day>
+            <fxRateRule ref="fxRateSet.standard.name"/>
+            <modelEligRules>
+                <modelEligRule>
+                    <modelName id="usd.model.name">USD</modelName>
+                    <modelCategory ref="model.cat.name"/>
+                    <modelCcy ref="model.usd.ccy.name"/>
+                </modelEligRule>
+                <modelEligRule>
+                    <modelName id="gbp.model.name">GBP</modelName>
+                    <modelCategory ref="model.cat.name"/>
+                    <modelCcy ref="model.gbp.ccy.name"/>
+                </modelEligRule>
+                <modelEligRule>
+                    <modelName id="eur.model.name">EUR</modelName>
+                    <modelCategory ref="model.cat.name"/>
+                    <modelCcy ref="model.eur.ccy.name"/>
+                </modelEligRule>
+            </modelEligRules>
+
+            <settlementInstructions>
+                <settlementInstruction>
+                    <modelName>USD</modelName>
+                    <modelCategory ref="model.cat.name"/>
+                    <bookingType>Cash</bookingType>
+                    <direction>Wire In/Wire Out</direction>
+                    <bucket>Standard</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <modelName>USD</modelName>
+                    <modelCategory ref="model.cat.name"/>
+                    <bookingType>IM</bookingType>
+                    <direction>Wire In/Wire Out</direction>
+                    <bucket>Standard</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <modelName>USD</modelName>
+                    <modelCategory ref="model.cat.name"/>
+                    <bookingType>IM</bookingType>
+                    <direction>Pledge In/Pledge Out</direction>
+                    <bucket>Standard</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <modelName>USD</modelName>
+                    <modelCategory ref="model.cat.name"/>
+                    <bookingType>Cash Interest</bookingType>
+                    <direction>Pay/Receive</direction>
+                    <bucket>Standard</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <modelName>USD</modelName>
+                    <modelCategory ref="model.cat.name"/>
+                    <bookingType>IM Interest</bookingType>
+                    <direction>Pay/Receive</direction>
+                    <bucket>Standard</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <modelName>GBP</modelName>
+                    <modelCategory ref="model.cat.name"/>
+                    <bookingType>Cash</bookingType>
+                    <direction>Wire In/Wire Out</direction>
+                    <bucket>Standard</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <modelName>GBP</modelName>
+                    <modelCategory ref="model.cat.name"/>
+                    <bookingType>IM</bookingType>
+                    <direction>Wire In/Wire Out</direction>
+                    <bucket>Standard</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <modelName>GBP</modelName>
+                    <modelCategory ref="model.cat.name"/>
+                    <bookingType>IM</bookingType>
+                    <direction>Pledge In/Pledge Out</direction>
+                    <bucket>Standard</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <modelName>GBP</modelName>
+                    <modelCategory ref="model.cat.name"/>
+                    <bookingType>Cash Interest</bookingType>
+                    <direction>Pay/Receive</direction>
+                    <bucket>Standard</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <modelName>GBP</modelName>
+                    <modelCategory ref="model.cat.name"/>
+                    <bookingType>IM Interest</bookingType>
+                    <direction>Pay/Receive</direction>
+                    <bucket>Standard</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <modelName>EUR</modelName>
+                    <modelCategory ref="model.cat.name"/>
+                    <bookingType>Cash</bookingType>
+                    <direction>Wire In/Wire Out</direction>
+                    <bucket>Standard</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <modelName>EUR</modelName>
+                    <modelCategory ref="model.cat.name"/>
+                    <bookingType>IM</bookingType>
+                    <direction>Wire In/Wire Out</direction>
+                    <bucket>Standard</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <modelName>EUR</modelName>
+                    <modelCategory ref="model.cat.name"/>
+                    <bookingType>IM</bookingType>
+                    <direction>Pledge In/Pledge Out</direction>
+                    <bucket>Standard</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <modelName>EUR</modelName>
+                    <modelCategory ref="model.cat.name"/>
+                    <bookingType>Cash Interest</bookingType>
+                    <direction>Pay/Receive</direction>
+                    <bucket>Standard</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <modelName>EUR</modelName>
+                    <modelCategory ref="model.cat.name"/>
+                    <bookingType>IM Interest</bookingType>
+                    <direction>Pay/Receive</direction>
+                    <bucket>Standard</bucket>
+                </settlementInstruction>
+            </settlementInstructions>
+            <asset>
+                <assetName ref="bond.usd.name"/>
+                <applicableParty></applicableParty>
+                <applicableType></applicableType>
+                <eligibility>
+                    <elig_ultimateParent_correlation>true</elig_ultimateParent_correlation>
+                    <elig_closeLink_correlation>true</elig_closeLink_correlation>
+                </eligibility>
+            </asset>
+            <rounding_delivery>Up</rounding_delivery>
+            <rounding_recall>Down</rounding_recall>
+            <distMedium>Email</distMedium>
+            <notifLetterType>Statement</notifLetterType>
+        </feedAgreement>
+
+        <agreementSearch id="family.agrmt.search">
+            <description>
+                <filter ref="etd.family.agrmt.desc"/>
+                <!--<filter id="etd.family.agrmt.desc">feed_etd_agr1_e0fc82925cee4b3d8f21d295fad7cc76</filter>-->
+            </description>
+        </agreementSearch>
+
+        <agreementSearchResult id="family.agrmt.search.result">
+            <description ref="etd.family.agrmt.desc"/>
+        </agreementSearchResult>
+
+        <feedResult id="feed.etd.family.agrmt.result">
+            <successfullyImported>1</successfullyImported>
+            <unsuccessfulImports>0</unsuccessfulImports>
+        </feedResult>
+
+        <feedAgreement id="feed.etd.family.agreement">
+            <principal ref="org.p1.lname"/>
+            <principalRole>Broker</principalRole>
+            <counterpartycode ref="org.c1.lname"/>
+            <region ref="region.test1.name"/>
+            <principalContact ref="org.p1.lname"></principalContact>
+            <principalinterestcontact ref="org.p1.lname"></principalinterestcontact>
+            <cptyinterestcontact ref="org.c1.lname"></cptyinterestcontact>
+            <cptyContact ref="org.c1.lname"></cptyContact>
+            <familyAgreement>true</familyAgreement>
+            <!--<agreement_description id="etd.family.agrmt.desc" random="true" prefix="feed_etd_agr1_"/>-->
+            <agreement_description id="etd.family.agrmt.desc" random="true"
+                                   prefix="ETD_Family_"></agreement_description>
+            <businessLine>ETD</businessLine>
+            <!--<add configurable rule>-->
+            <status>67</status>
+            <regulatoryAgreement>true</regulatoryAgreement>
+            <agreedJurisdiction id="agreed.jurisdiction">IOSCO</agreedJurisdiction>
+            <other_Jurisdiction id="other.jurisdiction">Dodd Frank</other_Jurisdiction>
+            <master_documentation ref="master.documentation.1987.isda.master.name"/>
+            <credit_support_documentation ref="credit.documentation.margin.provisions.name"/>
+            <base_currency id="agr.base.currency">USD</base_currency>
+            <base_currency ref="ccy.usd.name"/>
+            <original_date random="true" variation="t"/>
+            <fxRateRule ref="fxRateSet.standard.name"/>
+            <holiday_centre ref="hc.test1.name"/>
+            <time_zone ref="system.staticData.timeZone.cet.name"/>
+            <frequency>Daily</frequency>
+            <frequency_start random="true" variation="t"/>
+            <non_workingday_adjusttype>RollForward</non_workingday_adjusttype>
+            <notification_time>13.00</notification_time>
+            <resolution_time>10.00</resolution_time>
+            <resolution_day>same</resolution_day>
+            <familyTiers>
+                <tier>
+                    <tierName>Tier1</tierName>
+                    <displayOrder>1</displayOrder>
+                    <tierDescription>Description1</tierDescription>
+                    <lead>true</lead>
+                    <netOfChildren>true</netOfChildren>
+                    <linkedAgreement></linkedAgreement>
+                    <tier>
+                        <tierName>Tier2</tierName>
+                        <displayOrder>2</displayOrder>
+                        <tierDescription>Description2</tierDescription>
+                        <lead>false</lead>
+                        <netOfChildren>true</netOfChildren>
+                        <linkedAgreement></linkedAgreement>
+                    </tier>
+                    <tier>
+                        <tierName>Tier3</tierName>
+                        <displayOrder>3</displayOrder>
+                        <tierDescription>Description3</tierDescription>
+                        <lead>true</lead>
+                        <netOfChildren>false</netOfChildren>
+                        <linkedAgreement></linkedAgreement>
+                    </tier>
+                </tier>
+            </familyTiers>
+            <rounding_delivery>Up</rounding_delivery>
+            <rounding_recall>Down</rounding_recall>
+            <distMedium>Email</distMedium>
+            <notifLetterType>Statement</notifLetterType>
+        </feedAgreement>
+
+    </scenarioData>
+
+</dataBean>

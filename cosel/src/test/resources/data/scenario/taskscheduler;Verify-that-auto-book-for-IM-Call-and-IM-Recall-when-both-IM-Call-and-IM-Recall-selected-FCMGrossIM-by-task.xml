@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/exposureManagement.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <agreement id="agr31367.notnet">
+            <agreementId id="agrid">2588</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="vm.noCall">
+            <action>VM ITM No Calls</action>
+            <agreementRequirement>0.00</agreementRequirement>
+            <callStatus>No Call Required</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.call.agreementRequirement.1000000.pendingReview">
+            <action>IM Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.recall.agreementRequirement.2000000.pendingReview">
+            <action>IM Recall</action>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.call.agreementRequirement.1000000.MarginRequestIssued.counterpartyAmount.600000">
+            <action>IM Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <counterpartyAmount>600000</counterpartyAmount>
+            <callStatus>Margin Request Issued</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.recall.agreementRequirement.2000000.MarginRequestIssued.counterpartyAmount.700000">
+            <action>IM Recall</action>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <counterpartyAmount>700000</counterpartyAmount>
+            <callStatus>Margin Request Issued</callStatus>
+        </exposureEventDetail>
+
+        <taskSchedulerDetail id="autoBookCashforAgr31367">
+            <taskName>Auto Book Cash</taskName>
+            <misc1 ref="agrid"/>
+        </taskSchedulerDetail>
+
+        <taskSchedulerMessage id="autoBookCashforAgr31367.success">
+            <message>Auto Book Cash: Auto Book Cash Task Finished with 2 successful [^,]*</message>
+        </taskSchedulerMessage>
+
+        <assetBookingSummary id="asset.type.CASH.USD">
+            <assetType ref="cash.usd1.name"/>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="im.call.pending.autobook.0.6m">
+            <imCollateralValue>600,000.00</imCollateralValue>
+            <nominalAmount>600,000.00</nominalAmount>
+            <movement>Call</movement>
+            <status>Pending</status>
+            <bookingSource>Auto Book</bookingSource>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="im.recall.pending.autobook.0.7m">
+            <imCollateralValue>700,000.00</imCollateralValue>
+            <nominalAmount>700,000.00</nominalAmount>
+            <movement>Recall</movement>
+            <status>Pending</status>
+            <bookingSource>Auto Book</bookingSource>
+        </assetBookingSummary>
+
+        <exposureEventDetail id="im.call.agreementRequirement.1000000.partialDisbute">
+            <action>IM Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Partial Dispute</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.recall.agreementRequirement.2000000.partialDisbute">
+            <action>IM Recall</action>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <callStatus>Partial Dispute</callStatus>
+        </exposureEventDetail>
+
+
+
+
+
+
+    </scenarioData>
+</dataBean>

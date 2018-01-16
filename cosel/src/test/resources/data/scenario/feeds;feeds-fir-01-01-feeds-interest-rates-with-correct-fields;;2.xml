@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/feeds.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <interestRate id="base.daily.interest.rate">
+            <interestRateName id="interest.rate.name" prefix="feed_interest" random="true"/>
+            <description ref="interest.rate.name"/>
+            <refixFrequency>Daily</refixFrequency>
+            <type>Interest</type>
+            <status>enabled</status>
+        </interestRate>
+
+        <agreement id="otc.agr">
+            <principal>
+                <filter id="otc.agr.principal">QTPPrincipal</filter>
+                <linkText ref="otc.agr.principal"/>
+            </principal>
+            <counterparty>
+                <filter id="otc.agr.counterparty">QTPCounterparty</filter>
+                <linkText ref="otc.agr.counterparty"/>
+            </counterparty>
+            <agreementDescription id="otc.agr.desc" prefix="feed_interest" random="true"/>
+            <agreementDate>t</agreementDate>
+            <holidayCentre>qtp_holiday_centre</holidayCentre>
+            <product>
+                <productName>QTP</productName>
+            </product>
+            <collateralAssetClass>
+                <collateralAssetClassName id="otc.agr.assetclass">qtp_cash</collateralAssetClassName>
+                <collateralAssetType>
+                    <collateralAssetTypeName id="otc.agr.assettype">qtp_cash_usd</collateralAssetTypeName>
+                    <interestRule>
+                        <agreementRate ref="interest.rate.name"/>
+                    </interestRule>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter>VM Call/Return</filter>
+                    <linkText>VM Call/Return</linkText>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter>VM Recall/Delivery</filter>
+                    <linkText>VM Recall/Delivery</linkText>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter>Pay</filter>
+                    <linkText>Pay</linkText>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter>Receive</filter>
+                    <linkText>Receive</linkText>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementId id="otc.agr.id"/>
+        </agreement>
+
+        <agreement id="approve.agreement">
+            <agreementStatus>Pending</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+        <assetBookingSummary id="asset.qtp.cash.usd">
+            <assetType ref="otc.agr.assettype"/>
+            <nominalAmount>2,000,000.00</nominalAmount>
+            <status>Pending</status>
+        </assetBookingSummary>
+
+        <bookingDetail id="booking.2m.call">
+            <bookingId id="booking1.id"/>
+            <bookingInformation>
+                <settlementDate>9/10/2015</settlementDate>
+                <settlementDateAlertHandling>
+                    <accept>true</accept>
+                </settlementDateAlertHandling>
+                <bookingInformationDetail>
+                    <nominalAmount>2m</nominalAmount>
+                    <bookingMovement>Call</bookingMovement>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <save>save</save>
+        </bookingDetail>
+
+        <bookingDetail id="booking.2m.call.approved">
+            <bookingInformation>
+                <settlementStatusInfo>
+                    <settlementStatus>Authorised</settlementStatus>
+                </settlementStatusInfo>
+                <settlementStatusInfo>
+                    <settlementStatus>Pending Settlement</settlementStatus>
+                </settlementStatusInfo>
+                <settlementStatusInfo>
+                    <settlementStatus>Settled</settlementStatus>
+                </settlementStatusInfo>
+            </bookingInformation>
+            <save>save</save>
+        </bookingDetail>
+
+        <feedInterestRate id="feed.interest.rate.amount.3.77">
+            <Rate_amount id="feed.interest.rate1.amt">3.77</Rate_amount>
+            <Rate_source ref="interest.rate.name"/>
+            <Rate_date random="true" variation="t-30"/>
+            <Rate_type>Interest</Rate_type>
+        </feedInterestRate>
+
+        <feedResult id="feed.interest.rate.result.1">
+            <fileUploaded id="feed.interest.rate.result.1.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <interestEventSearch id="interest.event.search.otc.agreement">
+            <description>
+                <filter ref="otc.agr.desc"/>
+            </description>
+            <month>Last Month</month>
+        </interestEventSearch>
+
+        <interestEventDetail id="interest.event.qtp.cash.usd">
+            <description ref="otc.agr.desc"/>
+            <cashAssetType ref="otc.agr.assettype"/>
+            <interestSource>Net Interest</interestSource>
+        </interestEventDetail>
+
+        <interestReportDetails id="interest.report.detail.rate.amount.3.77">
+            <dailyInterestDetails>
+                <agreementRate ref="feed.interest.rate1.amt"/>
+            </dailyInterestDetails>
+        </interestReportDetails>
+
+        <feedInterestRate id="feed.interest.rate.amount.5.77">
+            <Rate_amount id="feed.interest.rate2.amt">5.77</Rate_amount>
+            <Rate_source ref="interest.rate.name"/>
+            <Rate_date random="true" variation="t-30"/>
+            <Rate_type>Interest</Rate_type>
+        </feedInterestRate>
+
+        <feedResult id="feed.interest.rate.result.2">
+            <fileUploaded id="feed.interest.rate.result.2.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <interestReportDetails id="interest.report.detail.rate.amount.5.77">
+            <dailyInterestDetails>
+                <agreementRate ref="feed.interest.rate2.amt"/>
+            </dailyInterestDetails>
+        </interestReportDetails>
+    </scenarioData>
+</dataBean>

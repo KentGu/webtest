@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/feeds.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <feedEligibilityRulesTemplate id="feed.eligibility.rule.template.normal">
+            <name id="feed.eligibility.rule.template.normal.name" random="true"/>
+            <netting_MTM_And_IA>Net</netting_MTM_And_IA>
+            <concentrationLimit>
+                <concentrationLimitTrigger id="feed.eligibility.rule.template.normal.con.trigger">1000</concentrationLimitTrigger>
+                <rating_method>Issue</rating_method>
+            </concentrationLimit>
+            <assets>
+                <asset>
+                    <assetName id="feed.eligibility.rule.template.normal.asset.1.name">qtp_cash_usd</assetName>
+                    <applicableParty id="feed.eligibility.rule.template.normal.asset.1.party">PC</applicableParty>
+                    <applicableType id="feed.eligibility.rule.template.normal.asset.1.type">VMIM</applicableType>
+                    <settlementDateAbbriviated id="feed.eligibility.rule.template.normal.asset.1.settlement.date">T+6</settlementDateAbbriviated>
+                    <notes id="feed.eligibility.rule.template.normal.asset.1.note.1">aaa</notes>
+                    <notes2 id="feed.eligibility.rule.template.normal.asset.1.note.2">bbb</notes2>
+                    <notes3 id="feed.eligibility.rule.template.normal.asset.1.note.3">123</notes3>
+                </asset>
+                <asset>
+                    <assetName id="feed.eligibility.rule.template.normal.asset.2.name">qtp_bond_usd</assetName>
+                    <applicableParty id="feed.eligibility.rule.template.normal.asset.2.party">P</applicableParty>
+                    <applicableType id="feed.eligibility.rule.template.normal.asset.2.type">VM</applicableType>
+                    <settlementDateAbbriviated id="feed.eligibility.rule.template.normal.asset.2.settlement.date">T+6</settlementDateAbbriviated>
+                    <notes id="feed.eligibility.rule.template.normal.asset.2.note.1">aaa</notes>
+                    <notes2 id="feed.eligibility.rule.template.normal.asset.2.note.2">bbb</notes2>
+                    <notes3 id="feed.eligibility.rule.template.normal.asset.2.note.3">123</notes3>
+                </asset>
+                <asset>
+                    <assetName id="feed.eligibility.rule.template.normal.asset.3.name">qtp_equity_usd</assetName>
+                    <applicableParty id="feed.eligibility.rule.template.normal.asset.3.party">C</applicableParty>
+                    <applicableType id="feed.eligibility.rule.template.normal.asset.3.type">IM</applicableType>
+                    <settlementDateAbbriviated id="feed.eligibility.rule.template.normal.asset.3.settlement.date">T+7</settlementDateAbbriviated>
+                    <notes id="feed.eligibility.rule.template.normal.asset.3.note.1">aaa</notes>
+                    <notes2 id="feed.eligibility.rule.template.normal.asset.3.note.2">bbb</notes2>
+                    <notes3 id="feed.eligibility.rule.template.normal.asset.3.note.3">123</notes3>
+                </asset>
+            </assets>
+        </feedEligibilityRulesTemplate>
+
+        <feedResult id="feed.eligibility.rule.template.normal.result">
+            <fileUploaded id="feed.eligibility.rule.template.normal.result.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedStatus id="feed.eligibility.rule.template.normal.status">
+            <status>Successful</status>
+            <valuationFile ref="feed.eligibility.rule.template.normal.result.file"/>
+            <description>Eligibility Rules Template</description>
+            <successfulFeed>
+                <total>1</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <approvalManagerEligibilityRulesTemplateSearch id="feed.eligibility.rule.template.normal.approval.manager.search">
+            <eligibilityRulesTemplateName>
+                <filter ref="feed.eligibility.rule.template.normal.name"/>
+                <linkText ref="feed.eligibility.rule.template.normal.name"/>
+            </eligibilityRulesTemplateName>
+        </approvalManagerEligibilityRulesTemplateSearch>
+
+        <approvalManagerEligibilityRulesTemplateSearchResult id="feed.eligibility.rule.template.normal.approval.manager.search.result">
+            <eligibilityRulesTemplateName ref="feed.eligibility.rule.template.normal.name"/>
+        </approvalManagerEligibilityRulesTemplateSearchResult>
+
+        <eligibilityRulesTemplate id="check.feed.eligibility.rule.template.normal">
+            <templateName ref="feed.eligibility.rule.template.normal.name"/>
+            <status>Approved</status>
+            <nettingIAandMtM>Net</nettingIAandMtM>
+            <concentrationLimitTrigger ref="feed.eligibility.rule.template.normal.con.trigger"/>
+            <collateralAssetClass>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="feed.eligibility.rule.template.normal.asset.1.name"/>
+                    <applicableParty>Both</applicableParty>
+                    <settlementDate ref="feed.eligibility.rule.template.normal.asset.1.settlement.date"/>
+                    <assetNote1 ref="feed.eligibility.rule.template.normal.asset.1.note.1"/>
+                    <assetNote2 ref="feed.eligibility.rule.template.normal.asset.1.note.2"/>
+                    <assetNote3 ref="feed.eligibility.rule.template.normal.asset.1.note.3"/>
+                </collateralAssetType>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="feed.eligibility.rule.template.normal.asset.2.name"/>
+                    <applicableParty>P</applicableParty>
+                    <settlementDate ref="feed.eligibility.rule.template.normal.asset.2.settlement.date"/>
+                    <assetNote1 ref="feed.eligibility.rule.template.normal.asset.2.note.1"/>
+                    <assetNote2 ref="feed.eligibility.rule.template.normal.asset.2.note.2"/>
+                    <assetNote3 ref="feed.eligibility.rule.template.normal.asset.2.note.3"/>
+                </collateralAssetType>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="feed.eligibility.rule.template.normal.asset.3.name"/>
+                    <applicableParty>C</applicableParty>
+                    <settlementDate ref="feed.eligibility.rule.template.normal.asset.3.settlement.date"/>
+                    <assetNote1 ref="feed.eligibility.rule.template.normal.asset.3.note.1"/>
+                    <assetNote2 ref="feed.eligibility.rule.template.normal.asset.3.note.2"/>
+                    <assetNote3 ref="feed.eligibility.rule.template.normal.asset.3.note.3"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+        </eligibilityRulesTemplate>
+    </scenarioData>
+</dataBean>

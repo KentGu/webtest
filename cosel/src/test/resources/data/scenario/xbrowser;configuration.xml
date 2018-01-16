@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/xbrowser.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <collateralStaticData id="letterTemplate1">
+            <type>LetterTemplateType</type>
+            <dataName random="true" id="letterTemplateName1" />
+            <description ref="letterTemplateName1" />
+            <status>enabled</status>
+        </collateralStaticData>
+        <letterConfiguration id="letterConfiguration1">
+            <marginLetter>
+                <letterType>Call &amp; Recall</letterType>
+                <letterTemplate name="1">
+                    <templateType ref="letterTemplateName1" />
+                    <description ref="letterTemplateName1" />
+                    <templateFile>CallRecallLetterTemplate.xml</templateFile>
+                </letterTemplate>
+                <createSystemDraft>true</createSystemDraft>
+                <includeAssetHoldingsAndValuationReport>true</includeAssetHoldingsAndValuationReport>
+            </marginLetter>
+            <marginLetter>
+                <letterType>Substitution Conf</letterType>
+                <letterTemplate>
+                    <templateType ref="letterTemplateName1" />
+                    <description ref="letterTemplateName1" />
+                    <templateFile>SubConfirmLetterTemplate.xml</templateFile>
+                </letterTemplate>
+                <createSystemDraft>true</createSystemDraft>
+            </marginLetter>
+            <interestLetter>
+                <letterType>Capitalise pay</letterType>
+                <letterTemplate>
+                    <templateType ref="letterTemplateName1" />
+                    <description ref="letterTemplateName1" />
+                    <templateFile>CapitalisePayTemplate.xml</templateFile>
+                </letterTemplate>
+            </interestLetter>
+            <exposureStatements>
+                <letterTemplate>
+                    <templateType ref="letterTemplateName1" />
+                    <description ref="letterTemplateName1" />
+                    <templateFile>ExposureStatementTemplate.xml</templateFile>
+                </letterTemplate>
+            </exposureStatements>
+        </letterConfiguration>
+        <letterConfiguration id="editLetterConfiguration1">
+            <marginLetter>
+                <letterType>Call &amp; Recall</letterType>
+                <letterTemplate name="1">
+                    <description ref="letterTemplateName1" />
+                    <templateFile>CallRecallLetterTemplate.xml</templateFile>
+                </letterTemplate>
+                <createSystemDraft>false</createSystemDraft>
+                <includeAssetHoldingsAndValuationReport>false</includeAssetHoldingsAndValuationReport>
+                <includeExposureReport>true</includeExposureReport>
+            </marginLetter>
+        </letterConfiguration>
+
+        <letterConfiguration id="letterUDL1">
+            <userDefinedLetter>
+                <letterTemplate remove="true">
+                    <letterName random="true"/>
+                    <letterSubject random="true" />
+                    <letterMessage random="true" />
+                </letterTemplate>
+            </userDefinedLetter>
+        </letterConfiguration>
+        <collateralPreference id="collateralPreference1">
+            <letterInformation>
+                <letterHeader>automation test head</letterHeader>
+                <letterFooter>automation test footer</letterFooter>
+                <letterEmailText>dear sir</letterEmailText>
+                <leftMargin>40</leftMargin>
+            </letterInformation>
+            <collateralRules>
+                <agreementFourEyes>true</agreementFourEyes>
+                <tradesFourEyes>true</tradesFourEyes>
+                <workflowFourEyes>true</workflowFourEyes>
+                <settlementStatusFourEyes>true</settlementStatusFourEyes>
+                <settlementStatusFourEyesControl>
+                    <fromStatus>System Draft</fromStatus>
+                    <toStatus>Authorised</toStatus>
+                    <excludeFromStatus>Pending</excludeFromStatus>
+                    <excludeFromStatus>Settled</excludeFromStatus>
+                    <excludeToStatus>Query</excludeToStatus>
+                </settlementStatusFourEyesControl>
+                <!--<noAuthorisedStatus>true</noAuthorisedStatus>-->
+                <concentrationLimitCalc>Collateral Value</concentrationLimitCalc>
+            </collateralRules>
+            <general>
+                <defaultFXRates ref="fxRateSet.default.name" />
+                <defaultPriceSource>PS1</defaultPriceSource>
+                <alertHandling>
+                    <accept>true</accept>
+                </alertHandling>
+            </general>
+            <taskManager>
+                <fileThresholdToSplit>10000</fileThresholdToSplit>
+                <deletePartialFile>true</deletePartialFile>
+            </taskManager>
+        </collateralPreference>
+    </scenarioData>
+</dataBean>

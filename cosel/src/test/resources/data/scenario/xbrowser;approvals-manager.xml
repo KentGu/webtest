@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/xbrowser.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <agreement id="approval.agr1">
+            <principal>
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter ref="org.p1.code"/>
+                <linkText ref="org.p1.code"/>
+            </principal>
+            <counterparty>
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter ref="org.c1.code"/>
+                <linkText ref="org.c1.code"/>
+            </counterparty>
+            <agreementDescription id="approval.agr1.des">approvalManger</agreementDescription>
+            <agreementDate>T</agreementDate>
+            <sendConfirmationLetterToCounterparty>true</sendConfirmationLetterToCounterparty>
+            <callFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </callFrequency>
+            <holidayCentre ref="hc.europe.name"/>
+            <product>
+                <productName ref="product.test1.name"/>
+            </product>
+            <payMethod>Physical Payment</payMethod>
+            <receiveMethod>Physical Payment</receiveMethod>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="cash.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vcr.name"/>
+                    <linkText ref="payInstrBucket.vcr.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vrd.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.pay.name"/>
+                    <linkText ref="payInstrBucket.pay.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.rec.name"/>
+                    <linkText ref="payInstrBucket.rec.name"/>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementId id="approval.agr1.id"/>
+        </agreement>
+        <agreement id="approval.agr2">
+            <principal>
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter ref="org.p1.code"/>
+                <linkText ref="org.p1.code"/>
+            </principal>
+            <counterparty>
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter ref="org.c1.code"/>
+                <linkText ref="org.c1.code"/>
+            </counterparty>
+            <agreementDescription id="IM.agr2.des">approvalManger</agreementDescription>
+            <agreementDate>T</agreementDate>
+            <sendConfirmationLetterToCounterparty>true</sendConfirmationLetterToCounterparty>
+            <callFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </callFrequency>
+            <holidayCentre ref="hc.europe.name"/>
+            <product>
+                <productName ref="product.test1.name"/>
+            </product>
+            <payMethod>Physical Payment</payMethod>
+            <receiveMethod>Physical Payment</receiveMethod>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="cash.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vcr.name"/>
+                    <linkText ref="payInstrBucket.vcr.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vrd.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.pay.name"/>
+                    <linkText ref="payInstrBucket.pay.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.rec.name"/>
+                    <linkText ref="payInstrBucket.rec.name"/>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementId id="approval.agr2.id"/>
+        </agreement>
+        <agreement id="approval.agr3">
+            <principal>
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter ref="org.p1.code"/>
+                <linkText ref="org.p1.code"/>
+            </principal>
+            <counterparty>
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter ref="org.c1.code"/>
+                <linkText ref="org.c1.code"/>
+            </counterparty>
+            <agreementDescription id="approval.agr3.des">approvalManger</agreementDescription>
+            <agreementDate>T</agreementDate>
+            <sendConfirmationLetterToCounterparty>true</sendConfirmationLetterToCounterparty>
+            <callFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </callFrequency>
+            <holidayCentre ref="hc.europe.name"/>
+            <product>
+                <productName ref="product.test1.name"/>
+            </product>
+            <payMethod>Physical Payment</payMethod>
+            <receiveMethod>Physical Payment</receiveMethod>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="cash.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vcr.name"/>
+                    <linkText ref="payInstrBucket.vcr.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vrd.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.pay.name"/>
+                    <linkText ref="payInstrBucket.pay.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.rec.name"/>
+                    <linkText ref="payInstrBucket.rec.name"/>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementId id="approval.agr3.id"/>
+        </agreement>
+        <approvalManagerAgreementSearch id="approvalManagerAgreementSearch1">
+            <description>
+                <filter>approvalManger</filter>
+                <linkText>approvalManger</linkText>
+            </description>
+        </approvalManagerAgreementSearch>
+        <approvalManagerAgreementSearchResult id="approvalManagerAgreementSearchResult1">
+            <description>approvalManger</description>
+            <!--<status>Draft</status>-->
+        </approvalManagerAgreementSearchResult>
+        <approvalManagerAgreementSearchResult id="approvalManagerAgreementSearchResult2">
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </approvalManagerAgreementSearchResult>
+
+    </scenarioData>
+</dataBean>

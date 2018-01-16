@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/exposureManagement.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <agreement id="agr20377.multiModel.fcm">
+            <agreementId id="agrid">2573</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="model">
+            <column>Model</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.call.top">
+            <action>IM Call</action>
+            <agreementRequirement>428,710.23</agreementRequirement>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.call.top">
+            <action>VM Call(Deficit)</action>
+            <agreementRequirement>1,484,967.94</agreementRequirement>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.call.top.agreementRequirement.428710.23.pendingReview">
+            <action>IM Call</action>
+            <agreementRequirement>428,710.23</agreementRequirement>
+            <sysCalculatedAmount>428,710.23</sysCalculatedAmount>
+            <callStatus>Pending Review</callStatus>
+            <model></model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.recall.m2.agreementRequirement.0.8m.pendingReview">
+            <action>IM Recall</action>
+            <agreementRequirement>800,000.00</agreementRequirement>
+            <sysCalculatedAmount>800,000.00</sysCalculatedAmount>
+            <callStatus>Pending Review</callStatus>
+            <model>m2</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.call.m1.agreementRequirement.421773.61.pendingReview">
+            <action>IM Call</action>
+            <agreementRequirement>421,773.61</agreementRequirement>
+            <sysCalculatedAmount>421,773.61</sysCalculatedAmount>
+            <callStatus>Pending Review</callStatus>
+            <model>m1</model>
+        </exposureEventDetail>
+
+
+        <exposureEventDetail id="vm.call.top.agreementRequirement.1484967.94.pendingReview">
+            <action>VM Call(Deficit)</action>
+            <agreementRequirement>1,484,967.94</agreementRequirement>
+            <sysCalculatedAmount>1,484,967.94</sysCalculatedAmount>
+            <callStatus>Pending Review</callStatus>
+            <model></model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.call.m2.agreementRequirement.122756785.52.pendingReview">
+            <action>VM Call(Deficit)</action>
+            <agreementRequirement>122,756,785.52</agreementRequirement>
+            <sysCalculatedAmount>122,756,785.52</sysCalculatedAmount>
+            <callStatus>Pending Review</callStatus>
+            <model>m2</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.call.m1.agreementRequirement.420571.98.pendingReview">
+            <action>VM Call(Deficit)</action>
+            <agreementRequirement>420,571.98</agreementRequirement>
+            <sysCalculatedAmount>420,571.98</sysCalculatedAmount>
+            <callStatus>Pending Review</callStatus>
+            <model>m1</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.call.m2.agreementRequirement.122756785.52.MarginRequestIssued">
+            <action>VM Call(Deficit)</action>
+            <agreementRequirement>122,756,785.52</agreementRequirement>
+            <sysCalculatedAmount>122,756,785.52</sysCalculatedAmount>
+            <callStatus>Margin Request Issued</callStatus>
+            <model>m2</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.call.m1.agreementRequirement.420571.98.MarginRequestIssued">
+            <action>VM Call(Deficit)</action>
+            <agreementRequirement>420,571.98</agreementRequirement>
+            <sysCalculatedAmount>420,571.98</sysCalculatedAmount>
+            <callStatus>Margin Request Issued</callStatus>
+            <model>m1</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.call.top.agreementRequirement.1484967.94.MarginRequestIssued">
+            <action>VM Call(Deficit)</action>
+            <agreementRequirement>1,484,967.94</agreementRequirement>
+            <sysCalculatedAmount>1,484,967.94</sysCalculatedAmount>
+            <callStatus>Margin Request Issued</callStatus>
+            <model></model>
+        </exposureEventDetail>
+
+
+    </scenarioData>
+</dataBean>

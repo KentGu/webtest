@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/exposureManagement.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <agreement id="agr28335.fcm.grossIM">
+            <agreementId id="agrid">2677</agreementId>
+        </agreement>
+
+        <agreement id="agr28335">
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+        <feedExternalIA id="feed.external.ia.-1k.IAFS1">
+            <AGREEMENTID ref="agrid"/>
+            <!--<legal_id ref="otc.net.agreement.external.id"/>-->
+            <PRODUCT>ALL</PRODUCT>
+            <AMOUNT>-1000</AMOUNT>
+            <CURRENCY ref="ccy.usd.name"/>
+            <ValuationDate>2009-6-25</ValuationDate>
+            <externalSystem>IAFS1</externalSystem>
+            <!--<scaleUp>true</scaleUp>-->
+            <!--<Model ref="otc.net.agreement.model.name"/>-->
+            <!--<payParty>p</payParty>-->
+        </feedExternalIA>
+
+        <feedResult id="feed.external.ia.-1k.IAFS1.success">
+            <fileUploaded id="feed.external.ia.-1k.IAFS1.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedExternalIA id="feed.external.ia.1.1k.IAFS1">
+            <AGREEMENTID ref="agrid"/>
+            <!--<legal_id ref="otc.net.agreement.external.id"/>-->
+            <PRODUCT>ALL</PRODUCT>
+            <AMOUNT>1100</AMOUNT>
+            <CURRENCY ref="ccy.usd.name"/>
+            <ValuationDate>2009-6-25</ValuationDate>
+            <externalSystem>IAFS1</externalSystem>
+            <!--<scaleUp>true</scaleUp>-->
+            <!--<Model ref="otc.net.agreement.model.name"/>-->
+            <!--<payParty>p</payParty>-->
+        </feedExternalIA>
+
+        <feedResult id="feed.external.ia.1.1k.IAFS1.success">
+            <fileUploaded id="feed.external.ia.1.1k.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedExternalIA id="feed.external.ia.-2k.IAFS2">
+            <AGREEMENTID ref="agrid"/>
+            <!--<legal_id ref="otc.net.agreement.external.id"/>-->
+            <PRODUCT>ALL</PRODUCT>
+            <AMOUNT>-2000</AMOUNT>
+            <CURRENCY ref="ccy.gbp.name"/>
+            <ValuationDate>2009-6-25</ValuationDate>
+            <externalSystem>IAFS2</externalSystem>
+            <!--<scaleUp>true</scaleUp>-->
+            <!--<Model ref="otc.net.agreement.model.name"/>-->
+            <!--<payParty>p</payParty>-->
+        </feedExternalIA>
+
+        <feedResult id="feed.external.ia.-2k.IAFS2.success">
+            <fileUploaded id="feed.external.ia.-2k.IAFS2.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedExternalIA id="feed.external.ia.2.2k.IAFS2">
+            <AGREEMENTID ref="agrid"/>
+            <!--<legal_id ref="otc.net.agreement.external.id"/>-->
+            <PRODUCT>ALL</PRODUCT>
+            <AMOUNT>2200</AMOUNT>
+            <CURRENCY ref="ccy.gbp.name"/>
+            <ValuationDate>2009-6-25</ValuationDate>
+            <externalSystem>IAFS2</externalSystem>
+            <!--<scaleUp>true</scaleUp>-->
+            <!--<Model ref="otc.net.agreement.model.name"/>-->
+            <!--<payParty>p</payParty>-->
+        </feedExternalIA>
+
+        <feedResult id="feed.external.ia.2.2k.IAFS2.success">
+            <fileUploaded id="feed.external.ia.2.2k.IAFS2.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedExternalIA id="feed.external.ia.-3k.IAFS3">
+            <AGREEMENTID ref="agrid"/>
+            <!--<legal_id ref="otc.net.agreement.external.id"/>-->
+            <PRODUCT>ALL</PRODUCT>
+            <AMOUNT>-3000</AMOUNT>
+            <CURRENCY ref="ccy.eur.name"/>
+            <ValuationDate>2009-6-25</ValuationDate>
+            <externalSystem>IAFS3</externalSystem>
+            <!--<scaleUp>true</scaleUp>-->
+            <!--<Model ref="otc.net.agreement.model.name"/>-->
+            <!--<payParty>p</payParty>-->
+        </feedExternalIA>
+
+        <feedResult id="feed.external.ia.-3k.IAFS3.success">
+            <fileUploaded id="feed.external.ia.-3k.IAFS3.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedExternalIA id="feed.external.ia.3.3k.IAFS3">
+            <AGREEMENTID ref="agrid"/>
+            <!--<legal_id ref="otc.net.agreement.external.id"/>-->
+            <PRODUCT>ALL</PRODUCT>
+            <AMOUNT>3300</AMOUNT>
+            <CURRENCY ref="ccy.eur.name"/>
+            <ValuationDate>2009-6-25</ValuationDate>
+            <externalSystem>IAFS3</externalSystem>
+            <!--<scaleUp>true</scaleUp>-->
+            <!--<Model ref="otc.net.agreement.model.name"/>-->
+            <!--<payParty>p</payParty>-->
+        </feedExternalIA>
+
+        <feedResult id="feed.external.ia.3.3k.IAFS3.success">
+            <fileUploaded id="feed.external.ia.3.3k.IAFS3.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedExternalIA id="feed.external.ia.-4k.IAFS4">
+            <AGREEMENTID ref="agrid"/>
+            <!--<legal_id ref="otc.net.agreement.external.id"/>-->
+            <PRODUCT>ALL</PRODUCT>
+            <AMOUNT>-4000</AMOUNT>
+            <CURRENCY ref="ccy.jpy.name"/>
+            <ValuationDate>2009-6-25</ValuationDate>
+            <externalSystem>IAFS4</externalSystem>
+            <!--<scaleUp>true</scaleUp>-->
+            <!--<Model ref="otc.net.agreement.model.name"/>-->
+            <!--<payParty>p</payParty>-->
+        </feedExternalIA>
+
+        <feedResult id="feed.external.ia.-4k.IAFS4.success">
+            <fileUploaded id="feed.external.ia.-4k.IAFS4.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedExternalIA id="feed.external.ia.4.4k.IAFS4">
+            <AGREEMENTID ref="agrid"/>
+            <!--<legal_id ref="otc.net.agreement.external.id"/>-->
+            <PRODUCT>ALL</PRODUCT>
+            <AMOUNT>4400</AMOUNT>
+            <CURRENCY ref="ccy.jpy.name"/>
+            <ValuationDate>2009-6-25</ValuationDate>
+            <externalSystem>IAFS4</externalSystem>
+            <!--<scaleUp>true</scaleUp>-->
+            <!--<Model ref="otc.net.agreement.model.name"/>-->
+            <!--<payParty>p</payParty>-->
+        </feedExternalIA>
+
+        <feedResult id="feed.external.ia.4.4k.IAFS4.success">
+            <fileUploaded id="feed.external.ia.4.4k.IAFS4.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedExternalIA id="feed.external.ia.-5k.IAFS5">
+            <AGREEMENTID ref="agrid"/>
+            <!--<legal_id ref="otc.net.agreement.external.id"/>-->
+            <PRODUCT>ALL</PRODUCT>
+            <AMOUNT>-5000</AMOUNT>
+            <CURRENCY ref="ccy.cad.name"/>
+            <ValuationDate>2009-6-25</ValuationDate>
+            <externalSystem>IAFS5</externalSystem>
+            <!--<scaleUp>true</scaleUp>-->
+            <!--<Model ref="otc.net.agreement.model.name"/>-->
+            <!--<payParty>p</payParty>-->
+        </feedExternalIA>
+
+        <feedResult id="feed.external.ia.-5k.IAFS5.success">
+            <fileUploaded id="feed.external.ia.-5k.IAFS5.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedExternalIA id="feed.external.ia.5.5k.IAFS5">
+            <AGREEMENTID ref="agrid"/>
+            <!--<legal_id ref="otc.net.agreement.external.id"/>-->
+            <PRODUCT>ALL</PRODUCT>
+            <AMOUNT>5500</AMOUNT>
+            <CURRENCY ref="ccy.cad.name"/>
+            <ValuationDate>2009-6-25</ValuationDate>
+            <externalSystem>IAFS5</externalSystem>
+            <!--<scaleUp>true</scaleUp>-->
+            <!--<Model ref="otc.net.agreement.model.name"/>-->
+            <!--<payParty>p</payParty>-->
+        </feedExternalIA>
+
+        <feedResult id="feed.external.ia.5.5k.IAFS5.success">
+            <fileUploaded id="feed.external.ia.5.5k.IAFS5.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <exposureEventDetail id="portfolioIa">
+            <column>Portfolio IA</column>
+        </exposureEventDetail>
+
+        <agreementExposureSummary id="Check.PrincipalIA.CounterpartyIA.ByPortfolioIAType">
+            <iaByPortfolioIaType>
+                <principalIaAmount>-2,544.01</principalIaAmount>
+                <counterpartyIaAmount>2,798.41</counterpartyIaAmount>
+                <iaCategory>FSC1</iaCategory>
+            </iaByPortfolioIaType>
+            <iaByPortfolioIaType variation="hasCategory" name="FSC1">
+                <principalIaAmount>-492.51</principalIaAmount>
+                <counterpartyIaAmount>541.77</counterpartyIaAmount>
+                <iaSystem>IAFS1</iaSystem>
+            </iaByPortfolioIaType>
+            <iaByPortfolioIaType variation="hasCategory" name="FSC1">
+                <principalIaAmount>-2,051.49</principalIaAmount>
+                <counterpartyIaAmount>2,256.64</counterpartyIaAmount>
+                <iaSystem>IAFS3</iaSystem>
+            </iaByPortfolioIaType>
+            <iaByPortfolioIaType>
+                <principalIaAmount>-17.28</principalIaAmount>
+                <counterpartyIaAmount>19.01</counterpartyIaAmount>
+                <iaCategory>FSC3</iaCategory>
+            </iaByPortfolioIaType>
+            <iaByPortfolioIaType variation="hasCategory" name="FSC3">
+                <principalIaAmount>-17.28</principalIaAmount>
+                <counterpartyIaAmount>19.01</counterpartyIaAmount>
+                <iaSystem>IAFS4</iaSystem>
+            </iaByPortfolioIaType>
+            <iaByPortfolioIaType>
+                <principalIaAmount>-2,000.00</principalIaAmount>
+                <counterpartyIaAmount>2,200.00</counterpartyIaAmount>
+                <iaSystem>IAFS2</iaSystem>
+            </iaByPortfolioIaType>
+            <iaByPortfolioIaType>
+                <principalIaAmount>-2,373.22</principalIaAmount>
+                <counterpartyIaAmount>2,610.54</counterpartyIaAmount>
+                <iaSystem>IAFS5</iaSystem>
+            </iaByPortfolioIaType>
+            <netPortfolioIa>
+                <principalIaAmount>-6,934.51</principalIaAmount>
+                <counterpartyIaAmount>7,627.96</counterpartyIaAmount>
+            </netPortfolioIa>
+        </agreementExposureSummary>
+
+        <exposureEventDetail id="vm.noCall">
+            <action>VM ITM No Calls</action>
+            <callStatus>No Call Required</callStatus>
+            <agreementRequirement>0.00</agreementRequirement>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.noCall.withPortfolioIa">
+            <action>VM ITM No Calls</action>
+            <callStatus>No Call Required</callStatus>
+            <agreementRequirement>0.00</agreementRequirement>
+            <portfolioIA>Prin:IAFS1:-492.51, IAFS2:-2,000.00, IAFS3:-2,051.49, IAFS4:-17.28, IAFS5:-2,373.22;Cpty:IAFS1:541.77, IAFS2:2,200.00, IAFS3:2,256.64, IAFS4:19.01, IAFS5:2,610.54</portfolioIA>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.noCall.withPortfolioIa.afterUpdateFxrate">
+            <action>VM ITM No Calls</action>
+            <callStatus>No Call Required</callStatus>
+            <agreementRequirement>0.00</agreementRequirement>
+            <portfolioIA>Prin:IAFS1:-500.00, IAFS2:-2,000.00, IAFS3:-2,142.86, IAFS4:-20.00, IAFS5:-2,500.00;Cpty:IAFS1:550.00, IAFS2:2,200.00, IAFS3:2,357.14, IAFS4:22.00, IAFS5:2,750.00</portfolioIA>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="editPortfolioIa">
+            <portfolioIA/>
+        </exposureEventDetail>
+
+        <agreementExposureSummary id="Check.PrincipalIA.CounterpartyIA.ByPortfolioIAType.disabled">
+            <iaByPortfolioIaType>
+                <principalIaAmount disable="true">-2,544.01</principalIaAmount>
+                <counterpartyIaAmount disable="true">2,798.41</counterpartyIaAmount>
+                <iaCategory>FSC1</iaCategory>
+            </iaByPortfolioIaType>
+            <iaByPortfolioIaType variation="hasCategory" name="FSC1">
+                <principalIaAmount disable="true">-492.51</principalIaAmount>
+                <counterpartyIaAmount disable="true">541.77</counterpartyIaAmount>
+                <iaSystem>IAFS1</iaSystem>
+            </iaByPortfolioIaType>
+            <iaByPortfolioIaType variation="hasCategory" name="FSC1">
+                <principalIaAmount disable="true">-2,051.49</principalIaAmount>
+                <counterpartyIaAmount disable="true">2,256.64</counterpartyIaAmount>
+                <iaSystem>IAFS3</iaSystem>
+            </iaByPortfolioIaType>
+            <iaByPortfolioIaType>
+                <principalIaAmount disable="true">-17.28</principalIaAmount>
+                <counterpartyIaAmount disable="true">19.01</counterpartyIaAmount>
+                <iaCategory>FSC3</iaCategory>
+            </iaByPortfolioIaType>
+            <iaByPortfolioIaType variation="hasCategory" name="FSC3">
+                <principalIaAmount disable="true">-17.28</principalIaAmount>
+                <counterpartyIaAmount disable="true">19.01</counterpartyIaAmount>
+                <iaSystem>IAFS4</iaSystem>
+            </iaByPortfolioIaType>
+            <iaByPortfolioIaType>
+                <principalIaAmount disable="true">-2,000.00</principalIaAmount>
+                <counterpartyIaAmount disable="true">2,200.00</counterpartyIaAmount>
+                <iaSystem>IAFS2</iaSystem>
+            </iaByPortfolioIaType>
+            <iaByPortfolioIaType>
+                <principalIaAmount disable="true">-2,373.22</principalIaAmount>
+                <counterpartyIaAmount disable="true">2,610.54</counterpartyIaAmount>
+                <iaSystem>IAFS5</iaSystem>
+            </iaByPortfolioIaType>
+            <netPortfolioIa>
+                <principalIaAmount disable="true">-6,934.51</principalIaAmount>
+                <counterpartyIaAmount disable="true">7,627.96</counterpartyIaAmount>
+            </netPortfolioIa>
+        </agreementExposureSummary>
+
+        <fxRateSet id="oldFxrate">
+            <fxRateSetName>28335_fxrate</fxRateSetName>
+            <fxRate name="CAD">
+                <riskCurrency>CAD</riskCurrency>
+                <bid>1.037650</bid>
+                <offer>1.037650</offer>
+            </fxRate>
+            <fxRate name="EUR">
+                <riskCurrency>EUR</riskCurrency>
+                <bid>0.720228</bid>
+                <offer>0.720228</offer>
+            </fxRate>
+            <fxRate name="GBP">
+                <riskCurrency>GBP</riskCurrency>
+                <bid>0.492514</bid>
+                <offer>0.492514</offer>
+            </fxRate>
+            <fxRate name="JPY">
+                <riskCurrency>JPY</riskCurrency>
+                <bid>114.000000</bid>
+                <offer>114.000000</offer>
+            </fxRate>
+        </fxRateSet>
+
+        <fxRateSet id="newFxrate">
+            <fxRateSetName>28335_fxrate</fxRateSetName>
+            <fxRate name="CAD">
+                <riskCurrency>CAD</riskCurrency>
+                <bid>1</bid>
+                <offer>1</offer>
+            </fxRate>
+            <fxRate name="EUR">
+                <riskCurrency>EUR</riskCurrency>
+                <bid>0.7</bid>
+                <offer>0.7</offer>
+            </fxRate>
+            <fxRate name="GBP">
+                <riskCurrency>GBP</riskCurrency>
+                <bid>0.5</bid>
+                <offer>0.5</offer>
+            </fxRate>
+            <fxRate name="JPY">
+                <riskCurrency>JPY</riskCurrency>
+                <bid>100</bid>
+                <offer>100</offer>
+            </fxRate>
+        </fxRateSet>
+
+        <agreementExposureSummary id="Check.PrincipalIA.CounterpartyIA.ByPortfolioIAType.afterUpdateFxrate">
+            <iaByPortfolioIaType>
+                <principalIaAmount>-2642.86</principalIaAmount>
+                <counterpartyIaAmount>2907.14</counterpartyIaAmount>
+                <iaCategory>FSC1</iaCategory>
+            </iaByPortfolioIaType>
+            <iaByPortfolioIaType variation="hasCategory" name="FSC1">
+                <principalIaAmount>-500.00</principalIaAmount>
+                <counterpartyIaAmount>550.00</counterpartyIaAmount>
+                <iaSystem>IAFS1</iaSystem>
+            </iaByPortfolioIaType>
+            <iaByPortfolioIaType variation="hasCategory" name="FSC1">
+                <principalIaAmount>-2142.86</principalIaAmount>
+                <counterpartyIaAmount>2357.14</counterpartyIaAmount>
+                <iaSystem>IAFS3</iaSystem>
+            </iaByPortfolioIaType>
+            <iaByPortfolioIaType>
+                <principalIaAmount>-20.00</principalIaAmount>
+                <counterpartyIaAmount>22.00</counterpartyIaAmount>
+                <iaCategory>FSC3</iaCategory>
+            </iaByPortfolioIaType>
+            <iaByPortfolioIaType variation="hasCategory" name="FSC3">
+                <principalIaAmount>-20.00</principalIaAmount>
+                <counterpartyIaAmount>22.00</counterpartyIaAmount>
+                <iaSystem>IAFS4</iaSystem>
+            </iaByPortfolioIaType>
+            <iaByPortfolioIaType>
+                <principalIaAmount>-2,000.00</principalIaAmount>
+                <counterpartyIaAmount>2,200.00</counterpartyIaAmount>
+                <iaSystem>IAFS2</iaSystem>
+            </iaByPortfolioIaType>
+            <iaByPortfolioIaType>
+                <principalIaAmount>-2500.00</principalIaAmount>
+                <counterpartyIaAmount>2750.00</counterpartyIaAmount>
+                <iaSystem>IAFS5</iaSystem>
+            </iaByPortfolioIaType>
+            <netPortfolioIa>
+                <principalIaAmount>-7162.86</principalIaAmount>
+                <counterpartyIaAmount>7879.14</counterpartyIaAmount>
+            </netPortfolioIa>
+        </agreementExposureSummary>
+
+        <agreementExposureSummary id="Check.PrincipalIA.CounterpartyIA.ByPortfolioIAType.disabled.afterUpdateFxrate">
+            <iaByPortfolioIaType>
+                <principalIaAmount disable="true">-2642.86</principalIaAmount>
+                <counterpartyIaAmount disable="true">2907.14</counterpartyIaAmount>
+                <iaCategory>FSC1</iaCategory>
+            </iaByPortfolioIaType>
+            <iaByPortfolioIaType variation="hasCategory" name="FSC1">
+                <principalIaAmount disable="true">-500.00</principalIaAmount>
+                <counterpartyIaAmount disable="true">550.00</counterpartyIaAmount>
+                <iaSystem>IAFS1</iaSystem>
+            </iaByPortfolioIaType>
+            <iaByPortfolioIaType variation="hasCategory" name="FSC1">
+                <principalIaAmount disable="true">-2142.86</principalIaAmount>
+                <counterpartyIaAmount disable="true">2357.14</counterpartyIaAmount>
+                <iaSystem>IAFS3</iaSystem>
+            </iaByPortfolioIaType>
+            <iaByPortfolioIaType>
+                <principalIaAmount disable="true">-20.00</principalIaAmount>
+                <counterpartyIaAmount disable="true">22.00</counterpartyIaAmount>
+                <iaCategory>FSC3</iaCategory>
+            </iaByPortfolioIaType>
+            <iaByPortfolioIaType variation="hasCategory" name="FSC3">
+                <principalIaAmount disable="true">-20.00</principalIaAmount>
+                <counterpartyIaAmount disable="true">22.00</counterpartyIaAmount>
+                <iaSystem>IAFS4</iaSystem>
+            </iaByPortfolioIaType>
+            <iaByPortfolioIaType>
+                <principalIaAmount disable="true">-2,000.00</principalIaAmount>
+                <counterpartyIaAmount disable="true">2,200.00</counterpartyIaAmount>
+                <iaSystem>IAFS2</iaSystem>
+            </iaByPortfolioIaType>
+            <iaByPortfolioIaType>
+                <principalIaAmount disable="true">-2500.00</principalIaAmount>
+                <counterpartyIaAmount disable="true">2750.00</counterpartyIaAmount>
+                <iaSystem>IAFS5</iaSystem>
+            </iaByPortfolioIaType>
+            <netPortfolioIa>
+                <principalIaAmount disable="true">-7162.86</principalIaAmount>
+                <counterpartyIaAmount disable="true">7879.14</counterpartyIaAmount>
+            </netPortfolioIa>
+        </agreementExposureSummary>
+
+    </scenarioData>
+</dataBean>

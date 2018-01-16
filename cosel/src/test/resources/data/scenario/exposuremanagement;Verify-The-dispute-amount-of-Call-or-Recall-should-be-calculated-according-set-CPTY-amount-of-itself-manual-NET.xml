@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <agreement id="agr31319.otc.net.gross">
+            <agreementId id="agrid">2651</agreementId>
+        </agreement>
+
+        <agreement id="agr31319.otc.autonet.gross">
+            <agreementId id="agrid">2652</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="Call.agreementRequirement.1m">
+            <action>Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="Recall.agreementRequirement.2m">
+            <action>Recall</action>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="Call.agreementRequirement.1m.2">
+            <action>Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="Recall.agreementRequirement.2m.2">
+            <action>Recall</action>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="counterpartyAmount.0.3m">
+            <counterpartyAmount>0.3m</counterpartyAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="Call.disputeValue.-0.7m">
+            <action>Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <counterpartyAmount>300,000.00</counterpartyAmount>
+            <disputeValue>-700,000.00</disputeValue>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="Recall.disputeValue.-2m">
+            <action>Recall</action>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <counterpartyAmount>0.00</counterpartyAmount>
+            <disputeValue>-2,000,000.00</disputeValue>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="Call.disputeValue.-0.7m.2">
+            <action>Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <counterpartyAmount>300,000.00</counterpartyAmount>
+            <disputeValue>-700,000.00</disputeValue>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="Recall.disputeValue.-2m.2">
+            <action>Recall</action>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <counterpartyAmount>0.00</counterpartyAmount>
+            <disputeValue>-2,000,000.00</disputeValue>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="counterpartyAmount.2.5m">
+            <counterpartyAmount>2.5m</counterpartyAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="Call.disputeValue.1.5m">
+            <action>Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <counterpartyAmount>2,500,000.00</counterpartyAmount>
+            <disputeValue>1,500,000.00</disputeValue>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="Call.disputeValue.1.5m.2">
+            <action>Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <counterpartyAmount>2,500,000.00</counterpartyAmount>
+            <disputeValue>1,500,000.00</disputeValue>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="counterpartyAmount.1.2m">
+            <counterpartyAmount>1.2m</counterpartyAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="Recall.disputeValue.-0.8m">
+            <action>Recall</action>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <counterpartyAmount>1,200,000.00</counterpartyAmount>
+            <disputeValue>-800,000.00</disputeValue>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="Recall.disputeValue.-0.8m.2">
+            <action>Recall</action>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <counterpartyAmount>1,200,000.00</counterpartyAmount>
+            <disputeValue>-800,000.00</disputeValue>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="counterpartyAmount.2.3m">
+            <counterpartyAmount>2.3m</counterpartyAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="Recall.disputeValue.0.3m">
+            <action>Recall</action>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <counterpartyAmount>2,300,000.00</counterpartyAmount>
+            <disputeValue>300,000.00</disputeValue>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="Recall.disputeValue.0.3m.2">
+            <action>Recall</action>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <counterpartyAmount>2,300,000.00</counterpartyAmount>
+            <disputeValue>300,000.00</disputeValue>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+    </scenarioData>
+</dataBean>

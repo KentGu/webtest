@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/approvalManager.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <loginCredential id="login.credential.user2">
+            <username>gukai</username>
+            <password>1</password>
+        </loginCredential>
+
+        <agreement>
+            <principal>
+                <filter id="agreement.principal" ref="org.p1.lname"/>
+            </principal>
+            <counterparty>
+                <filter id="agreement.counterparty" ref="org.c1.lname"/>
+            </counterparty>
+            <agreementDescription id="agreement.description">T27902_Agreement_Description</agreementDescription>
+            <externalId id="agreement.external.id">T27902_Agreement_External_ID</externalId>
+            <agreementId id="agreement.id">1018</agreementId>
+        </agreement>
+
+        <agreementSearch id="agreement.search">
+            <systemId ref="agreement.id"/>
+        </agreementSearch>
+
+        <agreementSearchResult id="agreement.search.result">
+            <agreementId ref="agreement.id"/>
+        </agreementSearchResult>
+
+        <agreementExposureSummary id="prodcut.qtp">
+            <productList>
+                <productType id="product.type" ref="product.qtp.name"/>
+            </productList>
+        </agreementExposureSummary>
+
+        <tradeDetail id="original.trade1">
+            <tradeInformation>
+                <productType ref="product.type"/>
+                <tradeIdentifierPartyA id="trade1.identifier.party.a">T27902_Trade1_PartyA_Identifier</tradeIdentifierPartyA>
+                <tradeIdentifierPartyB id="trade1.identifier.party.b">T27902_Trade1_PartyB_Identifier</tradeIdentifierPartyB>
+            </tradeInformation>
+        </tradeDetail>
+        
+        <tradeDetail id="new.trade1">
+            <valuationInformation>
+                <principalValuationAmount>
+                    <amount>2</amount>
+                </principalValuationAmount>
+            </valuationInformation>
+            <collateralInformation>
+                <collateralComment>comment</collateralComment>
+            </collateralInformation>
+        </tradeDetail>
+
+        <tradeDetail id="original.trade2">
+            <tradeInformation>
+                <productType ref="product.type"/>
+                <tradeIdentifierPartyA id="trade2.identifier.party.a">T27902_Trade2_PartyA_Identifier</tradeIdentifierPartyA>
+                <tradeIdentifierPartyB id="trade2.identifier.party.b">T27902_Trade2_PartyB_Identifier</tradeIdentifierPartyB>
+            </tradeInformation>
+        </tradeDetail>
+
+        <tradeDetail id="new.trade2">
+            <valuationInformation>
+                <principalValuationAmount>
+                    <amount>2</amount>
+                </principalValuationAmount>
+            </valuationInformation>
+            <collateralInformation>
+                <collateralComment>comment</collateralComment>
+            </collateralInformation>
+        </tradeDetail>
+
+        <collateralPreference id="collateral.preference.trade.four.eye">
+            <collateralRules>
+                <tradesFourEyes>true</tradesFourEyes>
+            </collateralRules>
+        </collateralPreference>
+
+        <approvalManagerTradesSearch id="approval.manager.search.trade.1">
+            <principal>
+                <criteria>Exactly matching</criteria>
+                <type>Short Name</type>
+                <filter ref="agreement.principal"/>
+                <linkText ref="agreement.principal"/>
+            </principal>
+            <counterparty>
+                <criteria>Exactly matching</criteria>
+                <type>Short Name</type>
+                <filter ref="agreement.counterparty"/>
+                <linkText ref="agreement.counterparty"/>
+            </counterparty>
+            <systemId ref="agreement.id"/>
+            <productCategory>OTC</productCategory>
+            <externalId>
+                <type>Exactly matching</type>
+                <filter ref="agreement.external.id"/>
+                <linkText ref="agreement.external.id"/>
+            </externalId>
+            <productType ref="product.type"/>
+            <description>
+                <type>Exactly matching</type>
+                <filter ref="agreement.description"/>
+                <linkText ref="agreement.description"/>
+            </description>
+            <tradeIdentifierPartyA>
+                <type>Exactly matching</type>
+                <filter ref="trade1.identifier.party.a"/>
+                <linkText ref="trade1.identifier.party.a"/>
+            </tradeIdentifierPartyA>
+        </approvalManagerTradesSearch>
+
+        <approvalManagerTradesSearchResult id="approval.manager.search.trade.1.result">
+            <principal ref="agreement.principal"/>
+            <counterparty ref="agreement.counterparty"/>
+            <description ref="agreement.description"/>
+            <agreementId ref="agreement.id"/>
+            <productType ref="product.type"/>
+            <tradeIdentifierPartyA ref="trade1.identifier.party.a"/>
+        </approvalManagerTradesSearchResult>
+
+        <approvalManagerTradesSearch id="approval.manager.search.trade.2">
+            <principal>
+                <criteria>Exactly matching</criteria>
+                <type>Short Name</type>
+                <filter ref="agreement.principal"/>
+                <linkText ref="agreement.principal"/>
+            </principal>
+            <counterparty>
+                <criteria>Exactly matching</criteria>
+                <type>Short Name</type>
+                <filter ref="agreement.counterparty"/>
+                <linkText ref="agreement.counterparty"/>
+            </counterparty>
+            <systemId ref="agreement.id"/>
+            <productCategory>OTC</productCategory>
+            <externalId>
+                <type>Exactly matching</type>
+                <filter ref="agreement.external.id"/>
+                <linkText ref="agreement.external.id"/>
+            </externalId>
+            <productType ref="product.type"/>
+            <description>
+                <type>Exactly matching</type>
+                <filter ref="agreement.description"/>
+                <linkText ref="agreement.description"/>
+            </description>
+            <tradeIdentifierPartyA>
+                <type>Exactly matching</type>
+                <filter ref="trade2.identifier.party.a"/>
+                <linkText ref="trade2.identifier.party.a"/>
+            </tradeIdentifierPartyA>
+        </approvalManagerTradesSearch>
+
+        <approvalManagerTradesSearchResult id="approval.manager.search.trade.2.result">
+            <principal ref="agreement.principal"/>
+            <counterparty ref="agreement.counterparty"/>
+            <description ref="agreement.description"/>
+            <agreementId ref="agreement.id"/>
+            <productType ref="product.type"/>
+            <tradeIdentifierPartyA ref="trade2.identifier.party.a"/>
+        </approvalManagerTradesSearchResult>
+
+        <approvalManagerTradesSearchResult id="approval.all.cancel">
+            <alertHandling>
+                <accept>false</accept>
+                <content>^Do you want to approve all\?$</content>
+            </alertHandling>
+        </approvalManagerTradesSearchResult>
+
+        <approvalManagerTradesSearchResult id="approval.all.ok">
+            <alertHandling>
+                <accept>true</accept>
+                <content>^Do you want to approve all\?$</content>
+            </alertHandling>
+        </approvalManagerTradesSearchResult>
+
+    </scenarioData>
+</dataBean>

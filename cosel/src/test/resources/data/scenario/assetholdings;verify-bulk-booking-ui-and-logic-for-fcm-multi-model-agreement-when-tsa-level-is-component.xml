@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+
+		<agreementSearch id="search.agreement.by.agreement.description">
+			<description>
+				<filter id="agrDesc1">24141_1</filter>
+			</description>
+		</agreementSearch>
+
+		<agreementSearchResult id="agreement.search.result">
+			<description ref="agrDesc1"/>
+		</agreementSearchResult>
+
+
+		<agreementExposureSummary id="product.qtp">
+			<productList>
+				<productType ref="product.test1.name" />
+			</productList>
+		</agreementExposureSummary>
+
+		<tradeDetail id="trade1.m1.tsaCapAmount.1m">
+			<tradeInformation>
+				<tradeDate>T</tradeDate>
+				<maturityDate>T+1000</maturityDate>
+				<effectiveDate>T</effectiveDate>
+				<tradeIdentifierPartyA random="true"/>
+				<partyABranchName>a</partyABranchName>
+				<partyBBranchName>b</partyBBranchName>
+				<model>m1</model>
+			</tradeInformation>
+			<valuationInformation>
+				<valuationDate>T</valuationDate>
+			</valuationInformation>
+			<ccpTradeInformation>
+				<imInterest>0.5m</imInterest>
+				<tsaMisc3>0.5m</tsaMisc3>
+				<tsaCurrency>USD</tsaCurrency>
+			</ccpTradeInformation>
+		</tradeDetail>
+		<tradeDetail id="trade2.m1.tsaPhyAmount.-1.1m">
+			<tradeInformation>
+				<tradeDate>T</tradeDate>
+				<maturityDate>T+1000</maturityDate>
+				<effectiveDate>T</effectiveDate>
+				<tradeIdentifierPartyA random="true"/>
+				<partyABranchName>a</partyABranchName>
+				<partyBBranchName>b</partyBBranchName>
+				<model>m1</model>
+			</tradeInformation>
+			<valuationInformation>
+				<valuationDate>T</valuationDate>
+			</valuationInformation>
+			<ccpTradeInformation>
+				<resetToParAmount>-0.6m</resetToParAmount>
+				<transferValue>-0.5m</transferValue>
+				<tsaCurrency>EUR</tsaCurrency>
+			</ccpTradeInformation>
+		</tradeDetail>
+		<tradeDetail id="trade3.m2.tsaCapAmount.-0.8m">
+			<tradeInformation>
+				<tradeDate>T</tradeDate>
+				<maturityDate>T+1000</maturityDate>
+				<effectiveDate>T</effectiveDate>
+				<tradeIdentifierPartyA random="true"/>
+				<partyABranchName>a</partyABranchName>
+				<partyBBranchName>b</partyBBranchName>
+				<model>m2</model>
+			</tradeInformation>
+			<valuationInformation>
+				<valuationDate>T</valuationDate>
+			</valuationInformation>
+			<ccpTradeInformation>
+				<bankedCoupon>-0.5m</bankedCoupon>
+				<pai>-0.3m</pai>
+				<tsaCurrency>EUR</tsaCurrency>
+			</ccpTradeInformation>
+		</tradeDetail>
+		<tradeDetail id="trade4.m2.tsaPhyAmount.1.25m">
+			<tradeInformation>
+				<tradeDate>T</tradeDate>
+				<maturityDate>T+1000</maturityDate>
+				<effectiveDate>T</effectiveDate>
+				<tradeIdentifierPartyA random="true"/>
+				<partyABranchName>a</partyABranchName>
+				<partyBBranchName>b</partyBBranchName>
+				<model>m2</model>
+			</tradeInformation>
+			<valuationInformation>
+				<valuationDate>T</valuationDate>
+			</valuationInformation>
+			<ccpTradeInformation>
+				<initialCoupon>0.25m</initialCoupon>
+				<upfrontFee>1m</upfrontFee>
+				<tsaCurrency>USD</tsaCurrency>
+			</ccpTradeInformation>
+		</tradeDetail>
+
+
+	<agreement id="agr24141">
+		<agreementStatus>Pending</agreementStatus>
+		<agreementStatus>Approved</agreementStatus>
+		<statementStatus>Pending</statementStatus>
+		<statementStatus>Approved</statementStatus>
+	</agreement>
+
+		<exposureEventDetail id="allEventForFCM">
+			<expand>true</expand>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="TSADelivery.Net.Amount.277294.13">
+			<callStatus>Pending Review</callStatus>
+			<action>Cashflow Delivery(Excess)</action>
+			<agreementRequirement>-277,294.13</agreementRequirement>
+		</exposureEventDetail>
+		<exposureEventDetail id="TSACall.o2.Amount.900285">
+			<callStatus>Pending Review</callStatus>
+			<action>Cashflow Call(Deficit)</action>
+			<agreementRequirement>900,285.00</agreementRequirement>
+		</exposureEventDetail>
+		<exposureEventDetail id="TSADelivery.o1.Amount.1527294.13">
+			<callStatus>Pending Review</callStatus>
+			<action>Cashflow Delivery(Excess)</action>
+			<agreementRequirement>-1,527,294.13</agreementRequirement>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="VMDelivery.Net.Amount.110759.37">
+			<callStatus>Pending Review</callStatus>
+			<action>VM Delivery(Excess)</action>
+			<agreementRequirement>-110,759.37</agreementRequirement>
+		</exposureEventDetail>
+		<exposureEventDetail id="VMDelivery.o2.Amount.800000">
+			<callStatus>Pending Review</callStatus>
+			<action>VM Delivery(Excess)</action>
+			<agreementRequirement>-800,000.00</agreementRequirement>
+		</exposureEventDetail>
+		<exposureEventDetail id="VMCall.o1.Amount.1000000">
+			<callStatus>Pending Review</callStatus>
+			<action>VM Call(Deficit)</action>
+			<agreementRequirement>1,000,000.00</agreementRequirement>
+		</exposureEventDetail>
+
+		<bookingDetail id="TSABulkBooking">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<model>m2</model>
+					<bookingMovement>Cashflow Call(Deficit)</bookingMovement>
+					<movement>Receive</movement>
+					<component>Total Initial Coupon</component>
+					<value>180,057.00</value>
+					<requiredAmount>180,057.00</requiredAmount>
+				</bookingInformationDetail>
+				<bookingInformationDetail>
+					<model>m2</model>
+					<bookingMovement>Cashflow Call(Deficit)</bookingMovement>
+					<!--<component>Upfront Fee</component>-->
+					<movement>Receive</movement>
+					<value>720,228.00</value>
+					<requiredAmount>720,228.00</requiredAmount>
+				</bookingInformationDetail>
+				<bookingInformationDetail>
+					<model>m1</model>
+					<bookingMovement>Cashflow Delivery(Excess)</bookingMovement>
+					<!--<component>Total Reset to Par</component>-->
+					<movement>Pay</movement>
+					<value>833,069.53</value>
+					<requiredAmount>-833,069.53</requiredAmount>
+				</bookingInformationDetail>
+				<bookingInformationDetail>
+					<model>m1</model>
+					<bookingMovement>Cashflow Delivery(Excess)</bookingMovement>
+					<!--<component>Other Cash Adjustments</component>-->
+					<movement>Pay</movement>
+					<value>694,224.61</value>
+					<requiredAmount>-694,224.61</requiredAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="vmAndTSABulkBooking">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<model>m2</model>
+					<bookingMovement>Cashflow Call(Deficit)</bookingMovement>
+					<movement>Receive</movement>
+					<value>180,057.00</value>
+					<requiredAmount>180,057.00</requiredAmount>
+				</bookingInformationDetail>
+				<bookingInformationDetail>
+					<model>m2</model>
+					<bookingMovement>Cashflow Call(Deficit)</bookingMovement>
+					<movement>Receive</movement>
+					<value>720,228.00</value>
+					<requiredAmount>720,228.00</requiredAmount>
+				</bookingInformationDetail>
+				<bookingInformationDetail>
+					<model>m1</model>
+					<bookingMovement>Cashflow Delivery(Excess)</bookingMovement>
+					<movement>Pay</movement>
+					<value>833,069.53</value>
+					<requiredAmount>-833,069.53</requiredAmount>
+				</bookingInformationDetail>
+				<bookingInformationDetail>
+					<model>m1</model>
+					<bookingMovement>Cashflow Delivery(Excess)</bookingMovement>
+					<movement>Pay</movement>
+					<value>694,224.61</value>
+					<requiredAmount>-694,224.61</requiredAmount>
+				</bookingInformationDetail>
+
+				<bookingInformationDetail>
+					<model>m2</model>
+					<bookingMovement>VM Delivery(Excess)</bookingMovement>
+					<movement>Delivery</movement>
+					<value>800,000.00</value>
+					<vmValue>800,000.00</vmValue>
+					<requiredAmount>-800,000.00</requiredAmount>
+					<vmRequiredAmount>-800,000.00</vmRequiredAmount>
+				</bookingInformationDetail>
+				<bookingInformationDetail>
+					<model>m1</model>
+					<bookingMovement>VM Call(Deficit)</bookingMovement>
+					<movement>Call</movement>
+					<value>1,000,000.00</value>
+					<vmValue>1,000,000.00</vmValue>
+					<requiredAmount>1,000,000.00</requiredAmount>
+					<vmRequiredAmount>1,000,000.00</vmRequiredAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="vmCall.Cash.USD.apply">
+			<instrumentSearch>
+				<instrument>
+					<filter>CASH-USD</filter>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail clickApplyButton="true">
+					<model>m1</model>
+					<bookingMovement>VM Call(Deficit)</bookingMovement>
+					<bookingNumber>4.1</bookingNumber>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="vmDelivery.Cash.EUR.apply">
+			<instrumentSearch>
+				<instrument>
+					<filter>CASH-EUR</filter>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail clickApplyButton="true">
+					<model>m2</model>
+					<bookingMovement>VM Delivery(Excess)</bookingMovement>
+					<bookingNumber>3.1</bookingNumber>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<exposureManagementMessage id="error.message.TSACallBookingNotCorrect">
+			<messageDetail>
+				<index>3</index>
+				<message>Unable to make booking as the Cashflow booking is not correct. Please review Cashflow and Exclude Cashflow Collateral, these should be equal.</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<exposureManagementMessage id="error.message.TSADeliveryBookingNotCorrect">
+			<messageDetail>
+				<index>4</index>
+				<message>Unable to make booking as the Cashflow booking is not correct. Please review Cashflow and Exclude Cashflow Collateral, these should be equal.</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<multiModelAgreementStatement id="m1">
+			<multimodelAssetHoldingSummary>
+				<modelName>m1</modelName>
+			</multimodelAssetHoldingSummary>
+		</multiModelAgreementStatement>
+
+		<assetBookingSummary id="asset.type.CASH.EUR">
+			<assetType>CASH-EUR</assetType>
+		</assetBookingSummary>
+
+		<cashMovementDetail id="payBooking1.BankedCoupon.capReceive.720228">
+			<assetType>CASH-EUR</assetType>
+			<bookingType>Cashflow</bookingType>
+			<component>Banked Coupon</component>
+			<movementType>Capitalise receive</movementType>
+			<amount>720228</amount>
+			<excludeFromStatementCalculation>true</excludeFromStatementCalculation>
+		</cashMovementDetail>
+
+		<multiModelAgreementStatement id="m2">
+			<multimodelAssetHoldingSummary>
+				<modelName>m2</modelName>
+			</multimodelAssetHoldingSummary>
+		</multiModelAgreementStatement>
+
+		<assetBookingSummary id="asset.type.CASH.USD">
+			<assetType>CASH-USD</assetType>
+		</assetBookingSummary>
+
+		<cashMovementDetail id="payBooking2.imInterest.capPay.1110759.37">
+			<assetType>CASH-USD</assetType>
+			<bookingType>Cashflow</bookingType>
+			<component>IM Interest</component>
+			<movementType>Capitalise pay</movementType>
+			<amount>1110759.37</amount>
+			<excludeFromStatementCalculation>true</excludeFromStatementCalculation>
+		</cashMovementDetail>
+
+		<bookingDetail id="vmCall.Cash.EUR.Recall.notionalValue.720228">
+			<instrumentSearch>
+				<instrument>
+					<filter>CASH-EUR</filter>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail clickApplyButton="true">
+					<model>m1</model>
+					<bookingMovement>VM Call(Deficit)</bookingMovement>
+					<!--<bookingNumber>4.1</bookingNumber>-->
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="vmDelivery.Cash.USD.Return.notionalValue.1110759.37">
+			<instrumentSearch>
+				<instrument>
+					<filter>CASH-USD</filter>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail clickApplyButton="true">
+					<model>m2</model>
+					<bookingMovement>VM Delivery(Excess)</bookingMovement>
+					<!--<bookingNumber>3.1</bookingNumber>-->
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="TSADelivery.tranferValue.Cash.USD.pay.notionalValue.1527294.14">
+			<instrumentSearch>
+				<instrument>
+					<filter>CASH-USD</filter>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<model>m1</model>
+					<bookingMovement>Cashflow Delivery(Excess)</bookingMovement>
+					<movement>Pay</movement>
+					<component>Other Cash Adjustments</component>
+					<nominalAmount>1527294.14</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="TSACall.totalResetToPar.Cash.EUR.Receive.notionalValue.720228">
+			<instrumentSearch>
+				<instrument>
+					<filter>CASH-EUR</filter>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<model>m2</model>
+					<bookingMovement>Cashflow Call(Deficit)</bookingMovement>
+					<movement>Receive</movement>
+					<component>Upfront Fee</component>
+					<nominalAmount>720228</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<exposureManagementMessage id="overrideWarning">
+			<messageDetail>
+				<overrideWarning>true</overrideWarning>
+			</messageDetail>
+			<messageDetail>
+				<overrideWarning>true</overrideWarning>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<exposureEventDetail id="TSADelivery.m1.completed">
+			<callStatus>Completed</callStatus>
+			<action>Cashflow Delivery(Excess)</action>
+			<agreementRequirement>-1,527,294.13</agreementRequirement>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="VMDelivery.m2.completed">
+			<callStatus>Completed</callStatus>
+			<action>VM Delivery(Excess)</action>
+			<agreementRequirement>-800,000.00</agreementRequirement>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="VMCall.m1.completed">
+			<callStatus>Completed</callStatus>
+			<action>VM Call(Deficit)</action>
+			<agreementRequirement>1,000,000.00</agreementRequirement>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="VMDelivery.net.completed">
+			<callStatus>Completed</callStatus>
+			<action>VM Delivery(Excess)</action>
+			<agreementRequirement>-110,759.37</agreementRequirement>
+		</exposureEventDetail>
+
+		<assetBookingSummary id="Cash.USD.Return.1110759.37">
+			<assetType>CASH-USD</assetType>
+			<nominalAmount>-1,110,759.37</nominalAmount>
+			<movement>Return</movement>
+		</assetBookingSummary>
+
+		<bookingDetail id="Cash.USD.Return.1110759.37.detailInfo">
+			<assetType>CASH-USD</assetType>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<movement>Return</movement>
+					<nominalAmount>-1,110,759.37</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<cashMovementSummary id="TSA.pay.m1">
+			<assetType>CASH-USD</assetType>
+			<Amount>-1,527,294.14</Amount>
+			<movement>Pay</movement>
+		</cashMovementSummary>
+
+		<cashMovementDetail id="TSA.pay.m1.1527294.14">
+			<bookingType>Cashflow</bookingType>
+			<!--<component>Other Cash Adjustments</component>-->
+			<movementType>Pay</movementType>
+			<amount>-1,527,294.14</amount>
+		</cashMovementDetail>
+
+		<cashMovementSummary id="TSA.capPay.m2">
+			<assetType>CASH-USD</assetType>
+			<Amount>1,110,759.37</Amount>
+			<movement>Capitalise pay</movement>
+		</cashMovementSummary>
+
+		<cashMovementDetail id="TSA.capPay.m2.1110759.37.ExcludedInStatementCalc">
+			<bookingType>Cashflow</bookingType>
+			<component>IM Interest</component>
+			<movementType>Capitalise pay</movementType>
+			<amount>1,110,759.37</amount>
+			<excludeFromStatementCalculation>true</excludeFromStatementCalculation>
+		</cashMovementDetail>
+
+
+		<assetBookingSummary id="Cash.EUR.Recall.720228">
+			<assetType>CASH-EUR</assetType>
+			<nominalAmount>720,228.00</nominalAmount>
+			<movement>Recall</movement>
+		</assetBookingSummary>
+
+		<bookingDetail id=" Cash.EUR.Recall.720228.detailInfo">
+			<assetType>CASH-EUR</assetType>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<movement>Recall</movement>
+					<nominalAmount>720,228.00</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<cashMovementSummary id="TSA.capReceive.m1">
+			<assetType>CASH-EUR</assetType>
+			<Amount>-720,228.00</Amount>
+			<movement>Capitalise receive</movement>
+		</cashMovementSummary>
+
+		<cashMovementDetail id="TSA.capReceive.m1.720228.ExcludedInStatementCalc">
+			<bookingType>Cashflow</bookingType>
+			<component>Banked Coupon</component>
+			<movementType>Capitalise receive</movementType>
+			<amount>-720,228.00</amount>
+			<excludeFromStatementCalculation>true</excludeFromStatementCalculation>
+		</cashMovementDetail>
+
+		<cashMovementSummary id="TSA.receive.m2">
+			<assetType>CASH-EUR</assetType>
+			<Amount>720,228.00</Amount>
+			<movement>Receive</movement>
+		</cashMovementSummary>
+
+		<cashMovementDetail id="TSA.receive.m2.720228">
+			<bookingType>Cashflow</bookingType>
+			<movementType>Receive</movementType>
+			<amount>720,228.00</amount>
+			<!--<component>Other Cash Adjustments</component>-->
+		</cashMovementDetail>
+
+
+	</scenarioData>
+</dataBean>

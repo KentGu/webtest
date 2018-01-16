@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/taskScheduler.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+
+        <taskSchedulerDetail id="task.feed.agreement">
+            <type>Task Manager</type>
+            <taskName>Import Agreements</taskName>
+            <additionalInfo id="task.feed.agreement.server.path">/home/ec2-user/Feed/FeedAgreement</additionalInfo>
+        </taskSchedulerDetail>
+
+        <variable id="file"/>
+
+        <taskSchedulerMessage id="task.feed.agreement.message">
+            <message>Agreements: Import agreements: Imported 1 agreements from :(\S+).xml( \(Warning message appeared, please look up feed status for details\))?</message>
+        </taskSchedulerMessage>
+
+        <feedAgreement id="feed.etf.agreement.principal.transfer.ccy.gbp.counterparty.transfer.blank">
+            <principal ref="org.p1.lname"/>
+            <counterpartycode ref="org.c1.lname"/>
+            <businessLine>ETF</businessLine>
+            <agreement_description id="feed.etf.agreement.principal.transfer.ccy.gbp.counterparty.transfer.blank.desc" random="true" prefix="t32586_otcAgr_"/>
+            <region ref="region.test1.name"/>
+            <legal_id id="feed.etf.agreement.principal.transfer.ccy.gbp.counterparty.transfer.blank.external.id">T32586_ETF_Net_Agreement</legal_id>
+            <master_documentation ref="master.documentation.1987.isda.master.name"/>
+            <credit_support_documentation ref="credit.documentation.margin.provisions.name"/>
+            <netting_MTM_And_IA>Net</netting_MTM_And_IA>
+            <prcTransferCcy id="feed.etf.agreement.principal.transfer.ccy.gbp.counterparty.transfer.blank.prc.trans.ccy" ref="ccy.gbp.name"/>
+            <cptyTransferCcy id="feed.etf.agreement.principal.transfer.ccy.gbp.counterparty.transfer.blank.cpty.trans.ccy"></cptyTransferCcy>
+            <base_currency ref="ccy.usd.name"/>
+            <original_date random="true" variation="t"/>
+            <frequency>Daily</frequency>
+            <frequency_start random="true" variation="t"/>
+            <notification_time>13.00</notification_time>
+            <resolution_time>10.00</resolution_time>
+            <resolution_day>same</resolution_day>
+            <time_zone ref="system.staticData.timeZone.cet.name"/>
+            <holiday_centre ref="hc.test1.name"/>
+            <non_workingday_adjusttype>None</non_workingday_adjusttype>
+            <product>
+                <productName>qtp_Etf</productName>
+                <settlementPeriod>T</settlementPeriod>
+            </product>
+            <asset>
+                <assetName ref="bond.usd.name"/>
+                <applicableType></applicableType>
+                <applicableParty></applicableParty>
+                <settlementDateAbbriviated>T</settlementDateAbbriviated>
+            </asset>
+            <rounding_delivery>Up</rounding_delivery>
+            <rounding_recall>Down</rounding_recall>
+            <settlementInstructions>
+                <settlementInstruction>
+                    <bookingType>Net</bookingType>
+                    <direction>Call/Return</direction>
+                    <bucket>VM Call/Return</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>Net</bookingType>
+                    <direction>Delivery/Recall</direction>
+                    <bucket>VM Recall/Delivery</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>Interest</bookingType>
+                    <direction>Pay</direction>
+                    <bucket>Pay</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>Interest</bookingType>
+                    <direction>Receive</direction>
+                    <bucket>Receive</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>Fee</bookingType>
+                    <direction>Pay</direction>
+                    <bucket>Pay</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>Fee</bookingType>
+                    <direction>Receive</direction>
+                    <bucket>Receive</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>Cash Component</bookingType>
+                    <direction>Pay</direction>
+                    <bucket>Pay</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>Cash Component</bookingType>
+                    <direction>Receive</direction>
+                    <bucket>Receive</bucket>
+                </settlementInstruction>
+            </settlementInstructions>
+            <distMedium>Email</distMedium>
+            <applyOrgCL>false</applyOrgCL>
+        </feedAgreement>
+
+        <feedStatus id="feed.etf.agreement.principal.transfer.ccy.gbp.counterparty.transfer.blank.status">
+            <systemName>QTP</systemName>
+            <status>Successful</status>
+            <valuationFile ref="feed.etf.agreement.principal.transfer.ccy.gbp.counterparty.transfer.blank.result.file"/>
+            <description>Agreements</description>
+            <successfulFeed>
+                <importType>Agreements</importType>
+                <valuationFile ref="feed.etf.agreement.principal.transfer.ccy.gbp.counterparty.transfer.blank.result.file"/>
+                <total>1</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <agreementSearch id="feed.etf.agreement.principal.transfer.ccy.gbp.counterparty.transfer.blank.search">
+            <description>
+                <filter ref="feed.etf.agreement.principal.transfer.ccy.gbp.counterparty.transfer.blank.desc"/>
+                <linkText ref="feed.etf.agreement.principal.transfer.ccy.gbp.counterparty.transfer.blank.desc"/>
+            </description>
+            <externalId ref="feed.etf.agreement.principal.transfer.ccy.gbp.counterparty.transfer.blank.external.id"/>
+        </agreementSearch>
+
+        <agreementSearchResult id="feed.etf.agreement.principal.transfer.ccy.gbp.counterparty.transfer.blank.search.result">
+            <description ref="feed.etf.agreement.principal.transfer.ccy.gbp.counterparty.transfer.blank.desc"/>
+            <externalId ref="feed.etf.agreement.principal.transfer.ccy.gbp.counterparty.transfer.blank.external.id"/>
+        </agreementSearchResult>
+
+        <agreement id="agreement.complete"/>
+
+        <agreementSummary id="feed.etf.agreement.principal.transfer.ccy.gbp.counterparty.transfer.blank.summary">
+            <documentationDetails>
+                <principalTransferCurrency ref="ccy.gbp.desc"/>
+                <counterpartyTransferCurrency></counterpartyTransferCurrency>
+            </documentationDetails>
+        </agreementSummary>
+        
+    </scenarioData>
+</dataBean>

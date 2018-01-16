@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/taskScheduler.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <feedAssetRating id="feed.asset.rating.bond.usd">
+            <EXTISIN id="feed.asset.rating.bond.usd.instrument.id">T30304_QTP_Bond_USD_Instrument1</EXTISIN>
+            <MARKET></MARKET>
+            <rating>
+                <ratingName>RATING1</ratingName>
+                <ratingValue id="feed.asset.rating.bond.usd.rating1">A</ratingValue>
+            </rating>
+            <rating>
+                <ratingName>RATING2</ratingName>
+                <ratingValue id="feed.asset.rating.bond.usd.rating2">A1</ratingValue>
+            </rating>
+            <rating>
+                <ratingName>RATING3</ratingName>
+                <ratingValue id="feed.asset.rating.bond.usd.rating3">AAA</ratingValue>
+            </rating>
+        </feedAssetRating>
+
+        <feedStatus id="feed.asset.rating.bond.usd.status">
+            <status>Successful</status>
+            <valuationFile ref="file.path"/>
+            <description>Asset Ratings</description>
+            <successfulFeed>
+                <total>1</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <securitySearch id="feed.asset.rating.bond.usd.search">
+            <assetClass ref="bond.name"/>
+            <assetType ref="bond.usd.name"/>
+            <instrumentId>
+                <filter ref="feed.asset.rating.bond.usd.instrument.id"/>
+                <linkText ref="feed.asset.rating.bond.usd.instrument.id"/>
+            </instrumentId>
+        </securitySearch>
+
+        <securitySearchResult id="feed.asset.rating.bond.usd.search.result">
+            <instrument ref="feed.asset.rating.bond.usd.instrument.id"/>
+            <assetClass ref="bond.name"/>
+            <assetType ref="bond.usd.name"/>
+        </securitySearchResult>
+
+        <instrument id="check.feed.asset.rating.bond.usd">
+            <issueRating>
+                <agency ref="org.external.agency.code.rating1.desc"/>
+                <rating ref="feed.asset.rating.bond.usd.rating1"/>
+            </issueRating>
+            <issueRating>
+                <agency ref="org.external.agency.code.rating2.desc"/>
+                <rating ref="feed.asset.rating.bond.usd.rating2"/>
+            </issueRating>
+            <issueRating>
+                <agency ref="org.external.agency.code.rating3.desc"/>
+                <rating ref="feed.asset.rating.bond.usd.rating3"/>
+            </issueRating>
+        </instrument>
+
+        <taskSchedulerDetail id="task.feed.asset.rating">
+            <type>Task Manager</type>
+            <taskName>Import Asset Ratings</taskName>
+            <additionalInfo id="task.feed.agreement.server.path">/home/ec2-user/Feed/FeedAssetRating</additionalInfo>
+        </taskSchedulerDetail>
+
+        <taskSchedulerMessage id="task.feed.asset.rating.message">
+            <message>Market Data: Import Asset Ratings: Imported 1 Asset Ratings from :(\S+).(xml|xlsx)( \(Warning message appeared, please look up feed status for details\))?</message>
+        </taskSchedulerMessage>
+
+        <variable id="file.path"/>
+    </scenarioData>
+</dataBean>

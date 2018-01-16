@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/xbrowser.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <fxRateSet id="fxRate1">
+            <fxRateSetName random="true" id="fxRateName1" />
+            <fxUpdatePermission>admin</fxUpdatePermission>
+            <fxRate name="1">
+                <riskCurrency>EUR</riskCurrency>
+                <bid>0.7911</bid>
+                <offer>0.7511</offer>
+            </fxRate>
+            <fxRate>
+                <riskCurrency>GBP</riskCurrency>
+                <bid>0.5</bid>
+                <offer>0.5</offer>
+            </fxRate>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </fxRateSet>
+        <fxRateSet id="editFxRate1">
+            <!--<fxRateSetName ref="fxRateName1" />-->
+            <fxUpdatePermission>qtptest</fxUpdatePermission>
+            <fxRate name="1">
+                <riskCurrency>EUR</riskCurrency>
+                <bid>0.81332</bid>
+                <offer>0.81332</offer>
+            </fxRate>
+            <fxRate>
+                <riskCurrency>CAD</riskCurrency>
+                <bid>0.2333</bid>
+                <offer>0.2333</offer>
+            </fxRate>
+            <fxRate>
+                <riskCurrency>CNY</riskCurrency>
+                <bid>6.3</bid>
+                <offer>6.3</offer>
+            </fxRate>
+        </fxRateSet>
+
+    </scenarioData>
+</dataBean>

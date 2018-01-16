@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <settlementData id="settlement.data.create.org">
+            <organisation>
+                <filter>34252org</filter>
+                <linkText>34252org</linkText>
+            </organisation>
+            <assetClass>qtp_cash</assetClass>
+            <asserType>CASH-USD</asserType>
+            <bucket>Pay</bucket>
+            <copyFromBucket>Pay</copyFromBucket>
+            <copyFromAssetType>CASH-USD</copyFromAssetType>
+            <counterParty>
+                <account>
+                    <accountName>Account Number</accountName>
+                    <value>testc1</value>
+                </account>
+                <account>
+                    <accountName>Beneficiary Bank</accountName>
+                    <value>testc2</value>
+                </account>
+                <account>
+                    <accountName>Ultimate Custodian</accountName>
+                    <selectValue>
+                        <filter>QTPCustodian</filter>
+                        <linkText>QTPCustodian</linkText>
+                    </selectValue>
+                </account>
+            </counterParty>
+        </settlementData>
+
+        <auditSettlementDetailsReportFilter id="audit.settlement.detail.report.filter">
+            <operation>Create</operation>
+            <organisation>
+                <filter>34252org</filter>
+                <linkText>34252org</linkText>
+            </organisation>
+        </auditSettlementDetailsReportFilter>
+        <variable id="auditReportPath"/>
+
+        <reportValidationRules id="reportRule">
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>34252org</value></field><field><fieldName>Asset Class</fieldName><value>qtp_cash</value></field><field><fieldName>Asset Type</fieldName><value>CASH-USD</value></field><field><fieldName>Bucket</fieldName><value>Pay</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Editor Screen</fieldName><value>Collateral - Static Data - Settlement Data</value></field><field><fieldName>Attribute</fieldName><value>Account Number</value></field><field><fieldName>Value Before</fieldName><value></value></field><field><fieldName>Value After</fieldName><value>testc1</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>34252org</value></field><field><fieldName>Asset Class</fieldName><value>qtp_cash</value></field><field><fieldName>Asset Type</fieldName><value>CASH-USD</value></field><field><fieldName>Bucket</fieldName><value>Pay</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Editor Screen</fieldName><value>Collateral - Static Data - Settlement Data</value></field><field><fieldName>Attribute</fieldName><value>Status</value></field><field><fieldName>Value Before</fieldName><value></value></field><field><fieldName>Value After</fieldName><value>Amended</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>34252org</value></field><field><fieldName>Asset Class</fieldName><value>qtp_cash</value></field><field><fieldName>Asset Type</fieldName><value>CASH-USD</value></field><field><fieldName>Bucket</fieldName><value>Pay</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Editor Screen</fieldName><value>Collateral - Static Data - Settlement Data</value></field><field><fieldName>Attribute</fieldName><value>Beneficiary Bank</value></field><field><fieldName>Value Before</fieldName><value></value></field><field><fieldName>Value After</fieldName><value>testc2</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>34252org</value></field><field><fieldName>Asset Class</fieldName><value>qtp_cash</value></field><field><fieldName>Asset Type</fieldName><value>CASH-USD</value></field><field><fieldName>Bucket</fieldName><value>Pay</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Editor Screen</fieldName><value>Collateral - Static Data - Settlement Data</value></field><field><fieldName>Attribute</fieldName><value>Ultimate Custodian</value></field><field><fieldName>Value Before</fieldName><value></value></field><field><fieldName>Value After</fieldName><value>512</value></field></reportValidationRule>
+
+        </reportValidationRules>
+
+    </scenarioData>
+</dataBean>

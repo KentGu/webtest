@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+
+        <taskSchedulerDetail id="task.scheduler.import.asset.pricing">
+            <type>Task Manager</type>
+            <taskName>Import Asset Pricing</taskName>
+            <additionalInfo id="task.scheduler.import.asset.pricing.server.path">/home/ec2-user/TaskScheduler/ImportAssetPricing</additionalInfo>
+        </taskSchedulerDetail>
+
+        <feedAssetPricing id="task.feed.asset.pricing">
+            <DRIF>T+X</DRIF>
+            <ASSET_CLASS></ASSET_CLASS>
+            <ASSET_TYPE></ASSET_TYPE>
+            <EXTISIN></EXTISIN>
+            <MARKET></MARKET>
+            <EV_PRICE></EV_PRICE>
+            <ACC_DDAT>a</ACC_DDAT>
+            <INFLAT_RATIO>b</INFLAT_RATIO>
+            <PRICE_SOURCE></PRICE_SOURCE>
+            <PRICE_LEVEL></PRICE_LEVEL>
+            <PRICE_FACTOR>c</PRICE_FACTOR>
+        </feedAssetPricing>
+
+        <feedAssetPricing id="task.feed.modified.incorrect.staging.report">
+            <DRIF></DRIF>
+            <ASSET_CLASS></ASSET_CLASS>
+            <ASSET_TYPE></ASSET_TYPE>
+            <EXTISIN>F13658InsForAssetPricing</EXTISIN>
+            <MARKET>qtp_Market</MARKET>
+            <EV_PRICE></EV_PRICE>
+            <ACC_DDAT></ACC_DDAT>
+            <INFLAT_RATIO></INFLAT_RATIO>
+            <PRICE_SOURCE></PRICE_SOURCE>
+            <PRICE_LEVEL></PRICE_LEVEL>
+            <PRICE_FACTOR></PRICE_FACTOR>
+        </feedAssetPricing>
+
+        <feedAssetPricing id="task.feed.modified.correct.staging.report">
+            <DRIF>2017-05-10</DRIF>
+            <ASSET_CLASS></ASSET_CLASS>
+            <ASSET_TYPE></ASSET_TYPE>
+            <EXTISIN>F13658InsForAssetPricing</EXTISIN>
+            <MARKET>qtp_Market</MARKET>
+            <EV_PRICE>88</EV_PRICE>
+            <ACC_DDAT>0</ACC_DDAT>
+            <INFLAT_RATIO></INFLAT_RATIO>
+            <PRICE_SOURCE>Default</PRICE_SOURCE>
+            <PRICE_LEVEL>Bid</PRICE_LEVEL>
+            <PRICE_FACTOR></PRICE_FACTOR>
+        </feedAssetPricing>
+
+        <badStagingFeedReportFilter id="search.by.feed.asset.pricing">
+            <feedTask>Feed Asset Pricing</feedTask>
+        </badStagingFeedReportFilter>
+
+        <variable id="badStagingFeedReportPath"/>
+
+        <reportValidationRules id="reportRule1">
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Failure reason</fieldName>
+                    <value id="failure.reason1">[Column: 1] pricingDate - Unable to parse 'T+X' as date (using format yyyy-MM-dd) | [Column: 4] instrumentId - Field is compulsory but no value was found | [Column: 6] price - Field is compulsory but no value was found | [Column: 7] accDdat - Unable to parse 'a' as number | [Column: 8] inflatRatio - Unable to parse 'b' as number | [Column: 9] priceSource - Field is compulsory but no value was found | [Column: 11] priceFactor - Unable to parse 'c' as number</value>
+                </field>
+                <field><fieldName>DRIF</fieldName><value>T+X</value></field>
+                <field><fieldName>ASSET_CLASS</fieldName><value></value></field>
+                <field><fieldName>ASSET_TYPE</fieldName><value></value></field>
+                <field><fieldName>EXTISIN</fieldName><value></value></field>
+                <field><fieldName>MARKET</fieldName><value></value></field>
+                <field><fieldName>EV_PRICE</fieldName><value></value></field>
+                <field><fieldName>ACC_DDAT</fieldName><value>a</value></field>
+                <field><fieldName>INFLAT_RATIO</fieldName><value>b</value></field>
+                <field><fieldName>PRICE_SOURCE</fieldName><value></value></field>
+                <field><fieldName>PRICE_LEVEL</fieldName><value></value></field>
+                <field><fieldName>PRICE_FACTOR</fieldName><value>c</value></field>
+            </reportValidationRule>
+        </reportValidationRules>
+
+        <reportValidationRules id="reportRule2">
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Failure reason</fieldName>
+                    <value id="failure.reason2">[Column: 1] pricingDate - Field is compulsory but no value was found | [Column: 6] price - Field is compulsory but no value was found | [Column: 9] priceSource - Field is compulsory but no value was found</value>
+                </field>
+                <field><fieldName>DRIF</fieldName><value></value></field>
+                <field><fieldName>ASSET_CLASS</fieldName><value></value></field>
+                <field><fieldName>ASSET_TYPE</fieldName><value></value></field>
+                <field><fieldName>EXTISIN</fieldName><value>F13658InsForAssetPricing</value></field>
+                <field><fieldName>MARKET</fieldName><value>qtp_Market</value></field>
+                <field><fieldName>EV_PRICE</fieldName><value></value></field>
+                <field><fieldName>ACC_DDAT</fieldName><value></value></field>
+                <field><fieldName>INFLAT_RATIO</fieldName><value></value></field>
+                <field><fieldName>PRICE_SOURCE</fieldName><value></value></field>
+                <field><fieldName>PRICE_LEVEL</fieldName><value></value></field>
+                <field><fieldName>PRICE_FACTOR</fieldName><value></value></field>
+            </reportValidationRule>
+        </reportValidationRules>
+
+        <securitySearch id="search.ins.F13658InsForAssetPricing">
+            <description>
+                <type>Starting with</type>
+                <filter>F13658InsForAssetPricing</filter>
+                <linkText>F13658InsForAssetPricing</linkText>
+            </description>
+            <market>qtp_Market</market>
+        </securitySearch>
+
+        <securitySearchResult id="search.ins.F13658InsForAssetPricing.result">
+            <instrument>F13658InsForAssetPricing</instrument>
+            <market>qtp_Market</market>
+        </securitySearchResult>
+
+        <instrument id="price.88.and.date.2017.05.10">
+            <instrumentId>F13658InsForAssetPricing</instrumentId>
+            <market>qtp_Market</market>
+            <priceSource>
+                <priceSourceName>Default</priceSourceName>
+                <cleanPrice>88</cleanPrice>
+                <priceDate>5/10/2017</priceDate>
+                <priceLevel>Bid</priceLevel>
+            </priceSource>
+        </instrument>
+
+        <variable id="file.name"/>
+
+        <taskSchedulerMessage id="feed.xls.successful">
+            <message>Market Data: Import Asset Pricing: Imported 1 Asset Pricing from :(\S+).xls</message>
+        </taskSchedulerMessage>
+
+    </scenarioData>
+</dataBean>

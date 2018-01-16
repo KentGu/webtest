@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="http://artifactory.london.lombardrisk.com:8081/artifactory/libs-snapshot-local/com/lombardrisk/cobiz/1.0.0-SNAPSHOT/cobiz-1.0.0-SNAPSHOT.jar!/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/smoke.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+
+        <tsaRule id="SmokeTSARule">
+            <tsaRuleName id="SmokeTSARuleName" random="true" suffix="SmokeTSARule"/>
+            <tsaField>
+                <tsaFieldName>Upfront Fee</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>PAI</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>Transfer Value</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>Banked Coupon</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>Initial Coupon</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>Credit Event Cash Amount</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>Succession Event Cash Amount</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>Reset to Par</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>IM Interest</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>NDF Cashflow</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>TSAMisc1</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>TSAMisc2</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>TSAMisc3</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </tsaField>
+            <!--<tsaField>-->
+            <!--<tsaFieldName>Unsettled Upfront Fee</tsaFieldName>-->
+            <!--<enabled>true</enabled>-->
+            <!--<paymentMethod>Capitalise</paymentMethod>-->
+            <!--</tsaField>-->
+        </tsaRule>
+
+        <eligibilityRulesTemplate id="ERT001">
+            <nettingIAandMtM>Not-Net</nettingIAandMtM>
+            <templateName id="ERTName001Id" random="true" suffix="ERTId"/>
+            <status>Approved</status>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="cash.name"/>
+                <collateralAssetType ref="cash.usd.name"/>
+                <!--<PrincplCpty></PrincplCpty>-->
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="bond.name"/>
+                <collateralAssetType ref="bond.usd.name"/>
+                <!--<PrincplCpty></PrincplCpty>-->
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="equity.name"/>
+                <collateralAssetType ref="equity.usd.name"/>
+                <!--<PrincplCpty></PrincplCpty>-->
+            </collateralAssetClass>
+        </eligibilityRulesTemplate>
+
+        <collateralStaticData id="SmokeLinkageSet001">
+            <type>Linkage Set</type>
+            <dataName id="LinkageSet001Id" random="true" suffix="LS001N"/>
+            <description random="true" suffix="LS001D"/>
+            <status>enabled</status>
+        </collateralStaticData>
+
+        <agreement id="SmokeFCMAgreement006">
+            <principal>
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter ref="org.p1.code"/>
+                <linkText ref="org.p1.code"/>
+            </principal>
+            <counterparty>
+                <criteria>Containing</criteria>
+                <type>Long Name</type>
+                <filter ref="org.c1.lname"/>
+                <linkText ref="org.c1.lname"/>
+            </counterparty>
+            <businessLine>Clearing</businessLine>
+            <ccp ref="ccp.lch.name"/>
+            <agreementDescription id="SmokeFCMAgreement006DescId" random="true" suffix="SmokeFCMAgr006Desc"/>
+            <agreementName random="true" suffix="SmokeFCMAgr006Name"/>
+            <externalId id="FCM006ExtId" random="true" suffix="FCM006ExtId"/>
+            <linkageSet ref="LinkageSet001Id"/>
+            <agreementDate>T</agreementDate>
+            <nettingIAandMtM>Not-Net</nettingIAandMtM>
+            <tsa>true</tsa>
+            <tsaRule ref="SmokeTSARuleName"/>
+            <!--<grossCalc>Net</grossCalc>-->
+            <!--<interestCalc>Net</interestCalc>-->
+            <vmCallFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </vmCallFrequency>
+            <imCallFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </imCallFrequency>
+            <timeZone ref="system.staticData.timeZone.hk.desc"/>
+            <holidayCentre ref="hc.europe.name"/>
+            <product>
+                <productName ref="product.test1.name"/>
+            </product>
+            <!--<interest>true</interest>-->
+            <!--<interestCalculationsMethod>Simple</interestCalculationsMethod>-->
+            <!--<calculationRule>First of the Month</calculationRule>-->
+            <!--<payMethod>Physical Payment</payMethod>-->
+            <!--<receiveMethod>Capitalise</receiveMethod>-->
+            <!--<interestSettlementDate>T+2</interestSettlementDate>-->
+            <!--<eligibilityRulesTemplate ref="ERTName001Id"/>-->
+            <autoBookingRule>
+                <applicableTo>Capitalise TSA</applicableTo>
+                <assetType ref="cash.usd.name"/>
+                <bookingStatus>Pending Settlement</bookingStatus>
+                <createWithLetter>true</createWithLetter>
+            </autoBookingRule>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="cash.name"/>
+                <autoBookingRule>
+                    <applicableTo>Capitalise Cashflow</applicableTo>
+                    <assetType ref="cash.usd.name"/>
+                    <bookingStatus>Pending Settlement</bookingStatus>
+                    <createWithLetter>true</createWithLetter>
+                </autoBookingRule>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="cash.usd.name"/>
+                </collateralAssetType>
+                <!--<AutoBookingRules>-->
+                <!--<applicableTo>tsa</applicableTo>-->
+                <!--<assetType>qtp_cash_usd</assetType>-->
+                <!--<value>Use Areement Amount</value>-->
+                <!--<movement>Recall</movement>-->
+                <!--<movement>Call</movement>-->
+                <!--<movement>Delivery</movement>-->
+                <!--<movement>Return</movement>-->
+                <!--<bookingStatus>Pending Settlement</bookingStatus>-->
+                <!--<createWithLetter>true</createWithLetter>-->
+                <!--</AutoBookingRules>-->
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="bond.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="bond.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="equity.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="equity.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <bookingType>VM</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vcr.name"/>
+                    <linkText ref="payInstrBucket.vcr.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>VM</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vrd.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>IM</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.ird.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>IM</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vrd.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>VM Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.pay.name"/>
+                    <linkText ref="payInstrBucket.pay.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>VM Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.rec.name"/>
+                    <linkText ref="payInstrBucket.rec.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>IM Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.pay.name"/>
+                    <linkText ref="payInstrBucket.pay.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>IM Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.rec.name"/>
+                    <linkText ref="payInstrBucket.rec.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Physical Cashflow</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.pay.name"/>
+                    <linkText ref="payInstrBucket.pay.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Physical Cashflow</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.rec.name"/>
+                    <linkText ref="payInstrBucket.rec.name"/>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <notificationLetterType>Statement</notificationLetterType>
+                <letterTemplateType>Standard-English</letterTemplateType>
+                <exposureStatementTemplateType>Standard-English</exposureStatementTemplateType>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <statementIncludeReport>
+                <exposures>Excel</exposures>
+                <exposures>XML</exposures>
+                <reconciliationTradesOutput>Excel</reconciliationTradesOutput>
+                <assetHoldingsandValuation>CSV</assetHoldingsandValuation>
+                <dailyExposure>PDF</dailyExposure>
+            </statementIncludeReport>
+            <agreementStatus>Pending</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <statementStatus>Approved</statementStatus>
+            <agreementId id="smoke.fcm.agr6id"/>
+        </agreement>
+
+        <feedTrade id="FeedFCMTrade001">
+            <legal_id ref="FCM006ExtId"/>
+            <system ref="org.feed.system.qtp.name"/>
+            <product ref="product.test1.name"/>
+            <tradeRef id="FCMTrade001RefId" random="true"/>
+            <operation>A</operation>
+            <dealDate random="true" variation="t"/>
+            <!--&gt;21/07/2016</dealDate>-->
+            <startDate random="true" variation="t"/>
+            <endDate random="true" variation="t"/>
+            <mtmValuation>1000000</mtmValuation>
+            <mtmValuationDate random="true" variation="t"/>
+            <counterpartyDealLevelUpfront>1</counterpartyDealLevelUpfront>
+            <counterpartyDealLevelAmount>10000</counterpartyDealLevelAmount>
+            <counterpartyDealLevelCurrency>USD</counterpartyDealLevelCurrency>
+            <!--<indepMtmValuation>10000</indepMtmValuation>-->
+            <!--<indepMtmValuationCcy>USD</indepMtmValuationCcy>-->
+            <accruedCoupon>1000</accruedCoupon>
+            <TSACurrency>USD</TSACurrency>
+            <resetToParAmount>1000</resetToParAmount>
+            <initialCoupon>1000</initialCoupon>
+            <creditEventCashAmount>1000</creditEventCashAmount>
+            <successionEventCashAmount>1000</successionEventCashAmount>
+            <transferValue>1000</transferValue>
+            <bankedCoupon>1000</bankedCoupon>
+            <PAI>1000</PAI>
+            <IMInterest>1000</IMInterest>
+            <NDFCashflow>1000</NDFCashflow>
+            <upfrontFee>1000</upfrontFee>
+            <upfrontFeeSettlementDate random="true" variation="t-1"/>
+            <TSAMisc1>1000</TSAMisc1>
+            <TSAMisc2>1000</TSAMisc2>
+            <TSAMisc3>1000</TSAMisc3>
+        </feedTrade>
+
+        <agreementSearch id="SearchFCMAgr006">
+            <description>
+                <filter ref="SmokeFCMAgreement006DescId"/>
+                <linkText ref="SmokeFCMAgreement006DescId"/>
+            </description>
+        </agreementSearch>
+
+        <agreementSearchResult id="SearchFCMAgr006Result">
+            <agreementId ref="smoke.fcm.agr6id"/>
+        </agreementSearchResult>
+
+        <agreementExposureSummary id="ProductQTP">
+            <productList>
+                <productType ref="product.test1.name"/>
+            </productList>
+        </agreementExposureSummary>
+
+        <tradeDetail id="AddFCMTrade001">
+            <tradeInformation>
+                <tradeDate>T</tradeDate>
+                <effectiveDate>T</effectiveDate>
+                <maturityDate>T+1000</maturityDate>
+                <tradeIdentifierPartyA random="true"/>
+                <partyABranchName random="true"/>
+                <partyBBranchName random="true"/>
+            </tradeInformation>
+
+            <valuationInformation>
+                <principalValuationAmount>
+                    <amount>1000000</amount>
+                    <currency>USD</currency>
+                </principalValuationAmount>
+                <valuationDate>T</valuationDate>
+            </valuationInformation>
+
+            <ccpTradeInformation>
+                <accruedCoupon>
+                    <amount>1000</amount>
+                </accruedCoupon>
+                <tsaCurrency>USD</tsaCurrency>
+                <resetToParAmount>1000</resetToParAmount>
+                <initialCoupon>1000</initialCoupon>
+                <creditEventCashAmount>1000</creditEventCashAmount>
+                <successionEventCashAmount>1000</successionEventCashAmount>
+                <transferValue>1000</transferValue>
+                <bankedCoupon>1000</bankedCoupon>
+                <pai>1000</pai>
+                <imInterest>1000</imInterest>
+                <ndfCashflow>1000</ndfCashflow>
+                <upfrontFee>1000</upfrontFee>
+                <upfrontFeeSettlementDate>T-2</upfrontFeeSettlementDate>
+                <tsaMisc1>1000</tsaMisc1>
+                <tsaMisc2>1000</tsaMisc2>
+                <tsaMisc3>1000</tsaMisc3>
+            </ccpTradeInformation>
+
+            <collateralInformation>
+                <dealLevelUpfront>true</dealLevelUpfront>
+                <dealLevelType>Independent Amount</dealLevelType>
+                <!--<dealLevelAmount>10000</dealLevelAmount>-->
+                <cptyDealLevelAmount>10000</cptyDealLevelAmount>
+                <currency>USD</currency>
+            </collateralInformation>
+        </tradeDetail>
+
+        <feedPortfolioTSA id="FeedTSAResettoPar">
+            <agreement_id ref="smoke.fcm.agr6id"/>
+            <component>Reset to Par</component>
+            <amount>1000</amount>
+        </feedPortfolioTSA>
+
+        <feedPortfolioTSA id="FeedTSAInitialCoupon">
+            <agreement_id ref="smoke.fcm.agr6id"/>
+            <component>Initial Coupon</component>
+            <amount>1000</amount>
+        </feedPortfolioTSA>
+
+        <feedPortfolioTSA id="FeedTSABankedCoupon">
+            <agreement_id ref="smoke.fcm.agr6id"/>
+            <component>Banked Coupon</component>
+            <amount>1000</amount>
+        </feedPortfolioTSA>
+
+        <feedPortfolioTSA id="FeedTSAPAI">
+            <agreement_id ref="smoke.fcm.agr6id"/>
+            <component>PAI</component>
+            <amount>1000</amount>
+        </feedPortfolioTSA>
+
+        <feedPortfolioTSA id="FeedTSAIMInterest">
+            <agreement_id ref="smoke.fcm.agr6id"/>
+            <component>IM Interest</component>
+            <amount>1000</amount>
+        </feedPortfolioTSA>
+
+        <feedPortfolioTSA id="FeedTSANDFCashflow">
+            <agreement_id ref="smoke.fcm.agr6id"/>
+            <component>NDF Cashflow</component>
+            <amount>1000</amount>
+        </feedPortfolioTSA>
+
+        <feedPortfolioTSA id="FeedTSAUpfrontFee">
+            <agreement_id ref="smoke.fcm.agr6id"/>
+            <component>Upfront Fee</component>
+            <amount>1000</amount>
+        </feedPortfolioTSA>
+
+        <feedPortfolioTSA id="FeedTSATransferValue">
+            <agreement_id ref="smoke.fcm.agr6id"/>
+            <component>Transfer Value</component>
+            <amount>1000</amount>
+        </feedPortfolioTSA>
+
+        <feedPortfolioTSA id="FeedTSACreditEventCashAmount">
+            <agreement_id ref="smoke.fcm.agr6id"/>
+            <component>Credit Event Cash Amount</component>
+            <amount>1000</amount>
+        </feedPortfolioTSA>
+
+        <feedPortfolioTSA id="FeedTSACreditSuccessionEventCashAmount">
+            <agreement_id ref="smoke.fcm.agr6id"/>
+            <component>Succession Event Cash Amount</component>
+            <amount>1000</amount>
+        </feedPortfolioTSA>
+
+        <feedPortfolioTSA id="FeedTSATSAMisc1">
+            <agreement_id ref="smoke.fcm.agr6id"/>
+            <component>TSAMisc1</component>
+            <amount>1000</amount>
+        </feedPortfolioTSA>
+
+        <feedPortfolioTSA id="FeedTSATSAMisc2">
+            <agreement_id ref="smoke.fcm.agr6id"/>
+            <component>TSAMisc2</component>
+            <amount>1000</amount>
+        </feedPortfolioTSA>
+
+        <feedPortfolioTSA id="FeedTSATSAMisc3">
+            <agreement_id ref="smoke.fcm.agr6id"/>
+            <component>TSAMisc3</component>
+            <amount>1000</amount>
+        </feedPortfolioTSA>
+
+        <exposureEventDetail id="SmokeFCMAgreement006IMCallEvent">
+            <agrId ref="smoke.fcm.agr6id"/>
+            <action>IM Call</action>
+        </exposureEventDetail>
+
+        <assetBookingSummary id="AssetTypeCashUSD">
+            <assetType ref="cash.usd.name"/>
+        </assetBookingSummary>
+
+        <exposureEventDetail id="SmokeFCMAgreement006VMCallDeficitEvent">
+            <agrId ref="smoke.fcm.agr6id"/>
+            <action>VM Call(Deficit)</action>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="FCM006VMCallDeficitEventCptyAmount">
+            <counterpartyAmount>2015000</counterpartyAmount>
+        </exposureEventDetail>
+
+        <bookingDetail id="SmokeFCMAgreement006BulkBooking001">
+            <assetType ref="bond.usd.name"/>
+            <instrumentSearch>
+                <instrument>
+                    <!--<type>Starting with</type>-->
+                    <filter ref="bond.instrument1.name"/>
+                    <linkText ref="bond.instrument1.name"/>
+                </instrument>
+                <market>
+                    <linkText>qtp_Market</linkText>
+                </market>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <!--<movement>Call</movement>-->
+                    <vmAmount>2015000</vmAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <save>save</save>
+            <!--<alertHandling>-->
+            <!--<content>[\s\S]*</content>-->
+            <!--<accept>false</accept>-->
+            <!--</alertHandling>-->
+        </bookingDetail>
+
+        <exposureEventDetail id="SmokeFCMAgreement006TSACallDeficitEvent">
+            <agrId ref="smoke.fcm.agr6id"/>
+            <action>TSA Call(Deficit)</action>
+        </exposureEventDetail>
+
+        <bookingDetail id="SmokeFCMAgreement006BulkBooking002">
+            <instrumentSearch>
+                <instrument>
+                    <filter ref="cash.usd.name"/>
+                    <linkText ref="cash.usd.name"/>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <!--<movement>Receive</movement>-->
+                    <nominalAmount>24000</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <save>save</save>
+        </bookingDetail>
+
+        <bookingDetail id="SmokeFCMAgreement006BulkBooking003">
+            <assetType ref="equity.usd.name"/>
+            <instrumentSearch>
+                <instrument>
+                    <!--<type>Starting with</type>-->
+                    <filter ref="equity.instrument1.name"/>
+                    <linkText ref="equity.instrument1.name"/>
+                </instrument>
+                <market>
+                    <linkText>qtp_Market</linkText>
+                </market>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <!--<movement>Call</movement>-->
+                    <imAmount>20000</imAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <save>save</save>
+        </bookingDetail>
+
+        <agreement id="SmokeFCMAgreement006ToApproved">
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+    </scenarioData>
+</dataBean>
+

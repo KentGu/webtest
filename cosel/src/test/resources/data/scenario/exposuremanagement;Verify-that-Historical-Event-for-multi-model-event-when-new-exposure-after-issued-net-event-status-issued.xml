@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/exposureManagement.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <agreement id="agr20962.multiModel.net">
+            <agreementId id="agrid">3003</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="model">
+            <column>Model</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="call.agreementRequirement.1.8m.top">
+            <action>Call</action>
+            <agreementRequirement>1,800,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="call.agreementRequirement.1m.m2">
+            <action>Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model>m2</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="call.agreementRequirement.1m.m1">
+            <action>Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model>m1</model>
+        </exposureEventDetail>
+
+        <marginLetter id="createStatementNotificationLetter">
+            <letterType>Statement Notification</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <assetHoldingsandValuationReport>true</assetHoldingsandValuationReport>
+                </emailAttachments>
+            </letterSetupDetails>
+        </marginLetter>
+
+        <exposureEventDetail id="call.agreementRequirement.1.8m.top.MarginRequestIssued">
+            <action>Call</action>
+            <agreementRequirement>1,800,000.00</agreementRequirement>
+            <callStatus>Margin Request Issued</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="call.agreementRequirement.1m.m2.MarginRequestIssued">
+            <action>Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Margin Request Issued</callStatus>
+            <model>m2</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="call.agreementRequirement.1m.m1.MarginRequestIssued">
+            <action>Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Margin Request Issued</callStatus>
+            <model>m1</model>
+        </exposureEventDetail>
+
+        
+        <agreementExposureSummary id="ProductQTP">
+            <productList>
+                <productType>QTP</productType>
+            </productList>
+        </agreementExposureSummary>
+        
+        <tradeDetail id="tradeExposureAmount.0.6m.m2">
+            <tradeInformation>
+                <tradeDate>T</tradeDate>
+                <effectiveDate>T</effectiveDate>
+                <maturityDate>T+1000000</maturityDate>
+                <exchangedNotional1Currency>EUR</exchangedNotional1Currency>
+                <exchangedNotional2Currency>EUR</exchangedNotional2Currency>
+                <tradeIdentifierPartyA random="true"/>
+                <partyABranchName random="true"/>
+                <partyBBranchName random="true"/>
+            </tradeInformation>
+            <valuationInformation>
+                <principalValuationAmount>
+                    <amount>0.75m</amount>
+                    <currency>EUR</currency>
+                </principalValuationAmount>
+                <valuationDate>T</valuationDate>
+            </valuationInformation>
+        </tradeDetail>
+
+        <agreement id="agr20962">
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+        <exposureEventDetail variation="BLUE" id="call.agreementRequirement.1.8m.top.MarginRequestIssued.blue">
+            <action>Call</action>
+            <agreementRequirement>1,800,000.00</agreementRequirement>
+            <callStatus>Margin Request Issued</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail variation="BLUE" id="call.agreementRequirement.1m.m2.MarginRequestIssued.blue">
+            <action>Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Margin Request Issued</callStatus>
+            <model>m2</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail variation="BLUE" id="call.agreementRequirement.1m.m1.MarginRequestIssued.blue">
+            <action>Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Margin Request Issued</callStatus>
+            <model>m1</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail variation="ORANGE" id="call.agreementRequirement.2.4m.top.PendingReview.orange">
+            <action>Call</action>
+            <agreementRequirement>2,400,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail variation="ORANGE" id="call.agreementRequirement.1.75m.m2.PendingReview.orange">
+            <action>Call</action>
+            <agreementRequirement>1,750,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model>m2</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail variation="ORANGE" id="call.agreementRequirement.1m.m1.PendingReview.orange">
+            <action>Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model>m1</model>
+        </exposureEventDetail>
+  
+    </scenarioData>
+</dataBean>

@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <instrument id="bondinstrument-USD.1">
+            <assetClass>qtp_bond</assetClass>
+            <assetType>qtp_bond_usd</assetType>
+            <instrumentId>
+                <value id="bondinstrument.id" random="true" prefix="bond_"/>
+            </instrumentId>
+            <market>USA</market>
+            <description id="bondinstrument.des" random="true"/>
+            <issuer>
+                <filter>QTP_Eligible_Issuer4</filter>
+                <linkText>QTP_Eligible_Issuer4</linkText>
+            </issuer>
+            <maturityDate>T+100</maturityDate>
+            <currencyOfDenomination>USD</currencyOfDenomination>
+            <manuallyOverrideLastCouponDate>true</manuallyOverrideLastCouponDate>
+            <nextCouponDate>T+1</nextCouponDate>
+            <manuallyOverrideNextCouponDate>true</manuallyOverrideNextCouponDate>
+            <lastCouponDate>T</lastCouponDate>
+            <accrualBasis>Act/Act</accrualBasis>
+            <couponRate>0</couponRate>
+            <recordDate>T</recordDate>
+            <issueDate>T</issueDate>
+            <lock>true</lock>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <securitySearch id="SecuritySearch">
+            <instrument>
+                <type>Starting with</type>
+                <filter ref="bondinstrument.id"/>
+            </instrument>
+            <lock>All</lock>
+        </securitySearch>
+
+        <securitySearchResult id="SearchSecurity">
+            <instrument ref="bondinstrument.id"/>
+        </securitySearchResult>
+
+        <instrument id="instrument.lockEdit.Amended">
+            <securityStatus>Amended</securityStatus>
+            <lock>true</lock>
+        </instrument>
+
+        <securitySearch id="SecuritySearch.without.lock">
+            <instrument>
+                <type>Starting with</type>
+                <filter ref="bondinstrument.id"/>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="SearchResults" apply="false">
+            <instrument ref="bondinstrument.id"/>
+        </securitySearchResult>
+
+        <agreement id="agrSearch">
+            <agreementId id="agrid">2667</agreementId>
+        </agreement>
+
+        <agreementSearchResult id="agrSearchResult">
+            <agreementId ref="agrid"/>
+        </agreementSearchResult>
+
+        <assetBookingSummary id="qtp_bond">
+            <assetType>qtp_bond_usd</assetType>
+        </assetBookingSummary>
+
+        <bookingDetail id="qtp_bond_Instrument_Search">
+            <instrumentSearch>
+                <instrumentId>
+                    <type>Exactly matching</type>
+                    <filter ref="bondinstrument.id"/>
+                </instrumentId>
+            </instrumentSearch>>
+        </bookingDetail>
+
+        <securitySearch variation="searchDialog" id="Instrument.Search.Result">
+            <instrumentId ref="bondinstrument.id"/>
+            <linkText apply="false"/>
+        </securitySearch>
+
+        <!--Step 2-->
+
+        <instrument id="bondSecurity-USD.2">
+            <assetClass>qtp_bond</assetClass>
+            <assetType>qtp_bond_usd</assetType>
+            <instrumentId>
+                <value id="bondInstrument1.id" random="true" prefix="bond_"/>
+            </instrumentId>
+            <market>USA</market>
+            <description id="bondInstrument.des" random="true"/>
+            <issuer>
+                <filter>QTP_Eligible_Issuer4</filter>
+                <linkText>QTP_Eligible_Issuer4</linkText>
+            </issuer>
+            <maturityDate>T+100</maturityDate>
+            <currencyOfDenomination>USD</currencyOfDenomination>
+            <manuallyOverrideLastCouponDate>true</manuallyOverrideLastCouponDate>
+            <nextCouponDate>T+1</nextCouponDate>
+            <manuallyOverrideNextCouponDate>true</manuallyOverrideNextCouponDate>
+            <lastCouponDate>T</lastCouponDate>
+            <accrualBasis>Act/Act</accrualBasis>
+            <couponRate>0</couponRate>
+            <recordDate>T</recordDate>
+            <issueDate>T</issueDate>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <securitySearch id="bondSecuritySearch.1">
+            <instrument>
+                <type>Starting with</type>
+                <filter ref="bondInstrument1.id"/>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="bondSearchSecurity.2">
+            <instrument ref="bondInstrument1.id"/>
+        </securitySearchResult>
+
+        <securitySearchResult id="bond.Security.Approve">
+            <instrument ref="bondInstrument1.id"/>
+        </securitySearchResult>
+
+        <instrument id="bond.Status.IsApproved">
+            <securityStatus>Approved</securityStatus>
+        </instrument>
+
+        <!--Step 3-->
+        <instrument id="bondSecurity-USD.3">
+            <assetClass>qtp_bond</assetClass>
+            <assetType>qtp_bond_usd</assetType>
+            <instrumentId>
+                <value id="thirdBondinstrument.id" random="true" prefix="bond_"/>
+            </instrumentId>
+            <market>USA</market>
+            <description id="bondinstrument.des" random="true"/>
+            <issuer>
+                <filter>QTP_Eligible_Issuer4</filter>
+                <linkText>QTP_Eligible_Issuer4</linkText>
+            </issuer>
+            <maturityDate>T+100</maturityDate>
+            <currencyOfDenomination>USD</currencyOfDenomination>
+            <manuallyOverrideLastCouponDate>true</manuallyOverrideLastCouponDate>
+            <nextCouponDate>T+1</nextCouponDate>
+            <manuallyOverrideNextCouponDate>true</manuallyOverrideNextCouponDate>
+            <lastCouponDate>T</lastCouponDate>
+            <accrualBasis>Act/Act</accrualBasis>
+            <couponRate>0</couponRate>
+            <recordDate>T</recordDate>
+            <issueDate>T</issueDate>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <securitySearch id="SecuritySearch.bond3">
+            <instrument>
+                <type>Starting with</type>
+                <filter ref="thirdBondinstrument.id"/>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="SearchSecurity.bond3">
+            <instrument ref="thirdBondinstrument.id"/>
+        </securitySearchResult>
+
+        <instrument id="Status.Amended.bond3">
+            <securityStatus>Amended</securityStatus>
+        </instrument>
+
+        <bookingDetail id="qtp_bond_Instrument_Search.bond3">
+            <instrumentSearch>
+                <instrumentId>
+                    <type>Exactly matching</type>
+                    <filter ref="thirdBondinstrument.id"/>
+                </instrumentId>
+            </instrumentSearch>>
+        </bookingDetail>
+
+        <securitySearch variation="searchDialog" id="Instrument.Search.Result.Bond3">
+            <instrumentId ref="thirdBondinstrument.id"/>
+            <linkText apply="false"/>
+        </securitySearch>
+
+        <!--Equity 1-->
+
+        <instrument id="equityInstrument-USD.1">
+            <assetClass>qtp_equity</assetClass>
+            <assetType>qtp_equity_usd</assetType>
+            <instrumentId>
+                <value id="equity1Instrument.id" random="false" prefix="Instrument.id1"/>
+            </instrumentId>
+            <market>USA</market>
+            <description id="equityinstrument.des" random="true"/>
+            <issuer>
+                <filter>QTP_Eligible_Issuer4</filter>
+                <linkText>QTP_Eligible_Issuer4</linkText>
+            </issuer>
+            <maturityDate>T+100</maturityDate>
+            <recordDate>T</recordDate>
+            <issueDate>T</issueDate>
+            <lock>true</lock>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <securitySearch id="equitySecuritySearch.1">
+            <instrument>
+                <type>Starting with</type>
+                <filter ref="equity1Instrument.id"/>
+            </instrument>
+            <lock>All</lock>
+        </securitySearch>
+
+        <securitySearchResult id="equitySearchSecurity">
+            <instrument ref="equity1Instrument.id"/>
+        </securitySearchResult>
+
+
+        <instrument id="equityInstrument.lockEdit.Amended">
+            <securityStatus>Amended</securityStatus>
+            <lock>true</lock>
+        </instrument>
+
+        <securitySearch id="EquitySecuritySearch.without.lock">
+            <instrument>
+                <type>Starting with</type>
+                <filter ref="equity1Instrument.id"/>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="EquitynoInstrument" apply="false">
+            <instrument ref="equity1Instrument.id"/>
+        </securitySearchResult>
+
+        <exposureEventDetail id="delivery.agreementRequirement.2m">
+            <action>Delivery</action>
+            <agreementRequirement>-2,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <disputeValue>0.00</disputeValue>
+            <counterpartyAmount>0.00</counterpartyAmount>
+        </exposureEventDetail>
+
+        <bookingDetail id="delivery.applyAgreementAmount">
+            <instrumentSearch>
+                <instrument>
+                    <filter>equityInstrument.id</filter>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Delivery</bookingMovement>
+                    <bookingNumber>1.1</bookingNumber>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <!--<bookingDetail id="Web-error-message">-->
+            <!--<bookingInformation>-->
+                <!--<bookingInformationDetail>-->
+                    <!--<alertHandling>-->
+                        <!--<content>This instrument equityInstrument.id does not exist in the system. Please validate the instrument.</content>-->
+                    <!--</alertHandling>-->
+                <!--</bookingInformationDetail>-->
+            <!--</bookingInformation>-->
+        <!--</bookingDetail>-->
+
+        <messageHandler id="Web-error-message.Values">
+            <alertHandling>
+                <accept>true</accept>
+                <content>This instrument Instrument.id1 does not exist in the system. Please validate the instrument.</content>
+                <display>true</display>
+            </alertHandling>
+        </messageHandler>
+
+        <!--<messageHandler id="Web-error-message">-->
+            <!--<alertHandling>-->
+                <!--<accept></accept>-->
+            <!--</alertHandling>-->
+        <!--</messageHandler>-->
+
+        <exposureEventDetail id="makeBooking">
+            <action apply="false">Make Booking</action>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="makeInstrumentBooking">
+            <action apply="false">Make Instrument Booking</action>
+        </exposureEventDetail>
+
+        <!--Equity 2-->
+
+        <instrument id="equitySecurity-USD.2">
+            <assetClass>qtp_equity</assetClass>
+            <assetType>qtp_equity_usd</assetType>
+            <instrumentId>
+                <value id="equityInstrument1.id" random="true" prefix="bond_"/>
+            </instrumentId>
+            <market>USA</market>
+            <description id="equityInstrument2.des" random="true"/>
+            <issuer>
+                <filter>QTP_Eligible_Issuer4</filter>
+                <linkText>QTP_Eligible_Issuer4</linkText>
+            </issuer>
+            <maturityDate>T+100</maturityDate>
+            <recordDate>T</recordDate>
+            <issueDate>T</issueDate>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <securitySearch id="equitySecuritySearch.2">
+            <instrument>
+                <type>Starting with</type>
+                <filter ref="equityInstrument1.id"/>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="equitySearchSecurity.2">
+            <instrument ref="equityInstrument1.id"/>
+        </securitySearchResult>
+
+        <securitySearchResult id="Equity.Security.Approve">
+            <instrument ref="equityInstrument1.id"/>
+        </securitySearchResult>
+
+        <instrument id="equity.Status.IsApproved">
+            <securityStatus>Approved</securityStatus>
+        </instrument>
+
+        <!--Equity 3-->
+
+        <instrument id="equitySecurity-USD.3">
+            <assetClass>qtp_equity</assetClass>
+            <assetType>qtp_equity_usd</assetType>
+            <instrumentId>
+                <value id="equityInstrument3.id" random="false" prefix="equityInstrument.id2"/>
+            </instrumentId>
+            <market>USA</market>
+            <description id="equityInstrument.des" random="true"/>
+            <issuer>
+                <filter>QTP_Eligible_Issuer4</filter>
+                <linkText>QTP_Eligible_Issuer4</linkText>
+            </issuer>
+            <maturityDate>T+100</maturityDate>
+            <recordDate>T</recordDate>
+            <issueDate>T</issueDate>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <securitySearch id="SecuritySearch.equity3">
+            <instrument>
+                <type>Starting with</type>
+                <filter ref="equityInstrument3.id"/>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="SearchSecurity.equity3">
+            <instrument ref="equityInstrument3.id"/>
+        </securitySearchResult>
+
+        <instrument id="equity.Status.Amended">
+            <securityStatus>Amended</securityStatus>
+        </instrument>
+
+        <bookingDetail id="equity3delivery.applyAgreementAmount">
+            <instrumentSearch>
+                <instrument>
+                    <filter ref="equityInstrument3.id"/>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Delivery</bookingMovement>
+                    <bookingNumber>1.1</bookingNumber>
+                </bookingInformationDetail>
+                <comment apply="true"></comment>
+            </bookingInformation>
+        </bookingDetail>
+
+        <messageHandler id="Web-error-message.Values.equity3">
+            <alertHandling>
+                <accept>true</accept>
+                <content>This instrument equityInstrument.id2 does not exist in the system. Please validate the instrument.</content>
+                <display>true</display>
+            </alertHandling>
+        </messageHandler>
+
+        <exposureEventDetail id="makeBooking">
+            <action apply="false">Make Booking</action>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="makeInstrumentBooking">
+            <action apply="false">Make Instrument Booking</action>
+        </exposureEventDetail>
+
+        <!--Feed Security Templete-->
+
+        <feedSecurityTemplate id="feed.security.template.qtp.bond.usd">
+            <DRIF>2005-11-14</DRIF>
+            <ASSET_CLASS id="feed.security.template.qtp.bond.usd.asset.class" ref="bond.name"/>
+            <ASSET_TYPE id="feed.security.template.qtp.bond.usd.asset.type" ref="bond.usd.name"/>
+            <ISSUER id="feed.security.template.qtp.bond.usd.issuer" ref="org.issuer1.lname"/>
+            <MATY>2099-01-01</MATY>
+            <CCY id="feed.security.template.qtp.bond.usd.ccy" ref="ccy.usd.name"/>
+            <EXTISIN id="feed.security.template.qtp.bond.usd.instrument.id">T27706_QTP_BOND_USD_Instrument1_XML</EXTISIN>
+            <EXTISIN_TYPE id="feed.security.template.qtp.bond.usd.instrument.id.type">CUSIP</EXTISIN_TYPE>
+            <INSTRUMENT ref="feed.security.template.qtp.bond.usd.instrument.id"/>
+            <MARKET id="feed.security.template.qtp.bond.usd.market">automation</MARKET>
+            <COUNTRY_OF_ISSUE id="feed.security.template.qtp.bond.usd.country.of.issue">EU</COUNTRY_OF_ISSUE>
+            <assetClassification>
+                <assetClassificationName id="feed.security.template.qtp.bond.usd.asset.classification.name">T5668AssetClassification</assetClassificationName>
+                <assetCategory id="feed.security.template.qtp.bond.usd.asset.category">T27706_QTP</assetCategory>
+            </assetClassification>
+            <PRICE_SOURCE id="feed.security.template.qtp.bond.usd.price.source.name">Default</PRICE_SOURCE>
+            <EV_PRICE id="feed.security.template.qtp.bond.usd.clean.price">6</EV_PRICE>
+            <PRICE_LEVEL>Mid</PRICE_LEVEL>
+            <UND_COUPON id="feed.security.template.qtp.bond.usd.coupon.rate">1</UND_COUPON>
+            <FREQUENCY>Semi-Annually</FREQUENCY>
+            <ACCRUAL_BASIS>Act/Act</ACCRUAL_BASIS>
+            <NEXT_COUPON_DATE>2099-01-01</NEXT_COUPON_DATE>
+            <ACC_DDAT id="feed.security.template.qtp.bond.usd.coupon.accrual">2</ACC_DDAT>
+            <LAST_COUPON_DATE>2012-01-01</LAST_COUPON_DATE>
+            <INFLAT_RATIO id="feed.security.template.qtp.bond.usd.factor">3</INFLAT_RATIO>
+            <PRICE_FACTOR id="feed.security.template.qtp.bond.usd.price.factor">4</PRICE_FACTOR>
+            <RECORD_DATE>2012-01-01</RECORD_DATE>
+            <ISSUE_DATE>2029-06-28</ISSUE_DATE>
+            <EX_DIV_DATE>2012-01-01</EX_DIV_DATE>
+            <RATING1 id="feed.security.template.qtp.bond.usd.rating1">A+</RATING1>
+            <RATING2 id="feed.security.template.qtp.bond.usd.rating2">Aa1</RATING2>
+            <RATING3 id="feed.security.template.qtp.bond.usd.rating3">A</RATING3>
+            <finra4210MinHaircut id="feed.security.template.qtp.bond.usd.fin.min.haircut">5</finra4210MinHaircut>
+            <OUTSTANDING_ISSUANCE id="feed.security.template.qtp.bond.usd.outstanding.issuance">2</OUTSTANDING_ISSUANCE>
+            <NOTATION id="feed.security.template.qtp.bond.usd.notation">notation</NOTATION>
+            <MININUM_TRADABLE_AMNT id="feed.security.template.qtp.bond.usd.min.trade.amnt">5000</MININUM_TRADABLE_AMNT>
+            <MULTIPLE_TRADABLE_AMNT id="feed.security.template.qtp.bond.usd.multiple.trade.amnt">10000</MULTIPLE_TRADABLE_AMNT>
+            <PD id="feed.security.template.qtp.bond.usd.pd">2</PD>
+            <TRADED_INTEREST id="feed.security.template.qtp.bond.usd.trade.interest">1</TRADED_INTEREST>
+            <ADDITIONALINFO1 id="feed.security.template.qtp.bond.usd.add.info1">info1</ADDITIONALINFO1>
+            <ADDITIONALINFO2 id="feed.security.template.qtp.bond.usd.add.info2">info2</ADDITIONALINFO2>
+            <ADDITIONALINFO3 id="feed.security.template.qtp.bond.usd.add.info3">info3</ADDITIONALINFO3>
+            <ADDITIONALINFO4 id="feed.security.template.qtp.bond.usd.add.info4">info4</ADDITIONALINFO4>
+            <multipleId>
+                <idType id="feed.security.template.qtp.bond.usd.instrument.id.type.multi.1">ISIN</idType>
+                <idValue id="feed.security.template.qtp.bond.usd.instrument.id.multi.1">T5668_QTP_BOND_USD_Instrument1_XML_ISIN</idValue>
+            </multipleId>
+            <INUSE>true</INUSE>
+        </feedSecurityTemplate>
+
+        <feedSecurityTemplate id="feed.security.template.qtp.bond.usd.ps1">
+            <DRIF>2005-11-14</DRIF>
+            <ASSET_CLASS ref="feed.security.template.qtp.bond.usd.asset.class"/>
+            <ASSET_TYPE ref="feed.security.template.qtp.bond.usd.asset.type"/>
+            <ISSUER ref="feed.security.template.qtp.bond.usd.issuer"/>
+            <CCY ref="feed.security.template.qtp.bond.usd.ccy"/>
+            <EXTISIN ref="feed.security.template.qtp.bond.usd.instrument.id"/>
+            <EXTISIN_TYPE ref="feed.security.template.qtp.bond.usd.instrument.id.type"/>
+            <MARKET ref="feed.security.template.qtp.bond.usd.market"/>
+            <PRICE_SOURCE id="feed.security.template.qtp.bond.usd.ps1.price.source.name">PS1</PRICE_SOURCE>
+            <EV_PRICE id="feed.security.template.qtp.bond.usd.ps1.clean.price">6</EV_PRICE>
+            <PRICE_LEVEL>Bid</PRICE_LEVEL>
+            <FREQUENCY>Semi-Annually</FREQUENCY>
+            <ACCRUAL_BASIS>Act/Act</ACCRUAL_BASIS>
+            <INUSE>false</INUSE>
+        </feedSecurityTemplate>
+
+        <feedResult id="feed.security.template.qtp.bond.usd.result">
+            <fileUploaded id="feed.security.template.qtp.bond.usd.result.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedStatus id="feed.security.template.qtp.bond.usd.status">
+            <status>Successful</status>
+            <valuationFile ref="feed.security.template.qtp.bond.usd.result.file"/>
+            <description>Security Template</description>
+            <successfulFeed>
+                <total>1</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <securitySearch id="feed.security.template.qtp.bond.usd.search">
+            <instrumentId>
+                <filter ref="feed.security.template.qtp.bond.usd.instrument.id"/>
+            </instrumentId>
+        </securitySearch>
+
+        <securitySearchResult id="feed.security.template.qtp.bond.usd.search.result">
+            <assetClass ref="feed.security.template.qtp.bond.usd.asset.class"/>
+            <assetType ref="feed.security.template.qtp.bond.usd.asset.type"/>
+            <market ref="feed.security.template.qtp.bond.usd.market"/>
+            <instrument ref="feed.security.template.qtp.bond.usd.instrument.id"/>
+            <currency ref="feed.security.template.qtp.bond.usd.ccy"/>
+            <issuer ref="feed.security.template.qtp.bond.usd.issuer"/>
+            <description ref="feed.security.template.qtp.bond.usd.instrument.id"/>
+            <use>true</use>
+        </securitySearchResult>
+
+        <instrument id="check.feed.security.template.qtp.bond.usd">
+            <assetClass ref="feed.security.template.qtp.bond.usd.asset.class"/>
+            <assetType ref="feed.security.template.qtp.bond.usd.asset.type"/>
+            <assetClassification>
+                <assetClassificationName ref="feed.security.template.qtp.bond.usd.asset.classification.name"/>
+                <assetcategory ref="feed.security.template.qtp.bond.usd.asset.category"/>
+            </assetClassification>
+            <instrumentId>
+                <type>CUSIP</type>
+                <value ref="feed.security.template.qtp.bond.usd.instrument.id"/>
+            </instrumentId>
+            <instrumentId>
+                <type>ISIN</type>
+                <value ref="feed.security.template.qtp.bond.usd.instrument.id.multi.1"/>
+            </instrumentId>
+            <market ref="feed.security.template.qtp.bond.usd.market"/>
+            <maturityDate>1/1/2099</maturityDate>
+            <description ref="feed.security.template.qtp.bond.usd.instrument.id"/>
+            <issuer>
+                <linkText ref="feed.security.template.qtp.bond.usd.issuer"/>
+            </issuer>
+            <currencyOfDenomination ref="feed.security.template.qtp.bond.usd.ccy"/>
+            <countryOfIssue ref="ctr.eu.desc"/>
+            <priceSource>
+                <priceSourceName ref="feed.security.template.qtp.bond.usd.price.source.name"/>
+                <cleanPrice ref="feed.security.template.qtp.bond.usd.clean.price"/>
+                <dirtyPrice>96</dirtyPrice>
+                <priceLevel>Mid</priceLevel>
+                <priceDate>11/14/2005</priceDate>
+            </priceSource>
+            <priceSource>
+                <priceSourceName ref="feed.security.template.qtp.bond.usd.ps1.price.source.name"/>
+                <cleanPrice ref="feed.security.template.qtp.bond.usd.ps1.clean.price"/>
+                <dirtyPrice>96</dirtyPrice>
+                <priceLevel>Bid</priceLevel>
+                <priceDate>11/14/2005</priceDate>
+            </priceSource>
+            <couponRate ref="feed.security.template.qtp.bond.usd.coupon.rate"/>
+            <couponFrequency>Semi-annually</couponFrequency>
+            <accrualBasis>Act/Act</accrualBasis>
+            <nextCouponDate>1/1/2099</nextCouponDate>
+            <couponAccrual ref="feed.security.template.qtp.bond.usd.coupon.accrual"/>
+            <factor ref="feed.security.template.qtp.bond.usd.factor"/>
+            <priceFactor ref="feed.security.template.qtp.bond.usd.price.factor"/>
+            <probabilityofDefault ref="feed.security.template.qtp.bond.usd.pd"/>
+            <recordDate>1/1/2012</recordDate>
+            <issueDate>6/28/2029</issueDate>
+            <exDivDate>1/1/2012</exDivDate>
+            <finra4210MinHaircut ref="feed.security.template.qtp.bond.usd.fin.min.haircut"/>
+            <issueRating>
+                <agency ref="org.rating.agency.sandp.name"/>
+                <rating ref="feed.security.template.qtp.bond.usd.rating3"/>
+            </issueRating>
+            <issueRating>
+                <agency ref="org.rating.agency.moodys.name"/>
+                <rating ref="feed.security.template.qtp.bond.usd.rating2"/>
+            </issueRating>
+            <issueRating>
+                <agency ref="org.rating.agency.fitch.name"/>
+                <rating ref="feed.security.template.qtp.bond.usd.rating1"/>
+            </issueRating>
+            <additionalInfo1 ref="feed.security.template.qtp.bond.usd.add.info1"/>
+            <additionalInfo2 ref="feed.security.template.qtp.bond.usd.add.info2"/>
+            <additionalInfo3 ref="feed.security.template.qtp.bond.usd.add.info3"/>
+            <additionalInfo4 ref="feed.security.template.qtp.bond.usd.add.info4"/>
+            <minimumTradableAmount ref="feed.security.template.qtp.bond.usd.min.trade.amnt"/>
+            <multipleTradableAmount ref="feed.security.template.qtp.bond.usd.multiple.trade.amnt"/>
+            <notation ref="feed.security.template.qtp.bond.usd.notation"/>
+            <tradedInterest ref="feed.security.template.qtp.bond.usd.trade.interest"/>
+            <outstandingIssuance ref="feed.security.template.qtp.bond.usd.outstanding.issuance"/>
+        </instrument>
+
+        <bookingDetail id="bond_Template_Search">
+            <instrumentSearch>
+                <instrumentId>
+                    <type>Exactly matching</type>
+                    <filter ref="feed.security.template.qtp.bond.usd.instrument.id"/>
+                </instrumentId>
+            </instrumentSearch>>
+        </bookingDetail>
+
+        <securitySearch variation="searchDialog" id="Template.Instrument.Search.Result">
+            <instrumentId ref="feed.security.template.qtp.bond.usd.instrument.id"/>
+            <linkText apply="false"/>
+        </securitySearch>
+    </scenarioData>
+</dataBean>

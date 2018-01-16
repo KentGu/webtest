@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <securitySearch id="26511.bond.usd">
+            <matured>All</matured>
+            <instrument>
+                <filter id="26511.bond.usd.id">26511_bond_usd_1</filter>
+                <!--<linkText ref="26527.bond.usd"/>-->
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="26511.bond.usd.approve">
+            <instrument ref="26511.bond.usd.id"/>
+        </securitySearchResult>
+
+        <instrument id="26511.bond.usd.changeRecordDate.tPlus8">
+            <maturityDate>t+1000</maturityDate>
+            <recordDate>t+8</recordDate>
+        </instrument>
+
+        <securitySearch id="26511.equity.usd">
+            <matured>All</matured>
+            <instrument>
+                <filter id="26511.equity.usd.id">26511_equity_usd_1</filter>
+                <!--<linkText ref="29482.equity.usd.id"/>-->
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="26511.equity.usd.approve">
+            <instrument ref="26511.equity.usd.id"/>
+        </securitySearchResult>
+
+        <instrument id="26511.equity.usd.changeRecordDate.tPlus7">
+            <maturityDate>t+1000</maturityDate>
+            <recordDate>t-8</recordDate>
+        </instrument>
+
+        <agreement id="agr26511.umb.collateralAtFund">
+            <agreementId id="agrid">2619</agreementId>
+        </agreement>
+
+        <agreement id="agr26511">
+            <agreementName>26511_f1</agreementName>
+            <statementStatus>Approved</statementStatus>
+            <umbrellaAgreement>true</umbrellaAgreement>
+            <subAgreement>
+                <linkText>26511_f2</linkText>
+            </subAgreement>
+            <subAgreement>
+                <linkText>26511_umb</linkText>
+            </subAgreement>
+        </agreement>
+
+        <substitutionEventSearch id="agr26511.recall">
+            <agreementId ref="agrid"/>
+        </substitutionEventSearch>
+
+        <substitutionEventDetail id="26511.umb.subEvent">
+            <description id="agrDes.umb">26511_umb</description>
+        </substitutionEventDetail>
+
+        <substitutionEventDetail id="equity.usd.notional.-2m.vmNotional.-2m.imNotional.0m">
+            <instrumentId>26511_equity_usd_1,m1</instrumentId>
+            <assetHoldingsNotional>-2,000,000.00</assetHoldingsNotional>
+            <assetHoldingsVMNotional>-2,000,000.00</assetHoldingsVMNotional>
+            <assetHoldingsIMNotional>0.00</assetHoldingsIMNotional>
+            <description id="agrDes.f1">26511_f1</description>
+        </substitutionEventDetail>
+
+        <substitutionEventDetail id="bond.usd.notional.-1m.vmNotional.0m.imNotional.-1m">
+            <instrumentId>26511_bond_usd_1,m1</instrumentId>
+            <assetHoldingsNotional>-1,000,000.00</assetHoldingsNotional>
+            <assetHoldingsVMNotional>0.00</assetHoldingsVMNotional>
+            <assetHoldingsIMNotional>-1,000,000.00</assetHoldingsIMNotional>
+            <description id="agrDes.f2">26511_f2</description>
+        </substitutionEventDetail>
+
+        <substitutionEventDetail id="cash.usd.notional.-3m.vmNotional.0m.imNotional.-3m">
+            <instrumentId>CASH-USD</instrumentId>
+            <assetHoldingsNotional>-3,000,000.00</assetHoldingsNotional>
+            <assetHoldingsVMNotional>0.00</assetHoldingsVMNotional>
+            <assetHoldingsIMNotional>-3,000,000.00</assetHoldingsIMNotional>
+            <description>26511_f2</description>
+        </substitutionEventDetail>
+
+        <exposureEventDetail id="agr26511.subevent.top">
+            <action>VM Substitution Request</action>
+            <description ref="agrDes.umb"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subRequest.f1.callStatus.pendingReview">
+            <action>VM Substitution Request</action>
+            <description ref="agrDes.f1"/>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subRequest.f1.callStatus.RequestIssued">
+            <action>VM Substitution Request</action>
+            <description ref="agrDes.f1"/>
+            <callStatus>Request Issued</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subRequest.f2.callStatus.pendingReview">
+            <action>IM Substitution Request</action>
+            <description ref="agrDes.f2"/>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subRequest.f2.callStatus.RequestIssued">
+            <action>IM Substitution Request</action>
+            <description ref="agrDes.f2"/>
+            <callStatus>Request Issued</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="agr26511.subevent.top.RequestIssued">
+            <action>VM Substitution Request</action>
+            <callStatus>Request Issued</callStatus>
+            <description ref="agrDes.umb"/>
+        </exposureEventDetail>
+
+        <marginLetter id="subRequest.createSubstitutionRequestLetter">
+            <letterType>Substitution Request</letterType>
+        </marginLetter>
+
+        <bookingDetail id="subReq.firstLeg.vmNotional.2m">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <bookingNumber>1.1</bookingNumber>
+                    <vmAmount>2m</vmAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subReq.secondLeg.vmNotional.2m">
+            <instrumentSearch>
+                <instrument>
+                    <filter>CASH-USD</filter>
+                    <!--<linkText>CASH-USD</linkText>-->
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <bookingNumber>1.2</bookingNumber>
+                    <vmAmount>2m</vmAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subReq.firstLeg.imNotional.1m">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <bookingNumber>1.1</bookingNumber>
+                    <imAmount>1m</imAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subReq.secondLeg.imNotional.1m">
+            <instrumentSearch>
+                <instrument>
+                    <filter>CASH-USD</filter>
+                    <!--<linkText>CASH-USD</linkText>-->
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <bookingNumber>1.2</bookingNumber>
+                    <imAmount>1m</imAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <exposureEventDetail id="subRequest.f1.callStatus.completed">
+            <action>VM Substitution Request</action>
+            <description ref="agrDes.f1"/>
+            <callStatus>Completed</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subRequest.f2.callStatus.completed">
+            <action>IM Substitution Request</action>
+            <description ref="agrDes.f2"/>
+            <callStatus>Completed</callStatus>
+        </exposureEventDetail>
+
+        <agreementStatement id="noErrorDisplayed">
+            <warning apply="false"/>
+        </agreementStatement>
+
+
+
+    </scenarioData>
+</dataBean>

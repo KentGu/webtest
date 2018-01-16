@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/taskScheduler.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <collateralPreference id="CollateralPreferences26988.DoNotIncludeAuthorised">
+            <collateralRules>
+                <noAuthorisedStatus>true</noAuthorisedStatus>
+            </collateralRules>
+        </collateralPreference>
+
+        <agreement>
+            <!--<agreementId id="agreement.id">580</agreementId>-->
+            <externalId id="agreement.external.id">26988_3</externalId>
+        </agreement>
+
+
+        <feedAssetBooking id="feed.equity.Return.1m.authorised">
+            <!--<agreementId ref="agreement.id"/>-->
+            <external_ID ref="agreement.external.id"/>
+            <!--<counterparty ref="agreement.counterparty"/>-->
+            <assetClass ref="equity.name"/>
+            <assetType ref="equity.usd.name"/>
+            <market>qtp_Market</market>
+            <instrumentID>qtp_Equity_Instrument</instrumentID>
+            <parAmount id="feed.asset.booking.par.amnt">1000000</parAmount>
+            <!--<imParAmount></imParAmount>-->
+            <movement id="feed.asset.booking.movement">Return</movement>
+            <settlementDate>2099-09-09</settlementDate>
+            <!--<valuationPerc></valuationPerc>-->
+            <settlementStatus>Authorised</settlementStatus>
+            <!--<description></description-->
+            <!--<description2></description2>-->
+            <!--<description3></description3>-->
+            <!--<settlementComment></settlementComment>-->
+            <!--<settlementDateAbbriviated></settlementDateAbbriviated>-->
+            <!--<creationDate></creationDate>-->
+            <!--<previousTicketId></previousTicketId>-->
+            <!--<moveDescription></moveDescription>-->
+            <!--<placeOfSettlement>place</placeOfSettlement>-->
+            <!--<linkToEvent>true</linkToEvent>-->
+            <!--<Event ref="eventId.return"/>-->
+            <!--<Model></Model>-->
+            <!--<resetDate></resetDate>-->
+            <!--<market></market>-->
+            <!--<WHT></WHT>-->
+            <!--<cashMovementType></cashMovementType>-->
+            <!--<component></component>-->
+            <!--<rehypothecated>true</rehypothecated>-->
+            <!--<assetOwner id="feed.asset.booking.asset.owner" ref="org.issuer1.lname"/>-->
+            <!--<BookingUDFFields>-->
+                <!--<udfName></udfName>-->
+                <!--<udfValue></udfValue>-->
+            <!--</BookingUDFFields>-->
+            <!--<postApprovalStatus></postApprovalStatus>-->
+        </feedAssetBooking>
+
+
+        <taskSchedulerDetail id="task.feed.equity.Return.1m.authorised">
+            <type>Task Manager</type>
+            <taskName>Import Collateral Booking</taskName>
+            <additionalInfo>/home/ec2-user/Feed/AssetBooking</additionalInfo>
+        </taskSchedulerDetail>
+
+        <taskSchedulerMessage id="fail.feed.equity.Return.1m.authorised.message">
+            <!--<message>Asset Bookings: Import Asset Bookings: Imported 1 Asset Bookings from :(\S+).(\S+)</message>-->
+            <message>Import Asset Bookings: Imported 0 Asset Bookings</message>
+        </taskSchedulerMessage>
+        <variable id="file"/>
+
+        <feedStatus id="equity.authorisedBooking.cannotAdd.TickDoNotIncludeAuthorised">
+            <status>Failed</status>
+            <valuationFile ref="file"/>
+            <description>Asset Booking</description>
+            <failedFeed apply="true">
+                <total>1</total>
+                <entry>
+                    <content>ParAmount:[!asset.booking.par.amnt!], : settlementStatus is invalid for authorised booking only can be fed into system when 'Do not include Authorised' is unchecked.</content>
+                    <parameter>
+                        <parameterName>!asset.booking.par.amnt!</parameterName>
+                        <parameterValue>1000000.00</parameterValue>
+                    </parameter>
+                </entry>
+            </failedFeed>
+
+        </feedStatus>
+
+    </scenarioData>
+</dataBean>

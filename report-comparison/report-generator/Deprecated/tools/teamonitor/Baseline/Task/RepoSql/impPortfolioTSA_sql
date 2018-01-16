@@ -1,0 +1,5 @@
+pre#TSA_Before#select count(1) from colportfolioTSA where amount ='1234'
+
+post#TSA_After#select count(1) from colportfolioTSA where amount ='1234'
+
+val#1#`expr ${TSA_After} - ${TSA_Before}`

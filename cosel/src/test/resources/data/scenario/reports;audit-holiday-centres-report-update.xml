@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <holidayCentre id="audit.holiday.centre.update">
+            <holidayCentreName id="holiday.centre.name">audit_holiday_centre_name</holidayCentreName>
+            <holidayCentreDescription id="des" random="true"/>
+            <status>enabled</status>
+            <weekendDay1>Monday</weekendDay1>
+            <weekendDay2>Thursday</weekendDay2>
+            <holiday>
+                <date id="holiday.date">12/11/2016</date>
+                <description>holiday1</description>
+            </holiday>
+            <holiday>
+                <date>2016-12-11</date>
+                <description>holiday1</description>
+                <delete>true</delete>
+            </holiday>
+        </holidayCentre>
+
+
+        <auditHolidayCentresReportFilter id="audit.holiday.centre.by.name">
+            <holidayCentre ref="holiday.centre.name"/>
+            <startDate>t-1000</startDate>
+        </auditHolidayCentresReportFilter>
+        <variable id="auditReportPath"/>
+        <reportValidationRules id="audit.holiday.centre.report.rule">
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Holiday Centre</fieldName>
+                    <value>audit_holiday_centre_name</value>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Modify</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Description</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value>audit_holiday_centre_des</value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value ref="des" />
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Holiday Centre</fieldName>
+                    <value>audit_holiday_centre_name</value>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Modify</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>WeekEndDay1</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value>Saturday</value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>Monday</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Holiday Centre</fieldName>
+                    <value>audit_holiday_centre_name</value>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Modify</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>WeekEndDay2</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value>Sunday</value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>Thursday</value>
+                </field>
+            </reportValidationRule>
+
+        </reportValidationRules>
+    </scenarioData>
+</dataBean>

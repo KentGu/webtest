@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+
+        <agreement id="agr27141.otc.notnet">
+            <agreementId id="agrid">2697</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="imCall.agreementRequirement.2m.pendingReview">
+            <action>IM Call</action>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vmCall.agreementRequirement.5m.pendingReview">
+            <action>VM Call</action>
+            <agreementRequirement>5,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vmRecall.agreementRequirement.1m.pendingReview">
+            <action>VM Recall</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="imRecall.agreementRequirement.5k.pendingReview">
+            <action>IM Recall</action>
+            <agreementRequirement>5,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <agreement id="agr27141">
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+
+        <exposureEventDetail id="imCall.agreementRequirement.2m.MarginRequestIssued">
+            <action>IM Call</action>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <callStatus>Margin Request Issued</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vmCall.agreementRequirement.5m.MarginRequestIssued">
+            <action>VM Call</action>
+            <agreementRequirement>5,000,000.00</agreementRequirement>
+            <callStatus>Margin Request Issued</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vmRecall.agreementRequirement.1m.MarginRequestIssued">
+            <action>VM Recall</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Margin Request Issued</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="imRecall.agreementRequirement.5k.MarginRequestIssued">
+            <action>IM Recall</action>
+            <agreementRequirement>5,000.00</agreementRequirement>
+            <callStatus>Margin Request Issued</callStatus>
+        </exposureEventDetail>
+
+
+    </scenarioData>
+</dataBean>

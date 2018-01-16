@@ -1,0 +1,7 @@
+pre#AMENDEDAGMT_UPDATED#update colagreementheader set statusid=69 where statusid not in (66, 67, 122)
+pre#AMENDEDAGMT_NEED_APPR_BEFORE#select count(*) from colagreementheader where statusid =69
+
+post#AMENDEDAGMT_NEED_APPR_AFTER#select count(*) from  colagreementheader where statusid =69
+
+val#1#${AMENDEDAGMT_NEED_APPR_BEFORE} -gt 0
+val#2#${AMENDEDAGMT_NEED_APPR_AFTER} -eq 0

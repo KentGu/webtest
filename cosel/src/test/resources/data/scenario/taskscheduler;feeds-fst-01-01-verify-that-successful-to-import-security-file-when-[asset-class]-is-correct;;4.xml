@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/taskScheduler.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <feedSecurityTemplate id="feed.security.template.qtp.equity.usd">
+            <DRIF>2005-11-14</DRIF>
+            <ASSET_CLASS id="feed.security.template.qtp.equity.usd.asset.class" ref="equity.name"/>
+            <ASSET_TYPE id="feed.security.template.qtp.equity.usd.asset.type" ref="equity.usd.name"/>
+            <ISSUER id="feed.security.template.qtp.equity.usd.issuer" ref="org.issuer1.lname"/>
+            <MATY>2099-01-01</MATY>
+            <CCY id="feed.security.template.qtp.equity.usd.ccy" ref="ccy.usd.name"/>
+            <EXTISIN id="feed.security.template.qtp.equity.usd.instrument.id">T5668_QTP_EQUITY_USD_Instrument1_XML_TASK</EXTISIN>
+            <EXTISIN_TYPE id="feed.security.template.qtp.equity.usd.instrument.id.type">CUSIP</EXTISIN_TYPE>
+            <INSTRUMENT ref="feed.security.template.qtp.equity.usd.instrument.id"/>
+            <MARKET id="feed.security.template.qtp.equity.usd.market">automation</MARKET>
+            <COUNTRY_OF_ISSUE id="feed.security.template.qtp.equity.usd.country.of.issue">EU</COUNTRY_OF_ISSUE>
+            <PRICE_SOURCE id="feed.security.template.qtp.equity.usd.price.source.name">Default</PRICE_SOURCE>
+            <EV_PRICE id="feed.security.template.qtp.equity.usd.clean.price">6</EV_PRICE>
+            <PRICE_LEVEL>Mid</PRICE_LEVEL>
+            <!--<UND_COUPON id="feed.security.template.qtp.equity.usd.coupon.rate">1</UND_COUPON>-->
+            <!--<FREQUENCY>Semi-Annually</FREQUENCY>-->
+            <!--<ACCRUAL_BASIS>Act/Act</ACCRUAL_BASIS>-->
+            <!--<NEXT_COUPON_DATE>2099-01-01</NEXT_COUPON_DATE>-->
+            <ACC_DDAT id="feed.security.template.qtp.equity.usd.coupon.accrual">2</ACC_DDAT>
+            <!--<LAST_COUPON_DATE>2012-01-01</LAST_COUPON_DATE>-->
+            <!--<INFLAT_RATIO id="feed.security.template.qtp.equity.usd.factor">3</INFLAT_RATIO>-->
+            <PRICE_FACTOR id="feed.security.template.qtp.equity.usd.price.factor">4</PRICE_FACTOR>
+            <RECORD_DATE>2012-01-01</RECORD_DATE>
+            <ISSUE_DATE>2029-06-28</ISSUE_DATE>
+            <EX_DIV_DATE>2012-01-01</EX_DIV_DATE>
+            <!--<RATING1 id="feed.security.template.qtp.equity.usd.rating1">A+</RATING1>-->
+            <!--<RATING2 id="feed.security.template.qtp.equity.usd.rating2">Aa1</RATING2>-->
+            <!--<RATING3 id="feed.security.template.qtp.equity.usd.rating3">A</RATING3>-->
+            <finra4210MinHaircut id="feed.security.template.qtp.equity.usd.fin.min.haircut">5</finra4210MinHaircut>
+            <!--<OUTSTANDING_ISSUANCE id="feed.security.template.qtp.equity.usd.outstanding.issuance">2</OUTSTANDING_ISSUANCE>-->
+            <NOTATION id="feed.security.template.qtp.equity.usd.notation">notation</NOTATION>
+            <!--<MININUM_TRADABLE_AMNT id="feed.security.template.qtp.equity.usd.min.trade.amnt">5000</MININUM_TRADABLE_AMNT>-->
+            <!--<MULTIPLE_TRADABLE_AMNT id="feed.security.template.qtp.equity.usd.multiple.trade.amnt">10000</MULTIPLE_TRADABLE_AMNT>-->
+            <TRADED_INTEREST id="feed.security.template.qtp.equity.usd.trade.interest">1</TRADED_INTEREST>
+            <ADDITIONALINFO1 id="feed.security.template.qtp.equity.usd.add.info1">info1</ADDITIONALINFO1>
+            <ADDITIONALINFO2 id="feed.security.template.qtp.equity.usd.add.info2">info2</ADDITIONALINFO2>
+            <ADDITIONALINFO3 id="feed.security.template.qtp.equity.usd.add.info3">info3</ADDITIONALINFO3>
+            <ADDITIONALINFO4 id="feed.security.template.qtp.equity.usd.add.info4">info4</ADDITIONALINFO4>
+            <INUSE>true</INUSE>
+        </feedSecurityTemplate>
+
+        <feedStatus id="feed.security.template.qtp.equity.usd.status">
+            <status>Successful</status>
+            <valuationFile ref="file.path"/>
+            <description>Security Template</description>
+            <successfulFeed>
+                <total>1</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <securitySearch id="feed.security.template.qtp.equity.usd.search">
+            <instrumentId>
+                <filter ref="feed.security.template.qtp.equity.usd.instrument.id"/>
+            </instrumentId>
+        </securitySearch>
+
+        <securitySearchResult id="feed.security.template.qtp.equity.usd.search.result">
+            <assetClass ref="feed.security.template.qtp.equity.usd.asset.class"/>
+            <assetType ref="feed.security.template.qtp.equity.usd.asset.type"/>
+            <market ref="feed.security.template.qtp.equity.usd.market"/>
+            <instrument ref="feed.security.template.qtp.equity.usd.instrument.id"/>
+            <currency ref="feed.security.template.qtp.equity.usd.ccy"/>
+            <issuer ref="feed.security.template.qtp.equity.usd.issuer"/>
+            <description ref="feed.security.template.qtp.equity.usd.instrument.id"/>
+        </securitySearchResult>
+
+        <instrument id="check.feed.security.template.qtp.equity.usd">
+            <assetClass ref="feed.security.template.qtp.equity.usd.asset.class"/>
+            <assetType ref="feed.security.template.qtp.equity.usd.asset.type"/>
+            <instrumentId>
+                <type>CUSIP</type>
+                <value ref="feed.security.template.qtp.equity.usd.instrument.id"/>
+            </instrumentId>
+            <market ref="feed.security.template.qtp.equity.usd.market"/>
+            <maturityDate>1/1/2099</maturityDate>
+            <description ref="feed.security.template.qtp.equity.usd.instrument.id"/>
+            <issuer>
+                <linkText ref="feed.security.template.qtp.equity.usd.issuer"/>
+            </issuer>
+            <currencyOfDenomination ref="feed.security.template.qtp.equity.usd.ccy"/>
+            <countryOfIssue ref="ctr.eu.desc"/>
+            <priceSource>
+                <priceSourceName ref="feed.security.template.qtp.equity.usd.price.source.name"/>
+                <!--<cleanPrice ref="feed.security.template.qtp.equity.usd.clean.price"/>-->
+                <dirtyPrice>8</dirtyPrice>
+                <priceLevel>Mid</priceLevel>
+                <priceDate>11/14/2005</priceDate>
+            </priceSource>
+            <!--<couponRate ref="feed.security.template.qtp.equity.usd.coupon.rate"/>-->
+            <!--<couponFrequency>Semi-annually</couponFrequency>-->
+            <!--<accrualBasis>Act/Act</accrualBasis>-->
+            <!--<nextCouponDate>1/1/2099</nextCouponDate>-->
+            <!--<couponAccrual ref="feed.security.template.qtp.equity.usd.coupon.accrual"/>-->
+            <!--<factor ref="feed.security.template.qtp.equity.usd.factor"/>-->
+            <priceFactor ref="feed.security.template.qtp.equity.usd.price.factor"/>
+            <recordDate>1/1/2012</recordDate>
+            <issueDate>6/28/2029</issueDate>
+            <exDivDate>1/1/2012</exDivDate>
+            <finra4210MinHaircut ref="feed.security.template.qtp.equity.usd.fin.min.haircut"/>
+            <!--<issueRating>-->
+            <!--<agency ref="org.rating.agency.sandp.name"/>-->
+            <!--<rating ref="feed.security.template.qtp.equity.usd.rating3"/>-->
+            <!--</issueRating>-->
+            <!--<issueRating>-->
+            <!--<agency ref="org.rating.agency.moodys.name"/>-->
+            <!--<rating ref="feed.security.template.qtp.equity.usd.rating2"/>-->
+            <!--</issueRating>-->
+            <!--<issueRating>-->
+            <!--<agency ref="org.rating.agency.fitch.name"/>-->
+            <!--<rating ref="feed.security.template.qtp.equity.usd.rating1"/>-->
+            <!--</issueRating>-->
+            <additionalInfo1 ref="feed.security.template.qtp.equity.usd.add.info1"/>
+            <additionalInfo2 ref="feed.security.template.qtp.equity.usd.add.info2"/>
+            <additionalInfo3 ref="feed.security.template.qtp.equity.usd.add.info3"/>
+            <additionalInfo4 ref="feed.security.template.qtp.equity.usd.add.info4"/>
+            <!--<minimumTradableAmount ref="feed.security.template.qtp.equity.usd.min.trade.amnt"/>-->
+            <!--<multipleTradableAmount ref="feed.security.template.qtp.equity.usd.multiple.trade.amnt"/>-->
+            <notation ref="feed.security.template.qtp.equity.usd.notation"/>
+            <tradedInterest ref="feed.security.template.qtp.equity.usd.trade.interest"/>
+            <!--<outstandingIssuance ref="feed.security.template.qtp.equity.usd.outstanding.issuance"/>-->
+        </instrument>
+
+        <taskSchedulerDetail id="task.feed.security.template.qtp.equity.usd">
+            <type>Task Manager</type>
+            <taskName>Import Assets</taskName>
+            <additionalInfo>/home/ec2-user/Feed/FeedSecurityTemplate</additionalInfo>
+        </taskSchedulerDetail>
+
+        <variable id="file.path"/>
+
+        <taskSchedulerMessage id="task.feed.security.template.qtp.equity.usd.message">
+            <message>Market Data: Import Security Template: Imported 1 assets from :(\S+).xml</message>
+        </taskSchedulerMessage>
+    </scenarioData>
+</dataBean>

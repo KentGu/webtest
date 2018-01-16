@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/taskScheduler.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <agreement>
+            <agreementDescription id="agreement.etf.description">T5185_ETF_Agreement</agreementDescription>
+            <!--<externalId id="agreement.etf.external.id">T5185_ETF_Agreement_External_ID</externalId>-->
+            <agreementId id="agreement.etf.agreement.id">532</agreementId>
+        </agreement>
+
+        <feedNAV id="feed.nav.etf.agreement">
+            <agreementId ref="agreement.etf.agreement.id"/>
+            <legal_id ref="agreement.etf.external.id"/>
+            <principalNAV id="feed.nav.etf.agreement.principal.nav">888</principalNAV>
+            <principalCCy id="feed.nav.etf.agreement.principal.ccy" ref="ccy.usd.name"/>
+            <cptyNAV id="feed.nav.etf.agreement.cpty.nav">777</cptyNAV>
+            <cptyCCy id="feed.nav.etf.agreement.cpty.ccy" ref="ccy.gbp.name"/>
+        </feedNAV>
+
+        <feedStatus id="feed.nav.etf.agreement.status">
+            <status>Successful</status>
+            <description>NAV</description>
+            <valuationFile ref="file.path"/>
+            <successfulFeed>
+                <total>1</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <agreementSearch id="feed.nav.etf.agreement.search">
+            <systemId ref="agreement.etf.agreement.id"/>
+            <!--<externalId>-->
+                <!--<filter ref="agreement.etf.external.id"/>-->
+                <!--<linkText ref="agreement.etf.external.id"/>-->
+            <!--</externalId>-->
+            <description>
+                <filter ref="agreement.etf.description"/>
+                <linkText ref="agreement.etf.description"/>
+            </description>
+        </agreementSearch>
+
+        <agreementSearchResult id="feed.nav.etf.agreement.search.result">
+            <agreementId ref="agreement.etf.agreement.id"/>
+            <description ref="agreement.etf.description"/>
+            <!--<externalId ref="agreement.etf.external.id"/>-->
+        </agreementSearchResult>
+
+        <agreementSummary id="check.feed.nav.etf.agreement">
+            <documentationDetails>
+                <principalNAV>888.00 USD</principalNAV>
+                <counterpartyNAV>777.00 GBP</counterpartyNAV>
+            </documentationDetails>
+        </agreementSummary>
+
+        <taskSchedulerDetail id="task.feed.nav">
+            <type>Task Manager</type>
+            <taskName>Import NAV</taskName>
+            <additionalInfo id="task.feed.agreement.server.path">/home/ec2-user/Feed/FeedNAV</additionalInfo>
+        </taskSchedulerDetail>
+
+        <variable id="file.path"/>
+
+        <taskSchedulerMessage id="task.feed.nav.message">
+            <message>Import NAV: Imported 1 NAV from :(\S+).(\S+)</message>
+        </taskSchedulerMessage>
+    </scenarioData>
+</dataBean>

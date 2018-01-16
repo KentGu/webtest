@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/taskScheduler.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <agreement id="otc.notnet.agr1">
+            <principal>
+                <filter id="otc.agr1.principal">QTPPrincipal</filter>
+                <linkText ref="otc.agr1.principal"/>
+            </principal>
+            <counterparty>
+                <filter id="otc.agr1.counterparty">QTPCounterparty</filter>
+                <linkText ref="otc.agr1.counterparty"/>
+            </counterparty>
+            <agreementDescription id="otc.agr1.desc">T28216_FeedAgreement1_TS</agreementDescription>
+            <externalId id="otc.agr1.externalid" ref="otc.agr1.desc"/>
+            <vmCallFrequency>
+                <legalReviewFrequency id="otc.agr1.vm.legalReviewFrequency">Quarterly</legalReviewFrequency>
+                <adjustType id="otc.agr1.vm.adjustType">RollForward</adjustType>
+                <frequencyStart id="otc.agr1.vm.frequencyStart">11/27/2013</frequencyStart>
+                <notificationTime id="otc.agr1.vm.notificationTime">10.00</notificationTime>
+                <resolutionTime id="otc.agr1.vm.resultionTime">13.00</resolutionTime>
+                <resolutionTimeType id="otc.agr1.vm.resolutionType">Next Day</resolutionTimeType>
+            </vmCallFrequency>
+            <imCallFrequency>
+                <legalReviewFrequency id="otc.agr1.im.legalReviewFrequency">Quarterly</legalReviewFrequency>
+                <adjustType id="otc.agr1.im.adjustType">RollBackward</adjustType>
+                <frequencyStart id="otc.agr1.im.frequencyStart">11/28/2013</frequencyStart>
+                <notificationTime id="otc.agr1.im.notificationTime">10.15</notificationTime>
+                <resolutionTime id="otc.agr1.im.resultionTime">14.00</resolutionTime>
+                <resolutionTimeType id="otc.agr1.im.resolutionType">Same Day</resolutionTimeType>
+            </imCallFrequency>
+            <agreementId id="otc.agr1.id">542</agreementId>
+        </agreement>
+
+        <agreement id="otc.notnet.agr2">
+            <principal>
+                <filter id="otc.agr2.principal">QTPPrincipal</filter>
+                <linkText ref="otc.agr2.principal"/>
+            </principal>
+            <counterparty>
+                <filter id="otc.agr2.counterparty">QTPCounterparty</filter>
+                <linkText ref="otc.agr2.counterparty"/>
+            </counterparty>
+            <agreementDescription id="otc.agr2.desc">T28216_FeedAgreement2_TS</agreementDescription>
+            <externalId id="otc.agr2.externalid" ref="otc.agr2.desc"/>
+            <vmCallFrequency>
+                <legalReviewFrequency>Quarterly</legalReviewFrequency>
+                <adjustType>RollForward</adjustType>
+                <frequencyStart>11/27/2013</frequencyStart>
+                <notificationTime>10.00</notificationTime>
+                <resolutionTime>13.00</resolutionTime>
+                <resolutionTimeType>Next Day</resolutionTimeType>
+            </vmCallFrequency>
+            <imCallFrequency>
+                <legalReviewFrequency>Quarterly</legalReviewFrequency>
+                <adjustType>RollBackward</adjustType>
+                <frequencyStart>11/28/2013</frequencyStart>
+                <notificationTime>10.15</notificationTime>
+                <resolutionTime>14.00</resolutionTime>
+                <resolutionTimeType>Same Day</resolutionTimeType>
+            </imCallFrequency>
+            <agreementId id="otc.agr2.id">543</agreementId>
+        </agreement>
+
+        <agreement id="otc.notnet.agr3">
+            <principal>
+                <filter id="otc.agr3.principal">QTPPrincipal</filter>
+                <linkText ref="otc.agr3.principal"/>
+            </principal>
+            <counterparty>
+                <filter id="otc.agr3.counterparty">QTPCounterparty</filter>
+                <linkText ref="otc.agr3.counterparty"/>
+            </counterparty>
+            <agreementDescription id="otc.agr3.desc">T28216_FeedAgreement3_TS</agreementDescription>
+            <externalId id="otc.agr3.externalid" ref="otc.agr3.desc"/>
+            <vmCallFrequency>
+                <legalReviewFrequency id="otc.agr3.vm.legalReviewFrequency">Quarterly</legalReviewFrequency>
+                <adjustType id="otc.agr3.vm.adjustType">RollForward</adjustType>
+                <frequencyStart id="otc.agr3.vm.frequencyStart">11/27/2013</frequencyStart>
+                <notificationTime id="otc.agr3.vm.notificationTime">10.00</notificationTime>
+                <resolutionTime id="otc.agr3.vm.resolutionTime">13.00</resolutionTime>
+                <resolutionTimeType id="otc.agr3.vm.resolutionTimeType">Next Day</resolutionTimeType>
+            </vmCallFrequency>
+            <imCallFrequency>
+                <legalReviewFrequency id="otc.agr3.im.legalReviewFrequency">Quarterly</legalReviewFrequency>
+                <adjustType id="otc.agr3.im.adjustType">RollBackward</adjustType>
+                <frequencyStart id="otc.agr3.im.frequencyStart">11/28/2013</frequencyStart>
+                <notificationTime id="otc.agr3.im.notificationTime">10.15</notificationTime>
+                <resolutionTime id="otc.agr3.im.resolutionTime">14.00</resolutionTime>
+                <resolutionTimeType id="otc.agr3.im.resolutionTimeType">Same Day</resolutionTimeType>
+            </imCallFrequency>
+            <agreementId id="otc.agr3.id">544</agreementId>
+        </agreement>
+
+        <agreement id="otc.notnet.agr4">
+            <principal>
+                <filter id="otc.agr4.principal">QTPPrincipal</filter>
+                <linkText ref="otc.agr4.principal"/>
+            </principal>
+            <counterparty>
+                <filter id="otc.agr4.counterparty">QTPCounterparty</filter>
+                <linkText ref="otc.agr4.counterparty"/>
+            </counterparty>
+            <agreementDescription id="otc.agr4.desc">T28216_FeedAgreement4_TS</agreementDescription>
+            <externalId id="otc.agr4.externalid" ref="otc.agr4.desc"/>
+            <vmCallFrequency>
+                <legalReviewFrequency id="otc.agr4.vm.legalReviewFrequency">Quarterly</legalReviewFrequency>
+                <adjustType id="otc.agr4.vm.adjustType">RollForward</adjustType>
+                <frequencyStart id="otc.agr4.vm.frequencyStart">11/27/2013</frequencyStart>
+                <notificationTime id="otc.agr4.vm.notificationTime">10.00</notificationTime>
+                <resolutionTime id="otc.agr4.vm.resolutionTime">13.00</resolutionTime>
+                <resolutionTimeType id="otc.agr4.vm.resolutionTimeType">Next Day</resolutionTimeType>
+            </vmCallFrequency>
+            <imCallFrequency>
+                <legalReviewFrequency id="otc.agr4.im.legalReviewFrequency">Quarterly</legalReviewFrequency>
+                <adjustType id="otc.agr4.im.adjustType">RollBackward</adjustType>
+                <frequencyStart id="otc.agr4.im.frequencyStart">11/28/2013</frequencyStart>
+                <notificationTime id="otc.agr4.im.notificationTime">10.15</notificationTime>
+                <resolutionTime id="otc.agr4.im.resolutionTime">14.00</resolutionTime>
+                <resolutionTimeType id="otc.agr4.im.resolutionTimeType">Same Day</resolutionTimeType>
+            </imCallFrequency>
+            <agreementId id="otc.agr4.id">545</agreementId>
+        </agreement>
+
+        <agreementSearch id="otc.notnet.agr1.search">
+            <systemId ref="otc.agr1.id"/>
+        </agreementSearch>
+
+        <agreementSearchResult id="otc.notnet.agr1.search.result">
+            <agreementId ref="otc.agr1.id"/>
+        </agreementSearchResult>
+
+        <agreementSearch id="otc.notnet.agr2.search">
+            <systemId ref="otc.agr2.id"/>
+        </agreementSearch>
+
+        <agreementSearchResult id="otc.notnet.agr2.search.result">
+            <agreementId ref="otc.agr2.id"/>
+        </agreementSearchResult>
+
+        <agreementSearch id="otc.notnet.agr3.search">
+            <systemId ref="otc.agr3.id"/>
+        </agreementSearch>
+
+        <agreementSearchResult id="otc.notnet.agr3.search.result">
+            <agreementId ref="otc.agr3.id"/>
+        </agreementSearchResult>
+
+        <agreementSearch id="otc.notnet.agr4.search">
+            <systemId ref="otc.agr4.id"/>
+        </agreementSearch>
+
+        <agreementSearchResult id="otc.notnet.agr4.search.result">
+            <agreementId ref="otc.agr4.id"/>
+        </agreementSearchResult>
+
+        <feedAgreement id="feed.agr1">
+            <legal_id ref="otc.agr1.externalid"/>
+            <principal ref="org.p1.lname"/>
+            <counterpartycode ref="org.c1.lname"/>
+            <netting_MTM_And_IA>Net</netting_MTM_And_IA>
+            <im_frequency random="true"/>
+            <im_non_workingday_adjusttype random="true"/>
+            <im_frequency_start random="true"/>
+            <im_notification_time random="true"/>
+            <im_resolution_time random="true"/>
+            <im_resolution_day random="true"/>
+            <applyOrgCL>false</applyOrgCL>
+        </feedAgreement>
+
+        <feedAgreement id="feed.agr2">
+            <legal_id ref="otc.agr2.externalid"/>
+            <principal ref="org.p1.lname"/>
+            <counterpartycode ref="org.c1.lname"/>
+            <netting_MTM_And_IA>Net</netting_MTM_And_IA>
+            <frequency id="feed.agr2.frequency">Quarterly</frequency>
+            <non_workingday_adjusttype id="feed.agr2.nonWorkingdayAdjustType">RollBackward</non_workingday_adjusttype>
+            <frequency_start id="feed.agr2.frequencyStart">2014-11-27</frequency_start>
+            <notification_time id="feed.agr2.notificationTime">18.00</notification_time>
+            <resolution_time id="feed.agr2.resolutionTime">12.00</resolution_time>
+            <resolution_day id="feed.agr2.resolutionDay">same</resolution_day>
+            <im_frequency>Quarterly</im_frequency>
+            <im_non_workingday_adjusttype>RollBackward</im_non_workingday_adjusttype>
+            <im_frequency_start>2014-11-27</im_frequency_start>
+            <im_notification_time>18.00</im_notification_time>
+            <im_resolution_time>12.00</im_resolution_time>
+            <im_resolution_day>same</im_resolution_day>
+            <applyOrgCL>false</applyOrgCL>
+        </feedAgreement>
+
+        <feedAgreement id="feed.agr3">
+            <legal_id ref="otc.agr3.externalid"/>
+            <principal ref="org.p1.lname"/>
+            <counterpartycode ref="org.c1.lname"/>
+            <netting_MTM_And_IA>Net</netting_MTM_And_IA>
+            <frequency random="true"/>
+            <non_workingday_adjusttype random="true"/>
+            <frequency_start random="true"/>
+            <notification_time random="true"/>
+            <resolution_time random="true"/>
+            <resolution_day random="true"/>
+            <applyOrgCL>false</applyOrgCL>
+        </feedAgreement>
+
+        <feedAgreement id="feed.agr4">
+            <legal_id ref="otc.agr4.externalid"/>
+            <principal ref="org.p1.lname"/>
+            <counterpartycode ref="org.c1.lname"/>
+            <netting_MTM_And_IA>Net</netting_MTM_And_IA>
+            <frequency>Monthly</frequency>
+            <non_workingday_adjusttype>RollBackward</non_workingday_adjusttype>
+            <frequency_start>2014-02-30</frequency_start>
+            <notification_time>25.00</notification_time>
+            <resolution_time>26.00</resolution_time>
+            <resolution_day>Next Two Days</resolution_day>
+            <applyOrgCL>false</applyOrgCL>
+        </feedAgreement>
+
+        <agreementSummary id="otc.notnet.agr1.summary">
+            <valuationFrequencyAndCallScheduleDetails>
+                <legalReviewFrequency>
+                    <legalReviewFrequency ref="otc.agr1.vm.legalReviewFrequency"/>
+                    <rollForward>applied</rollForward>
+                    <frequencyStart ref="otc.agr1.vm.frequencyStart"/>
+                </legalReviewFrequency>
+                <notificationTime ref="otc.agr1.vm.notificationTime"/>
+                <resolutionTime ref="otc.agr1.vm.resultionTime"/>
+            </valuationFrequencyAndCallScheduleDetails>
+        </agreementSummary>
+
+        <agreementSummary id="otc.notnet.agr2.summary">
+            <valuationFrequencyAndCallScheduleDetails>
+                <legalReviewFrequency>
+                    <legalReviewFrequency ref="feed.agr2.frequency"/>
+                    <rollBackward>applied</rollBackward>
+                    <!--<frequencyStart ref="feed.agr2.frequencyStart"/>-->
+                    <frequencyStart>11/27/2014</frequencyStart>
+                </legalReviewFrequency>
+                <notificationTime ref="feed.agr2.notificationTime"/>
+                <resolutionTime ref="feed.agr2.resolutionTime"/>
+            </valuationFrequencyAndCallScheduleDetails>
+        </agreementSummary>
+
+        <agreementSummary id="otc.notnet.agr3.summary">
+            <valuationFrequencyAndCallScheduleDetails>
+                <vmLegalReviewFrequency>
+                    <legalReviewFrequency ref="otc.agr3.vm.legalReviewFrequency"/>
+                    <rollForward>applied</rollForward>
+                    <frequencyStart ref="otc.agr3.vm.frequencyStart"/>
+                </vmLegalReviewFrequency>
+                <vmNotificationTime ref="otc.agr3.vm.notificationTime"/>
+                <vmResolutionTime ref="otc.agr3.vm.resolutionTime"/>
+                <imLegalReviewFrequency>
+                    <legalReviewFrequency ref="otc.agr3.im.legalReviewFrequency"/>
+                    <rollBackward>applied</rollBackward>
+                    <frequencyStart ref="otc.agr3.im.frequencyStart"/>
+                </imLegalReviewFrequency>
+                <imNotificationTime ref="otc.agr3.im.notificationTime"/>
+                <imResolutionTime ref="otc.agr3.im.resolutionTim"/>
+            </valuationFrequencyAndCallScheduleDetails>
+        </agreementSummary>
+
+        <agreementSummary id="otc.notnet.agr4.summary">
+            <valuationFrequencyAndCallScheduleDetails>
+                <vmLegalReviewFrequency>
+                    <legalReviewFrequency ref="otc.agr4.vm.legalReviewFrequency"/>
+                    <rollForward>applied</rollForward>
+                    <frequencyStart ref="otc.agr4.vm.frequencyStart"/>
+                </vmLegalReviewFrequency>
+                <vmNotificationTime ref="otc.agr4.vm.notificationTime"/>
+                <vmResolutionTime ref="otc.agr4.vm.resolutionTime"/>
+
+                <imLegalReviewFrequency>
+                    <legalReviewFrequency ref="otc.agr4.im.legalReviewFrequency"/>
+                    <rollBackward>applied</rollBackward>
+                    <frequencyStart ref="otc.agr4.im.frequencyStart"/>
+                </imLegalReviewFrequency>
+                <imNotificationTime ref="otc.agr4.im.notificationTime"/>
+                <imResolutionTime ref="otc.agr4.im.resolutionTime"/>
+            </valuationFrequencyAndCallScheduleDetails>
+        </agreementSummary>
+
+        <taskSchedulerDetail id="task.feed.agreement">
+            <type>Task Manager</type>
+            <taskName>Import Agreements</taskName>
+            <additionalInfo>/home/ec2-user/Feed/FeedAgreement</additionalInfo>
+        </taskSchedulerDetail>
+
+        <taskSchedulerMessage id="imported.2.agreements">
+            <message>Agreements: Import agreements: Imported 2 agreements from :(\S+).xml( \(Warning message appeared, please look up feed status for details\))?</message>
+        </taskSchedulerMessage>
+
+        <variable id="file.name"/>
+
+        <feedStatus id="feed.status.failed">
+            <systemName>QTP</systemName>
+            <status>Failed</status>
+            <valuationFile ref="file.name"/>
+            <description>Agreements</description>
+            <successfulFeed apply="true">
+                <importType>Agreements</importType>
+                <valuationFile ref="file.name"/>
+                <total>2</total>
+                <entry>
+                    <content>Agreement Description:[!agrDesc!] :Adjust Type is not specified</content>
+                    <parameter>
+                        <parameterName>!agrDesc!</parameterName>
+                        <parameterValue ref="otc.agr1.desc"/>
+                    </parameter>
+                </entry>
+                <entry>
+                    <content>Agreement Description:[!agrDesc!] :Frequency Start is not specified</content>
+                    <parameter>
+                        <parameterName>!agrDesc!</parameterName>
+                        <parameterValue ref="otc.agr1.desc"/>
+                    </parameter>
+                </entry>
+                <entry>
+                    <content>Agreement Description:[!agrDesc!] :Legal Review Frequency is not specified</content>
+                    <parameter>
+                        <parameterName>!agrDesc!</parameterName>
+                        <parameterValue ref="otc.agr1.desc"/>
+                    </parameter>
+                </entry>
+                <entry>
+                    <content>Agreement Description:[!agrDesc!] :Notification Time is not specified</content>
+                    <parameter>
+                        <parameterName>!agrDesc!</parameterName>
+                        <parameterValue ref="otc.agr1.desc"/>
+                    </parameter>
+                </entry>
+                <entry>
+                    <content>Agreement Description:[!agrDesc!] :Resolution Day is not specified</content>
+                    <parameter>
+                        <parameterName>!agrDesc!</parameterName>
+                        <parameterValue ref="otc.agr1.desc"/>
+                    </parameter>
+                </entry>
+                <entry>
+                    <content>Agreement Description:[!agrDesc!] :Resolution Time is not specified</content>
+                    <parameter>
+                        <parameterName>!agrDesc!</parameterName>
+                        <parameterValue ref="otc.agr1.desc"/>
+                    </parameter>
+                </entry>
+            </successfulFeed>
+            <failedFeed apply="true">
+                <importType>Agreements</importType>
+                <valuationFile ref="feed.result.1.file"/>
+                <total>2</total>
+                <entry>
+                    <content>Agreement Description:[!agrDesc!] :Legal Review Frequency is invalid</content>
+                    <parameter>
+                        <parameterName>!agrDesc!</parameterName>
+                        <parameterValue ref="otc.agr3.desc"/>
+                    </parameter>
+                </entry>
+                <entry>
+                    <content>Agreement Description:[!agrDesc!] :Legal Review Frequency is invalid</content>
+                    <parameter>
+                        <parameterName>!agrDesc!</parameterName>
+                        <parameterValue ref="otc.agr4.desc"/>
+                    </parameter>
+                </entry>
+                <entry>
+                    <content>Agreement Description:[!agrDesc!] :Adjust Type is invalid</content>
+                    <parameter>
+                        <parameterName>!agrDesc!</parameterName>
+                        <parameterValue ref="otc.agr3.desc"/>
+                    </parameter>
+                </entry>
+                <entry>
+                    <content>Agreement Description:[!agrDesc!] :Adjust Type is invalid</content>
+                    <parameter>
+                        <parameterName>!agrDesc!</parameterName>
+                        <parameterValue ref="otc.agr4.desc"/>
+                    </parameter>
+                </entry>
+                <entry>
+                    <content>Agreement Description:[!agrDesc!] :Frequency Start is invalid</content>
+                    <parameter>
+                        <parameterName>!agrDesc!</parameterName>
+                        <parameterValue ref="otc.agr3.desc"/>
+                    </parameter>
+                </entry>
+                <entry>
+                    <content>Agreement Description:[!agrDesc!] :Frequency Start is invalid</content>
+                    <parameter>
+                        <parameterName>!agrDesc!</parameterName>
+                        <parameterValue ref="otc.agr4.desc"/>
+                    </parameter>
+                </entry>
+                <entry>
+                    <content>Agreement Description:[!agrDesc!] : Notification Time is invalid</content>
+                    <parameter>
+                        <parameterName>!agrDesc!</parameterName>
+                        <parameterValue ref="otc.agr3.desc"/>
+                    </parameter>
+                </entry>
+                <entry>
+                    <content>Agreement Description:[!agrDesc!] : Notification Time is invalid</content>
+                    <parameter>
+                        <parameterName>!agrDesc!</parameterName>
+                        <parameterValue ref="otc.agr4.desc"/>
+                    </parameter>
+                </entry>
+                <entry>
+                    <content>Agreement Description:[!agrDesc!] :Resolution Time is invalid</content>
+                    <parameter>
+                        <parameterName>!agrDesc!</parameterName>
+                        <parameterValue ref="otc.agr3.desc"/>
+                    </parameter>
+                </entry>
+                <entry>
+                    <content>Agreement Description:[!agrDesc!] :Resolution Time is invalid</content>
+                    <parameter>
+                        <parameterName>!agrDesc!</parameterName>
+                        <parameterValue ref="otc.agr4.desc"/>
+                    </parameter>
+                </entry>
+                <entry>
+                    <content>Agreement Description:[!agrDesc!] :Resolution Day is invalid</content>
+                    <parameter>
+                        <parameterName>!agrDesc!</parameterName>
+                        <parameterValue ref="otc.agr3.desc"/>
+                    </parameter>
+                </entry>
+                <entry>
+                    <content>Agreement Description:[!agrDesc!] :Resolution Day is invalid</content>
+                    <parameter>
+                        <parameterName>!agrDesc!</parameterName>
+                        <parameterValue ref="otc.agr4.desc"/>
+                    </parameter>
+                </entry>
+            </failedFeed>
+        </feedStatus>
+    </scenarioData>
+</dataBean>

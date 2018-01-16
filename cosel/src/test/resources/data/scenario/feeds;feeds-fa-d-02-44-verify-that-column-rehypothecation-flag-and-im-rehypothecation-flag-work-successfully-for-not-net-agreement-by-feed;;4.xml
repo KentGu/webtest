@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/feeds.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <feedAgreement id="feed.otc.not.net.agreement.rehyp.flag.no">
+            <principal ref="org.p1.lname"/>
+            <counterpartycode ref="org.c1.lname"/>
+            <businessLine>OTC</businessLine>
+            <agreement_description id="feed.otc.not.net.agreement.rehyp.flag.no.desc" random="true" prefix="feed_agr1_"/>
+            <region ref="region.test1.name"/>
+            <legal_id id="feed.otc.not.net.agreement.rehyp.flag.no.external.id" random="true"/>
+            <master_documentation ref="master.documentation.1987.isda.master.name"/>
+            <credit_support_documentation ref="credit.documentation.margin.provisions.name"/>
+            <netting_MTM_And_IA>Not-Net</netting_MTM_And_IA>
+            <reciprocity id="feed.otc.not.net.agreement.rehyp.flag.no.reciprocity">Bilateral</reciprocity>
+            <rehypothecation_flag>N</rehypothecation_flag>
+            <im_rehypothecation_flag>N</im_rehypothecation_flag>
+            <rehypothecation>Bilateral</rehypothecation>
+            <imRehypothecation id="feed.otc.not.net.agreement.rehyp.flag.no.imRehypothecation">Unilateral in favour of Principal</imRehypothecation>
+            <base_currency ref="ccy.usd.name"/>
+            <original_date random="true" variation="t"/>
+            <im_frequency>Daily</im_frequency>
+            <frequency>Daily</frequency>
+            <im_frequency_start random="true" variation="t"/>
+            <frequency_start random="true" variation="t"/>
+            <im_notification_time>13.00</im_notification_time>
+            <notification_time>13.00</notification_time>
+            <im_resolution_time>10.00</im_resolution_time>
+            <resolution_time>10.00</resolution_time>
+            <im_resolution_day>same</im_resolution_day>
+            <resolution_day>same</resolution_day>
+            <time_zone ref="system.staticData.timeZone.cet.name"/>
+            <holiday_centre ref="hc.test1.name"/>
+            <im_non_workingday_adjusttype>None</im_non_workingday_adjusttype>
+            <non_workingday_adjusttype>None</non_workingday_adjusttype>
+            <product>
+                <productName>QTP</productName>
+                <settlementPeriod>T</settlementPeriod>
+            </product>
+            <asset>
+                <assetName ref="bond.usd.name"/>
+                <applicableType></applicableType>
+                <applicableParty></applicableParty>
+                <settlementDateAbbriviated>T</settlementDateAbbriviated>
+            </asset>
+            <rounding_delivery>Up</rounding_delivery>
+            <rounding_recall>Down</rounding_recall>
+            <settlementInstructions>
+                <settlementInstruction>
+                    <bookingType>VM</bookingType>
+                    <direction>Call/Return</direction>
+                    <bucket>VM Call/Return</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>VM</bookingType>
+                    <direction>Delivery/Recall</direction>
+                    <bucket>VM Recall/Delivery</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>IM</bookingType>
+                    <direction>Call/Return</direction>
+                    <bucket>IM Call/Return</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>IM</bookingType>
+                    <direction>Delivery/Recall</direction>
+                    <bucket>IM Recall/Delivery</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>VM Interest</bookingType>
+                    <direction>Pay</direction>
+                    <bucket>Pay</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>VM Interest</bookingType>
+                    <direction>Receive</direction>
+                    <bucket>Receive</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>IM Interest</bookingType>
+                    <direction>Pay</direction>
+                    <bucket>Pay</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>IM Interest</bookingType>
+                    <direction>Receive</direction>
+                    <bucket>Receive</bucket>
+                </settlementInstruction>
+            </settlementInstructions>
+            <distMedium>Email</distMedium>
+            <applyOrgCL>false</applyOrgCL>
+        </feedAgreement>
+
+        <agreementSearch id="feed.otc.not.net.agreement.rehyp.flag.no.search">
+            <description>
+                <filter ref="feed.otc.not.net.agreement.rehyp.flag.no.desc"/>
+                <linkText ref="feed.otc.not.net.agreement.rehyp.flag.no.desc"/>
+            </description>
+            <externalId>
+                <filter ref="feed.otc.not.net.agreement.rehyp.flag.no.external.id"/>
+                <linkText ref="feed.otc.not.net.agreement.rehyp.flag.no.external.id"/>
+            </externalId>
+        </agreementSearch>
+
+        <agreementSearchResult id="feed.otc.not.net.agreement.rehyp.flag.no.search.result">
+            <description ref="feed.otc.not.net.agreement.rehyp.flag.no.desc"/>
+            <externalId ref="feed.otc.not.net.agreement.rehyp.flag.no.external.id"/>
+        </agreementSearchResult>
+
+        <agreementSummary id="feed.otc.not.net.agreement.rehyp.flag.no.summary">
+            <documentationDetails>
+                <reciprocity>
+                    <reciprocity ref="feed.otc.not.net.agreement.rehyp.flag.no.reciprocity"/>
+                    <vmRehypothecationRights>No</vmRehypothecationRights>
+                    <imRehypothecationRights>No</imRehypothecationRights>
+                </reciprocity>
+            </documentationDetails>
+        </agreementSummary>
+
+        <feedAgreement id="feed.otc.not.net.agreement.im.vm.rehyp.flag.no">
+            <principal ref="org.p1.lname"/>
+            <counterpartycode ref="org.c1.lname"/>
+            <businessLine>OTC</businessLine>
+            <agreement_description id="feed.otc.not.net.agreement.im.vm.rehyp.flag.no.desc" random="true" prefix="feed_agr1_"/>
+            <region ref="region.test1.name"/>
+            <legal_id id="feed.otc.not.net.agreement.im.vm.rehyp.flag.no.external.id" random="true"/>
+            <master_documentation ref="master.documentation.1987.isda.master.name"/>
+            <credit_support_documentation ref="credit.documentation.margin.provisions.name"/>
+            <netting_MTM_And_IA>Not-Net</netting_MTM_And_IA>
+            <reciprocity id="feed.otc.not.net.agreement.im.vm.rehyp.flag.no.reciprocity">Unilateral in favour of Counterparty</reciprocity>
+            <rehypothecation_flag>N</rehypothecation_flag>
+            <im_rehypothecation_flag>N</im_rehypothecation_flag>
+            <rehypothecation id="feed.otc.not.net.agreement.im.vm.rehyp.flag.no.rehypothecation">Unilateral in favour of Principal</rehypothecation>
+            <imRehypothecation>Unilateral in favour of Principal</imRehypothecation>
+            <base_currency ref="ccy.usd.name"/>
+            <original_date random="true" variation="t"/>
+            <im_frequency>Daily</im_frequency>
+            <frequency>Daily</frequency>
+            <im_frequency_start random="true" variation="t"/>
+            <frequency_start random="true" variation="t"/>
+            <im_notification_time>13.00</im_notification_time>
+            <notification_time>13.00</notification_time>
+            <im_resolution_time>10.00</im_resolution_time>
+            <resolution_time>10.00</resolution_time>
+            <im_resolution_day>same</im_resolution_day>
+            <resolution_day>same</resolution_day>
+            <time_zone ref="system.staticData.timeZone.cet.name"/>
+            <holiday_centre ref="hc.test1.name"/>
+            <im_non_workingday_adjusttype>None</im_non_workingday_adjusttype>
+            <non_workingday_adjusttype>None</non_workingday_adjusttype>
+            <product>
+                <productName>QTP</productName>
+                <settlementPeriod>T</settlementPeriod>
+            </product>
+            <asset>
+                <assetName ref="bond.usd.name"/>
+                <applicableType></applicableType>
+                <applicableParty></applicableParty>
+                <settlementDateAbbriviated>T</settlementDateAbbriviated>
+            </asset>
+            <rounding_delivery>Up</rounding_delivery>
+            <rounding_recall>Down</rounding_recall>
+            <settlementInstructions>
+                <settlementInstruction>
+                    <bookingType>VM</bookingType>
+                    <direction>Call/Return</direction>
+                    <bucket>VM Call/Return</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>VM</bookingType>
+                    <direction>Delivery/Recall</direction>
+                    <bucket>VM Recall/Delivery</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>IM</bookingType>
+                    <direction>Call/Return</direction>
+                    <bucket>IM Call/Return</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>IM</bookingType>
+                    <direction>Delivery/Recall</direction>
+                    <bucket>IM Recall/Delivery</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>VM Interest</bookingType>
+                    <direction>Pay</direction>
+                    <bucket>Pay</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>VM Interest</bookingType>
+                    <direction>Receive</direction>
+                    <bucket>Receive</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>IM Interest</bookingType>
+                    <direction>Pay</direction>
+                    <bucket>Pay</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>IM Interest</bookingType>
+                    <direction>Receive</direction>
+                    <bucket>Receive</bucket>
+                </settlementInstruction>
+            </settlementInstructions>
+            <distMedium>Email</distMedium>
+            <applyOrgCL>false</applyOrgCL>
+        </feedAgreement>
+
+        <agreementSearch id="feed.otc.not.net.agreement.im.vm.rehyp.flag.no.search">
+            <description>
+                <filter ref="feed.otc.not.net.agreement.im.vm.rehyp.flag.no.desc"/>
+                <linkText ref="feed.otc.not.net.agreement.im.vm.rehyp.flag.no.desc"/>
+            </description>
+            <externalId>
+                <filter ref="feed.otc.not.net.agreement.im.vm.rehyp.flag.no.external.id"/>
+                <linkText ref="feed.otc.not.net.agreement.im.vm.rehyp.flag.no.external.id"/>
+            </externalId>
+        </agreementSearch>
+
+        <agreementSearchResult id="feed.otc.not.net.agreement.im.vm.rehyp.flag.no.search.result">
+            <description ref="feed.otc.not.net.agreement.im.vm.rehyp.flag.no.desc"/>
+            <externalId ref="feed.otc.not.net.agreement.im.vm.rehyp.flag.no.external.id"/>
+        </agreementSearchResult>
+
+        <agreementSummary id="feed.otc.not.net.agreement.im.vm.rehyp.flag.no.summary">
+            <documentationDetails>
+                <reciprocity>
+                    <reciprocity ref="feed.otc.not.net.agreement.im.vm.rehyp.flag.no.reciprocity"/>
+                    <vmRehypothecationRights>No</vmRehypothecationRights>
+                    <imRehypothecationRights>No</imRehypothecationRights>
+                </reciprocity>
+            </documentationDetails>
+        </agreementSummary>
+
+        <feedResult id="feed.success.result">
+            <fileUploaded id="feed.success.result.file"/>
+            <successfullyImported>2</successfullyImported>
+        </feedResult>
+
+        <feedStatus id="feed.success.status">
+            <systemName>QTP</systemName>
+            <status>Successful</status>
+            <valuationFile ref="feed.success.result.file"/>
+            <description>Agreements</description>
+            <successfulFeed>
+                <importType>Agreements</importType>
+                <valuationFile ref="feed.success.result.file"/>
+                <total>2</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <agreement id="agreement.complete"/>
+
+    </scenarioData>
+</dataBean>

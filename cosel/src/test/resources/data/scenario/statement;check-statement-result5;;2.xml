@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+
+		<agreement id="agreement.net.gross003.bilateral">
+			<principal>
+				<filter ref="org.p1.lname"/>
+				<linkText ref="org.p1.lname"/>
+			</principal>
+			<counterparty>
+				<filter ref="org.c1.lname"/>
+				<linkText ref="org.c1.lname"/>
+			</counterparty>
+			<agreementDescription id="agr.desc" prefix="net_gross_003"/>
+			<agreementDate>T</agreementDate>
+			<baseCurrency>USD</baseCurrency>
+			<reciprocity>Bilateral</reciprocity>
+			<nettingIAandMtM>Net</nettingIAandMtM>
+			<grossCalc>Gross</grossCalc>
+			<callFrequency>
+				<legalReviewFrequency>Daily</legalReviewFrequency>
+			</callFrequency>
+			<holidayCentre ref="hc.europe.name"/>
+			<product>
+				<productName ref="product.test1.name"/>
+			</product>
+			<collateralAssetClass>
+				<collateralAssetClassName>qtp_cash</collateralAssetClassName>
+				<collateralAssetType>
+					<collateralAssetTypeName>qtp_cash_usd</collateralAssetTypeName>
+				</collateralAssetType>
+				<collateralAssetType>
+					<collateralAssetTypeName>CASH-USD</collateralAssetTypeName>
+				</collateralAssetType>
+			</collateralAssetClass>
+			<principalFixedTrigger>
+				<fixedValues>
+					<threshold>
+						<fixedAmount>
+							<amount>2m</amount>
+						</fixedAmount>
+					</threshold>
+					<minimumTransfer>
+						<fixedAmount>
+							<amount>5000000</amount>
+						</fixedAmount>
+					</minimumTransfer>
+					<roundingAmount>
+						<amount>20000</amount>
+					</roundingAmount>
+				</fixedValues>
+			</principalFixedTrigger>
+			<counterpartyFixedTrigger>
+				<fixedValues>
+					<threshold>
+						<fixedAmount>
+							<amount>1m</amount>
+						</fixedAmount>
+					</threshold>
+					<minimumTransfer>
+						<fixedAmount>
+							<amount>250000</amount>
+						</fixedAmount>
+					</minimumTransfer>
+					<roundingAmount>
+						<amount>10000</amount>
+					</roundingAmount>
+				</fixedValues>
+			</counterpartyFixedTrigger>
+			<settlementBucket>
+				<bookingType>Net</bookingType>
+				<direction>Call/Return</direction>
+				<bucket>
+					<filter ref="payInstrBucket.vcr.name"/>
+					<linkText ref="payInstrBucket.vcr.name"/>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>Net</bookingType>
+				<direction>Delivery/Recall</direction>
+				<bucket>
+					<filter ref="payInstrBucket.vrd.name"/>
+					<linkText ref="payInstrBucket.vrd.name"/>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>Interest</bookingType>
+				<direction>Pay</direction>
+				<bucket>
+					<filter ref="payInstrBucket.pay.name"/>
+					<linkText ref="payInstrBucket.pay.name"/>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>Interest</bookingType>
+				<direction>Receive</direction>
+				<bucket>
+					<filter ref="payInstrBucket.rec.name"/>
+					<linkText ref="payInstrBucket.rec.name"/>
+				</bucket>
+			</settlementBucket>
+			<letterAndDeliveryGroupDetails>
+				<letterDistributionMedium>Email</letterDistributionMedium>
+			</letterAndDeliveryGroupDetails>
+			<agreementId id="agmt.id"/>
+		</agreement>
+
+		<agreementExposureSummary id="product.qtp">
+			<productList>
+				<productType ref="product.test1.name" />
+			</productList>
+		</agreementExposureSummary>
+		
+		<tradeDetail id="trade1">
+			<tradeInformation>
+				<tradeDate>T</tradeDate>
+				<maturityDate>T+1000</maturityDate>
+				<effectiveDate>T</effectiveDate>
+				<tradeIdentifierPartyA random="true"/>
+				<partyABranchName>a</partyABranchName>
+				<partyBBranchName>b</partyBBranchName>
+			</tradeInformation>
+			<valuationInformation>
+				<principalValuationAmount>
+					<amount>-4567890</amount>
+				</principalValuationAmount>
+				<valuationDate>T</valuationDate>
+			</valuationInformation>
+			<collateralInformation>
+				<dealLevelUpfront>true</dealLevelUpfront>
+				<dealLevelType>Independent Amount</dealLevelType>
+				<dealLevelAmount>2345678</dealLevelAmount>
+			</collateralInformation>
+		</tradeDetail>
+		<tradeDetail id="trade2">
+			<tradeInformation>
+				<tradeDate>T</tradeDate>
+				<maturityDate>T+1000</maturityDate>
+				<effectiveDate>T</effectiveDate>
+				<tradeIdentifierPartyA random="true"/>
+				<partyABranchName>a</partyABranchName>
+				<partyBBranchName>b</partyBBranchName>
+			</tradeInformation>
+			<valuationInformation>
+				<principalValuationAmount>
+					<amount>5456789</amount>
+				</principalValuationAmount>
+				<valuationDate>T</valuationDate>
+			</valuationInformation>
+			<collateralInformation>
+				<dealLevelUpfront>true</dealLevelUpfront>
+				<dealLevelType>Independent Amount</dealLevelType>
+				<dealLevelAmount>-1234567</dealLevelAmount>
+			</collateralInformation>
+		</tradeDetail>
+
+		<assetBookingSummary id="asset.type.CASH.USD">
+				<assetType>CASH-USD</assetType>
+		</assetBookingSummary>
+		<assetBookingSummary id="asset.type.qtp.cash.usd">
+			<assetType>qtp_cash_usd</assetType>
+		</assetBookingSummary>
+
+		<bookingDetail id="booking1.call">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>9m</nominalAmount>
+					<movement>Call</movement>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+
+		<bookingDetail id="booking1.delivery">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>5m</nominalAmount>
+					<movement>Delivery</movement>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+		<agreementStatement id="net.gross003.bilateral">
+			<marginCallCalculation>
+				<otcOrClearingReq>
+					<principalReq>
+						<deliveryAmount>0.00</deliveryAmount>
+						<recallAmount>0.00</recallAmount>
+					</principalReq>
+					<counterpartyReq>
+						<deliveryAmount>0.00</deliveryAmount>
+						<recallAmount>1,180,000.00</recallAmount>
+					</counterpartyReq>
+				</otcOrClearingReq>
+			</marginCallCalculation>
+		</agreementStatement>
+
+
+
+
+
+	</scenarioData>
+</dataBean>

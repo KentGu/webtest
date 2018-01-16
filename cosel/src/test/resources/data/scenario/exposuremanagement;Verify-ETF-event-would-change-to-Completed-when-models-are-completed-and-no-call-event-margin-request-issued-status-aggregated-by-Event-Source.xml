@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/exposureManagement.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <agreement id="agr28947.etf">
+            <agreementId id="agrid">2570</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="model">
+            <column>Model</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.Call.agreementRequirement.1m">
+            <action>VM Call(Deficit)</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model></model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.Call.o3.agreementRequirement.3m">
+            <action>VM Call(Deficit)</action>
+            <agreementRequirement>3,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model>o3</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.Delivery.o2.agreementRequirement.-2m">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-2,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model>o2</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.noCall.o1.agreementRequirement.0m">
+            <action>VM ITM No Calls</action>
+            <agreementRequirement>0.00</agreementRequirement>
+            <callStatus>No Call Required</callStatus>
+            <model>o1</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.noCall.o1.pendingReview">
+            <action>VM ITM No Calls</action>
+            <agreementRequirement>0.00</agreementRequirement>
+            <callStatus>No Call Required</callStatus>
+            <model>o1</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.noCall.o1.MarginRequestIssued">
+            <action>VM ITM No Calls</action>
+            <agreementRequirement>0.00</agreementRequirement>
+            <callStatus>Margin Request Issued</callStatus>
+            <comments>t</comments>
+            <model>o1</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.Call.o3.pendingReview">
+            <action>VM Call(Deficit)</action>
+            <agreementRequirement>3,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model>o3</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.Call.o3.waived">
+            <action>VM Call(Deficit)</action>
+            <agreementRequirement>3,000,000.00</agreementRequirement>
+            <callStatus>Waived</callStatus>
+            <comments>t</comments>
+            <model>o3</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.Delivery.o2.pendingReview">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-2,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model>o2</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.Delivery.o2.completed">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-2,000,000.00</agreementRequirement>
+            <callStatus>Completed</callStatus>
+            <comments>t</comments>
+            <model>o2</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.Call.completed">
+            <action>VM Call(Deficit)</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Completed</callStatus>
+            <model></model>
+        </exposureEventDetail>
+
+    </scenarioData>
+</dataBean>

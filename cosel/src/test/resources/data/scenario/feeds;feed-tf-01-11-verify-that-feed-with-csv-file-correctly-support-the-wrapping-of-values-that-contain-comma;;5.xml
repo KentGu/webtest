@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/feeds.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <agreement>
+            <externalId id="T25621.agreement.external.id">T25621AgreementExternalID</externalId>
+            <agreementId id="T25621.agreement.id">519</agreementId>
+            <baseCurrency id="T25621.base.ccy" ref="ccy.usd.name"/>
+            <model>
+                <modelEligibilityRule>
+                    <modelName id="T25621.model.name">T25621Model</modelName>
+                </modelEligibilityRule>
+            </model>
+        </agreement>
+
+        <feedPortfolioTSA id="feed.tsa.upfront.fee">
+            <agreement_id random="true"/>
+            <legal_id random="true"/>
+            <component>Upfront Fee</component>
+            <amount id="upfront.fee.amnt">300</amount>
+            <currency ref="T25621.base.ccy"/>
+            <model ref="T25621.model.name"/>
+        </feedPortfolioTSA>
+        <feedPortfolioTSA id="feed.tsa.pai">
+            <agreement_id></agreement_id>
+            <legal_id></legal_id>
+            <component></component>
+            <amount id="pai.amnt"></amount>
+            <currency ref="T25621.base.ccy"/>
+            <model ref="T25621.model.name"/>
+        </feedPortfolioTSA>
+        <feedPortfolioTSA id="feed.tsa.transfer.value">
+            <agreement_id ref="T25621.agreement.id"/>
+            <legal_id ref="T25621.agreement.external.id"/>
+            <component>Transfer Value</component>
+            <amount id="transfer.value.amnt">1000x</amount>
+            <currency ref="T25621.base.ccy"/>
+            <model ref="T25621.model.name"/>
+        </feedPortfolioTSA>
+        <feedPortfolioTSA id="feed.tsa.banked.coupon">
+            <agreement_id ref="T25621.agreement.id"/>
+            <legal_id ref="T25621.agreement.external.id"/>
+            <component>XYZ</component>
+            <amount id="banked.coupon.amnt">200</amount>
+            <currency ref="T25621.base.ccy"/>
+            <model ref="T25621.model.name"/>
+        </feedPortfolioTSA>
+
+        <feedResult id="feed.portfolio.tsa.result">
+            <fileUploaded id="feed.portfolio.tsa.result.file"/>
+            <unsuccessfulImports>3</unsuccessfulImports>
+            <parsingFailures>1</parsingFailures>
+        </feedResult>
+
+        <feedStatus id="feed.portfolio.tsa.status">
+            <status>Failed</status>
+            <valuationFile ref="feed.portfolio.tsa.result.file"/>
+            <description>Portfolio Cashflow</description>
+            <failedFeed apply="true">
+                <total>3</total>
+                <entry>
+                    <content>ExternalId : [T25621AgreementExternalID],AgreementId : [519], Component : [Transfer Value], Amount : [1000x], Currency : [USD], model : [T25621Model] : [Amount] is invalid.</content>
+                </entry>
+                <entry>
+                    <content>ExternalId : [T25621AgreementExternalID],AgreementId : [519], Component : [XYZ], Amount : [200], Currency : [USD], model : [T25621Model] : Component : [XYZ] is invalid.</content>
+                </entry>
+            </failedFeed>
+        </feedStatus>
+
+        <agreementSearch id="feed.portfolio.tsa.agreement.search"/>
+
+        <agreementSearchResult id="feed.portfolio.tsa.agreement.search.result"/>
+
+        <multiModelAgreementStatement id="feed.protfolio.tsa.agreement.statement"/>
+
+        <agreementStatement id="check.feed.protfolio.tsa.agreement.statement"/>
+    </scenarioData>
+</dataBean>

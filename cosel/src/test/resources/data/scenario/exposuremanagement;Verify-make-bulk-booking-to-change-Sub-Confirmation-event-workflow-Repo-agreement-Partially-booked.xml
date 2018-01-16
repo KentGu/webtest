@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/exposureManagement.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <securitySearch id="26548.bond.usd">
+            <matured>All</matured>
+            <instrument>
+                <filter id="26548.bond.usd.id">26548_bond_usd_1</filter>
+                <!--<linkText ref="26527.bond.usd"/>-->
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="26548.bond.usd.approve">
+            <instrument ref="26548.bond.usd.id"/>
+        </securitySearchResult>
+
+        <instrument id="26548.bond.usd.changeRecordDate.tPlus6.changeMaturityDate.tPlus6">
+            <recordDate>t+6</recordDate>
+            <maturityDate>t+6</maturityDate>
+        </instrument>
+
+          <securitySearch id="26548.bond.usd.2">
+            <matured>All</matured>
+            <instrument>
+                <filter id="26548.bond.usd.id.2">26548_bond_usd_2</filter>
+                <!--<linkText ref="26527.bond.usd"/>-->
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="26548.bond.usd.approve.2">
+            <instrument ref="26548.bond.usd.id.2"/>
+        </securitySearchResult>
+
+        <instrument id="26548.bond.usd.2.changeRecordDate.tPlus6.changeMaturityDate.tPlus6">
+            <recordDate>t+6</recordDate>
+            <maturityDate>t+6</maturityDate>
+        </instrument>
+
+         <agreement id="agr26548.repo">
+            <agreementId id="agrid">2675</agreementId>
+        </agreement>
+
+        <agreement id="agr26548">
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+        <exposureEventDetail id="subCon.4m.bond.usd.2">
+            <action>Substitution Confirmation</action>
+            <agreementRequirement>-4,000,000.00</agreementRequirement>
+            <element id="26548.bond.usd.id.withmarket.2">26548_bond_usd_2,m2</element>
+            <eventId id="event2"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subCon.4m.bond.usd.1">
+            <action>Substitution Confirmation</action>
+            <agreementRequirement>-4,000,000.00</agreementRequirement>
+            <element id="26548.bond.usd.id.withmarket.1">26548_bond_usd_1,m1</element>
+            <eventId id="event1"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="callStatus.RequestIssued">
+            <callStatus>Request Issued</callStatus>
+        </exposureEventDetail>
+
+        <bookingDetail id="subCon.bond.usd.1.return.value.4m">
+            <bookingInformation>
+                <bookingInformationDetail deleteButtonIsDisplay="true" plusButtonIsDisplay="true">
+                    <eventId ref="event1"/>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <movement>Return</movement>
+                    <movementIsDisabled>true</movementIsDisabled>
+                    <instrumentId disable="true" ref="26548.bond.usd.id.withmarket.1"/>
+                    <value>-4,000,000.00</value>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subCon.bond.usd.1.call.value.4m">
+            <bookingInformation>
+                <bookingInformationDetail deleteButtonIsDisplay="true" plusButtonIsDisplay="true">
+                    <eventId ref="event1"/>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <movement>Call</movement>
+                    <movementIsDisabled>true</movementIsDisabled>
+                    <instrumentId></instrumentId>
+                    <value>4,000,000.00</value>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subCon.bond.usd.2.return.value.4m">
+            <bookingInformation>
+                <bookingInformationDetail deleteButtonIsDisplay="true" plusButtonIsDisplay="true">
+                    <eventId ref="event2"/>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <movement>Return</movement>
+                    <movementIsDisabled>true</movementIsDisabled>
+                    <instrumentId disable="true" ref="26548.bond.usd.id.withmarket.2"/>
+                    <value>-4,000,000.00</value>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subCon.bond.usd.2.call.value.4m">
+            <bookingInformation>
+                <bookingInformationDetail deleteButtonIsDisplay="true" plusButtonIsDisplay="true">
+                    <eventId ref="event2"/>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <movement>Call</movement>
+                    <movementIsDisabled>true</movementIsDisabled>
+                    <instrumentId></instrumentId>
+                    <value>4,000,000.00</value>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+
+
+        <bookingDetail id="subCon.bond.usd.1.return.value.4m.nominalAmount.3m">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <eventId ref="event1"/>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <movement>Return</movement>
+                    <instrumentId  ref="26548.bond.usd.id.withmarket.1"/>
+                    <value>-4,000,000.00</value>
+                    <nominalAmount>3m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subCon.bond.usd.1.call.value.4m.nominalAmount.1m">
+            <instrumentSearch>
+                <instrument>
+                    <filter>CASH-GBP</filter>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <eventId ref="event1"/>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <movement>Call</movement>
+                    <instrumentId></instrumentId>
+                    <value>4,000,000.00</value>
+                    <nominalAmount>1m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subCon.bond.usd.2.call.value.4m.nominalAmount.2m">
+            <instrumentSearch>
+                <instrument>
+                    <filter>CASH-USD</filter>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <eventId ref="event2"/>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <movement>Call</movement>
+                    <instrumentId></instrumentId>
+                    <value>4,000,000.00</value>
+                    <nominalAmount>2m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <exposureManagementMessage id="overrideWarning">
+            <messageDetail>
+                <overrideWarning>true</overrideWarning>
+            </messageDetail>
+            <messageDetail>
+                <overrideWarning>true</overrideWarning>
+            </messageDetail>
+            <messageDetail>
+                <overrideWarning>true</overrideWarning>
+            </messageDetail>
+        </exposureManagementMessage>
+
+        <exposureEventDetail id="subCon.4m.bond.usd.2.Partiallybooked">
+            <action>Substitution Confirmation</action>
+            <agreementRequirement>-4,000,000.00</agreementRequirement>
+            <element id="26548.bond.usd.id.withmarket.2">26548_bond_usd_2,m2</element>
+            <callStatus>Partially Booked</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subCon.4m.bond.usd.1.Partiallybooked">
+            <action>Substitution Confirmation</action>
+            <agreementRequirement>-4,000,000.00</agreementRequirement>
+            <element id="26548.bond.usd.id.withmarket.1">26548_bond_usd_1,m1</element>
+            <callStatus>Partially Booked</callStatus>
+        </exposureEventDetail>
+
+
+    </scenarioData>
+</dataBean>

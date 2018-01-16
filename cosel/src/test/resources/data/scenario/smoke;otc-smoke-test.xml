@@ -1,0 +1,839 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xsi:noNamespaceSchemaLocation="http://artifactory.london.lombardrisk.com:8081/artifactory/libs-snapshot-local/com/lombardrisk/cobiz/1.0.0-SNAPSHOT/cobiz-1.0.0-SNAPSHOT.jar!/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/smoke.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+
+
+        <organisation id="SmokeBranchPrincipal">
+            <longName id="org.bphb.lname" random="true" prefix="SmokeBranchPrincipalLong"/>
+            <shortName id="org.bphb.sname" random="true" prefix="SmokeBranchPrincipalShort"/>
+            <code id="org.bphb.code" random="true"/>
+            <role ref="org.role.cr.name"/>
+            <role ref="org.role.bh.name"/>
+            <address>
+                <contact>someone</contact>
+                <address1>somewhere1</address1>
+                <address2>somewhere2</address2>
+                <address3>somewhere3</address3>
+                <address4>somewhere4</address4>
+                <address5>somewhere5</address5>
+                <title>manager</title>
+                <label>label</label>
+                <tel>12345678</tel>
+                <fax>12345678</fax>
+                <email>test@test.com</email>
+                <ftp>ftp://127.0.0.1</ftp>
+                <notes>some notes</notes>
+                <enable>true</enable>
+            </address>
+            <status>Approved</status>
+        </organisation>
+
+        <organisation id="SmokePrincipal">
+            <longName id="org.phb.lname" random="true" prefix="SmokePrincipalLong"/>
+            <shortName id="org.phb.sname" random="true" prefix="SmokePrincipalShort"/>
+            <code id="org.phb.code" random="true"/>
+            <role ref="org.role.cr.name"/>
+            <!--<role ref="org.role.cp.name"/>-->
+            <address>
+                <contact>someone</contact>
+                <address1>somewhere1</address1>
+                <address2>somewhere2</address2>
+                <address3>somewhere3</address3>
+                <address4>somewhere4</address4>
+                <address5>somewhere5</address5>
+                <title>manager</title>
+                <label>label</label>
+                <tel>12345678</tel>
+                <fax>12345678</fax>
+                <email>test@test.com</email>
+                <ftp>ftp://127.0.0.1</ftp>
+                <notes>some notes</notes>
+                <enable>true</enable>
+            </address>
+
+            <relationship>
+                <parent>false</parent>
+                <type>branch</type>
+                <organisationSearch>
+                    <filter ref="org.bphb.lname"/>
+                    <linkText ref="org.bphb.lname"/>
+                </organisationSearch>
+            </relationship>
+
+            <relationship>
+                <parent>true</parent>
+                <type>subsidiary</type>
+                <organisationSearch>
+                    <filter>MainOrg</filter>
+                    <linkText>MainOrg</linkText>
+                </organisationSearch>
+            </relationship>
+
+            <status>Approved</status>
+        </organisation>
+
+        <organisation id="SmokePrincipalDetail">
+            <longName ref="org.phb.lname"/>
+            <shortName ref="org.phb.sname"/>
+            <code ref="org.phb.code"/>
+            <role ref="org.role.cr.name"/>
+            <!--<role ref="org.role.cp.name"/>-->
+            <address>
+                <contact>someone</contact>
+                <address1>somewhere1</address1>
+                <address2>somewhere2</address2>
+                <address3>somewhere3</address3>
+                <address4>somewhere4</address4>
+                <address5>somewhere5</address5>
+                <title>manager</title>
+                <label>label</label>
+                <tel>12345678</tel>
+                <fax>12345678</fax>
+                <email>test@test.com</email>
+                <ftp>ftp://127.0.0.1</ftp>
+                <notes>some notes</notes>
+                <enable>true</enable>
+            </address>
+
+            <relationship>
+                <parent>false</parent>
+                <type>branch</type>
+                <organisationSearch>
+                    <!--<filter ref="org.bphb.lname"/>-->
+                    <linkText ref="org.bphb.lname"/>
+                </organisationSearch>
+            </relationship>
+
+            <relationship>
+                <parent>true</parent>
+                <type>subsidiary</type>
+                <organisationSearch>
+                    <!--<filter>MainOrg</filter>-->
+                    <linkText>MainOrg</linkText>
+                </organisationSearch>
+            </relationship>
+
+            <status>Approved</status>
+        </organisation>
+
+        <organisation id="SmokeBranchCpty">
+            <longName id="org.bchb.lname" random="true" prefix="SmokeBranchCptyLong"/>
+            <shortName id="org.bchb.sname" random="true" prefix="SmokeBranchCptyShort"/>
+            <code id="org.bchb.code" random="true"/>
+            <role ref="org.role.cr.name"/>
+            <role ref="org.role.bh.name"/>
+            <address>
+                <contact>someone</contact>
+                <address1>somewhere1</address1>
+                <address2>somewhere2</address2>
+                <address3>somewhere3</address3>
+                <address4>somewhere4</address4>
+                <address5>somewhere5</address5>
+                <title>manager</title>
+                <label>label</label>
+                <tel>12345678</tel>
+                <fax>12345678</fax>
+                <email>test@test.com</email>
+                <ftp>ftp://127.0.0.1</ftp>
+                <notes>some notes</notes>
+                <enable>true</enable>
+            </address>
+
+            <status>Approved</status>
+        </organisation>
+
+        <organisation id="SmokeCpty">
+            <longName id="org.chb.lname" random="true" prefix="SmokeCptyLong"/>
+            <shortName id="org.chb.sname" random="true" prefix="SmokeCptyLong"/>
+            <code id="org.chb.code" random="true"/>
+            <role ref="org.role.cr.name"/>
+            <role ref="org.role.cp.name"/>
+            <address>
+                <contact>someone</contact>
+                <address1>somewhere1</address1>
+                <address2>somewhere2</address2>
+                <address3>somewhere3</address3>
+                <address4>somewhere4</address4>
+                <address5>somewhere5</address5>
+                <title>manager</title>
+                <label>label</label>
+                <tel>12345678</tel>
+                <fax>12345678</fax>
+                <email>test@test.com</email>
+                <ftp>ftp://127.0.0.1</ftp>
+                <notes>some notes</notes>
+                <enable>true</enable>
+            </address>
+
+            <relationship>
+                <parent>false</parent>
+                <type>branch</type>
+                <organisationSearch>
+                    <filter ref = "org.bchb.lname" />
+                    <linkText ref = "org.bchb.lname" />
+                </organisationSearch>
+            </relationship>
+
+            <status>Approved</status>
+        </organisation>
+
+        <organisation id="SmokeCptyDetail">
+            <longName ref="org.chb.lname"/>
+            <shortName ref="org.chb.sname"/>
+            <code ref="org.chb.code"/>
+            <role ref="org.role.cr.name"/>
+            <role ref="org.role.cp.name"/>
+            <address>
+                <contact>someone</contact>
+                <address1>somewhere1</address1>
+                <address2>somewhere2</address2>
+                <address3>somewhere3</address3>
+                <address4>somewhere4</address4>
+                <address5>somewhere5</address5>
+                <title>manager</title>
+                <label>label</label>
+                <tel>12345678</tel>
+                <fax>12345678</fax>
+                <email>test@test.com</email>
+                <ftp>ftp://127.0.0.1</ftp>
+                <notes>some notes</notes>
+                <enable>true</enable>
+            </address>
+
+            <relationship>
+                <parent>false</parent>
+                <type>branch</type>
+                <organisationSearch>
+                    <!--<filter ref = "org.bchb.lname" />-->
+                    <linkText ref = "org.bchb.lname"/>
+                </organisationSearch>
+            </relationship>
+
+            <status>Approved</status>
+        </organisation>
+
+        <organisation id="SmokeIssuerRoleOrg">
+            <longName id="org.issOrg.lname" random="true" prefix="SmokeIssuerRoleLong"/>
+            <shortName id="org.issOrg.sname" random="true" prefix="SmokeIssuerRoleShort"/>
+            <code id="org.issOrg.code" random="true"/>
+            <role ref="org.role.is.name"/>
+            <address>
+                <contact>someone</contact>
+                <address1>somewhere1</address1>
+                <address2>somewhere2</address2>
+                <address3>somewhere3</address3>
+                <address4>somewhere4</address4>
+                <address5>somewhere5</address5>
+                <title>manager</title>
+                <label>label</label>
+                <tel>12345678</tel>
+                <fax>12345678</fax>
+                <email>test@test.com</email>
+                <ftp>ftp://127.0.0.1</ftp>
+                <notes>some notes</notes>
+                <enable>true</enable>
+            </address>
+            <status>Approved</status>
+        </organisation>
+
+        <interestRate id="SmokeInterestRate">
+            <interestRateName id="SmokeInterestRateName" random="true" suffix="SmokeInterestRate"/>
+            <description>SmokeInterestRate</description>
+            <refixFrequency>Daily</refixFrequency>
+            <status>enabled</status>
+            <type>Interest</type>
+        </interestRate>
+
+        <agreement id="SmokeOTCAgreement001">
+            <principal>
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter ref="org.phb.code"/>
+                <linkText ref="org.phb.code"/>
+            </principal>
+            <counterparty>
+                <criteria>Containing</criteria>
+                <type>Long Name</type>
+                <filter ref="org.chb.lname"/>
+                <linkText ref="org.chb.lname"/>
+            </counterparty>
+            <agreementDescription>SmokeOTCagr1Desc</agreementDescription>
+            <agreementName random="true"/>
+            <externalId random="true"/>
+            <agreementDate>T</agreementDate>
+            <nettingIAandMtM>Net</nettingIAandMtM>
+            <!--<grossCalc>Net</grossCalc>-->
+            <interestCalc>Net</interestCalc>
+            <callFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </callFrequency>
+            <holidayCentre ref="hc.europe.name"/>
+            <product id="pro1">
+                <productName ref="product.test1.name"/>
+            </product>
+            <!--<interest>true</interest>-->
+            <!--<interestCalculationsMethod>Simple</interestCalculationsMethod>-->
+            <!--<calculationRule>First of the Month</calculationRule>-->
+            <!--<payMethod>Physical Payment</payMethod>-->
+            <!--<receiveMethod>Capitalise</receiveMethod>-->
+            <!--<interestSettlementDate>T+2</interestSettlementDate>-->
+            <collateralAssetClass>
+                <collateralAssetClassName ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="cash.usd.name"/>
+                    <interestRule>
+                        <agreementRate ref="SmokeInterestRateName"/>
+                    </interestRule>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="bond.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="bond.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="equity.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="equity.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vcr.name"/>
+                    <linkText ref="payInstrBucket.vcr.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vrd.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.pay.name"/>
+                    <linkText ref="payInstrBucket.pay.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.rec.name"/>
+                    <linkText ref="payInstrBucket.rec.name"/>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementStatus>Pending</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <statementStatus>Approved</statementStatus>
+            <agreementId id="smoke.otc.agr1id"/>
+        </agreement>
+
+        <agreementSearch id = "SmokeAgreementSearch001">
+            <principal>
+                <filter ref="org.phb.sname"/>
+                <linkText ref="org.phb.sname"/>
+            </principal>
+            <counterparty>
+                <filter ref="org.chb.sname"/>
+                <linkText ref="org.chb.sname"/>
+            </counterparty>
+            <description>
+                <filter>SmokeOTCagr1Desc</filter>
+                <linkText>SmokeOTCagr1Desc</linkText>
+            </description>
+        </agreementSearch>
+
+        <agreementSearchResult id = "SmokeAgreementSearchResult001">
+            <agreementId ref="smoke.otc.agr1id"/>
+        </agreementSearchResult>
+
+
+        <!--<userPreference id = "SmokeDashboardLink">-->
+        <!--<dashboardLink>EM</dashboardLink>-->
+        <!--</userPreference>-->
+
+        <instrument id="SmokeSecurityBond-USD">
+            <assetClass>qtp_bond</assetClass>
+            <assetType>qtp_bond_usd</assetType>
+            <instrumentId>
+                <primary>true</primary>
+                <type>CUSIP</type>
+                <value id="Securitybond_usd001" random="true"/>
+            </instrumentId>
+            <!--<market>m1</market>-->
+            <description>SmokeTestSecurity</description>
+            <issuer>
+                <filter ref="org.issOrg.sname"/>
+                <linkText ref="org.issOrg.sname"/>
+            </issuer>
+            <maturityDate>T+90</maturityDate>
+            <priceSource>
+                <priceSourceName>Default</priceSourceName>
+                <dirtyPrice>100</dirtyPrice>
+                <lastPriceChange>T</lastPriceChange>
+                <!--<priceLevel>Bid</priceLevel>-->
+                <priceDate>T</priceDate>
+            </priceSource>
+            <couponRate>100</couponRate>
+            <manuallyOverrideNextCouponDate>true</manuallyOverrideNextCouponDate>
+            <nextCouponDate>t-10</nextCouponDate>
+            <manuallyOverrideLastCouponDate>true</manuallyOverrideLastCouponDate>
+            <lastCouponDate>t-10</lastCouponDate>
+            <recordDate>t-10</recordDate>
+            <issueDate>T</issueDate>
+            <!--<securityStatus>Approved</securityStatus>-->
+        </instrument>
+
+        <securitySearch id="SmokeSecurityBond-USDSearch">
+            <instrument>
+                <type>Starting with</type>
+                <filter ref="Securitybond_usd001"/>
+                <linkText ref="Securitybond_usd001"/>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="SmokeSecurityBond-USDSearchResult">
+            <instrument ref="Securitybond_usd001"/>
+        </securitySearchResult>
+
+        <agreement id="SmokeAgreement003">
+            <principal>
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter ref="org.phb.code"/>
+                <linkText ref="org.phb.code"/>
+            </principal>
+            <counterparty>
+                <criteria>Containing</criteria>
+                <type>Long Name</type>
+                <filter ref="org.chb.lname"/>
+                <linkText ref="org.chb.lname"/>
+            </counterparty>
+            <agreementDescription>SmokeOTCagr3Desc</agreementDescription>
+            <agreementName random="true"/>
+            <externalId  random="true"/>
+            <agreementDate>T</agreementDate>
+            <nettingIAandMtM>Net</nettingIAandMtM>
+            <!--<grossCalc>Net</grossCalc>-->
+            <interestCalc>Net</interestCalc>
+            <callFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </callFrequency>
+            <holidayCentre ref="hc.europe.name"/>
+            <product>
+                <productName ref="product.test1.name"/>
+            </product>
+            <!--<interest>true</interest>-->
+            <!--<interestCalculationsMethod>Simple</interestCalculationsMethod>-->
+            <!--<calculationRule>First of the Month</calculationRule>-->
+            <!--<payMethod>Physical Payment</payMethod>-->
+            <!--<receiveMethod>Capitalise</receiveMethod>-->
+            <!--<interestSettlementDate>T+2</interestSettlementDate>-->
+            <collateralAssetClass>
+                <collateralAssetClassName ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="cash.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="bond.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="bond.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="equity.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="equity.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vcr.name"/>
+                    <linkText ref="payInstrBucket.vcr.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vrd.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.pay.name"/>
+                    <linkText ref="payInstrBucket.pay.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.rec.name"/>
+                    <linkText ref="payInstrBucket.rec.name"/>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementStatus>Pending</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <statementStatus>Approved</statementStatus>
+            <agreementId id="smoke.otc.agr3id"/>
+        </agreement>
+
+        <tradeDetail id = "SmokeTrade003">
+            <tradeInformation>
+                <productType ref="product.test1.name"/>
+                <tradeDate>T</tradeDate>
+                <effectiveDate>T</effectiveDate>
+                <maturityDate>T+1000</maturityDate>
+                <tradeIdentifierPartyA random="true"/>
+                <partyABranchName random="true"/>
+                <partyBBranchName random="true"/>
+            </tradeInformation>
+
+            <valuationInformation>
+                <principalValuationAmount>
+                    <amount>105000</amount>
+                    <currency>USD</currency>
+                </principalValuationAmount>
+                <valuationDate>T</valuationDate>
+            </valuationInformation>
+
+            <collateralInformation>
+                <dealLevelUpfront>true</dealLevelUpfront>
+                <dealLevelType>Independent Amount</dealLevelType>
+                <dealLevelAmount>10000</dealLevelAmount>
+                <currency>USD</currency>
+            </collateralInformation>
+        </tradeDetail>
+
+        <exposureEventSearch id ="SmokeEMPrinCptySearchCR">
+            <principal>1224-1</principal>
+            <counterparty>1224-2</counterparty>
+        </exposureEventSearch>
+
+        <exposureEventDetail id = "EventCall001">
+            <agrId ref = "smoke.otc.agr3id" />
+            <action>Call</action>
+        </exposureEventDetail>
+
+        <exposureEventDetail id = "EMCounterpartyAmount001">
+            <counterpartyAmount>115000</counterpartyAmount>
+        </exposureEventDetail>
+
+        <bookingDetail id="EMgroupbooking001">
+            <assetType>qtp_bond_usd</assetType>
+            <instrumentSearch>
+                <instrumentId>
+                    <type>Starting with</type>
+                    <filter ref="Securitybond_usd001"/>
+                    <linkText ref="Securitybond_usd001"/>
+                </instrumentId>
+                <linkText ref="Securitybond_usd001"/>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <nominalAmount>115000</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <save>saveAndComplete</save>
+            <!--<alertHandling>-->
+            <!--<content>[\s\S]*</content>-->
+            <!--<accept>false</accept>-->
+            <!--</alertHandling>-->
+        </bookingDetail>
+
+        <agreementSearch id = "SmokeAgreementSearch003">
+            <description>
+                <filter>SmokeOTCagr3Desc</filter>
+                <linkText>SmokeOTCagr3Desc</linkText>
+            </description>
+        </agreementSearch>
+
+        <agreementSearchResult id = "SmokeAgreementSearchResult003">
+            <agreementId ref="smoke.otc.agr3id"/>
+        </agreementSearchResult>
+
+        <tradeDetail id = "SmokeTrade004">
+            <tradeInformation>
+                <productType ref="product.test1.name"/>
+                <tradeDate>T</tradeDate>
+                <effectiveDate>T</effectiveDate>
+                <maturityDate>T+1000</maturityDate>
+                <tradeIdentifierPartyA random="true"/>
+                <partyABranchName random="true"/>
+                <partyBBranchName random="true"/>
+            </tradeInformation>
+
+            <valuationInformation>
+                <principalValuationAmount>
+                    <amount>-105000</amount>
+                    <currency>USD</currency>
+                </principalValuationAmount>
+                <valuationDate>T</valuationDate>
+            </valuationInformation>
+
+            <collateralInformation>
+                <dealLevelUpfront>true</dealLevelUpfront>
+                <dealLevelType>Independent Amount</dealLevelType>
+                <dealLevelAmount>-10000</dealLevelAmount>
+                <currency>USD</currency>
+            </collateralInformation>
+        </tradeDetail>
+
+        <agreement id="SmokeAgreement003StatementStatus">
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+        <exposureEventDetail id = "EventDelivery001">
+            <agrId ref = "smoke.otc.agr3id" />
+            <action>Return</action>
+        </exposureEventDetail>
+
+        <exposureEventDetail id = "EMCounterpartyAmount002">
+            <counterpartyAmount>-215000</counterpartyAmount>
+        </exposureEventDetail>
+
+        <bookingDetail id="EMbulkbooking001">
+            <assetType>qtp_bond_usd</assetType>
+            <instrumentSearch>
+                <instrument>
+                    <!--<type>Starting with</type>-->
+                    <filter ref="Securitybond_usd001"/>
+                    <!--<linkText ref="Securitybond_usd001"/>-->
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <nominalAmount>115000</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <save>save</save>
+            <!--<alertHandling>-->
+            <!--<content>[\s\S]*</content>-->
+            <!--<accept>false</accept>-->
+            <!--</alertHandling>-->
+        </bookingDetail>
+
+
+
+        <organisationStaticData id = "AddSmokeFeedSystem">
+            <type>FEEDSYSTEM</type>
+            <dataName id="SmokeFeedSystemName" random="true" suffix="FeedSystemName"/>
+            <description id="SmokeFeedSystemDesc" random="true" suffix="FeedSystemDesc"/>
+            <status>enabled</status>
+        </organisationStaticData>
+
+        <collateralStaticData id = "AddSmokeProduct">
+            <type>Products</type>
+            <dataName id="SmokeProductName" random="true" suffix="ProductName"/>
+            <decription id="SmokeProductDesc" random="true" suffix="ProductDesc"/>
+            <status>enabled</status>
+        </collateralStaticData>
+
+        <collateralStaticData id = "AddCODES_SmokeFeedSystem">
+            <type>Scheme</type>
+            <dataName id="CODES_SmokeFeedSystemName" random="true" suffix="CODESFeedSystemName"/>
+            <decription id="CODES_SmokeFeedSystemDesc" random="true" suffix="CODESFeedSystemDesc"/>
+            <status>enabled</status>
+        </collateralStaticData>
+
+        <collateralStaticData id = "AddSmokeProductToCODES_SmokeFeedSystem">
+            <type>CODES_SmokeFeedSystem</type>
+            <dataName ref="SmokeProductName"/>
+            <decription ref="SmokeProductDesc"/>
+            <status>enabled</status>
+        </collateralStaticData>
+
+        <organisationGlobalPreference id = "SetSmokeFeedSystem">
+            <defaultExternalSystem>SmokeFeedSystem</defaultExternalSystem>
+        </organisationGlobalPreference>
+
+        <organisation id="AddSmokeBranchPrincipalExternalCode">
+            <longName id="org.bpechb.lname" random="true" prefix="BranchPrincipalExtCodeL"/>
+            <shortName id="org.bpechb.sname" random="true" prefix="BranchPrincipalExtCodeS"/>
+            <code id="org.bpechb.code" random="true"/>
+            <role ref="org.role.cr.name"/>
+            <address>
+                <contact>someone</contact>
+                <address1>somewhere1</address1>
+                <address2>somewhere2</address2>
+                <address3>somewhere3</address3>
+                <address4>somewhere4</address4>
+                <address5>somewhere5</address5>
+                <title>manager</title>
+                <label>label</label>
+                <tel>12345678</tel>
+                <fax>12345678</fax>
+                <email>test@test.com</email>
+                <ftp>ftp://127.0.0.1</ftp>
+                <notes>some notes</notes>
+                <enable>true</enable>
+            </address>
+            <externalCode>
+                <systemName ref="SmokeFeedSystemName"/>
+                <externalCode>SmokePrincipalBranchExternalCode</externalCode>
+            </externalCode>
+            <status>Approved</status>
+        </organisation>
+
+        <organisation id="AddSmokeBranchCptyExternalCode">
+            <longName id="org.bcechb.lname" random="true" prefix="BranchCptyExtCodeL"/>
+            <shortName id="org.bcechb.sname" random="true" prefix="BranchCptyExtCodeS"/>
+            <code id="org.bcechb.code" random="true"/>
+            <role ref="org.role.cr.name"/>
+            <role ref="org.role.cp.name"/>
+            <address>
+                <contact>someone</contact>
+                <address1>somewhere1</address1>
+                <address2>somewhere2</address2>
+                <address3>somewhere3</address3>
+                <address4>somewhere4</address4>
+                <address5>somewhere5</address5>
+                <title>manager</title>
+                <label>label</label>
+                <tel>12345678</tel>
+                <fax>12345678</fax>
+                <email>test@test.com</email>
+                <ftp>ftp://127.0.0.1</ftp>
+                <notes>some notes</notes>
+                <enable>true</enable>
+            </address>
+            <externalCode>
+                <systemName ref="SmokeFeedSystemName"/>
+                <externalCode>SmokeCptyBranchExternalCode</externalCode>
+            </externalCode>
+            <status>Approved</status>
+        </organisation>
+
+        <agreement id ="SmokeOTCAgreement002">
+            <principal>
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter>SmokeBranchPrincipalExternalCode</filter>
+                <linkText>SmokeBranchPrincipalExternalCode</linkText>
+            </principal>
+            <counterparty>
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter>SmokeBranchCptyExternalCode</filter>
+                <linkText>SmokeBranchCptyExternalCode</linkText>
+            </counterparty>
+            <agreementDescription>SmokeAgreement002desc</agreementDescription>
+            <agreementName>SmokeAgreement002name</agreementName>
+            <externalId>SmokeAgreement002extid</externalId>
+            <agreementDate>T</agreementDate>
+            <!--<sendConfirmationLetterToCounterparty>true</sendConfirmationLetterToCounterparty>-->
+            <callFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </callFrequency>
+                <holidayCentre ref="hc.europe.name"/>
+                <product>
+                    <productName>SmokeProduct</productName>
+                </product>
+
+                <collateralAssetClass>
+                    <collateralAssetClassName ref="cash.name"/>
+                    <collateralAssetType>
+                        <collateralAssetTypeName ref="cash.usd.name"/>
+                    </collateralAssetType>
+                </collateralAssetClass>
+                <collateralAssetClass>
+                    <collateralAssetClassName ref="bond.name"/>
+                    <collateralAssetType>
+                        <collateralAssetTypeName ref="bond.usd.name"/>
+                    </collateralAssetType>
+                </collateralAssetClass>
+                <collateralAssetClass>
+                    <collateralAssetClassName ref="equity.name"/>
+                    <collateralAssetType>
+                        <collateralAssetTypeName ref="equity.usd.name"/>
+                    </collateralAssetType>
+                </collateralAssetClass>
+                <settlementBucket>
+                    <bookingType>Net</bookingType>
+                    <direction>Call/Return</direction>
+                    <bucket>
+                        <filter ref="payInstrBucket.vcr.name"/>
+                        <linkText ref="payInstrBucket.vcr.name"/>
+                    </bucket>
+                </settlementBucket>
+                <settlementBucket>
+                    <bookingType>Net</bookingType>
+                    <direction>Delivery/Recall</direction>
+                    <bucket>
+                        <filter ref="payInstrBucket.vrd.name"/>
+                        <linkText ref="payInstrBucket.vrd.name"/>
+                    </bucket>
+                </settlementBucket>
+                <settlementBucket>
+                    <bookingType>Interest</bookingType>
+                    <direction>Pay</direction>
+                    <bucket>
+                        <filter ref="payInstrBucket.pay.name"/>
+                        <linkText ref="payInstrBucket.pay.name"/>
+                    </bucket>
+                </settlementBucket>
+                <settlementBucket>
+                    <bookingType>Interest</bookingType>
+                    <direction>Receive</direction>
+                    <bucket>
+                        <filter ref="payInstrBucket.rec.name"/>
+                        <linkText ref="payInstrBucket.rec.name"/>
+                    </bucket>
+                </settlementBucket>
+                <letterAndDeliveryGroupDetails>
+                    <letterDistributionMedium>Email</letterDistributionMedium>
+                </letterAndDeliveryGroupDetails>
+                <agreementStatus>Pending</agreementStatus>
+                <agreementStatus>Approved</agreementStatus>
+                <statementStatus>Pending</statementStatus>
+                <statementStatus>Approved</statementStatus>
+        </agreement>
+
+        <feedTrade id = "SmokeTrade001">
+            <mode>flush</mode>
+
+        </feedTrade>
+
+        <feedStatus id = "Trade001status">
+
+        </feedStatus>
+
+        <feedTrade id = "SmokeTrade002">
+            <mode>delta</mode>
+
+        </feedTrade>
+
+        <feedStatus id = "Trade002status">
+
+        </feedStatus>
+
+
+    </scenarioData>
+</dataBean>

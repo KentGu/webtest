@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/exposureManagement.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <collateralPreference id="setWorkflowDisbute.WorkflowApplyFourEyes">
+            <collateralRules>
+                <workflowFourEyes>true</workflowFourEyes>
+                <workflowDispute>true</workflowDispute>
+            </collateralRules>
+        </collateralPreference>
+
+        <agreement id="agr27754.otc.net">
+            <agreementId id="agrid">2663</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="recall.agreementRequirement.1m.wrkStatus.Approved.disputeValue.0">
+            <action>Recall</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <wrkStatus>Approved</wrkStatus>
+            <disputeValue>0.00</disputeValue>
+            <counterpartyAmount>0.00</counterpartyAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="callStatus.fullDispute">
+            <callStatus>Full Dispute</callStatus>
+            <comments>t</comments>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="recall.agreementRequirement.1m.wrkStatus.AmendedDispute.disputeValue.0">
+            <action>Recall</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <wrkStatus disable="true">Amended-Dispute</wrkStatus>
+            <disputeValue>0.00</disputeValue>
+            <counterpartyAmount>0.00</counterpartyAmount>
+        </exposureEventDetail>
+
+        <loginCredential id="anotherUser">
+            <username>t27754</username>
+            <password>1</password>
+        </loginCredential>
+
+        <exposureEventDetail id="recall.agreementRequirement.1m.wrkStatus.includeApproved.disputeValue.0">
+            <action>Recall</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <wrkStatus apply="true" variation="Approved,Amended-Dispute"/>
+            <disputeValue>0.00</disputeValue>
+            <counterpartyAmount>0.00</counterpartyAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="recall.agreementRequirement.1m.wrkStatus.AmendedDispute.disputeValue.0.anotherUser">
+            <action>Recall</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <wrkStatus>Amended-Dispute</wrkStatus>
+            <disputeValue>0.00</disputeValue>
+            <counterpartyAmount>0.00</counterpartyAmount>
+        </exposureEventDetail>
+
+        <approvalManagerWorkflowSearch id="agr27754">
+            <systemId ref="agrid"/>
+        </approvalManagerWorkflowSearch>
+
+        <approvalManagerWorkflowSearchResult id="searchResult.recall">
+            <action>Recall</action>
+            <workflowStatus>Amended-Dispute</workflowStatus>
+        </approvalManagerWorkflowSearchResult>
+
+        <exposureEventDetail id="recall.agreementRequirement.1m.wrkStatus.approved.callStatus.fullDispute">
+            <action>Recall</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Full Dispute</callStatus>
+            <wrkStatus>Approved</wrkStatus>
+            <disputeValue>0.00</disputeValue>
+            <counterpartyAmount>0.00</counterpartyAmount>
+        </exposureEventDetail>
+
+    </scenarioData>
+</dataBean>

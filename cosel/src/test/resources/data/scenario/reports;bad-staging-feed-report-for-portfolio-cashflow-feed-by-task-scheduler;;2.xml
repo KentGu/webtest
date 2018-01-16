@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+
+        <taskSchedulerDetail id="task.scheduler.import.portfolio.cashflow">
+            <type>Task Manager</type>
+            <taskName>Import Portfolio Cashflow</taskName>
+            <additionalInfo id="task.scheduler.import.portfolio.cashflow.server.path">/home/ec2-user/TaskScheduler/ImportCashflow</additionalInfo>
+        </taskSchedulerDetail>
+
+        <feedPortfolioCashflow id="task.feed.portfolio.cashflow">
+            <agreement_id>a</agreement_id>
+            <legal_id></legal_id>
+            <component></component>
+            <amount></amount>
+            <currency></currency>
+            <model></model>
+        </feedPortfolioCashflow>
+
+        <feedPortfolioCashflow id="task.feed.modified.incorrect.staging.report">
+            <rowNumber>2</rowNumber>
+            <failureReason ref="failure.reason1"/>
+            <agreement_id></agreement_id>
+            <legal_id>F13658AgrForCashflowExtId</legal_id>
+            <component>PAI</component>
+            <amount>b</amount>
+            <currency></currency>
+            <model></model>
+        </feedPortfolioCashflow>
+
+        <feedPortfolioCashflow id="task.feed.modified.correct.staging.report">
+            <rowNumber>2</rowNumber>
+            <failureReason ref="failure.reason2"/>
+            <agreement_id></agreement_id>
+            <legal_id>F13658AgrForCashflowExtId</legal_id>
+            <component>Upfront Fee</component>
+            <amount>888</amount>
+            <currency></currency>
+            <model></model>
+        </feedPortfolioCashflow>
+
+        <badStagingFeedReportFilter id="search.by.feed.portfolio.cashflow">
+            <feedTask>Feed Portfolio Cashflow</feedTask>
+        </badStagingFeedReportFilter>
+
+        <variable id="badStagingFeedReportPath"/>
+
+        <variable id="file.name"/>
+
+        <taskSchedulerMessage id="feed.xls.unsuccessful">
+            <message>Market Data: Import Portfolio Cashflow: Imported 0 Portfolio Cashflow from :(\S+).xls</message>
+        </taskSchedulerMessage>
+
+        <reportValidationRules id="reportRule1">
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Failure reason</fieldName>
+                    <value id="failure.reason1">[Column: 4] amount - Field is compulsory but no value was found</value>
+                </field>
+            </reportValidationRule>
+        </reportValidationRules>
+
+        <reportValidationRules id="reportRule2">
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Failure reason</fieldName>
+                    <value id="failure.reason2">[Column: 4] Cannot parse b as number</value>
+                </field>
+            </reportValidationRule>
+        </reportValidationRules>
+
+        <agreementSearch id = "search.agr.for.cashflow.feed">
+            <description>
+                <filter>F13658AgrForCashflowDesc</filter>
+                <linkText>F13658AgrForCashflowDesc</linkText>
+            </description>
+        </agreementSearch>
+
+        <agreementSearchResult id = "search.agr.for.cashflow.feed.result">
+            <externalId>F13658AgrForCashflowExtId</externalId>
+        </agreementSearchResult>
+
+        <agreementStatement id="upfront.fee.equals.to.888">
+            <marginCallCalculation>
+                <fcmReq>
+                    <upfrontFee>888</upfrontFee>
+                </fcmReq>
+            </marginCallCalculation>
+        </agreementStatement>
+
+    </scenarioData>
+</dataBean>

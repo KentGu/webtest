@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <letterConfiguration id="return.tickCreateSystemDraft.delivery.tickCreateSystemDraft">
+            <marginLetter>
+                <letterType>Return</letterType>
+                <createSystemDraft>true</createSystemDraft>
+            </marginLetter>
+            <marginLetter>
+                <letterType>Delivery</letterType>
+                <createSystemDraft>true</createSystemDraft>
+            </marginLetter>
+        </letterConfiguration>
+
+        <agreement id="agr31331.otc.notnet.grossIM">
+            <agreementId id="agrid">2634</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="vm.delivery.agreementRequirement.1m.pendingReview">
+            <action>VM Delivery</action>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.delivery.agreementRequirement.1.5m.pendingReview">
+            <action>IM Delivery</action>
+            <agreementRequirement>-1,500,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.agreementRequirement.1m.pendingReview.2">
+            <action>VM Delivery</action>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.delivery.agreementRequirement.1.5m.pendingReview.2">
+            <action>IM Delivery</action>
+            <agreementRequirement>-1,500,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="noCall">
+            <action>IM ITM No Calls</action>
+            <agreementRequirement>0.00</agreementRequirement>
+            <callStatus>No Call Required </callStatus>
+        </exposureEventDetail>
+
+        <marginLetter id="createDeliveryLetter">
+            <letterType>Margin Delivery</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <assetHoldingsandValuationReport>true</assetHoldingsandValuationReport>
+                </emailAttachments>
+            </letterSetupDetails>
+        </marginLetter>
+
+        <exposureEventDetail id="vm.delivery.agreementRequirement.1m.MarginRequestConfirmed">
+            <action>VM Delivery</action>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <callStatus>Margin Request Confirmed</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.delivery.agreementRequirement.1.5m.MarginRequestConfirmed">
+            <action>IM Delivery</action>
+            <agreementRequirement>-1,500,000.00</agreementRequirement>
+            <callStatus>Margin Request Confirmed</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.agreementRequirement.1m.MarginRequestConfirmed.2">
+            <action>VM Delivery</action>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <callStatus>Margin Request Confirmed</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.delivery.agreementRequirement.1.5m.MarginRequestConfirmed.2">
+            <action>IM Delivery</action>
+            <agreementRequirement>-1,500,000.00</agreementRequirement>
+            <callStatus>Margin Request Confirmed</callStatus>
+        </exposureEventDetail>
+
+        <agreement id="agr31331.otc.notnet.gross">
+            <agreementId id="agrid">2635</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="vm.return.agreementRequirement.3m.pendingReview">
+            <action>VM Return</action>
+            <agreementRequirement>-3,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.return.agreementRequirement.2m.pendingReview">
+            <action>IM Return</action>
+            <agreementRequirement>-2,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <marginLetter id="createReturnLetter.applyIMReturn.1k.applyVMReturn.2k">
+            <letterType>Margin Return</letterType>
+            <requestTypeAndAssetSelection>
+                <eligibleAssetSelection>
+                    <movementAssets>
+                        <eligibleAssetSelectionDetail>
+                            <vmNorminalAmountRequired>1k</vmNorminalAmountRequired>
+                            <imNorminalAmountRequired>2k</imNorminalAmountRequired>
+                        </eligibleAssetSelectionDetail>
+                        <eligibleAsset>
+                            <instrumentId>qtp-Bond-Usd-Instrument</instrumentId>
+                        </eligibleAsset>
+                    </movementAssets>
+                </eligibleAssetSelection>
+                <alertHandling>
+                    <accept>true</accept>
+                </alertHandling>
+            </requestTypeAndAssetSelection>
+            <!--<letterSetupDetails>-->
+                <!--<emailAttachments>-->
+                    <!--<assetHoldingsandValuationReport>true</assetHoldingsandValuationReport>-->
+                <!--</emailAttachments>-->
+            <!--</letterSetupDetails>-->
+        </marginLetter>
+
+        <exposureEventDetail id="vm.return.agreementRequirement.3m.MarginRequestConfirmed">
+            <action>VM Return</action>
+            <agreementRequirement>-3,000,000.00</agreementRequirement>
+            <callStatus>Margin Request Confirmed</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.return.agreementRequirement.2m.MarginRequestConfirmed">
+            <action>IM Return</action>
+            <agreementRequirement>-2,000,000.00</agreementRequirement>
+            <callStatus>Margin Request Confirmed</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.return.agreementRequirement.3m.MarginRequestConfirmed.2">
+            <action>VM Return</action>
+            <agreementRequirement>-3,000,000.00</agreementRequirement>
+            <callStatus>Margin Request Confirmed</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.return.agreementRequirement.2m.MarginRequestConfirmed.2">
+            <action>IM Return</action>
+            <agreementRequirement>-2,000,000.00</agreementRequirement>
+            <callStatus>Margin Request Confirmed</callStatus>
+        </exposureEventDetail>
+
+
+        <marginLetter id="createCallAndRecallLetter.norminalAmountRequired.apply.2k">
+            <letterType>Margin Call &amp; Recall</letterType>
+            <requestTypeAndAssetSelection>
+                <eligibleAssetSelection>
+                    <movementAssets>
+                        <eligibleAssetSelectionDetail>
+                            <norminalAmountRequired>2k</norminalAmountRequired>
+                        </eligibleAssetSelectionDetail>
+                        <eligibleAsset>
+                            <instrumentId id="bond.usd.instrumentId">qtp-Bond-Usd-Instrument</instrumentId>
+                        </eligibleAsset>
+                    </movementAssets>
+                </eligibleAssetSelection>
+                <alertHandling>
+                    <accept>true</accept>
+                </alertHandling>
+                <eligibleAssetSelection>
+                </eligibleAssetSelection>
+            </requestTypeAndAssetSelection>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <assetHoldingsandValuationReport>true</assetHoldingsandValuationReport>
+                </emailAttachments>
+            </letterSetupDetails>
+        </marginLetter>
+
+        <assetBookingSummary id="asset.type.bond.usd">
+            <assetType>qtp_bond_usd</assetType>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="bond.usd.return.systemDraft.vm.2k.im.1k">
+            <assetType>qtp_bond_usd</assetType>
+            <!--<instrumentId>qtp-Bond-Usd-Instrument</instrumentId>-->
+            <movement>Return</movement>
+            <status>System Draft</status>
+            <bookingSource>Auto Book</bookingSource>
+            <vmMarketValue>2,000.00</vmMarketValue>
+            <imMarketValue>1,000.00</imMarketValue>
+        </assetBookingSummary>
+
+        <agreement id="agr31331.otc.notnet.grossIM.2">
+            <agreementId id="agrid">2636</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="vm.return.agreementRequirement.3m.pendingReview.2">
+            <action>VM Return</action>
+            <agreementRequirement>-3,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.return.agreementRequirement.2m.pendingReview.2">
+            <action>IM Return</action>
+            <agreementRequirement>-2,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <marginLetter id="createDeliveryAndReturnLetter.VMReturn.4k.IMReturn.3k.VMDelivery.2k.IMDelivery.1k">
+            <letterType>Margin Return &amp; Delivery</letterType>
+            <requestTypeAndAssetSelection>
+                <eligibleAssetSelection>
+                    <movementAssets>
+                        <eligibleAssetSelectionDetail>
+                            <vmNorminalAmountRequired>4k</vmNorminalAmountRequired>
+                            <imNorminalAmountRequired>3k</imNorminalAmountRequired>
+                        </eligibleAssetSelectionDetail>
+                        <eligibleAsset>
+                            <instrumentId id="bond.usd.instrumentId">qtp-Bond-Usd-Instrument</instrumentId>
+                        </eligibleAsset>
+                    </movementAssets>
+                </eligibleAssetSelection>
+                <eligibleAssetSelection>
+                    <movementType>Deliveries</movementType>
+                    <movementAssets>
+                        <eligibleAssetSelectionDetail>
+                            <vmNorminalAmountRequired>2k</vmNorminalAmountRequired>
+                            <imNorminalAmountRequired>1k</imNorminalAmountRequired>
+                        </eligibleAssetSelectionDetail>
+                        <instrumentSelectionSearch>
+                            <position>All</position>
+                            <instrumentId>
+                                <filter>qtp-Bond-Usd-Instrument</filter>
+                            </instrumentId>
+                        </instrumentSelectionSearch>
+                        <instrumentSelectionSearchResult>
+                            <instrumentId>qtp-Bond-Usd-Instrument</instrumentId>
+                        </instrumentSelectionSearchResult>
+                    </movementAssets>
+                </eligibleAssetSelection>
+                <alertHandling>
+                    <accept>true</accept>
+                </alertHandling>
+            </requestTypeAndAssetSelection>
+        </marginLetter>
+
+        <assetBookingSummary id="bond.usd.return.systemDraft.vm.4k.im.3k">
+            <assetType>qtp_bond_usd</assetType>
+            <!--<instrumentId>qtp-Bond-Usd-Instrument</instrumentId>-->
+            <movement>Return</movement>
+            <status>System Draft</status>
+            <bookingSource>Auto Book</bookingSource>
+            <vmMarketValue>4,000.00</vmMarketValue>
+            <imMarketValue>3,000.00</imMarketValue>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="bond.usd.delivery.systemDraft.vm.2k.im.1k">
+            <assetType>qtp_bond_usd</assetType>
+            <!--<instrumentId>qtp-Bond-Usd-Instrument</instrumentId>-->
+            <movement>Delivery</movement>
+            <status>System Draft</status>
+            <bookingSource>Auto Book</bookingSource>
+            <vmMarketValue>2,000.00</vmMarketValue>
+            <imMarketValue>1,000.00</imMarketValue>
+        </assetBookingSummary>
+
+
+
+    </scenarioData>
+</dataBean>

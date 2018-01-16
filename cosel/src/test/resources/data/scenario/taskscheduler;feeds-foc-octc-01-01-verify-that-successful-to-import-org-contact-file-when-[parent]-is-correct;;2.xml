@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/taskScheduler.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <feedOrganisationContact id="feed.organisation.contact.normal">
+            <orgHeader>
+                <orgCode id="feed.organisation.contact.normal.code">T3740Organisation1CodeTask</orgCode>
+                <longName id="feed.organisation.contact.normal.lname">T3740Organisation1LongNameTask</longName>
+                <shortName id="feed.organisation.contact.normal.sname">T3740Organisation1ShortNameTask</shortName>
+            </orgHeader>
+            <orgRole id="feed.organisation.contact.normal.role">Collateral relationship</orgRole>
+            <orgAddress>
+                <contactName id="feed.organisation.contact.normal.contact.name">testContact</contactName>
+                <address id="feed.organisation.contact.normal.address">testAddress</address>
+                <title id="feed.organisation.contact.normal.title">testTitle</title>
+                <label id="feed.organisation.contact.normal.label">testLabel</label>
+                <telephoneNumber id="feed.organisation.contact.normal.tel">123456789</telephoneNumber>
+                <faxNumber id="feed.organisation.contact.normal.fax">987654321</faxNumber>
+                <email id="feed.organisation.contact.normal.email">test@test.com</email>
+                <ftp id="feed.organisation.contact.normal.ftp">ftp://test.com</ftp>
+                <notes id="feed.organisation.contact.normal.note">testNote</notes>
+                <enabled>true</enabled>
+            </orgAddress>
+        </feedOrganisationContact>
+
+        <feedStatus id="feed.organisation.contact.normal.status">
+            <status>Successful</status>
+            <valuationFile ref="feed.organisation.contact.normal.result.file"/>
+            <description>Organisation</description>
+            <successfulFeed>
+                <total>1</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <organisationSearch id="feed.organisation.contact.normal.search">
+            <criteria>Exactly matching</criteria>
+            <type>Short Name</type>
+            <filter ref="feed.organisation.contact.normal.sname"/>
+            <linkText ref="feed.organisation.contact.normal.sname"/>
+        </organisationSearch>
+
+        <organisation id="check.feed.organisation.contact.normal">
+            <shortName ref="feed.organisation.contact.normal.sname"/>
+            <longName ref="feed.organisation.contact.normal.lname"/>
+            <code ref="feed.organisation.contact.normal.code"/>
+            <role ref="feed.organisation.contact.normal.role"/>
+            <address>
+                <contact ref="feed.organisation.contact.normal.contact.name"/>
+                <address1 ref="feed.organisation.contact.normal.address"/>
+                <title ref="feed.organisation.contact.normal.title"/>
+                <label ref="feed.organisation.contact.normal.label"/>
+                <tel ref="feed.organisation.contact.normal.tel"/>
+                <fax ref="feed.organisation.contact.normal.fax"/>
+                <email ref="feed.organisation.contact.normal.email"/>
+                <ftp ref="feed.organisation.contact.normal.ftp"/>
+                <notes ref="feed.organisation.contact.normal.note"/>
+            </address>
+        </organisation>
+
+        <taskSchedulerDetail id="task.feed.organisation.contact">
+            <type>Task Manager</type>
+            <taskName>Import Organisations 1</taskName>
+            <additionalInfo id="task.feed.agreement.server.path">/home/ec2-user/Feed/FeedOrganisation</additionalInfo>
+        </taskSchedulerDetail>
+
+        <taskSchedulerMessage id="task.feed.organisation.contact.message">
+            <message>(Organisation: Imported 0 Organisations from file:(\S+).xml - Modified 1 entries.|Organisation: Imported 1 Organisations from file:(\S+).xml)</message>
+        </taskSchedulerMessage>
+
+        <variable id="file.path"/>
+    </scenarioData>
+</dataBean>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/approvalManager.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <collateralPreference id="collateral.preference.workflow.approvals">
+            <collateralRules>
+                <workflowOverwrite>true</workflowOverwrite>
+                <workflowWaive>true</workflowWaive>
+                <workflowDispute>true</workflowDispute>
+            </collateralRules>
+        </collateralPreference>
+
+        <agreement>
+            <principal>
+                <filter id="agreement.principal" ref="org.p1.lname"/>
+            </principal>
+            <counterparty>
+                <filter id="agreement.counterparty" ref="org.c1.lname"/>
+            </counterparty>
+            <agreementDescription id="agreement.description">T28965_Agreement_Description</agreementDescription>
+            <externalId id="agreement.external.id">T28965_External_ID</externalId>
+            <agreementId id="agreement.id">1019</agreementId>
+        </agreement>
+
+        <exposureEventSearch id="exposure.manager.event.search">
+            <agrId ref="agreement.id"/>
+        </exposureEventSearch>
+
+        <exposureEventDetail id="exposure.vm.call.event">
+            <eventId>25014</eventId>
+            <action id="em.event.action.vm.call">VM Call(Deficit)</action>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="exposure.cash.call.event">
+            <eventId>25015</eventId>
+            <action id="em.event.action.cash.call">Cash Call(Deficit)</action>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="exposure.fee.call.event">
+            <eventId>25016</eventId>
+            <action id="em.event.action.fee.call">Fee Call(Deficit)</action>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="exposure.event.call.status.full.dispute">
+            <callStatus>Full Dispute</callStatus>
+            <comments>comments</comments>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="exposure.event.call.status.waived">
+            <callStatus>Waived</callStatus>
+            <comments>comments</comments>
+        </exposureEventDetail>
+
+        <approvalManagerWorkflowSearch id="approval.manager.workflow.search.amended.dispute">
+            <principal>
+                <type>Short Name</type>
+                <criteria>Exactly matching</criteria>
+                <filter ref="agreement.principal"/>
+                <linkText ref="agreement.principal"/>
+            </principal>
+            <counterparty>
+                <type>Short Name</type>
+                <criteria>Exactly matching</criteria>
+                <filter ref="agreement.counterparty"/>
+                <linkText ref="agreement.counterparty"/>
+            </counterparty>
+            <description>
+                <type>Exactly matching</type>
+                <filter ref="agreement.description"/>
+                <linkText ref="agreement.description"/>
+            </description>
+            <systemId ref="agreement.id"/>
+            <status>Amended-Dispute</status>
+            <externalId>
+                <type>Exactly matching</type>
+                <filter ref="agreement.external.id"/>
+                <linkText ref="agreement.external.id"/>
+            </externalId>
+        </approvalManagerWorkflowSearch>
+
+        <approvalManagerWorkflowSearch id="approval.manager.workflow.search.all.status">
+            <principal>
+                <type>Short Name</type>
+                <criteria>Exactly matching</criteria>
+                <filter ref="agreement.principal"/>
+                <linkText ref="agreement.principal"/>
+            </principal>
+            <counterparty>
+                <type>Short Name</type>
+                <criteria>Exactly matching</criteria>
+                <filter ref="agreement.counterparty"/>
+                <linkText ref="agreement.counterparty"/>
+            </counterparty>
+            <description>
+                <type>Exactly matching</type>
+                <filter ref="agreement.description"/>
+                <linkText ref="agreement.description"/>
+            </description>
+            <systemId ref="agreement.id"/>
+            <externalId>
+                <type>Exactly matching</type>
+                <filter ref="agreement.external.id"/>
+                <linkText ref="agreement.external.id"/>
+            </externalId>
+        </approvalManagerWorkflowSearch>
+
+        <approvalManagerWorkflowSearchResult id="approval.manager.workflow.vm.call.3m">
+            <principal ref="agreement.principal"/>
+            <counterparty ref="agreement.counterparty"/>
+            <description ref="agreement.description"/>
+            <workflowStatus>Amended-Dispute</workflowStatus>
+            <action ref="em.event.action.vm.call"/>
+            <userAgreedAmount>3,000,000.00</userAgreedAmount>
+            <agreementId ref="agreement.id"/>
+            <externalId ref="agreement.external.id"/>
+        </approvalManagerWorkflowSearchResult>
+
+        <approvalManagerWorkflowSearchResult id="approval.manager.workflow.vm.call.9m">
+            <principal ref="agreement.principal"/>
+            <counterparty ref="agreement.counterparty"/>
+            <description ref="agreement.description"/>
+            <workflowStatus>Amended-Dispute</workflowStatus>
+            <action ref="em.event.action.vm.call"/>
+            <userAgreedAmount>9,000,000.00</userAgreedAmount>
+            <agreementId ref="agreement.id"/>
+            <externalId ref="agreement.external.id"/>
+        </approvalManagerWorkflowSearchResult>
+
+        <approvalManagerWorkflowSearchResult id="approval.manager.workflow.vm.call.6m">
+            <principal ref="agreement.principal"/>
+            <counterparty ref="agreement.counterparty"/>
+            <description ref="agreement.description"/>
+            <workflowStatus>Amended-Dispute</workflowStatus>
+            <action ref="em.event.action.vm.call"/>
+            <userAgreedAmount>6,000,000.00</userAgreedAmount>
+            <agreementId ref="agreement.id"/>
+            <externalId ref="agreement.external.id"/>
+        </approvalManagerWorkflowSearchResult>
+
+        <approvalManagerWorkflowSearchResult id="approval.manager.workflow.cash.call.1m">
+            <principal ref="agreement.principal"/>
+            <counterparty ref="agreement.counterparty"/>
+            <description ref="agreement.description"/>
+            <workflowStatus>Amended-Dispute</workflowStatus>
+            <action ref="em.event.action.cash.call"/>
+            <userAgreedAmount>1,000,000.00</userAgreedAmount>
+            <agreementId ref="agreement.id"/>
+            <externalId ref="agreement.external.id"/>
+        </approvalManagerWorkflowSearchResult>
+
+        <approvalManagerWorkflowSearchResult id="approval.manager.workflow.cash.call.5m">
+            <principal ref="agreement.principal"/>
+            <counterparty ref="agreement.counterparty"/>
+            <description ref="agreement.description"/>
+            <workflowStatus>Amended-Dispute</workflowStatus>
+            <action ref="em.event.action.cash.call"/>
+            <userAgreedAmount>5,000,000.00</userAgreedAmount>
+            <agreementId ref="agreement.id"/>
+            <externalId ref="agreement.external.id"/>
+        </approvalManagerWorkflowSearchResult>
+
+        <approvalManagerWorkflowSearchResult id="approval.manager.workflow.cash.call.4m">
+            <principal ref="agreement.principal"/>
+            <counterparty ref="agreement.counterparty"/>
+            <description ref="agreement.description"/>
+            <workflowStatus>Amended-Dispute</workflowStatus>
+            <action ref="em.event.action.cash.call"/>
+            <userAgreedAmount>4,000,000.00</userAgreedAmount>
+            <agreementId ref="agreement.id"/>
+            <externalId ref="agreement.external.id"/>
+        </approvalManagerWorkflowSearchResult>
+
+        <approvalManagerWorkflowSearchResult id="approval.manager.workflow.fee.call.2m">
+            <principal ref="agreement.principal"/>
+            <counterparty ref="agreement.counterparty"/>
+            <description ref="agreement.description"/>
+            <workflowStatus>Amended-Waived</workflowStatus>
+            <action ref="em.event.action.fee.call"/>
+            <userAgreedAmount>2,000,000.00</userAgreedAmount>
+            <agreementId ref="agreement.id"/>
+            <externalId ref="agreement.external.id"/>
+        </approvalManagerWorkflowSearchResult>
+
+        <approvalManagerWorkflowSearchResult id="approval.manager.workflow.fee.call.7m">
+            <principal ref="agreement.principal"/>
+            <counterparty ref="agreement.counterparty"/>
+            <description ref="agreement.description"/>
+            <workflowStatus>Amended-Waived</workflowStatus>
+            <action ref="em.event.action.fee.call"/>
+            <userAgreedAmount>7,000,000.00</userAgreedAmount>
+            <agreementId ref="agreement.id"/>
+            <externalId ref="agreement.external.id"/>
+        </approvalManagerWorkflowSearchResult>
+
+        <approvalManagerWorkflowSearchResult id="approval.manager.workflow.fee.call.5m">
+            <principal ref="agreement.principal"/>
+            <counterparty ref="agreement.counterparty"/>
+            <description ref="agreement.description"/>
+            <workflowStatus>Amended-Waived</workflowStatus>
+            <action ref="em.event.action.fee.call"/>
+            <userAgreedAmount>5,000,000.00</userAgreedAmount>
+            <agreementId ref="agreement.id"/>
+            <externalId ref="agreement.external.id"/>
+        </approvalManagerWorkflowSearchResult>
+
+        <approvalManagerWorkflowSearchResult id="approve.all.ok">
+            <alertHandling>
+                <accept>true</accept>
+                <content>^Do you want to approve all\?$</content>
+            </alertHandling>
+        </approvalManagerWorkflowSearchResult>
+    </scenarioData>
+</dataBean>

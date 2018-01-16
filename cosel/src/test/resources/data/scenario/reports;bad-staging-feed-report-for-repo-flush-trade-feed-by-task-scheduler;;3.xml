@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+
+        <organisationGlobalPreference id="feed.system.for.f13658.flush.trade1">
+            <defaultExternalSystem>FeedSystemForF13658FlushTrade1</defaultExternalSystem>
+        </organisationGlobalPreference>
+
+        <agreementExposureSummary id="ProductQTP">
+            <productList>
+                <productType ref="product.qtp.pro1.name"/>
+            </productList>
+        </agreementExposureSummary>
+
+        <badStagingFeedReportFilter id="search.by.qtp.repo">
+            <feedTask>Feed Repo/ETF/SBL Trades</feedTask>
+            <feedExternalSystem>FeedSystemForF13658FlushTrade1</feedExternalSystem>
+        </badStagingFeedReportFilter>
+
+        <badStagingFeedReportFilter id="search.by.qtp.repo">
+            <feedTask>Feed Repo/ETF/SBL Trades</feedTask>
+            <feedExternalSystem>FeedSystemForF13658FlushTrade1</feedExternalSystem>
+        </badStagingFeedReportFilter>
+
+        <variable id="badStagingFeedReportPath"/>
+
+
+        <taskSchedulerDetail id="task.scheduler.import.repo.flush.trade">
+            <type>Task Manager</type>
+            <taskName>Import Repo/ETF/SBL Trades</taskName>
+            <additionalInfo id="task.import.repo.flush.trade.server.path">/home/ec2-user/TaskScheduler/ImportRepoFlushTrade</additionalInfo>
+        </taskSchedulerDetail>
+
+        <feedRepoTrade id="task.flush.feed.repo.trade">
+            <legal_id></legal_id>
+            <tradeRef></tradeRef>
+            <tradeRef2></tradeRef2>
+            <principal></principal>
+            <cptyRef></cptyRef>
+            <counterparty></counterparty>
+            <orgCode></orgCode>
+            <product></product>
+            <underlying></underlying>
+            <strategy></strategy>
+            <tradeDate>a</tradeDate>
+            <startDate>b</startDate>
+            <endDate>c</endDate>
+            <instrumentId></instrumentId>
+            <notional>d</notional>
+            <couponAccrual>e</couponAccrual>
+            <securityHaircut>f</securityHaircut>
+            <tradePrice>g</tradePrice>
+            <cleanPrice>h</cleanPrice>
+            <priceSource></priceSource>
+            <securitySettlementStartLeg></securitySettlementStartLeg>
+            <securitySettlementCloseLeg></securitySettlementCloseLeg>
+            <cashAssetType></cashAssetType>
+            <openCash>i</openCash>
+            <repoInterestAccrued>j</repoInterestAccrued>
+            <repoRate>k</repoRate>
+            <closeCash>l</closeCash>
+            <cashAccrualBasis></cashAccrualBasis>
+            <cashHaircut>m</cashHaircut>
+            <cashSettlementStartLeg></cashSettlementStartLeg>
+            <cashSettlementCloseLeg></cashSettlementCloseLeg>
+            <heldOverCouponAdj>n</heldOverCouponAdj>
+            <couponReinvestment>o</couponReinvestment>
+            <mtmValuation>p</mtmValuation>
+            <mtmValuationCcy></mtmValuationCcy>
+            <cptyMtmValuation>q</cptyMtmValuation>
+            <cptyMtmValuationCcy></cptyMtmValuationCcy>
+            <indepMtmValuation>r</indepMtmValuation>
+            <indepMtmValuationCcy></indepMtmValuationCcy>
+            <valuationRule></valuationRule>
+            <operation></operation>
+            <mtmValuationDate>s</mtmValuationDate>
+            <system></system>
+            <Comment></Comment>
+            <finra4210Exempt></finra4210Exempt>
+            <misc1></misc1>
+            <misc2></misc2>
+            <misc3></misc3>
+            <misc4></misc4>
+            <misc5></misc5>
+            <misc6></misc6>
+            <misc7></misc7>
+            <misc8></misc8>
+            <misc9></misc9>
+            <misc10></misc10>
+            <misc11></misc11>
+            <misc12></misc12>
+            <misc13></misc13>
+            <misc14></misc14>
+            <misc15></misc15>
+            <misc16></misc16>
+            <misc17></misc17>
+            <misc20></misc20>
+            <misc21>t</misc21>
+            <misc22>u</misc22>
+            <misc23>v</misc23>
+            <misc24>w</misc24>
+            <misc25>x</misc25>
+            <misc26>y</misc26>
+            <misc27>z</misc27>
+            <misc28>ab</misc28>
+            <misc29>cd</misc29>
+            <misc30>ef</misc30>
+        </feedRepoTrade>
+
+        <feedRepoTrade id="task.feed.modified.incorrect.staging.report">
+            <rowNumber>2</rowNumber>
+            <failureReason ref="failure.reason1"/>
+            <legal_id>F13658AgrForRepoTradeExtId</legal_id>
+            <tradeRef></tradeRef>
+            <tradeRef2></tradeRef2>
+            <principal></principal>
+            <cptyRef></cptyRef>
+            <counterparty></counterparty>
+            <orgCode></orgCode>
+            <product ref="product.qtp.pro1.name"/>
+            <underlying></underlying>
+            <strategy></strategy>
+            <tradeDate>2017-05-09</tradeDate>
+            <startDate>2017-05-09</startDate>
+            <endDate>2020-05-09</endDate>
+            <instrumentId ref="bond.instrument1.name"/>
+            <notional></notional>
+            <couponAccrual></couponAccrual>
+            <securityHaircut></securityHaircut>
+            <tradePrice></tradePrice>
+            <cleanPrice></cleanPrice>
+            <priceSource></priceSource>
+            <securitySettlementStartLeg></securitySettlementStartLeg>
+            <securitySettlementCloseLeg></securitySettlementCloseLeg>
+            <cashAssetType>qtp_cash_usd</cashAssetType>
+            <openCash>1000</openCash>
+            <repoInterestAccrued></repoInterestAccrued>
+            <repoRate></repoRate>
+            <closeCash></closeCash>
+            <cashAccrualBasis></cashAccrualBasis>
+            <cashHaircut></cashHaircut>
+            <cashSettlementStartLeg></cashSettlementStartLeg>
+            <cashSettlementCloseLeg></cashSettlementCloseLeg>
+            <heldOverCouponAdj></heldOverCouponAdj>
+            <couponReinvestment></couponReinvestment>
+            <mtmValuation></mtmValuation>
+            <mtmValuationCcy></mtmValuationCcy>
+            <cptyMtmValuation></cptyMtmValuation>
+            <cptyMtmValuationCcy></cptyMtmValuationCcy>
+            <indepMtmValuation></indepMtmValuation>
+            <indepMtmValuationCcy></indepMtmValuationCcy>
+            <valuationRule></valuationRule>
+            <operation>A</operation>
+            <mtmValuationDate>s</mtmValuationDate>
+            <system>QTP</system>
+            <Comment></Comment>
+            <finra4210Exempt></finra4210Exempt>
+            <misc1></misc1>
+            <misc2></misc2>
+            <misc3></misc3>
+            <misc4></misc4>
+            <misc5></misc5>
+            <misc6></misc6>
+            <misc7></misc7>
+            <misc8></misc8>
+            <misc9></misc9>
+            <misc10></misc10>
+            <misc11></misc11>
+            <misc12></misc12>
+            <misc13></misc13>
+            <misc14></misc14>
+            <misc15></misc15>
+            <misc16></misc16>
+            <misc17></misc17>
+            <misc20></misc20>
+            <misc21></misc21>
+            <misc22></misc22>
+            <misc23></misc23>
+            <misc24></misc24>
+            <misc25></misc25>
+            <misc26></misc26>
+            <misc27></misc27>
+            <misc28></misc28>
+            <misc29></misc29>
+            <misc30></misc30>
+        </feedRepoTrade>
+
+        <feedRepoTrade id="task.feed.modified.correct.staging.report">
+            <rowNumber>2</rowNumber>
+            <failureReason ref="failure.reason2"/>
+            <legal_id>F13658AgrForRepoTradeExtId</legal_id>
+            <tradeRef id="trade.ref.id" random="true"/>
+            <tradeRef2></tradeRef2>
+            <principal></principal>
+            <cptyRef></cptyRef>
+            <counterparty></counterparty>
+            <orgCode></orgCode>
+            <product ref="product.qtp.pro1.name"/>
+            <underlying></underlying>
+            <strategy></strategy>
+            <tradeDate>2017-05-10</tradeDate>
+            <startDate>2017-05-10</startDate>
+            <endDate>2020-05-10</endDate>
+            <instrumentId ref="bond.instrument1.name"/>
+            <notional>2000</notional>
+            <couponAccrual></couponAccrual>
+            <securityHaircut></securityHaircut>
+            <tradePrice></tradePrice>
+            <cleanPrice></cleanPrice>
+            <priceSource></priceSource>
+            <securitySettlementStartLeg></securitySettlementStartLeg>
+            <securitySettlementCloseLeg></securitySettlementCloseLeg>
+            <cashAssetType>qtp_cash_usd</cashAssetType>
+            <openCash>2000</openCash>
+            <repoInterestAccrued></repoInterestAccrued>
+            <repoRate>20</repoRate>
+            <closeCash></closeCash>
+            <cashAccrualBasis></cashAccrualBasis>
+            <cashHaircut></cashHaircut>
+            <cashSettlementStartLeg></cashSettlementStartLeg>
+            <cashSettlementCloseLeg></cashSettlementCloseLeg>
+            <heldOverCouponAdj></heldOverCouponAdj>
+            <couponReinvestment></couponReinvestment>
+            <mtmValuation></mtmValuation>
+            <mtmValuationCcy></mtmValuationCcy>
+            <cptyMtmValuation></cptyMtmValuation>
+            <cptyMtmValuationCcy></cptyMtmValuationCcy>
+            <indepMtmValuation></indepMtmValuation>
+            <indepMtmValuationCcy></indepMtmValuationCcy>
+            <valuationRule></valuationRule>
+            <operation>A</operation>
+            <mtmValuationDate></mtmValuationDate>
+            <system>FeedSystemForF13658FlushTrade1</system>
+            <Comment></Comment>
+            <finra4210Exempt></finra4210Exempt>
+            <misc1></misc1>
+            <misc2></misc2>
+            <misc3></misc3>
+            <misc4></misc4>
+            <misc5></misc5>
+            <misc6></misc6>
+            <misc7></misc7>
+            <misc8></misc8>
+            <misc9></misc9>
+            <misc10></misc10>
+            <misc11></misc11>
+            <misc12></misc12>
+            <misc13></misc13>
+            <misc14></misc14>
+            <misc15></misc15>
+            <misc16></misc16>
+            <misc17></misc17>
+            <misc20></misc20>
+            <misc21></misc21>
+            <misc22></misc22>
+            <misc23></misc23>
+            <misc24></misc24>
+            <misc25></misc25>
+            <misc26></misc26>
+            <misc27></misc27>
+            <misc28></misc28>
+            <misc29></misc29>
+            <misc30></misc30>
+        </feedRepoTrade>
+
+        <variable id="file.name"/>
+
+        <reportValidationRules id="reportRule1">
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field><fieldName>Row number</fieldName><value>2</value></field>
+                <field>
+                    <fieldName>Failure reason</fieldName>
+                    <value id="failure.reason1">[Column: 2] tradeRef - Field is compulsory but no value was found | [Column: 8] product - Field is compulsory but no value was found | [Column: 11] tradeDate - Unable to parse 'a' as date (using format yyyy-MM-dd) | [Column: 12] startDate - Unable to parse 'b' as date (using format yyyy-MM-dd) | [Column: 13] endDate - Unable to parse 'c' as date (using format yyyy-MM-dd) | [Column: 14] instrumentId - Field is compulsory but no value was found | [Column: 42] mtmValuationDate - Unable to parse 's' as date (using format yyyy-MM-dd) | [Column: 44] system - Field is compulsory but no value was found | [Column: 63] misc21 - Unable to parse 't' as number | [Column: 64] misc22 - Unable to parse 'u' as number | [Column: 65] misc23 - Unable to parse 'v' as number | [Column: 66] misc24 - Unable to parse 'w' as number | [Column: 67] misc25 - Unable to parse 'x' as number | [Column: 68] misc26 - Unable to parse 'y' as number | [Column: 69] misc27 - Unable to parse 'z' as number | [Column: 70] misc28 - Unable to parse 'ab' as number | [Column: 71] misc29 - Unable to parse 'cd' as number | [Column: 72] misc30 - Unable to parse 'ef' as number</value>
+                </field>
+                <field><fieldName>legal_id</fieldName><value></value></field>
+                <field><fieldName>tradeRef</fieldName><value></value></field>
+                <field><fieldName>tradeRef2</fieldName><value></value></field>
+                <field><fieldName>principal</fieldName><value></value></field>
+                <field><fieldName>cptyRef</fieldName><value></value></field>
+                <field><fieldName>counterparty</fieldName><value></value></field>
+                <field><fieldName>orgCode</fieldName><value></value></field>
+                <field><fieldName>product</fieldName><value></value></field>
+                <field><fieldName>underlying</fieldName><value></value></field>
+                <field><fieldName>strategy</fieldName><value></value></field>
+                <field><fieldName>tradeDate</fieldName><value>a</value></field>
+                <field><fieldName>startDate</fieldName><value>b</value></field>
+                <field><fieldName>endDate</fieldName><value>c</value></field>
+                <field><fieldName>instrumentId</fieldName><value></value></field>
+                <field><fieldName>notional</fieldName><value>d</value></field>
+                <field><fieldName>couponAccrual</fieldName><value>e</value></field>
+                <field><fieldName>securityHaircut</fieldName><value>f</value></field>
+                <field><fieldName>tradePrice</fieldName><value>g</value></field>
+                <field><fieldName>cleanPrice</fieldName><value>h</value></field>
+                <field><fieldName>priceSource</fieldName><value></value></field>
+                <field><fieldName>securitySettlementStartLeg</fieldName><value></value></field>
+                <field><fieldName>securitySettlementCloseLeg</fieldName><value></value></field>
+                <field><fieldName>cashAssetType</fieldName><value></value></field>
+                <field><fieldName>openCash</fieldName><value>i</value></field>
+                <field><fieldName>repoInterestAccrued</fieldName><value>j</value></field>
+                <field><fieldName>repoRate</fieldName><value>k</value></field>
+                <field><fieldName>closeCash</fieldName><value>l</value></field>
+                <field><fieldName>cashAccrualBasis</fieldName><value></value></field>
+                <field><fieldName>cashHaircut</fieldName><value>m</value></field>
+                <field><fieldName>cashSettlementStartLeg</fieldName><value></value></field>
+                <field><fieldName>cashSettlementCloseLeg</fieldName><value></value></field>
+                <field><fieldName>heldOverCouponAdj</fieldName><value>n</value></field>
+                <field><fieldName>couponReinvestment</fieldName><value>o</value></field>
+                <field><fieldName>mtmValuation</fieldName><value>p</value></field>
+                <field><fieldName>mtmValuationCcy</fieldName><value></value></field>
+                <field><fieldName>cptyMtmValuation</fieldName><value>q</value></field>
+                <field><fieldName>cptyMtmValuationCcy</fieldName><value></value></field>
+                <field><fieldName>indepMtmValuation</fieldName><value>r</value></field>
+                <field><fieldName>indepMtmValuationCcy</fieldName><value></value></field>
+                <field><fieldName>valuationRule</fieldName><value></value></field>
+                <field><fieldName>operation</fieldName><value></value></field>
+                <field><fieldName>mtmValuationDate</fieldName><value>s</value></field>
+                <field><fieldName>system</fieldName><value></value></field>
+                <field><fieldName>Comment</fieldName><value></value></field>
+                <!--<field><fieldName>finra4210Exempt</fieldName><value></value></field>-->
+                <field><fieldName>misc1</fieldName><value></value></field>
+                <field><fieldName>misc2</fieldName><value></value></field>
+                <field><fieldName>misc3</fieldName><value></value></field>
+                <field><fieldName>misc4</fieldName><value></value></field>
+                <field><fieldName>misc5</fieldName><value></value></field>
+                <field><fieldName>misc6</fieldName><value></value></field>
+                <field><fieldName>misc7</fieldName><value></value></field>
+                <field><fieldName>misc8</fieldName><value></value></field>
+                <field><fieldName>misc9</fieldName><value></value></field>
+                <field><fieldName>misc10</fieldName><value></value></field>
+                <field><fieldName>misc11</fieldName><value></value></field>
+                <field><fieldName>misc12</fieldName><value></value></field>
+                <field><fieldName>misc13</fieldName><value></value></field>
+                <field><fieldName>misc14</fieldName><value></value></field>
+                <field><fieldName>misc15</fieldName><value></value></field>
+                <field><fieldName>misc16</fieldName><value></value></field>
+                <field><fieldName>misc17</fieldName><value></value></field>
+                <field><fieldName>misc20</fieldName><value></value></field>
+                <field><fieldName>misc21</fieldName><value>t</value></field>
+                <field><fieldName>misc22</fieldName><value>u</value></field>
+                <field><fieldName>misc23</fieldName><value>v</value></field>
+                <field><fieldName>misc24</fieldName><value>w</value></field>
+                <field><fieldName>misc25</fieldName><value>x</value></field>
+                <field><fieldName>misc26</fieldName><value>y</value></field>
+                <field><fieldName>misc27</fieldName><value>z</value></field>
+                <field><fieldName>misc28</fieldName><value>ab</value></field>
+                <field><fieldName>misc29</fieldName><value>cd</value></field>
+                <field><fieldName>misc30</fieldName><value>ef</value></field>
+            </reportValidationRule>
+        </reportValidationRules>
+
+        <reportValidationRules id="reportRule2">
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field><fieldName>Row number</fieldName><value>2</value></field>
+                <field>
+                    <fieldName>Failure reason</fieldName>
+                    <value id="failure.reason2">[Column: 2] tradeRef - Field is compulsory but no value was found | [Column: 42] mtmValuationDate - Unable to parse 's' as date (using format yyyy-MM-dd)</value>
+                </field>
+                <field><fieldName>legal_id</fieldName><value>F13658AgrForRepoTradeExtId</value></field>
+                <field><fieldName>tradeRef</fieldName><value></value></field>
+                <field><fieldName>tradeRef2</fieldName><value></value></field>
+                <field><fieldName>principal</fieldName><value></value></field>
+                <field><fieldName>cptyRef</fieldName><value></value></field>
+                <field><fieldName>counterparty</fieldName><value></value></field>
+                <field><fieldName>orgCode</fieldName><value></value></field>
+                <field><fieldName>product</fieldName><value>qtp_Pro1</value></field>
+                <field><fieldName>underlying</fieldName><value></value></field>
+                <field><fieldName>strategy</fieldName><value></value></field>
+                <field><fieldName>tradeDate</fieldName><value>2017-05-09</value></field>
+                <field><fieldName>startDate</fieldName><value>2017-05-09</value></field>
+                <field><fieldName>endDate</fieldName><value>2020-05-09</value></field>
+                <field><fieldName>instrumentId</fieldName><value>qtp_Bond_Instrument</value></field>
+                <field><fieldName>notional</fieldName><value></value></field>
+                <field><fieldName>couponAccrual</fieldName><value></value></field>
+                <field><fieldName>securityHaircut</fieldName><value></value></field>
+                <field><fieldName>tradePrice</fieldName><value></value></field>
+                <field><fieldName>cleanPrice</fieldName><value></value></field>
+                <field><fieldName>priceSource</fieldName><value></value></field>
+                <field><fieldName>securitySettlementStartLeg</fieldName><value></value></field>
+                <field><fieldName>securitySettlementCloseLeg</fieldName><value></value></field>
+                <field><fieldName>cashAssetType</fieldName><value>qtp_cash_usd</value></field>
+                <field><fieldName>openCash</fieldName><value>1000</value></field>
+                <field><fieldName>repoInterestAccrued</fieldName><value></value></field>
+                <field><fieldName>repoRate</fieldName><value></value></field>
+                <field><fieldName>closeCash</fieldName><value></value></field>
+                <field><fieldName>cashAccrualBasis</fieldName><value></value></field>
+                <field><fieldName>cashHaircut</fieldName><value></value></field>
+                <field><fieldName>cashSettlementStartLeg</fieldName><value></value></field>
+                <field><fieldName>cashSettlementCloseLeg</fieldName><value></value></field>
+                <field><fieldName>heldOverCouponAdj</fieldName><value></value></field>
+                <field><fieldName>couponReinvestment</fieldName><value></value></field>
+                <field><fieldName>mtmValuation</fieldName><value></value></field>
+                <field><fieldName>mtmValuationCcy</fieldName><value></value></field>
+                <field><fieldName>cptyMtmValuation</fieldName><value></value></field>
+                <field><fieldName>cptyMtmValuationCcy</fieldName><value></value></field>
+                <field><fieldName>indepMtmValuation</fieldName><value></value></field>
+                <field><fieldName>indepMtmValuationCcy</fieldName><value></value></field>
+                <field><fieldName>valuationRule</fieldName><value></value></field>
+                <field><fieldName>operation</fieldName><value>A</value></field>
+                <field><fieldName>mtmValuationDate</fieldName><value>s</value></field>
+                <field><fieldName>system</fieldName><value>QTP</value></field>
+                <field><fieldName>Comment</fieldName><value></value></field>
+                <!--<field><fieldName>finra4210Exempt</fieldName><value></value></field>-->
+                <field><fieldName>misc1</fieldName><value></value></field>
+                <field><fieldName>misc2</fieldName><value></value></field>
+                <field><fieldName>misc3</fieldName><value></value></field>
+                <field><fieldName>misc4</fieldName><value></value></field>
+                <field><fieldName>misc5</fieldName><value></value></field>
+                <field><fieldName>misc6</fieldName><value></value></field>
+                <field><fieldName>misc7</fieldName><value></value></field>
+                <field><fieldName>misc8</fieldName><value></value></field>
+                <field><fieldName>misc9</fieldName><value></value></field>
+                <field><fieldName>misc10</fieldName><value></value></field>
+                <field><fieldName>misc11</fieldName><value></value></field>
+                <field><fieldName>misc12</fieldName><value></value></field>
+                <field><fieldName>misc13</fieldName><value></value></field>
+                <field><fieldName>misc14</fieldName><value></value></field>
+                <field><fieldName>misc15</fieldName><value></value></field>
+                <field><fieldName>misc16</fieldName><value></value></field>
+                <field><fieldName>misc17</fieldName><value></value></field>
+                <field><fieldName>misc20</fieldName><value></value></field>
+                <field><fieldName>misc21</fieldName><value></value></field>
+                <field><fieldName>misc22</fieldName><value></value></field>
+                <field><fieldName>misc23</fieldName><value></value></field>
+                <field><fieldName>misc24</fieldName><value></value></field>
+                <field><fieldName>misc25</fieldName><value></value></field>
+                <field><fieldName>misc26</fieldName><value></value></field>
+                <field><fieldName>misc27</fieldName><value></value></field>
+                <field><fieldName>misc28</fieldName><value></value></field>
+                <field><fieldName>misc29</fieldName><value></value></field>
+                <field><fieldName>misc30</fieldName><value></value></field>
+            </reportValidationRule>
+        </reportValidationRules>
+
+        <taskSchedulerMessage id="feed.csv.successful">
+            <message>Repo/ETF/SBL trades: Flush Import Repo/ETF/SBL trades: Imported 1 trades from :(\S+).csv insert : 1, delete : 0, modify : 0, failure : 0</message>
+        </taskSchedulerMessage>
+
+        <agreementSearch id = "search.agr.for.repo.flush.trade.feed">
+            <description>
+                <filter>F13658AgrForRepoTradeDesc</filter>
+                <linkText>F13658AgrForRepoTradeDesc</linkText>
+            </description>
+        </agreementSearch>
+
+        <agreementSearchResult id = "search.agr.for.repo.flush.trade.feed.result">
+            <externalId>F13658AgrForRepoTradeExtId</externalId>
+        </agreementSearchResult>
+
+        <tradeDetail id = "trade.date.20170510.amount.2000">
+            <tradeInformation>
+                <productType ref="product.qtp.pro1.name"/>
+                <tradeDate>5/10/2017</tradeDate>
+                <startDate>5/10/2017</startDate>
+                <endDate>5/10/2020</endDate>
+                <tradeIdentifierPartyA ref="trade.ref.id"/>
+            </tradeInformation>
+
+            <securityInformation>
+                <notional>2000</notional>
+            </securityInformation>
+
+            <cashInformation>
+                <openCash>2000</openCash>
+            </cashInformation>
+        </tradeDetail>
+
+    </scenarioData>
+</dataBean>

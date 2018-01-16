@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/taskScheduler.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <fxRateSet id="base.fx.rate.set">
+            <fxRateSetName id="base.fx.rate.set.name" prefix="testing_" random="true"/>
+            <fxUpdatePermission id="base.fx.rate.set.permission">*</fxUpdatePermission>
+        </fxRateSet>
+
+        <taskSchedulerDetail id="task.feed.fx">
+            <type>Task Manager</type>
+            <taskName>Import FX Rates</taskName>
+            <additionalInfo>/home/ec2-user/Feed/FeedFXRate</additionalInfo>
+        </taskSchedulerDetail>
+
+        <feedFxRate id="feed.fx.rate.bid.222">
+            <fxRateSet ref="base.fx.rate.set.name"/>
+            <fxRate id="feed.fx.rate.3.bid">222</fxRate>
+            <fxRateOffer id="feed.fx.rate.3.offer">333</fxRateOffer>
+            <currency id="feed.fx.rate.3.riskccy">AUD</currency>
+        </feedFxRate>
+
+        <fxRateSet id="check.fx.rate.bid.222">
+            <fxRateSetName ref="base.fx.rate.set.name"/>
+            <fxUpdatePermission ref="base.fx.rate.set.permission"/>
+            <!--<date ref="feed.fx.rate.1.date"/>-->
+            <fxRate>
+                <riskCurrency ref="feed.fx.rate.3.riskccy"/>
+                <bid ref="feed.fx.rate.3.bid"/>
+                <offer ref="feed.fx.rate.3.offer"/>
+            </fxRate>
+        </fxRateSet>
+
+        <variable id="file"/>
+    </scenarioData>
+</dataBean>

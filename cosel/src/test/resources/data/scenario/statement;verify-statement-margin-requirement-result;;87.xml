@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+		<agreementSearch id="filter.autonet.net012">
+			<description><filter>autonet_net_012</filter></description>
+		</agreementSearch>
+		<agreementSearchResult id="agreement.autonet.net012">
+			<description>autonet_net_012</description>
+		</agreementSearchResult>
+
+		<agreementStatement id="statement.autonet.net012">
+			<marginCallCalculation>
+				<otcOrClearingReq>
+					<principalReq>
+						<deliveryAmount>2,730,000.00</deliveryAmount>
+						<recallAmount>0.00</recallAmount>
+					</principalReq>
+					<counterpartyReq>
+						<deliveryAmount>0.00</deliveryAmount>
+						<recallAmount>300,000.00</recallAmount>
+					</counterpartyReq>
+				</otcOrClearingReq>
+			</marginCallCalculation>
+		</agreementStatement>
+
+
+
+
+
+	</scenarioData>
+</dataBean>

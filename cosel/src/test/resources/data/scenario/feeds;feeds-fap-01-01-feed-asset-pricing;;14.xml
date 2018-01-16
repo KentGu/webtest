@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/feeds.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <feedAssetPricing id="feed.asset.bond.pricing">
+            <DRIF>2014-11-05</DRIF>
+            <ASSET_CLASS id="feed.asset.bond.pricing.asset.class">qtp_bond</ASSET_CLASS>
+            <ASSET_TYPE id="feed.asset.bond.pricing.asset.type">qtp_bond_usd</ASSET_TYPE>
+            <EXTISIN id="feed.asset.bond.pricing.intrument.id">T6107_QTP_BOND_USD_Instrument_Comma</EXTISIN>
+            <MARKET id="feed.asset.bond.pricing.market">",automation"</MARKET>
+            <EV_PRICE id="feed.asset.bond.pricing.clean.price">10</EV_PRICE>
+            <ACC_DDAT id="feed.asset.bond.pricing.coupon.accrual">1.5</ACC_DDAT>
+            <INFLAT_RATIO id="feed.asset.bond.pricing.factor">2</INFLAT_RATIO>
+            <PRICE_SOURCE random="true"/>
+            <PRICE_LEVEL >Bid</PRICE_LEVEL>
+            <PRICE_FACTOR id="feed.asset.bond.pricing.price.factor">1</PRICE_FACTOR>
+        </feedAssetPricing>
+
+        <feedResult id="feed.asset.bond.pricing.result">
+            <fileUploaded id="feed.asset.bond.pricing.result.file"/>
+            <unsuccessfulImports>1</unsuccessfulImports>
+        </feedResult>
+
+        <feedStatus id="feed.asset.bond.pricing.status">
+            <valuationFile ref="feed.asset.bond.pricing.result.file"/>
+            <status>Failed</status>
+            <description>Asset Pricing</description>
+            <failedFeed apply="true">
+                <total>1</total>
+                <entry>
+                    <content>priceSource(dsfsdf) is not valid</content>
+                </entry>
+            </failedFeed>
+        </feedStatus>
+
+        <securitySearch id="feed.asset.bond.pricing.search"/>
+
+        <securitySearchResult id="feed.asset.bond.pricing.search.result"/>
+
+        <instrument id="check.feed.asset.bond.pricing"/>
+    </scenarioData>
+</dataBean>

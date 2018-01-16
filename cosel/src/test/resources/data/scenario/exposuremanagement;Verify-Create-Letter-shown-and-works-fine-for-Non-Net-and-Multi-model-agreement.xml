@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/exposureManagement.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <agreement id="agr20541.multiModel.notnet">
+            <agreementId id="agrid">2579</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="model">
+            <column>Model</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="notificationStatus">
+            <column>Statement Notification Status</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.top">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-250,000.00</agreementRequirement>
+            <model></model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.noCall.top">
+            <action>IM OTM No Calls</action>
+            <agreementRequirement>0.00</agreementRequirement>
+            <model></model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.top.agreementRequirement.250000">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-250,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <sysCalculatedAmount>250,000.00</sysCalculatedAmount>
+            <statementNotificationStatus>Not Sent</statementNotificationStatus>
+            <model></model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.m2.agreementRequirement.300000">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-300,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <sysCalculatedAmount>300,000.00</sysCalculatedAmount>
+            <statementNotificationStatus>Not Sent</statementNotificationStatus>
+            <model>m2</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.call.m1.agreementRequirement.350000">
+            <action>VM Call(Deficit)</action>
+            <agreementRequirement>350,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <sysCalculatedAmount>350,000.00</sysCalculatedAmount>
+            <statementNotificationStatus>Not Sent</statementNotificationStatus>
+            <model>m1</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.noCall.top.agreementRequirement.0">
+            <action>IM OTM No Calls</action>
+            <agreementRequirement>0.00</agreementRequirement>
+            <callStatus>No Call Required</callStatus>
+            <statementNotificationStatus>Not Sent</statementNotificationStatus>
+            <sysCalculatedAmount>0.00</sysCalculatedAmount>
+            <model></model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.recall.m2.agreementRequirement.175500">
+            <action>IM Recall</action>
+            <agreementRequirement>175,500.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <statementNotificationStatus>Not Sent</statementNotificationStatus>
+            <sysCalculatedAmount>175,500.00</sysCalculatedAmount>
+            <model>m2</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.Delivery.m1.agreementRequirement.351000">
+            <action>IM Delivery</action>
+            <agreementRequirement>-351,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <statementNotificationStatus>Not Sent</statementNotificationStatus>
+            <sysCalculatedAmount>351,000.00</sysCalculatedAmount>
+            <model>m1</model>
+        </exposureEventDetail>
+
+         <marginLetter id="createStatementNotificationLetter">
+            <letterType>Statement Notification</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                <assetHoldingsandValuationReport>true</assetHoldingsandValuationReport>
+                </emailAttachments>
+            </letterSetupDetails>
+        </marginLetter>
+
+        <exposureEventDetail id="vm.delivery.top.agreementRequirement.250000.pendingReview.statementNotificationSent">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-250,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <sysCalculatedAmount>250,000.00</sysCalculatedAmount>
+            <statementNotificationStatus>Sent</statementNotificationStatus>
+            <model></model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.m2.agreementRequirement.300000.pendingReview.statementNotificationSent">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-300,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <sysCalculatedAmount>300,000.00</sysCalculatedAmount>
+            <statementNotificationStatus>Sent</statementNotificationStatus>
+            <model>m2</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.call.m1.agreementRequirement.350000.MarginRequestIssued.statementNotificationSent">
+            <action>VM Call(Deficit)</action>
+            <agreementRequirement>350,000.00</agreementRequirement>
+            <callStatus>Margin Request Issued</callStatus>
+            <sysCalculatedAmount>350,000.00</sysCalculatedAmount>
+            <statementNotificationStatus>Sent</statementNotificationStatus>
+            <model>m1</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.noCall.top.agreementRequirement.0.NoCallRequired.statementNotificationSent">
+            <action>IM OTM No Calls</action>
+            <agreementRequirement>0.00</agreementRequirement>
+            <callStatus>No Call Required</callStatus>
+            <statementNotificationStatus>Sent</statementNotificationStatus>
+            <sysCalculatedAmount>0.00</sysCalculatedAmount>
+            <model></model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.recall.m2.agreementRequirement.175500.MarginRequestIssued.statementNotificationSent">
+            <action>IM Recall</action>
+            <agreementRequirement>175,500.00</agreementRequirement>
+            <callStatus>Margin Request Issued</callStatus>
+            <statementNotificationStatus>Sent</statementNotificationStatus>
+            <sysCalculatedAmount>175,500.00</sysCalculatedAmount>
+            <model>m2</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.Delivery.m1.agreementRequirement.351000.pendingReview.statementNotificationSent">
+            <action>IM Delivery</action>
+            <agreementRequirement>-351,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <statementNotificationStatus>Sent</statementNotificationStatus>
+            <sysCalculatedAmount>351,000.00</sysCalculatedAmount>
+            <model>m1</model>
+        </exposureEventDetail>
+
+    </scenarioData>
+</dataBean>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/interestManager.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <agreement>
+            <principal>
+                <filter id="agreement.principal" ref="org.p1.lname"/>
+            </principal>
+            <counterparty>
+                <filter id="agreement.counterparty" ref="org.c1.lname"/>
+            </counterparty>
+            <businessLine>Clearing</businessLine>
+            <ccp>ICE</ccp>
+            <multiModel>true</multiModel>
+            <agreementDescription id="agreement.description">T21662_Agreement_Description</agreementDescription>
+            <externalId>T21662_Agreement_External_ID</externalId>
+            <model>
+                <modelEligibilityRule>
+                    <modelName>T21662_Model_EUR</modelName>
+                    <eligibleCurrency>EUR</eligibleCurrency>
+                </modelEligibilityRule>
+                <modelEligibilityRule>
+                    <modelName>T21662_Model_USD</modelName>
+                    <eligibleCurrency>USD</eligibleCurrency>
+                </modelEligibilityRule>
+                <settlementLevel>Transport</settlementLevel>
+            </model>
+            <collateralAssetClass>
+                <collateralAssetClassName id="agreement.asset.class.name" ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName id="agreement.asset.type.usd.name" ref="cash.usd.name"/>
+                </collateralAssetType>
+                <collateralAssetType>
+                    <collateralAssetTypeName id="agreement.asset.type.eur.name" ref="cash.eur1.name"/>
+                </collateralAssetType>
+                <collateralAssetType>
+                    <collateralAssetTypeName id="agreement.asset.type.cad.name">CASH_CAD</collateralAssetTypeName>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <agreementId id="agreement.id">1502</agreementId>
+        </agreement>
+
+        <interestEventSearch id="net.interest.event.search">
+            <description>
+                <type>Exactly matching</type>
+                <filter ref="agreement.description"/>
+                <linkText ref="agreement.description"/>
+            </description>
+            <monthRange>
+                <startMonth>4/2015</startMonth>
+                <endMonth>4/2015</endMonth>
+            </monthRange>
+        </interestEventSearch>
+
+        <interestEventDetail id="interest.event.model.usd.cash.eur"  name="check.interest.event.model.usd.cash.eur.applied">
+            <tabName>Pay</tabName>
+            <eventId>6537</eventId>
+            <principal ref="agreement.principal"/>
+            <description ref="agreement.description"/>
+            <businessLine>Clearing</businessLine>
+            <model></model>
+            <cashAssetType ref="agreement.asset.type.eur.name"/>
+            <startDate>4/1/2015</startDate>
+            <endDate>5/1/2015</endDate>
+            <calculatedInterestAmount>-7466.55</calculatedInterestAmount>
+            <whtAmount>0</whtAmount>
+            <interestSource>VM Interest</interestSource>
+            <agreedInterestAmount>-7466.55</agreedInterestAmount>
+            <agreedWHTAmount>0</agreedWHTAmount>
+            <resetDate>5/1/2015</resetDate>
+            <interestMovementStatus id="interest.event.model.usd.cash.eur.interest.movement.status"/>
+        </interestEventDetail>
+
+        <interestEventDetail id="interest.event.model.eur.cash.eur" name="check.interest.event.model.eur.cash.eur.applied">
+            <tabName>Pay</tabName>
+            <eventId>6519</eventId>
+            <principal ref="agreement.principal"/>
+            <description ref="agreement.description"/>
+            <businessLine>Clearing</businessLine>
+            <model></model>
+            <cashAssetType ref="agreement.asset.type.eur.name"/>
+            <startDate>4/1/2015</startDate>
+            <endDate>5/1/2015</endDate>
+            <calculatedInterestAmount>-4666.62</calculatedInterestAmount>
+            <whtAmount>0</whtAmount>
+            <interestSource>VM Interest</interestSource>
+            <agreedInterestAmount>-4666.62</agreedInterestAmount>
+            <agreedWHTAmount>0</agreedWHTAmount>
+            <resetDate>5/1/2015</resetDate>
+            <interestMovementStatus id="interest.event.model.eur.cash.eur.interest.movement.status"/>
+        </interestEventDetail>
+
+        <interestEventDetail id="interest.event.model.usd.cash.cad" name="check.interest.event.model.usd.cash.cad.applied">
+            <tabName>Pay</tabName>
+            <eventId>6525</eventId>
+            <principal ref="agreement.principal"/>
+            <description ref="agreement.description"/>
+            <businessLine>Clearing</businessLine>
+            <model></model>
+            <cashAssetType ref="agreement.asset.type.cad.name"/>
+            <startDate>4/1/2015</startDate>
+            <endDate>5/1/2015</endDate>
+            <calculatedInterestAmount>-1166.55</calculatedInterestAmount>
+            <whtAmount>0</whtAmount>
+            <interestSource>VM Interest</interestSource>
+            <agreedInterestAmount>-1166.55</agreedInterestAmount>
+            <agreedWHTAmount>0</agreedWHTAmount>
+            <resetDate>5/1/2015</resetDate>
+            <interestMovementStatus id="interest.event.model.usd.cash.cad.interest.movement.status"/>
+        </interestEventDetail>
+
+        <interestEventDetail id="interest.event.model.eur.cash.cad" name="check.interest.event.model.eur.cash.cad.applied">
+            <tabName>Pay</tabName>
+            <eventId>6507</eventId>
+            <principal ref="agreement.principal"/>
+            <description ref="agreement.description"/>
+            <businessLine>Clearing</businessLine>
+            <model></model>
+            <cashAssetType ref="agreement.asset.type.cad.name"/>
+            <startDate>4/1/2015</startDate>
+            <endDate>5/1/2015</endDate>
+            <calculatedInterestAmount>-6999.93</calculatedInterestAmount>
+            <whtAmount>0</whtAmount>
+            <interestSource>VM Interest</interestSource>
+            <agreedInterestAmount>-6999.93</agreedInterestAmount>
+            <agreedWHTAmount>0</agreedWHTAmount>
+            <resetDate>5/1/2015</resetDate>
+            <interestMovementStatus id="interest.event.model.eur.cash.cad.interest.movement.status"/>
+        </interestEventDetail>
+
+        <interestEventDetail id="interest.event.model.usd.cash.usd" name="check.interest.event.model.usd.cash.usd.applied">
+            <tabName>Receive</tabName>
+            <eventId>6531</eventId>
+            <principal ref="agreement.principal"/>
+            <description ref="agreement.description"/>
+            <businessLine>Clearing</businessLine>
+            <model></model>
+            <cashAssetType ref="agreement.asset.type.usd.name"/>
+            <startDate>4/1/2015</startDate>
+            <endDate>5/1/2015</endDate>
+            <calculatedInterestAmount>10733.31</calculatedInterestAmount>
+            <whtAmount>0</whtAmount>
+            <interestSource>VM Interest</interestSource>
+            <agreedInterestAmount>10733.31</agreedInterestAmount>
+            <agreedWHTAmount>0</agreedWHTAmount>
+            <resetDate>5/1/2015</resetDate>
+            <interestMovementStatus id="interest.event.model.usd.cash.usd.interest.movement.status"/>
+        </interestEventDetail>
+
+        <interestEventDetail id="interest.event.model.eur.cash.usd" name="check.interest.event.model.eur.cash.usd.applied">
+            <tabName>Receive</tabName>
+            <eventId>6513</eventId>
+            <principal ref="agreement.principal"/>
+            <description ref="agreement.description"/>
+            <businessLine>Clearing</businessLine>
+            <model></model>
+            <cashAssetType ref="agreement.asset.type.usd.name"/>
+            <startDate>4/1/2015</startDate>
+            <endDate>5/1/2015</endDate>
+            <calculatedInterestAmount>6066.69</calculatedInterestAmount>
+            <whtAmount>0</whtAmount>
+            <interestSource>VM Interest</interestSource>
+            <agreedInterestAmount>6066.69</agreedInterestAmount>
+            <agreedWHTAmount>0</agreedWHTAmount>
+            <resetDate>5/1/2015</resetDate>
+            <interestMovementStatus id="interest.event.model.eur.cash.usd.interest.movement.status"/>
+        </interestEventDetail>
+
+        <interestEventDetail id="check.interest.event.model.usd.cash.eur" name="check.interest.event.model.usd.cash.eur.applied">
+            <interestMovementStatus ref="interest.event.model.usd.cash.eur.interest.movement.status"/>
+        </interestEventDetail>
+
+        <interestEventDetail id="check.interest.event.model.eur.cash.eur" name="check.interest.event.model.eur.cash.eur.applied">
+            <interestMovementStatus ref="interest.event.model.eur.cash.eur.interest.movement.status"/>
+        </interestEventDetail>
+
+        <interestEventDetail id="check.interest.event.model.usd.cash.cad" name="check.interest.event.model.usd.cash.cad.applied">
+            <interestMovementStatus ref="interest.event.model.usd.cash.cad.interest.movement.status"/>
+        </interestEventDetail>
+
+        <interestEventDetail id="check.interest.event.model.eur.cash.cad" name="check.interest.event.model.eur.cash.cad.applied">
+            <interestMovementStatus ref="interest.event.model.eur.cash.cad.interest.movement.status"/>
+        </interestEventDetail>
+
+        <interestEventDetail id="check.interest.event.model.usd.cash.usd" name="check.interest.event.model.usd.cash.usd.applied">
+            <interestMovementStatus ref="interest.event.model.usd.cash.usd.interest.movement.status"/>
+        </interestEventDetail>
+
+        <interestEventDetail id="check.interest.event.model.eur.cash.usd" name="check.interest.event.model.eur.cash.usd.applied">
+            <interestMovementStatus ref="interest.event.model.eur.cash.usd.interest.movement.status"/>
+        </interestEventDetail>
+
+    </scenarioData>
+</dataBean>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/feeds.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <feedAgreement id="feed.otc.agreement.blank.message.group.id">
+            <principal ref="org.p1.lname"/>
+            <counterpartycode ref="org.c1.lname"/>
+            <businessLine>OTC</businessLine>
+            <agreement_description id="feed.otc.agreement.blank.message.group.id.desc" random="true"
+                                   prefix="feed_agr1_"/>
+            <region ref="region.test1.name"/>
+            <legal_id id="feed.otc.agreement.blank.message.group.id.external.id" random="true"/>
+            <master_documentation ref="master.documentation.1987.isda.master.name"/>
+            <credit_support_documentation ref="credit.documentation.margin.provisions.name"/>
+            <base_currency ref="ccy.usd.name"/>
+            <original_date random="true" variation="t"/>
+            <frequency>Daily</frequency>
+            <frequency_start random="true" variation="t"/>
+            <notification_time>13.00</notification_time>
+            <resolution_time>10.00</resolution_time>
+            <resolution_day>same</resolution_day>
+            <time_zone ref="system.staticData.timeZone.cet.name"/>
+            <holiday_centre ref="hc.test1.name"/>
+            <product>
+                <productName>QTP</productName>
+                <settlementPeriod>T</settlementPeriod>
+            </product>
+            <!--<gracePeriod id="feed.otc.agreement.blank.message.group.id.grace.period">1</gracePeriod>-->
+            <gracePeriod id="feed.otc.agreement.blank.message.group.id.grace.period">0</gracePeriod>
+            <rounding_delivery>Up</rounding_delivery>
+            <rounding_recall>Down</rounding_recall>
+            <settlementInstructions>
+                <settlementInstruction>
+                    <bookingType>Net</bookingType>
+                    <direction>Call/Return</direction>
+                    <bucket>VM Call/Return</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>Net</bookingType>
+                    <direction>Delivery/Recall</direction>
+                    <bucket>VM Recall/Delivery</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>Interest</bookingType>
+                    <direction>Pay</direction>
+                    <bucket>Pay</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>Interest</bookingType>
+                    <direction>Receive</direction>
+                    <bucket>Receive</bucket>
+                </settlementInstruction>
+            </settlementInstructions>
+            <distMedium>Message</distMedium>
+            <interfaceSystem>AMP</interfaceSystem>
+            <messageIdType></messageIdType>
+            <messageAgreementId>T33033MessageGroupId</messageAgreementId>
+            <applyOrgCL>false</applyOrgCL>
+        </feedAgreement>
+
+        <feedResult id="feed.otc.agreement.blank.message.group.id.result">
+            <fileUploaded id="feed.otc.agreement.blank.message.group.id.result.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedStatus id="feed.otc.agreement.blank.message.group.id.status">
+            <systemName>QTP</systemName>
+            <status>Successful</status>
+            <valuationFile ref="feed.otc.agreement.blank.message.group.id.result.file"/>
+            <description>Agreements</description>
+            <successfulFeed>
+                <importType>Agreements</importType>
+                <valuationFile ref="feed.otc.agreement.blank.message.group.id.result.file"/>
+                <total>1</total>
+                <entry>
+                    <content>Message Id Type is not specified</content>
+                </entry>
+            </successfulFeed>
+        </feedStatus>
+    </scenarioData>
+</dataBean>

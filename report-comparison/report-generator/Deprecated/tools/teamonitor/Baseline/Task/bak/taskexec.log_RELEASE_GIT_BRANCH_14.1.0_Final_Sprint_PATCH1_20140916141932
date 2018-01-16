@@ -1,0 +1,1207 @@
+I'm FILE_TASKEXECLOG=taskexec.log_RELEASE_GIT_BRANCH_14.1.0_Final_Sprint_PATCH1_20140916141932
+I'm database---------=COLLINE2014_1_0_BASE_NOI_1211 creditderivative 172.20.20.99:1521 pst11g1
+Target Version: RELEASE_GIT_BRANCH_14.1.0_Final_Sprint_PATCH1
+Target Path:/home/test/server/colline/cluster5_2/bin
+-------------I am task =External Exposures Reset 4
+Task is Workflow : External Exposures Reset 4
+2014-09-16 14:19:32
+Waiting 4000 second for Task  External Exposures Reset 4 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:External Exposures Reset 4] at: 2014-09-16 14:19:32,957
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.lombardrisk.f3.job.SchedulerProxy.invoke(SchedulerProxy.java:60)
+	at com.sun.proxy.$Proxy4693.scheduleJobWithCredentials(Unknown Source)
+	at com.lombardrisk.f3.scheduler.SchedulerServiceBean.startJobNow(SchedulerServiceBean.java:557)
+	at sun.reflect.GeneratedMethodAccessor4168.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.jboss.invocation.Invocation.performCall(Invocation.java:397)
+	at org.jboss.ejb.StatelessSessionContainer$ContainerInterceptor.invoke(StatelessSessionContainer.java:233)
+	at org.jboss.resource.connectionmanager.CachedConnectionInterceptor.invoke(CachedConnectionInterceptor.java:156)
+	at org.jboss.ejb.plugins.StatelessSessionInstanceInterceptor.invoke(StatelessSessionInstanceInterceptor.java:173)
+	at com.lombardrisk.f3.audit.AuditTrailInterceptor.invoke(AuditTrailInterceptor.java:249)
+	at org.jboss.ejb.plugins.CallValidationInterceptor.invoke(CallValidationInterceptor.java:63)
+	at org.jboss.ejb.plugins.AbstractTxInterceptor.invokeNext(AbstractTxInterceptor.java:121)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.runWithTransactions(TxInterceptorCMT.java:350)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.invoke(TxInterceptorCMT.java:181)
+	at com.lombardrisk.f3.accesscontrol.JBossEJBInterceptor.invoke(JBossEJBInterceptor.java:140)
+	at org.jboss.ejb.plugins.SecurityInterceptor.process(SecurityInterceptor.java:233)
+	at org.jboss.ejb.plugins.SecurityInterceptor.invoke(SecurityInterceptor.java:211)
+	at org.jboss.ejb.plugins.LogInterceptor.invoke(LogInterceptor.java:205)
+	at com.lombardrisk.f3.logging.ElapsedTimeInterceptor.invoke(ElapsedTimeInterceptor.java:41)
+	at org.jboss.ejb.plugins.ProxyFactoryFinderInterceptor.invoke(ProxyFactoryFinderInterceptor.java:138)
+	at org.jboss.ejb.SessionContainer.internalInvoke(SessionContainer.java:650)
+	at org.jboss.ejb.Container.invoke(Container.java:1092)
+	at sun.reflect.GeneratedMethodAccessor421.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.jboss.mx.interceptor.ReflectedDispatcher.invoke(ReflectedDispatcher.java:157)
+	at org.jboss.mx.server.Invocation.dispatch(Invocation.java:96)
+	at org.jboss.mx.server.Invocation.invoke(Invocation.java:88)
+	at org.jboss.mx.server.AbstractMBeanInvoker.invoke(AbstractMBeanInvoker.java:264)
+	at org.jboss.mx.server.MBeanServerImpl.invoke(MBeanServerImpl.java:668)
+	at org.jboss.system.server.jmx.LazyMBeanServer.invoke(LazyMBeanServer.java:283)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker$MBeanServerAction.invoke(JRMPInvoker.java:855)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker.invoke(JRMPInvoker.java:422)
+	at sun.reflect.GeneratedMethodAccessor692.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:322)
+	at sun.rmi.transport.Transport$1.run(Transport.java:177)
+	at sun.rmi.transport.Transport$1.run(Transport.java:174)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:173)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:556)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:811)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:670)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+	at sun.rmi.transport.StreamRemoteCall.exceptionReceivedFromServer(StreamRemoteCall.java:275)
+	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:252)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:161)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker_Stub.invoke(Unknown Source)
+	at org.jboss.invocation.jrmp.interfaces.JRMPInvokerProxy.invoke(JRMPInvokerProxy.java:133)
+	at org.jboss.invocation.InvokerInterceptor.invokeInvoker(InvokerInterceptor.java:365)
+	at org.jboss.invocation.InvokerInterceptor.invoke(InvokerInterceptor.java:197)
+	at org.jboss.proxy.TransactionInterceptor.invoke(TransactionInterceptor.java:61)
+	at org.jboss.proxy.SecurityInterceptor.invoke(SecurityInterceptor.java:68)
+	at org.jboss.proxy.ejb.StatelessSessionInterceptor.invoke(StatelessSessionInterceptor.java:112)
+	at org.jboss.proxy.ClientContainer.invoke(ClientContainer.java:101)
+	at com.sun.proxy.$Proxy2.startJobNow(Unknown Source)
+	at com.lombardrisk.f3.taskmgr.TaskManagerProcessor.startJob(TaskManagerProcessor.java:302)
+	at com.lombardrisk.f3.taskmgr.TaskManagerProcessor.parseAndExecuteTask(TaskManagerProcessor.java:138)
+	at com.lombardrisk.f3.F3TaskManager.main(F3TaskManager.java:28)
+Caused by: org.quartz.ObjectAlreadyExistsException: Unable to store Job with name: 'command_External Exposures Reset 4now' and group: 'command_Workflownow', because one already exists with this identification.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.storeJob(JobStoreSupport.java:847)
+	at org.quartz.impl.jdbcjobstore.JobStoreCMT.storeJobAndTrigger(JobStoreCMT.java:273)
+	at org.quartz.core.QuartzScheduler.scheduleJob(QuartzScheduler.java:613)
+	at org.quartz.impl.StdScheduler.scheduleJob(StdScheduler.java:238)
+	at com.lombardrisk.f3.job.SchedulerProxy.scheduleJobWithCredentials(SchedulerProxy.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.lombardrisk.f3.job.SchedulerProxy.invoke(SchedulerProxy.java:60)
+	at com.sun.proxy.$Proxy4693.scheduleJobWithCredentials(Unknown Source)
+	at com.lombardrisk.f3.scheduler.SchedulerServiceBean.startJobNow(SchedulerServiceBean.java:557)
+	at sun.reflect.GeneratedMethodAccessor4168.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.jboss.invocation.Invocation.performCall(Invocation.java:397)
+	at org.jboss.ejb.StatelessSessionContainer$ContainerInterceptor.invoke(StatelessSessionContainer.java:233)
+	at org.jboss.resource.connectionmanager.CachedConnectionInterceptor.invoke(CachedConnectionInterceptor.java:156)
+	at org.jboss.ejb.plugins.StatelessSessionInstanceInterceptor.invoke(StatelessSessionInstanceInterceptor.java:173)
+	at com.lombardrisk.f3.audit.AuditTrailInterceptor.invoke(AuditTrailInterceptor.java:249)
+	at org.jboss.ejb.plugins.CallValidationInterceptor.invoke(CallValidationInterceptor.java:63)
+	at org.jboss.ejb.plugins.AbstractTxInterceptor.invokeNext(AbstractTxInterceptor.java:121)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.runWithTransactions(TxInterceptorCMT.java:350)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.invoke(TxInterceptorCMT.java:181)
+	at com.lombardrisk.f3.accesscontrol.JBossEJBInterceptor.invoke(JBossEJBInterceptor.java:140)
+	at org.jboss.ejb.plugins.SecurityInterceptor.process(SecurityInterceptor.java:233)
+	at org.jboss.ejb.plugins.SecurityInterceptor.invoke(SecurityInterceptor.java:211)
+	at org.jboss.ejb.plugins.LogInterceptor.invoke(LogInterceptor.java:205)
+	at com.lombardrisk.f3.logging.ElapsedTimeInterceptor.invoke(ElapsedTimeInterceptor.java:41)
+	at org.jboss.ejb.plugins.ProxyFactoryFinderInterceptor.invoke(ProxyFactoryFinderInterceptor.java:138)
+	at org.jboss.ejb.SessionContainer.internalInvoke(SessionContainer.java:650)
+	at org.jboss.ejb.Container.invoke(Container.java:1092)
+	at sun.reflect.GeneratedMethodAccessor421.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.jboss.mx.interceptor.ReflectedDispatcher.invoke(ReflectedDispatcher.java:157)
+	at org.jboss.mx.server.Invocation.dispatch(Invocation.java:96)
+	at org.jboss.mx.server.Invocation.invoke(Invocation.java:88)
+	at org.jboss.mx.server.AbstractMBeanInvoker.invoke(AbstractMBeanInvoker.java:264)
+	at org.jboss.mx.server.MBeanServerImpl.invoke(MBeanServerImpl.java:668)
+	at org.jboss.system.server.jmx.LazyMBeanServer.invoke(LazyMBeanServer.java:283)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker$MBeanServerAction.invoke(JRMPInvoker.java:855)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker.invoke(JRMPInvoker.java:422)
+	at sun.reflect.GeneratedMethodAccessor692.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:322)
+	at sun.rmi.transport.Transport$1.run(Transport.java:177)
+	at sun.rmi.transport.Transport$1.run(Transport.java:174)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:173)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:556)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:811)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:670)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+----------break now --------
+-------------I am task =Recalculate Workflow 1
+Task is Workflow : Recalculate Workflow 1
+2014-09-16 14:19:54
+Waiting 3000 second for Task  Recalculate Workflow 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Recalculate Workflow 1] at: 2014-09-16 14:19:55,012
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.lombardrisk.f3.job.SchedulerProxy.invoke(SchedulerProxy.java:60)
+	at com.sun.proxy.$Proxy4693.scheduleJobWithCredentials(Unknown Source)
+	at com.lombardrisk.f3.scheduler.SchedulerServiceBean.startJobNow(SchedulerServiceBean.java:557)
+	at sun.reflect.GeneratedMethodAccessor4168.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.jboss.invocation.Invocation.performCall(Invocation.java:397)
+	at org.jboss.ejb.StatelessSessionContainer$ContainerInterceptor.invoke(StatelessSessionContainer.java:233)
+	at org.jboss.resource.connectionmanager.CachedConnectionInterceptor.invoke(CachedConnectionInterceptor.java:156)
+	at org.jboss.ejb.plugins.StatelessSessionInstanceInterceptor.invoke(StatelessSessionInstanceInterceptor.java:173)
+	at com.lombardrisk.f3.audit.AuditTrailInterceptor.invoke(AuditTrailInterceptor.java:249)
+	at org.jboss.ejb.plugins.CallValidationInterceptor.invoke(CallValidationInterceptor.java:63)
+	at org.jboss.ejb.plugins.AbstractTxInterceptor.invokeNext(AbstractTxInterceptor.java:121)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.runWithTransactions(TxInterceptorCMT.java:350)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.invoke(TxInterceptorCMT.java:181)
+	at com.lombardrisk.f3.accesscontrol.JBossEJBInterceptor.invoke(JBossEJBInterceptor.java:140)
+	at org.jboss.ejb.plugins.SecurityInterceptor.process(SecurityInterceptor.java:233)
+	at org.jboss.ejb.plugins.SecurityInterceptor.invoke(SecurityInterceptor.java:211)
+	at org.jboss.ejb.plugins.LogInterceptor.invoke(LogInterceptor.java:205)
+	at com.lombardrisk.f3.logging.ElapsedTimeInterceptor.invoke(ElapsedTimeInterceptor.java:41)
+	at org.jboss.ejb.plugins.ProxyFactoryFinderInterceptor.invoke(ProxyFactoryFinderInterceptor.java:138)
+	at org.jboss.ejb.SessionContainer.internalInvoke(SessionContainer.java:650)
+	at org.jboss.ejb.Container.invoke(Container.java:1092)
+	at sun.reflect.GeneratedMethodAccessor421.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.jboss.mx.interceptor.ReflectedDispatcher.invoke(ReflectedDispatcher.java:157)
+	at org.jboss.mx.server.Invocation.dispatch(Invocation.java:96)
+	at org.jboss.mx.server.Invocation.invoke(Invocation.java:88)
+	at org.jboss.mx.server.AbstractMBeanInvoker.invoke(AbstractMBeanInvoker.java:264)
+	at org.jboss.mx.server.MBeanServerImpl.invoke(MBeanServerImpl.java:668)
+	at org.jboss.system.server.jmx.LazyMBeanServer.invoke(LazyMBeanServer.java:283)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker$MBeanServerAction.invoke(JRMPInvoker.java:855)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker.invoke(JRMPInvoker.java:422)
+	at sun.reflect.GeneratedMethodAccessor692.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:322)
+	at sun.rmi.transport.Transport$1.run(Transport.java:177)
+	at sun.rmi.transport.Transport$1.run(Transport.java:174)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:173)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:556)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:811)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:670)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+	at sun.rmi.transport.StreamRemoteCall.exceptionReceivedFromServer(StreamRemoteCall.java:275)
+	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:252)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:161)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker_Stub.invoke(Unknown Source)
+	at org.jboss.invocation.jrmp.interfaces.JRMPInvokerProxy.invoke(JRMPInvokerProxy.java:133)
+	at org.jboss.invocation.InvokerInterceptor.invokeInvoker(InvokerInterceptor.java:365)
+	at org.jboss.invocation.InvokerInterceptor.invoke(InvokerInterceptor.java:197)
+	at org.jboss.proxy.TransactionInterceptor.invoke(TransactionInterceptor.java:61)
+	at org.jboss.proxy.SecurityInterceptor.invoke(SecurityInterceptor.java:68)
+	at org.jboss.proxy.ejb.StatelessSessionInterceptor.invoke(StatelessSessionInterceptor.java:112)
+	at org.jboss.proxy.ClientContainer.invoke(ClientContainer.java:101)
+	at com.sun.proxy.$Proxy2.startJobNow(Unknown Source)
+	at com.lombardrisk.f3.taskmgr.TaskManagerProcessor.startJob(TaskManagerProcessor.java:302)
+	at com.lombardrisk.f3.taskmgr.TaskManagerProcessor.parseAndExecuteTask(TaskManagerProcessor.java:138)
+	at com.lombardrisk.f3.F3TaskManager.main(F3TaskManager.java:28)
+Caused by: org.quartz.ObjectAlreadyExistsException: Unable to store Job with name: 'command_Recalculate Workflow 1now' and group: 'command_Workflownow', because one already exists with this identification.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.storeJob(JobStoreSupport.java:847)
+	at org.quartz.impl.jdbcjobstore.JobStoreCMT.storeJobAndTrigger(JobStoreCMT.java:273)
+	at org.quartz.core.QuartzScheduler.scheduleJob(QuartzScheduler.java:613)
+	at org.quartz.impl.StdScheduler.scheduleJob(StdScheduler.java:238)
+	at com.lombardrisk.f3.job.SchedulerProxy.scheduleJobWithCredentials(SchedulerProxy.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.lombardrisk.f3.job.SchedulerProxy.invoke(SchedulerProxy.java:60)
+	at com.sun.proxy.$Proxy4693.scheduleJobWithCredentials(Unknown Source)
+	at com.lombardrisk.f3.scheduler.SchedulerServiceBean.startJobNow(SchedulerServiceBean.java:557)
+	at sun.reflect.GeneratedMethodAccessor4168.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.jboss.invocation.Invocation.performCall(Invocation.java:397)
+	at org.jboss.ejb.StatelessSessionContainer$ContainerInterceptor.invoke(StatelessSessionContainer.java:233)
+	at org.jboss.resource.connectionmanager.CachedConnectionInterceptor.invoke(CachedConnectionInterceptor.java:156)
+	at org.jboss.ejb.plugins.StatelessSessionInstanceInterceptor.invoke(StatelessSessionInstanceInterceptor.java:173)
+	at com.lombardrisk.f3.audit.AuditTrailInterceptor.invoke(AuditTrailInterceptor.java:249)
+	at org.jboss.ejb.plugins.CallValidationInterceptor.invoke(CallValidationInterceptor.java:63)
+	at org.jboss.ejb.plugins.AbstractTxInterceptor.invokeNext(AbstractTxInterceptor.java:121)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.runWithTransactions(TxInterceptorCMT.java:350)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.invoke(TxInterceptorCMT.java:181)
+	at com.lombardrisk.f3.accesscontrol.JBossEJBInterceptor.invoke(JBossEJBInterceptor.java:140)
+	at org.jboss.ejb.plugins.SecurityInterceptor.process(SecurityInterceptor.java:233)
+	at org.jboss.ejb.plugins.SecurityInterceptor.invoke(SecurityInterceptor.java:211)
+	at org.jboss.ejb.plugins.LogInterceptor.invoke(LogInterceptor.java:205)
+	at com.lombardrisk.f3.logging.ElapsedTimeInterceptor.invoke(ElapsedTimeInterceptor.java:41)
+	at org.jboss.ejb.plugins.ProxyFactoryFinderInterceptor.invoke(ProxyFactoryFinderInterceptor.java:138)
+	at org.jboss.ejb.SessionContainer.internalInvoke(SessionContainer.java:650)
+	at org.jboss.ejb.Container.invoke(Container.java:1092)
+	at sun.reflect.GeneratedMethodAccessor421.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.jboss.mx.interceptor.ReflectedDispatcher.invoke(ReflectedDispatcher.java:157)
+	at org.jboss.mx.server.Invocation.dispatch(Invocation.java:96)
+	at org.jboss.mx.server.Invocation.invoke(Invocation.java:88)
+	at org.jboss.mx.server.AbstractMBeanInvoker.invoke(AbstractMBeanInvoker.java:264)
+	at org.jboss.mx.server.MBeanServerImpl.invoke(MBeanServerImpl.java:668)
+	at org.jboss.system.server.jmx.LazyMBeanServer.invoke(LazyMBeanServer.java:283)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker$MBeanServerAction.invoke(JRMPInvoker.java:855)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker.invoke(JRMPInvoker.java:422)
+	at sun.reflect.GeneratedMethodAccessor692.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:322)
+	at sun.rmi.transport.Transport$1.run(Transport.java:177)
+	at sun.rmi.transport.Transport$1.run(Transport.java:174)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:173)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:556)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:811)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:670)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+----------break now --------
+-------------I am task =Recalculate based on Day change 1
+Task is Workflow : Recalculate based on Day change 1
+2014-09-16 14:20:16
+Waiting 500 second for Task  Recalculate based on Day change 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Recalculate based on Day change 1] at: 2014-09-16 14:20:17,019
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.lombardrisk.f3.job.SchedulerProxy.invoke(SchedulerProxy.java:60)
+	at com.sun.proxy.$Proxy4693.scheduleJobWithCredentials(Unknown Source)
+	at com.lombardrisk.f3.scheduler.SchedulerServiceBean.startJobNow(SchedulerServiceBean.java:557)
+	at sun.reflect.GeneratedMethodAccessor4168.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.jboss.invocation.Invocation.performCall(Invocation.java:397)
+	at org.jboss.ejb.StatelessSessionContainer$ContainerInterceptor.invoke(StatelessSessionContainer.java:233)
+	at org.jboss.resource.connectionmanager.CachedConnectionInterceptor.invoke(CachedConnectionInterceptor.java:156)
+	at org.jboss.ejb.plugins.StatelessSessionInstanceInterceptor.invoke(StatelessSessionInstanceInterceptor.java:173)
+	at com.lombardrisk.f3.audit.AuditTrailInterceptor.invoke(AuditTrailInterceptor.java:249)
+	at org.jboss.ejb.plugins.CallValidationInterceptor.invoke(CallValidationInterceptor.java:63)
+	at org.jboss.ejb.plugins.AbstractTxInterceptor.invokeNext(AbstractTxInterceptor.java:121)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.runWithTransactions(TxInterceptorCMT.java:350)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.invoke(TxInterceptorCMT.java:181)
+	at com.lombardrisk.f3.accesscontrol.JBossEJBInterceptor.invoke(JBossEJBInterceptor.java:140)
+	at org.jboss.ejb.plugins.SecurityInterceptor.process(SecurityInterceptor.java:233)
+	at org.jboss.ejb.plugins.SecurityInterceptor.invoke(SecurityInterceptor.java:211)
+	at org.jboss.ejb.plugins.LogInterceptor.invoke(LogInterceptor.java:205)
+	at com.lombardrisk.f3.logging.ElapsedTimeInterceptor.invoke(ElapsedTimeInterceptor.java:41)
+	at org.jboss.ejb.plugins.ProxyFactoryFinderInterceptor.invoke(ProxyFactoryFinderInterceptor.java:138)
+	at org.jboss.ejb.SessionContainer.internalInvoke(SessionContainer.java:650)
+	at org.jboss.ejb.Container.invoke(Container.java:1092)
+	at sun.reflect.GeneratedMethodAccessor421.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.jboss.mx.interceptor.ReflectedDispatcher.invoke(ReflectedDispatcher.java:157)
+	at org.jboss.mx.server.Invocation.dispatch(Invocation.java:96)
+	at org.jboss.mx.server.Invocation.invoke(Invocation.java:88)
+	at org.jboss.mx.server.AbstractMBeanInvoker.invoke(AbstractMBeanInvoker.java:264)
+	at org.jboss.mx.server.MBeanServerImpl.invoke(MBeanServerImpl.java:668)
+	at org.jboss.system.server.jmx.LazyMBeanServer.invoke(LazyMBeanServer.java:283)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker$MBeanServerAction.invoke(JRMPInvoker.java:855)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker.invoke(JRMPInvoker.java:422)
+	at sun.reflect.GeneratedMethodAccessor692.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:322)
+	at sun.rmi.transport.Transport$1.run(Transport.java:177)
+	at sun.rmi.transport.Transport$1.run(Transport.java:174)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:173)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:556)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:811)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:670)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+	at sun.rmi.transport.StreamRemoteCall.exceptionReceivedFromServer(StreamRemoteCall.java:275)
+	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:252)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:161)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker_Stub.invoke(Unknown Source)
+	at org.jboss.invocation.jrmp.interfaces.JRMPInvokerProxy.invoke(JRMPInvokerProxy.java:133)
+	at org.jboss.invocation.InvokerInterceptor.invokeInvoker(InvokerInterceptor.java:365)
+	at org.jboss.invocation.InvokerInterceptor.invoke(InvokerInterceptor.java:197)
+	at org.jboss.proxy.TransactionInterceptor.invoke(TransactionInterceptor.java:61)
+	at org.jboss.proxy.SecurityInterceptor.invoke(SecurityInterceptor.java:68)
+	at org.jboss.proxy.ejb.StatelessSessionInterceptor.invoke(StatelessSessionInterceptor.java:112)
+	at org.jboss.proxy.ClientContainer.invoke(ClientContainer.java:101)
+	at com.sun.proxy.$Proxy2.startJobNow(Unknown Source)
+	at com.lombardrisk.f3.taskmgr.TaskManagerProcessor.startJob(TaskManagerProcessor.java:302)
+	at com.lombardrisk.f3.taskmgr.TaskManagerProcessor.parseAndExecuteTask(TaskManagerProcessor.java:138)
+	at com.lombardrisk.f3.F3TaskManager.main(F3TaskManager.java:28)
+Caused by: org.quartz.ObjectAlreadyExistsException: Unable to store Job with name: 'command_Recalculate based on Day change 1now' and group: 'command_Workflownow', because one already exists with this identification.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.storeJob(JobStoreSupport.java:847)
+	at org.quartz.impl.jdbcjobstore.JobStoreCMT.storeJobAndTrigger(JobStoreCMT.java:273)
+	at org.quartz.core.QuartzScheduler.scheduleJob(QuartzScheduler.java:613)
+	at org.quartz.impl.StdScheduler.scheduleJob(StdScheduler.java:238)
+	at com.lombardrisk.f3.job.SchedulerProxy.scheduleJobWithCredentials(SchedulerProxy.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.lombardrisk.f3.job.SchedulerProxy.invoke(SchedulerProxy.java:60)
+	at com.sun.proxy.$Proxy4693.scheduleJobWithCredentials(Unknown Source)
+	at com.lombardrisk.f3.scheduler.SchedulerServiceBean.startJobNow(SchedulerServiceBean.java:557)
+	at sun.reflect.GeneratedMethodAccessor4168.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.jboss.invocation.Invocation.performCall(Invocation.java:397)
+	at org.jboss.ejb.StatelessSessionContainer$ContainerInterceptor.invoke(StatelessSessionContainer.java:233)
+	at org.jboss.resource.connectionmanager.CachedConnectionInterceptor.invoke(CachedConnectionInterceptor.java:156)
+	at org.jboss.ejb.plugins.StatelessSessionInstanceInterceptor.invoke(StatelessSessionInstanceInterceptor.java:173)
+	at com.lombardrisk.f3.audit.AuditTrailInterceptor.invoke(AuditTrailInterceptor.java:249)
+	at org.jboss.ejb.plugins.CallValidationInterceptor.invoke(CallValidationInterceptor.java:63)
+	at org.jboss.ejb.plugins.AbstractTxInterceptor.invokeNext(AbstractTxInterceptor.java:121)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.runWithTransactions(TxInterceptorCMT.java:350)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.invoke(TxInterceptorCMT.java:181)
+	at com.lombardrisk.f3.accesscontrol.JBossEJBInterceptor.invoke(JBossEJBInterceptor.java:140)
+	at org.jboss.ejb.plugins.SecurityInterceptor.process(SecurityInterceptor.java:233)
+	at org.jboss.ejb.plugins.SecurityInterceptor.invoke(SecurityInterceptor.java:211)
+	at org.jboss.ejb.plugins.LogInterceptor.invoke(LogInterceptor.java:205)
+	at com.lombardrisk.f3.logging.ElapsedTimeInterceptor.invoke(ElapsedTimeInterceptor.java:41)
+	at org.jboss.ejb.plugins.ProxyFactoryFinderInterceptor.invoke(ProxyFactoryFinderInterceptor.java:138)
+	at org.jboss.ejb.SessionContainer.internalInvoke(SessionContainer.java:650)
+	at org.jboss.ejb.Container.invoke(Container.java:1092)
+	at sun.reflect.GeneratedMethodAccessor421.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.jboss.mx.interceptor.ReflectedDispatcher.invoke(ReflectedDispatcher.java:157)
+	at org.jboss.mx.server.Invocation.dispatch(Invocation.java:96)
+	at org.jboss.mx.server.Invocation.invoke(Invocation.java:88)
+	at org.jboss.mx.server.AbstractMBeanInvoker.invoke(AbstractMBeanInvoker.java:264)
+	at org.jboss.mx.server.MBeanServerImpl.invoke(MBeanServerImpl.java:668)
+	at org.jboss.system.server.jmx.LazyMBeanServer.invoke(LazyMBeanServer.java:283)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker$MBeanServerAction.invoke(JRMPInvoker.java:855)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker.invoke(JRMPInvoker.java:422)
+	at sun.reflect.GeneratedMethodAccessor692.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:322)
+	at sun.rmi.transport.Transport$1.run(Transport.java:177)
+	at sun.rmi.transport.Transport$1.run(Transport.java:174)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:173)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:556)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:811)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:670)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+----------break now --------
+-------------I am task =Recalculate Interest Manager 4
+Task is Workflow : Recalculate Interest Manager 4
+2014-09-16 14:20:38
+Waiting 200 second for Task  Recalculate Interest Manager 4 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Recalculate Interest Manager 4] at: 2014-09-16 14:20:39,155
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.lombardrisk.f3.job.SchedulerProxy.invoke(SchedulerProxy.java:60)
+	at com.sun.proxy.$Proxy4693.scheduleJobWithCredentials(Unknown Source)
+	at com.lombardrisk.f3.scheduler.SchedulerServiceBean.startJobNow(SchedulerServiceBean.java:557)
+	at sun.reflect.GeneratedMethodAccessor4168.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.jboss.invocation.Invocation.performCall(Invocation.java:397)
+	at org.jboss.ejb.StatelessSessionContainer$ContainerInterceptor.invoke(StatelessSessionContainer.java:233)
+	at org.jboss.resource.connectionmanager.CachedConnectionInterceptor.invoke(CachedConnectionInterceptor.java:156)
+	at org.jboss.ejb.plugins.StatelessSessionInstanceInterceptor.invoke(StatelessSessionInstanceInterceptor.java:173)
+	at com.lombardrisk.f3.audit.AuditTrailInterceptor.invoke(AuditTrailInterceptor.java:249)
+	at org.jboss.ejb.plugins.CallValidationInterceptor.invoke(CallValidationInterceptor.java:63)
+	at org.jboss.ejb.plugins.AbstractTxInterceptor.invokeNext(AbstractTxInterceptor.java:121)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.runWithTransactions(TxInterceptorCMT.java:350)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.invoke(TxInterceptorCMT.java:181)
+	at com.lombardrisk.f3.accesscontrol.JBossEJBInterceptor.invoke(JBossEJBInterceptor.java:140)
+	at org.jboss.ejb.plugins.SecurityInterceptor.process(SecurityInterceptor.java:233)
+	at org.jboss.ejb.plugins.SecurityInterceptor.invoke(SecurityInterceptor.java:211)
+	at org.jboss.ejb.plugins.LogInterceptor.invoke(LogInterceptor.java:205)
+	at com.lombardrisk.f3.logging.ElapsedTimeInterceptor.invoke(ElapsedTimeInterceptor.java:41)
+	at org.jboss.ejb.plugins.ProxyFactoryFinderInterceptor.invoke(ProxyFactoryFinderInterceptor.java:138)
+	at org.jboss.ejb.SessionContainer.internalInvoke(SessionContainer.java:650)
+	at org.jboss.ejb.Container.invoke(Container.java:1092)
+	at sun.reflect.GeneratedMethodAccessor421.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.jboss.mx.interceptor.ReflectedDispatcher.invoke(ReflectedDispatcher.java:157)
+	at org.jboss.mx.server.Invocation.dispatch(Invocation.java:96)
+	at org.jboss.mx.server.Invocation.invoke(Invocation.java:88)
+	at org.jboss.mx.server.AbstractMBeanInvoker.invoke(AbstractMBeanInvoker.java:264)
+	at org.jboss.mx.server.MBeanServerImpl.invoke(MBeanServerImpl.java:668)
+	at org.jboss.system.server.jmx.LazyMBeanServer.invoke(LazyMBeanServer.java:283)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker$MBeanServerAction.invoke(JRMPInvoker.java:855)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker.invoke(JRMPInvoker.java:422)
+	at sun.reflect.GeneratedMethodAccessor692.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:322)
+	at sun.rmi.transport.Transport$1.run(Transport.java:177)
+	at sun.rmi.transport.Transport$1.run(Transport.java:174)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:173)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:556)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:811)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:670)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+	at sun.rmi.transport.StreamRemoteCall.exceptionReceivedFromServer(StreamRemoteCall.java:275)
+	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:252)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:161)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker_Stub.invoke(Unknown Source)
+	at org.jboss.invocation.jrmp.interfaces.JRMPInvokerProxy.invoke(JRMPInvokerProxy.java:133)
+	at org.jboss.invocation.InvokerInterceptor.invokeInvoker(InvokerInterceptor.java:365)
+	at org.jboss.invocation.InvokerInterceptor.invoke(InvokerInterceptor.java:197)
+	at org.jboss.proxy.TransactionInterceptor.invoke(TransactionInterceptor.java:61)
+	at org.jboss.proxy.SecurityInterceptor.invoke(SecurityInterceptor.java:68)
+	at org.jboss.proxy.ejb.StatelessSessionInterceptor.invoke(StatelessSessionInterceptor.java:112)
+	at org.jboss.proxy.ClientContainer.invoke(ClientContainer.java:101)
+	at com.sun.proxy.$Proxy2.startJobNow(Unknown Source)
+	at com.lombardrisk.f3.taskmgr.TaskManagerProcessor.startJob(TaskManagerProcessor.java:302)
+	at com.lombardrisk.f3.taskmgr.TaskManagerProcessor.parseAndExecuteTask(TaskManagerProcessor.java:138)
+	at com.lombardrisk.f3.F3TaskManager.main(F3TaskManager.java:28)
+Caused by: org.quartz.ObjectAlreadyExistsException: Unable to store Job with name: 'command_Recalculate Interest Manager 4now' and group: 'command_Workflownow', because one already exists with this identification.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.storeJob(JobStoreSupport.java:847)
+	at org.quartz.impl.jdbcjobstore.JobStoreCMT.storeJobAndTrigger(JobStoreCMT.java:273)
+	at org.quartz.core.QuartzScheduler.scheduleJob(QuartzScheduler.java:613)
+	at org.quartz.impl.StdScheduler.scheduleJob(StdScheduler.java:238)
+	at com.lombardrisk.f3.job.SchedulerProxy.scheduleJobWithCredentials(SchedulerProxy.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.lombardrisk.f3.job.SchedulerProxy.invoke(SchedulerProxy.java:60)
+	at com.sun.proxy.$Proxy4693.scheduleJobWithCredentials(Unknown Source)
+	at com.lombardrisk.f3.scheduler.SchedulerServiceBean.startJobNow(SchedulerServiceBean.java:557)
+	at sun.reflect.GeneratedMethodAccessor4168.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.jboss.invocation.Invocation.performCall(Invocation.java:397)
+	at org.jboss.ejb.StatelessSessionContainer$ContainerInterceptor.invoke(StatelessSessionContainer.java:233)
+	at org.jboss.resource.connectionmanager.CachedConnectionInterceptor.invoke(CachedConnectionInterceptor.java:156)
+	at org.jboss.ejb.plugins.StatelessSessionInstanceInterceptor.invoke(StatelessSessionInstanceInterceptor.java:173)
+	at com.lombardrisk.f3.audit.AuditTrailInterceptor.invoke(AuditTrailInterceptor.java:249)
+	at org.jboss.ejb.plugins.CallValidationInterceptor.invoke(CallValidationInterceptor.java:63)
+	at org.jboss.ejb.plugins.AbstractTxInterceptor.invokeNext(AbstractTxInterceptor.java:121)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.runWithTransactions(TxInterceptorCMT.java:350)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.invoke(TxInterceptorCMT.java:181)
+	at com.lombardrisk.f3.accesscontrol.JBossEJBInterceptor.invoke(JBossEJBInterceptor.java:140)
+	at org.jboss.ejb.plugins.SecurityInterceptor.process(SecurityInterceptor.java:233)
+	at org.jboss.ejb.plugins.SecurityInterceptor.invoke(SecurityInterceptor.java:211)
+	at org.jboss.ejb.plugins.LogInterceptor.invoke(LogInterceptor.java:205)
+	at com.lombardrisk.f3.logging.ElapsedTimeInterceptor.invoke(ElapsedTimeInterceptor.java:41)
+	at org.jboss.ejb.plugins.ProxyFactoryFinderInterceptor.invoke(ProxyFactoryFinderInterceptor.java:138)
+	at org.jboss.ejb.SessionContainer.internalInvoke(SessionContainer.java:650)
+	at org.jboss.ejb.Container.invoke(Container.java:1092)
+	at sun.reflect.GeneratedMethodAccessor421.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.jboss.mx.interceptor.ReflectedDispatcher.invoke(ReflectedDispatcher.java:157)
+	at org.jboss.mx.server.Invocation.dispatch(Invocation.java:96)
+	at org.jboss.mx.server.Invocation.invoke(Invocation.java:88)
+	at org.jboss.mx.server.AbstractMBeanInvoker.invoke(AbstractMBeanInvoker.java:264)
+	at org.jboss.mx.server.MBeanServerImpl.invoke(MBeanServerImpl.java:668)
+	at org.jboss.system.server.jmx.LazyMBeanServer.invoke(LazyMBeanServer.java:283)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker$MBeanServerAction.invoke(JRMPInvoker.java:855)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker.invoke(JRMPInvoker.java:422)
+	at sun.reflect.GeneratedMethodAccessor692.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:322)
+	at sun.rmi.transport.Transport$1.run(Transport.java:177)
+	at sun.rmi.transport.Transport$1.run(Transport.java:174)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:173)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:556)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:811)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:670)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+----------break now --------
+-------------I am task =Approve All Organisations 3
+Task is Workflow : Approve All Organisations 3
+2014-09-16 14:21:00
+Waiting 500 second for Task  Approve All Organisations 3 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Approve All Organisations 3] at: 2014-09-16 14:21:01,150
+Finished starting task: [Workflow:Approve All Organisations 3] at: 2014-09-16 14:21:01,196
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Approve All Organisations. Please wait ...
+Workflow:Approve All Organisations: 0  Organisations are approved.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Approve All Agreements 3
+Task is Workflow : Approve All Agreements 3
+2014-09-16 14:21:12
+Waiting 180 second for Task  Approve All Agreements 3 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Approve All Agreements 3] at: 2014-09-16 14:21:13,174
+Finished starting task: [Workflow:Approve All Agreements 3] at: 2014-09-16 14:21:13,191
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Approve All Agreements. Please wait ...
+Workflow:Approve All Agreements: 1  agreements are approved.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Approve All Statements 7
+Task is Workflow : Approve All Statements 7
+2014-09-16 14:21:25
+Waiting 180 second for Task  Approve All Statements 7 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Approve All Statements 7] at: 2014-09-16 14:21:26,154
+Finished starting task: [Workflow:Approve All Statements 7] at: 2014-09-16 14:21:26,185
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Approve All Statements. Please wait ...
+Workflow:Approve All Statements: 38  statements are triggered to approve.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Auto Email Call/Recall 1
+-----------SQL Select before task execute ------
+Number of Auto Email Call/Recall 1 is: 
+  COUNT(1)
+----------
+	 0
+Task is Workflow : Auto Email Call/Recall 1
+2014-09-16 14:21:38
+Waiting 5000 second for Task  Auto Email Call/Recall 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Auto Email Call/Recall 1] at: 2014-09-16 14:21:38,865
+Finished starting task: [Workflow:Auto Email Call/Recall 1] at: 2014-09-16 14:21:38,911
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Auto Email Call/Recall. Please wait ...
+----------break now --------
+-------------I am task =Auto Email Statement Notification 1
+Task is Workflow : Auto Email Statement Notification 1
+2014-09-16 14:22:06
+Waiting 2000 second for Task  Auto Email Statement Notification 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Auto Email Statement Notification 1] at: 2014-09-16 14:22:07,008
+Finished starting task: [Workflow:Auto Email Statement Notification 1] at: 2014-09-16 14:22:07,103
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Auto Email Statement Notification. Please wait ...
+----------break now --------
+-------------I am task =Import Counterparty Amount 3
+Task is Task Manager : Import Counterparty Amount 3
+2014-09-16 14:22:28
+Waiting 800 second for Task  Import Counterparty Amount 3 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import Counterparty Amount 3] at: 2014-09-16 14:22:29,051
+Finished starting task: [Task Manager:Import Counterparty Amount 3] at: 2014-09-16 14:22:29,158
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import Counterparty Amount. Please wait ...
+Import Counterparty Amount: Imported 10 Counterparty Amount(s).
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+----------break now --------
+-------------I am task =Auto Book Cash 1
+Task is Workflow : Auto Book Cash 1
+2014-09-16 14:22:50
+Waiting 180 second for Task  Auto Book Cash 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Auto Book Cash 1] at: 2014-09-16 14:22:51,227
+Finished starting task: [Workflow:Auto Book Cash 1] at: 2014-09-16 14:22:51,263
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Workflow:Auto Book Cash: Auto Book Cash Task Initiated. 
+Workflow:Auto Book Cash: Auto Book Cash Task Finished with 10 successful and 0 failed. 
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+----------break now --------
+-------------I am task =Auto Email Interest Statement 1
+Task is Workflow : Auto Email Interest Statement 1
+2014-09-16 14:23:12
+Waiting 2000 second for Task  Auto Email Interest Statement 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Auto Email Interest Statement 1] at: 2014-09-16 14:23:13,149
+Finished starting task: [Workflow:Auto Email Interest Statement 1] at: 2014-09-16 14:23:13,203
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Auto Email Interest Statement. Please wait ...
+----------break now --------
+-------------I am task =Distribute UDL 1
+Task is Workflow : Distribute UDL 1
+2014-09-16 14:23:34
+Waiting 7000 second for Task  Distribute UDL 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Distribute UDL 1] at: 2014-09-16 14:23:35,265
+Finished starting task: [Workflow:Distribute UDL 1] at: 2014-09-16 14:23:35,310
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started User Define Letter. Please wait ...
+----------break now --------
+-------------I am task =Recalculate Securities 1
+Task is Workflow : Recalculate Securities 1
+2014-09-16 14:23:56
+Waiting 2000 second for Task  Recalculate Securities 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Recalculate Securities 1] at: 2014-09-16 14:23:57,167
+Finished starting task: [Workflow:Recalculate Securities 1] at: 2014-09-16 14:23:57,204
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Recalculate Securities. Please wait ...
+----------break now --------
+-------------I am task =Recalculate Statements 1
+-----------SQL Select before task execute ------
+Number of Agreement statementstatus approved in New York is: 
+  COUNT(1)
+----------
+     20443
+Task is Workflow : Recalculate Statements 1
+2014-09-16 14:24:18
+Waiting 4000 second for Task  Recalculate Statements 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Recalculate Statements 1] at: 2014-09-16 14:24:19,423
+Finished starting task: [Workflow:Recalculate Statements 1] at: 2014-09-16 14:24:19,468
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Process Outstanding 1
+Task is Workflow : Process Outstanding 1
+2014-09-16 14:24:40
+Waiting 180 second for Task  Process Outstanding 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Process Outstanding 1] at: 2014-09-16 14:24:41,398
+Finished starting task: [Workflow:Process Outstanding 1] at: 2014-09-16 14:24:41,438
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Process Approve Trade Settlements 1
+Task is Workflow : Process Approve Trade Settlements 1
+2014-09-16 14:25:02
+Waiting 180 second for Task  Process Approve Trade Settlements 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Process Approve Trade Settlements 1] at: 2014-09-16 14:25:03,634
+Finished starting task: [Workflow:Process Approve Trade Settlements 1] at: 2014-09-16 14:25:03,679
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Process Approve Settlements 4
+Task is Workflow : Process Approve Settlements 4
+2014-09-16 14:25:24
+Waiting 180 second for Task  Process Approve Settlements 4 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Process Approve Settlements 4] at: 2014-09-16 14:25:25,454
+Finished starting task: [Workflow:Process Approve Settlements 4] at: 2014-09-16 14:25:25,476
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Net Older Collateral Bookings 1
+Task is Workflow : Net Older Collateral Bookings 1
+2014-09-16 14:25:46
+Waiting 200 second for Task  Net Older Collateral Bookings 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Net Older Collateral Bookings 1] at: 2014-09-16 14:25:47,665
+Finished starting task: [Workflow:Net Older Collateral Bookings 1] at: 2014-09-16 14:25:47,692
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Settlement Risk 1
+Task is Workflow : Settlement Risk 1
+2014-09-16 14:26:09
+Waiting 300 second for Task  Settlement Risk 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Settlement Risk 1] at: 2014-09-16 14:26:09,523
+Finished starting task: [Workflow:Settlement Risk 1] at: 2014-09-16 14:26:09,556
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Apply Effective and Maturity dates 1
+Task is Workflow : Apply Effective and Maturity dates 1
+2014-09-16 14:26:31
+Waiting 300 second for Task  Apply Effective and Maturity dates 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Apply Effective and Maturity dates 1] at: 2014-09-16 14:26:31,532
+Finished starting task: [Workflow:Apply Effective and Maturity dates 1] at: 2014-09-16 14:26:31,559
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Dashboard Refresh 1
+Task is Workflow : Dashboard Refresh 1
+2014-09-16 14:26:53
+Waiting 180 second for Task  Dashboard Refresh 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Dashboard Refresh 1] at: 2014-09-16 14:26:53,644
+Finished starting task: [Workflow:Dashboard Refresh 1] at: 2014-09-16 14:26:53,669
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Reset Total Settlement Amount 4
+Task is Workflow : Reset Total Settlement Amount 4
+2014-09-16 14:27:15
+Waiting 180 second for Task  Reset Total Settlement Amount 4 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Reset Total Settlement Amount 4] at: 2014-09-16 14:27:15,623
+Finished starting task: [Workflow:Reset Total Settlement Amount 4] at: 2014-09-16 14:27:15,647
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Todays Events Reset 1
+Task is Workflow : Todays Events Reset 1
+2014-09-16 14:27:37
+Waiting 200 second for Task  Todays Events Reset 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Todays Events Reset 1] at: 2014-09-16 14:27:37,637
+Finished starting task: [Workflow:Todays Events Reset 1] at: 2014-09-16 14:27:37,674
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Start-Up Dashboard Reset 1
+Task is 'Workflow : Start-Up Dashboard Reset 1'
+2014-09-16 14:27:59
+Waiting 600 second for Task  Start-Up Dashboard Reset 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Start-Up Dashboard Reset 1] at: 2014-09-16 14:27:59,644
+Finished starting task: [Workflow:Start-Up Dashboard Reset 1] at: 2014-09-16 14:27:59,675
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Import Counterparty Amount 1
+Task is Task Manager : Import Counterparty Amount 1
+2014-09-16 14:28:21
+Waiting 7200 second for Task  Import Counterparty Amount 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import Counterparty Amount 1] at: 2014-09-16 14:28:21,691
+Finished starting task: [Task Manager:Import Counterparty Amount 1] at: 2014-09-16 14:28:21,707
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Import Organisations 3
+Task is Task Manager : Import Organisations 3
+2014-09-16 14:28:43
+Waiting 800 second for Task  Import Organisations 3 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import Organisations 3] at: 2014-09-16 14:28:43,645
+Finished starting task: [Task Manager:Import Organisations 3] at: 2014-09-16 14:28:43,943
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Import Organisations 4
+Task is Task Manager : Import Organisations 4
+2014-09-16 14:29:05
+Waiting 500 second for Task  Import Organisations 4 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import Organisations 4] at: 2014-09-16 14:29:05,702
+Finished starting task: [Task Manager:Import Organisations 4] at: 2014-09-16 14:29:05,791
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Import Agreements 2
+Task is Task Manager : Import Agreements 2
+2014-09-16 14:29:27
+Waiting 2500 second for Task  Import Agreements 2 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import Agreements 2] at: 2014-09-16 14:29:27,729
+Finished starting task: [Task Manager:Import Agreements 2] at: 2014-09-16 14:29:27,798
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Import Agreement Ratings 1
+Task is Task Manager : Import Agreement Ratings 1
+2014-09-16 14:29:49
+Waiting 500 second for Task  Import Agreement Ratings 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import Agreement Ratings 1] at: 2014-09-16 14:29:49,955
+Finished starting task: [Task Manager:Import Agreement Ratings 1] at: 2014-09-16 14:29:49,989
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Import Agreement UDF 1
+Task is Task Manager : Import Agreement UDF 1
+2014-09-16 14:30:11
+Waiting 1500 second for Task  Import Agreement UDF 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import Agreement UDF 1] at: 2014-09-16 14:30:11,794
+Finished starting task: [Task Manager:Import Agreement UDF 1] at: 2014-09-16 14:30:11,811
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Import Collateral Booking 3
+Task is Task Manager : Import Collateral Booking 3
+2014-09-16 14:30:33
+Waiting 3000 second for Task  Import Collateral Booking 3 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import Collateral Booking 3] at: 2014-09-16 14:30:33,899
+Finished starting task: [Task Manager:Import Collateral Booking 3] at: 2014-09-16 14:30:34,077
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Import Assets 1
+Task is Task Manager : Import Assets 1
+2014-09-16 14:30:55
+Waiting 400 second for Task  Import Assets 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import Assets 1] at: 2014-09-16 14:30:55,816
+Finished starting task: [Task Manager:Import Assets 1] at: 2014-09-16 14:30:56,037
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Import Asset Pricing 10
+Task is Task Manager : Import Asset Pricing 10
+2014-09-16 14:31:17
+Waiting 300 second for Task  Import Asset Pricing 10 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import Asset Pricing 10] at: 2014-09-16 14:31:18,013
+Finished starting task: [Task Manager:Import Asset Pricing 10] at: 2014-09-16 14:31:18,033
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Import Asset Ratings 1
+Task is Task Manager : Import Asset Ratings 1
+2014-09-16 14:31:39
+Waiting 300 second for Task  Import Asset Ratings 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import Asset Ratings 1] at: 2014-09-16 14:31:40,015
+Finished starting task: [Task Manager:Import Asset Ratings 1] at: 2014-09-16 14:31:40,048
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Import Inventory Manager 1
+Task is Task Manager : Import Inventory Manager 1
+2014-09-16 14:32:01
+Waiting 400 second for Task  Import Inventory Manager 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import Inventory Manager 1] at: 2014-09-16 14:32:02,012
+Finished starting task: [Task Manager:Import Inventory Manager 1] at: 2014-09-16 14:32:02,039
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Import Repo/ETF/SBL Trades 1
+Task is Task Manager : Import Repo/ETF/SBL Trades 1
+2014-09-16 14:32:23
+Waiting 800 second for Task  Import Repo/ETF/SBL Trades 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import Repo/ETF/SBL Trades 1] at: 2014-09-16 14:32:24,437
+Finished starting task: [Task Manager:Import Repo/ETF/SBL Trades 1] at: 2014-09-16 14:32:24,487
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Import Delta Repo/ETF/SBL Trades 1
+Task is Task Manager : Import Delta Repo/ETF/SBL Trades 1
+2014-09-16 14:32:45
+Waiting 800 second for Task  Import Delta Repo/ETF/SBL Trades 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import Delta Repo/ETF/SBL Trades 1] at: 2014-09-16 14:32:46,111
+Finished starting task: [Task Manager:Import Delta Repo/ETF/SBL Trades 1] at: 2014-09-16 14:32:46,163
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Import Repo/ETF/SBL Trades 2
+Task is Task Manager : Import Repo/ETF/SBL Trades 2
+2014-09-16 14:33:07
+Waiting 2000 second for Task  Import Repo/ETF/SBL Trades 2 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import Repo/ETF/SBL Trades 2] at: 2014-09-16 14:33:08,077
+Finished starting task: [Task Manager:Import Repo/ETF/SBL Trades 2] at: 2014-09-16 14:33:08,099
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Import Repo/ETF/SBL MtM 1
+Task is Task Manager : Import Repo/ETF/SBL MtM 1
+2014-09-16 14:33:29
+Waiting 180 second for Task  Import Repo/ETF/SBL MtM 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import Repo/ETF/SBL MtM 1] at: 2014-09-16 14:33:30,134
+Finished starting task: [Task Manager:Import Repo/ETF/SBL MtM 1] at: 2014-09-16 14:33:30,170
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Import Repo Settlement 1
+Task is Task Manager : Import Repo Settlement 1
+2014-09-16 14:33:51
+Waiting 1000 second for Task  Import Repo Settlement 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import Repo Settlement 1] at: 2014-09-16 14:33:52,400
+Finished starting task: [Task Manager:Import Repo Settlement 1] at: 2014-09-16 14:33:52,436
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Import Trades 1
+Task is Task Manager : Import Trades 1
+2014-09-16 14:34:13
+Waiting 300 second for Task  Import Trades 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import Trades 1] at: 2014-09-16 14:34:14,198
+Finished starting task: [Task Manager:Import Trades 1] at: 2014-09-16 14:34:14,248
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Import Trades 2
+Task is Task Manager : Import Trades 2
+2014-09-16 14:34:35
+Waiting 500 second for Task  Import Trades 2 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import Trades 2] at: 2014-09-16 14:34:36,158
+Finished starting task: [Task Manager:Import Trades 2] at: 2014-09-16 14:34:36,191
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Import Trades 3
+Task is Task Manager : Import Trades 3
+2014-09-16 14:34:57
+Waiting 1000 second for Task  Import Trades 3 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import Trades 3] at: 2014-09-16 14:34:58,210
+Finished starting task: [Task Manager:Import Trades 3] at: 2014-09-16 14:34:58,273
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Import Trades 4
+Task is Task Manager : Import Trades 4
+2014-09-16 14:35:19
+Waiting 1000 second for Task  Import Trades 4 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import Trades 4] at: 2014-09-16 14:35:20,283
+Finished starting task: [Task Manager:Import Trades 4] at: 2014-09-16 14:35:20,313
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Import MtM 1
+Task is Task Manager : Import MtM 1
+2014-09-16 14:35:41
+Waiting 180 second for Task  Import MtM 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import MtM 1] at: 2014-09-16 14:35:42,368
+Finished starting task: [Task Manager:Import MtM 1] at: 2014-09-16 14:35:42,406
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Import Delta Inventory Manager 1
+Task is Task Manager : Import Delta Inventory Manager 1
+2014-09-16 14:36:03
+Waiting 500 second for Task  Import Delta Inventory Manager 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import Delta Inventory Manager 1] at: 2014-09-16 14:36:04,316
+Finished starting task: [Task Manager:Import Delta Inventory Manager 1] at: 2014-09-16 14:36:04,377
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Import Delta Repo/ETF/SBL Trades 2
+Task is Task Manager : Import Delta Repo/ETF/SBL Trades 2
+2014-09-16 14:36:25
+Waiting 1500 second for Task  Import Delta Repo/ETF/SBL Trades 2 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import Delta Repo/ETF/SBL Trades 2] at: 2014-09-16 14:36:26,453
+Finished starting task: [Task Manager:Import Delta Repo/ETF/SBL Trades 2] at: 2014-09-16 14:36:26,477
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Import Delta Trade 2
+Task is Task Manager : Import Delta Trade 2
+2014-09-16 14:36:47
+Waiting 180 second for Task  Import Delta Trade 2 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import Delta Trade 2] at: 2014-09-16 14:36:48,894
+Finished starting task: [Task Manager:Import Delta Trade 2] at: 2014-09-16 14:36:48,976
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Import Delta Trade 3
+Task is Task Manager : Import Delta Trade 3
+2014-09-16 14:37:10
+Waiting 300 second for Task  Import Delta Trade 3 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import Delta Trade 3] at: 2014-09-16 14:37:10,780
+Finished starting task: [Task Manager:Import Delta Trade 3] at: 2014-09-16 14:37:10,799
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Import External Independent Amounts 5
+Task is Task Manager : Import External Independent Amounts 5
+2014-09-16 14:37:32
+Waiting 500 second for Task  Import External Independent Amounts 5 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import External Independent Amounts 5] at: 2014-09-16 14:37:32,538
+Finished starting task: [Task Manager:Import External Independent Amounts 5] at: 2014-09-16 14:37:32,846
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Import NAV 1
+Task is Task Manager : Import NAV 1
+2014-09-16 14:37:54
+Waiting 1000 second for Task  Import NAV 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import NAV 1] at: 2014-09-16 14:37:54,595
+Finished starting task: [Task Manager:Import NAV 1] at: 2014-09-16 14:37:54,618
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Import Portfolio TSA 1
+Task is Task Manager : Import Portfolio TSA 1
+2014-09-16 14:38:16
+Waiting 500 second for Task  Import Portfolio TSA 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import Portfolio TSA 1] at: 2014-09-16 14:38:16,923
+Finished starting task: [Task Manager:Import Portfolio TSA 1] at: 2014-09-16 14:38:16,951
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Import Settlement Instructions 1
+Task is Task Manager : Import Settlement Instructions 1
+2014-09-16 14:38:38
+Waiting 300 second for Task  Import Settlement Instructions 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import Settlement Instructions 1] at: 2014-09-16 14:38:38,665
+Finished starting task: [Task Manager:Import Settlement Instructions 1] at: 2014-09-16 14:38:38,716
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Remove Mature Assets 1
+Task is Workflow : Remove Mature Assets 1
+2014-09-16 14:39:00
+Waiting 2000 second for Task  Remove Mature Assets 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Remove Mature Assets 1] at: 2014-09-16 14:39:00,663
+Finished starting task: [Workflow:Remove Mature Assets 1] at: 2014-09-16 14:39:00,687
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Remove Mature Trades 1
+Task is Workflow : Remove Mature Trades 1
+2014-09-16 14:39:22
+Waiting 3000 second for Task  Remove Mature Trades 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Remove Mature Trades 1] at: 2014-09-16 14:39:22,816
+Finished starting task: [Workflow:Remove Mature Trades 1] at: 2014-09-16 14:39:22,839
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Reset Trading Inactive 1
+Task is Workflow : Reset Trading Inactive 1
+2014-09-16 14:39:44
+Waiting 180 second for Task  Reset Trading Inactive 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Reset Trading Inactive 1] at: 2014-09-16 14:39:44,891
+Finished starting task: [Workflow:Reset Trading Inactive 1] at: 2014-09-16 14:39:44,925
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Import FX Rates 3
+Task is Task Manager : Import FX Rates 3
+2014-09-16 14:40:06
+Waiting 500 second for Task  Import FX Rates 3 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import FX Rates 3] at: 2014-09-16 14:40:07,061
+Finished starting task: [Task Manager:Import FX Rates 3] at: 2014-09-16 14:40:07,097
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Import Interest Rates 3
+Task is Task Manager : Import Interest Rates 3
+2014-09-16 14:40:28
+Waiting 180 second for Task  Import Interest Rates 3 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import Interest Rates 3] at: 2014-09-16 14:40:28,911
+Finished starting task: [Task Manager:Import Interest Rates 3] at: 2014-09-16 14:40:28,934
+--debug timeout :20.0
+----------break now --------
+-------------I am task =Empty Task
+Task is Admin : Empty Task
+2014-09-16 14:40:50
+Waiting 180 second for Task  Empty Task execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Admin:Empty Task] at: 2014-09-16 14:40:51,015
+Finished starting task: [Admin:Empty Task] at: 2014-09-16 14:40:51,034
+--debug timeout :20.0
+----------break now --------

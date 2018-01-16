@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/feeds.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <agreement>
+            <externalId id="T25621.umbrella.agreement.external.id">T25621_CCP_Umbrella_Net_TSA_External_ID</externalId>
+            <agreementId id="T25621.umbrella.agreement.id">564</agreementId>
+            <baseCurrency id="T25621.umbrella.base.ccy" ref="ccy.usd.name"/>
+        </agreement>
+        <agreement>
+            <externalId id="T25621.fund.agreement.external.id">T25621_CCP_Umbrella_Net_TSA_Fund1_External_ID</externalId>
+            <agreementId id="T25621.fund.agreement.id">563</agreementId>
+            <baseCurrency id="T25621.fund.base.ccy" ref="ccy.usd.name"/>
+        </agreement>
+
+        <feedPortfolioTSA id="feed.tsa.upfront.fee">
+            <agreement_id ref="T25621.fund.agreement.id"/>
+            <legal_id ref="T25621.fund.agreement.external.id"/>
+            <component>Upfront Fee</component>
+            <amount>300</amount>
+            <currency ref="T25621.fund.base.ccy"/>
+        </feedPortfolioTSA>
+
+        <feedResult id="feed.portfolio.tsa.result">
+            <fileUploaded id="feed.portfolio.tsa.result.file"/>
+            <unsuccessfulImports>1</unsuccessfulImports>
+        </feedResult>
+
+        <feedStatus id="feed.portfolio.tsa.status">
+            <status>Failed</status>
+            <valuationFile ref="feed.portfolio.tsa.result.file"/>
+            <description>Portfolio Cashflow</description>
+            <failedFeed apply="true">
+                <total>1</total>
+                <entry>
+                    <content>Cashflow feed is only supported for Not-Net CCP agreements with Cashflow selected</content>
+                </entry>
+            </failedFeed>
+        </feedStatus>
+
+        <agreementSearch id="feed.portfolio.tsa.agreement.search"/>
+
+        <agreementSearchResult id="feed.portfolio.tsa.agreement.search.result"/>
+
+        <multiModelAgreementStatement id="feed.protfolio.tsa.agreement.statement"/>
+
+        <agreementStatement id="check.feed.protfolio.tsa.agreement.statement"/>
+    </scenarioData>
+</dataBean>

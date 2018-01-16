@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/feeds.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <feedAgreement id="feed.net.otc.agreement.eligibility.rule">
+            <principal ref="org.p1.lname"/>
+            <counterpartycode ref="org.c1.lname"/>
+            <businessLine>OTC</businessLine>
+            <agreement_description id="feed.net.otc.agreement.eligibility.rule.desc" random="true" prefix="feed_agr1_"/>
+            <region ref="region.test1.name"/>
+            <legal_id id="feed.net.otc.agreement.eligibility.rule.external.id" random="true"/>
+            <master_documentation ref="master.documentation.1987.isda.master.name"/>
+            <credit_support_documentation ref="credit.documentation.margin.provisions.name"/>
+            <netting_MTM_And_IA>Net</netting_MTM_And_IA>
+            <base_currency ref="ccy.usd.name"/>
+            <original_date random="true" variation="t"/>
+            <frequency>Daily</frequency>
+            <frequency_start random="true" variation="t"/>
+            <notification_time>13.00</notification_time>
+            <resolution_time>10.00</resolution_time>
+            <resolution_day>same</resolution_day>
+            <time_zone ref="system.staticData.timeZone.cet.name"/>
+            <holiday_centre ref="hc.test1.name"/>
+            <non_workingday_adjusttype>None</non_workingday_adjusttype>
+            <product>
+                <productName>QTP</productName>
+                <settlementPeriod>T</settlementPeriod>
+            </product>
+            <elig_rule_template>net_eligibility_rule</elig_rule_template>
+            <asset>
+                <assetName ref="bond.usd.name"/>
+                <applicableType></applicableType>
+                <applicableParty></applicableParty>
+                <settlementDateAbbriviated>T</settlementDateAbbriviated>
+                <templateVsAgreementEligibilityRule></templateVsAgreementEligibilityRule>
+            </asset>
+            <asset>
+                <assetName ref="bond.gbp.name"/>
+                <applicableType></applicableType>
+                <applicableParty></applicableParty>
+                <settlementDateAbbriviated>T</settlementDateAbbriviated>
+                <templateVsAgreementEligibilityRule></templateVsAgreementEligibilityRule>
+            </asset>
+            <asset>
+                <assetName ref="equity.usd.name"/>
+                <applicableType></applicableType>
+                <applicableParty></applicableParty>
+                <settlementDateAbbriviated>T</settlementDateAbbriviated>
+                <templateVsAgreementEligibilityRule></templateVsAgreementEligibilityRule>
+            </asset>
+            <asset>
+                <assetName ref="cash.usd.name"/>
+                <applicableType></applicableType>
+                <applicableParty></applicableParty>
+                <settlementDateAbbriviated>T</settlementDateAbbriviated>
+                <templateVsAgreementEligibilityRule></templateVsAgreementEligibilityRule>
+            </asset>
+            <rounding_delivery>Up</rounding_delivery>
+            <rounding_recall>Down</rounding_recall>
+            <settlementInstructions>
+                <settlementInstruction>
+                    <bookingType>Net</bookingType>
+                    <direction>Call/Return</direction>
+                    <bucket>VM Call/Return</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>Net</bookingType>
+                    <direction>Delivery/Recall</direction>
+                    <bucket>VM Recall/Delivery</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>Interest</bookingType>
+                    <direction>Pay</direction>
+                    <bucket>Pay</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>Interest</bookingType>
+                    <direction>Receive</direction>
+                    <bucket>Receive</bucket>
+                </settlementInstruction>
+            </settlementInstructions>
+            <distMedium>Email</distMedium>
+            <applyOrgCL>false</applyOrgCL>
+        </feedAgreement>
+
+        <feedResult id="feed.net.otc.agreement.eligibility.rule.result">
+            <fileUploaded id="feed.net.otc.agreement.eligibility.rule.result.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedStatus id="feed.net.otc.agreement.eligibility.rule.status">
+            <systemName>QTP</systemName>
+            <status>Successful</status>
+            <valuationFile ref="feed.net.otc.agreement.eligibility.rule.result.file"/>
+            <description>Agreements</description>
+            <successfulFeed>
+                <importType>Agreements</importType>
+                <valuationFile ref="feed.net.otc.agreement.eligibility.rule.result.file"/>
+                <total>1</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <agreementSearch id="feed.net.otc.agreement.eligibility.rule.search">
+            <description>
+                <filter ref="feed.net.otc.agreement.eligibility.rule.desc"/>
+                <linkText ref="feed.net.otc.agreement.eligibility.rule.desc"/>
+            </description>
+            <externalId ref="feed.net.otc.agreement.eligibility.rule.external.id"/>
+        </agreementSearch>
+
+        <agreementSearchResult id="feed.net.otc.agreement.eligibility.rule.search.result">
+            <description ref="feed.net.otc.agreement.eligibility.rule.desc"/>
+            <externalId ref="feed.net.otc.agreement.eligibility.rule.external.id"/>
+        </agreementSearchResult>
+
+        <agreementSummary id="feed.net.otc.agreement.eligibility.rule.summary">
+            <principalAndCounterpartyEligibleForReceipt>
+                <assetType ref="bond.gbp.name"/>
+                <templateVsAgreementEligibilityRules>Template Only</templateVsAgreementEligibilityRules>
+                <settlementPeriod>T</settlementPeriod>
+            </principalAndCounterpartyEligibleForReceipt>
+            <principalAndCounterpartyEligibleForReceipt>
+                <assetType ref="bond.usd.name"/>
+                <templateVsAgreementEligibilityRules>Template Only</templateVsAgreementEligibilityRules>
+                <settlementPeriod>T</settlementPeriod>
+            </principalAndCounterpartyEligibleForReceipt>
+            <principalAndCounterpartyEligibleForReceipt>
+                <assetType ref="cash.usd.name"/>
+                <templateVsAgreementEligibilityRules>Template Only</templateVsAgreementEligibilityRules>
+                <settlementPeriod>T</settlementPeriod>
+            </principalAndCounterpartyEligibleForReceipt>
+            <principalAndCounterpartyEligibleForReceipt>
+                <assetType ref="equity.usd.name"/>
+                <templateVsAgreementEligibilityRules>Template Only</templateVsAgreementEligibilityRules>
+                <settlementPeriod>T</settlementPeriod>
+            </principalAndCounterpartyEligibleForReceipt>
+        </agreementSummary>
+
+        <agreement id="agreement.complete"/>
+
+    </scenarioData>
+</dataBean>

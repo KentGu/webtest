@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<!--<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">-->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xsi:noNamespaceSchemaLocation="http://artifactory.london.lombardrisk.com:8081/artifactory/libs-snapshot-local/com/lombardrisk/cobiz/14.1.0-SNAPSHOT/cobiz-14.1.0-SNAPSHOT.jar!/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <assetDefinition id="audit.cash.assetType">
+            <parent>
+                <assetName ref="cash.name" />
+            </parent>
+            <assetName id="cashType" random="true" prefix="cashtype"/>
+            <status>enabled</status>
+            <category>Cash</category>
+            <currencyOfDenomination>USD</currencyOfDenomination>
+            <holidayCentre>HONG KONG</holidayCentre>
+        </assetDefinition>
+
+        <auditAssetsReportFilter id="audit.asset.by.cashassettype">
+            <assetType ref="cashType" />
+        </auditAssetsReportFilter>
+        <variable id="auditReportPath" />
+        <reportValidationRules id="audit.asset.report.cash.rule">
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="cashType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Status</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>Approved</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="cashType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Currency of Denomination</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>USD</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="cashType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Coupon Rate</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>0.000</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="cashType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Coupon Day Count</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>0.0</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="cashType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>ASSET CLASS</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value ref="cash.name" />
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="cashType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Issuer</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>N/A</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="cashType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Coupon Frequency</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value></value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="cashType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Price Factor</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>0.0</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="cashType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Accrual Basis</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value></value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="cashType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Outstanding Issuance</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>0</value>
+                </field>
+            </reportValidationRule>
+
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="cashType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>UseDefaultRatings</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>No</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="cashType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Lock</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>No</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="cashType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>MinimTradeAmnt</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>0.00</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="cashType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>MultiTradeAmnt</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>0.00</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="cashType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Manually Override</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>No</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="cashType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Type</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value ref="cashType" />
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="cashType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Sec Mapping:Instrument ID</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value ref="cashType"/>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="cashType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Sec Mapping:Primary</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value>N/A</value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>Yes</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="cashType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Sec Mapping:Instrument ID Type</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value></value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>5</count>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="cashType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Sec Source Price:Price</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>0.0000000</value>
+                </field>
+            </reportValidationRule>
+
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="cashType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Sec Source:Price Source</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>Default</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="cashType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Sec Source:Price Source</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>PS1</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="cashType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Sec Source:Price Source</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>PS2</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="cashType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Sec Source:Price Source</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>PS3</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="cashType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Sec Source:Price Source</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>PS4</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>5</count>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="cashType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Sec Source:Price Level</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value></value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>5</count>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="cashType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Sec Source:Price Age</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>0.0</value>
+                </field>
+            </reportValidationRule>
+
+        </reportValidationRules>
+    </scenarioData>
+</dataBean>

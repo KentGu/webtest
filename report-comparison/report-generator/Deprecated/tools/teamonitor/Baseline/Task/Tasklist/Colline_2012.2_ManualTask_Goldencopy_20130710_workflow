@@ -1,0 +1,71 @@
+0:Workflow:Approve All Organisations 1:null:null:500
+0:Workflow:Approve All Agreements 1:null:null:180
+0:Workflow:Approve All Statements 5:null:null:180
+0:Workflow:External Exposures Reset 4:null:null:1000
+1:'Workflow:Cut-Off 15':null:null:180
+1:Workflow:Recalculate Securities 1:null:null:2000
+0:Workflow:Recalculate Statements 1:null:null:300
+0:Workflow:Recalculate Workflow 1:null:null:1000
+0:Workflow:Recalculate based on Day change 1:null:null:500
+0:Workflow:Recalculate Interest Manager 4:null:null:200
+0:Workflow:Auto Book Cash 1:null:null:180
+1:Workflow:Auto Email Call/Recall 1:null:null:1600
+1:Workflow:Auto Email Interest Statement 1:null:null:19000
+0:Workflow:Auto Email Statement Notification 1:null:null:500
+0:Workflow:Distribute UDL 1:null:null:7000
+1:Workflow:Interest Manager Reset 1:null:null:18500
+0:Workflow:Process Approve Settlements 4:null:null:180
+0:Workflow:Process Approve Trade Settlements 1:null:null:180
+0:Workflow:Process Outstanding 1:null:null:180
+0:Workflow:Net Older Collateral Bookings 1:null:null:200
+0:Workflow:Settlement Risk 1:null:null:180
+0:Workflow:Apply Effective and Maturity dates 1:null:null:300
+0:Workflow:Dashboard Refresh 1:null:null:180
+0:Workflow:Reset Total Settlement Amount 4:null:null:180
+0:Workflow:Todays Events Reset 1:null:null:200
+1:'Workflow:Start-Up Dashboard Reset 1':null:null:600
+0:Task Manager:Import Organisations 3:null:null:500
+0:Task Manager:Import Organisations 4:null:null:300
+0:Task Manager:Import Agreements 2:null:null:1500
+0:Task Manager:Import Agreement Ratings 1:null:null:500
+0:Task Manager:Import Agreement UDF 1:null:null:1500
+0:Task Manager:Import Assets 1:null:null:400
+0:Task Manager:Import Asset Pricing 10:null:null:300
+0:Task Manager:Import Asset Ratings 1:null:null:300
+0:Task Manager:Import Collateral Booking 3:null:null:3000
+0:Task Manager:Import Counterparty Amount 1:null:null:1800
+0:Task Manager:Import Inventory Manager 1:null:null:300
+0:Task Manager:Import Repo Trades 1:null:null:300
+0:Task Manager:Import Repo MtM 1:null:null:180
+0:Task Manager:Import Repo Settlement 1:null:null:180
+0:Task Manager:Import Trades 1:null:null:180
+0:Task Manager:Import MtM 1:null:null:180
+0:Task Manager:Import Delta Inventory Manager 1:null:null:180
+0:Task Manager:Import Delta Repo Trades 1:null:null:180
+0:Task Manager:Import Delta Trade 2:null:null:180
+0:Task Manager:Import External Independent Amounts 5:null:null:180
+0:Task Manager:Import NAV 1:null:null:500
+0:Task Manager:Import Portfolio TSA 1:null:null:500
+0:Task Manager:Import Settlement Instructions 1:null:null:300
+0:Task Manager:Self Service Attachment 1:null:null:180
+0:Reconciliation:Run Reconciliation:null:null:300
+1:Reconciliation:Purge Reconciliation:null:null:600
+1:System:Purge Audit Log:null:null:600
+1:System:Purge Event Log:null:null:500
+1:System:Purge Reports:null:null:600
+0:Market Data:Market Data Cleanup:null:null:180
+1:Workflow:Remove Mature Assets:null:null:2000
+1:Workflow:Remove Mature Trades:null:null:2000
+1:Workflow:Remove Override Trade Information:null:null:180
+1:Workflow:Remove Unused System Drafts:null:null:180
+0:Workflow:Reset Trading Inactive:null:null:180
+1:Workflow:Purge Archived Statements:null:null:30000
+1:Workflow:Purge Feed Log:null:null:3500
+1:Workflow:Purge Live Interest:null:null:8000
+1:Workflow:Purge Historical Interest:null:null:10000
+1:Workflow:Purge Self Service Attachments:null:null:180
+1:Workflow:Purge System Table:null:null:180
+1:Workflow:Purge System monitor Log:null:null:180
+0:Admin:Empty Task:null:null:180
+0:Task Manager:Import FX Rates 3:null:null:180
+0:Task Manager:Import Interest Rates 3:null:null:180

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+		<organisation id="org.with.role.issuer.rating.sen.sandpAAA.moodysAaa.fitchAAA">
+			<shortName id="org1Branch.shortName" random="true"/>
+			<longName ref="org1Branch.shortName" random="true"/>
+			<code ref="org1Branch.shortName" random="true"/>
+			<role>Issuer</role>
+			<debtClassification>
+				<debtName>SEN</debtName>
+				<creditRating>
+					<agency>SandP</agency>
+					<rating>AAA</rating>
+				</creditRating>
+				<creditRating>
+					<agency>MOODYS</agency>
+					<rating>Aaa</rating>
+				</creditRating>
+				<creditRating>
+					<agency>Fitch</agency>
+					<rating>AAA</rating>
+				</creditRating>
+			</debtClassification>
+			<status>Approved</status>
+		</organisation>
+
+
+		<instrument id="instrument.with.asset.type.qtp.equity.usd.price.100.issuer.rating.new.created.org.above">
+			<assetClass>qtp_equity</assetClass>
+			<assetType>qtp_equity_usd</assetType>
+			<instrumentId>
+				<value id="bondinstrument.id" random="true"/>
+			</instrumentId>
+			<description id="bondinstrument.desc" random="true"/>
+			<issuer>
+				<filter ref="org1Branch.shortName"/>
+				<linkText ref="org1Branch.shortName"/>
+			</issuer>
+			<maturityDate>T+100</maturityDate>
+			<priceSource>
+				<priceSourceName>Default</priceSourceName>
+				<dirtyPrice>1</dirtyPrice>
+				<lastPriceChange>T</lastPriceChange>
+				<priceDate>T</priceDate>
+			</priceSource>
+			<issueDate>T</issueDate>
+			<securityStatus>Approved</securityStatus>
+		</instrument>
+
+		<agreement id="otc.not.net.agreement.with.base.currency.usd.tick.qtp.equity.usd">
+			<principal id="p1">
+				<criteria>Containing</criteria>
+				<type>Code</type>
+				<filter ref="org.p1.lname"/>
+				<linkText ref="org.p1.lname"/>
+			</principal>
+			<counterparty id="c">
+				<criteria>Containing</criteria>
+				<type>Long Name</type>
+				<filter ref="org.c1.lname"/>
+				<linkText ref="org.c1.lname"/>
+			</counterparty>
+			<agreementDescription id="agr.desc" random="true"/>
+			<agreementDate>T</agreementDate>
+			<baseCurrency>USD</baseCurrency>
+			<callFrequency>
+				<legalReviewFrequency>Daily</legalReviewFrequency>
+			</callFrequency>
+			<holidayCentre ref="hc.europe.name"/>
+			<product id="p">
+				<productName ref="product.test1.name"/>
+			</product>
+			<collateralAssetClass>
+				<collateralAssetClassName>qtp_equity</collateralAssetClassName>
+				<collateralAssetType>
+					<collateralAssetTypeName>qtp_equity_usd</collateralAssetTypeName>
+				</collateralAssetType>
+			</collateralAssetClass>
+			<settlementBucket>
+				<bookingType>Net</bookingType>
+				<direction>Call/Return</direction>
+				<bucket>
+					<filter ref="payInstrBucket.vcr.name"/>
+					<linkText ref="payInstrBucket.vcr.name"/>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>Net</bookingType>
+				<direction>Delivery/Recall</direction>
+				<bucket>
+					<filter ref="payInstrBucket.vrd.name"/>
+					<linkText ref="payInstrBucket.vrd.name"/>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>Interest</bookingType>
+				<direction>Pay</direction>
+				<bucket>
+					<filter ref="payInstrBucket.pay.name"/>
+					<linkText ref="payInstrBucket.pay.name"/>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>Interest</bookingType>
+				<direction>Receive</direction>
+				<bucket>
+					<filter ref="payInstrBucket.rec.name"/>
+					<linkText ref="payInstrBucket.rec.name"/>
+				</bucket>
+			</settlementBucket>
+			<letterAndDeliveryGroupDetails>
+				<letterDistributionMedium>Email</letterDistributionMedium>
+			</letterAndDeliveryGroupDetails>
+			<agreementStatus>Pending</agreementStatus>
+			<agreementStatus>Approved</agreementStatus>
+			<statementStatus>Pending</statementStatus>
+			<statementStatus>Approved</statementStatus>
+			<agreementId id="agmt.id"/>
+		</agreement>
+
+		<agreementSearch id="search.agreement.by.agreement.description">
+			<description>
+				<filter ref="agr.desc"/>
+			</description>
+		</agreementSearch>
+
+		<agreementSearchResult id="agreement.search.result">
+			<description ref="agr.desc"/>
+		</agreementSearchResult>
+
+		<agreementExposureSummary id="qtp.product">
+			<productList>
+				<productType ref="product.test1.name"/>
+			</productList>
+		</agreementExposureSummary>
+
+		<tradeDetail id = "otc.trade.with.amount.-2m">
+			<tradeInformation>
+				<tradeDate>T</tradeDate>
+				<effectiveDate>T</effectiveDate>
+				<maturityDate>T+1000</maturityDate>
+				<tradeIdentifierPartyA random="true"/>
+				<partyABranchName random="true"/>
+				<partyBBranchName random="true"/>
+			</tradeInformation>
+			<valuationInformation>
+				<principalValuationAmount>
+					<amount>-2m</amount>
+					<currency>USD</currency>
+				</principalValuationAmount>
+				<valuationDate>T</valuationDate>
+			</valuationInformation>
+		</tradeDetail>
+
+		<agreement id="agreement.new.created.above.will.be.approved.from.amended.status">
+			<statementStatus>Approved</statementStatus>
+		</agreement>
+
+
+
+		<exposureEventDetail id="tick.event.previous.agreement.produced.delivery.amount.2000000">
+			<eventId id="deliveryEventId"/>
+			<agreementRequirement>-2,000,000.00</agreementRequirement>
+			<action>Delivery</action>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="event.previous.agreement.produced" name="check">
+			<agreementRequirement>-2,000,000.00</agreementRequirement>
+			<action>Delivery</action>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="event.with.action.delivery.amount.2000000" name="check">
+			<agreementRequirement>-2,000,000.00</agreementRequirement>
+			<action>Delivery</action>
+		</exposureEventDetail>
+
+
+
+		<bookingDetail id="bulk.booking.on.equity.class.with.amount.200000">
+			<instrumentSearch>
+				<instrument>
+					<filter ref="bondinstrument.id"/>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>200000</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="bulk.booking.on.equity.class.with.amount.300000">
+			<instrumentSearch>
+				<instrument>
+					<filter ref="bondinstrument.id"/>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>300000</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="bulk.booking.on.equity.class.with.amount.500000">
+			<instrumentSearch>
+				<instrument>
+					<filter ref="bondinstrument.id"/>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>500000</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+
+		<exposureManagementMessage id="booking.warning.message.shown.expected.-2000000.actual.-1000000">
+			<messageDetail>
+				<index>1</index>
+				<message>Attempting to make a booking that does not meet the Required Amount. (Expected: -2,000,000.00, Actual: -1,000,000.00) Continue?</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+
+
+		<exposureManagementMessage id="override.warning.message.shown.by.previous.bulk.booking.expected.-2000000.actual.-1000000">
+			<messageDetail>
+				<index>1</index>
+				<message>Attempting to make a booking that exceeds the required amount (Expected: -2,000,000.00, Actual: -1,000,000.00) Continue?</message>
+				<overrideWarning>true</overrideWarning>
+			</messageDetail>
+		</exposureManagementMessage>
+
+
+		<exposureManagementMessage id="booking.warning.message.shown.expected.-1000000.actual.-1300000">
+			<messageDetail>
+				<index>1</index>
+				<message>Attempting to make a booking that exceeds the required amount. (Expected: -1,000,000.00, Actual: -1,300,000.00) Continue?</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<exposureManagementMessage id="override.warning.message.shown.by.previous.bulk.booking.expected.-1000000.actual.-1300000">
+			<messageDetail>
+				<index>1</index>
+				<message>Attempting to make a booking that exceeds the required amount (Expected: -1,000,000.00, Actual: -1,300,000.00) Continue?</message>
+				<overrideWarning>true</overrideWarning>
+			</messageDetail>
+		</exposureManagementMessage>
+
+
+
+
+
+
+
+	</scenarioData>
+</dataBean>

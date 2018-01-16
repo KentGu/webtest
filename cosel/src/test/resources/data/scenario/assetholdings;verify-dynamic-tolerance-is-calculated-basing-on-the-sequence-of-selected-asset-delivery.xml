@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+		<assetDefinition id="bondAssetClass">
+			<assetName id="bondAssetClass.name" random="true"/>
+			<status>enabled</status>
+			<category>FI Securities</category>
+			<externalName id="bondAssetClass.external.name" random="true"/>
+			<tolerancePercentage>1</tolerancePercentage>
+			<toleranceAccount>0.5m</toleranceAccount>
+			<toleranceAccountCurrency>USD</toleranceAccountCurrency>
+		</assetDefinition>
+
+		<assetDefinition id="equityAssetClass">
+			<assetName id="equityAssetClass.name" random="true"/>
+			<status>enabled</status>
+			<category>Equities</category>
+			<externalName id="equityAssetClass.external.name" random="true"/>
+			<tolerancePercentage>2</tolerancePercentage>
+			<toleranceAccount>0.2m</toleranceAccount>
+			<toleranceAccountCurrency>USD</toleranceAccountCurrency>
+		</assetDefinition>
+
+		<assetDefinition id="commodityAssetClass">
+			<assetName id="commodityAssetClass.name" random="true"/>
+			<status>enabled</status>
+			<category>Commodities</category>
+			<externalName id="commodityAssetClass.external.name" random="true"/>
+			<tolerancePercentage>3</tolerancePercentage>
+			<toleranceAccount>0.3m</toleranceAccount>
+			<toleranceAccountCurrency>USD</toleranceAccountCurrency>
+		</assetDefinition>
+
+		<assetDefinition id="cashAssetClass">
+			<assetName id="cashAssetClass.name" random="true"/>
+			<status>enabled</status>
+			<category>Cash</category>
+			<externalName id="cashAssetClass.external.name" random="true"/>
+			<toleranceAccountCurrency>USD</toleranceAccountCurrency>
+		</assetDefinition>
+
+		<assetDefinition id="bondAssetType">
+			<parent>
+				<assetName ref="bondAssetClass.name"/>
+			</parent>
+			<assetName id="bondAssetType.name" random="true" />
+			<status>enabled</status>
+			<category>FI Securities</category>
+			<holidayCentre>EUROPE</holidayCentre>
+			<currencyOfDenomination>USD</currencyOfDenomination>
+			<externalName id="bondAssetType.external.name" random="true" />
+		</assetDefinition>
+
+		<assetDefinition id="equityAssetType">
+			<parent>
+				<assetName ref="equityAssetClass.name"/>
+			</parent>
+			<assetName id="equityAssetType.name" random="true" />
+			<status>enabled</status>
+			<category>Equities</category>
+			<holidayCentre>EUROPE</holidayCentre>
+			<currencyOfDenomination>USD</currencyOfDenomination>
+			<externalName id="equityAssetType.external.name" random="true" />
+		</assetDefinition>
+
+		<assetDefinition id="commodityAssetType">
+			<parent>
+				<assetName ref="commodityAssetClass.name"/>
+			</parent>
+			<assetName id="commodityAssetType.name" random="true" />
+			<status>enabled</status>
+			<category>Commodities</category>
+			<holidayCentre>EUROPE</holidayCentre>
+			<currencyOfDenomination>USD</currencyOfDenomination>
+			<externalName id="commodityAssetType.external.name" random="true" />
+		</assetDefinition>
+
+		<assetDefinition id="cashAssetType">
+			<parent>
+				<assetName ref="cashAssetClass.name"/>
+			</parent>
+			<assetName id="cashAssetType.name" random="true" />
+			<status>enabled</status>
+			<category>Cash</category>
+			<holidayCentre>EUROPE</holidayCentre>
+			<currencyOfDenomination>USD</currencyOfDenomination>
+			<externalName id="cashAssetType.external.name" random="true" />
+		</assetDefinition>
+
+		<instrument id="bondinstrument">
+			<assetClass ref="bondAssetClass.name"/>
+			<assetType ref="bondAssetType.name"/>
+			<instrumentId>
+				<value id="bondinstrument.id" random="true"/>
+			</instrumentId>
+			<description id="bondinstrument.desc" random="true"/>
+			<issuer>
+				<filter>QTP_Eligible_Issuer4</filter>
+				<linkText>QTP_Eligible_Issuer4</linkText>
+			</issuer>
+			<maturityDate>T+100</maturityDate>
+			<priceSource>
+				<priceSourceName>Default</priceSourceName>
+				<dirtyPrice>100</dirtyPrice>
+				<lastPriceChange>T</lastPriceChange>
+				<cleanPrice>100</cleanPrice>
+				<priceDate>T</priceDate>
+			</priceSource>
+			<couponRate>0</couponRate>
+			<issueDate>T</issueDate>
+			<securityStatus>Approved</securityStatus>
+		</instrument>
+
+		<securitySearch id="bondSecuritySearchAmended">
+			<instrument>
+				<type>Starting with</type>
+				<filter ref="bondinstrument.id"/>
+				<linkText ref="bondinstrument.id"/>
+			</instrument>
+		</securitySearch>
+
+		<securitySearchResult id="bondSecuritySearchWillBeApproved">
+			<instrument ref="bondinstrument.id"/>
+		</securitySearchResult>
+
+		<instrument id="equityinstrument">
+			<assetClass ref="equityAssetClass.name"/>
+			<assetType ref="equityAssetType.name"/>
+			<instrumentId>
+				<value id="equityinstrument.id" random="true"/>
+			</instrumentId>
+			<description id="equityinstrument.desc" random="true"/>
+			<issuer>
+				<filter>QTP_Eligible_Issuer4</filter>
+				<linkText>QTP_Eligible_Issuer4</linkText>
+			</issuer>
+			<maturityDate>T+100</maturityDate>
+			<priceSource>
+				<priceSourceName>Default</priceSourceName>
+				<dirtyPrice>1</dirtyPrice>
+				<lastPriceChange>T</lastPriceChange>
+				<priceDate>T</priceDate>
+			</priceSource>
+			<issueDate>T</issueDate>
+			<securityStatus>Approved</securityStatus>
+		</instrument>
+
+		<securitySearch id="equitySecuritySearchAmended">
+			<instrument>
+				<type>Starting with</type>
+				<filter ref="equityinstrument.id"/>
+				<linkText ref="equityinstrument.id"/>
+			</instrument>
+		</securitySearch>
+
+		<securitySearchResult id="equitySecuritySearchWillBeApproved">
+			<instrument ref="equityinstrument.id"/>
+		</securitySearchResult>
+
+
+
+		<instrument id="commodityinstrument">
+			<assetClass ref="commodityAssetClass.name"/>
+			<assetType ref="commodityAssetType.name"/>
+			<instrumentId>
+				<value id="commodityinstrument.id" random="true"/>
+			</instrumentId>
+			<description id="commodityinstrument.desc" random="true"/>
+			<issuer>
+				<filter>QTP_Eligible_Issuer4</filter>
+				<linkText>QTP_Eligible_Issuer4</linkText>
+			</issuer>
+			<maturityDate>T+100</maturityDate>
+			<priceSource>
+				<priceSourceName>Default</priceSourceName>
+				<dirtyPrice>1</dirtyPrice>
+				<lastPriceChange>T</lastPriceChange>
+				<priceDate>T</priceDate>
+			</priceSource>
+			<issueDate>T</issueDate>
+			<securityStatus>Approved</securityStatus>
+		</instrument>
+
+		<securitySearch id="commoditySecuritySearchAmended">
+			<instrument>
+				<type>Starting with</type>
+				<filter ref="commodityinstrument.id"/>
+				<linkText ref="commodityinstrument.id"/>
+			</instrument>
+		</securitySearch>
+
+		<securitySearchResult id="commoditySecuritySearchWillBeApproved">
+			<instrument ref="commodityinstrument.id"/>
+		</securitySearchResult>
+
+
+
+		<agreement id="clearingAgreement">
+			<principal id="p1">
+				<criteria>Containing</criteria>
+				<type>Code</type>
+				<filter ref="org.p1.lname"/>
+				<linkText ref="org.p1.lname"/>
+			</principal>
+			<counterparty id="c">
+				<criteria>Containing</criteria>
+				<type>Long Name</type>
+				<filter ref="org.c1.lname"/>
+				<linkText ref="org.c1.lname"/>
+			</counterparty>
+			<businessLine>Clearing</businessLine>
+			<ccp>ICE</ccp>
+			<agreementDescription id="agr.desc" random="true"/>
+			<agreementDate>T</agreementDate>
+			<baseCurrency>USD</baseCurrency>
+			<callFrequency>
+				<legalReviewFrequency>Daily</legalReviewFrequency>
+			</callFrequency>
+			<holidayCentre ref="hc.europe.name"/>
+			<product id="p">
+				<productName ref="product.test1.name"/>
+			</product>
+			<collateralAssetClass>
+				<collateralAssetClassName ref="bondAssetClass.name"/>
+				<collateralAssetType>
+					<collateralAssetTypeName ref="bondAssetType.name"/>
+				</collateralAssetType>
+			</collateralAssetClass>
+			<collateralAssetClass>
+				<collateralAssetClassName ref="equityAssetClass.name"/>
+				<collateralAssetType>
+					<collateralAssetTypeName ref="equityAssetType.name"/>
+				</collateralAssetType>
+			</collateralAssetClass>
+			<collateralAssetClass>
+				<collateralAssetClassName ref="commodityAssetClass.name"/>
+				<collateralAssetType>
+					<collateralAssetTypeName ref="commodityAssetType.name"/>
+				</collateralAssetType>
+			</collateralAssetClass>
+			<collateralAssetClass>
+				<collateralAssetClassName ref="cashAssetClass.name"/>
+				<collateralAssetType>
+					<collateralAssetTypeName ref="cashAssetType.name"/>
+				</collateralAssetType>
+			</collateralAssetClass>
+			<settlementBucket>
+				<bookingType>Net</bookingType>
+				<direction>Call/Return</direction>
+				<bucket>
+					<filter ref="payInstrBucket.vcr.name"/>
+					<linkText ref="payInstrBucket.vcr.name"/>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>Net</bookingType>
+				<direction>Delivery/Recall</direction>
+				<bucket>
+					<filter ref="payInstrBucket.vrd.name"/>
+					<linkText ref="payInstrBucket.vrd.name"/>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>Interest</bookingType>
+				<direction>Pay</direction>
+				<bucket>
+					<filter ref="payInstrBucket.pay.name"/>
+					<linkText ref="payInstrBucket.pay.name"/>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>Interest</bookingType>
+				<direction>Receive</direction>
+				<bucket>
+					<filter ref="payInstrBucket.rec.name"/>
+					<linkText ref="payInstrBucket.rec.name"/>
+				</bucket>
+			</settlementBucket>
+			<letterAndDeliveryGroupDetails>
+				<letterDistributionMedium>Email</letterDistributionMedium>
+			</letterAndDeliveryGroupDetails>
+			<agreementStatus>Pending</agreementStatus>
+			<agreementStatus>Approved</agreementStatus>
+			<statementStatus>Pending</statementStatus>
+			<statementStatus>Approved</statementStatus>
+			<agreementId id="agmt.id"/>
+		</agreement>
+
+		<agreementExposureSummary id="ProductQTP">
+			<productList>
+				<productType ref="product.test1.name"/>
+			</productList>
+		</agreementExposureSummary>
+
+		<tradeDetail id = "-2mtrade">
+			<tradeInformation>
+				<!--<productType ref="product.test1.name"/>-->
+				<tradeDate>T</tradeDate>
+				<effectiveDate>T</effectiveDate>
+				<maturityDate>T+1000</maturityDate>
+				<tradeIdentifierPartyA random="true"/>
+				<partyABranchName random="true"/>
+				<partyBBranchName random="true"/>
+			</tradeInformation>
+			<valuationInformation>
+				<principalValuationAmount>
+					<amount>-2m</amount>
+					<currency>USD</currency>
+				</principalValuationAmount>
+				<valuationDate>T</valuationDate>
+			</valuationInformation>
+		</tradeDetail>
+
+		<exposureEventDetail id="tickDeliveryEvent">
+			<action>Delivery</action>
+		</exposureEventDetail>
+
+		<bookingDetail id="bulkbookingForCash">
+			<instrumentSearch>
+				<instrument>
+					<filter ref="cashAssetType.name"/>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>0.5m</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="bulkbookingForCash1m">
+			<instrumentSearch>
+				<instrument>
+					<filter ref="cashAssetType.name"/>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>1m</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="bulkbookingForCash2m">
+			<instrumentSearch>
+				<instrument>
+					<filter ref="cashAssetType.name"/>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>2m</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="bulkbookingForCash2.1m">
+			<instrumentSearch>
+				<instrument>
+					<filter ref="cashAssetType.name"/>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>2.1m</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="bulkbookingForBond">
+			<instrumentSearch>
+				<instrument>
+					<filter ref="bondinstrument.id"/>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>0.5m</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="bulkbookingForEquity">
+			<instrumentSearch>
+				<instrument>
+					<filter ref="equityinstrument.id"/>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>0.5m</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="bulkbookingForCommodity">
+			<instrumentSearch>
+				<instrument>
+					<filter ref="commodityinstrument.id"/>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail clickPlusButton="true">
+					<nominalAmount>0.5m</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="bulkbookingForCommodity0.52m">
+		<instrumentSearch>
+			<instrument>
+				<filter ref="commodityinstrument.id"/>
+			</instrument>
+		</instrumentSearch>
+		<bookingInformation>
+			<bookingInformationDetail>
+				<nominalAmount>0.52m</nominalAmount>
+			</bookingInformationDetail>
+		</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="bulkbookingForCommodity0.520001m">
+			<instrumentSearch>
+				<instrument>
+					<filter ref="commodityinstrument.id"/>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>520000.01</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="bulkbookingForCommodity1.4m">
+			<instrumentSearch>
+				<instrument>
+					<filter ref="commodityinstrument.id"/>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>1400000</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="bulkbookingForCommodity1.41m">
+			<instrumentSearch>
+				<instrument>
+					<filter ref="commodityinstrument.id"/>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>1410000</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="bulkbookingForCommodity1.5m">
+			<instrumentSearch>
+				<instrument>
+					<filter ref="commodityinstrument.id"/>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>1.5m</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="bulkbookingForCommodity1.6m">
+			<instrumentSearch>
+				<instrument>
+					<filter ref="commodityinstrument.id"/>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>1.6m</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="bulkbookingForCommodity1.7m">
+			<instrumentSearch>
+				<instrument>
+					<filter ref="commodityinstrument.id"/>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>1.7m</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<exposureManagementMessage id="NoErrorsOrWarningsFound">
+			<messageDetail>
+				<message>No errors or warnings found.</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<exposureManagementMessage id="warningExpected-2020000.00Actual-2020000.01">
+			<messageDetail>
+				<index>1</index>
+				<message>Attempting to make a booking that exceeds the required amount (Expected: -2,020,000.00, Actual: -2,020,000.01) Continue?</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<exposureManagementMessage id="warningExpected-2020000.00Actual-1500000.00">
+			<messageDetail>
+				<index>1</index>
+				<message>Attempting to make a booking that does not meet the Required Amount. (Expected: -2,000,000.00, Actual: -1,500,000.00) Continue?</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<exposureManagementMessage id="warningExpected-2040000.00Actual2400000.00">
+			<messageDetail>
+				<index>1</index>
+				<message>Attempting to make a booking that exceeds the required amount (Expected: -2,040,000.00, Actual: -2,400,000.00) Continue?</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<exposureManagementMessage id="warningExpected-2040000.00Actual-2410000">
+			<messageDetail>
+				<index>1</index>
+				<message>Attempting to make a booking that exceeds the required amount (Expected: -2,040,000.00, Actual: -2,410,000.00) Continue?</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+
+		<exposureManagementMessage id="warningExpected-2060000.00Actual-2500000">
+			<messageDetail>
+				<index>1</index>
+				<message>Attempting to make a booking that exceeds the required amount (Expected: -2,060,000.00, Actual: -2,500,000.00) Continue?</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+
+		<exposureManagementMessage id="warningExpected-2060000.00Actual-2600000">
+			<messageDetail>
+				<index>1</index>
+				<message>Attempting to make a booking that exceeds the required amount (Expected: -2,060,000.00, Actual: -2,600,000.00) Continue?</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<exposureManagementMessage id="warningExpected-2060000.00Actual-2700000">
+			<messageDetail>
+				<index>1</index>
+				<message>Attempting to make a booking that exceeds the required amount (Expected: -2,060,000.00, Actual: -2,700,000.00) Continue?</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+
+		<exposureManagementMessage id="warningExpected-2000000.00Actual-1000000">
+			<messageDetail>
+				<index>1</index>
+				<message>Attempting to make a booking that does not meet the Required Amount. (Expected: -2,000,000.00, Actual: -1,000,000.00) Continue?</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<exposureManagementMessage id="warningExpected-200000.00Actual-2100000">
+			<messageDetail>
+				<index>1</index>
+				<message>Attempting to make a booking that exceeds the required amount (Expected: -2,000,000.00, Actual: -2,100,000.00) Continue?</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</scenarioData>
+</dataBean>

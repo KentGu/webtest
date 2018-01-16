@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/exposureManagement.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <securitySearch id="26542.bond.usd">
+            <matured>All</matured>
+            <instrument>
+                <filter id="26542.bond.usd.id">26542_bond_usd_1</filter>
+                <!--<linkText ref="26527.bond.usd"/>-->
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="26542.bond.usd.approve">
+            <instrument ref="26542.bond.usd.id"/>
+        </securitySearchResult>
+
+        <instrument id="26542.bond.usd.changeRecordDate.tPlus6.changeMaturityDate.tPlus6">
+            <recordDate>t+6</recordDate>
+            <maturityDate>t+6</maturityDate>
+        </instrument>
+
+          <securitySearch id="26542.bond.usd.2">
+            <matured>All</matured>
+            <instrument>
+                <filter id="26542.bond.usd.id.2">26542_bond_usd_2</filter>
+                <!--<linkText ref="26527.bond.usd"/>-->
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="26542.bond.usd.approve.2">
+            <instrument ref="26542.bond.usd.id.2"/>
+        </securitySearchResult>
+
+        <instrument id="26542.bond.usd.2.changeRecordDate.tPlus6.changeMaturityDate.tPlus6">
+            <recordDate>t+6</recordDate>
+            <maturityDate>t+6</maturityDate>
+        </instrument>
+
+         <agreement id="agr26542.otc.notnet.multiModel">
+            <agreementId id="agrid">2702</agreementId>
+        </agreement>
+
+        <agreement id="agr26542">
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+        <exposureEventDetail id="model">
+            <column>Model</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="source">
+            <column>Source</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subReq.top">
+            <action>Substitution Request</action>
+            <model></model>
+            <agreementRequirement>8,000,000.00</agreementRequirement>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subCon.top">
+            <action>Substitution Confirmation</action>
+            <model></model>
+            <agreementRequirement>0.00</agreementRequirement>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subCon.vm.top">
+            <action>VM Substitution Confirmation</action>
+            <model></model>
+            <agreementRequirement>0.00</agreementRequirement>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subReq.sub.bond.1.m1">
+            <action>Substitution Request</action>
+            <model>m1</model>
+            <agreementRequirement>8,000,000.00</agreementRequirement>
+            <source>System</source>
+            <element id="26542.bond.usd.id.withmarket.1">26542_bond_usd_1,m1</element>
+            <eventId id="event1"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subReq.sub.bond.2.m1">
+            <action>Substitution Request</action>
+            <model>m1</model>
+            <source>System</source>
+            <agreementRequirement>8,000,000.00</agreementRequirement>
+            <element id="26542.bond.usd.id.withmarket.2">26542_bond_usd_2,m2</element>
+            <eventId id="event2"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subCon.sub.bond.4.m2">
+            <action>VM Substitution Confirmation</action>
+            <model>m2</model>
+            <agreementRequirement>0.00</agreementRequirement>
+            <source>Manual</source>
+            <element id="26542.bond.gbp.id.withmarket.1">26542_bond_gbp_1,m1</element>
+            <eventId id="event3"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subCon.sub.bond.5.m2">
+            <action>Substitution Confirmation</action>
+            <model>m2</model>
+            <agreementRequirement>0.00</agreementRequirement>
+            <source>Manual</source>
+            <element id="26542.bond.gbp.id.withmarket.2">26542_bond_gbp_2,m2</element>
+            <eventId id="event4"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subReq.sub.bond.1.m1.completed">
+            <action>Substitution Request</action>
+            <model>m1</model>
+            <agreementRequirement>8,000,000.00</agreementRequirement>
+            <callStatus>Completed</callStatus>
+            <source>System</source>
+            <element ref="26542.bond.usd.id.withmarket.1"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subReq.sub.bond.2.m1.completed">
+            <action>Substitution Request</action>
+            <callStatus>Completed</callStatus>
+            <model>m1</model>
+            <source>System</source>
+            <agreementRequirement>8,000,000.00</agreementRequirement>
+            <element ref="26542.bond.usd.id.withmarket.2"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subCon.sub.bond.4.m2.completed">
+            <action>VM Substitution Confirmation</action>
+            <callStatus>Completed</callStatus>
+            <model>m2</model>
+            <agreementRequirement>0.00</agreementRequirement>
+            <source>Manual</source>
+            <element ref="26542.bond.gbp.id.withmarket.1"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subCon.sub.bond.5.m2.completed">
+            <action>Substitution Confirmation</action>
+            <callStatus>Completed</callStatus>
+            <model>m2</model>
+            <agreementRequirement>0.00</agreementRequirement>
+            <source>Manual</source>
+            <element ref="26542.bond.gbp.id.withmarket.2"/>
+        </exposureEventDetail>
+
+        <substitutionEventSearch id="agr26542.return">
+            <substitution>Return</substitution>
+            <agreementId ref="agrid"/>
+        </substitutionEventSearch>
+
+        <substitutionEventDetail id="agr26542.subEvent">
+            <agrId ref="agrid"/>
+        </substitutionEventDetail>
+
+        <substitutionEventDetail id="bond.gbp.1">
+            <instrumentId id="26542.bond.gbp.id.withmarket.1">26542_bond_gbp_1,m1</instrumentId>
+        </substitutionEventDetail>
+
+        <substitutionEventDetail id="bond.gbp.2">
+            <instrumentId id="26542.bond.gbp.id.withmarket.2">26542_bond_gbp_2,m2</instrumentId>
+        </substitutionEventDetail>
+
+
+        <bookingDetail id="subReq.m1.bond.usd.1.recall">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <eventId ref="event1"/>
+                    <model>m1</model>
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <movement>Recall</movement>
+                    <movementIsDisabled>true</movementIsDisabled>
+                    <instrumentId id="26542.bond.usd.id.withmarket" disable="true">26542_bond_usd_1,m1</instrumentId>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subReq.m1.instrumentEmpty.delivery">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <eventId ref="event1"/>
+                    <model>m1</model>
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <movement>Delivery</movement>
+                    <movementIsDisabled>true</movementIsDisabled>
+                    <instrumentId></instrumentId>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+
+        <bookingDetail id="subReq.m1.bond.usd.2.recall">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <model>m1</model>
+                    <eventId ref="event2"/>
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <movement>Recall</movement>
+                    <movementIsDisabled>true</movementIsDisabled>
+                    <instrumentId ref="26542.bond.usd.id.withmarket.2" disable="true"/>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subReq.m1.instrumentEmpty.delivery.2">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <model>m1</model>
+                    <eventId ref="event2"/>
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <movement>Delivery</movement>
+                    <movementIsDisabled>true</movementIsDisabled>
+                    <instrumentId></instrumentId>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subCon.m2.bond.gbp.1.return">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <model>m2</model>
+                    <eventId ref="event3"/>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <movement>Return</movement>
+                    <movementIsDisabled>true</movementIsDisabled>
+                    <instrumentId ref="26542.bond.gbp.id.withmarket.1" disable="true"/>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subCon.m2.instrumentEmpty.call">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <model>m2</model>
+                    <eventId ref="event3"/>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <movement>Call</movement>
+                    <movementIsDisabled>true</movementIsDisabled>
+                    <instrumentId></instrumentId>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subCon.m2.bond.gbp.2.return">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <model>m2</model>
+                    <eventId ref="event4"/>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <movement>Return</movement>
+                    <movementIsDisabled>true</movementIsDisabled>
+                    <instrumentId ref="26542.bond.gbp.id.withmarket.2" disable="true"/>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subCon.m2.instrumentEmpty.call.2">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <model>m2</model>
+                    <eventId ref="event4"/>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <movement>Call</movement>
+                    <movementIsDisabled>true</movementIsDisabled>
+                    <instrumentId></instrumentId>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+
+
+
+
+        <bookingDetail id="subReq.m1.bond.usd.1.recall.vm.3m.im.2m">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <eventId ref="event1"/>
+                    <model>m1</model>
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <movement>Recall</movement>
+                    <vmAmount>3m</vmAmount>
+                    <imAmount>2m</imAmount>
+                    <instrumentId id="26542.bond.usd.id.withmarket" disable="true">26542_bond_usd_1,m1</instrumentId>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subReq.m1.bond.usd.3.delivery.vm.2m.im.2m">
+            <instrumentSearch>
+                <instrument>
+                    <filter id="26542.bond.usd.id.withmarket.3">26542_bond_usd_3,m3</filter>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <eventId ref="event1"/>
+                    <model>m1</model>
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <movement>Delivery</movement>
+                    <instrumentId></instrumentId>
+                    <vmAmount>2m</vmAmount>
+                    <imAmount>2m</imAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+
+        <bookingDetail id="subReq.m1.bond.usd.2.recall.vm.2m">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <eventId ref="event2"/>
+                    <model>m1</model>
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <movement>Recall</movement>
+                    <instrumentId ref="26542.bond.usd.id.withmarket.2" disable="true"/>
+                    <vmAmount>2m</vmAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subReq.m1.cash.usd.delivery.vm.2m">
+            <instrumentSearch>
+                <instrument>
+                    <filter ref="cash.usd1.name"/>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <eventId ref="event2"/>
+                    <model>m1</model>
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <movement>Delivery</movement>
+                    <movementIsDisabled>true</movementIsDisabled>
+                    <instrumentId></instrumentId>
+                    <vmAmount>2m</vmAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subCon.m2.bond.gbp.4.return.vm.2m.im.2m">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <eventId ref="event3"/>
+                    <model>m2</model>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <movement>Return</movement>
+                    <instrumentId ref="26542.bond.gbp.id.withmarket.1" disable="true"/>
+                    <vmAmount>2m</vmAmount>
+                    <imAmount>2m</imAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subCon.m2.bond.gbp.6.call.vm.2m.im.3m">
+            <instrumentSearch>
+                <instrument>
+                    <filter id="26542.bond.gbp.id.withmarket.3">26542_bond_gbp_3,m3</filter>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <eventId ref="event3"/>
+                    <model>m2</model>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <movement>Call</movement>
+                    <movementIsDisabled>true</movementIsDisabled>
+                    <instrumentId></instrumentId>
+                    <vmAmount>2m</vmAmount>
+                    <imAmount>3m</imAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subCon.m2.bond.gbp.5.return.im.2m">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <eventId ref="event4"/>
+                    <model>m2</model>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <movement>Return</movement>
+                    <instrumentId ref="26542.bond.gbp.id.withmarket.2" disable="true"/>
+                    <imAmount>2m</imAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="subCon.m2.cash.gbp.call.im.2m">
+            <instrumentSearch>
+                <instrument>
+                    <filter id="cash.gbp1.name">CASH-GBP</filter>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <eventId ref="event4"/>
+                    <model>m2</model>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <movement>Call</movement>
+                    <instrumentId></instrumentId>
+                    <imAmount>2m</imAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+
+        <exposureManagementMessage id="overrideWarning">
+            <messageDetail>
+                <overrideWarning>true</overrideWarning>
+            </messageDetail>
+            <messageDetail>
+                <overrideWarning>true</overrideWarning>
+            </messageDetail>
+        </exposureManagementMessage>
+
+        <assetBookingSummary id="asset.type.bond.usd">
+            <assetType ref="bond.usd.name"/>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="asset.type.bond.gbp">
+            <assetType ref="bond.gbp.name"/>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="asset.type.CASH.USD">
+            <assetType ref="cash.usd1.name"/>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="asset.type.CASH.GBP">
+            <assetType ref="cash.gbp1.name"/>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="bond.usd.1.recall.vm.3n.im.2m">
+            <assetType ref="bond.usd.name"/>
+            <instrumentId ref="26542.bond.usd.id"/>
+            <movement>Recall</movement>
+            <vmMarketValue>3,000,000.00</vmMarketValue>
+            <imMarketValue>2,000,000.00</imMarketValue>
+        </assetBookingSummary>
+
+        <bookingDetail id="bond.usd.1.recall.vm.3n.im.2m.event1">
+            <bookingInformation>
+                <eventId ref="event1"/>
+            </bookingInformation>
+        </bookingDetail>
+
+        <assetBookingSummary id="bond.usd.3.delivery.vm.2m.im.2m">
+            <assetType ref="bond.usd.name"/>
+            <instrumentId id="26542.bond.usd.id.3">26542_bond_usd_3</instrumentId>
+            <movement>Delivery</movement>
+            <vmMarketValue>2,000,000.00</vmMarketValue>
+            <imMarketValue>2,000,000.00</imMarketValue>
+        </assetBookingSummary>
+
+        <bookingDetail id="bond.usd.3.delivery.vm.2m.im.2m.event1">
+            <bookingInformation>
+                <eventId ref="event1"/>
+            </bookingInformation>
+        </bookingDetail>
+
+        <assetBookingSummary id="bond.usd.2.recall.vm.2m">
+            <assetType ref="bond.usd.name"/>
+            <instrumentId ref="26542.bond.usd.id.2"/>
+            <movement>Recall</movement>
+            <vmMarketValue>2,000,000.00</vmMarketValue>
+        </assetBookingSummary>
+
+        <bookingDetail id="bond.usd.2.recall.vm.2m.event2">
+            <bookingInformation>
+                <eventId ref="event2"/>
+            </bookingInformation>
+        </bookingDetail>
+
+        <assetBookingSummary id="CASH.USD.delivery.vm.2m">
+            <assetType ref="cash.usd1.name"/>
+            <movement>Delivery</movement>
+            <vmMarketValue>2,000,000.00</vmMarketValue>
+        </assetBookingSummary>
+
+        <bookingDetail id="CASH.USD.delivery.vm.2m.event2">
+            <bookingInformation>
+                <eventId ref="event2"/>
+            </bookingInformation>
+        </bookingDetail>
+
+        <assetBookingSummary id="bond.gbp.4.return.vm.2m.im.2m">
+            <assetType ref="bond.gbp.name"/>
+            <instrumentId id="26542.bond.gbp.id.4">26542_bond_gbp_1</instrumentId>
+            <movement>Return</movement>
+            <vmMarketValue>2,000,000.00</vmMarketValue>
+            <imMarketValue>2,000,000.00</imMarketValue>
+        </assetBookingSummary>
+
+        <bookingDetail id="bond.gbp.4.return.vm.2m.im.2m.event3">
+            <bookingInformation>
+                <eventId ref="event3"/>
+            </bookingInformation>
+        </bookingDetail>
+
+        <assetBookingSummary id="bond.gbp.6.call.vm.2m.im.3m">
+            <assetType ref="bond.gbp.name"/>
+            <instrumentId id="26542.bond.gbp.id.6">26542_bond_gbp_3</instrumentId>
+            <movement>Call</movement>
+            <vmMarketValue>2,000,000.00</vmMarketValue>
+            <imMarketValue>3,000,000.00</imMarketValue>
+        </assetBookingSummary>
+
+        <bookingDetail id="bond.gbp.6.call.vm.2m.im.3m.event3">
+            <bookingInformation>
+                <eventId ref="event3"/>
+            </bookingInformation>
+        </bookingDetail>
+
+        <assetBookingSummary id="bond.gbp.5.return.im.2m">
+            <assetType ref="bond.gbp.name"/>
+            <instrumentId id="26542.bond.gbp.id.5">26542_bond_gbp_2</instrumentId>
+            <movement>Return</movement>
+            <imMarketValue>2,000,000.00</imMarketValue>
+        </assetBookingSummary>
+
+        <bookingDetail id="bond.gbp.5.return.im.2m.event4">
+            <bookingInformation>
+                <eventId ref="event4"/>
+            </bookingInformation>
+        </bookingDetail>
+
+        <assetBookingSummary id="CASH.GBP.call.im.2m">
+            <assetType ref="cash.gbp1.name"/>
+            <movement>Call</movement>
+            <imMarketValue>2,000,000.00</imMarketValue>
+        </assetBookingSummary>
+
+        <bookingDetail id="CASH.GBP.call.im.2m.event4">
+            <bookingInformation>
+                <eventId ref="event4"/>
+            </bookingInformation>
+        </bookingDetail>
+
+    </scenarioData>
+</dataBean>

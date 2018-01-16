@@ -1,0 +1,5 @@
+pre#AssetPricing_Before#select count(1) from colsecurities where instrumentid like 'Baseline_%' and pricingdate = to_date('2011-12-06','yyyy-MM-DD')
+
+post#AssetPricing_After#select count(1) from colsecurities where instrumentid like 'Baseline_%' and pricingdate = to_date('2011-12-06','yyyy-MM-DD')
+
+val#1#`expr ${AssetPricing_After} - ${AssetPricing_Before}`

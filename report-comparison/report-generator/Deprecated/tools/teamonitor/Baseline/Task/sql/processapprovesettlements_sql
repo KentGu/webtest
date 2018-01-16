@@ -1,0 +1,6 @@
+pre#STTLMT_NEED_APPROVE#select count(*) as num1 from colsecurityparamount where settlementdate < to_timestamp(to_char(sysdate,'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS') and settlementstatus =129
+pre#STTLMT_STTLED_BEFORE#select count(*) as num2 from colsecurityparamount where settlementstatus=130
+
+post#STTLMT_STTLED_AFTER#select count(*) as num3 from colsecurityparamount where settlementstatus=130
+
+val#1#${STTLMT_STTLED_AFTER} -eq `expr ${STTLMT_NEED_APPROVE} + ${STTLMT_STTLED_BEFORE}`

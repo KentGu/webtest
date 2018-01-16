@@ -1,0 +1,1204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/smoke.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <organisation id="SmokeFund1PrincipalOrg">
+            <longName id="org.fund1p.lname" random="true" suffix="SmokeFund1PrincipalOrgLong"/>
+            <shortName id="org.fund1p.sname" random="true" suffix="SmokeFund1PrincipalOrgShort"/>
+            <code id="org.fund1p.code" random="true"/>
+            <role ref="org.role.cr.name"/>
+            <address>
+                <contact>someone</contact>
+                <address1>somewhere1</address1>
+                <address2>somewhere2</address2>
+                <address3>somewhere3</address3>
+                <address4>somewhere4</address4>
+                <address5>somewhere5</address5>
+                <title>manager</title>
+                <label>label</label>
+                <tel>12345678</tel>
+                <fax>12345678</fax>
+                <email>test@test.com</email>
+                <ftp>ftp://127.0.0.1</ftp>
+                <notes>some notes</notes>
+                <enable>true</enable>
+            </address>
+            <status>Approved</status>
+        </organisation>
+
+        <organisation id="SmokeFund2PrincipalOrg">
+            <longName id="org.fund2p.lname" random="true" suffix="SmokeFund2PrincipalOrgLong"/>
+            <shortName id="org.fund2p.sname" random="true" suffix="SmokeFund2PrincipalOrgShort"/>
+            <code id="org.fund2p.code" random="true"/>
+            <role ref="org.role.cr.name"/>
+            <address>
+                <contact>someone</contact>
+                <address1>somewhere1</address1>
+                <address2>somewhere2</address2>
+                <address3>somewhere3</address3>
+                <address4>somewhere4</address4>
+                <address5>somewhere5</address5>
+                <title>manager</title>
+                <label>label</label>
+                <tel>12345678</tel>
+                <fax>12345678</fax>
+                <email>test@test.com</email>
+                <ftp>ftp://127.0.0.1</ftp>
+                <notes>some notes</notes>
+                <enable>true</enable>
+            </address>
+            <status>Approved</status>
+        </organisation>
+
+
+        <organisation id="SmokeUmbrellaPrincipalOrg">
+            <longName id="org.ump.lname" random="true" suffix="SmokeUmbrellaPrincipalOrgLong"/>
+            <shortName id="org.ump.sname" random="true" suffix="SmokeUmbrellaPrincipalOrgShort"/>
+            <code id="org.ump.code" random="true"/>
+            <role ref="org.role.cr.name"/>
+                <!--<role ref="org.role.cp.name"/>-->
+            <address>
+                <contact>someone</contact>
+                <address1>somewhere1</address1>
+                <address2>somewhere2</address2>
+                <address3>somewhere3</address3>
+                <address4>somewhere4</address4>
+                <address5>somewhere5</address5>
+                <title>manager</title>
+                <label>label</label>
+                <tel>12345678</tel>
+                <fax>12345678</fax>
+                <email>test@test.com</email>
+                <ftp>ftp://127.0.0.1</ftp>
+                <notes>some notes</notes>
+                <enable>true</enable>
+            </address>
+
+            <relationship>
+                <parent>false</parent>
+                <type>Subsidiary</type>
+                <organisationSearch>
+                    <filter ref="org.fund1p.lname"/>
+                    <linkText ref="org.fund1p.lname"/>
+                </organisationSearch>
+            </relationship>
+
+            <relationship>
+                <parent>false</parent>
+                <type>Subsidiary</type>
+                <organisationSearch>
+                    <filter ref="org.fund2p.lname"/>
+                    <linkText ref="org.fund2p.lname"/>
+                </organisationSearch>
+            </relationship>
+
+            <relationship>
+                <parent>true</parent>
+                <type>subsidiary</type>
+                <organisationSearch>
+                    <filter>MainOrg</filter>
+                    <linkText>MainOrg</linkText>
+                </organisationSearch>
+            </relationship>
+            <status>Approved</status>
+        </organisation>
+
+        <organisation id="SmokeFund1CptyOrg">
+            <longName id="org.fund1c.lname" random="true" suffix="SmokeFund1CptyOrgLong"/>
+            <shortName id="org.fund1c.sname" random="true" suffix="SmokeFund1CptyOrgShort"/>
+            <code id="org.fund1c.code" random="true"/>
+            <role ref="org.role.cr.name"/>
+            <address>
+                <contact>someone</contact>
+                <address1>somewhere1</address1>
+                <address2>somewhere2</address2>
+                <address3>somewhere3</address3>
+                <address4>somewhere4</address4>
+                <address5>somewhere5</address5>
+                <title>manager</title>
+                <label>label</label>
+                <tel>12345678</tel>
+                <fax>12345678</fax>
+                <email>test@test.com</email>
+                <ftp>ftp://127.0.0.1</ftp>
+                <notes>some notes</notes>
+                <enable>true</enable>
+            </address>
+            <status>Approved</status>
+        </organisation>
+
+        <organisation id="SmokeFund2CptyOrg">
+            <longName id="org.fund2c.lname" random="true" suffix="SmokeFund2CptyOrgLong"/>
+            <shortName id="org.fund2c.sname" random="true" suffix="SmokeFund2CptyOrgShort"/>
+            <code id="org.fund2c.code" random="true"/>
+            <role ref="org.role.cr.name"/>
+            <address>
+                <contact>someone</contact>
+                <address1>somewhere1</address1>
+                <address2>somewhere2</address2>
+                <address3>somewhere3</address3>
+                <address4>somewhere4</address4>
+                <address5>somewhere5</address5>
+                <title>manager</title>
+                <label>label</label>
+                <tel>12345678</tel>
+                <fax>12345678</fax>
+                <email>test@test.com</email>
+                <ftp>ftp://127.0.0.1</ftp>
+                <notes>some notes</notes>
+                <enable>true</enable>
+            </address>
+            <status>Approved</status>
+        </organisation>
+
+
+        <organisation id="SmokeUmbrellaCptyOrg">
+            <longName id="org.umc.lname" random="true" suffix="SmokeUmbrellaCptyOrgLong"/>
+            <shortName id="org.umc.sname" random="true" suffix="SmokeUmbrellaCptyOrgShort"/>
+            <code id="org.umc.code" random="true"/>
+            <role ref="org.role.cr.name"/>
+            <role ref="org.role.cp.name"/>
+            <address>
+                <contact>someone</contact>
+                <address1>somewhere1</address1>
+                <address2>somewhere2</address2>
+                <address3>somewhere3</address3>
+                <address4>somewhere4</address4>
+                <address5>somewhere5</address5>
+                <title>manager</title>
+                <label>label</label>
+                <tel>12345678</tel>
+                <fax>12345678</fax>
+                <email>test@test.com</email>
+                <ftp>ftp://127.0.0.1</ftp>
+                <notes>some notes</notes>
+                <enable>true</enable>
+            </address>
+
+            <relationship>
+                <parent>false</parent>
+                <type>Subsidiary</type>
+                <organisationSearch>
+                    <filter ref="org.fund1c.lname"/>
+                    <linkText ref="org.fund1c.lname"/>
+                </organisationSearch>
+            </relationship>
+
+            <relationship>
+                <parent>false</parent>
+                <type>Subsidiary</type>
+                <organisationSearch>
+                    <filter ref="org.fund2c.lname"/>
+                    <linkText ref="org.fund2c.lname"/>
+                </organisationSearch>
+            </relationship>
+
+            <status>Approved</status>
+        </organisation>
+
+        <agreement id="caf_Fund1Agreement">
+            <principal>
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter ref="org.fund1p.code"/>
+                <linkText ref="org.fund1p.code"/>
+            </principal>
+            <counterparty>
+                <criteria>Containing</criteria>
+                <type>Long Name</type>
+                <filter ref="org.fund1c.lname"/>
+                <linkText ref="org.fund1c.lname"/>
+            </counterparty>
+            <agreementDescription id="caf_Fund1AgreementDesc" random="true" suffix="caf_Fund1Agreement"/>
+            <agreementName id="caf_Fund1AgreementName" random="true" suffix="caf_Fund1Agreement"/>
+            <externalId  random="true"/>
+            <agreementDate>T</agreementDate>
+            <callFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </callFrequency>
+            <holidayCentre ref="hc.europe.name"/>
+            <timeZone ref="system.staticData.timeZone.hk.desc"/>
+            <product id="fund1.pro1">
+                <productName ref="product.test1.name"/>
+            </product>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="cash.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="bond.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="bond.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="equity.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="equity.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vcr.name"/>
+                    <linkText ref="payInstrBucket.vcr.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vrd.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.pay.name"/>
+                    <linkText ref="payInstrBucket.pay.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.rec.name"/>
+                    <linkText ref="payInstrBucket.rec.name"/>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementStatus>Pending</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <statementStatus>Approved</statementStatus>
+            <agreementId id="caf_Fund1AgreementId"/>
+        </agreement>
+
+        <agreement id="caf_Fund2Agreement">
+            <principal>
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter ref="org.fund2p.code"/>
+                <linkText ref="org.fund2p.code"/>
+            </principal>
+            <counterparty>
+                <criteria>Containing</criteria>
+                <type>Long Name</type>
+                <filter ref="org.fund2c.lname"/>
+                <linkText ref="org.fund2c.lname"/>
+            </counterparty>
+            <agreementDescription id="caf_Fund2AgreementDesc" random="true" suffix="caf_Fund2Agreement"/>
+            <agreementName id="caf_Fund2AgreementName" random="true" suffix="caf_Fund2Agreement"/>
+            <externalId  random="true"/>
+            <agreementDate>T</agreementDate>
+            <callFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </callFrequency>
+            <holidayCentre ref="hc.europe.name"/>
+            <timeZone ref="system.staticData.timeZone.hk.desc"/>
+            <product id="fund2.pro1">
+                <productName ref="product.test1.name"/>
+            </product>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="cash.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="bond.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="bond.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="equity.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="equity.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vcr.name"/>
+                    <linkText ref="payInstrBucket.vcr.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vrd.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.pay.name"/>
+                    <linkText ref="payInstrBucket.pay.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.rec.name"/>
+                    <linkText ref="payInstrBucket.rec.name"/>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementStatus>Pending</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <statementStatus>Approved</statementStatus>
+            <agreementId id="caf_Fund2AgreementId"/>
+        </agreement>
+
+        <agreement id="caf_UmAgreement">
+            <principal>
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter ref="org.ump.code"/>
+                <linkText ref="org.ump.code"/>
+            </principal>
+            <counterparty>
+                <criteria>Containing</criteria>
+                <type>Long Name</type>
+                <filter ref="org.umc.lname"/>
+                <linkText ref="org.umc.lname"/>
+            </counterparty>
+            <umbrellaAgreement>true</umbrellaAgreement>
+            <umbrellaRule ref="umbrella.rule.fund.name"/>
+            <agreementDescription id="caf_UmAgreementDesc" random="true" suffix="caf_UmAgreement"/>
+            <agreementName random="true" suffix="caf_UmAgreement"/>
+            <externalId  random="true"/>
+            <agreementDate>T</agreementDate>
+            <callFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </callFrequency>
+            <holidayCentre ref="hc.europe.name"/>
+            <timeZone ref="system.staticData.timeZone.hk.desc"/>
+            <!--<product id="um.pro1">-->
+                <!--<productName ref="product.test1.name"/>-->
+            <!--</product>-->
+            <collateralAssetClass>
+                <collateralAssetClassName ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="cash.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="bond.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="bond.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="equity.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="equity.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <subAgreement>
+                <type>Agreement Name</type>
+                <filter ref="caf_Fund1AgreementName"/>
+                <linkText ref="caf_Fund1AgreementName"/>
+            </subAgreement>
+            <subAgreement>
+                <type>Agreement Name</type>
+                <filter ref="caf_Fund2AgreementName"/>
+                <linkText ref="caf_Fund2AgreementName"/>
+            </subAgreement>
+            <!--<settlementBucket>-->
+                <!--<bookingType>Net</bookingType>-->
+                <!--<direction>Call/Return</direction>-->
+                <!--<bucket>-->
+                    <!--<filter ref="payInstrBucket.vcr.name"/>-->
+                    <!--<linkText ref="payInstrBucket.vcr.name"/>-->
+                <!--</bucket>-->
+            <!--</settlementBucket>-->
+            <!--<settlementBucket>-->
+                <!--<bookingType>Net</bookingType>-->
+                <!--<direction>Delivery/Recall</direction>-->
+                <!--<bucket>-->
+                    <!--<filter ref="payInstrBucket.vrd.name"/>-->
+                    <!--<linkText ref="payInstrBucket.vrd.name"/>-->
+                <!--</bucket>-->
+            <!--</settlementBucket>-->
+            <!--<settlementBucket>-->
+                <!--<bookingType>Interest</bookingType>-->
+                <!--<direction>Pay</direction>-->
+                <!--<bucket>-->
+                    <!--<filter ref="payInstrBucket.pay.name"/>-->
+                    <!--<linkText ref="payInstrBucket.pay.name"/>-->
+                <!--</bucket>-->
+            <!--</settlementBucket>-->
+            <!--<settlementBucket>-->
+                <!--<bookingType>Interest</bookingType>-->
+                <!--<direction>Receive</direction>-->
+                <!--<bucket>-->
+                    <!--<filter ref="payInstrBucket.rec.name"/>-->
+                    <!--<linkText ref="payInstrBucket.rec.name"/>-->
+                <!--</bucket>-->
+            <!--</settlementBucket>-->
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementId id="caf_UmAgreementId"/>
+        </agreement>
+
+        <agreementExposureSummary id="ProductQTP">
+            <productList>
+                <productType ref="product.test1.name"/>
+            </productList>
+        </agreementExposureSummary>
+
+        <tradeDetail id="caf_Fund1Trade001">
+            <tradeInformation>
+                <productType ref="product.test1.name"/>
+                <tradeDate>T</tradeDate>
+                <effectiveDate>T</effectiveDate>
+                <maturityDate>T+1000</maturityDate>
+                <tradeIdentifierPartyA id="caf_Fund1Trade001Id" random="true"/>
+                <partyABranchName random="true"/>
+                <partyBBranchName random="true"/>
+            </tradeInformation>
+
+            <valuationInformation>
+                <principalValuationAmount>
+                    <amount>6000000</amount>
+                    <currency>USD</currency>
+                </principalValuationAmount>
+                <valuationDate>T</valuationDate>
+            </valuationInformation>
+
+            <!--<collateralInformation>-->
+                <!--<dealLevelUpfront>true</dealLevelUpfront>-->
+                <!--<dealLevelType>Independent Amount</dealLevelType>-->
+                <!--<dealLevelAmount>10000</dealLevelAmount>-->
+                <!--<currency>USD</currency>-->
+            <!--</collateralInformation>-->
+        </tradeDetail>
+
+        <tradeDetail id="caf_Fund2Trade001">
+            <tradeInformation>
+                <productType ref="product.test1.name"/>
+                <tradeDate>T</tradeDate>
+                <effectiveDate>T</effectiveDate>
+                <maturityDate>T+1000</maturityDate>
+                <tradeIdentifierPartyA id="caf_Fund2Trade001Id" random="true"/>
+                <partyABranchName random="true"/>
+                <partyBBranchName random="true"/>
+            </tradeInformation>
+
+            <valuationInformation>
+                <principalValuationAmount>
+                    <amount>-4000000</amount>
+                    <currency>USD</currency>
+                </principalValuationAmount>
+                <valuationDate>T</valuationDate>
+            </valuationInformation>
+
+            <!--<collateralInformation>-->
+            <!--<dealLevelUpfront>true</dealLevelUpfront>-->
+            <!--<dealLevelType>Independent Amount</dealLevelType>-->
+            <!--<dealLevelAmount>10000</dealLevelAmount>-->
+            <!--<currency>USD</currency>-->
+            <!--</collateralInformation>-->
+        </tradeDetail>
+
+        <tradeDetail id="caf_Fund1Trade001Old">
+            <tradeInformation>
+                <tradeIdentifierPartyA ref="caf_Fund1Trade001Id"/>
+            </tradeInformation>
+        </tradeDetail>
+
+        <tradeDetail id="caf_Fund2Trade001Old">
+            <tradeInformation>
+                <tradeIdentifierPartyA ref="caf_Fund2Trade001Id"/>
+            </tradeInformation>
+        </tradeDetail>
+
+        <bookingDetail id="caf_Fund1Booking001">
+            <assetType>qtp_bond_usd</assetType>
+            <instrumentSearch>
+                <instrumentId>
+                    <type>Starting with</type>
+                    <filter ref="bond.instrument1.name"/>
+                    <linkText ref="bond.instrument1.name"/>
+                </instrumentId>
+                <linkText ref="bond.instrument1.name"/>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <movement>Call</movement>
+                    <nominalAmount>5000000</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <save>save</save>
+            <!--<alertHandling>-->
+            <!--<content>[\s\S]*</content>-->
+            <!--<accept>false</accept>-->
+            <!--</alertHandling>-->
+        </bookingDetail>
+
+        <bookingDetail id="caf_Fund2Booking001">
+            <assetType>qtp_bond_usd</assetType>
+            <instrumentSearch>
+                <instrumentId>
+                    <type>Starting with</type>
+                    <filter ref="bond.instrument1.name"/>
+                    <linkText ref="bond.instrument1.name"/>
+                </instrumentId>
+                <linkText ref="bond.instrument1.name"/>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <movement>Delivery</movement>
+                    <nominalAmount>-2000000</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <save>save</save>
+        </bookingDetail>
+
+        <tradeDetail id="Editcaf_Fund1Trade001">
+            <valuationInformation>
+                <principalValuationAmount>
+                    <amount>13000000</amount>
+                    <currency>USD</currency>
+                </principalValuationAmount>
+                <valuationDate>T</valuationDate>
+            </valuationInformation>
+        </tradeDetail>
+
+        <tradeDetail id="Editcaf_Fund2Trade001">
+            <valuationInformation>
+                <principalValuationAmount>
+                    <amount>-1000000</amount>
+                    <currency>USD</currency>
+                </principalValuationAmount>
+                <valuationDate>T</valuationDate>
+            </valuationInformation>
+        </tradeDetail>
+
+        <agreement id="caf_UmAgreementAgreementStatusToPending">
+            <agreementStatus>Pending</agreementStatus>
+        </agreement>
+
+        <agreement id="caf_Fund1AgreementStatusApproved">
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+        <agreement id="caf_Fund2AgreementStatusApproved">
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+        <agreement id="caf_UmAgreementApproved">
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+        <agreementStatement id="caf_UmAgreementCallRequirement">
+            <exposureSummary>
+                <itmExposure>13,000,000.00</itmExposure>
+                <otmExposure>-1,000,000.00</otmExposure>
+                <totalExposureAmount>12,000,000.00</totalExposureAmount>
+            </exposureSummary>
+            <assetHoldingsSummary>
+                <mktValueOfAssetsHeldByPrincipal>5,000,000.00</mktValueOfAssetsHeldByPrincipal>
+                <adjustedCollateralValuePrincipal>5,000,000.00</adjustedCollateralValuePrincipal>
+                <mktValueOfAssetsHeldByCounterparty>-2,000,000.00</mktValueOfAssetsHeldByCounterparty>
+                <adjustedCollateralValueCounterparty>-2,000,000.00</adjustedCollateralValueCounterparty>
+            </assetHoldingsSummary>
+            <marginCallSummary>
+                <marginToBeDeliveredToPrincipal>9,000,000.00</marginToBeDeliveredToPrincipal>
+            </marginCallSummary>
+            <marginCallCalculation>
+                <otcOrClearingReq>
+                    <principalReq>
+                        <mtmExposure>12,000,000.00</mtmExposure>
+                        <totalExposureAmount>12,000,000.00</totalExposureAmount>
+                        <adjustedExposureAmount>12,000,000.00</adjustedExposureAmount>
+                        <valueofPendingCollateralHeld>5,000,000.00</valueofPendingCollateralHeld>
+                        <valueofPendingCollateralDelivered>-2,000,000.00</valueofPendingCollateralDelivered>
+                        <netMarginRequirement>9,000,000.00</netMarginRequirement>
+                        <deliveryAmount>9,000,000.00</deliveryAmount>
+                    </principalReq>
+                </otcOrClearingReq>
+            </marginCallCalculation>
+        </agreementStatement>
+
+        <exposureEventDetail id="caf_UmAgreement_EM_RequirementAmount_call">
+            <eventId id="caf_UmAgreement_EM_RequirementAmount_call.id"/>
+            <description ref="caf_UmAgreementDesc"/>
+            <action>Call</action>
+            <agreementRequirement>9,000,000.00</agreementRequirement>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="caf_UmAgreement_EM_RequirementAmount_call.margin.request.issued">
+            <eventId id="caf_UmAgreement_EM_RequirementAmount_call.margin.request.issued.id"/>
+            <description ref="caf_UmAgreementDesc"/>
+            <callStatus>Margin Request Issued</callStatus>
+            <action>Call</action>
+            <agreementRequirement>9,000,000.00</agreementRequirement>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="caf_Fund1CallEvent">
+            <eventId id="caf_Fund1CallEvent.id"/>
+            <agrId ref="caf_Fund1AgreementId"/>
+            <action>Call</action>
+            <agreementRequirement>8,000,000.00</agreementRequirement>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="caf_Fund1CallEvent.margin.request.issued">
+            <eventId id="caf_Fund1CallEvent.margin.request.issued.id"/>
+            <agrId ref="caf_Fund1AgreementId"/>
+            <callStatus>Margin Request Issued</callStatus>
+            <action>Call</action>
+            <agreementRequirement>8,000,000.00</agreementRequirement>
+        </exposureEventDetail>
+
+        <marginLetter id="caf_Fund1CallEvent.letter">
+            <letterType>Margin Call</letterType>
+        </marginLetter>
+
+        <exposureEventDetail id="caf_Fund2RecallEvent">
+            <eventId id="caf_Fund2RecallEvent.id"/>
+            <agrId ref="caf_Fund2AgreementId" />
+            <action>Recall</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="caf_Fund2RecallEvent.margin.request.issued">
+            <eventId id="caf_Fund2RecallEvent.margin.request.issued.id"/>
+            <agrId ref="caf_Fund2AgreementId" />
+            <callStatus>Margin Request Issued</callStatus>
+            <action>Recall</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+        </exposureEventDetail>
+
+        <marginLetter id="caf_Fund2RecallEvent.letter">
+            <letterType>Margin Recall</letterType>
+        </marginLetter>
+
+        <exposureEventDetail id="caf_UmCallEvent">
+            <agrId ref="caf_UmAgreementId" />
+            <action>Call</action>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="EventPendingReviewStatus">
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+
+
+
+
+
+        <agreement id="cau_Fund1Agreement">
+            <principal>
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter ref="org.fund1p.code"/>
+                <linkText ref="org.fund1p.code"/>
+            </principal>
+            <counterparty>
+                <criteria>Containing</criteria>
+                <type>Long Name</type>
+                <filter ref="org.fund1c.lname"/>
+                <linkText ref="org.fund1c.lname"/>
+            </counterparty>
+            <agreementDescription id="cau_Fund1AgreementDesc" random="true" suffix="cau_Fund1Agreement"/>
+            <agreementName id="cau_Fund1AgreementName" random="true" suffix="cau_Fund1Agreement"/>
+            <externalId  random="true"/>
+            <agreementDate>T</agreementDate>
+            <callFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </callFrequency>
+            <holidayCentre ref="hc.europe.name"/>
+            <timeZone ref="system.staticData.timeZone.hk.desc"/>
+            <product id="fund1.pro1">
+                <productName ref="product.test1.name"/>
+            </product>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="cash.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="bond.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="bond.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="equity.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="equity.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vcr.name"/>
+                    <linkText ref="payInstrBucket.vcr.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vrd.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.pay.name"/>
+                    <linkText ref="payInstrBucket.pay.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.rec.name"/>
+                    <linkText ref="payInstrBucket.rec.name"/>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementStatus>Pending</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <statementStatus>Approved</statementStatus>
+            <agreementId id="cau_Fund1AgreementId"/>
+        </agreement>
+
+        <agreement id="cau_Fund2Agreement">
+            <principal>
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter ref="org.fund2p.code"/>
+                <linkText ref="org.fund2p.code"/>
+            </principal>
+            <counterparty>
+                <criteria>Containing</criteria>
+                <type>Long Name</type>
+                <filter ref="org.fund2c.lname"/>
+                <linkText ref="org.fund2c.lname"/>
+            </counterparty>
+            <agreementDescription id="cau_Fund2AgreementDesc" random="true" suffix="cau_Fund2Agreement"/>
+            <agreementName id="cau_Fund2AgreementName" random="true" suffix="cau_Fund2Agreement"/>
+            <externalId  random="true"/>
+            <agreementDate>T</agreementDate>
+            <callFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </callFrequency>
+            <holidayCentre ref="hc.europe.name"/>
+            <timeZone ref="system.staticData.timeZone.hk.desc"/>
+            <product id="fund2.pro1">
+                <productName ref="product.test1.name"/>
+            </product>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="cash.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="bond.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="bond.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="equity.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="equity.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vcr.name"/>
+                    <linkText ref="payInstrBucket.vcr.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vrd.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.pay.name"/>
+                    <linkText ref="payInstrBucket.pay.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.rec.name"/>
+                    <linkText ref="payInstrBucket.rec.name"/>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementStatus>Pending</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <statementStatus>Approved</statementStatus>
+            <agreementId id="cau_Fund2AgreementId"/>
+        </agreement>
+
+        <agreement id="cau_UmAgreement">
+            <principal>
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter ref="org.ump.code"/>
+                <linkText ref="org.ump.code"/>
+            </principal>
+            <counterparty>
+                <criteria>Containing</criteria>
+                <type>Long Name</type>
+                <filter ref="org.umc.lname"/>
+                <linkText ref="org.umc.lname"/>
+            </counterparty>
+            <umbrellaAgreement>true</umbrellaAgreement>
+            <umbrellaRule ref="umbrella.rule.um.name"/>
+            <agreementDescription id="cau_UmAgreementDesc" random="true" suffix="cau_UmAgreement"/>
+            <agreementName random="true" suffix="cau_UmAgreement"/>
+            <externalId  random="true"/>
+            <agreementDate>T</agreementDate>
+            <callFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </callFrequency>
+            <holidayCentre ref="hc.europe.name"/>
+            <timeZone ref="system.staticData.timeZone.hk.desc"/>
+            <!--<product id="um.pro1">-->
+            <!--<productName ref="product.test1.name"/>-->
+            <!--</product>-->
+            <collateralAssetClass>
+                <collateralAssetClassName ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="cash.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="bond.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="bond.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="equity.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="equity.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <subAgreement>
+                <type>Agreement Name</type>
+                <filter ref="cau_Fund1AgreementName"/>
+                <linkText ref="cau_Fund1AgreementName"/>
+            </subAgreement>
+            <subAgreement>
+                <type>Agreement Name</type>
+                <filter ref="cau_Fund2AgreementName"/>
+                <linkText ref="cau_Fund2AgreementName"/>
+            </subAgreement>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vcr.name"/>
+                    <linkText ref="payInstrBucket.vcr.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vrd.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.pay.name"/>
+                    <linkText ref="payInstrBucket.pay.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.rec.name"/>
+                    <linkText ref="payInstrBucket.rec.name"/>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementStatus>Pending</agreementStatus>
+            <agreementId id="cau_UmAgreementId"/>
+        </agreement>
+
+
+
+        <tradeDetail id="cau_Fund1Trade001">
+            <tradeInformation>
+                <tradeDate>T</tradeDate>
+                <effectiveDate>T</effectiveDate>
+                <maturityDate>T+1000</maturityDate>
+                <tradeIdentifierPartyA id="cau_Fund1Trade001Id" random="true"/>
+                <partyABranchName random="true"/>
+                <partyBBranchName random="true"/>
+            </tradeInformation>
+
+            <valuationInformation>
+                <principalValuationAmount>
+                    <amount>6000000</amount>
+                    <currency>USD</currency>
+                </principalValuationAmount>
+                <valuationDate>T</valuationDate>
+            </valuationInformation>
+
+            <!--<collateralInformation>-->
+            <!--<dealLevelUpfront>true</dealLevelUpfront>-->
+            <!--<dealLevelType>Independent Amount</dealLevelType>-->
+            <!--<dealLevelAmount>10000</dealLevelAmount>-->
+            <!--<currency>USD</currency>-->
+            <!--</collateralInformation>-->
+        </tradeDetail>
+
+        <tradeDetail id="cau_Fund1Trade001Old">
+            <tradeInformation>
+                <tradeIdentifierPartyA ref="cau_Fund1Trade001Id"/>
+            </tradeInformation>
+        </tradeDetail>
+
+        <tradeDetail id="cau_Fund2Trade001">
+            <tradeInformation>
+                <tradeDate>T</tradeDate>
+                <effectiveDate>T</effectiveDate>
+                <maturityDate>T+1000</maturityDate>
+                <tradeIdentifierPartyA random="true"/>
+                <partyABranchName random="true"/>
+                <partyBBranchName random="true"/>
+            </tradeInformation>
+
+            <valuationInformation>
+                <principalValuationAmount>
+                    <amount>-4000000</amount>
+                    <currency>USD</currency>
+                </principalValuationAmount>
+                <valuationDate>T</valuationDate>
+            </valuationInformation>
+
+            <!--<collateralInformation>-->
+            <!--<dealLevelUpfront>true</dealLevelUpfront>-->
+            <!--<dealLevelType>Independent Amount</dealLevelType>-->
+            <!--<dealLevelAmount>10000</dealLevelAmount>-->
+            <!--<currency>USD</currency>-->
+            <!--</collateralInformation>-->
+        </tradeDetail>
+
+
+        <bookingDetail id="cau_Fund1andFund2Booking001">
+            <assetType>qtp_bond_usd</assetType>
+            <instrumentSearch>
+                <instrumentId>
+                    <type>Starting with</type>
+                    <filter ref="bond.instrument1.name"/>
+                    <linkText ref="bond.instrument1.name"/>
+                </instrumentId>
+                <linkText ref="bond.instrument1.name"/>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <agreementName ref="cau_Fund1AgreementName"/>
+                    <movement>Call</movement>
+                    <nominalAmount>5000000</nominalAmount>
+                </bookingInformationDetail>
+                <bookingInformationDetail>
+                    <agreementName ref="cau_Fund2AgreementName"/>
+                    <movement>Delivery</movement>
+                    <nominalAmount>2000000</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <save>save</save>
+            <!--<alertHandling>-->
+            <!--<content>[\s\S]*</content>-->
+            <!--<accept>false</accept>-->
+            <!--</alertHandling>-->
+        </bookingDetail>
+
+        <!--<assetBookingSummary id="CashUSDType">-->
+            <!--<assetType>qtp_cash_usd</assetType>-->
+        <!--</assetBookingSummary>-->
+
+        <assetBookingSummary id="BondUSDType">
+            <assetType>qtp_bond_usd</assetType>
+        </assetBookingSummary>
+
+        <!--<assetBookingSummary id="EquityUSDType">-->
+            <!--<assetType>qtp_equity_usd</assetType>-->
+        <!--</assetBookingSummary>-->
+
+        <tradeDetail id="Editcau_Fund1Trade001">
+            <valuationInformation>
+                <principalValuationAmount>
+                    <amount>13000000</amount>
+                    <currency>USD</currency>
+                </principalValuationAmount>
+                <valuationDate>T</valuationDate>
+            </valuationInformation>
+        </tradeDetail>
+
+        <tradeDetail id="Editcau_Fund2Trade001">
+            <valuationInformation>
+                <principalValuationAmount>
+                    <amount>-1000000</amount>
+                    <currency>USD</currency>
+                </principalValuationAmount>
+                <valuationDate>T</valuationDate>
+            </valuationInformation>
+        </tradeDetail>
+
+        <agreement id="cau_UmAgreementAgreementStatusToPending">
+            <agreementStatus>Pending</agreementStatus>
+        </agreement>
+
+        <agreement id="cau_Fund1AgreementStatusApproved">
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+        <agreement id="cau_Fund2AgreementStatusApproved">
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+        <agreement id="cau_UmAgreementApproved">
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+        <exposureEventDetail id="cau_Fund1CallEvent">
+            <agrId ref="cau_Fund1AgreementId" />
+            <action>Call</action>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="cau_Fund2RecallEvent">
+            <agrId ref="cau_Fund2AgreementId" />
+            <action>Recall</action>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="cau_UmCallEvent">
+            <eventId id="cau_UmCallEvent.id"/>
+            <agrId ref="cau_UmAgreementId" />
+            <description ref="cau_UmAgreementDesc"/>
+            <action>Call(Deficit)</action>
+        </exposureEventDetail>
+
+        <agreementStatement id="cau_UmAgreementCallRequirement">
+            <exposureSummary>
+                <itmExposure>13,000,000.00</itmExposure>
+                <otmExposure>-1,000,000.00</otmExposure>
+                <totalExposureAmount>12,000,000.00</totalExposureAmount>
+            </exposureSummary>
+            <assetHoldingsSummary>
+                <mktValueOfAssetsHeldByPrincipal>3,000,000.00</mktValueOfAssetsHeldByPrincipal>
+                <adjustedCollateralValuePrincipal>3,000,000.00</adjustedCollateralValuePrincipal>
+            </assetHoldingsSummary>
+            <marginCallSummary>
+                <marginToBeDeliveredToPrincipal>9,000,000.00</marginToBeDeliveredToPrincipal>
+            </marginCallSummary>
+            <marginCallCalculation>
+                <otcOrClearingReq>
+                    <principalReq>
+                        <mtmExposure>12,000,000.00</mtmExposure>
+                        <totalExposureAmount>12,000,000.00</totalExposureAmount>
+                        <adjustedExposureAmount>12,000,000.00</adjustedExposureAmount>
+                        <valueofPendingCollateralHeld>3,000,000.00</valueofPendingCollateralHeld>
+                        <netMarginRequirement>9,000,000.00</netMarginRequirement>
+                        <deliveryAmount>9,000,000.00</deliveryAmount>
+                    </principalReq>
+                </otcOrClearingReq>
+            </marginCallCalculation>
+        </agreementStatement>
+
+        <exposureEventDetail id="cau_UmAgreement_EM_RequirementAmount_call_deficit">
+            <eventId id="cau_UmAgreement_EM_RequirementAmount_call_deficit.id"/>
+            <description ref="cau_UmAgreementDesc"/>
+            <action>Call(Deficit)</action>
+            <agreementRequirement>9,000,000.00</agreementRequirement>
+        </exposureEventDetail>
+
+        <marginLetter id="cau_Fund1CallEvent.letter">
+            <letterType>Margin Call</letterType>
+        </marginLetter>
+
+        <marginLetter id="cau_Fund2RecallEvent.letter">
+            <letterType>Margin Recall</letterType>
+        </marginLetter>
+
+        <exposureEventDetail id="cau_Fund1CallEvent.margin.request.issued">
+            <eventId id="cau_Fund1CallEvent.margin.request.issued.id"/>
+            <agrId ref="cau_Fund1AgreementId"/>
+            <callStatus>Margin Request Issued</callStatus>
+            <action>Call</action>
+            <agreementRequirement>8,000,000.00</agreementRequirement>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="cau_Fund2RecallEvent.margin.request.issued">
+            <eventId id="cau_Fund2RecallEvent.margin.request.issued.id"/>
+            <agrId ref="cau_Fund2AgreementId"/>
+            <callStatus>Margin Request Issued</callStatus>
+            <action>Recall</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="cau_UmAgreement_EM_RequirementAmount_call.margin.request.issued">
+            <eventId id="cau_UmAgreement_EM_RequirementAmount_call.margin.request.issued.id"/>
+            <description ref="cau_UmAgreementDesc"/>
+            <callStatus>Margin Request Issued</callStatus>
+            <action>Call(Deficit)</action>
+            <agreementRequirement>9,000,000.00</agreementRequirement>
+        </exposureEventDetail>
+    </scenarioData>
+</dataBean>

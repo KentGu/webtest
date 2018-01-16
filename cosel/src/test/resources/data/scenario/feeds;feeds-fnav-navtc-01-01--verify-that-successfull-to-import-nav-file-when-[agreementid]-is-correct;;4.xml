@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/feeds.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <agreement>
+            <agreementDescription id="agreement.fcm.description">T5185_FCM_Agreement</agreementDescription>
+            <externalId id="agreement.fcm.external.id">T5185_FCM_Agreement_External_ID</externalId>
+            <agreementId id="agreement.fcm.agreement.id">530</agreementId>
+        </agreement>
+
+        <feedNAV id="feed.nav.fcm.agreement">
+            <agreementId ref="agreement.fcm.agreement.id"/>
+            <legal_id ref="agreement.fcm.external.id"/>
+            <principalNAV id="feed.nav.fcm.agreement.principal.nav">888</principalNAV>
+            <principalCCy id="feed.nav.fcm.agreement.principal.ccy" ref="ccy.usd.name"/>
+            <cptyNAV id="feed.nav.fcm.agreement.cpty.nav">777</cptyNAV>
+            <cptyCCy id="feed.nav.fcm.agreement.cpty.ccy" ref="ccy.gbp.name"/>
+        </feedNAV>
+
+        <feedResult id="feed.nav.fcm.agreement.result">
+            <fileUploaded id="feed.nav.fcm.agreement.result.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedStatus id="feed.nav.fcm.agreement.status">
+            <status>Successful</status>
+            <description>NAV</description>
+            <valuationFile ref="feed.nav.fcm.agreement.result.file"/>
+            <successfulFeed>
+                <total>1</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <agreementSearch id="feed.nav.fcm.agreement.search">
+            <systemId ref="agreement.fcm.agreement.id"/>
+            <externalId>
+                <filter ref="agreement.fcm.external.id"/>
+                <linkText ref="agreement.fcm.external.id"/>
+            </externalId>
+            <description>
+                <filter ref="agreement.fcm.description"/>
+                <linkText ref="agreement.fcm.description"/>
+            </description>
+        </agreementSearch>
+
+        <agreementSearchResult id="feed.nav.fcm.agreement.search.result">
+            <agreementId ref="agreement.fcm.agreement.id"/>
+            <description ref="agreement.fcm.description"/>
+            <externalId ref="agreement.fcm.external.id"/>
+        </agreementSearchResult>
+
+        <agreementSummary id="check.feed.nav.fcm.agreement">
+            <documentationDetails>
+                <principalNAV>888.00 USD</principalNAV>
+                <counterpartyNAV>777.00 GBP</counterpartyNAV>
+            </documentationDetails>
+        </agreementSummary>
+    </scenarioData>
+</dataBean>

@@ -1,0 +1,2680 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/etdagreement.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+
+        <cashflowRule id="cashflow.rule.all.capitalise">
+            <cashflowRuleName id="cashflow.rule1" random="true"/>
+            <cashflowField>
+                <cashflowFieldName>Upfront Fee</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>PAI</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Transfer Value</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Banked Coupon</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Initial Coupon</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Credit Event Cash Amount</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Succession Event Cash Amount</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Reset to Par</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>IM Interest</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>NDF Cashflow</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>CashflowMisc1</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>CashflowMisc2</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>CashflowMisc3</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Realised P&amp;L</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Unrealised P&amp;L</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Total Fees Cleared</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Realised P&amp;L ETD</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Commission &amp; Fees</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Option Premium</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Long Option Value</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Short Option Value</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>IM Securities Balance</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>IM Cash Balance</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>IM DCVM</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+        </cashflowRule>
+
+        <cashflowRule id="cashflow.rule.all.cashflow.physical">
+            <cashflowRuleName id="cashflow.rule2" random="true"/>
+            <cashflowField>
+                <cashflowFieldName>Upfront Fee</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>PAI</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Transfer Value</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Banked Coupon</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Initial Coupon</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Credit Event Cash Amount</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Succession Event Cash Amount</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Reset to Par</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>IM Interest</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>NDF Cashflow</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>CashflowMisc1</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>CashflowMisc2</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>CashflowMisc3</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Realised P&amp;L</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Unrealised P&amp;L</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Total Fees Cleared</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Realised P&amp;L ETD</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Commission &amp; Fees</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Option Premium</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Long Option Value</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Short Option Value</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>IM Securities Balance</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>IM Cash Balance</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>IM DCVM</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+        </cashflowRule>
+
+        <agreement id=" etd.broker.agreement.allow.adj.no.calc">
+            <principal>
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter>QTPPrincipal</filter>
+                <linkText>QTPPrincipal</linkText>
+            </principal>
+            <counterparty>
+                <criteria>Containing</criteria>
+                <type>Long Name</type>
+                <filter>QTPCounterparty</filter>
+                <linkText>QTPCounterparty</linkText>
+            </counterparty>
+            <businessLine>ETD</businessLine>
+            <principalRole>Broker</principalRole>
+            <agreementDescription id="agr.desc.id" random="true" prefix="EtdAdjAgrDesc"/>
+            <agreementName random="true" prefix="EtdAdjAgrName"/>
+            <externalId id="agr.ext.id1" random="true" prefix="EtdAdjAgrExtId"/>
+            <agreementDate>T</agreementDate>
+            <nettingIAandMtM>Not-Net</nettingIAandMtM>
+            <cashflowRule ref="cashflow.rule1"/>
+            <fxRate ref="fxRateSet.default.name"/>
+            <marginType>Hedge</marginType>
+            <statementCalc>No Calc</statementCalc>
+            <allowAdj>true</allowAdj>
+            <callFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </callFrequency>
+            <holidayCentre ref="hc.europe.name"/>
+            <model>
+                <modelCategory>
+                    <modelName>model1</modelName>
+                    <modelDecription>m1desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                    <modelBaseCurrency>USD</modelBaseCurrency>
+                    <masterModel>false</masterModel>
+                </modelCategory>
+                <modelCategory>
+                    <modelName>model2</modelName>
+                    <modelDecription>m2desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                    <modelBaseCurrency>GBP</modelBaseCurrency>
+                    <masterModel>false</masterModel>
+                </modelCategory>
+                <modelCategory>
+                    <modelName>model3</modelName>
+                    <modelDecription>m3desc</modelDecription>
+                    <modelCategory>abc</modelCategory>
+                    <modelBaseCurrency>EUR</modelBaseCurrency>
+                    <masterModel>false</masterModel>
+                </modelCategory>
+            </model>
+            <applicableBalanceInterestCalculation>Ending Balance</applicableBalanceInterestCalculation>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="cash.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <!--<model>model1 sec</model>-->
+                <model>
+                    <modelName>model1</modelName>
+                    <modelDecription>m1desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>Cash</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter>Standard</filter>
+                    <linkText>Standard</linkText>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model1</modelName>
+                    <modelDecription>m1desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>IM</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model1</modelName>
+                    <modelDecription>m1desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>IM</bookingType>
+                <direction>Pledge In/Pledge Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model1</modelName>
+                    <modelDecription>m1desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>Cash Interest</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model1</modelName>
+                    <modelDecription>m1desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>IM Interest</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model1</modelName>
+                    <modelDecription>m1desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>Capital Charge</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model1</modelName>
+                    <modelDecription>m1desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>Physical Cashflow</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model2</modelName>
+                    <modelDecription>m2desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>Cash</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model2</modelName>
+                    <modelDecription>m2desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>IM</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model2</modelName>
+                    <modelDecription>m2desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>IM</bookingType>
+                <direction>Pledge In/Pledge Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model2</modelName>
+                    <modelDecription>m2desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>Cash Interest</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model2</modelName>
+                    <modelDecription>m2desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>IM Interest</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model2</modelName>
+                    <modelDecription>m2desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>Capital Charge</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model2</modelName>
+                    <modelDecription>m2desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>Physical Cashflow</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model3</modelName>
+                    <modelDecription>m3desc</modelDecription>
+                    <modelCategory>abc</modelCategory>
+                </model>
+                <bookingType>Cash</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model3</modelName>
+                    <modelDecription>m3desc</modelDecription>
+                    <modelCategory>abc</modelCategory>
+                </model>
+                <bookingType>IM</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model3</modelName>
+                    <modelDecription>m3desc</modelDecription>
+                    <modelCategory>abc</modelCategory>
+                </model>
+                <bookingType>IM</bookingType>
+                <direction>Pledge In/Pledge Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model3</modelName>
+                    <modelDecription>m3desc</modelDecription>
+                    <modelCategory>abc</modelCategory>
+                </model>
+                <bookingType>Cash Interest</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model3</modelName>
+                    <modelDecription>m3desc</modelDecription>
+                    <modelCategory>abc</modelCategory>
+                </model>
+                <bookingType>IM Interest</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model3</modelName>
+                    <modelDecription>m3desc</modelDecription>
+                    <modelCategory>abc</modelCategory>
+                </model>
+                <bookingType>Capital Charge</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model3</modelName>
+                    <modelDecription>m3desc</modelDecription>
+                    <modelCategory>abc</modelCategory>
+                </model>
+                <bookingType>Physical Cashflow</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementStatus>Pending</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <statementStatus>Approved</statementStatus>
+            <agreementId id="agreement.id1"/>
+        </agreement>
+
+        <agreement id="etd.member.agreement.allow.adj.standard">
+            <principal>
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter>QTPPrincipal</filter>
+                <linkText>QTPPrincipal</linkText>
+            </principal>
+            <counterparty>
+                <criteria>Containing</criteria>
+                <type>Long Name</type>
+                <filter>QTPCounterparty</filter>
+                <linkText>QTPCounterparty</linkText>
+            </counterparty>
+            <businessLine>ETD</businessLine>
+            <principalRole>Member</principalRole>
+            <ccp ref="ccp.lch.name"/>
+            <agreementDescription id="agr.desc.id" random="true" prefix="EtdAdjAgrDesc"/>
+            <agreementName random="true" prefix="EtdAdjAgrName"/>
+            <externalId id="agr.ext.id2" random="true" prefix="EtdAdjAgrExtId"/>
+            <agreementDate>T</agreementDate>
+            <nettingIAandMtM>Not-Net</nettingIAandMtM>
+            <cashflowRule ref="cashflow.rule1"/>
+            <defaultFund>Standalone DF</defaultFund>
+            <fxRate ref="fxRateSet.default.name"/>
+            <marginType>Hedge</marginType>
+            <statementCalc>Standard</statementCalc>
+            <allowAdj>true</allowAdj>
+            <callFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </callFrequency>
+            <holidayCentre ref="hc.europe.name"/>
+            <model>
+                <modelCategory>
+                    <modelName>model1</modelName>
+                    <modelDecription>m1desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                    <modelBaseCurrency>USD</modelBaseCurrency>
+                    <masterModel>false</masterModel>
+                </modelCategory>
+                <modelCategory>
+                    <modelName>model2</modelName>
+                    <modelDecription>m2desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                    <modelBaseCurrency>GBP</modelBaseCurrency>
+                    <masterModel>false</masterModel>
+                </modelCategory>
+                <modelCategory>
+                    <modelName>model3</modelName>
+                    <modelDecription>m3desc</modelDecription>
+                    <modelCategory>abc</modelCategory>
+                    <modelBaseCurrency>EUR</modelBaseCurrency>
+                    <masterModel>false</masterModel>
+                </modelCategory>
+            </model>
+            <applicableBalanceInterestCalculation>Ending Balance</applicableBalanceInterestCalculation>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="cash.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <model>
+                    <modelName>model1</modelName>
+                    <modelDecription>m1desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>Cash</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter>Standard</filter>
+                    <linkText>Standard</linkText>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model1</modelName>
+                    <modelDecription>m1desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>IM</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model1</modelName>
+                    <modelDecription>m1desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>IM</bookingType>
+                <direction>Pledge In/Pledge Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model1</modelName>
+                    <modelDecription>m1desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>Cash Interest</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model1</modelName>
+                    <modelDecription>m1desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>IM Interest</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model1</modelName>
+                    <modelDecription>m1desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>Capital Charge</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model1</modelName>
+                    <modelDecription>m1desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>Physical Cashflow</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model1</modelName>
+                    <modelDecription>m1desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>DF</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model1</modelName>
+                    <modelDecription>m1desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>DF</bookingType>
+                <direction>Pledge In/Pledge Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model1</modelName>
+                    <modelDecription>m1desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>DF Interest</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model2</modelName>
+                    <modelDecription>m2desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>Cash</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model2</modelName>
+                    <modelDecription>m2desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>IM</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model2</modelName>
+                    <modelDecription>m2desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>IM</bookingType>
+                <direction>Pledge In/Pledge Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model2</modelName>
+                    <modelDecription>m2desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>Cash Interest</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model2</modelName>
+                    <modelDecription>m2desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>IM Interest</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model2</modelName>
+                    <modelDecription>m2desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>Capital Charge</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model2</modelName>
+                    <modelDecription>m2desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>Physical Cashflow</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model2</modelName>
+                    <modelDecription>m2desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>DF</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model2</modelName>
+                    <modelDecription>m2desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>DF</bookingType>
+                <direction>Pledge In/Pledge Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model2</modelName>
+                    <modelDecription>m2desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>DF Interest</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model3</modelName>
+                    <modelDecription>m3desc</modelDecription>
+                    <modelCategory>abc</modelCategory>
+                </model>
+                <bookingType>Cash</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model3</modelName>
+                    <modelDecription>m3desc</modelDecription>
+                    <modelCategory>abc</modelCategory>
+                </model>
+                <bookingType>IM</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model3</modelName>
+                    <modelDecription>m3desc</modelDecription>
+                    <modelCategory>abc</modelCategory>
+                </model>
+                <bookingType>IM</bookingType>
+                <direction>Pledge In/Pledge Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model3</modelName>
+                    <modelDecription>m3desc</modelDecription>
+                    <modelCategory>abc</modelCategory>
+                </model>
+                <bookingType>Cash Interest</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model3</modelName>
+                    <modelDecription>m3desc</modelDecription>
+                    <modelCategory>abc</modelCategory>
+                </model>
+                <bookingType>IM Interest</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model3</modelName>
+                    <modelDecription>m3desc</modelDecription>
+                    <modelCategory>abc</modelCategory>
+                </model>
+                <bookingType>Capital Charge</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model3</modelName>
+                    <modelDecription>m3desc</modelDecription>
+                    <modelCategory>abc</modelCategory>
+                </model>
+                <bookingType>Physical Cashflow</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model3</modelName>
+                    <modelDecription>m3desc</modelDecription>
+                    <modelCategory>abc</modelCategory>
+                </model>
+                <bookingType>DF</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model3</modelName>
+                    <modelDecription>m3desc</modelDecription>
+                    <modelCategory>abc</modelCategory>
+                </model>
+                <bookingType>DF</bookingType>
+                <direction>Pledge In/Pledge Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model3</modelName>
+                    <modelDecription>m3desc</modelDecription>
+                    <modelCategory>abc</modelCategory>
+                </model>
+                <bookingType>DF Interest</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementStatus>Pending</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <statementStatus>Approved</statementStatus>
+            <agreementId id="agreement.id2"/>
+        </agreement>
+
+        <feedEtdBalances id="feed.etd.balance.for.agr1.model1">
+            <legal_id></legal_id>
+            <legal_id ref="agr.ext.id1"/>
+            <principal></principal>
+            <counterparty></counterparty>
+            <system></system>
+            <prin_branch></prin_branch>
+            <cpty_branch></cpty_branch>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <cashflowPhysical>111</cashflowPhysical>
+            <initialCoupon>-100.123</initialCoupon>
+            <bankedCoupon>-100.111</bankedCoupon>
+            <pai>-100.456</pai>
+            <upfrontFee>-100</upfrontFee>
+            <unrealisedPandLCleared>-100</unrealisedPandLCleared>
+            <realisedPandLCleared>-100</realisedPandLCleared>
+            <totalFeesCleared>-100</totalFeesCleared>
+            <netPandLCleared>222</netPandLCleared>
+            <totalNetPandL>333</totalNetPandL>
+            <realisedPandLETD>-100</realisedPandLETD>
+            <commissionAndFees>-100</commissionAndFees>
+            <openingBalance>-100</openingBalance>
+            <optionPremium>-100</optionPremium>
+            <cashAmounts>-100</cashAmounts>
+            <endingBalance>444</endingBalance>
+            <OTE>-14000</OTE>
+            <TE>555</TE>
+            <LOV>-100</LOV>
+            <SOV>-100</SOV>
+            <NOV>666</NOV>
+            <NLV>777</NLV>
+            <IMR>100</IMR>
+            <MMR>-100</MMR>
+            <IM_SecuritiesBalance>-100</IM_SecuritiesBalance>
+            <IM_CashBalance>-100</IM_CashBalance>
+            <IM_DCVM>-100</IM_DCVM>
+            <ED>888</ED>
+            <DFR>100</DFR>
+            <DF_Securities_Balance>200</DF_Securities_Balance>
+            <DF_Cash_Balance>300</DF_Cash_Balance>
+            <DF_ED>999</DF_ED>
+        </feedEtdBalances>
+
+        <feedEtdBalances id="feed.etd.balance.for.agr1.model2">
+            <legal_id ref="agr.ext.id1"/>
+            <principal></principal>
+            <counterparty></counterparty>
+            <system></system>
+            <prin_branch></prin_branch>
+            <cpty_branch></cpty_branch>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <cashflowPhysical>111</cashflowPhysical>
+            <initialCoupon>-100.123</initialCoupon>
+            <bankedCoupon>-100.111</bankedCoupon>
+            <pai>-100.456</pai>
+            <upfrontFee>-100</upfrontFee>
+            <unrealisedPandLCleared>-100</unrealisedPandLCleared>
+            <realisedPandLCleared>-100</realisedPandLCleared>
+            <totalFeesCleared>-100</totalFeesCleared>
+            <netPandLCleared>222</netPandLCleared>
+            <totalNetPandL>333</totalNetPandL>
+            <realisedPandLETD>-100</realisedPandLETD>
+            <commissionAndFees>-100</commissionAndFees>
+            <openingBalance>-100</openingBalance>
+            <optionPremium>-100</optionPremium>
+            <cashAmounts>-100</cashAmounts>
+            <endingBalance>444</endingBalance>
+            <OTE>-14000</OTE>
+            <TE>555</TE>
+            <LOV>-100</LOV>
+            <SOV>-100</SOV>
+            <NOV>666</NOV>
+            <NLV>777</NLV>
+            <IMR>100</IMR>
+            <MMR>-100</MMR>
+            <IM_SecuritiesBalance>-100</IM_SecuritiesBalance>
+            <IM_CashBalance>-100</IM_CashBalance>
+            <IM_DCVM>-100</IM_DCVM>
+            <ED>888</ED>
+            <DFR>100</DFR>
+            <DF_Securities_Balance>200</DF_Securities_Balance>
+            <DF_Cash_Balance>300</DF_Cash_Balance>
+            <DF_ED>999</DF_ED>
+        </feedEtdBalances>
+
+        <feedEtdBalances id="feed.etd.balance.for.agr2.model1">
+            <legal_id ref="agr.ext.id2"/>
+            <principal></principal>
+            <counterparty></counterparty>
+            <system></system>
+            <prin_branch></prin_branch>
+            <cpty_branch></cpty_branch>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <cashflowPhysical>111</cashflowPhysical>
+            <initialCoupon>-100.123</initialCoupon>
+            <bankedCoupon>-100.111</bankedCoupon>
+            <pai>-100.456</pai>
+            <upfrontFee>-100</upfrontFee>
+            <unrealisedPandLCleared>-100</unrealisedPandLCleared>
+            <realisedPandLCleared>-100</realisedPandLCleared>
+            <totalFeesCleared>-100</totalFeesCleared>
+            <netPandLCleared>222</netPandLCleared>
+            <totalNetPandL>333</totalNetPandL>
+            <realisedPandLETD>-100</realisedPandLETD>
+            <commissionAndFees>-100</commissionAndFees>
+            <openingBalance>-100</openingBalance>
+            <optionPremium>-100</optionPremium>
+            <cashAmounts>-100</cashAmounts>
+            <endingBalance>444</endingBalance>
+            <OTE>-14000</OTE>
+            <TE>555</TE>
+            <LOV>-100</LOV>
+            <SOV>-100</SOV>
+            <NOV>666</NOV>
+            <NLV>777</NLV>
+            <IMR>100</IMR>
+            <MMR>-100</MMR>
+            <IM_SecuritiesBalance>-100</IM_SecuritiesBalance>
+            <IM_CashBalance>-100</IM_CashBalance>
+            <IM_DCVM>-100</IM_DCVM>
+            <ED>888</ED>
+            <DFR>100</DFR>
+            <DF_Securities_Balance>200</DF_Securities_Balance>
+            <DF_Cash_Balance>300</DF_Cash_Balance>
+            <DF_ED>999</DF_ED>
+        </feedEtdBalances>
+
+        <feedEtdBalances id="feed.etd.balance.for.agr2.model2">
+            <legal_id ref="agr.ext.id2"/>
+            <principal></principal>
+            <counterparty></counterparty>
+            <system></system>
+            <prin_branch></prin_branch>
+            <cpty_branch></cpty_branch>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <cashflowPhysical>111</cashflowPhysical>
+            <initialCoupon>-100.123</initialCoupon>
+            <bankedCoupon>-100.111</bankedCoupon>
+            <pai>-100.456</pai>
+            <upfrontFee>-100</upfrontFee>
+            <unrealisedPandLCleared>-100</unrealisedPandLCleared>
+            <realisedPandLCleared>-100</realisedPandLCleared>
+            <totalFeesCleared>-100</totalFeesCleared>
+            <netPandLCleared>222</netPandLCleared>
+            <totalNetPandL>333</totalNetPandL>
+            <realisedPandLETD>-100</realisedPandLETD>
+            <commissionAndFees>-100</commissionAndFees>
+            <openingBalance>-100</openingBalance>
+            <optionPremium>-100</optionPremium>
+            <cashAmounts>-100</cashAmounts>
+            <endingBalance>444</endingBalance>
+            <OTE>-14000</OTE>
+            <TE>555</TE>
+            <LOV>-100</LOV>
+            <SOV>-100</SOV>
+            <NOV>666</NOV>
+            <NLV>777</NLV>
+            <IMR>100</IMR>
+            <MMR>-100</MMR>
+            <IM_SecuritiesBalance>-100</IM_SecuritiesBalance>
+            <IM_CashBalance>-100</IM_CashBalance>
+            <IM_DCVM>-100</IM_DCVM>
+            <ED>888</ED>
+            <DFR>100</DFR>
+            <DF_Securities_Balance>200</DF_Securities_Balance>
+            <DF_Cash_Balance>300</DF_Cash_Balance>
+            <DF_ED>999</DF_ED>
+        </feedEtdBalances>
+
+        <feedEtdAdjustment id="feed.agr1.model1.initial.coupon.110">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>initialCoupon</adjField>
+            <adjValue>110</adjValue>
+            <adjComment>initialCoupon</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model1.banked.coupon.120">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>bankedCoupon</adjField>
+            <adjValue>120</adjValue>
+            <adjComment>bankedCoupon</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model1.pai.130">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>pai</adjField>
+            <adjValue>130</adjValue>
+            <adjComment>api</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model1.upfront.fee.140">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>upfrontFee</adjField>
+            <adjValue>140</adjValue>
+            <adjComment>upfrontFee</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model1.realised.pl.cleared.150">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>realisedPandLCleared</adjField>
+            <adjValue>150</adjValue>
+            <adjComment>realisedPandLCleared</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model1.unrealised.pl.cleared.160">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>unrealisedPandLCleared</adjField>
+            <adjValue>160</adjValue>
+            <adjComment>unrealisedPandLCleared</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model1.total.fees.cleared.170">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>totalFeesCleared</adjField>
+            <adjValue>170</adjValue>
+            <adjComment>totalFeesCleared</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model1.opening.balance.180">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>openingBalance</adjField>
+            <adjValue>180</adjValue>
+            <adjComment>openingBalance</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model1.commission.and.fees.190">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>commissionAndFees</adjField>
+            <adjValue>190</adjValue>
+            <adjComment>commissionAndFees</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model1.realised.pl.etd.200">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>realisedPandLETD</adjField>
+            <adjValue>200</adjValue>
+            <adjComment>realisedPandLETD</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model1.option.premium.210">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>optionPremium</adjField>
+            <adjValue>210</adjValue>
+            <adjComment>optionPremium</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model1.cash.amounts.220">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>cashAmounts</adjField>
+            <adjValue>220</adjValue>
+            <adjComment>cashAmounts</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model1.ending.balance.230">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>endingBalance</adjField>
+            <adjValue>230</adjValue>
+            <adjComment>endingBalance</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model1.net.pl.cleared.240">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>netPandLCleared</adjField>
+            <adjValue>240</adjValue>
+            <adjComment>netPandLCleared</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model1.total.net.pl.250">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>totalNetPandL</adjField>
+            <adjValue>250</adjValue>
+            <adjComment>totalNetPandL</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model1.ending.balance.260">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>endingBalance</adjField>
+            <adjValue>260</adjValue>
+            <adjComment>endingBalance</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model1.te.270">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>TE</adjField>
+            <adjValue>270</adjValue>
+            <adjComment>TE</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model1.nov.280">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>NOV</adjField>
+            <adjValue>280</adjValue>
+            <adjComment>NOV</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model1.nlv.290">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>NLV</adjField>
+            <adjValue>290</adjValue>
+            <adjComment>NLV</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model1.ed.300">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>ED</adjField>
+            <adjValue>300</adjValue>
+            <adjComment>ED</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model1.dfr.310">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>DFR</adjField>
+            <adjValue>310</adjValue>
+            <adjComment>DFR</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model1.df.securities.balance.320">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>DF_Securities_Balance</adjField>
+            <adjValue>320</adjValue>
+            <adjComment>DF_Securities_Balance</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model1.df.cash.balance.330">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>DF_Cash_Balance</adjField>
+            <adjValue>330</adjValue>
+            <adjComment>DF_Cash_Balance</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model1.df.ed.340">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>DF_ED</adjField>
+            <adjValue>340</adjValue>
+            <adjComment>DF_ED</adjComment>
+        </feedEtdAdjustment>
+
+        <feedEtdAdjustment id="feed.agr2.model1.initial.coupon.110">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>initialCoupon</adjField>
+            <adjValue>110</adjValue>
+            <adjComment>initialCoupon</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model1.banked.coupon.120">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>bankedCoupon</adjField>
+            <adjValue>120</adjValue>
+            <adjComment>bankedCoupon</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model1.pai.130">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>pai</adjField>
+            <adjValue>130</adjValue>
+            <adjComment>api</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model1.upfront.fee.140">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>upfrontFee</adjField>
+            <adjValue>140</adjValue>
+            <adjComment>upfrontFee</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model1.realised.pl.cleared.150">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>realisedPandLCleared</adjField>
+            <adjValue>150</adjValue>
+            <adjComment>realisedPandLCleared</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model1.unrealised.pl.cleared.160">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>unrealisedPandLCleared</adjField>
+            <adjValue>160</adjValue>
+            <adjComment>unrealisedPandLCleared</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model1.total.fees.cleared.170">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>totalFeesCleared</adjField>
+            <adjValue>170</adjValue>
+            <adjComment>totalFeesCleared</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model1.opening.balance.180">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>openingBalance</adjField>
+            <adjValue>180</adjValue>
+            <adjComment>openingBalance</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model1.commission.and.fees.190">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>commissionAndFees</adjField>
+            <adjValue>190</adjValue>
+            <adjComment>commissionAndFees</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model1.realised.pl.etd.200">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>realisedPandLETD</adjField>
+            <adjValue>200</adjValue>
+            <adjComment>realisedPandLETD</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model1.option.premium.210">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>optionPremium</adjField>
+            <adjValue>210</adjValue>
+            <adjComment>optionPremium</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model1.cash.amounts.220">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>cashAmounts</adjField>
+            <adjValue>220</adjValue>
+            <adjComment>cashAmounts</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model1.ending.balance.230">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>endingBalance</adjField>
+            <adjValue>230</adjValue>
+            <adjComment>endingBalance</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model1.net.pl.cleared.240">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>netPandLCleared</adjField>
+            <adjValue>240</adjValue>
+            <adjComment>netPandLCleared</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model1.total.net.pl.250">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>totalNetPandL</adjField>
+            <adjValue>250</adjValue>
+            <adjComment>totalNetPandL</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model1.ending.balance.260">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>endingBalance</adjField>
+            <adjValue>260</adjValue>
+            <adjComment>endingBalance</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model1.te.270">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>TE</adjField>
+            <adjValue>270</adjValue>
+            <adjComment>TE</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model1.nov.280">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>NOV</adjField>
+            <adjValue>280</adjValue>
+            <adjComment>NOV</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model1.nlv.290">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>NLV</adjField>
+            <adjValue>290</adjValue>
+            <adjComment>NLV</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model1.ed.300">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <adjField>ED</adjField>
+            <adjValue>300</adjValue>
+            <adjComment>ED</adjComment>
+        </feedEtdAdjustment>
+
+        <feedEtdAdjustment id="feed.agr1.model2.initial.coupon.110">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>initialCoupon</adjField>
+            <adjValue>110</adjValue>
+            <adjComment>initialCoupon</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model2.banked.coupon.120">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>bankedCoupon</adjField>
+            <adjValue>120</adjValue>
+            <adjComment>bankedCoupon</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model2.pai.130">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>pai</adjField>
+            <adjValue>130</adjValue>
+            <adjComment>api</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model2.upfront.fee.140">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>upfrontFee</adjField>
+            <adjValue>140</adjValue>
+            <adjComment>upfrontFee</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model2.cashflow.388">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>cashflowPhysical</adjField>
+            <adjValue>388</adjValue>
+            <adjComment>cashflowPhysical</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model2.realised.pl.cleared.150">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>realisedPandLCleared</adjField>
+            <adjValue>150</adjValue>
+            <adjComment>realisedPandLCleared</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model2.unrealised.pl.cleared.160">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>unrealisedPandLCleared</adjField>
+            <adjValue>160</adjValue>
+            <adjComment>unrealisedPandLCleared</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model2.total.fees.cleared.170">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>totalFeesCleared</adjField>
+            <adjValue>170</adjValue>
+            <adjComment>totalFeesCleared</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model2.opening.balance.180">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>openingBalance</adjField>
+            <adjValue>180</adjValue>
+            <adjComment>openingBalance</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model2.commission.and.fees.190">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>commissionAndFees</adjField>
+            <adjValue>190</adjValue>
+            <adjComment>commissionAndFees</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model2.realised.pl.etd.200">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>realisedPandLETD</adjField>
+            <adjValue>200</adjValue>
+            <adjComment>realisedPandLETD</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model2.option.premium.210">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>optionPremium</adjField>
+            <adjValue>210</adjValue>
+            <adjComment>optionPremium</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model2.cash.amounts.220">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>cashAmounts</adjField>
+            <adjValue>220</adjValue>
+            <adjComment>cashAmounts</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model2.ending.balance.230">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>endingBalance</adjField>
+            <adjValue>230</adjValue>
+            <adjComment>endingBalance</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model2.net.pl.cleared.240">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>netPandLCleared</adjField>
+            <adjValue>240</adjValue>
+            <adjComment>netPandLCleared</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model2.total.net.pl.250">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>totalNetPandL</adjField>
+            <adjValue>250</adjValue>
+            <adjComment>totalNetPandL</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model2.ending.balance.260">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>endingBalance</adjField>
+            <adjValue>260</adjValue>
+            <adjComment>endingBalance</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model2.te.270">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>TE</adjField>
+            <adjValue>270</adjValue>
+            <adjComment>TE</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model2.nov.280">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>NOV</adjField>
+            <adjValue>280</adjValue>
+            <adjComment>NOV</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model2.nlv.290">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>NLV</adjField>
+            <adjValue>290</adjValue>
+            <adjComment>NLV</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr1.model2.ed.300">
+            <legal_id ref="agr.ext.id1"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>ED</adjField>
+            <adjValue>300</adjValue>
+            <adjComment>ED</adjComment>
+        </feedEtdAdjustment>
+
+        <feedEtdAdjustment id="feed.agr2.model2.initial.coupon.110">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>initialCoupon</adjField>
+            <adjValue>110</adjValue>
+            <adjComment>initialCoupon</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model2.banked.coupon.120">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>bankedCoupon</adjField>
+            <adjValue>120</adjValue>
+            <adjComment>bankedCoupon</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model2.pai.130">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>pai</adjField>
+            <adjValue>130</adjValue>
+            <adjComment>api</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model2.upfront.fee.140">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>upfrontFee</adjField>
+            <adjValue>140</adjValue>
+            <adjComment>upfrontFee</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model2.cashflow.388">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>cashflowPhysical</adjField>
+            <adjValue>388</adjValue>
+            <adjComment>cashflowPhysical</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model2.realised.pl.cleared.150">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>realisedPandLCleared</adjField>
+            <adjValue>150</adjValue>
+            <adjComment>realisedPandLCleared</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model2.unrealised.pl.cleared.160">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>unrealisedPandLCleared</adjField>
+            <adjValue>160</adjValue>
+            <adjComment>unrealisedPandLCleared</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model2.total.fees.cleared.170">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>totalFeesCleared</adjField>
+            <adjValue>170</adjValue>
+            <adjComment>totalFeesCleared</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model2.opening.balance.180">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>openingBalance</adjField>
+            <adjValue>180</adjValue>
+            <adjComment>openingBalance</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model2.commission.and.fees.190">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>commissionAndFees</adjField>
+            <adjValue>190</adjValue>
+            <adjComment>commissionAndFees</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model2.realised.pl.etd.200">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>realisedPandLETD</adjField>
+            <adjValue>200</adjValue>
+            <adjComment>realisedPandLETD</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model2.option.premium.210">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>optionPremium</adjField>
+            <adjValue>210</adjValue>
+            <adjComment>optionPremium</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model2.cash.amounts.220">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>cashAmounts</adjField>
+            <adjValue>220</adjValue>
+            <adjComment>cashAmounts</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model2.ending.balance.230">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>endingBalance</adjField>
+            <adjValue>230</adjValue>
+            <adjComment>endingBalance</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model2.net.pl.cleared.240">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>netPandLCleared</adjField>
+            <adjValue>240</adjValue>
+            <adjComment>netPandLCleared</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model2.total.net.pl.250">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>totalNetPandL</adjField>
+            <adjValue>250</adjValue>
+            <adjComment>totalNetPandL</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model2.ending.balance.260">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>endingBalance</adjField>
+            <adjValue>260</adjValue>
+            <adjComment>endingBalance</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model2.te.270">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>TE</adjField>
+            <adjValue>270</adjValue>
+            <adjComment>TE</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model2.nov.280">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>NOV</adjField>
+            <adjValue>280</adjValue>
+            <adjComment>NOV</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model2.nlv.290">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>NLV</adjField>
+            <adjValue>290</adjValue>
+            <adjComment>NLV</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model2.ed.300">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>ED</adjField>
+            <adjValue>300</adjValue>
+            <adjComment>ED</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model2.dfr.310">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>DFR</adjField>
+            <adjValue>310</adjValue>
+            <adjComment>DFR</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model2.df.securities.balance.320">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>DF_Securities_Balance</adjField>
+            <adjValue>320</adjValue>
+            <adjComment>DF_Securities_Balance</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model2.df.cash.balance.330">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>DF_Cash_Balance</adjField>
+            <adjValue>330</adjValue>
+            <adjComment>DF_Cash_Balance</adjComment>
+        </feedEtdAdjustment>
+        <feedEtdAdjustment id="feed.agr2.model2.df.ed.440">
+            <legal_id ref="agr.ext.id2"/>
+            <agreement_id></agreement_id>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <adjField>DF_ED</adjField>
+            <adjValue>440</adjValue>
+            <adjComment>DF_ED</adjComment>
+        </feedEtdAdjustment>
+
+
+        <feedResult id="feed.successful.1.unsuccessful.0">
+            <successfullyImported>1</successfullyImported>
+            <unsuccessfulImports>0</unsuccessfulImports>
+        </feedResult>
+
+        <feedResult id="feed.successful.0.unsuccessful.1">
+            <successfullyImported>0</successfullyImported>
+            <unsuccessfulImports>1</unsuccessfulImports>
+        </feedResult>
+
+        <agreementStatement id="all.feed.adj.value.displays.correctly.on.agr1.model1">
+            <marginCallCalculation>
+                <etdReq>
+                    <sod>
+                        <coupon variation="default">-200.23</coupon>
+                        <pai variation="default">-100.46</pai>
+                        <upfrontFee variation="default">-100</upfrontFee>
+                        <realisedPAndLCleared variation="default">-100</realisedPAndLCleared>
+                        <unrealisedPAndLCleared variation="default">-100</unrealisedPAndLCleared>
+                        <totalFeesCleared variation="default">-100</totalFeesCleared>
+                        <netPAndLCleared variation="amber">222</netPAndLCleared>
+                        <realisedPAndLETD variation="default">-100</realisedPAndLETD>
+                        <totalNetPAndL variation="amber">333</totalNetPAndL>
+                        <openingBalance variation="default">-100</openingBalance>
+                        <commissionAndFees variation="default">-100</commissionAndFees>
+                        <realisedPAndLETD variation="default">-100</realisedPAndLETD>
+                        <optionPremium variation="default">-100</optionPremium>
+                        <cashAmounts variation="default">-100</cashAmounts>
+                        <endingBalance variation="amber">444</endingBalance>
+                        <openTradeEquityOTE variation="default">-14000</openTradeEquityOTE>
+                        <totalEquityTE variation="amber">555</totalEquityTE>
+                        <longOptionValueLOV variation="default">-100</longOptionValueLOV>
+                        <shortOptionValueSOV variation="default">-100</shortOptionValueSOV>
+                        <netOptionValueNOV variation="amber">666</netOptionValueNOV>
+                        <netLiquidatingValueNLV variation="amber">777</netLiquidatingValueNLV>
+                        <initialMarginRequirementIMR variation="default">100</initialMarginRequirementIMR>
+                        <maintenanceMarginRequirementMMR variation="default">-100</maintenanceMarginRequirementMMR>
+                        <imSecuritiesBalance variation="amber">-100</imSecuritiesBalance>
+                        <imCashBalance variation="amber">-100</imCashBalance>
+                        <imDCVM variation="default">-100</imDCVM>
+                        <excessOrDeficit variation="amber">888</excessOrDeficit>
+                    </sod>
+                    <adj>
+                        <coupon variation="purple">230</coupon>
+                        <pai variation="purple">130</pai>
+                        <upfrontFee variation="purple">140</upfrontFee>
+                        <realisedPAndLCleared variation="purple">150</realisedPAndLCleared>
+                        <unrealisedPAndLCleared variation="purple">160</unrealisedPAndLCleared>
+                        <totalFeesCleared variation="purple">170</totalFeesCleared>
+                        <netPAndLCleared variation="amber">240</netPAndLCleared>
+                        <realisedPAndLETD variation="purple">200</realisedPAndLETD>
+                        <totalNetPAndL variation="amber">250</totalNetPAndL>
+                        <openingBalance variation="purple">180</openingBalance>
+                        <commissionAndFees variation="purple">190</commissionAndFees>
+                        <realisedPAndLETD variation="purple">200</realisedPAndLETD>
+                        <optionPremium variation="purple">210</optionPremium>
+                        <cashAmounts variation="purple">220</cashAmounts>
+                        <endingBalance variation="amber">260</endingBalance>
+                        <openTradeEquityOTE variation="default">-14000</openTradeEquityOTE>
+                        <totalEquityTE variation="amber">270</totalEquityTE>
+                        <longOptionValueLOV variation="default">-100</longOptionValueLOV>
+                        <shortOptionValueSOV variation="default">-100</shortOptionValueSOV>
+                        <netOptionValueNOV variation="amber">280</netOptionValueNOV>
+                        <netLiquidatingValueNLV variation="amber">290</netLiquidatingValueNLV>
+                        <initialMarginRequirementIMR variation="default">100</initialMarginRequirementIMR>
+                        <maintenanceMarginRequirementMMR variation="default">-100</maintenanceMarginRequirementMMR>
+                        <imSecuritiesBalance variation="amber">-100</imSecuritiesBalance>
+                        <imCashBalance variation="amber">-100</imCashBalance>
+                        <imDCVM variation="default">-100</imDCVM>
+                        <excessOrDeficit variation="amber">300</excessOrDeficit>
+                    </adj>
+                </etdReq>
+            </marginCallCalculation>
+        </agreementStatement>
+
+        <agreementStatement id="all.feed.adj.value.displays.correctly.on.agr2.model2">
+            <marginCallCalculation>
+                <etdReq>
+                    <sod>
+                        <coupon variation="default">-200.23</coupon>
+                        <pai variation="default">-100.46</pai>
+                        <upfrontFee variation="default">-100</upfrontFee>
+                        <realisedPAndLCleared variation="default">-100</realisedPAndLCleared>
+                        <unrealisedPAndLCleared variation="default">-100</unrealisedPAndLCleared>
+                        <totalFeesCleared variation="default">-100</totalFeesCleared>
+                        <netPAndLCleared variation="default">-700.69</netPAndLCleared>
+                        <realisedPAndLETD variation="default">-100</realisedPAndLETD>
+                        <totalNetPAndL variation="default">-800.69</totalNetPAndL>
+                        <openingBalance variation="default">-100</openingBalance>
+                        <commissionAndFees variation="default">-100</commissionAndFees>
+                        <realisedPAndLETD variation="default">-100</realisedPAndLETD>
+                        <optionPremium variation="default">-100</optionPremium>
+                        <cashAmounts variation="default">-100</cashAmounts>
+                        <endingBalance variation="default">-500</endingBalance>
+                        <openTradeEquityOTE variation="default">-14000</openTradeEquityOTE>
+                        <totalEquityTE variation="default">-14500</totalEquityTE>
+                        <longOptionValueLOV variation="default">-100</longOptionValueLOV>
+                        <shortOptionValueSOV variation="default">-100</shortOptionValueSOV>
+                        <netOptionValueNOV variation="default">-200</netOptionValueNOV>
+                        <netLiquidatingValueNLV variation="default">-14700</netLiquidatingValueNLV>
+                        <initialMarginRequirementIMR variation="default">100</initialMarginRequirementIMR>
+                        <maintenanceMarginRequirementMMR variation="default">-100</maintenanceMarginRequirementMMR>
+                        <imSecuritiesBalance variation="default">0</imSecuritiesBalance>
+                        <imCashBalance variation="default">0</imCashBalance>
+                        <imDCVM variation="default">-100</imDCVM>
+                        <excessOrDeficit variation="default">-14700</excessOrDeficit>
+                    </sod>
+                    <adj>
+                        <coupon variation="purple">230</coupon>
+                        <pai variation="purple">130</pai>
+                        <upfrontFee variation="purple">140</upfrontFee>
+                        <realisedPAndLCleared variation="purple">150</realisedPAndLCleared>
+                        <unrealisedPAndLCleared variation="purple">160</unrealisedPAndLCleared>
+                        <totalFeesCleared variation="purple">170</totalFeesCleared>
+                        <netPAndLCleared variation="purple">980</netPAndLCleared>
+                        <realisedPAndLETD variation="purple">200</realisedPAndLETD>
+                        <totalNetPAndL variation="purple">1180</totalNetPAndL>
+                        <openingBalance variation="purple">180</openingBalance>
+                        <commissionAndFees variation="purple">190</commissionAndFees>
+                        <realisedPAndLETD variation="purple">200</realisedPAndLETD>
+                        <optionPremium variation="purple">210</optionPremium>
+                        <cashAmounts variation="purple">220</cashAmounts>
+                        <endingBalance variation="purple">1000</endingBalance>
+                        <openTradeEquityOTE variation="default">-14000</openTradeEquityOTE>
+                        <totalEquityTE variation="purple">-13000</totalEquityTE>
+                        <longOptionValueLOV variation="default">-100</longOptionValueLOV>
+                        <shortOptionValueSOV variation="default">-100</shortOptionValueSOV>
+                        <netOptionValueNOV variation="default">-200</netOptionValueNOV>
+                        <netLiquidatingValueNLV variation="purple">-13200</netLiquidatingValueNLV>
+                        <initialMarginRequirementIMR variation="default">100</initialMarginRequirementIMR>
+                        <maintenanceMarginRequirementMMR variation="default">-100</maintenanceMarginRequirementMMR>
+                        <imSecuritiesBalance variation="default">0</imSecuritiesBalance>
+                        <imCashBalance variation="default">0</imCashBalance>
+                        <imDCVM variation="default">-100</imDCVM>
+                        <excessOrDeficit variation="purple">-13200</excessOrDeficit>
+                    </adj>
+                </etdReq>
+            </marginCallCalculation>
+        </agreementStatement>
+
+        <agreementStatement id="all.calculated.fields.adj.value.not.equal.to.feed.on.agr2.model1">
+            <marginCallCalculation>
+                <etdReq>
+                    <sod>
+                        <coupon variation="default">-200.23</coupon>
+                        <pai variation="default">-100.46</pai>
+                        <upfrontFee variation="default">-100</upfrontFee>
+                        <realisedPAndLCleared variation="default">-100</realisedPAndLCleared>
+                        <unrealisedPAndLCleared variation="default">-100</unrealisedPAndLCleared>
+                        <totalFeesCleared variation="default">-100</totalFeesCleared>
+                        <netPAndLCleared variation="default">-700.69</netPAndLCleared>
+                        <realisedPAndLETD variation="default">-100</realisedPAndLETD>
+                        <totalNetPAndL variation="default">-800.69</totalNetPAndL>
+                        <openingBalance variation="default">-100</openingBalance>
+                        <commissionAndFees variation="default">-100</commissionAndFees>
+                        <realisedPAndLETD variation="default">-100</realisedPAndLETD>
+                        <optionPremium variation="default">-100</optionPremium>
+                        <cashAmounts variation="default">-100</cashAmounts>
+                        <endingBalance variation="default">-500</endingBalance>
+                        <openTradeEquityOTE variation="default">-14000</openTradeEquityOTE>
+                        <totalEquityTE variation="default">-14500</totalEquityTE>
+                        <longOptionValueLOV variation="default">-100</longOptionValueLOV>
+                        <shortOptionValueSOV variation="default">-100</shortOptionValueSOV>
+                        <netOptionValueNOV variation="default">-200</netOptionValueNOV>
+                        <netLiquidatingValueNLV variation="default">-14700</netLiquidatingValueNLV>
+                        <initialMarginRequirementIMR variation="default">100</initialMarginRequirementIMR>
+                        <maintenanceMarginRequirementMMR variation="default">-100</maintenanceMarginRequirementMMR>
+                        <imSecuritiesBalance variation="default">0</imSecuritiesBalance>
+                        <imCashBalance variation="default">0</imCashBalance>
+                        <imDCVM variation="default">-100</imDCVM>
+                        <excessOrDeficit variation="default">-14700</excessOrDeficit>
+                    </sod>
+                    <adj>
+                        <coupon variation="purple">230</coupon>
+                        <pai variation="purple">130</pai>
+                        <upfrontFee variation="purple">140</upfrontFee>
+                        <realisedPAndLCleared variation="purple">150</realisedPAndLCleared>
+                        <unrealisedPAndLCleared variation="purple">160</unrealisedPAndLCleared>
+                        <totalFeesCleared variation="purple">170</totalFeesCleared>
+                        <netPAndLCleared variation="purple">980</netPAndLCleared>
+                        <realisedPAndLETD variation="purple">200</realisedPAndLETD>
+                        <totalNetPAndL variation="purple">1180</totalNetPAndL>
+                        <openingBalance variation="purple">180</openingBalance>
+                        <commissionAndFees variation="purple">190</commissionAndFees>
+                        <realisedPAndLETD variation="purple">200</realisedPAndLETD>
+                        <optionPremium variation="purple">210</optionPremium>
+                        <cashAmounts variation="purple">220</cashAmounts>
+                        <endingBalance variation="purple">1000</endingBalance>
+                        <openTradeEquityOTE variation="default">-14000</openTradeEquityOTE>
+                        <totalEquityTE variation="purple">-13000</totalEquityTE>
+                        <longOptionValueLOV variation="default">-100</longOptionValueLOV>
+                        <shortOptionValueSOV variation="default">-100</shortOptionValueSOV>
+                        <netOptionValueNOV variation="default">-200</netOptionValueNOV>
+                        <netLiquidatingValueNLV variation="purple">-13200</netLiquidatingValueNLV>
+                        <initialMarginRequirementIMR variation="default">100</initialMarginRequirementIMR>
+                        <maintenanceMarginRequirementMMR variation="default">-100</maintenanceMarginRequirementMMR>
+                        <imSecuritiesBalance variation="default">0</imSecuritiesBalance>
+                        <imCashBalance variation="default">0</imCashBalance>
+                        <imDCVM variation="default">-100</imDCVM>
+                        <excessOrDeficit variation="purple">-13200</excessOrDeficit>
+                    </adj>
+                </etdReq>
+            </marginCallCalculation>
+        </agreementStatement>
+
+        <agreementStatement id="agr1.model2.cashflow.physical.388">
+            <marginCallCalculation>
+                <etdReq>
+                    <adj>
+                        <cashflow>388</cashflow>
+                    </adj>
+                </etdReq>
+            </marginCallCalculation>
+        </agreementStatement>
+
+        <agreementStatement id="purple.color.for.adj.cashflow.physical">
+            <marginCallCalculation>
+                <etdReq>
+                    <sod>
+                        <coupon variation="default">-200.23</coupon>
+                        <pai variation="default">-100.46</pai>
+                        <upfrontFee variation="default">-100</upfrontFee>
+                        <realisedPAndLCleared variation="default">-100</realisedPAndLCleared>
+                        <unrealisedPAndLCleared variation="default">-100</unrealisedPAndLCleared>
+                        <totalFeesCleared variation="default">-100</totalFeesCleared>
+                        <cashflow variation="default">-700.69</cashflow>
+                        <netPAndLCleared variation="default">0</netPAndLCleared>
+                        <realisedPAndLETD variation="default">-100</realisedPAndLETD>
+                        <totalNetPAndL variation="default">-100</totalNetPAndL>
+                        <openingBalance variation="default">-100</openingBalance>
+                        <commissionAndFees variation="default">-100</commissionAndFees>
+                        <realisedPAndLETD variation="default">-100</realisedPAndLETD>
+                        <optionPremium variation="default">-100</optionPremium>
+                        <cashAmounts variation="default">-100</cashAmounts>
+                        <endingBalance variation="default">-500</endingBalance>
+                        <openTradeEquityOTE variation="default">-14000</openTradeEquityOTE>
+                        <totalEquityTE variation="default">-14500</totalEquityTE>
+                        <longOptionValueLOV variation="default">-100</longOptionValueLOV>
+                        <shortOptionValueSOV variation="default">-100</shortOptionValueSOV>
+                        <netOptionValueNOV variation="default">-200</netOptionValueNOV>
+                        <netLiquidatingValueNLV variation="default">-14700</netLiquidatingValueNLV>
+                        <initialMarginRequirementIMR variation="default">100</initialMarginRequirementIMR>
+                        <maintenanceMarginRequirementMMR variation="default">-100</maintenanceMarginRequirementMMR>
+                        <imSecuritiesBalance variation="default">0</imSecuritiesBalance>
+                        <imCashBalance variation="default">0</imCashBalance>
+                        <imDCVM variation="default">-100</imDCVM>
+                        <excessOrDeficit variation="default">-14700</excessOrDeficit>
+                    </sod>
+                    <adj>
+                        <coupon variation="purple">300</coupon>
+                        <pai variation="purple">200</pai>
+                        <upfrontFee variation="purple">300</upfrontFee>
+                        <realisedPAndLCleared variation="default">-100</realisedPAndLCleared>
+                        <unrealisedPAndLCleared variation="default">-100</unrealisedPAndLCleared>
+                        <totalFeesCleared variation="default">-100</totalFeesCleared>
+                        <cashflow variation="purple">500</cashflow>
+                        <netPAndLCleared variation="purple">0</netPAndLCleared>
+                        <realisedPAndLETD variation="default">-100</realisedPAndLETD>
+                        <totalNetPAndL variation="default">-100</totalNetPAndL>
+                        <openingBalance variation="default">-100</openingBalance>
+                        <commissionAndFees variation="default">-100</commissionAndFees>
+                        <realisedPAndLETD variation="default">-100</realisedPAndLETD>
+                        <optionPremium variation="default">-100</optionPremium>
+                        <cashAmounts variation="default">-100</cashAmounts>
+                        <endingBalance variation="default">-500</endingBalance>
+                        <openTradeEquityOTE variation="default">-14000</openTradeEquityOTE>
+                        <totalEquityTE variation="default">-14500</totalEquityTE>
+                        <longOptionValueLOV variation="default">-100</longOptionValueLOV>
+                        <shortOptionValueSOV variation="default">-100</shortOptionValueSOV>
+                        <netOptionValueNOV variation="default">-200</netOptionValueNOV>
+                        <netLiquidatingValueNLV variation="default">-14700</netLiquidatingValueNLV>
+                        <initialMarginRequirementIMR variation="default">100</initialMarginRequirementIMR>
+                        <maintenanceMarginRequirementMMR variation="default">-100</maintenanceMarginRequirementMMR>
+                        <imSecuritiesBalance variation="default">0</imSecuritiesBalance>
+                        <imCashBalance variation="default">0</imCashBalance>
+                        <imDCVM variation="default">-100</imDCVM>
+                        <excessOrDeficit variation="default">-14700</excessOrDeficit>
+                    </adj>
+                </etdReq>
+            </marginCallCalculation>
+        </agreementStatement>
+
+        <agreementStatement id="amber.color.for.adj.net.pl.cleared.and.total.net.pl">
+            <marginCallCalculation>
+                <etdReq>
+                    <sod>
+                        <coupon variation="default">-200.23</coupon>
+                        <pai variation="default">-100.46</pai>
+                        <upfrontFee variation="default">-100</upfrontFee>
+                        <realisedPAndLCleared variation="default">-100</realisedPAndLCleared>
+                        <unrealisedPAndLCleared variation="default">-100</unrealisedPAndLCleared>
+                        <totalFeesCleared variation="default">-100</totalFeesCleared>
+                        <cashflow variation="amber">0</cashflow>
+                        <netPAndLCleared variation="default">0</netPAndLCleared>
+                        <realisedPAndLETD variation="default">-100</realisedPAndLETD>
+                        <totalNetPAndL variation="amber">0</totalNetPAndL>
+                        <openingBalance variation="default">-100</openingBalance>
+                        <commissionAndFees variation="default">-100</commissionAndFees>
+                        <realisedPAndLETD variation="default">-100</realisedPAndLETD>
+                        <optionPremium variation="default">-100</optionPremium>
+                        <cashAmounts variation="default">-100</cashAmounts>
+                        <endingBalance variation="amber">0</endingBalance>
+                        <openTradeEquityOTE variation="default">-14000</openTradeEquityOTE>
+                        <totalEquityTE variation="amber">0</totalEquityTE>
+                        <longOptionValueLOV variation="default">-100</longOptionValueLOV>
+                        <shortOptionValueSOV variation="default">-100</shortOptionValueSOV>
+                        <netOptionValueNOV variation="amber">0</netOptionValueNOV>
+                        <netLiquidatingValueNLV variation="default">0</netLiquidatingValueNLV>
+                        <initialMarginRequirementIMR variation="default">100</initialMarginRequirementIMR>
+                        <maintenanceMarginRequirementMMR variation="default">-100</maintenanceMarginRequirementMMR>
+                        <imSecuritiesBalance variation="default">0</imSecuritiesBalance>
+                        <imCashBalance variation="default">0</imCashBalance>
+                        <imDCVM variation="default">-100</imDCVM>
+                        <excessOrDeficit variation="amber">0</excessOrDeficit>
+                    </sod>
+                    <adj>
+                        <coupon variation="purple">300</coupon>
+                        <pai variation="purple">200</pai>
+                        <upfrontFee variation="purple">300</upfrontFee>
+                        <realisedPAndLCleared variation="default">-100</realisedPAndLCleared>
+                        <unrealisedPAndLCleared variation="default">-100</unrealisedPAndLCleared>
+                        <totalFeesCleared variation="default">-100</totalFeesCleared>
+                        <cashflow variation="amber">0</cashflow>
+                        <netPAndLCleared variation="amber">2000</netPAndLCleared>
+                        <realisedPAndLETD variation="default">-100</realisedPAndLETD>
+                        <totalNetPAndL variation="amber">1000</totalNetPAndL>
+                        <openingBalance variation="default">-100</openingBalance>
+                        <commissionAndFees variation="default">-100</commissionAndFees>
+                        <realisedPAndLETD variation="default">-100</realisedPAndLETD>
+                        <optionPremium variation="default">-100</optionPremium>
+                        <cashAmounts variation="default">-100</cashAmounts>
+                        <endingBalance variation="amber">0</endingBalance>
+                        <openTradeEquityOTE variation="default">-14000</openTradeEquityOTE>
+                        <totalEquityTE variation="amber">0</totalEquityTE>
+                        <longOptionValueLOV variation="default">-100</longOptionValueLOV>
+                        <shortOptionValueSOV variation="default">-100</shortOptionValueSOV>
+                        <netOptionValueNOV variation="amber">0</netOptionValueNOV>
+                        <netLiquidatingValueNLV variation="default">0</netLiquidatingValueNLV>
+                        <initialMarginRequirementIMR variation="default">100</initialMarginRequirementIMR>
+                        <maintenanceMarginRequirementMMR variation="default">-100</maintenanceMarginRequirementMMR>
+                        <imSecuritiesBalance variation="default">0</imSecuritiesBalance>
+                        <imCashBalance variation="default">0</imCashBalance>
+                        <imDCVM variation="default">-100</imDCVM>
+                        <excessOrDeficit variation="amber">0</excessOrDeficit>
+                    </adj>
+                </etdReq>
+            </marginCallCalculation>
+        </agreementStatement>
+
+        <agreementStatement id="purple.color.for.adj.cashflow.physical.500">
+            <marginCallCalculation>
+                <etdReq>
+                    <sod>
+                        <coupon variation="default">-200.23</coupon>
+                        <pai variation="default">-100.46</pai>
+                        <upfrontFee variation="default">-100</upfrontFee>
+                        <realisedPAndLCleared variation="default">-100</realisedPAndLCleared>
+                        <unrealisedPAndLCleared variation="default">-100</unrealisedPAndLCleared>
+                        <totalFeesCleared variation="default">-100</totalFeesCleared>
+                        <cashflow variation="amber">0</cashflow>
+                        <netPAndLCleared variation="default">0</netPAndLCleared>
+                        <realisedPAndLETD variation="default">-100</realisedPAndLETD>
+                        <totalNetPAndL variation="amber">0</totalNetPAndL>
+                        <openingBalance variation="default">-100</openingBalance>
+                        <commissionAndFees variation="default">-100</commissionAndFees>
+                        <realisedPAndLETD variation="default">-100</realisedPAndLETD>
+                        <optionPremium variation="default">-100</optionPremium>
+                        <cashAmounts variation="default">-100</cashAmounts>
+                        <endingBalance variation="amber">0</endingBalance>
+                        <openTradeEquityOTE variation="default">-14000</openTradeEquityOTE>
+                        <totalEquityTE variation="amber">0</totalEquityTE>
+                        <longOptionValueLOV variation="default">-100</longOptionValueLOV>
+                        <shortOptionValueSOV variation="default">-100</shortOptionValueSOV>
+                        <netOptionValueNOV variation="amber">0</netOptionValueNOV>
+                        <netLiquidatingValueNLV variation="default">0</netLiquidatingValueNLV>
+                        <initialMarginRequirementIMR variation="default">100</initialMarginRequirementIMR>
+                        <maintenanceMarginRequirementMMR variation="default">-100</maintenanceMarginRequirementMMR>
+                        <imSecuritiesBalance variation="default">0</imSecuritiesBalance>
+                        <imCashBalance variation="default">0</imCashBalance>
+                        <imDCVM variation="default">-100</imDCVM>
+                        <excessOrDeficit variation="amber">0</excessOrDeficit>
+                    </sod>
+                    <adj>
+                        <coupon variation="purple">300</coupon>
+                        <pai variation="purple">200</pai>
+                        <upfrontFee variation="purple">300</upfrontFee>
+                        <realisedPAndLCleared variation="default">-100</realisedPAndLCleared>
+                        <unrealisedPAndLCleared variation="default">-100</unrealisedPAndLCleared>
+                        <totalFeesCleared variation="default">-100</totalFeesCleared>
+                        <cashflow variation="purple">500</cashflow>
+                        <netPAndLCleared variation="amber">2000</netPAndLCleared>
+                        <realisedPAndLETD variation="default">-100</realisedPAndLETD>
+                        <totalNetPAndL variation="amber">1000</totalNetPAndL>
+                        <openingBalance variation="default">-100</openingBalance>
+                        <commissionAndFees variation="default">-100</commissionAndFees>
+                        <realisedPAndLETD variation="default">-100</realisedPAndLETD>
+                        <optionPremium variation="default">-100</optionPremium>
+                        <cashAmounts variation="default">-100</cashAmounts>
+                        <endingBalance variation="amber">0</endingBalance>
+                        <openTradeEquityOTE variation="default">-14000</openTradeEquityOTE>
+                        <totalEquityTE variation="amber">0</totalEquityTE>
+                        <longOptionValueLOV variation="default">-100</longOptionValueLOV>
+                        <shortOptionValueSOV variation="default">-100</shortOptionValueSOV>
+                        <netOptionValueNOV variation="amber">0</netOptionValueNOV>
+                        <netLiquidatingValueNLV variation="default">0</netLiquidatingValueNLV>
+                        <initialMarginRequirementIMR variation="default">100</initialMarginRequirementIMR>
+                        <maintenanceMarginRequirementMMR variation="default">-100</maintenanceMarginRequirementMMR>
+                        <imSecuritiesBalance variation="default">0</imSecuritiesBalance>
+                        <imCashBalance variation="default">0</imCashBalance>
+                        <imDCVM variation="default">-100</imDCVM>
+                        <excessOrDeficit variation="amber">0</excessOrDeficit>
+                    </adj>
+                </etdReq>
+            </marginCallCalculation>
+        </agreementStatement>
+
+        <etdAgreementStatement id="select.model1">
+            <etdAssetHoldingSummary>
+                <agreementBaseCurrency>USD</agreementBaseCurrency>
+                <etdModelAndModelCategoryAssetHoldingSummary>
+                    <modelCategory>SEC</modelCategory>
+                    <model>model1</model>
+                    <desc>m1desc</desc>
+                </etdModelAndModelCategoryAssetHoldingSummary>
+            </etdAssetHoldingSummary>
+        </etdAgreementStatement>
+
+        <etdAgreementStatement id="select.model2">
+            <etdAssetHoldingSummary>
+                <agreementBaseCurrency>USD</agreementBaseCurrency>
+                <etdModelAndModelCategoryAssetHoldingSummary>
+                    <modelCategory>abc</modelCategory>
+                    <model>model3</model>
+                    <desc>m3desc</desc>
+                </etdModelAndModelCategoryAssetHoldingSummary>
+            </etdAssetHoldingSummary>
+        </etdAgreementStatement>
+
+        <assetBookingSummary id="Cash-USD">
+            <assetType ref="cash.usd.name"/>
+        </assetBookingSummary>
+
+        <agreementStatement id="modify.banked.coupon.to.100.intial.coupon.to.200">
+            <marginCallCalculation>
+                <etdReq>
+                    <adj>
+                        <bankedCoupon>
+                            <adjustmentAmount>100</adjustmentAmount>
+                            <comment>updateto100</comment>
+                        </bankedCoupon>
+                        <initialCoupon>
+                            <adjustmentAmount>200</adjustmentAmount>
+                            <comment>updateto200</comment>
+                        </initialCoupon>
+                    </adj>
+                </etdReq>
+            </marginCallCalculation>
+        </agreementStatement>
+
+        <agreementStatement id="modify.pai.to.200.upfront.fee.to.300">
+            <marginCallCalculation>
+                <etdReq>
+                    <adj>
+                        <pai>
+                            <adjustmentAmount>200</adjustmentAmount>
+                            <comment>updateto200</comment>
+                        </pai>
+                        <upfrontFee>
+                            <adjustmentAmount>300</adjustmentAmount>
+                            <comment>updateto300</comment>
+                        </upfrontFee>
+                    </adj>
+                </etdReq>
+            </marginCallCalculation>
+        </agreementStatement>
+
+        <agreementStatement id="modify.net.pl.cleared.to.2000.total.net.pl.to.1000">
+            <marginCallCalculation>
+                <etdReq>
+                    <adj>
+                        <netPAndLCleared>
+                            <adjustmentAmount>2000</adjustmentAmount>
+                            <comment>updateto2000</comment>
+                        </netPAndLCleared>
+                        <totalNetPAndL>
+                            <adjustmentAmount>1000</adjustmentAmount>
+                            <comment>updateto1000</comment>
+                        </totalNetPAndL>
+                    </adj>
+                </etdReq>
+            </marginCallCalculation>
+        </agreementStatement>
+
+        <agreementStatement id="modify.cashflow.physical.to.500">
+            <marginCallCalculation>
+                <etdReq>
+                    <adj>
+                        <cashflow>
+                            <adjustmentAmount>500</adjustmentAmount>
+                            <comment>updateto500</comment>
+                        </cashflow>
+                    </adj>
+                </etdReq>
+            </marginCallCalculation>
+        </agreementStatement>
+
+        <agreement id="change.cashflow.rule1.to.rule2">
+            <cashflowRule ref="cashflow.rule2"/>
+        </agreement>
+
+        <etdAgreementStatement id="expand.category.SEC.USD">
+            <etdAssetHoldingSummary>
+                <agreementBaseCurrency>USD</agreementBaseCurrency>
+                <etdModelAndModelCategoryAssetHoldingSummary>
+                    <modelCategory>SEC</modelCategory>
+                </etdModelAndModelCategoryAssetHoldingSummary>
+            </etdAssetHoldingSummary>
+        </etdAgreementStatement>
+
+        <etdAgreementStatement id="expand.category.abc.USD">
+            <etdAssetHoldingSummary>
+                <agreementBaseCurrency>USD</agreementBaseCurrency>
+                <etdModelAndModelCategoryAssetHoldingSummary>
+                    <modelCategory>abc</modelCategory>
+                </etdModelAndModelCategoryAssetHoldingSummary>
+            </etdAssetHoldingSummary>
+        </etdAgreementStatement>
+
+        <agreement id="apporve.agreement.to.approved.status">
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+    </scenarioData>
+</dataBean>

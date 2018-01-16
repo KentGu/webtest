@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <agreement id="agr28956.etf">
+            <agreementId id="agrid">2641</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="model">
+            <column>Model</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="cash.delivery.agreementRequirement.-1m.top">
+            <action>Cash Delivery(Excess)</action>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model></model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="cash.delivery.agreementRequirement.-1m.o1">
+            <action>Cash Delivery(Excess)</action>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model>o1</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="fee.delivery.agreementRequirement.-2m.top">
+            <action>Fee Delivery(Excess)</action>
+            <agreementRequirement>-2,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model></model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="fee.delivery.agreementRequirement.-2m.o1">
+            <action>Fee Delivery(Excess)</action>
+            <agreementRequirement>-2,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model>o1</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="VMOTMNoCalls.agreementRequirement.0m.top">
+            <action>VM OTM No Calls</action>
+            <agreementRequirement>0.00</agreementRequirement>
+            <callStatus>No Call Required</callStatus>
+            <model></model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="VMOTMNoCalls.agreementRequirement.0m.o1">
+            <action>VM OTM No Calls</action>
+            <agreementRequirement>0.00</agreementRequirement>
+            <callStatus>No Call Required</callStatus>
+            <model>o1</model>
+        </exposureEventDetail>
+
+    </scenarioData>
+</dataBean>

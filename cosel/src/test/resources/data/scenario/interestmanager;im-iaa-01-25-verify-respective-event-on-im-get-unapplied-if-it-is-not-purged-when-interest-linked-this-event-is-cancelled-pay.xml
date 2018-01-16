@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/interestManager.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <agreement>
+            <principal>
+                <linkText id="agreement.principal" ref="org.p1.lname"/>
+            </principal>
+            <counterparty>
+                <linkText id="agreement.counterparty" ref="org.c1.lname"/>
+            </counterparty>
+            <agreementDescription id="agreement.description">T30345_Agreement_Description</agreementDescription>
+            <externalId id="agreement.external.id">T30345_External_ID</externalId>
+            <agreementId id="agreement.id">2001</agreementId>
+            <collateralAssetClass>
+                <collateralAssetClassName id="agreement.asset.class.name" ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName id="agreement.asset.type.name" ref="cash.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+        </agreement>
+
+        <interestEventSearch id="net.interest.event.search">
+            <description>
+                <type>Exactly matching</type>
+                <filter ref="agreement.description"/>
+                <linkText ref="agreement.description"/>
+            </description>
+            <dateRange>
+                <startDate>06/01/2014</startDate>
+                <endDate>06/30/2014</endDate>
+            </dateRange>
+        </interestEventSearch>
+
+        <interestEventDetail id="original.net.interest.event" name="check.interest.event">
+            <principal ref="agreement.principal"/>
+            <!--<counterparty ref="agreement.counterparty"/>-->
+            <description ref="agreement.description"/>
+            <businessLine>OTC</businessLine>
+            <cashAssetType ref="cash.usd.name"/>
+            <interestRule>First of the Month</interestRule>
+            <interestSource>Net Interest</interestSource>
+        </interestEventDetail>
+
+        <interestEventDetail id="apply.interest.movement.event">
+            <principal ref="agreement.principal"/>
+            <!--<counterparty ref="agreement.counterparty"/>-->
+            <description ref="agreement.description"/>
+            <businessLine>OTC</businessLine>
+            <cashAssetType ref="cash.usd.name"/>
+            <interestRule>First of the Month</interestRule>
+            <interestSource>Net Interest</interestSource>
+            <interestMovementStatus id="apply.interest.movement.event.movement.status"/>
+        </interestEventDetail>
+
+        <interestEventDetail id="before.apply.interest.movement.net.interest.event" name="check.interest.event">
+            <principal ref="agreement.principal"/>
+            <!--<counterparty ref="agreement.counterparty"/>-->
+            <description ref="agreement.description"/>
+            <businessLine>OTC</businessLine>
+            <cashAssetType ref="cash.usd.name"/>
+            <interestRule>First of the Month</interestRule>
+            <startDate>6/1/2014</startDate>
+            <endDate>6/30/2014</endDate>
+            <calculatedInterestAmount>-12939.14</calculatedInterestAmount>
+            <whtAmount>3234.79</whtAmount>
+            <agreedInterestAmount>-12939.14</agreedInterestAmount>
+            <agreedWHTAmount>3234.79</agreedWHTAmount>
+            <interestSource>Net Interest</interestSource>
+            <interestMovementStatus> </interestMovementStatus>
+        </interestEventDetail>
+
+        <interestEventDetail id="input.agreed.interest.amount.and.wht.amount">
+            <agreedInterestAmount id="input.agreed.interest.amount.and.wht.amount.agreed.interest.amount">-12000</agreedInterestAmount>
+            <agreedWHTAmount id="input.agreed.interest.amount.and.wht.amount.agreed.wht.amount">5000</agreedWHTAmount>
+        </interestEventDetail>
+
+        <interestEventDetail id="after.apply.interest.movement.net.interest.event" name="check.interest.event">
+            <principal ref="agreement.principal"/>
+            <!--<counterparty ref="agreement.counterparty"/>-->
+            <description ref="agreement.description"/>
+            <businessLine>OTC</businessLine>
+            <cashAssetType ref="cash.usd.name"/>
+            <interestRule>First of the Month</interestRule>
+            <startDate>6/1/2014</startDate>
+            <endDate>6/30/2014</endDate>
+            <calculatedInterestAmount>-12939.14</calculatedInterestAmount>
+            <whtAmount>3234.79</whtAmount>
+            <interestSource>Net Interest</interestSource>
+            <agreedInterestAmount ref="input.agreed.interest.amount.and.wht.amount.agreed.interest.amount"/>
+            <agreedWHTAmount ref="input.agreed.interest.amount.and.wht.amount.agreed.wht.amount"/>
+            <interestMovementStatus ref="apply.interest.movement.event.movement.status"/>
+        </interestEventDetail>
+
+        <loginCredential id="login.credential.user2">
+            <username>gukai</username>
+            <password>1</password>
+        </loginCredential>
+
+        <settlementStatusSearch id="search.net.interest.movement.settlement">
+            <description>
+                <type>Exactly matching</type>
+                <filter ref="agreement.description"/>
+            </description>
+        </settlementStatusSearch>
+
+        <settlementStatusSummary id="qtp.cash.usd.settlement">
+            <assetType ref="agreement.asset.type.name"/>
+        </settlementStatusSummary>
+
+        <settlementStatusDetail id="original.qtp.cash.usd.interest.movement.booking.event">
+            <principal ref="agreement.principal"/>
+            <counterparty ref="agreement.counterparty"/>
+            <agreementDescription ref="agreement.description"/>
+        </settlementStatusDetail>
+
+        <cashMovementDetail id="cancel.cash.movement.booking">
+            <settlementStatus>Cancelled</settlementStatus>
+        </cashMovementDetail>
+    </scenarioData>
+</dataBean>

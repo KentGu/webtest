@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/exposureManagement.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <agreement id="agr30763.otc.notnet">
+            <agreementId id="agrid">2615</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="im.delivery.1m">
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="noCallRequired">
+            <agreementRequirement>0.00</agreementRequirement>
+            <callStatus>No Call Required</callStatus>
+        </exposureEventDetail>
+
+        <bookingDetail id="im.delivery.imNotional.0.5m">
+            <instrumentSearch>
+                <instrument>
+                    <filter>CASH-USD</filter>
+                    <!--<linkText>CASH-USD</linkText>-->
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail clickPlusButton="true">
+                    <bookingMovement>IM Delivery</bookingMovement>
+                    <bookingNumber>1.1</bookingNumber>
+                    <imAmount>0.5m</imAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="im.delivery.imNotional.0.5m.2">
+            <instrumentSearch>
+                <instrument>
+                    <filter>qtp-Bond-Usd-Instrument,qtp_Market</filter>
+                    <!--<linkText>CASH-USD</linkText>-->
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>IM Delivery</bookingMovement>
+                    <bookingNumber>1.2</bookingNumber>
+                    <imAmount>0.5m</imAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <exposureEventDetail id="im.delivery.1m.completed">
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <callStatus>Completed</callStatus>
+        </exposureEventDetail>
+
+        <taskSchedulerDetail id="flushBookingforAgr30763">
+            <taskName>Flush Bookings</taskName>
+            <agreementIds ref="agrid"/>
+        </taskSchedulerDetail>
+
+        <taskSchedulerMessage id="flushBookingforAgr30763.success">
+            <message>Flush Bookings: Total of 2 tickets flushed.</message>
+        </taskSchedulerMessage>
+
+        <agreementStatement id="agr30763.amended.collateralHolding.0">
+            <agreementAdmin>
+                <statementStatus>Amended</statementStatus>
+            </agreementAdmin>
+            <assetHoldingsSummary>
+                <mktValueOfAssetsHeldByCounterparty>0.00</mktValueOfAssetsHeldByCounterparty>
+                <adjustedCollateralValueCounterparty>0.00</adjustedCollateralValueCounterparty>
+                <iaMarketValueHeldByCounterparty>0.00</iaMarketValueHeldByCounterparty>
+                <adjustedIACollateralValueCounterparty>0.00</adjustedIACollateralValueCounterparty>
+            </assetHoldingsSummary>
+        </agreementStatement>
+
+        <agreement id="agr30763">
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+        <exposureEventDetail id="im.delivery.1m.completed.greyOut" variation="grey">
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <callStatus>Completed</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.delivery.1m.pendingReview">
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+    </scenarioData>
+</dataBean>

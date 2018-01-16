@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <organisationStaticData id="udf1">
+            <type>User Defined Organisation Fields</type>
+            <dataName>UDF 1</dataName>
+        </organisationStaticData>
+        <organisationStaticData id="udf1.update">
+            <status>enabled</status>
+        </organisationStaticData>
+        <organisationStaticData id="udf15">
+            <type>User Defined Organisation Fields</type>
+            <dataName>UDF 15</dataName>
+        </organisationStaticData>
+        <organisationStaticData id="udf15.update">
+            <status>enabled</status>
+        </organisationStaticData>
+        <organisationStaticData id="udf16">
+            <type>User Defined Organisation Fields</type>
+            <dataName>UDF 16</dataName>
+        </organisationStaticData>
+        <organisationStaticData id="udf16.update">
+            <status>enabled</status>
+        </organisationStaticData>
+        <organisationStaticData id="udf30">
+            <type>User Defined Organisation Fields</type>
+            <dataName>UDF 30</dataName>
+        </organisationStaticData>
+        <organisationStaticData id="udf30.update">
+            <status>enabled</status>
+        </organisationStaticData>
+        <organisation id="org1">
+            <shortName id="org1.name">org1</shortName>
+            <longName ref="org1.name" />
+            <code ref="org1.name"/>
+        </organisation>
+        <organisation id="org2">
+            <shortName id="org2.name">org2</shortName>
+            <longName ref="org2.name" />
+            <code ref="org2.name"/>
+        </organisation>
+        <organisation id="org3">
+            <shortName id="org3.name">org3</shortName>
+            <longName ref="org3.name" />
+            <code ref="org3.name"/>
+        </organisation>
+        <organisation id="org4">
+            <shortName id="org4.name">org4</shortName>
+            <longName ref="org4.name" />
+            <code ref="org4.name"/>
+        </organisation>
+        <organisation id="org5">
+            <shortName id="org5.name">org5</shortName>
+            <longName ref="org5.name" />
+            <code ref="org5.name"/>
+        </organisation>
+        <organisation id="audit.org.create">
+            <shortName id="audit.org.name">org_name</shortName>
+            <longName ref="audit.org.name" />
+            <code ref="audit.org.name" />
+            <lei>org_name_lei</lei>
+            <region>smoke</region>
+            <newLinkage>new_linkage</newLinkage>
+            <role>Branch</role>
+            <role>Issuer</role>
+            <address>
+                <contact>contactName</contact>
+                <address1>add1</address1>
+                <address2>add2</address2>
+                <address3>add3</address3>
+                <address4>add4</address4>
+                <address5>add5</address5>
+                <title>myTitle</title>
+                <label>myLable</label>
+                <tel>myTel</tel>
+                <fax>myFax</fax>
+                <email>my@email.com</email>
+                <ftp>ftp://172.0.0.3</ftp>
+                <notes>myNotes</notes>
+                <enable>true</enable>
+            </address>
+            <externalCode>
+                <systemName>QTP</systemName>
+                <externalCode>EXC1</externalCode>
+            </externalCode>
+            <ultimateParent>
+                <filter ref="org1.name" />
+                <linkText ref="org1.name" />
+            </ultimateParent>
+            <closeLink>
+                <filter ref="org2.name" />
+                <linkText ref="org2.name" />
+            </closeLink>
+            <relationship>
+                <type>Branch</type>
+                <organisationSearch>
+                    <filter ref="org3.name" />
+                    <linkText ref="org3.name" />
+                </organisationSearch>
+            </relationship>
+            <relationship>
+                <type>Department</type>
+                <organisationSearch>
+                    <filter ref="org4.name" />
+                    <linkText ref="org4.name" />
+                </organisationSearch>
+            </relationship>
+            <relationship>
+                <type>Subsidiary</type>
+                <organisationSearch>
+                    <filter ref="org5.name"/>
+                    <linkText ref="org5.name" />
+                </organisationSearch>
+            </relationship>
+            <riskCountry>CHINA</riskCountry>
+            <industry>15-Materials</industry>
+            <classification>Bank</classification>
+            <flagCountry>CANADA</flagCountry>
+            <clRuleTemplate>not_net_eligibility_rule</clRuleTemplate>
+            <clCurrency>GBP</clCurrency>
+            <clIncludeSubsidiaries>true</clIncludeSubsidiaries>
+            <imThreshold>2000</imThreshold>
+            <imThresholdCurrency>EUR</imThresholdCurrency>
+            <imIncludeSubsidiaries>true</imIncludeSubsidiaries>
+            <finra4210Exempt>true</finra4210Exempt>
+            <debtClassification>
+                <debtName>SEC</debtName>
+                <creditRating>
+                    <agency>SandP</agency>
+                    <rating>A+</rating>
+                </creditRating>
+                <creditRating>
+                    <agency>MOODYS</agency>
+                    <rating>B1</rating>
+                </creditRating>
+                <creditRating>
+                    <agency>Fitch</agency>
+                    <rating>BBB</rating>
+                </creditRating>
+            </debtClassification>
+            <debtClassification>
+                <debtName>SEN</debtName>
+                <creditRating>
+                    <agency>SandP</agency>
+                    <rating>B+</rating>
+                </creditRating>
+                <creditRating>
+                    <agency>MOODYS</agency>
+                    <rating>Ca</rating>
+                </creditRating>
+                <creditRating>
+                    <agency>Fitch</agency>
+                    <rating>B+</rating>
+                </creditRating>
+            </debtClassification>
+            <debtClassification>
+                <debtName>SRSUB</debtName>
+                <creditRating>
+                    <agency>SandP</agency>
+                    <rating>A-</rating>
+                </creditRating>
+                <creditRating>
+                    <agency>MOODYS</agency>
+                    <rating>C</rating>
+                </creditRating>
+                <creditRating>
+                    <agency>Fitch</agency>
+                    <rating>B</rating>
+                </creditRating>
+            </debtClassification>
+            <debtClassification>
+                <debtName>SUB</debtName>
+                <creditRating>
+                    <agency>SandP</agency>
+                    <rating>CC</rating>
+                </creditRating>
+                <creditRating>
+                    <agency>MOODYS</agency>
+                    <rating>Ba1</rating>
+                </creditRating>
+                <creditRating>
+                    <agency>Fitch</agency>
+                    <rating>BBB</rating>
+                </creditRating>
+            </debtClassification>
+            <additionalFields>
+                <udfDescription>UDF 1</udfDescription>
+                <udfValue>udf1Value</udfValue>
+            </additionalFields>
+            <additionalFields>
+                <udfDescription>UDF 15</udfDescription>
+                <udfValue>udf15Value</udfValue>
+            </additionalFields>
+            <additionalFields>
+                <udfDescription>UDF 16</udfDescription>
+                <udfValue>161</udfValue>
+            </additionalFields>
+            <additionalFields>
+                <udfDescription>UDF 30</udfDescription>
+                <udfValue>300</udfValue>
+            </additionalFields>
+            <status>Approved</status>
+        </organisation>
+
+
+        <auditOrganisationsReportFilter id="audit.organisation.by.orgname">
+            <organisation>
+                <!--<filter  ref="audit.org.name"/>-->
+                <!--<linkText  ref="audit.org.name"/>-->
+                <filter>org_name</filter>
+                <linkText>org_name</linkText>
+            </organisation>
+            <startDate>t-1000</startDate>
+        </auditOrganisationsReportFilter>
+        <variable id="auditReportPath" />
+        <reportValidationRules id="audit.organisation.report.rule">
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>LongName</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>org_name</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>OrgCode</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>org_name</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>ShortName</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>org_name</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>Status</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>Amended</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>Classification</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>N/A</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>CountryOfRisk</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>N/A</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>FINRA 4210 Exempt</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>false</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>FlagCountry</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>N/A</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>ImThreshold</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>0.0</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>ImThresholdCcy</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>N/A</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>IncludeSubIMThreshold</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>false</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>Industry</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>N/A</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>Linkage</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>N/A</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>Logo</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>0</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>OrgRegion</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>ALL</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>OrgRegion</value></field><field><fieldName>Value Before</fieldName><value>ALL</value></field><field><fieldName>Value After</fieldName><value>smoke</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>LEI</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>org_name_lei</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Linkage</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>new_linkage</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>RoleType</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>Branch</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>RoleType</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>Issuer</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>OrgRegion</value></field><field><fieldName>Value Before</fieldName><value>smoke</value></field><field><fieldName>Value After</fieldName><value>ALL</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>Address</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>add1\nadd2\nadd3\nadd4\nadd5</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>ContactName</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>contactName</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>Email</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>my@email.com</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>Enabled</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>Yes</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>FaxNumber</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>myFax</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>Ftp</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>ftp://172.0.0.3</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>Label</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>myLable</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>Notes</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>myNotes</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>Sig</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>0</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>TelephoneNumber</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>myTel</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>Title</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>myTitle</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Industry</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>15-Materials</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>CountryOfRisk</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>CHINA</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Classification</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>Bank</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>FlagCountry</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>CANADA</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>FINRA 4210 Exempt</value></field><field><fieldName>Value Before</fieldName><value>false</value></field><field><fieldName>Value After</fieldName><value>true</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>ImThreshold</value></field><field><fieldName>Value Before</fieldName><value>0.0</value></field><field><fieldName>Value After</fieldName><value>2000.0</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>ImThresholdCcy</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>EUR</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>IncludeSubIMThreshold</value></field><field><fieldName>Value Before</fieldName><value>false</value></field><field><fieldName>Value After</fieldName><value>true</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>Credit Rating:SEC SandP</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>A+</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>Credit Rating:SEC MOODYS</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>B1</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>Credit Rating:SEC Fitch</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>BBB</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>Credit Rating:SEN SandP</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>B+</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>Credit Rating:SEN MOODYS</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>Ca</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>Credit Rating:SEN Fitch</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>B+</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>Credit Rating:SRSUB SandP</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>A-</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>Credit Rating:SRSUB MOODYS</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>C</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>Credit Rating:SRSUB Fitch</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>B</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>Credit Rating:SUB SandP</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>CC</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>Credit Rating:SUB MOODYS</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>Ba1</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>Credit Rating:SUB Fitch</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>BBB</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>UDF 1</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>udf1Value</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>UDF 15</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>udf15Value</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>UDF 16</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>161.0</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>UDF 30</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>300.0</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>ultimate parent</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>org1</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>close link</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>org2</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>org_name</value></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>EXTERNAL CODES/System Name:QTP</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>EXC1</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+
+        </reportValidationRules>
+    </scenarioData>
+</dataBean>

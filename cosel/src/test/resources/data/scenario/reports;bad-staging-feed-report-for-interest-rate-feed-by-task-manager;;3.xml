@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+
+        <feedInterestRate id="feed.interest.rate">
+            <Rate_amount>a</Rate_amount>
+            <Rate_source></Rate_source>
+            <Rate_date></Rate_date>
+            <Rate_type></Rate_type>
+        </feedInterestRate>
+
+        <feedInterestRate id="feed.modified.incorrect.staging.report">
+            <rowNumber>2</rowNumber>
+            <failureReason ref="failure.reason1"/>
+            <Rate_amount></Rate_amount>
+            <Rate_source>F13658InterestRate</Rate_source>
+            <Rate_date>b</Rate_date>
+            <Rate_type></Rate_type>
+        </feedInterestRate>
+
+        <feedInterestRate id="feed.modified.correct.staging.report">
+            <rowNumber>2</rowNumber>
+            <failureReason ref="failure.reason2"/>
+            <Rate_amount>8</Rate_amount>
+            <Rate_source>F13658InterestRate</Rate_source>
+            <Rate_date>2017-05-09</Rate_date>
+            <Rate_type></Rate_type>
+        </feedInterestRate>
+
+        <badStagingFeedReportFilter id="search.by.feed.interest.rate">
+            <feedTask>Feed Interest Rate</feedTask>
+        </badStagingFeedReportFilter>
+
+        <variable id="badStagingFeedReportPath"/>
+
+        <feedResult id="feed.result.parsing.error1">
+            <parsingFailures>1</parsingFailures>
+        </feedResult>
+
+        <feedResult id="feed.result.parsing.error2">
+            <parsingFailures>1</parsingFailures>
+        </feedResult>
+
+        <feedResult id="feed.result.successful">
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <reportValidationRules id="reportRule1">
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Failure reason</fieldName>
+                    <value id="failure.reason1">[Column: 1] rate - Unable to parse 'a' as number | [Column: 2] refRate - Field is compulsory but no value was found | [Column: 3] rateDate - Field is compulsory but no value was found</value>
+                </field>
+                <field><fieldName>Rate_amount</fieldName><value>a</value></field>
+                <field><fieldName>Rate_source</fieldName><value></value></field>
+                <field><fieldName>Rate_date</fieldName><value></value></field>
+                <field><fieldName>Rate_type</fieldName><value></value></field>
+            </reportValidationRule>
+        </reportValidationRules>
+
+        <variable id="file.name"/>
+
+        <reportValidationRules id="reportRule2">
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Failure reason</fieldName>
+                    <value id="failure.reason2">[Column: 1] rate - Field is compulsory but no value was found | [Column: 3] rateDate - Unable to parse 'b' as date (using format yyyy-MM-dd)</value>
+                </field>
+                <field><fieldName>Rate_amount</fieldName><value></value></field>
+                <field><fieldName>Rate_source</fieldName><value>F13658InterestRate</value></field>
+                <field><fieldName>Rate_date</fieldName><value>b</value></field>
+                <field><fieldName>Rate_type</fieldName><value></value></field>
+            </reportValidationRule>
+        </reportValidationRules>
+
+
+        <interestRate id="F13658InterestRate.rate.amount.8">
+            <interestRateName>F13658InterestRate</interestRateName>
+            <dailyInterestRate>
+                <date>05/09/2017</date>
+                <rate>8</rate>
+            </dailyInterestRate>
+        </interestRate>
+
+    </scenarioData>
+</dataBean>

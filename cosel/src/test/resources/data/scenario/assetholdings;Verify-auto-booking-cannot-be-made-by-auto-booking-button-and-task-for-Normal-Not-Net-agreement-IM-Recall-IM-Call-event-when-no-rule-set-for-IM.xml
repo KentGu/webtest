@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+
+		<agreement id="agr13171.notnet">
+			<agreementId id="agr13171.id">2558</agreementId>
+		</agreement>
+
+		<exposureEventDetail id="vm.call.500000">
+			<action>VM Call</action>
+			<agreementRequirement>500,000.00</agreementRequirement>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="vm.recall.2000000">
+			<action>VM Recall</action>
+			<agreementRequirement>2,000,000.00</agreementRequirement>
+		</exposureEventDetail>
+
+		<exposureManagementMessage id="vm.Recall.vm.call.autoEmailSuccess">
+			<messageSummary>
+				<successfulAccount>2</successfulAccount>
+				<unsuccessfulAccount>0</unsuccessfulAccount>
+			</messageSummary>
+			<messageDetail>
+				<source>Auto Send (Letter)</source>
+				<message>Margin Recall &amp; Call letter sent via Email for Princ:QTPPrincipal/Cpty:QTPCounterparty/Desc:13171_1/AgrId:2558</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<exposureEventSearch id="agr13171.issued">
+			<agrId ref="agr13171.id"/>
+		</exposureEventSearch>
+
+		<exposureEventDetail id="vmCall.CpyAmount">
+			<action>VM Call</action>
+			<counterpartyAmount>0.00</counterpartyAmount>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="vmCall.CpyAmount.400000">
+			<action>VM Call</action>
+			<counterpartyAmount>400000</counterpartyAmount>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="vmRecall.CpyAmount">
+			<action>VM Recall</action>
+			<counterpartyAmount>0.00</counterpartyAmount>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="vmRecall.CpyAmount.1900000">
+			<action>VM Recall</action>
+			<counterpartyAmount>1900000</counterpartyAmount>
+		</exposureEventDetail>
+
+		<exposureManagementMessage id="vm.Recall.vm.call.autoBookingUnsuccess">
+			<messageSummary>
+				<unsuccessfulAccount>1</unsuccessfulAccount>
+				<successfulAccount>0</successfulAccount>
+			</messageSummary>
+			<!--<messageDetail>-->
+				<!--<source>Auto Book</source>-->
+				<!--<message>Cannot support Auto Book Cash for stale event. eventId: \S*</message>-->
+			<!--</messageDetail>-->
+		</exposureManagementMessage>
+
+		<assetBookingSummary id="asset.type.cash.USD">
+			<assetType ref="cash.usd1.name"/>
+		</assetBookingSummary>
+
+		<assetBookingSummary id="vm.call.autoBook.pending.400000.notadded" apply="false">
+			<assetType ref="cash.usd1.name"/>
+			<movement>Call</movement>
+			<status>Pending</status>
+			<bookingSource>Auto Book</bookingSource>
+			<vmMarketValue>400,000.00</vmMarketValue>
+		</assetBookingSummary>
+
+		<assetBookingSummary id="vm.recall.autoBook.pending.1900000.notadded" apply="false" >
+			<assetType ref="cash.usd1.name"/>
+			<movement>Recall</movement>
+			<status>Pending</status>
+			<bookingSource>Auto Book</bookingSource>
+			<vmMarketValue>1,900,000</vmMarketValue>
+		</assetBookingSummary>
+
+		<taskSchedulerDetail id="autoBookCashforAgr13171">
+			<taskName>Auto Book Cash</taskName>
+			<misc1 ref="agr13171.id"/>
+		</taskSchedulerDetail>
+
+		<taskSchedulerMessage id="autoBookCashforAgr13171.success">
+			<message>Auto Book Cash: Auto Book Cash Task Finished with 0 successful [^,]*</message>
+		</taskSchedulerMessage>
+		
+
+
+	</scenarioData>
+</dataBean>

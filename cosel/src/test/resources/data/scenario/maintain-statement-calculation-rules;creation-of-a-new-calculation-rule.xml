@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+
+    <scenarioData>
+        <statementCalcRule id="new.calc.rule">
+            <businessLine>ETD</businessLine>
+            <ruleName random="true"></ruleName>
+            <ruleType>Statement</ruleType>
+            <ruleFileName>EtdStatement.drl</ruleFileName>
+        </statementCalcRule>
+    </scenarioData>
+
+</dataBean>
+

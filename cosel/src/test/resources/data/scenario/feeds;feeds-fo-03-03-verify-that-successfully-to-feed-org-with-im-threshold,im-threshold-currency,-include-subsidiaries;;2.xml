@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/feeds.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <feedOrganisation id="feed.organisation">
+            <orgHeader>
+                <orgCode id="feed.organisation.code">T32761_Organisation_Code</orgCode>
+                <longName id="feed.organisation.long.name">T32761_Organisation_LongName</longName>
+                <shortName id="feed.organisation.short.name">T32761_Organisation_ShortName</shortName>
+                <LEI id="feed.organisation.lei">T32761_Organisation_LEI</LEI>
+            </orgHeader>
+            <region id="feed.organisation.region">ALL</region>
+            <linkage id="feed.organisation.linkage">audit_organisation_link</linkage>
+            <orgRole id="feed.organisation.role.1" ref="org.role.cr.name"/>
+            <orgRole id="feed.organisation.role.2" ref="org.role.ca.name"/>
+            <countryOfRisk ref="ctr.au.name"/>
+            <industry>10102010</industry>
+            <orgCreditRating>
+                <ratingAgency ref="org.external.agency.code.rating3.desc"/>
+                <rating ref="org.rating.sandp.level1.name"/>
+                <debtClassification ref="org.debt.classification.sen.name"/>
+            </orgCreditRating>
+            <orgCreditRating>
+                <ratingAgency ref="org.external.agency.code.rating2.desc"/>
+                <rating ref="org.rating.moodys.level1.name"/>
+                <debtClassification ref="org.debt.classification.sen.name"/>
+            </orgCreditRating>
+            <orgCreditRating>
+                <ratingAgency ref="org.external.agency.code.rating1.desc"/>
+                <rating ref="org.rating.fitch.level1.name"/>
+                <debtClassification ref="org.debt.classification.sen.name"/>
+            </orgCreditRating>
+            <relationships>
+                <relationship>
+                    <subOrg>T30258Organisation_Code_Existed</subOrg>
+                    <relationshipType ref="org.relationship.type.subsidiary.name"/>
+                    <relationshipOperation>a</relationshipOperation>
+                </relationship>
+            </relationships>
+            <clTemplateName id="feed.organisation.cl.rule.template">net_eligibility_rule</clTemplateName>
+            <clCurrency ref="ccy.aud.name"/>
+            <clIncludeSub>true</clIncludeSub>
+            <extCode></extCode>
+            <imThresholdAmount id="feed.organisation.threshold.amt">100</imThresholdAmount>
+            <imThresholdCurrency id="feed.organisation.threshold.ccy" ref="ccy.aud.name"/>
+            <imThresholdIncludeSub>true</imThresholdIncludeSub>
+            <finra4210Exempt>true</finra4210Exempt>
+            <classification id="feed.organisation.classification" ref="org.classification.bank.name"/>
+            <ultimateParents>
+                <ultimateParent id="feed.organisation.ultimate.parent" ref="org.p1.lname"/>
+            </ultimateParents>
+            <closeLinks>
+                <closeLink id="feed.organisation.close.link" ref="org.c1.lname"/>
+            </closeLinks>
+            <flagCountry ref="ctr.cn.name"/>
+            <!--<udf>-->
+                <!--<udfName>UDF 1</udfName>-->
+                <!--<udfValue>UDF 1</udfValue>-->
+            <!--</udf>-->
+            <externalCodes>
+                <externalCode>
+                    <system id="feed.organisation.external.system" ref="org.feed.system.manual.name"/>
+                    <extCode id="feed.organisation.external.code">T32761_MANUAL</extCode>
+                    <operation>a</operation>
+                </externalCode>
+            </externalCodes>
+        </feedOrganisation>
+
+        <feedResult id="feed.organisation.result">
+            <fileUploaded id="feed.organisation.result.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedStatus id="feed.organisation.status">
+            <status>Successful</status>
+            <valuationFile ref="feed.organisation.result.file"/>
+            <description>Organisation</description>
+            <successfulFeed>
+                <total>1</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <organisationSearch id="search.feed.organisation">
+            <criteria>Exactly matching</criteria>
+            <type>Short Name</type>
+            <filter ref="feed.organisation.short.name"/>
+            <linkText ref="feed.organisation.short.name"/>
+        </organisationSearch>
+
+        <organisation id="check.feed.organisation">
+            <shortName ref="feed.organisation.short.name"/>
+            <longName ref="feed.organisation.long.name"/>
+            <code ref="feed.organisation.code"/>
+            <lei ref="feed.organisation.lei"/>
+            <region ref="feed.organisation.region"/>
+            <linkage ref="feed.organisation.linkage"/>
+            <role ref="feed.organisation.role.1"/>
+            <role ref="feed.organisation.role.2"/>
+            <ultimateParent>
+                <linkText ref="feed.organisation.ultimate.parent"/>
+            </ultimateParent>
+            <closeLink>
+                <linkText ref="feed.organisation.close.link"/>
+            </closeLink>
+            <relationship>
+                <type>Subsidiary</type>
+                <organisationSearch>
+                    <linkText>T30258Organisation_LongName_Existed</linkText>
+                </organisationSearch>
+            </relationship>
+            <riskCountry ref="ctr.au.desc"/>
+            <industry>10102010-Integrated Oil &amp; Gas</industry>
+            <classification ref="feed.organisation.classification"/>
+            <flagCountry ref="ctr.cn.desc"/>
+            <clRuleTemplate ref="feed.organisation.cl.rule.template"/>
+            <clCurrency>AUD</clCurrency>
+            <clIncludeSubsidiaries>true</clIncludeSubsidiaries>
+            <imThreshold ref="feed.organisation.threshold.amt"/>
+            <imThresholdCurrency ref="feed.organisation.threshold.ccy"/>
+            <imIncludeSubsidiaries>true</imIncludeSubsidiaries>
+            <finra4210Exempt>true</finra4210Exempt>
+            <debtClassification>
+                <debtName ref="org.debt.classification.sen.name"/>
+                <creditRating>
+                    <agency ref="org.external.agency.code.rating3.desc"/>
+                    <rating ref="org.rating.sandp.level1.name"/>
+                </creditRating>
+                <creditRating>
+                    <agency ref="org.external.agency.code.rating2.desc"/>
+                    <rating ref="org.rating.moodys.level1.name"/>
+                </creditRating>
+                <creditRating>
+                    <agency ref="org.external.agency.code.rating1.desc"/>
+                    <rating ref="org.rating.fitch.level1.name"/>
+                </creditRating>
+            </debtClassification>
+            <externalCode>
+                <systemName ref="feed.organisation.external.system"/>
+                <externalCode ref="feed.organisation.external.code"/>
+            </externalCode>
+        </organisation>
+    </scenarioData>
+</dataBean>

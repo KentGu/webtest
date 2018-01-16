@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/exposureManagement.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <agreement id="agr31374.otc.net">
+            <agreementId id="agrid">2668</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="recall.agreementRequirement.2m">
+            <action>Recall</action>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="call.agreementRequirement.1m">
+            <action>Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+        </exposureEventDetail>
+
+        <marginLetter id="createRecallLetter">
+            <letterType>Margin Recall</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <assetHoldingsandValuationReport>true</assetHoldingsandValuationReport>
+                </emailAttachments>
+            </letterSetupDetails>
+        </marginLetter>
+
+        <marginLetter id="createCallLetter">
+            <letterType>Margin Call</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <assetHoldingsandValuationReport>true</assetHoldingsandValuationReport>
+                </emailAttachments>
+            </letterSetupDetails>
+        </marginLetter>
+
+        <exposureEventDetail id="recall.agreementRequirement.2m.MarginRequestIssued">
+            <action>Recall</action>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <callStatus>Margin Request Issued</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="call.agreementRequirement.1m.MarginRequestIssued">
+            <action>Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Margin Request Issued</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="counterpartyAmount.1m">
+            <counterpartyAmount>1m</counterpartyAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="counterpartyAmount.0.5m">
+            <counterpartyAmount>0.5m</counterpartyAmount>
+        </exposureEventDetail>
+
+         <exposureManagementMessage id="recall.booking.autoCreated">
+            <messageSummary>
+                <successfulAccount>1</successfulAccount>
+            </messageSummary>
+            <messageDetail>
+                <level>info</level>
+                <source>Auto Book</source>
+                <message>Princ:QTPPrincipal/Cpty:QTPCounterparty/Desc:31374_1/AgrId:2668/Event:Call &amp; Recall CASH-USD Recall 1,000,000.00 auto booking created.</message>
+            </messageDetail>
+        </exposureManagementMessage>
+
+        <exposureManagementMessage id="call.booking.autoCreated">
+            <messageSummary>
+                <successfulAccount>1</successfulAccount>
+            </messageSummary>
+            <messageDetail>
+                <level>info</level>
+                <source>Auto Book</source>
+                <message>Princ:QTPPrincipal/Cpty:QTPCounterparty/Desc:31374_1/AgrId:2668/Event:Call &amp; Recall CASH-USD Call 500,000.00 auto booking created.</message>
+            </messageDetail>
+        </exposureManagementMessage>
+
+        <exposureEventDetail id="recall.agreementRequirement.2m.PartialDispute">
+            <action>Recall</action>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <callStatus>Partial Dispute</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="call.agreementRequirement.1m.PartialDispute">
+            <action>Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Partial Dispute</callStatus>
+        </exposureEventDetail>
+
+         <assetBookingSummary id="asset.type.CASH.USD">
+            <assetType>CASH-USD</assetType>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="CASH.USD.call.0.5m.pending.autoBook">
+            <assetType>CASH-USD</assetType>
+            <status>Pending</status>
+            <movement>Call</movement>
+            <bookingSource>Auto Book</bookingSource>
+            <vmMarketValue>500,000.00</vmMarketValue>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="CASH.USD.recall.1m.pending.autoBook">
+            <assetType>CASH-USD</assetType>
+            <status>Pending</status>
+            <movement>Recall</movement>
+            <bookingSource>Auto Book</bookingSource>
+            <imMarketValue>1,000,000.00</imMarketValue>
+        </assetBookingSummary>
+
+        <bookingDetail id="CASH.USD.recall.1m.ChangeToCancelled">
+            <bookingInformation>
+                <settlementStatusInfo>
+                    <settlementStatus>Cancelled</settlementStatus>
+                    <settlementComment>t</settlementComment>
+                </settlementStatusInfo>
+            </bookingInformation>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+            <save>save</save>
+        </bookingDetail>
+
+        <agreement id="agr31374">
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+        <exposureEventDetail variation="orange" id="recall.agreementRequirement.2m.pendingReview.orange">
+            <action>Recall</action>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail variation="orange" id="call.agreementRequirement.0.5m.pendingReview.orange">
+            <action>Call</action>
+            <agreementRequirement>500,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail variation="grey" id="recall.agreementRequirement.2m.MarginRequestIssued.grey">
+            <action>Recall</action>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <callStatus>Margin Request Issued</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail variation="grey" id="call.agreementRequirement.1m.PartialDispute.grey">
+            <action>Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Partial Dispute</callStatus>
+        </exposureEventDetail>
+
+        <bookingDetail id="CASH.USD.call.0.5m.ChangeToCancelled">
+            <bookingInformation>
+                <settlementStatusInfo>
+                    <settlementStatus>Cancelled</settlementStatus>
+                    <settlementComment>t</settlementComment>
+                </settlementStatusInfo>
+            </bookingInformation>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+            <save>save</save>
+        </bookingDetail>
+
+        <exposureEventDetail variation="grey" id="call.agreementRequirement.1m.MarginRequestIssued.grey">
+            <action>Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Margin Request Issued</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail variation="orange" id="call.agreementRequirement.1m.pendingReview.orange">
+            <action>Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+    </scenarioData>
+</dataBean>

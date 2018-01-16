@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <agreement id="agr27959.otc.net.NotTickSegregation">
+            <agreementId id="agrid">2638</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="call.agreementRequirement.1m">
+            <action>Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <bookingDetail id="cash.call.0.5m">
+            <assetType ref="cash.usd1.name"/>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <nominalAmount>0.5m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <save>saveAndNext</save>
+        </bookingDetail>
+
+        <bookingDetail id="bond.call.0.5m">
+            <assetType ref="bond.usd.name"/>
+            <instrumentSearch>
+                <linkText>qtp-Bond-Usd-Instrument</linkText>
+                <instrumentId>
+                    <type>Exactly matching</type>
+                    <filter>qtp-Bond-Usd-Instrument</filter>
+                </instrumentId>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <nominalAmount>0.5m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <save>saveAndNext</save>
+        </bookingDetail>
+
+        <assetBookingSummary id="bond.call.0.5m.open">
+            <assetType ref="bond.usd.name"/>
+            <movement>Call</movement>
+        </assetBookingSummary>
+        
+        <bookingDetail id="bond.call.0.5m.Segregation.no.SegregationType.blank">
+            <bookingInformation>
+                <segregation>No</segregation>
+                <segregationType></segregationType>
+            </bookingInformation>
+        </bookingDetail>
+
+        <assetBookingSummary id="asset.type.cash.usd">
+            <assetType ref="cash.usd1.name"/>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="asset.type.bond.usd">
+            <assetType ref="bond.usd.name"/>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="cash.call.0.5m.open">
+            <assetType ref="cash.usd1.name"/>
+            <movement>Call</movement>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="cash.call.0.5m.open.2">
+            <assetType ref="cash.usd1.name"/>
+            <movement>Call</movement>
+        </assetBookingSummary>
+
+        <bookingDetail id="cash.call.0.5m.Segregation.no.SegregationType.blank">
+            <bookingInformation>
+                <segregation>No</segregation>
+                <segregationType></segregationType>
+            </bookingInformation>
+        </bookingDetail>
+
+
+
+
+        <agreement id="agr27959.otc.net.TickSegregation">
+            <agreementId id="agrid">2639</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="call.agreementRequirement.1m.2">
+            <action>Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <bookingDetail id="cash.call.0.5m">
+            <assetType ref="cash.usd1.name"/>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <nominalAmount>0.5m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <save>saveAndNext</save>
+        </bookingDetail>
+
+        <bookingDetail id="equity.call.0.5m">
+            <assetType ref="equity.usd.name"/>
+            <instrumentSearch>
+                <linkText>qtp-Equity-Usd-Instrument</linkText>
+                <instrumentId>
+                    <type>Exactly matching</type>
+                    <filter>qtp-Equity-Usd-Instrument</filter>
+                </instrumentId>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <nominalAmount>0.5m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <save>saveAndNext</save>
+        </bookingDetail>
+
+        <assetBookingSummary id="equity.call.0.5m.open">
+            <assetType ref="equity.usd.name"/>
+            <movement>Call</movement>
+        </assetBookingSummary>
+
+        <bookingDetail id="equity.call.0.5m.Segregation.no.SegregationType.blank">
+            <bookingInformation>
+                <segregation>No</segregation>
+                <segregationType></segregationType>
+            </bookingInformation>
+        </bookingDetail>
+
+        <assetBookingSummary id="asset.type.equity.usd">
+            <assetType ref="equity.usd.name"/>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="asset.type.cash.usd">
+            <assetType ref="cash.usd1.name"/>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="cash.call.0.5m.open">
+            <assetType ref="cash.usd1.name"/>
+            <movement>Call</movement>
+        </assetBookingSummary>
+
+        <bookingDetail id="cash.call.0.5m.Segregation.no.SegregationType.blank">
+            <bookingInformation>
+                <segregation>No</segregation>
+                <segregationType></segregationType>
+            </bookingInformation>
+        </bookingDetail>
+
+
+
+
+        <agreement id="agr27959.fcm.TickSegregation">
+            <agreementId id="agrid3">2640</agreementId>
+        </agreement>
+
+        <exposureEventSearch id="agr27959.allFilter">
+            <agrId ref="agrid3"/>
+        </exposureEventSearch>
+
+        <exposureEventDetail id="im.delivery.agreementRequirement.-1m">
+            <action>IM Delivery</action>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.call.agreementRequirement.1m">
+            <action>VM Call(Deficit)</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <bookingDetail id="cash.call.1m">
+            <assetType ref="cash.usd1.name"/>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <vmAmount>1m</vmAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <save>saveAndNext</save>
+        </bookingDetail>
+
+        <bookingDetail id="bond.delivery.1m">
+            <assetType ref="bond.usd.name"/>
+            <instrumentSearch>
+                <linkText>qtp-Bond-Usd-Instrument</linkText>
+                <instrumentId>
+                    <type>Exactly matching</type>
+                    <filter>qtp-Bond-Usd-Instrument</filter>
+                </instrumentId>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <imAmount>1m</imAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <save>saveAndNext</save>
+        </bookingDetail>
+
+        <assetBookingSummary id="bond.delivery.1m.open">
+            <assetType ref="bond.usd.name"/>
+            <movement>Delivery</movement>
+        </assetBookingSummary>
+
+        <bookingDetail id="bond.delivery.1m.Segregation.yes.SegregationType.TriPartyCollateralAgentHolding">
+            <bookingInformation>
+                <segregation>Yes</segregation>
+                <segregationType>Tri-Party Collateral Agent Holding</segregationType>
+            </bookingInformation>
+        </bookingDetail>
+
+        <assetBookingSummary id="asset.type.cash.usd">
+            <assetType ref="cash.usd1.name"/>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="asset.type.bond.usd">
+            <assetType ref="bond.usd.name"/>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="cash.call.1m.open">
+            <assetType ref="cash.usd1.name"/>
+            <movement>Call</movement>
+        </assetBookingSummary>
+
+        <bookingDetail id="cash.call.1m.Segregation.yes.SegregationType.SegregatedDirectDealerHolding">
+            <bookingInformation>
+                <segregation>Yes</segregation>
+                <segregationType>Segregated Direct Dealer Holding</segregationType>
+            </bookingInformation>
+        </bookingDetail>
+
+    </scenarioData>
+</dataBean>

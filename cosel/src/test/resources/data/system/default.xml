@@ -1,0 +1,4485 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress XmlPathReference -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://artifactory.london.lombardrisk.com:8081/artifactory/libs-snapshot-local/com/lombardrisk/cobiz/14.1.0-SNAPSHOT/cobiz-14.1.0-SNAPSHOT.jar!/schemas/dataBean.xsd">
+	<systemData>
+		<loginCredential id="login.credential.sa">
+			<username id="login.credential.sa.name" ref="user.sa.username"/>
+			<password id="login.credential.sa.password" ref="user.sa.password"/>
+			<passwordChange>
+				<oldPassword id="login.credential.sa.oldPassword" ref="user.sa.password"/>
+				<newPassword id="login.credential.sa.newPassword" ref="user.sa.password"/>
+				<confirmPassword id="login.credential.sa.confirmPassword" ref="user.sa.password"/>
+			</passwordChange>
+		</loginCredential>
+		<loginCredential id="login.credential.test1">
+			<username id="login.credential.test1.name" ref="user.test1.username"/>
+			<password id="login.credential.test1.password" ref="user.test1.password"/>
+			<passwordChange>
+				<oldPassword id="login.credential.test1.oldPassword" ref="user.test1.password"/>
+				<newPassword id="login.credential.test1.newPassword" ref="user.test1.password"/>
+				<confirmPassword id="login.credential.test1.confirmPassword" ref="user.test1.password"/>
+			</passwordChange>
+		</loginCredential>
+		<loginCredential id="login.credential.test2">
+			<username id="login.credential.test2.name" ref="user.test2.username"/>
+			<password id="login.credential.test2.password" ref="user.test1.password"/>
+			<passwordChange>
+				<oldPassword id="login.credential.test2.oldPassword" ref="user.test1.password"/>
+				<newPassword id="login.credential.test2.newPassword" ref="user.test1.password"/>
+				<confirmPassword id="login.credential.test2.confirmPassword" ref="user.test1.password"/>
+			</passwordChange>
+		</loginCredential>
+		<loginCredential id="login.credential.test3">
+			<username id="login.credential.test3.name" ref="user.test3.username"/>
+			<password id="login.credential.test3.password" ref="user.test1.password"/>
+			<passwordChange>
+				<oldPassword id="login.credential.test3.oldPassword" ref="user.test1.password"/>
+				<newPassword id="login.credential.test3.newPassword" ref="user.test1.password"/>
+				<confirmPassword id="login.credential.test3.confirmPassword" ref="user.test1.password"/>
+			</passwordChange>
+		</loginCredential>
+		<!--organisation classification-->
+		<organisationStaticData id="org.classification.bank">
+			<type>Classification</type>
+			<dataName id="org.classification.bank.name">Bank</dataName>
+			<description id="org.classification.bank.desc">Bank</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.classification.corporate">
+			<type>Classification</type>
+			<dataName id="org.classification.corporate.name">Bank</dataName>
+			<description id="org.classification.corporate.desc">Bank</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<!-- organisation debt classification-->
+		<organisationStaticData id="org.debt.classification.sec">
+			<type>DEBTCLASSIFICATION</type>
+			<dataName id="org.debt.classification.sec.name">SEC</dataName>
+			<description id="org.debt.classification.sec.desc">Senior Secured</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.debt.classification.sen">
+			<type>DEBTCLASSIFICATION</type>
+			<dataName id="org.debt.classification.sen.name">SEN</dataName>
+			<description id="org.debt.classification.sen.desc">Senior Unsecured</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.debt.classification.srsub">
+			<type>DEBTCLASSIFICATION</type>
+			<dataName id="org.debt.classification.srsub.name">SRSUB</dataName>
+			<description id="org.debt.classification.srsub.desc">Senior Subordinated</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.debt.classification.sub">
+			<type>DEBTCLASSIFICATION</type>
+			<dataName id="org.debt.classification.sub.name">SUB</dataName>
+			<description id="org.debt.classification.sub.desc">Subordinated</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<!-- organisation external agency codes-->
+		<organisationStaticData id="org.external.agency.code.rating1">
+			<type>EXTERNALAGENCYCODES</type>
+			<dataName id="org.external.agency.code.rating1.name">RATING1</dataName>
+			<description id="org.external.agency.code.rating1.desc">Fitch</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.external.agency.code.rating2">
+			<type>EXTERNALAGENCYCODES</type>
+			<dataName id="org.external.agency.code.rating2.name">RATING2</dataName>
+			<description id="org.external.agency.code.rating2.desc">MOODYS</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.external.agency.code.rating3">
+			<type>EXTERNALAGENCYCODES</type>
+			<dataName id="org.external.agency.code.rating3.name">RATING3</dataName>
+			<description id="org.external.agency.code.rating3.desc">SandP</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<!-- organisation feed system-->
+		<organisationStaticData id="org.feed.system.ltrades">
+			<type>FEEDSYSTEM</type>
+			<dataName id="org.feed.system.ltrades.name">LTRADES</dataName>
+			<description id="org.feed.system.ltrades.desc">LTRADES</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.feed.system.manual">
+			<type>FEEDSYSTEM</type>
+			<dataName id="org.feed.system.manual.name">MANUAL</dataName>
+			<description id="org.feed.system.manual.desc">Manual Feed</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.feed.system.qtp">
+			<type>FEEDSYSTEM</type>
+			<dataName id="org.feed.system.qtp.name">QTP</dataName>
+			<description id="org.feed.system.qtp.desc">QTP</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<!-- organisation linkage-->
+		<!-- organisation org status-->
+		<organisationStaticData id="org.org.status.approved">
+			<type>OrgStatus</type>
+			<dataName id="org.org.status.approved.name">APPROVED</dataName>
+			<description id="org.org.status.approved.desc">The entry's creation approved.</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.org.status.generate">
+			<type>OrgStatus</type>
+			<dataName id="org.org.status.generate.name">GENERATED</dataName>
+			<description id="org.org.status.generate.desc">Entry generated by the system.</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<!-- organisation rating agency-->
+		<organisationStaticData id="org.rating.agency.fitch">
+			<type>RATINGAGENCY</type>
+			<dataName id="org.rating.agency.fitch.name">Fitch</dataName>
+			<description id="org.rating.agency.fitch.desc">Fitch</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.agency.moodys">
+			<type>RATINGAGENCY</type>
+			<dataName id="org.rating.agency.moodys.name">MOODYS</dataName>
+			<description id="org.rating.agency.moodys.desc">MOODYS</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.agency.sandp">
+			<type>RATINGAGENCY</type>
+			<dataName id="org.rating.agency.sandp.name">SandP</dataName>
+			<description id="org.rating.agency.sandp.desc">SandP</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<!-- organisation rating fitch-->
+		<organisationStaticData id="org.rating.fitch.level1">
+			<type>RATING_FITCH</type>
+			<dataName id="org.rating.fitch.level1.name">AAA</dataName>
+			<description id="org.rating.fitch.level1.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.fitch.level2">
+			<type>RATING_FITCH</type>
+			<dataName id="org.rating.fitch.level2.name">AA+</dataName>
+			<description id="org.rating.fitch.level2.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.fitch.level3">
+			<type>RATING_FITCH</type>
+			<dataName id="org.rating.fitch.level3.name">AA</dataName>
+			<description id="org.rating.fitch.level3.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.fitch.level4">
+			<type>RATING_FITCH</type>
+			<dataName id="org.rating.fitch.level4.name">AA-</dataName>
+			<description id="org.rating.fitch.level4.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.fitch.level5">
+			<type>RATING_FITCH</type>
+			<dataName id="org.rating.fitch.level5.name">A+</dataName>
+			<description id="org.rating.fitch.level5.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.fitch.level6">
+			<type>RATING_FITCH</type>
+			<dataName id="org.rating.fitch.level6.name">A</dataName>
+			<description id="org.rating.fitch.level6.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.fitch.level7">
+			<type>RATING_FITCH</type>
+			<dataName id="org.rating.fitch.level7.name">A-</dataName>
+			<description id="org.rating.fitch.level7.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.fitch.level8">
+			<type>RATING_FITCH</type>
+			<dataName id="org.rating.fitch.level8.name">BBB+</dataName>
+			<description id="org.rating.fitch.level8.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.fitch.level9">
+			<type>RATING_FITCH</type>
+			<dataName id="org.rating.fitch.level9.name">BBB</dataName>
+			<description id="org.rating.fitch.level9.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.fitch.level10">
+			<type>RATING_FITCH</type>
+			<dataName id="org.rating.fitch.level10.name">BBB-</dataName>
+			<description id="org.rating.fitch.level10.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.fitch.level11">
+			<type>RATING_FITCH</type>
+			<dataName id="org.rating.fitch.level11.name">BB+</dataName>
+			<description id="org.rating.fitch.level11.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.fitch.level12">
+			<type>RATING_FITCH</type>
+			<dataName id="org.rating.fitch.level12.name">BB</dataName>
+			<description id="org.rating.fitch.level12.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.fitch.level13">
+			<type>RATING_FITCH</type>
+			<dataName id="org.rating.fitch.level13.name">BB-</dataName>
+			<description id="org.rating.fitch.level13.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.fitch.level14">
+			<type>RATING_FITCH</type>
+			<dataName id="org.rating.fitch.level14.name">B+</dataName>
+			<description id="org.rating.fitch.level14.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.fitch.level15">
+			<type>RATING_FITCH</type>
+			<dataName id="org.rating.fitch.level15.name">B</dataName>
+			<description id="org.rating.fitch.level15.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.fitch.level16">
+			<type>RATING_FITCH</type>
+			<dataName id="org.rating.fitch.level16.name">B-</dataName>
+			<description id="org.rating.fitch.level16.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.fitch.level17">
+			<type>RATING_FITCH</type>
+			<dataName id="org.rating.fitch.level17.name">CCC+</dataName>
+			<description id="org.rating.fitch.level17.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.fitch.level18">
+			<type>RATING_FITCH</type>
+			<dataName id="org.rating.fitch.level18.name">CCC</dataName>
+			<description id="org.rating.fitch.level18.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.fitch.level19">
+			<type>RATING_FITCH</type>
+			<dataName id="org.rating.fitch.level19.name">CCC-</dataName>
+			<description id="org.rating.fitch.level19.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.fitch.level20">
+			<type>RATING_FITCH</type>
+			<dataName id="org.rating.fitch.level20.name">CC</dataName>
+			<description id="org.rating.fitch.level20.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.fitch.level21">
+			<type>RATING_FITCH</type>
+			<dataName id="org.rating.fitch.level21.name">C</dataName>
+			<description id="org.rating.fitch.level21.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.fitch.level22">
+			<type>RATING_FITCH</type>
+			<dataName id="org.rating.fitch.level22.name">NR</dataName>
+			<description id="org.rating.fitch.level22.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<!-- organisation rating moodys-->
+		<organisationStaticData id="org.rating.moodys.level1">
+			<type>RATING_MOODYS</type>
+			<dataName id="org.rating.moodys.level1.name">Aaa</dataName>
+			<description id="org.rating.moodys.level1.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.moodys.level2">
+			<type>RATING_MOODYS</type>
+			<dataName id="org.rating.moodys.level2.name">Aa1</dataName>
+			<description id="org.rating.moodys.level2.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.moodys.level3">
+			<type>RATING_MOODYS</type>
+			<dataName id="org.rating.moodys.level3.name">Aa2</dataName>
+			<description id="org.rating.moodys.level3.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.moodys.level4">
+			<type>RATING_MOODYS</type>
+			<dataName id="org.rating.moodys.level4.name">Aa3</dataName>
+			<description id="org.rating.moodys.level4.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.moodys.level5">
+			<type>RATING_MOODYS</type>
+			<dataName id="org.rating.moodys.level5.name">A1</dataName>
+			<description id="org.rating.moodys.level5.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.moodys.level6">
+			<type>RATING_MOODYS</type>
+			<dataName id="org.rating.moodys.level6.name">A2</dataName>
+			<description id="org.rating.moodys.level6.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.moodys.level7">
+			<type>RATING_MOODYS</type>
+			<dataName id="org.rating.moodys.level7.name">A3</dataName>
+			<description id="org.rating.moodys.level7.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.moodys.level8">
+			<type>RATING_MOODYS</type>
+			<dataName id="org.rating.moodys.level8.name">Baa1</dataName>
+			<description id="org.rating.moodys.level8.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.moodys.level9">
+			<type>RATING_MOODYS</type>
+			<dataName id="org.rating.moodys.level9.name">Baa2</dataName>
+			<description id="org.rating.moodys.level9.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.moodys.level10">
+			<type>RATING_MOODYS</type>
+			<dataName id="org.rating.moodys.level10.name">Baa3</dataName>
+			<description id="org.rating.moodys.level10.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.moodys.level11">
+			<type>RATING_MOODYS</type>
+			<dataName id="org.rating.moodys.level11.name">Ba1</dataName>
+			<description id="org.rating.moodys.level11.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.moodys.level12">
+			<type>RATING_MOODYS</type>
+			<dataName id="org.rating.moodys.level12.name">Ba2</dataName>
+			<description id="org.rating.moodys.level12.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.moodys.level13">
+			<type>RATING_MOODYS</type>
+			<dataName id="org.rating.moodys.level13.name">Ba3</dataName>
+			<description id="org.rating.moodys.level13.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.moodys.level14">
+			<type>RATING_MOODYS</type>
+			<dataName id="org.rating.moodys.level14.name">B1</dataName>
+			<description id="org.rating.moodys.level14.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.moodys.level15">
+			<type>RATING_MOODYS</type>
+			<dataName id="org.rating.moodys.level15.name">B2</dataName>
+			<description id="org.rating.moodys.level15.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.moodys.level16">
+			<type>RATING_MOODYS</type>
+			<dataName id="org.rating.moodys.level16.name">B3</dataName>
+			<description id="org.rating.moodys.level16.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.moodys.level17">
+			<type>RATING_MOODYS</type>
+			<dataName id="org.rating.moodys.level17.name">Caa1</dataName>
+			<description id="org.rating.moodys.level17.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.moodys.level18">
+			<type>RATING_MOODYS</type>
+			<dataName id="org.rating.moodys.level18.name">Caa2</dataName>
+			<description id="org.rating.moodys.level18.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.moodys.level19">
+			<type>RATING_MOODYS</type>
+			<dataName id="org.rating.moodys.level19.name">Caa3</dataName>
+			<description id="org.rating.moodys.level19.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.moodys.level20">
+			<type>RATING_MOODYS</type>
+			<dataName id="org.rating.moodys.level20.name">Ca</dataName>
+			<description id="org.rating.moodys.level20.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.moodys.level21">
+			<type>RATING_MOODYS</type>
+			<dataName id="org.rating.moodys.level21.name">NR</dataName>
+			<description id="org.rating.moodys.level21.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<!-- organisation rating sandp-->
+		<organisationStaticData id="org.rating.sandp.level1">
+			<type>RATING_SandP</type>
+			<dataName id="org.rating.sandp.level1.name">AAA</dataName>
+			<description id="org.rating.sandp.level1.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.sandp.level2">
+			<type>RATING_SandP</type>
+			<dataName id="org.rating.sandp.level2.name">AA+</dataName>
+			<description id="org.rating.sandp.level2.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.sandp.level3">
+			<type>RATING_SandP</type>
+			<dataName id="org.rating.sandp.level3.name">AA</dataName>
+			<description id="org.rating.sandp.level3.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.sandp.level4">
+			<type>RATING_SandP</type>
+			<dataName id="org.rating.sandp.level4.name">AA-</dataName>
+			<description id="org.rating.sandp.level4.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.sandp.level5">
+			<type>RATING_SandP</type>
+			<dataName id="org.rating.sandp.level5.name">A+</dataName>
+			<description id="org.rating.sandp.level5.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.sandp.level6">
+			<type>RATING_SandP</type>
+			<dataName id="org.rating.sandp.level6.name">A</dataName>
+			<description id="org.rating.sandp.level6.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.sandp.level7">
+			<type>RATING_SandP</type>
+			<dataName id="org.rating.sandp.level7.name">A-</dataName>
+			<description id="org.rating.sandp.level7.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.sandp.level8">
+			<type>RATING_SandP</type>
+			<dataName id="org.rating.sandp.level8.name">BBB+</dataName>
+			<description id="org.rating.sandp.level8.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.sandp.level9">
+			<type>RATING_SandP</type>
+			<dataName id="org.rating.sandp.level9.name">BBB</dataName>
+			<description id="org.rating.sandp.level9.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.sandp.level10">
+			<type>RATING_SandP</type>
+			<dataName id="org.rating.sandp.level10.name">BBB-</dataName>
+			<description id="org.rating.sandp.level10.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.sandp.level11">
+			<type>RATING_SandP</type>
+			<dataName id="org.rating.sandp.level11.name">BB+</dataName>
+			<description id="org.rating.sandp.level11.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.sandp.level12">
+			<type>RATING_SandP</type>
+			<dataName id="org.rating.sandp.level12.name">BB</dataName>
+			<description id="org.rating.sandp.level12.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.sandp.level13">
+			<type>RATING_SandP</type>
+			<dataName id="org.rating.sandp.level13.name">BB-</dataName>
+			<description id="org.rating.sandp.level13.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.sandp.level14">
+			<type>RATING_SandP</type>
+			<dataName id="org.rating.sandp.level14.name">B+</dataName>
+			<description id="org.rating.sandp.level14.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.sandp.level15">
+			<type>RATING_SandP</type>
+			<dataName id="org.rating.sandp.level15.name">B</dataName>
+			<description id="org.rating.sandp.level15.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.sandp.level16">
+			<type>RATING_SandP</type>
+			<dataName id="org.rating.sandp.level16.name">B-</dataName>
+			<description id="org.rating.sandp.level16.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.sandp.level17">
+			<type>RATING_SandP</type>
+			<dataName id="org.rating.sandp.level17.name">CCC+</dataName>
+			<description id="org.rating.sandp.level17.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.sandp.level18">
+			<type>RATING_SandP</type>
+			<dataName id="org.rating.sandp.level18.name">CCC</dataName>
+			<description id="org.rating.sandp.level18.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.sandp.level19">
+			<type>RATING_SandP</type>
+			<dataName id="org.rating.sandp.level19.name">CCC-</dataName>
+			<description id="org.rating.sandp.level19.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.sandp.level20">
+			<type>RATING_SandP</type>
+			<dataName id="org.rating.sandp.level20.name">CC</dataName>
+			<description id="org.rating.sandp.level20.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.sandp.level21">
+			<type>RATING_SandP</type>
+			<dataName id="org.rating.sandp.level21.name">C</dataName>
+			<description id="org.rating.sandp.level21.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.sandp.level22">
+			<type>RATING_SandP</type>
+			<dataName id="org.rating.sandp.level22.name">D</dataName>
+			<description id="org.rating.sandp.level22.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.rating.sandp.level23">
+			<type>RATING_SandP</type>
+			<dataName id="org.rating.sandp.level23.name">NR</dataName>
+			<description id="org.rating.sandp.level23.desc"/>
+			<status>enabled</status>
+		</organisationStaticData>
+		<!-- organisation relationship type-->
+		<organisationStaticData id="org.relationship.type.branch">
+			<type>RELATIONSHIPTYPE</type>
+			<dataName id="org.relationship.type.branch.name">BRANCH</dataName>
+			<description id="org.relationship.type.branch.desc">Branch</description>
+			<subRelationship id="org.relationship.type.branch.sub.relationship">BRANCH,SUBSIDIARY</subRelationship>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.relationship.type.department">
+			<type>RELATIONSHIPTYPE</type>
+			<dataName id="org.relationship.type.department.name">DEPARTMENT</dataName>
+			<description id="org.relationship.type.department.desc">Department</description>
+			<subRelationship id="org.relationship.type.department.sub.relationship">DEPARTMENT</subRelationship>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.relationship.type.parent">
+			<type>RELATIONSHIPTYPE</type>
+			<dataName id="org.relationship.type.parent.name">PARENT</dataName>
+			<description id="org.relationship.type.parent.desc">Root of organisation relationship hierarchy.</description>
+			<subRelationship id="org.relationship.type.parent.sub.relationship">BRANCH,DEPARTMENT,SUBSIDIARY</subRelationship>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.relationship.type.subsidiary">
+			<type>RELATIONSHIPTYPE</type>
+			<dataName id="org.relationship.type.subsidiary.name">SUBSIDIARY</dataName>
+			<description id="org.relationship.type.subsidiary.desc">Subsidiary</description>
+			<subRelationship id="org.relationship.type.subsidiary.sub.relationship">BRANCH,DEPARTMENT,SUBSIDIARY</subRelationship>
+			<status>enabled</status>
+		</organisationStaticData>
+		<!-- organisation role type -->
+		<organisationStaticData id="org.role.bh">
+			<type>ROLETYPE</type>
+			<dataName id="org.role.bh.name">Branch</dataName>
+			<description id="org.role.bh.desc">Branch</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.role.br">
+			<type>ROLETYPE</type>
+			<dataName id="org.role.br.name">Broker</dataName>
+			<description id="org.role.br.desc">Broker</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.role.ca">
+			<type>ROLETYPE</type>
+			<dataName id="org.role.ca.name">Calculation Agent</dataName>
+			<description id="org.role.ca.desc">Calculation Agent</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.role.cr">
+			<type>ROLETYPE</type>
+			<dataName id="org.role.cr.name">Collateral relationship</dataName>
+			<description id="org.role.cr.desc">Collateral relationship</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.role.cp">
+			<type>ROLETYPE</type>
+			<dataName id="org.role.cp.name">Counterparty</dataName>
+			<description id="org.role.cp.desc">Counterparty</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.role.cd">
+			<type>ROLETYPE</type>
+			<dataName id="org.role.cd.name">Custodian</dataName>
+			<description id="org.role.cd.desc">Custodian</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.role.dl">
+			<type>ROLETYPE</type>
+			<dataName id="org.role.dl.name">Dealer</dataName>
+			<description id="org.role.dl.desc">Dealer</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.role.ex">
+			<type>ROLETYPE</type>
+			<dataName id="org.role.ex.name">External</dataName>
+			<description id="org.role.ex.desc">External</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.role.gp">
+			<type>ROLETYPE</type>
+			<dataName id="org.role.gp.name">Group</dataName>
+			<description id="org.role.gp.desc">Group</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.role.hq">
+			<type>ROLETYPE</type>
+			<dataName id="org.role.hq.name">Headquarter</dataName>
+			<description id="org.role.hq.desc">Headquarter</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.role.it">
+			<type>ROLETYPE</type>
+			<dataName id="org.role.it.name">Internal</dataName>
+			<description id="org.role.it.desc">Internal</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.role.is">
+			<type>ROLETYPE</type>
+			<dataName id="org.role.is.name">Issuer</dataName>
+			<description id="org.role.is.desc">Issuer</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.role.le">
+			<type>ROLETYPE</type>
+			<dataName id="org.role.le.name">Legal Entity</dataName>
+			<description id="org.role.le.desc">Legal Entity</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.role.main">
+			<type>ROLETYPE</type>
+			<dataName id="org.role.main.name">Main Org</dataName>
+			<description id="org.role.main.desc">Main Org</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<!-- organisation schema-->
+		<organisationStaticData id="org.scheme.classification">
+			<type>Scheme</type>
+			<dataName id="org.scheme.classification.name">Classification</dataName>
+			<description id="org.scheme.classification.desc">Classification</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.scheme.debt.classification">
+			<type>Scheme</type>
+			<dataName id="org.scheme.debt.classification.name">DEBTCLASSIFICATION</dataName>
+			<description id="org.scheme.debt.classification.desc">Debt Classification</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.scheme.external.agency.codes">
+			<type>Scheme</type>
+			<dataName id="org.scheme.external.agency.codes.name">EXTERNALAGENCYCODES</dataName>
+			<description id="org.scheme.external.agency.codes.desc"> EXTERNALAGENCYCODES</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.scheme.feed.system">
+			<type>Scheme</type>
+			<dataName id="org.scheme.feed.system.name">FEEDSYSTEM</dataName>
+			<description id="org.scheme.feed.system.desc">FEEDSYSTEM</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.scheme.linkage">
+			<type>Scheme</type>
+			<dataName id="org.scheme.linkage.name">Linkage</dataName>
+			<description id="org.scheme.linkage.desc">Linkage</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.scheme.org.status">
+			<type>Scheme</type>
+			<dataName id="org.scheme.org.status.name">OrgStatus</dataName>
+			<description id="org.scheme.org.status.desc">OrgStatus</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.scheme.rating.fitch">
+			<type>Scheme</type>
+			<dataName id="org.scheme.rating.fitch.name">RATING_Fitch</dataName>
+			<description id="org.scheme.rating.fitch.desc">Fitch</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.scheme.rating.moodys">
+			<type>Scheme</type>
+			<dataName id="org.scheme.rating.moodys.name">RATING_MOODYS</dataName>
+			<description id="org.scheme.rating.moodys.desc">MOODYS</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.scheme.rating.sandp">
+			<type>Scheme</type>
+			<dataName id="org.scheme.rating.sandp.name">RATING_SandP</dataName>
+			<description id="org.scheme.rating.sandp.desc">SandP</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.scheme.rating.agency">
+			<type>Scheme</type>
+			<dataName id="org.scheme.rating.agency.name">RATINGAGENCY</dataName>
+			<description id="org.scheme.rating.agency.desc">Credit Rating Agencies</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.scheme.relationship.type">
+			<type>Scheme</type>
+			<dataName id="org.scheme.relationship.type.name">RELATIONSHIPTYPE</dataName>
+			<description id="org.scheme.relationship.type.desc">Relationship Type</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.scheme.role.type">
+			<type>Scheme</type>
+			<dataName id="org.scheme.role.type.name">ROLETYPE</dataName>
+			<description id="org.scheme.role.type.desc">Role Type</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.scheme.scheme">
+			<type>Scheme</type>
+			<dataName id="org.scheme.scheme.name">Scheme</dataName>
+			<description id="org.scheme.scheme.desc">Scheme</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.scheme.user.defined.organisation.fields">
+			<type>Scheme</type>
+			<dataName id="org.scheme.user.defined.organisation.fields.name">User Defined Organisation Fields</dataName>
+			<description id="org.scheme.user.defined.organisation.fields.desc">User Defined Organisation Fields</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<!-- organisation user defined organisation fields-->
+		<organisationStaticData id="org.user.defined.organisation.fields.udf1">
+			<type>User Defined Organisation Fields</type>
+			<dataName id="org.user.defined.organisation.fields.udf1.name">UDF 1</dataName>
+			<description id="org.user.defined.organisation.fields.udf1.desc">UDF 1</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.user.defined.organisation.fields.udf2">
+			<type>User Defined Organisation Fields</type>
+			<dataName id="org.user.defined.organisation.fields.udf2.name">UDF 2</dataName>
+			<description id="org.user.defined.organisation.fields.udf2.desc">UDF 2</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.user.defined.organisation.fields.udf16">
+			<type>User Defined Organisation Fields</type>
+			<dataName id="org.user.defined.organisation.fields.udf16.name">UDF 16</dataName>
+			<description id="org.user.defined.organisation.fields.udf16.desc">UDF 16</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<organisationStaticData id="org.user.defined.organisation.fields.udf30">
+			<type>User Defined Organisation Fields</type>
+			<dataName id="org.user.defined.organisation.fields.udf30.name">UDF 30</dataName>
+			<description id="org.user.defined.organisation.fields.udf30.desc">UDF 30</description>
+			<status>enabled</status>
+		</organisationStaticData>
+		<!-- collateral static data annexes -->
+		<collateralStaticData id="annex.default">
+			<type>Annexes</type>
+			<dataName id="annex.default.name">qtpAnnexes</dataName>
+			<description id="annex.default.desc">qtpAnnexes</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<!-- collateral static data assetClassification -->
+		<!-- collateral static data assetClassToHege -->
+		<collateralStaticData id="asset.class.to.hedge.mbs">
+			<type>AssetClassToHedge</type>
+			<dataName id="asset.class.to.hedge.mbs.name">MBS</dataName>
+			<description id="asset.class.to.hedge.mbs.desc">Default added Col External IA Amt</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="asset.class.to.hedge.muni">
+			<type>AssetClassToHedge</type>
+			<dataName id="asset.class.to.hedge.muni.name">Muni</dataName>
+			<description id="asset.class.to.hedge.muni.desc">Default added Col External IA Amt</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="asset.class.to.hedge.none">
+			<type>AssetClassToHedge</type>
+			<dataName id="asset.class.to.hedge.muni.none">None</dataName>
+			<description id="asset.class.to.hedge.none.desc">Default added Col External IA Amt</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="asset.class.to.hedge.xxxx">
+			<type>AssetClassToHedge</type>
+			<dataName id="asset.class.to.hedge.muni.xxxx">XXXX</dataName>
+			<description id="asset.class.to.hedge.xxxx.desc">Default added Col External IA Amt</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<!-- collateral static data book -->
+		<!-- collateral static data ccp -->
+		<collateralStaticData id="ccp.ccp1">
+			<type>CCP</type>
+			<dataName id="ccp.ccp1.name">CCP1</dataName>
+			<description id="ccp.ccp1.desc">CCP1</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="ccp.ccp2">
+			<type>CCP</type>
+			<dataName id="ccp.ccp2.name">CCP2</dataName>
+			<description id="ccp.ccp2.desc">CCP2</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="ccp.ice">
+			<type>CCP</type>
+			<dataName id="ccp.ice.name">ICE</dataName>
+			<description id="ccp.ice.desc">ICE</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="ccp.lch">
+			<type>CCP</type>
+			<dataName id="ccp.lch.name">LCH</dataName>
+			<description id="ccp.lch.desc">LCH</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<!-- collateral static data code feedsystem -->
+		<!-- collateral static data codes qtp -->
+		<collateralStaticData id="codes.qtp.qtp">
+			<type>CODES_QTP</type>
+			<dataName id="codes.qtp.qtp.name">QTP</dataName>
+			<description id="codes.qtp.qtp.desc">QTP</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="codes.qtp.qtp.pro1">
+			<type>CODES_QTP</type>
+			<dataName id="codes.qtp.qtp.pro1.name">QTP</dataName>
+			<description id="codes.qtp.qtp.pro1.desc">QTP</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<!-- collateral static data collateral agreement categories -->
+		<collateralStaticData id="agreement.category.dollar.repo">
+			<type>CollateralAgreementCategories</type>
+			<dataName id="agreement.category.dollar.repo.name">Dollar Repo</dataName>
+			<description id="agreement.category.dollar.repo.desc">Dollar Repo</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="agreement.category.ir.swaps">
+			<type>CollateralAgreementCategories</type>
+			<dataName id="agreement.category.ir.swaps.name">IR Swaps</dataName>
+			<description id="agreement.category.ir.swaps.desc">IR Swaps</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="agreement.category.no.dollar.swaps">
+			<type>CollateralAgreementCategories</type>
+			<dataName id="agreement.category.no.dollar.swaps.name">Non Dollar Repo</dataName>
+			<description id="agreement.category.no.dollar.swaps.desc">Non Dollar Repo</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<!-- collateral static data  credit documentation-->
+		<collateralStaticData id="credit.documentation.margin.provisions">
+			<type>CreditDocumentation</type>
+			<dataName id="credit.documentation.margin.provisions.name">2001 Margin Provisions</dataName>
+			<description id="credit.documentation.margin.provisions.desc">2001 Margin Provisions</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="credit.documentation.english.law">
+			<type>CreditDocumentation</type>
+			<dataName id="credit.documentation.english.law.name">95 ISDA CSA English Law</dataName>
+			<description id="credit.documentation.english.law.desc">95 ISDA CSA English Law</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="credit.documentation.ny.law">
+			<type>CreditDocumentation</type>
+			<dataName id="credit.documentation.ny.law.name">95 ISDA CSA NY Law</dataName>
+			<description id="credit.documentation.ny.law.desc">95 ISDA CSA NY Law</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="credit.documentation.ema.csd.2001">
+			<type>CreditDocumentation</type>
+			<dataName id="credit.documentation.ema.csd.2001.name">EMA CSD 2001</dataName>
+			<description id="credit.documentation.ema.csd.2001.desc">EMA CSD 2001</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="credit.documentation.ema.csd.2004">
+			<type>CreditDocumentation</type>
+			<dataName id="credit.documentation.ema.csd.2004.name">EMA CSD 2004</dataName>
+			<description id="credit.documentation.ema.csd.2004.desc">EMA CSD 2004</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="credit.documentation.esla.1996">
+			<type>CreditDocumentation</type>
+			<dataName id="credit.documentation.esla.1996.name">ESLA 1996</dataName>
+			<description id="credit.documentation.esla.1996.desc">ESLA 1996</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="credit.documentation.gesla.1996">
+			<type>CreditDocumentation</type>
+			<dataName id="credit.documentation.gesla.1996.name">GESLA 1996</dataName>
+			<description id="credit.documentation.gesla.1996.desc">GESLA 1996</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="credit.documentation.gmra">
+			<type>CreditDocumentation</type>
+			<dataName id="credit.documentation.gmra.name">GMRA</dataName>
+			<description id="credit.documentation.gmra.desc">GMRA</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="credit.documentation.gmsla.2000">
+			<type>CreditDocumentation</type>
+			<dataName id="credit.documentation.gmsla.2000.name">GMSLA 2000</dataName>
+			<description id="credit.documentation.gmsla.2000.desc">GMSLA 2000</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="credit.documentation.isma.pas.1995">
+			<type>CreditDocumentation</type>
+			<dataName id="credit.documentation.isma.pas.1995.name">ISMA_PSA_1995</dataName>
+			<description id="credit.documentation.isma.pas.1995.desc">ISMA_PSA_1995</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="credit.documentation.osla.1995">
+			<type>CreditDocumentation</type>
+			<dataName id="credit.documentation.osla.1995.name">OSLA 1995</dataName>
+			<description id="credit.documentation.osla.1995.desc">OSLA 1995</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<!-- collateral static data  external IA calculation method-->
+		<collateralStaticData id="calculation.method.collateral.for.contract">
+			<type>External IA Calculation Method</type>
+			<dataName id="calculation.method.collateral.for.contract.name">Collateral for Contract</dataName>
+			<description id="calculation.method.collateral.for.contract.desc">Default added Col External IA Method</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="calculation.method.percentage.of.notional">
+			<type>External IA Calculation Method</type>
+			<dataName id="calculation.method.percentage.of.notional.name">Percentage Of Notional</dataName>
+			<description id="calculation.method.percentage.of.notional.desc">Default added Col External IA Method</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="calculation.method.var.with.intra.ccy.netting">
+			<type>External IA Calculation Method</type>
+			<dataName id="calculation.method.var.with.intra.ccy.netting.name">VaR With Intra-Ccy Netting</dataName>
+			<description id="calculation.method.var.with.intra.ccy.netting.desc">Default added Col External IA Method</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="calculation.method.var.with.x.ccy.netting">
+			<type>External IA Calculation Method</type>
+			<dataName id="calculation.method.var.with.x.ccy.netting.name">VaR With X-Ccy Netting</dataName>
+			<description id="calculation.method.var.with.x.ccy.netting.desc">Default added Col External IA Method</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<!-- collateral static data flexible page-->
+		<collateralStaticData id="flexible.page.standard.english">
+			<type>FlexiblePage</type>
+			<dataName id="flexible.page.standard.english.name">Standard-English</dataName>
+			<description id="flexible.page.standard.english.desc">English</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<!-- collateral static IA Feed System-->
+		<collateralStaticData id="ia.feed.system.qtp.portfolio.ia">
+			<type>IAFeedSystems</type>
+			<dataName id="ia.feed.system.qtp.portfolio.ia.name">QTPPortfolioIA</dataName>
+			<description id="ia.feed.system.qtp.portfolio.ia.desc">QTPPortfolioIA</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<!-- collateral static data instrument id type-->
+		<collateralStaticData id="instrument.id.type.common.code">
+			<type>Instrument Id Type</type>
+			<dataName id="instrument.id.type.common.code.name">Common Code</dataName>
+			<description id="instrument.id.type.common.code.desc">Common Code</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="instrument.id.type.cusip">
+			<type>Instrument Id Type</type>
+			<dataName id="instrument.id.type.cusip.name">CUSIP</dataName>
+			<description id="instrument.id.type.cusip.desc">CUSIP</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="instrument.id.type.isin">
+			<type>Instrument Id Type</type>
+			<dataName id="instrument.id.type.isin.name">ISIN</dataName>
+			<description id="instrument.id.type.isin.desc">ISIN</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="instrument.id.type.other">
+			<type>Instrument Id Type</type>
+			<dataName id="instrument.id.type.other.name">Other</dataName>
+			<description id="instrument.id.type.other.desc">Other</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="instrument.id.type.sedol">
+			<type>Instrument Id Type</type>
+			<dataName id="instrument.id.type.sedol.name">SEDOL</dataName>
+			<description id="instrument.id.type.sedol.desc">SEDOL</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<!-- collateral static data inventory delivery group-->
+		<!-- collateral static data inventory manager source system-->
+		<!-- collateral static data jurisdiction-->
+		<collateralStaticData id="jurisdiction.dodd.frank">
+			<type>Jurisdiction</type>
+			<dataName id="jurisdiction.dodd.frank.name">Dodd Frank</dataName>
+			<description id="jurisdiction.dodd.frank.desc">Dodd Frank</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="jurisdiction.emir">
+			<type>Jurisdiction</type>
+			<dataName id="jurisdiction.emir.name">EMIR</dataName>
+			<description id="jurisdiction.emir.desc">EMIR</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="jurisdiction.iosco">
+			<type>Jurisdiction</type>
+			<dataName id="jurisdiction.iosco.name">IOSCO</dataName>
+			<description id="jurisdiction.iosco.desc">IOSCO</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="jurisdiction.standard.csa">
+			<type>Jurisdiction</type>
+			<dataName id="jurisdiction.standard.csa.name">Standard CSA</dataName>
+			<description id="jurisdiction.standard.csa.desc">Standard CSA</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<!-- collateral static data letter template type-->
+		<collateralStaticData id="letter.template.type.etf">
+			<type>LetterTemplateType</type>
+			<dataName id="letter.template.type.etf.name">ETF-Standard-English</dataName>
+			<description id="letter.template.type.etf.desc">ETF-English</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="letter.template.type.qtp">
+			<type>LetterTemplateType</type>
+			<dataName id="letter.template.type.qtp.name">QTP_Standard_English</dataName>
+			<description id="letter.template.type.qtp.desc">QTP_English</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="letter.template.type.repo">
+			<type>LetterTemplateType</type>
+			<dataName id="letter.template.type.repo.name">Repo-Standard-English</dataName>
+			<description id="letter.template.type.repo.desc">Repo-English</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="letter.template.type.standard">
+			<type>LetterTemplateType</type>
+			<dataName id="letter.template.type.standard.name">Standard-English</dataName>
+			<description id="letter.template.type.standard.desc">English</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<!-- collateral static data linkage set-->
+		<collateralStaticData id="linkage.set.l1">
+			<type>Linkage Set</type>
+			<dataName id="linkage.set.l1.name">L1</dataName>
+			<description id="linkage.set.l1.desc">L1</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="linkage.set.l2">
+			<type>Linkage Set</type>
+			<dataName id="linkage.set.l2.name">L2</dataName>
+			<description id="linkage.set.l2.desc">L2</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="linkage.set.l3">
+			<type>Linkage Set</type>
+			<dataName id="linkage.set.l3.name">L3</dataName>
+			<description id="linkage.set.l3.desc">L3</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<!-- collateral static data master documentation-->
+		<collateralStaticData id="master.documentation.1987.isda.master">
+			<type>MasterDocumentation</type>
+			<dataName id="master.documentation.1987.isda.master.name">1987 ISDA Master</dataName>
+			<description id="master.documentation.1987.isda.master.desc">1987 ISDA Master</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="master.documentation.1992.isda.master">
+			<type>MasterDocumentation</type>
+			<dataName id="master.documentation.1992.isda.master.name">1992 ISDA Master</dataName>
+			<description id="master.documentation.1992.isda.master.desc">1992 ISDA Master</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="master.documentation.2002.isda.master">
+			<type>MasterDocumentation</type>
+			<dataName id="master.documentation.2002.isda.master.name">2002 ISDA Master</dataName>
+			<description id="master.documentation.2002.isda.master.desc">2002 ISDA Master</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="master.documentation.ema.2001">
+			<type>MasterDocumentation</type>
+			<dataName id="master.documentation.ema.2001.name">EMA 2001</dataName>
+			<description id="master.documentation.ema.2001.desc">EMA 2001</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="master.documentation.ema.2004">
+			<type>MasterDocumentation</type>
+			<dataName id="master.documentation.ema.2004.name">EMA 2004</dataName>
+			<description id="master.documentation.ema.2004.desc">EMA 2004</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="master.documentation.esla.1996">
+			<type>MasterDocumentation</type>
+			<dataName id="master.documentation.esla.1996.name">ESLA 1996</dataName>
+			<description id="master.documentation.esla.1996.desc">ESLA 1996</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="master.documentation.gesla.1996">
+			<type>MasterDocumentation</type>
+			<dataName id="master.documentation.gesla.1996.name">GESLA 1996</dataName>
+			<description id="master.documentation.gesla.1996.desc">GESLA 1996</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="master.documentation.gmra.1995">
+			<type>MasterDocumentation</type>
+			<dataName id="master.documentation.gmra.1995.name">GMRA 1995</dataName>
+			<description id="master.documentation.gmra.1995.desc">GMRA 1995</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="master.documentation.gmra.2000">
+			<type>MasterDocumentation</type>
+			<dataName id="master.documentation.gmra.2000.name">GMRA 2000</dataName>
+			<description id="master.documentation.gmra.2000.desc">GMRA 2000</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="master.documentation.gmsla.2000">
+			<type>MasterDocumentation</type>
+			<dataName id="master.documentation.gmsla.2000.name">GMSLA 2000</dataName>
+			<description id="master.documentation.gmsla.2000.desc">GMSLA 2000</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="master.documentation.osla.1995">
+			<type>MasterDocumentation</type>
+			<dataName id="master.documentation.osla.1995.name">OSLA 1995</dataName>
+			<description id="master.documentation.osla.1995.desc">OSLA 1995</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<!-- collateral static data miscellaneous fields-->
+		<collateralStaticData id="miscellaneous.fields.misc1">
+			<type>Miscellaneous Fields</type>
+			<dataName id="miscellaneous.fields.misc1.name">Misc 1</dataName>
+			<description id="miscellaneous.fields.misc1.desc">Misc 1</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="miscellaneous.fields.misc2">
+			<type>Miscellaneous Fields</type>
+			<dataName id="miscellaneous.fields.misc2.name">Misc 2</dataName>
+			<description id="miscellaneous.fields.misc2.desc">Misc 2</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="miscellaneous.fields.misc3">
+			<type>Miscellaneous Fields</type>
+			<dataName id="miscellaneous.fields.misc3.name">Misc 3</dataName>
+			<description id="miscellaneous.fields.misc3.desc">Misc 3</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="miscellaneous.fields.misc4">
+			<type>Miscellaneous Fields</type>
+			<dataName id="miscellaneous.fields.misc4.name">Misc 4</dataName>
+			<description id="miscellaneous.fields.misc4.desc">Misc 4</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="miscellaneous.fields.misc5">
+			<type>Miscellaneous Fields</type>
+			<dataName id="miscellaneous.fields.misc5.name">Misc 5</dataName>
+			<description id="miscellaneous.fields.misc5.desc">Misc 5</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<!-- collateral static data movement description-->
+		<!-- collateral static data  PayInstrBuckets -->
+		<collateralStaticData id="payInstrBucket.icr">
+			<type>PayInstrBuckets</type>
+			<dataName id="payInstrBucket.icr.name">IM Call/Return</dataName>
+			<description id="payInstrBucket.icr.desc">IM Call/Return</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="payInstrBucket.ird">
+			<type>PayInstrBuckets</type>
+			<dataName id="payInstrBucket.ird.name">IM Recall/Delivery</dataName>
+			<description id="payInstrBucket.ird.desc">IM Recall/Delivery</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="payInstrBucket.pay">
+			<type>PayInstrBuckets</type>
+			<dataName id="payInstrBucket.pay.name">Pay</dataName>
+			<description id="payInstrBucket.pay.desc">Pay</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="payInstrBucket.rec">
+			<type>PayInstrBuckets</type>
+			<dataName id="payInstrBucket.rec.name">Receive</dataName>
+			<description id="payInstrBucket.rec.desc">Receive</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="payInstrBucket.std">
+			<type>PayInstrBuckets</type>
+			<dataName id="payInstrBucket.std.name">Standard</dataName>
+			<description id="payInstrBucket.std.desc">Standard</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="payInstrBucket.vcr">
+			<type>PayInstrBuckets</type>
+			<dataName id="payInstrBucket.vcr.name">VM Call/Return</dataName>
+			<description id="payInstrBucket.vcr.desc">VM Call/Return</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="payInstrBucket.vrd">
+			<type>PayInstrBuckets</type>
+			<dataName id="payInstrBucket.vrd.name">VM Recall/Delivery</dataName>
+			<description id="payInstrBucket.vrd.desc">VM Recall/Delivery</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<!-- collateral static data PayInstrHeaders-->
+		<collateralStaticData id="payInstrHeaders.accountNumber">
+			<type>PayInstrHeaders</type>
+			<dataName id="payInstrHeaders.accountNumber.name">Account Number</dataName>
+			<description id="payInstrHeaders.accountNumber.desc">Account Number</description>
+			<selectedForNetting>false</selectedForNetting>
+			<excludeFromLetters>false</excludeFromLetters>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="payInstrHeaders.accountName">
+			<type>PayInstrHeaders</type>
+			<dataName id="payInstrHeaders.accountName.name">ACCTNAME</dataName>
+			<description id="payInstrHeaders.accountName.desc">ACCTNAME</description>
+			<selectedForNetting>false</selectedForNetting>
+			<excludeFromLetters>false</excludeFromLetters>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="payInstrHeaders.acctnum">
+			<type>PayInstrHeaders</type>
+			<dataName id="payInstrHeaders.acctnum.name">ACCTNUM</dataName>
+			<description id="payInstrHeaders.acctnum.desc">ACCTNUM</description>
+			<selectedForNetting>false</selectedForNetting>
+			<excludeFromLetters>false</excludeFromLetters>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="payInstrHeaders.benificiaryBank">
+			<type>PayInstrHeaders</type>
+			<dataName id="payInstrHeaders.benificiaryBank.name">Beneficiary Bank</dataName>
+			<description id="payInstrHeaders.benificiaryBank.desc">Beneficiary Bank</description>
+			<selectedForNetting>false</selectedForNetting>
+			<excludeFromLetters>false</excludeFromLetters>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="payInstrHeaders.cptyAccount">
+			<type>PayInstrHeaders</type>
+			<dataName id="payInstrHeaders.cptyAccount.name">Cpty_Account</dataName>
+			<description id="payInstrHeaders.cptyAccount.desc">Cpty_Account</description>
+			<selectedForNetting>false</selectedForNetting>
+			<excludeFromLetters>false</excludeFromLetters>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="payInstrHeaders.custodian">
+			<type>PayInstrHeaders</type>
+			<dataName id="payInstrHeaders.custodian.name">CUSTODIAN</dataName>
+			<description id="payInstrHeaders.custodian.desc">CUSTODIAN</description>
+			<selectedForNetting>false</selectedForNetting>
+			<excludeFromLetters>false</excludeFromLetters>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="payInstrHeaders.custodianId">
+			<type>PayInstrHeaders</type>
+			<dataName id="payInstrHeaders.custodianId.name">CUSTODIAN</dataName>
+			<description id="payInstrHeaders.custodianId.desc">CUSTODIAN</description>
+			<selectedForNetting>false</selectedForNetting>
+			<excludeFromLetters>false</excludeFromLetters>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="payInstrHeaders.prcAccount">
+			<type>PayInstrHeaders</type>
+			<dataName id="payInstrHeaders.prcAccount.name">Prc_Account</dataName>
+			<description id="payInstrHeaders.prcAccount.desc">Prc_Account</description>
+			<selectedForNetting>false</selectedForNetting>
+			<excludeFromLetters>false</excludeFromLetters>
+			<status>enabled</status>
+		</collateralStaticData>
+		<!-- collateral static data Place of Settlement-->
+		<collateralStaticData id="placeOfSettlement.lala1">
+			<type>PayInstrHeaders</type>
+			<dataName id="placeOfSettlement.lala1.name">lala1</dataName>
+			<description id="placeOfSettlement.lala1.desc">lala1</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<!-- Price Source -->
+		<collateralStaticData id="ps.default">
+			<type>Price Source</type>
+			<dataName id="ps.default.name">Default</dataName>
+			<description id="ps.default.desc">Default</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="ps.ps1">
+			<type>Price Source</type>
+			<dataName id="ps.ps1.name">PS1</dataName>
+			<description id="ps.ps1.desc">PS1</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="ps.ps2">
+			<type>Price Source</type>
+			<dataName id="ps.ps2.name">PS2</dataName>
+			<description id="ps.ps2.desc">PS2</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="ps.ps3">
+			<type>Price Source</type>
+			<dataName id="ps.ps3.name">PS3</dataName>
+			<description id="ps.ps3.desc">PS3</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="ps.ps4">
+			<type>Price Source</type>
+			<dataName id="ps.ps4.name">PS4</dataName>
+			<description id="ps.ps4.desc">PS4</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<!--collateral static data products -->
+		<collateralStaticData id="product.test1">
+			<type>Products</type>
+			<dataName id="product.test1.name">QTP</dataName>
+			<description id="product.test1.desc">QTP</description>
+			<productCategory>OTC</productCategory>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="product.test2">
+			<type>Products</type>
+			<dataName id="product.test2.name">LR</dataName>
+			<description id="product.test2.desc">LR</description>
+			<productCategory>OTC</productCategory>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="product.pro1">
+			<type>Products</type>
+			<dataName id="product.pro1.name">Pro1</dataName>
+			<description id="product.pro1.desc">Pro1</description>
+			<productCategory>Repo</productCategory>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="product.pro2">
+			<type>Products</type>
+			<dataName id="product.pro2.name">Pro2</dataName>
+			<description id="product.pro2.desc">Pro2</description>
+			<productCategory>Rev Repo</productCategory>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="product.pro3">
+			<type>Products</type>
+			<dataName id="product.pro3.name">Pro3</dataName>
+			<description id="product.pro3.desc">Pro3</description>
+			<productCategory>Buy Sell</productCategory>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="product.pro4">
+			<type>Products</type>
+			<dataName id="product.pro4.name">Pro4</dataName>
+			<description id="product.pro4.desc">Pro4</description>
+			<productCategory>Sell Buy</productCategory>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="product.etf.rec">
+			<type>Products</type>
+			<dataName id="product.etf.rec.name">ETF Rec</dataName>
+			<description id="product.etf.rec.desc">ETF Rec</description>
+			<productCategory>ETF Rec</productCategory>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="product.etf.del">
+			<type>Products</type>
+			<dataName id="product.etf.del.name">ETF Del</dataName>
+			<description id="product.etf.del.desc">ETF Del</description>
+			<productCategory>ETF Del</productCategory>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="product.etf.basket.rec">
+			<type>Products</type>
+			<dataName id="product.etf.basket.rec.name">ETF Basket Rec</dataName>
+			<description id="product.etf.basket.rec.desc">ETF Basket Rec</description>
+			<productCategory>ETF Basket Rec</productCategory>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="product.etf.basket.del">
+			<type>Products</type>
+			<dataName id="product.etf.basket.del.name">ETF Basket Del</dataName>
+			<description id="product.etf.basket.del.desc">ETF Basket Del</description>
+			<productCategory>ETF Basket Del</productCategory>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="product.pro9">
+			<type>Products</type>
+			<dataName id="product.pro9.name">Pro9</dataName>
+			<description id="product.pro9.desc">Pro9</description>
+			<productCategory>OTC</productCategory>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="product.qtp">
+			<type>Products</type>
+			<dataName id="product.qtp.name">QTP</dataName>
+			<description id="product.qtp.desc">QTP</description>
+			<productCategory>OTC</productCategory>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="product.qtp.pro1">
+			<type>Products</type>
+			<dataName id="product.qtp.pro1.name">qtp_Pro1</dataName>
+			<description id="product.qtp.pro1.desc">qtp_Pro1</description>
+			<productCategory>Repo</productCategory>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="product.qtp.pro2">
+			<type>Products</type>
+			<dataName id="product.qtp.pro2.name">qtp_Pro2</dataName>
+			<description id="product.qtp.pro2.desc">qtp_Pro2</description>
+			<productCategory>Rev Repo</productCategory>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="product.qtp.pro3">
+			<type>Products</type>
+			<dataName id="product.qtp.pro3.name">qtp_Pro3</dataName>
+			<description id="product.qtp.pro3.desc">qtp_Pro3</description>
+			<productCategory>Buy Sell</productCategory>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="product.qtp.pro4">
+			<type>Products</type>
+			<dataName id="product.qtp.pro4.name">qtp_Pro4</dataName>
+			<description id="product.qtp.pro4.desc">qtp_Pro4</description>
+			<productCategory>Sell Buy</productCategory>
+			<status>enabled</status>
+		</collateralStaticData>
+		<!-- collateral static data report freq external -->
+		<collateralStaticData id="reportFreqExternal.extFreq1">
+			<type>Report_Freq_External</type>
+			<dataName id="reportFreqExternal.extFreq1.name">ext_freq_1</dataName>
+			<description id="reportFreqExternal.extFreq1.desc">ext_freq_1</description>
+			<productCategory>Sell Buy</productCategory>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="reportFreqExternal.extFreq2">
+			<type>Report_Freq_External</type>
+			<dataName id="reportFreqExternal.extFreq2.name">ext_freq_2</dataName>
+			<description id="reportFreqExternal.extFreq2.desc">ext_freq_2</description>
+			<productCategory>Sell Buy</productCategory>
+			<status>enabled</status>
+		</collateralStaticData>
+		<!-- collateral static data scheme -->
+		<collateralStaticData id="scheme.annexes">
+			<type>Scheme</type>
+			<dataName id="scheme.annexes.name">Annexes</dataName>
+			<description id="scheme.annexes.desc">Annexes</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="scheme.assetClassification">
+			<type>Scheme</type>
+			<dataName id="scheme.assetClassification.name">Asset Classification</dataName>
+			<description id="scheme.assetClassification.desc">Asset Classification</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="scheme.assetClassToHedge">
+			<type>Scheme</type>
+			<dataName id="scheme.assetClassToHedge.name">AssetClassToHedge</dataName>
+			<description id="scheme.assetClassToHedge.desc">Collateral Calculation Method</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="scheme.book">
+			<type>Scheme</type>
+			<dataName id="scheme.book.name">Book</dataName>
+			<description id="scheme.book.desc">Inventory Manager Books</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="scheme.ccp">
+			<type>Scheme</type>
+			<dataName id="scheme.ccp.name">CCP</dataName>
+			<description id="scheme.ccp.desc">CCP</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="scheme.codesFeedSystem">
+			<type>Scheme</type>
+			<dataName id="scheme.codesFeedSystem.name">CODES_FEEDSYSTEM</dataName>
+			<description id="scheme.codesFeedSystem.desc">Codes FEEDSYSTEM</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="scheme.codesQtp">
+			<type>Scheme</type>
+			<dataName id="scheme.codesQtp.name">CODES_QTP</dataName>
+			<description id="scheme.codesQtp.desc">CODES_QTP</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="scheme.collateralAgreementCategories">
+			<type>Scheme</type>
+			<dataName id="scheme.collateralAgreementCategories.name">CollateralAgreementCategories</dataName>
+			<description id="scheme.collateralAgreementCategories.desc">Collateral categories</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="scheme.creditDocumentation">
+			<type>Scheme</type>
+			<dataName id="scheme.creditDocumentation.name">CreditDocumentation</dataName>
+			<description id="scheme.creditDocumentation.desc">Credit Support Documentation</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="scheme.externalIACalculationMethod">
+			<type>Scheme</type>
+			<dataName id="scheme.externalIACalculationMethod.name">External IA Calculation Method</dataName>
+			<description id="scheme.externalIACalculationMethod.desc">Collateral Calculation Method</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="scheme.flexiblePage">
+			<type>Scheme</type>
+			<dataName id="scheme.flexiblePage.name">FlexiblePage</dataName>
+			<description id="scheme.flexiblePage.desc">Flexible Page</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="scheme.IAFeedSystems">
+			<type>Scheme</type>
+			<dataName id="scheme.IAFeedSystems.name">IAFeedSystems</dataName>
+			<description id="scheme.IAFeedSystems.desc">Agreement IA FeedSystem</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="scheme.instrumentIdType">
+			<type>Scheme</type>
+			<dataName id="scheme.instrumentIdType.name">Instrument Id Type</dataName>
+			<description id="scheme.instrumentIdType.desc">Instrument Id Type</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="scheme.inventoryDeliveryGroup">
+			<type>Scheme</type>
+			<dataName id="scheme.inventoryDeliveryGroup.name">Inventory Delivery Group</dataName>
+			<description id="scheme.inventoryDeliveryGroup.desc">Inventory Delivery Group</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="scheme.inventoryManagerSourceSyetem">
+			<type>Scheme</type>
+			<dataName id="scheme.inventoryManagerSourceSyetem.name">Inventory Manager Source System</dataName>
+			<description id="scheme.inventoryManagerSourceSyetem.desc">Inventory Manager Source System</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="scheme.jurisdiction">
+			<type>Scheme</type>
+			<dataName id="scheme.jurisdiction.name">Jurisdiction</dataName>
+			<description id="scheme.jurisdiction.desc">Jurisdiction</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="scheme.letterTemplateType">
+			<type>Scheme</type>
+			<dataName id="scheme.letterTemplateType.name">LetterTemplateType</dataName>
+			<description id="scheme.letterTemplateType.desc">Letter Template Type</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="scheme.linkageSet">
+			<type>Scheme</type>
+			<dataName id="scheme.linkageSet.name">Linkage Set</dataName>
+			<description id="scheme.linkageSet.desc">Linkage Set for Agreement</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="scheme.masterDocumentation">
+			<type>Scheme</type>
+			<dataName id="scheme.masterDocumentation.name">MasterDocumentation</dataName>
+			<description id="scheme.masterDocumentation.desc">Master Documentation</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="scheme.miscellaneousFields">
+			<type>Scheme</type>
+			<dataName id="scheme.miscellaneousFields.name">Miscellaneous Fields</dataName>
+			<description id="scheme.miscellaneousFields.desc">Miscellaneous field descriptions</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="scheme.movementDescriptions">
+			<type>Scheme</type>
+			<dataName id="scheme.movementDescriptions.name">Movement Descriptions</dataName>
+			<description id="scheme.movementDescriptions.desc">Movement Descriptions</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="scheme.payInstrBuckets">
+			<type>Scheme</type>
+			<dataName id="scheme.payInstrBuckets.name">PayInstrBuckets</dataName>
+			<description id="scheme.payInstrBuckets.desc">PayInstrBuckets</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="scheme.payInstrHeaders">
+			<type>Scheme</type>
+			<dataName id="scheme.payInstrHeaders.name">PayInstrHeaders</dataName>
+			<description id="scheme.payInstrHeaders.desc">PayInstrHeaders</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="scheme.placeOfSettlement">
+			<type>Scheme</type>
+			<dataName id="scheme.placeOfSettlement.name">Place of Settlement</dataName>
+			<description id="scheme.placeOfSettlement.desc">settlement place</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="scheme.priceSource">
+			<type>Scheme</type>
+			<dataName id="scheme.priceSource.name">Price Source</dataName>
+			<description id="scheme.priceSource.desc">Security Price Source</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="scheme.products">
+			<type>Scheme</type>
+			<dataName id="scheme.products.name">Products</dataName>
+			<description id="scheme.products.desc">Product Type Information</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="scheme.reportFreqExternal">
+			<type>Scheme</type>
+			<dataName id="scheme.reportFreqExternal.name">Report_Freq_External</dataName>
+			<description id="scheme.reportFreqExternal.desc">report frequency name definition</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="scheme.scheme">
+			<type>Scheme</type>
+			<dataName id="scheme.scheme.name">Scheme</dataName>
+			<description id="scheme.scheme.desc">Schemes</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="scheme.segregationType">
+			<type>Scheme</type>
+			<dataName id="scheme.segregationType.name">Segregation Type</dataName>
+			<description id="scheme.segregationType.desc">Segregation Type</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="scheme.statementSet">
+			<type>Scheme</type>
+			<dataName id="scheme.statementSet.name">Statement Set</dataName>
+			<description id="scheme.statementSet.desc">Statement Set</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="scheme.systemBaseCcy">
+			<type>Scheme</type>
+			<dataName id="scheme.systemBaseCcy.name">SystemBaseCcy</dataName>
+			<description id="scheme.systemBaseCcy.desc">System Base Currency</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="scheme.userDefiendAgreementFields">
+			<type>Scheme</type>
+			<dataName id="scheme.userDefiendAgreementFields.name">User Defined Agreement Fields</dataName>
+			<description id="scheme.userDefiendAgreementFields.desc">User Defined Agreement Fields</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="scheme.userDefiendBookingFields">
+			<type>Scheme</type>
+			<dataName id="scheme.userDefiendBookingFields.name">User Defined Booking Fields</dataName>
+			<description id="scheme.userDefiendBookingFields.desc">User Defined Booking Fields</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="scheme.userDefiendSecurityFields">
+			<type>Scheme</type>
+			<dataName id="scheme.userDefiendSecurityFields.name">User Defined Security Fields</dataName>
+			<description id="scheme.userDefiendSecurityFields.desc">User Defined Security Fields</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="scheme.userDefiendExposureFields">
+			<type>Scheme</type>
+			<dataName id="scheme.userDefiendExposureFields.name">User Defined Exposure Fields</dataName>
+			<description id="scheme.userDefiendExposureFields.desc">User Defined Exposure Fields</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="scheme.viewGroup">
+			<type>Scheme</type>
+			<dataName id="scheme.viewGroup.name">View Group</dataName>
+			<description id="scheme.viewGroup.desc">View Group</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<!-- collateral static data uer defined agreement fields -->
+		<collateralStaticData id="userDefinedAgreementFields.author">
+			<type>User Defined Agreement Fields</type>
+			<dataName id="userDefinedAgreementFields.author.name">Author</dataName>
+			<description id="userDefinedAgreementFields.author.desc">Author</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="userDefinedAgreementFields.date">
+			<type>User Defined Agreement Fields</type>
+			<dataName id="userDefinedAgreementFields.date.name">Date</dataName>
+			<description id="userDefinedAgreementFields.date.desc">Date</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="userDefinedAgreementFields.version">
+			<type>User Defined Agreement Fields</type>
+			<dataName id="userDefinedAgreementFields.version.name">Version</dataName>
+			<description id="userDefinedAgreementFields.version.desc">Version</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<!-- collateral static data uer defined booking fields -->
+		<!-- collateral static data uer defined exposure fields -->
+		<collateralStaticData id="userDefinedExposureFields.subRequestMade">
+			<type>User Defined Exposure Fields</type>
+			<dataName id="userDefinedExposureFields.subRequestMade.name">Sub Request Made</dataName>
+			<description id="userDefinedExposureFields.subRequestMade.desc">Default Sub Request Made</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="userDefinedExposureFields.subRequestReceived">
+			<type>User Defined Exposure Fields</type>
+			<dataName id="userDefinedExposureFields.subRequestReceived.name">Sub Request Received</dataName>
+			<description id="userDefinedExposureFields.subRequestReceived.desc">Sub Request Received</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<!-- collateral static data uer defined security fields -->
+		<!-- collateral static data uer view group -->
+		<collateralStaticData id="viewGroup.G1">
+			<type>User Defined Exposure Fields</type>
+			<dataName id="viewGroup.G1.name">G1</dataName>
+			<description id="viewGroup.G1.desc">G1</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="viewGroup.G2">
+			<type>User Defined Exposure Fields</type>
+			<dataName id="viewGroup.G2.name">G2</dataName>
+			<description id="viewGroup.G2.desc">G2</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="viewGroup.G3">
+			<type>User Defined Exposure Fields</type>
+			<dataName id="viewGroup.G3.name">G3</dataName>
+			<description id="viewGroup.G3.desc">G3</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="viewGroup.smoke">
+			<type>User Defined Exposure Fields</type>
+			<dataName id="viewGroup.smoke.name">smoke</dataName>
+			<description id="viewGroup.smoke.desc">smoke</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="viewGroup.smoke2">
+			<type>User Defined Exposure Fields</type>
+			<dataName id="viewGroup.smoke2.name">smoke2</dataName>
+			<description id="viewGroup.smoke2.desc">smoke2</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<!-- agreement category -->
+		<collateralStaticData id="agmt.ctgy.dr">
+			<dataName id="agmt.ctgy.dr.name">Dollar Repo</dataName>
+			<description id="agmt.ctgy.dr.desc">Dollar Repo</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="agmt.ctgy.is">
+			<dataName id="agmt.ctgy.is.name">IR Swaps</dataName>
+			<description id="agmt.ctgy.is.desc">IR Swaps</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<collateralStaticData id="agmt.ctgy.ndr">
+			<dataName id="agmt.ctgy.ndr.name">Non Dollar Repo</dataName>
+			<description id="agmt.ctgy.ndr.desc">Non Dollar Repo</description>
+			<status>enabled</status>
+		</collateralStaticData>
+		<!-- system data Currency -->
+		<systemStaticData id="ccy.adp">
+			<type>Currency</type>
+			<dataName id="ccy.adp.name">ADP</dataName>
+			<description id="ccy.adp.desc">Andorran Peseta</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.aed">
+			<type>Currency</type>
+			<dataName id="ccy.aed.name">AED</dataName>
+			<description id="ccy.aed.desc">United Arab Emirates Dirham</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.afa">
+			<type>Currency</type>
+			<dataName id="ccy.afa.name">AFA</dataName>
+			<description id="ccy.afa.desc">Afghanistan Afghani</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.all">
+			<type>Currency</type>
+			<dataName id="ccy.all.name">ALL</dataName>
+			<description id="ccy.all.desc">Albanian Lek</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.ang">
+			<type>Currency</type>
+			<dataName id="ccy.ang.name">ANG</dataName>
+			<description id="ccy.ang.desc">Netherlands Antillian Guilder</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.aoa">
+			<type>Currency</type>
+			<dataName id="ccy.aoa.name">AOA</dataName>
+			<description id="ccy.aoa.desc">Angolan Kwanza</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.aok">
+			<type>Currency</type>
+			<dataName id="ccy.aok.name">AOK</dataName>
+			<description id="ccy.aok.desc">Angolan Kwanza</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.ara">
+			<type>Currency</type>
+			<dataName id="ccy.ara.name">ARA</dataName>
+			<description id="ccy.ara.desc">Argentinian Austral</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.ats">
+			<type>Currency</type>
+			<dataName id="ccy.ats.name">ATS</dataName>
+			<description id="ccy.ats.desc">Austrian Schilling</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.aud">
+			<type>Currency</type>
+			<dataName id="ccy.aud.name">AUD</dataName>
+			<description id="ccy.aud.desc">Australian Dollar</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.awg">
+			<type>Currency</type>
+			<dataName id="ccy.awg.name">AWG</dataName>
+			<description id="ccy.awg.desc">Aruban Florin</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.bbd">
+			<type>Currency</type>
+			<dataName id="ccy.bbd.name">BBD</dataName>
+			<description id="ccy.bbd.desc">Barbados Dollar</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.bdt">
+			<type>Currency</type>
+			<dataName id="ccy.bdt.name">BDT</dataName>
+			<description id="ccy.bdt.desc">Bangladeshi Taka</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.bef">
+			<type>Currency</type>
+			<dataName id="ccy.bef.name">BEF</dataName>
+			<description id="ccy.bef.desc">Belgian Franc</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.bgl">
+			<type>Currency</type>
+			<dataName id="ccy.bgl.name">BGL</dataName>
+			<description id="ccy.bgl.desc">Bulgarian Lev</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.bgn">
+			<type>Currency</type>
+			<dataName id="ccy.bgn.name">BGN</dataName>
+			<description id="ccy.bgn.desc">Bulgarian Lev</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.bhd">
+			<type>Currency</type>
+			<dataName id="ccy.bhd.name">BHD</dataName>
+			<description id="ccy.bhd.desc">Bahraini Dinar</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.bif">
+			<type>Currency</type>
+			<dataName id="ccy.bif.name">BIF</dataName>
+			<description id="ccy.bif.desc">Burundi Franc</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.bmd">
+			<type>Currency</type>
+			<dataName id="ccy.bmd.name">BMD</dataName>
+			<description id="ccy.bmd.desc">Bermudian Dollar</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.bnd">
+			<type>Currency</type>
+			<dataName id="ccy.bnd.name">BND</dataName>
+			<description id="ccy.bnd.desc">Brunei Dollar</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.bob">
+			<type>Currency</type>
+			<dataName id="ccy.bob.name">BOB</dataName>
+			<description id="ccy.bob.desc">Bolivian Boliviano</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.brc">
+			<type>Currency</type>
+			<dataName id="ccy.brc.name">BRC</dataName>
+			<description id="ccy.brc.desc">Brazilian Cruzeiro</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.brl">
+			<type>Currency</type>
+			<dataName id="ccy.brl.name">BRL</dataName>
+			<description id="ccy.brl.desc">Brazilian Real</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.bsd">
+			<type>Currency</type>
+			<dataName id="ccy.bsd.name">BSD</dataName>
+			<description id="ccy.bsd.desc">Bahamian Dollar</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.btn">
+			<type>Currency</type>
+			<dataName id="ccy.btn.name">BTN</dataName>
+			<description id="ccy.btn.desc">Bhutan Ngultrum</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.buk">
+			<type>Currency</type>
+			<dataName id="ccy.buk.name">BUK</dataName>
+			<description id="ccy.buk.desc">Burma Kyat</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.bwp">
+			<type>Currency</type>
+			<dataName id="ccy.bwp.name">BWP</dataName>
+			<description id="ccy.bwp.desc">Botswanian Pula</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.bzd">
+			<type>Currency</type>
+			<dataName id="ccy.bzd.name">BZD</dataName>
+			<description id="ccy.bzd.desc">Belize Dollar</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.cad">
+			<type>Currency</type>
+			<dataName id="ccy.cad.name">CAD</dataName>
+			<description id="ccy.cad.desc">Canadian Dollar</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.ccy">
+			<type>Currency</type>
+			<dataName id="ccy.ccy.name">CCY</dataName>
+			<description id="ccy.ccy.desc">CCY DESC</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.chf">
+			<type>Currency</type>
+			<dataName id="ccy.chf.name">CHF</dataName>
+			<description id="ccy.chf.desc">Swiss Franc</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.clf">
+			<type>Currency</type>
+			<dataName id="ccy.clf.name">CLF</dataName>
+			<description id="ccy.clf.desc">Chilean Unidades de Fomento</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.clp">
+			<type>Currency</type>
+			<dataName id="ccy.clp.name">CLP</dataName>
+			<description id="ccy.clp.desc">Chilean Peso</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.cny">
+			<type>Currency</type>
+			<dataName id="ccy.cny.name">CNY</dataName>
+			<description id="ccy.cny.desc">Yuan (Chinese) Renminbi</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.cop">
+			<type>Currency</type>
+			<dataName id="ccy.cop.name">COP</dataName>
+			<description id="ccy.cop.desc">Colombian Peso</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.crc">
+			<type>Currency</type>
+			<dataName id="ccy.crc.name">CRC</dataName>
+			<description id="ccy.crc.desc">Costa Rican Colon</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.csk">
+			<type>Currency</type>
+			<dataName id="ccy.csk.name">CSK</dataName>
+			<description id="ccy.csk.desc">Czech Koruna</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.cup">
+			<type>Currency</type>
+			<dataName id="ccy.cup.name">CUP</dataName>
+			<description id="ccy.cup.desc">Cuban Peso</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.cve">
+			<type>Currency</type>
+			<dataName id="ccy.cve.name">CVE</dataName>
+			<description id="ccy.cve.desc">Cape Verde Escudo</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.cyp">
+			<type>Currency</type>
+			<dataName id="ccy.cyp.name">CYP</dataName>
+			<description id="ccy.cyp.desc">Cyprus Pound</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.czk">
+			<type>Currency</type>
+			<dataName id="ccy.czk.name">CZK</dataName>
+			<description id="ccy.czk.desc">Czech Koruna</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.ddm">
+			<type>Currency</type>
+			<dataName id="ccy.ddm.name">DDM</dataName>
+			<description id="ccy.ddm.desc">East German Mark (DDR)</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.dem">
+			<type>Currency</type>
+			<dataName id="ccy.dem.name">DEM</dataName>
+			<description id="ccy.dem.desc">Deutsche Mark</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.djf">
+			<type>Currency</type>
+			<dataName id="ccy.djf.name">DJF</dataName>
+			<description id="ccy.djf.desc">Djibouti Franc</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.dkk">
+			<type>Currency</type>
+			<dataName id="ccy.dkk.name">DKK</dataName>
+			<description id="ccy.dkk.desc">Danish Krone</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.dop">
+			<type>Currency</type>
+			<dataName id="ccy.dop.name">DOP</dataName>
+			<description id="ccy.dop.desc">Dominican Peso</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.dzd">
+			<type>Currency</type>
+			<dataName id="ccy.dzd.name">DZD</dataName>
+			<description id="ccy.dzd.desc">Algerian Dinar</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.ecs">
+			<type>Currency</type>
+			<dataName id="ccy.ecs.name">ECS</dataName>
+			<description id="ccy.ecs.desc">Ecuador Sucre</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.egp">
+			<type>Currency</type>
+			<dataName id="ccy.egp.name">EGP</dataName>
+			<description id="ccy.egp.desc">Egyptian Pound</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.ekr">
+			<type>Currency</type>
+			<dataName id="ccy.ekr.name">EKR</dataName>
+			<description id="ccy.ekr.desc">Estonian Krone</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.esp">
+			<type>Currency</type>
+			<dataName id="ccy.esp.name">ESP</dataName>
+			<description id="ccy.esp.desc">Spanish Peseta</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.etb">
+			<type>Currency</type>
+			<dataName id="ccy.etb.name">ETB</dataName>
+			<description id="ccy.etb.desc">Ethiopian Birr</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.eur">
+			<type>Currency</type>
+			<dataName id="ccy.eur.name">EUR</dataName>
+			<description id="ccy.eur.desc">Euro</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.fim">
+			<type>Currency</type>
+			<dataName id="ccy.fim.name">FIM</dataName>
+			<description id="ccy.fim.desc">Finnish Markka</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.fjd">
+			<type>Currency</type>
+			<dataName id="ccy.fjd.name">FJD</dataName>
+			<description id="ccy.fjd.desc">Fiji Dollar</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.fkp">
+			<type>Currency</type>
+			<dataName id="ccy.fkp.name">FKP</dataName>
+			<description id="ccy.fkp.desc">Falkland Islands Pound</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.frf">
+			<type>Currency</type>
+			<dataName id="ccy.frf.name">FRF</dataName>
+			<description id="ccy.frf.desc">French Franc</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.gbp">
+			<type>Currency</type>
+			<dataName id="ccy.gbp.name">GBP</dataName>
+			<description id="ccy.gbp.desc">British Pound</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.ghc">
+			<type>Currency</type>
+			<dataName id="ccy.ghc.name">GHC</dataName>
+			<description id="ccy.ghc.desc">Ghanaian Cedi</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.gip">
+			<type>Currency</type>
+			<dataName id="ccy.gip.name">GIP</dataName>
+			<description id="ccy.gip.desc">Gibraltar Pound</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.gmd">
+			<type>Currency</type>
+			<dataName id="ccy.gmd.name">GMD</dataName>
+			<description id="ccy.gmd.desc">Gambian Dalasi</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.gnf">
+			<type>Currency</type>
+			<dataName id="ccy.gnf.name">GNF</dataName>
+			<description id="ccy.gnf.desc">Guinea Franc</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.grd">
+			<type>Currency</type>
+			<dataName id="ccy.grd.name">GRD</dataName>
+			<description id="ccy.grd.desc">Greek Drachma</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.gtq">
+			<type>Currency</type>
+			<dataName id="ccy.gtq.name">GTQ</dataName>
+			<description id="ccy.gtq.desc">Guatemalan Quetzal</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.gwp">
+			<type>Currency</type>
+			<dataName id="ccy.gwp.name">GWP</dataName>
+			<description id="ccy.gwp.desc">Guinea-Bissau Peso</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.gyd">
+			<type>Currency</type>
+			<dataName id="ccy.gyd.name">GYD</dataName>
+			<description id="ccy.gyd.desc">Guyanan Dollar</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.hkd">
+			<type>Currency</type>
+			<dataName id="ccy.hkd.name">HKD</dataName>
+			<description id="ccy.hkd.desc">Hong Kong Dollar</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.hnl">
+			<type>Currency</type>
+			<dataName id="ccy.hnl.name">HNL</dataName>
+			<description id="ccy.hnl.desc">Honduran Lempira</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.hrk">
+			<type>Currency</type>
+			<dataName id="ccy.hrk.name">HRK</dataName>
+			<description id="ccy.hrk.desc">Croatian Kuna</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.htg">
+			<type>Currency</type>
+			<dataName id="ccy.htg.name">HTG</dataName>
+			<description id="ccy.htg.desc">Haitian Gourde</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.huf">
+			<type>Currency</type>
+			<dataName id="ccy.huf.name">HUF</dataName>
+			<description id="ccy.huf.desc">Hungarian Forint</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.idr">
+			<type>Currency</type>
+			<dataName id="ccy.idr.name">IDR</dataName>
+			<description id="ccy.idr.desc">Indonesian Rupiah</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.iep">
+			<type>Currency</type>
+			<dataName id="ccy.iep.name">IEP</dataName>
+			<description id="ccy.iep.desc">Irish Punt</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.ils">
+			<type>Currency</type>
+			<dataName id="ccy.ils.name">ILS</dataName>
+			<description id="ccy.ils.desc">Israeli Shekel</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.inr">
+			<type>Currency</type>
+			<dataName id="ccy.inr.name">INR</dataName>
+			<description id="ccy.inr.desc">Indian Rupee</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.iqd">
+			<type>Currency</type>
+			<dataName id="ccy.iqd.name">IQD</dataName>
+			<description id="ccy.iqd.desc">Iraqi Dinar</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.irr">
+			<type>Currency</type>
+			<dataName id="ccy.irr.name">IRR</dataName>
+			<description id="ccy.irr.desc">Iranian Rial</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.isk">
+			<type>Currency</type>
+			<dataName id="ccy.isk.name">ISK</dataName>
+			<description id="ccy.isk.desc">Iceland Krona</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.itl">
+			<type>Currency</type>
+			<dataName id="ccy.itl.name">ITL</dataName>
+			<description id="ccy.itl.desc">Italian Lira</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.jmd">
+			<type>Currency</type>
+			<dataName id="ccy.jmd.name">JMD</dataName>
+			<description id="ccy.jmd.desc">Jamaican Dollar</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.jod">
+			<type>Currency</type>
+			<dataName id="ccy.jod.name">JOD</dataName>
+			<description id="ccy.jod.desc">Jordanian Dinar</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.jpy">
+			<type>Currency</type>
+			<dataName id="ccy.jpy.name">JPY</dataName>
+			<description id="ccy.jpy.desc">Japanese Yen</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.kes">
+			<type>Currency</type>
+			<dataName id="ccy.kes.name">KES</dataName>
+			<description id="ccy.kes.desc">Kenyan Schilling</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.khr">
+			<type>Currency</type>
+			<dataName id="ccy.khr.name">KHR</dataName>
+			<description id="ccy.khr.desc">Kampuchean (Cambodian) Riel</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.kmf">
+			<type>Currency</type>
+			<dataName id="ccy.kmf.name">KMF</dataName>
+			<description id="ccy.kmf.desc">Comoros Franc</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.kpw">
+			<type>Currency</type>
+			<dataName id="ccy.kpw.name">KPW</dataName>
+			<description id="ccy.kpw.desc">North Korean Won</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.krw">
+			<type>Currency</type>
+			<dataName id="ccy.krw.name">KRW</dataName>
+			<description id="ccy.krw.desc">South Korean Won</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.kwd">
+			<type>Currency</type>
+			<dataName id="ccy.kwd.name">KWD</dataName>
+			<description id="ccy.kwd.desc">Kuwaiti Dinar</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.kyd">
+			<type>Currency</type>
+			<dataName id="ccy.kyd.name">KYD</dataName>
+			<description id="ccy.kyd.desc">Cayman Islands Dollar</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.lak">
+			<type>Currency</type>
+			<dataName id="ccy.lak.name">LAK</dataName>
+			<description id="ccy.lak.desc">Lao Kip</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.lbp">
+			<type>Currency</type>
+			<dataName id="ccy.lbp.name">LBP</dataName>
+			<description id="ccy.lbp.desc">Lebanese Pound</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.lkr">
+			<type>Currency</type>
+			<dataName id="ccy.lkr.name">LKR</dataName>
+			<description id="ccy.lkr.desc">Sri Lanka Rupee</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.lrd">
+			<type>Currency</type>
+			<dataName id="ccy.lrd.name">LRD</dataName>
+			<description id="ccy.lrd.desc">Liberian Dollar</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.lsl">
+			<type>Currency</type>
+			<dataName id="ccy.lsl.name">LSL</dataName>
+			<description id="ccy.lsl.desc">Lesotho Loti</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.ltl">
+			<type>Currency</type>
+			<dataName id="ccy.ltl.name">LTL</dataName>
+			<description id="ccy.ltl.desc">Lithuanian Litas</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.luf">
+			<type>Currency</type>
+			<dataName id="ccy.luf.name">LUF</dataName>
+			<description id="ccy.luf.desc">Luxembourg Franc</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.lvl">
+			<type>Currency</type>
+			<dataName id="ccy.lvl.name">LVL</dataName>
+			<description id="ccy.lvl.desc">Latvian lats</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.lyd">
+			<type>Currency</type>
+			<dataName id="ccy.lyd.name">LYD</dataName>
+			<description id="ccy.lyd.desc">Libyan Dinar</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.mad">
+			<type>Currency</type>
+			<dataName id="ccy.mad.name">MAD</dataName>
+			<description id="ccy.mad.desc">Moroccan Dirham</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.mgf">
+			<type>Currency</type>
+			<dataName id="ccy.mgf.name">MGF</dataName>
+			<description id="ccy.mgf.desc">Malagasy Franc</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.mnt">
+			<type>Currency</type>
+			<dataName id="ccy.mnt.name">MNT</dataName>
+			<description id="ccy.mnt.desc">Mongolian Tugrik</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.mop">
+			<type>Currency</type>
+			<dataName id="ccy.mop.name">MOP</dataName>
+			<description id="ccy.mop.desc">Macau Pataca</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.mro">
+			<type>Currency</type>
+			<dataName id="ccy.mro.name">MRO</dataName>
+			<description id="ccy.mro.desc">Mauritanian Ouguiya</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.mtl">
+			<type>Currency</type>
+			<dataName id="ccy.mtl.name">MTL</dataName>
+			<description id="ccy.mtl.desc">Maltese Lira</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.mur">
+			<type>Currency</type>
+			<dataName id="ccy.mur.name">MUR</dataName>
+			<description id="ccy.mur.desc">Mauritius Rupee</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.mvr">
+			<type>Currency</type>
+			<dataName id="ccy.mvr.name">MVR</dataName>
+			<description id="ccy.mvr.desc">Maldive Rufiyaa</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.mwk">
+			<type>Currency</type>
+			<dataName id="ccy.mwk.name">MWK</dataName>
+			<description id="ccy.mwk.desc">Malawi Kwacha</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.mxn">
+			<type>Currency</type>
+			<dataName id="ccy.mxn.name">MXN</dataName>
+			<description id="ccy.mxn.desc">Mexican Peso</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.mxp">
+			<type>Currency</type>
+			<dataName id="ccy.mxp.name">MXP</dataName>
+			<description id="ccy.mxp.desc">Mexican Peso</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.myr">
+			<type>Currency</type>
+			<dataName id="ccy.myr.name">MYR</dataName>
+			<description id="ccy.myr.desc">Malaysian Ringgit</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.mzm">
+			<type>Currency</type>
+			<dataName id="ccy.mzm.name">MZM</dataName>
+			<description id="ccy.mzm.desc">Mozambique Metical</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.mzn">
+			<type>Currency</type>
+			<dataName id="ccy.mzn.name">MZN</dataName>
+			<description id="ccy.mzn.desc">Mozambique Metical</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.ngn">
+			<type>Currency</type>
+			<dataName id="ccy.ngn.name">NGN</dataName>
+			<description id="ccy.ngn.desc">Nigerian Naira</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.nic">
+			<type>Currency</type>
+			<dataName id="ccy.nic.name">NIC</dataName>
+			<description id="ccy.nic.desc">Nicaraguan Cordoba</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.nlg">
+			<type>Currency</type>
+			<dataName id="ccy.nlg.name">NLG</dataName>
+			<description id="ccy.nlg.desc">Dutch Guilder</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.nok">
+			<type>Currency</type>
+			<dataName id="ccy.nok.name">NOK</dataName>
+			<description id="ccy.nok.desc">Norwegian Kroner</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.npr">
+			<type>Currency</type>
+			<dataName id="ccy.npr.name">NPR</dataName>
+			<description id="ccy.npr.desc">Nepalese Rupee</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.nzd">
+			<type>Currency</type>
+			<dataName id="ccy.nzd.name">NZD</dataName>
+			<description id="ccy.nzd.desc">New Zealand Dollar</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.omr">
+			<type>Currency</type>
+			<dataName id="ccy.omr.name">OMR</dataName>
+			<description id="ccy.omr.desc">Omani Rial</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.pab">
+			<type>Currency</type>
+			<dataName id="ccy.pab.name">PAB</dataName>
+			<description id="ccy.pab.desc">Panamanian Balboa</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.pei">
+			<type>Currency</type>
+			<dataName id="ccy.pei.name">PEI</dataName>
+			<description id="ccy.pei.desc">Peruvian Inti</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.pgk">
+			<type>Currency</type>
+			<dataName id="ccy.pgk.name">PGK</dataName>
+			<description id="ccy.pgk.desc">Papua New Guinea Kina</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.php">
+			<type>Currency</type>
+			<dataName id="ccy.php.name">PHP</dataName>
+			<description id="ccy.php.desc">Philippine Peso</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.pkr">
+			<type>Currency</type>
+			<dataName id="ccy.pkr.name">PKR</dataName>
+			<description id="ccy.pkr.desc">Pakistan Rupee</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.pln">
+			<type>Currency</type>
+			<dataName id="ccy.pln.name">PLN</dataName>
+			<description id="ccy.pln.desc">Poland Zloty</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.plz">
+			<type>Currency</type>
+			<dataName id="ccy.plz.name">PLZ</dataName>
+			<description id="ccy.plz.desc">Polish Zloty</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.pte">
+			<type>Currency</type>
+			<dataName id="ccy.pte.name">PTE</dataName>
+			<description id="ccy.pte.desc">Portuguese Escudo</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.pyg">
+			<type>Currency</type>
+			<dataName id="ccy.pyg.name">PYG</dataName>
+			<description id="ccy.pyg.desc">Paraguay Guarani</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.qar">
+			<type>Currency</type>
+			<dataName id="ccy.qar.name">QAR</dataName>
+			<description id="ccy.qar.desc">Qatari Rial</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.rol">
+			<type>Currency</type>
+			<dataName id="ccy.rol.name">ROL</dataName>
+			<description id="ccy.rol.desc">Romanian Leu</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.ron">
+			<type>Currency</type>
+			<dataName id="ccy.ron.name">RON</dataName>
+			<description id="ccy.ron.desc">Romanian Leu</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.rub">
+			<type>Currency</type>
+			<dataName id="ccy.rub.name">RUB</dataName>
+			<description id="ccy.rub.desc">Russian Ruble</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.rwf">
+			<type>Currency</type>
+			<dataName id="ccy.rwf.name">RWF</dataName>
+			<description id="ccy.rwf.desc">Rwanda Franc</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.sar">
+			<type>Currency</type>
+			<dataName id="ccy.sar.name">SAR</dataName>
+			<description id="ccy.sar.desc">Saudi Arabian Riyal</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.sbd">
+			<type>Currency</type>
+			<dataName id="ccy.sbd.name">SBD</dataName>
+			<description id="ccy.sbd.desc">Solomon Islands Dollar</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.scd">
+			<type>Currency</type>
+			<dataName id="ccy.scd.name">SCD</dataName>
+			<description id="ccy.scd.desc">Serbian Dinar</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.scr">
+			<type>Currency</type>
+			<dataName id="ccy.scr.name">SCR</dataName>
+			<description id="ccy.scr.desc">Seychelles Rupee</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.sdp">
+			<type>Currency</type>
+			<dataName id="ccy.sdp.name">SDP</dataName>
+			<description id="ccy.sdp.desc">Sudanese Pound</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.sek">
+			<type>Currency</type>
+			<dataName id="ccy.sek.name">SEK</dataName>
+			<description id="ccy.sek.desc">Swedish Krona</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.sgd">
+			<type>Currency</type>
+			<dataName id="ccy.sgd.name">SGD</dataName>
+			<description id="ccy.sgd.desc">Singapore Dollar</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.shp">
+			<type>Currency</type>
+			<dataName id="ccy.shp.name">SHP</dataName>
+			<description id="ccy.shp.desc">St. Helena Pound</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.skk">
+			<type>Currency</type>
+			<dataName id="ccy.skk.name">SKK</dataName>
+			<description id="ccy.skk.desc">Slovak Koruna</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.sll">
+			<type>Currency</type>
+			<dataName id="ccy.sll.name">SLL</dataName>
+			<description id="ccy.sll.desc">Sierra Leone Leone</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.sos">
+			<type>Currency</type>
+			<dataName id="ccy.sos.name">SOS</dataName>
+			<description id="ccy.sos.desc">Somali Schilling</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.srg">
+			<type>Currency</type>
+			<dataName id="ccy.srg.name">SRG</dataName>
+			<description id="ccy.srg.desc">Suriname Guilder</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.std">
+			<type>Currency</type>
+			<dataName id="ccy.std.name">STD</dataName>
+			<description id="ccy.std.desc">Sao Tome and Principe Dobra</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.sur">
+			<type>Currency</type>
+			<dataName id="ccy.sur.name">SUR</dataName>
+			<description id="ccy.sur.desc">USSR Rouble</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.svc">
+			<type>Currency</type>
+			<dataName id="ccy.svc.name">SVC</dataName>
+			<description id="ccy.svc.desc">El Salvador Colon</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.syp">
+			<type>Currency</type>
+			<dataName id="ccy.syp.name">SYP</dataName>
+			<description id="ccy.syp.desc">Syrian Potmd</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.szl">
+			<type>Currency</type>
+			<dataName id="ccy.szl.name">SZL</dataName>
+			<description id="ccy.szl.desc">Swaziland Lilangeni</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.thb">
+			<type>Currency</type>
+			<dataName id="ccy.thb.name">THB</dataName>
+			<description id="ccy.thb.desc">Thai Bhat</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.tnd">
+			<type>Currency</type>
+			<dataName id="ccy.tnd.name">TND</dataName>
+			<description id="ccy.tnd.desc">Tunisian Dinar</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.top">
+			<type>Currency</type>
+			<dataName id="ccy.top.name">TOP</dataName>
+			<description id="ccy.top.desc">Tongan Pa'anga</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.tpe">
+			<type>Currency</type>
+			<dataName id="ccy.tpe.name">TPE</dataName>
+			<description id="ccy.tpe.desc">East Timor Escudo</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.trl">
+			<type>Currency</type>
+			<dataName id="ccy.trl.name">TRL</dataName>
+			<description id="ccy.trl.desc">Turkish Lira</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.try">
+			<type>Currency</type>
+			<dataName id="ccy.try.name">TRY</dataName>
+			<description id="ccy.try.desc">Yeni Turkish Lira</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.ttd">
+			<type>Currency</type>
+			<dataName id="ccy.ttd.name">TTD</dataName>
+			<description id="ccy.ttd.desc">Trinidad and Tobago Dollar</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.twd">
+			<type>Currency</type>
+			<dataName id="ccy.twd.name">TWD</dataName>
+			<description id="ccy.twd.desc">Taiwan Dollar</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.tzs">
+			<type>Currency</type>
+			<dataName id="ccy.tzs.name">TZS</dataName>
+			<description id="ccy.tzs.desc">Tanzanian Schilling</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.ugs">
+			<type>Currency</type>
+			<dataName id="ccy.ugs.name">UGS</dataName>
+			<description id="ccy.ugs.desc">Uganda Shilling</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.usd">
+			<type>Currency</type>
+			<dataName id="ccy.usd.name">USD</dataName>
+			<description id="ccy.usd.desc">US Dollar</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.uyp">
+			<type>Currency</type>
+			<dataName id="ccy.uyp.name">UYP</dataName>
+			<description id="ccy.uyp.desc">Uruguayan Peso</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.veb">
+			<type>Currency</type>
+			<dataName id="ccy.veb.name">VEB</dataName>
+			<description id="ccy.veb.desc">Venezualan Bolivar</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.vnd">
+			<type>Currency</type>
+			<dataName id="ccy.vnd.name">VND</dataName>
+			<description id="ccy.vnd.desc">Vietnamese Dong</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.vuv">
+			<type>Currency</type>
+			<dataName id="ccy.vuv.name">VUV</dataName>
+			<description id="ccy.vuv.desc">Vanuatu Vatu</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.wst">
+			<type>Currency</type>
+			<dataName id="ccy.wst.name">WST</dataName>
+			<description id="ccy.wst.desc">Samoan Tala</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.ydd">
+			<type>Currency</type>
+			<dataName id="ccy.ydd.name">YDD</dataName>
+			<description id="ccy.ydd.desc">Democratic Yemeni Dinar</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.yer">
+			<type>Currency</type>
+			<dataName id="ccy.yer.name">YER</dataName>
+			<description id="ccy.yer.desc">Yemeni Rial</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.yud">
+			<type>Currency</type>
+			<dataName id="ccy.yud.name">YUD</dataName>
+			<description id="ccy.yud.desc">New Yugoslavia Dinar</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.yum">
+			<type>Currency</type>
+			<dataName id="ccy.yum.name">YUM</dataName>
+			<description id="ccy.yum.desc">Yugoslavian Dinar</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.zar">
+			<type>Currency</type>
+			<dataName id="ccy.zar.name">ZAR</dataName>
+			<description id="ccy.zar.desc">South African Rand</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.zmk">
+			<type>Currency</type>
+			<dataName id="ccy.zmk.name">ZMK</dataName>
+			<description id="ccy.zmk.desc">Zambian Kwacha</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.zrz">
+			<type>Currency</type>
+			<dataName id="ccy.zrz.name">ZRZ</dataName>
+			<description id="ccy.zrz.desc">Zaire Zaire</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ccy.zwd">
+			<type>Currency</type>
+			<dataName id="ccy.zwd.name">ZWD</dataName>
+			<description id="ccy.zwd.desc">Zimbabwe Dollar</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<!-- system static Country -->
+		<systemStaticData id="ctr.ae">
+			<type>Country</type>
+			<dataName id="ctr.ae.name">AE</dataName>
+			<description id="ctr.ae.desc">UNITED ARAB EMIRATES</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.an">
+			<type>Country</type>
+			<dataName id="ctr.an.name">AN</dataName>
+			<description id="ctr.an.desc">NETHERLANDS ANTILLES</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.ar">
+			<type>Country</type>
+			<dataName id="ctr.ar.name">AR</dataName>
+			<description id="ctr.ar.desc">ARGENTINA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.at">
+			<type>Country</type>
+			<dataName id="ctr.at.name">AT</dataName>
+			<description id="ctr.at.desc">AUSTRIA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.au">
+			<type>Country</type>
+			<dataName id="ctr.au.name">AU</dataName>
+			<description id="ctr.au.desc">AUSTRALIA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.be">
+			<type>Country</type>
+			<dataName id="ctr.be.name">BE</dataName>
+			<description id="ctr.be.desc">BELGIUM</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.br">
+			<type>Country</type>
+			<dataName id="ctr.br.name">BR</dataName>
+			<description id="ctr.br.desc">BRAZIL</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.bw">
+			<type>Country</type>
+			<dataName id="ctr.bw.name">BW</dataName>
+			<description id="ctr.bw.desc">BOTSWANA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.ca">
+			<type>Country</type>
+			<dataName id="ctr.ca.name">CA</dataName>
+			<description id="ctr.ca.desc">CANADA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.ch">
+			<type>Country</type>
+			<dataName id="ctr.ch.name">CH</dataName>
+			<description id="ctr.ch.desc">SWITZERLAND</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.cl">
+			<type>Country</type>
+			<dataName id="ctr.cl.name">CL</dataName>
+			<description id="ctr.cl.desc">CHILE</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.cn">
+			<type>Country</type>
+			<dataName id="ctr.cn.name">CN</dataName>
+			<description id="ctr.cn.desc">CHINA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.co">
+			<type>Country</type>
+			<dataName id="ctr.co.name">CO</dataName>
+			<description id="ctr.co.desc">COLOMBIA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.cz">
+			<type>Country</type>
+			<dataName id="ctr.cz.name">CZ</dataName>
+			<description id="ctr.cz.desc">CZECH REPUBLIC</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.de">
+			<type>Country</type>
+			<dataName id="ctr.de.name">DE</dataName>
+			<description id="ctr.de.desc">GERMANY</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.dk">
+			<type>Country</type>
+			<dataName id="ctr.dk.name">DK</dataName>
+			<description id="ctr.dk.desc">DENMARK</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.ec">
+			<type>Country</type>
+			<dataName id="ctr.ec.name">EC</dataName>
+			<description id="ctr.ec.desc">ECUADOR</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.eg">
+			<type>Country</type>
+			<dataName id="ctr.eg.name">EG</dataName>
+			<description id="ctr.eg.desc">EGYPT</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.eh">
+			<type>Country</type>
+			<dataName id="ctr.eh.name">EH</dataName>
+			<description id="ctr.eh.desc">WESTERN SAHARA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.es">
+			<type>Country</type>
+			<dataName id="ctr.es.name">ES</dataName>
+			<description id="ctr.es.desc">SPAIN</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.eu">
+			<type>Country</type>
+			<dataName id="ctr.eu.name">EU</dataName>
+			<description id="ctr.eu.desc">EUROPE</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.fi">
+			<type>Country</type>
+			<dataName id="ctr.fi.name">FI</dataName>
+			<description id="ctr.fi.desc">FINLAND</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.fm">
+			<type>Country</type>
+			<dataName id="ctr.fm.name">FM</dataName>
+			<description id="ctr.fm.desc">MICRONESIA, FEDERATED STATES OF</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.fr">
+			<type>Country</type>
+			<dataName id="ctr.fr.name">FR</dataName>
+			<description id="ctr.fr.desc">FRANCE</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.gb">
+			<type>Country</type>
+			<dataName id="ctr.gb.name">GB</dataName>
+			<description id="ctr.gb.desc">UNITED KINGDOM</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.gn">
+			<type>Country</type>
+			<dataName id="ctr.gn.name">GN</dataName>
+			<description id="ctr.gn.desc">GUINEA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.gr">
+			<type>Country</type>
+			<dataName id="ctr.gr.name">GR</dataName>
+			<description id="ctr.gr.desc">GREECE</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.gs">
+			<type>Country</type>
+			<dataName id="ctr.gs.name">GS</dataName>
+			<description id="ctr.gs.desc">SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.gt">
+			<type>Country</type>
+			<dataName id="ctr.gt.name">GT</dataName>
+			<description id="ctr.gt.desc">GUATEMALA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.gy">
+			<type>Country</type>
+			<dataName id="ctr.gy.name">GY</dataName>
+			<description id="ctr.gy.desc">GUYANA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.hk">
+			<type>Country</type>
+			<dataName id="ctr.hk.name">HK</dataName>
+			<description id="ctr.hk.desc">HONG KONG</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.hm">
+			<type>Country</type>
+			<dataName id="ctr.hm.name">HM</dataName>
+			<description id="ctr.hm.desc">HEARD ISLAND AND MCDONALD ISLANDS</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.hn">
+			<type>Country</type>
+			<dataName id="ctr.hn.name">HN</dataName>
+			<description id="ctr.hn.desc">HONDURAS</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.ht">
+			<type>Country</type>
+			<dataName id="ctr.ht.name">HT</dataName>
+			<description id="ctr.ht.desc">HAITI</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.hu">
+			<type>Country</type>
+			<dataName id="ctr.hu.name">HU</dataName>
+			<description id="ctr.hu.desc">HUNGARY</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.id">
+			<type>Country</type>
+			<dataName id="ctr.id.name">ID</dataName>
+			<description id="ctr.id.desc">INDONESIA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.ie">
+			<type>Country</type>
+			<dataName id="ctr.ie.name">IE</dataName>
+			<description id="ctr.ie.desc">IRELAND</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.il">
+			<type>Country</type>
+			<dataName id="ctr.il.name">IL</dataName>
+			<description id="ctr.il.desc">ISRAEL</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.in">
+			<type>Country</type>
+			<dataName id="ctr.in.name">IN</dataName>
+			<description id="ctr.in.desc">INDIA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.iq">
+			<type>Country</type>
+			<dataName id="ctr.iq.name">IQ</dataName>
+			<description id="ctr.iq.desc">IRAQ</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.ir">
+			<type>Country</type>
+			<dataName id="ctr.ir.name">IR</dataName>
+			<description id="ctr.ir.desc">IRAN, ISLAMIC REPUBLIC OF</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.is">
+			<type>Country</type>
+			<dataName id="ctr.is.name">IS</dataName>
+			<description id="ctr.is.desc">ICELAND</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.it">
+			<type>Country</type>
+			<dataName id="ctr.it.name">IT</dataName>
+			<description id="ctr.it.desc">ITALY</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.jm">
+			<type>Country</type>
+			<dataName id="ctr.jm.name">JM</dataName>
+			<description id="ctr.jm.desc">JAMAICA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.jo">
+			<type>Country</type>
+			<dataName id="ctr.jo.name">JO</dataName>
+			<description id="ctr.jo.desc">JORDAN</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.jp">
+			<type>Country</type>
+			<dataName id="ctr.jp.name">JP</dataName>
+			<description id="ctr.jp.desc">JAPAN</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.ke">
+			<type>Country</type>
+			<dataName id="ctr.ke.name">KE</dataName>
+			<description id="ctr.ke.desc">KENYA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.kg">
+			<type>Country</type>
+			<dataName id="ctr.kg.name">KG</dataName>
+			<description id="ctr.kg.desc">KYRGYZSTAN</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.ki">
+			<type>Country</type>
+			<dataName id="ctr.ki.name">KI</dataName>
+			<description id="ctr.ki.desc">KIRIBATI</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.kn">
+			<type>Country</type>
+			<dataName id="ctr.kn.name">KN</dataName>
+			<description id="ctr.kn.desc">SAINT KITTS AND NEVIS</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.kp">
+			<type>Country</type>
+			<dataName id="ctr.kp.name">KP</dataName>
+			<description id="ctr.kp.desc">KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.kr">
+			<type>Country</type>
+			<dataName id="ctr.kr.name">KR</dataName>
+			<description id="ctr.kr.desc">SOUTH KOREA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.kw">
+			<type>Country</type>
+			<dataName id="ctr.kw.name">KW</dataName>
+			<description id="ctr.kw.desc">KUWAIT</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.kz">
+			<type>Country</type>
+			<dataName id="ctr.kz.name">KZ</dataName>
+			<description id="ctr.kz.desc">KAZAKSTAN</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.l">
+			<type>Country</type>
+			<dataName id="ctr.l.name">L</dataName>
+			<description id="ctr.l.desc">YLIBYAN ARAB JAMAHI</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.RI">
+			<type>Country</type>
+			<dataName id="ctr.RI.name">YA</dataName>
+			<description id="ctr.RI.desc"/>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.la">
+			<type>Country</type>
+			<dataName id="ctr.la.name">LA</dataName>
+			<description id="ctr.la.desc">LAO PEOPLE'S DEMOCRATIC REPUBLIC</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.lb">
+			<type>Country</type>
+			<dataName id="ctr.lb.name">LB</dataName>
+			<description id="ctr.lb.desc">LEBANON</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.lc">
+			<type>Country</type>
+			<dataName id="ctr.lc.name">LC</dataName>
+			<description id="ctr.lc.desc">SAINT LUCIA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.li">
+			<type>Country</type>
+			<dataName id="ctr.li.name">LI</dataName>
+			<description id="ctr.li.desc">LIECHTENSTEIN</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.lk">
+			<type>Country</type>
+			<dataName id="ctr.lk.name">LK</dataName>
+			<description id="ctr.lk.desc">SRI_LANKA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.lr">
+			<type>Country</type>
+			<dataName id="ctr.lr.name">LR</dataName>
+			<description id="ctr.lr.desc">LIBERIA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.ls">
+			<type>Country</type>
+			<dataName id="ctr.ls.name">LS</dataName>
+			<description id="ctr.ls.desc">LESOTHO</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.lt">
+			<type>Country</type>
+			<dataName id="ctr.lt.name">LT</dataName>
+			<description id="ctr.lt.desc">LITHUANIA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.lu">
+			<type>Country</type>
+			<dataName id="ctr.lu.name">LU</dataName>
+			<description id="ctr.lu.desc">LUXEMBOURG</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.lv">
+			<type>Country</type>
+			<dataName id="ctr.lv.name">LV</dataName>
+			<description id="ctr.lv.desc">LATVIA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.ma">
+			<type>Country</type>
+			<dataName id="ctr.ma.name">MA</dataName>
+			<description id="ctr.ma.desc">MOROCCO</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.mc">
+			<type>Country</type>
+			<dataName id="ctr.mc.name">MC</dataName>
+			<description id="ctr.mc.desc">MONACO</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.md">
+			<type>Country</type>
+			<dataName id="ctr.md.name">MD</dataName>
+			<description id="ctr.md.desc">MOLDOVA, REPUBLIC OF</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.mg">
+			<type>Country</type>
+			<dataName id="ctr.mg.name">MG</dataName>
+			<description id="ctr.mg.desc">MADAGASCAR</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.mh">
+			<type>Country</type>
+			<dataName id="ctr.mh.name">MH</dataName>
+			<description id="ctr.mh.desc">MARSHALL ISLANDS</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.mk">
+			<type>Country</type>
+			<dataName id="ctr.mk.name">MK</dataName>
+			<description id="ctr.mk.desc">MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.ml">
+			<type>Country</type>
+			<dataName id="ctr.ml.name">ML</dataName>
+			<description id="ctr.ml.desc">MALI</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.mm">
+			<type>Country</type>
+			<dataName id="ctr.mm.name">MM</dataName>
+			<description id="ctr.mm.desc">MYANMAR</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.mn">
+			<type>Country</type>
+			<dataName id="ctr.mn.name">MN</dataName>
+			<description id="ctr.mn.desc">MONGOLIA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.mo">
+			<type>Country</type>
+			<dataName id="ctr.mo.name">MO</dataName>
+			<description id="ctr.mo.desc">MACAU</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.mp">
+			<type>Country</type>
+			<dataName id="ctr.mp.name">MP</dataName>
+			<description id="ctr.mp.desc">NORTHERN MARIANA ISLANDS</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.mq">
+			<type>Country</type>
+			<dataName id="ctr.mq.name">MQ</dataName>
+			<description id="ctr.mq.desc">MARTINIQUE</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.mr">
+			<type>Country</type>
+			<dataName id="ctr.mr.name">MR</dataName>
+			<description id="ctr.mr.desc">MAURITANIA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.ms">
+			<type>Country</type>
+			<dataName id="ctr.ms.name">MS</dataName>
+			<description id="ctr.ms.desc">MONTSERRAT</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.mt">
+			<type>Country</type>
+			<dataName id="ctr.mt.name">MT</dataName>
+			<description id="ctr.mt.desc">MALTA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.mu">
+			<type>Country</type>
+			<dataName id="ctr.mu.name">MU</dataName>
+			<description id="ctr.mu.desc">MAURITIUS</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.mv">
+			<type>Country</type>
+			<dataName id="ctr.mv.name">MV</dataName>
+			<description id="ctr.mv.desc">MALDIVES</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.mw">
+			<type>Country</type>
+			<dataName id="ctr.mw.name">MW</dataName>
+			<description id="ctr.mw.desc">MALAWI</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.mx">
+			<type>Country</type>
+			<dataName id="ctr.mx.name">MX</dataName>
+			<description id="ctr.mx.desc">MEXICO</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.my">
+			<type>Country</type>
+			<dataName id="ctr.my.name">MY</dataName>
+			<description id="ctr.my.desc">MALAYSIA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.mz">
+			<type>Country</type>
+			<dataName id="ctr.mz.name">MZ</dataName>
+			<description id="ctr.mz.desc">MOZAMBIQUE</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.na">
+			<type>Country</type>
+			<dataName id="ctr.na.name">NA</dataName>
+			<description id="ctr.na.desc">NAMIBIA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.nc">
+			<type>Country</type>
+			<dataName id="ctr.nc.name">NC</dataName>
+			<description id="ctr.nc.desc">NEW CALEDONIA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.ne">
+			<type>Country</type>
+			<dataName id="ctr.ne.name">NE</dataName>
+			<description id="ctr.ne.desc">NIGER</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.nf">
+			<type>Country</type>
+			<dataName id="ctr.nf.name">NF</dataName>
+			<description id="ctr.nf.desc">NORFOLK ISLAND</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.ng">
+			<type>Country</type>
+			<dataName id="ctr.ng.name">NG</dataName>
+			<description id="ctr.ng.desc">NIGERIA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.ni">
+			<type>Country</type>
+			<dataName id="ctr.ni.name">NI</dataName>
+			<description id="ctr.ni.desc">NICARAGUA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.nl">
+			<type>Country</type>
+			<dataName id="ctr.nl.name">NL</dataName>
+			<description id="ctr.nl.desc">NETHERLANDS</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.no">
+			<type>Country</type>
+			<dataName id="ctr.no.name">NO</dataName>
+			<description id="ctr.no.desc">NORWAY</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.np">
+			<type>Country</type>
+			<dataName id="ctr.np.name">NP</dataName>
+			<description id="ctr.np.desc">NEPAL</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.nr">
+			<type>Country</type>
+			<dataName id="ctr.nr.name">NR</dataName>
+			<description id="ctr.nr.desc">NAURU</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.nu">
+			<type>Country</type>
+			<dataName id="ctr.nu.name">NU</dataName>
+			<description id="ctr.nu.desc">NIUE</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.nz">
+			<type>Country</type>
+			<dataName id="ctr.nz.name">NZ</dataName>
+			<description id="ctr.nz.desc">NEW ZEALAND</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.om">
+			<type>Country</type>
+			<dataName id="ctr.om.name">OM</dataName>
+			<description id="ctr.om.desc">OMAN</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.p">
+			<type>Country</type>
+			<dataName id="ctr.p.name">P</dataName>
+			<description id="ctr.p.desc">YPARA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.GU">
+			<type>Country</type>
+			<dataName id="ctr.GU.name">AY</dataName>
+			<description id="ctr.GU.desc"/>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.pa">
+			<type>Country</type>
+			<dataName id="ctr.pa.name">PA</dataName>
+			<description id="ctr.pa.desc">PANAMA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.pe">
+			<type>Country</type>
+			<dataName id="ctr.pe.name">PE</dataName>
+			<description id="ctr.pe.desc">PERU</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.pg">
+			<type>Country</type>
+			<dataName id="ctr.pg.name">PG</dataName>
+			<description id="ctr.pg.desc">PAPUA NEW GUINEA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.ph">
+			<type>Country</type>
+			<dataName id="ctr.ph.name">PH</dataName>
+			<description id="ctr.ph.desc">PHILIPPINES</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.pk">
+			<type>Country</type>
+			<dataName id="ctr.pk.name">PK</dataName>
+			<description id="ctr.pk.desc">PAKISTAN</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.pl">
+			<type>Country</type>
+			<dataName id="ctr.pl.name">PL</dataName>
+			<description id="ctr.pl.desc">POLAND</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.pm">
+			<type>Country</type>
+			<dataName id="ctr.pm.name">PM</dataName>
+			<description id="ctr.pm.desc">SAINT PIERRE AND MIQUELON</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.pn">
+			<type>Country</type>
+			<dataName id="ctr.pn.name">PN</dataName>
+			<description id="ctr.pn.desc">PITCAIRN</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.pr">
+			<type>Country</type>
+			<dataName id="ctr.pr.name">PR</dataName>
+			<description id="ctr.pr.desc">PUERTO RICO</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.ps">
+			<type>Country</type>
+			<dataName id="ctr.ps.name">PS</dataName>
+			<description id="ctr.ps.desc">PALESTINIAN TERRITORY, OCCUPIED</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.pt">
+			<type>Country</type>
+			<dataName id="ctr.pt.name">PT</dataName>
+			<description id="ctr.pt.desc">PORTUGAL</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.pw">
+			<type>Country</type>
+			<dataName id="ctr.pw.name">PW</dataName>
+			<description id="ctr.pw.desc">PALAU</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.qa">
+			<type>Country</type>
+			<dataName id="ctr.qa.name">QA</dataName>
+			<description id="ctr.qa.desc">QATAR</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.re">
+			<type>Country</type>
+			<dataName id="ctr.re.name">RE</dataName>
+			<description id="ctr.re.desc">REUNION</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.ro">
+			<type>Country</type>
+			<dataName id="ctr.ro.name">RO</dataName>
+			<description id="ctr.ro.desc">ROMANIA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.ru">
+			<type>Country</type>
+			<dataName id="ctr.ru.name">RU</dataName>
+			<description id="ctr.ru.desc">RUSSIA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.rw">
+			<type>Country</type>
+			<dataName id="ctr.rw.name">RW</dataName>
+			<description id="ctr.rw.desc">RWANDA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.sa">
+			<type>Country</type>
+			<dataName id="ctr.sa.name">SA</dataName>
+			<description id="ctr.sa.desc">SAUDI ARABIA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.sb">
+			<type>Country</type>
+			<dataName id="ctr.sb.name">SB</dataName>
+			<description id="ctr.sb.desc">SOLOMON ISLANDS</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.sc">
+			<type>Country</type>
+			<dataName id="ctr.sc.name">SC</dataName>
+			<description id="ctr.sc.desc">SEYCHELLES</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.sd">
+			<type>Country</type>
+			<dataName id="ctr.sd.name">SD</dataName>
+			<description id="ctr.sd.desc">SUDAN</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.se">
+			<type>Country</type>
+			<dataName id="ctr.se.name">SE</dataName>
+			<description id="ctr.se.desc">SWEDEN</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.sg">
+			<type>Country</type>
+			<dataName id="ctr.sg.name">SG</dataName>
+			<description id="ctr.sg.desc">SINGAPORE</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.sh">
+			<type>Country</type>
+			<dataName id="ctr.sh.name">SH</dataName>
+			<description id="ctr.sh.desc">SAINT HELENA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.si">
+			<type>Country</type>
+			<dataName id="ctr.si.name">SI</dataName>
+			<description id="ctr.si.desc">SLOVENIA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.sj">
+			<type>Country</type>
+			<dataName id="ctr.sj.name">SJ</dataName>
+			<description id="ctr.sj.desc">SVALBARD AND JAN MAYEN</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.sk">
+			<type>Country</type>
+			<dataName id="ctr.sk.name">SK</dataName>
+			<description id="ctr.sk.desc">SLOVAKIA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.sl">
+			<type>Country</type>
+			<dataName id="ctr.sl.name">SL</dataName>
+			<description id="ctr.sl.desc">SIERRA LEONE</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.sm">
+			<dataName id="ctr.sm.name">SM</dataName>
+			<description id="ctr.sm.desc">SAN MARINO</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.sn">
+			<type>Country</type>
+			<dataName id="ctr.sn.name">SN</dataName>
+			<description id="ctr.sn.desc">SENEGAL</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.so">
+			<type>Country</type>
+			<dataName id="ctr.so.name">SO</dataName>
+			<description id="ctr.so.desc">SOMALIA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.sr">
+			<type>Country</type>
+			<dataName id="ctr.sr.name">SR</dataName>
+			<description id="ctr.sr.desc">SURINAME</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.st">
+			<type>Country</type>
+			<dataName id="ctr.st.name">ST</dataName>
+			<description id="ctr.st.desc">SAO TOME AND PRINCIPE</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.sy">
+			<type>Country</type>
+			<dataName id="ctr.sy.name">SY</dataName>
+			<description id="ctr.sy.desc">SYRIAN ARAB REPUBLIC</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.sz">
+			<type>Country</type>
+			<dataName id="ctr.sz.name">SZ</dataName>
+			<description id="ctr.sz.desc">SWAZILAND</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.tc">
+			<type>Country</type>
+			<dataName id="ctr.tc.name">TC</dataName>
+			<description id="ctr.tc.desc">TURKS AND CAICOS ISLANDS</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.tg">
+			<type>Country</type>
+			<dataName id="ctr.tg.name">TG</dataName>
+			<description id="ctr.tg.desc">TOGO</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.th">
+			<type>Country</type>
+			<dataName id="ctr.th.name">TH</dataName>
+			<description id="ctr.th.desc">THAILAND</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.tj">
+			<type>Country</type>
+			<dataName id="ctr.tj.name">TJ</dataName>
+			<description id="ctr.tj.desc">TAJIKISTAN</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.tk">
+			<type>Country</type>
+			<dataName id="ctr.tk.name">TK</dataName>
+			<description id="ctr.tk.desc">TOKELAU</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.tm">
+			<type>Country</type>
+			<dataName id="ctr.tm.name">TM</dataName>
+			<description id="ctr.tm.desc">TURKMENISTAN</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.tn">
+			<type>Country</type>
+			<dataName id="ctr.tn.name">TN</dataName>
+			<description id="ctr.tn.desc">TUNISIA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.to">
+			<type>Country</type>
+			<dataName id="ctr.to.name">TO</dataName>
+			<description id="ctr.to.desc">TONGA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.tr">
+			<type>Country</type>
+			<dataName id="ctr.tr.name">TR</dataName>
+			<description id="ctr.tr.desc">TURKEY</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.tt">
+			<type>Country</type>
+			<dataName id="ctr.tt.name">TT</dataName>
+			<description id="ctr.tt.desc">TRINIDAD AND TOBAGO</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.tv">
+			<type>Country</type>
+			<dataName id="ctr.tv.name">TV</dataName>
+			<description id="ctr.tv.desc">TUVALU</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.tw">
+			<type>Country</type>
+			<dataName id="ctr.tw.name">TW</dataName>
+			<description id="ctr.tw.desc">TAIWAN</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.tz">
+			<type>Country</type>
+			<dataName id="ctr.tz.name">TZ</dataName>
+			<description id="ctr.tz.desc">TANZANIA, UNITED REPUBLIC OF</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.ua">
+			<type>Country</type>
+			<dataName id="ctr.ua.name">UA</dataName>
+			<description id="ctr.ua.desc">UKRAINE</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.ug">
+			<type>Country</type>
+			<dataName id="ctr.ug.name">UG</dataName>
+			<description id="ctr.ug.desc">UGANDA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.um">
+			<type>Country</type>
+			<dataName id="ctr.um.name">UM</dataName>
+			<description id="ctr.um.desc">UNITED STATES MINOR OUTLYING ISLANDS</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.us">
+			<type>Country</type>
+			<dataName id="ctr.us.name">US</dataName>
+			<description id="ctr.us.desc">UNITED STATES OF AMERICA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.uy">
+			<type>Country</type>
+			<dataName id="ctr.uy.name">UY</dataName>
+			<description id="ctr.uy.desc">URUGUAY</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.uz">
+			<type>Country</type>
+			<dataName id="ctr.uz.name">UZ</dataName>
+			<description id="ctr.uz.desc">UZBEKISTAN</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.va">
+			<type>Country</type>
+			<dataName id="ctr.va.name">VA</dataName>
+			<description id="ctr.va.desc">HOLY SEE (VATICAN CITY STATE)</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.vc">
+			<type>Country</type>
+			<dataName id="ctr.vc.name">VC</dataName>
+			<description id="ctr.vc.desc">SAINT VINCENT AND THE GRENADINES</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.ve">
+			<type>Country</type>
+			<dataName id="ctr.ve.name">VE</dataName>
+			<description id="ctr.ve.desc">VENEZUELA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.vg">
+			<type>Country</type>
+			<dataName id="ctr.vg.name">VG</dataName>
+			<description id="ctr.vg.desc">VIRGIN ISLANDS, BRITISH</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.vi">
+			<type>Country</type>
+			<dataName id="ctr.vi.name">VI</dataName>
+			<description id="ctr.vi.desc">VIRGIN ISLANDS, U.S.</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.vn">
+			<type>Country</type>
+			<dataName id="ctr.vn.name">VN</dataName>
+			<description id="ctr.vn.desc">VIETNAM</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.vu">
+			<type>Country</type>
+			<dataName id="ctr.vu.name">VU</dataName>
+			<description id="ctr.vu.desc">VANUATU</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.wf">
+			<type>Country</type>
+			<dataName id="ctr.wf.name">WF</dataName>
+			<description id="ctr.wf.desc">WALLIS AND FUTUNA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.ws">
+			<type>Country</type>
+			<dataName id="ctr.ws.name">WS</dataName>
+			<description id="ctr.ws.desc">SAMOA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.xe">
+			<type>Country</type>
+			<dataName id="ctr.xe.name">XE</dataName>
+			<description id="ctr.xe.desc">ECU</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.ye">
+			<type>Country</type>
+			<dataName id="ctr.ye.name">YE</dataName>
+			<description id="ctr.ye.desc">YEMEN</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.yt">
+			<type>Country</type>
+			<dataName id="ctr.yt.name">YT</dataName>
+			<description id="ctr.yt.desc">MAYOTTE</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.yu">
+			<type>Country</type>
+			<dataName id="ctr.yu.name">YU</dataName>
+			<description id="ctr.yu.desc">YUGOSLAVIA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.za">
+			<type>Country</type>
+			<dataName id="ctr.za.name">ZA</dataName>
+			<description id="ctr.za.desc">SOUTH AFRICA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.zm">
+			<type>Country</type>
+			<dataName id="ctr.zm.name">ZM</dataName>
+			<description id="ctr.zm.desc">ZAMBIA</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="ctr.zw">
+			<type>Country</type>
+			<dataName id="ctr.zw.name">ZW</dataName>
+			<description id="ctr.zw.desc">ZIMBABWE</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<!-- system static data report cateroty-->
+		<systemStaticData id="system.staticData.reportCategory.endOfDay">
+			<type>Report Category</type>
+			<dataName id="system.staticData.reportCategory.endOfDay.name">End of day</dataName>
+			<description id="system.staticData.reportCategory.endOfDay.desc">End of day report</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="system.staticData.reportCategory.endOfMonth">
+			<type>Report Category</type>
+			<dataName id="system.staticData.reportCategory.endOfMonth.name">End of month</dataName>
+			<description id="system.staticData.reportCategory.endOfMonth.desc">End of month report</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="system.staticData.reportCategory.endOfYear">
+			<type>Report Category</type>
+			<dataName id="system.staticData.reportCategory.endOfYear.name">End of year</dataName>
+			<description id="system.staticData.reportCategory.endOfYear.desc">End of year report</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<!-- system static data time zone-->
+		<systemStaticData id="system.staticData.timeZone.adt">
+			<type>TimeZone</type>
+			<dataName id="system.staticData.timeZone.adt.name">ADT</dataName>
+			<description id="system.staticData.timeZone.adt.desc">ADT- Atlantic Daylight Time, as GMT-3</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="system.staticData.timeZone.americaOrNewYork">
+			<type>TimeZone</type>
+			<dataName id="system.staticData.timeZone.americaOrNewYork.name">America/New_York</dataName>
+			<description id="system.staticData.timeZone.americaOrNewYork.desc">NYK</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="system.staticData.timeZone.asiaOrTokyo">
+			<type>TimeZone</type>
+			<dataName id="system.staticData.timeZone.asiaOrTokyo.name">Asia/Tokyo</dataName>
+			<description id="system.staticData.timeZone.asiaOrTokyo.desc">TKY</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="system.staticData.timeZone.cet">
+			<type>TimeZone</type>
+			<dataName id="system.staticData.timeZone.cet.name">CET</dataName>
+			<description id="system.staticData.timeZone.cet.desc">CET- Central European Time, as GMT+1</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="system.staticData.timeZone.cst">
+			<type>TimeZone</type>
+			<dataName id="system.staticData.timeZone.cst.name">CST</dataName>
+			<description id="system.staticData.timeZone.cst.desc">CST- Central Standard Time, as GMT-6</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="system.staticData.timeZone.eet">
+			<type>TimeZone</type>
+			<dataName id="system.staticData.timeZone.eet.name">EET</dataName>
+			<description id="system.staticData.timeZone.eet.desc">EET- Eastern European Time, as GMT+2</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="system.staticData.timeZone.est">
+			<type>TimeZone</type>
+			<dataName id="system.staticData.timeZone.est.name">EST</dataName>
+			<description id="system.staticData.timeZone.est.desc">EST- Eastern Standard Time, as GMT-5</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="system.staticData.timeZone.etc">
+			<type>TimeZone</type>
+			<dataName id="system.staticData.timeZone.etc.name">Etc/GMT+12</dataName>
+			<description id="system.staticData.timeZone.etc.desc">Etc/GMT+12</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="system.staticData.timeZone.london">
+			<type>TimeZone</type>
+			<dataName id="system.staticData.timeZone.london.name">Europe/London</dataName>
+			<description id="system.staticData.timeZone.london.desc">LDN</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="system.staticData.timeZone.paris">
+			<type>TimeZone</type>
+			<dataName id="system.staticData.timeZone.paris.name">Europe/Paris</dataName>
+			<description id="system.staticData.timeZone.paris.desc">CET</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="system.staticData.timeZone.gmt">
+			<type>TimeZone</type>
+			<dataName id="system.staticData.timeZone.gmt.name">GMT</dataName>
+			<description id="system.staticData.timeZone.gmt.desc">GMT - Greenwich Mean Time</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="system.staticData.timeZone.hk">
+			<type>TimeZone</type>
+			<dataName id="system.staticData.timeZone.hk.name">Hongkong</dataName>
+			<description id="system.staticData.timeZone.hk.desc">HKG</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="system.staticData.timeZone.qtpTimeZone">
+			<type>TimeZone</type>
+			<dataName id="system.staticData.timeZone.qtpTimeZone.name">qtp_timezone</dataName>
+			<description id="system.staticData.timeZone.qtpTimeZone.desc">qtp_timezone</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="system.staticData.timeZone.qtpTimeZone2">
+			<type>TimeZone</type>
+			<dataName id="system.staticData.timeZone.qtpTimeZone2.name">qtp_timezone2</dataName>
+			<description id="system.staticData.timeZone.qtpTimeZone2.desc">qtp_timezone2</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="system.staticData.timeZone.wet">
+			<type>TimeZone</type>
+			<dataName id="system.staticData.timeZone.wet.name">WET</dataName>
+			<description id="system.staticData.timeZone.wet.desc">WET- Western European Time, as GMT</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<systemStaticData id="system.staticData.timeZone.wst">
+			<type>TimeZone</type>
+			<dataName id="system.staticData.timeZone.wst.name">WST</dataName>
+			<description id="system.staticData.timeZone.wst.desc">WST- Western European Time, as GMT-7</description>
+			<status>enabled</status>
+		</systemStaticData>
+		<!-- system user-->
+		<user id="user.sa">
+			<username id="user.sa.username">sa</username>
+			<password id="user.sa.password">password</password>
+			<role>admin</role>
+			<role>user</role>
+			<approvalProfile>
+				<pay>All</pay>
+				<receive>All</receive>
+			</approvalProfile>
+			<preferences>
+				<collateralRegion>All</collateralRegion>
+				<collateralCategory>All</collateralCategory>
+				<notifyFeedStatus>false</notifyFeedStatus>
+			</preferences>
+			<accessStatus>Granted</accessStatus>
+			<changePasswordConstraints>
+				<allowReuseOfPasswords>Yes</allowReuseOfPasswords>
+				<afterWeeks>0</afterWeeks>
+				<maxFailedPasswordAttempts>any</maxFailedPasswordAttempts>
+				<maxPasswordAge>forever</maxPasswordAge>
+			</changePasswordConstraints>
+			<status>Approved</status>
+		</user>
+		<user id="user.test1">
+			<username id="user.test1.username">qtptest</username>
+			<password id="user.test1.password">1</password>
+			<role>Collateral Analyst</role>
+			<role>Collateral Guest</role>
+			<role>Collateral Manager</role>
+			<role>Colline Sys Admin</role>
+			<role>DIV</role>
+			<role>Front Office</role>
+			<role>Middle Office</role>
+			<role>Operations</role>
+			<role>Self Service Client</role>
+			<role>Self Service Cpty</role>
+			<role>admin</role>
+			<role>guest</role>
+			<role>user</role>
+			<approvalProfile>
+				<pay>All</pay>
+				<receive>All</receive>
+			</approvalProfile>
+			<preferences>
+				<currency>USD</currency>
+				<party>MaigOrg</party>
+				<collateralRegion>smoke</collateralRegion>
+				<collateralGroup>smoke</collateralGroup>
+				<collateralCategory>All</collateralCategory>
+				<businessLine>All</businessLine>
+				<notifyFeedStatus>false</notifyFeedStatus>
+			</preferences>
+			<accessStatus>Granted</accessStatus>
+			<changePasswordConstraints>
+				<allowReuseOfPasswords>Yes</allowReuseOfPasswords>
+				<afterWeeks>0</afterWeeks>
+				<maxFailedPasswordAttempts>any</maxFailedPasswordAttempts>
+				<maxPasswordAge>forever</maxPasswordAge>
+			</changePasswordConstraints>
+			<status>Approved</status>
+		</user>
+		<user id="system.user.test2">
+			<username id="user.test2.username">qtptest_g2r2</username>
+			<password id="user.test2.password">1</password>
+			<role>Collateral Analyst</role>
+			<role>Collateral Guest</role>
+			<role>Collateral Manager</role>
+			<role>Colline Sys Admin</role>
+			<role>DIV</role>
+			<role>Front Office</role>
+			<role>Middle Office</role>
+			<role>Operations</role>
+			<role>Self Service Client</role>
+			<role>Self Service Cpty</role>
+			<role>admin</role>
+			<role>guest</role>
+			<role>user</role>
+			<approvalProfile>
+				<pay>All</pay>
+				<receive>All</receive>
+			</approvalProfile>
+			<preferences>
+				<currency>USD</currency>
+				<party>MaigOrg</party>
+				<collateralRegion>smoke2</collateralRegion>
+				<collateralGroup>smoke2</collateralGroup>
+				<collateralCategory>All</collateralCategory>
+				<businessLine>All</businessLine>
+				<notifyFeedStatus>false</notifyFeedStatus>
+			</preferences>
+			<accessStatus>Granted</accessStatus>
+			<changePasswordConstraints>
+				<allowReuseOfPasswords>Yes</allowReuseOfPasswords>
+				<afterWeeks>0</afterWeeks>
+				<maxFailedPasswordAttempts>any</maxFailedPasswordAttempts>
+				<maxPasswordAge>forever</maxPasswordAge>
+			</changePasswordConstraints>
+			<status>Approved</status>
+		</user>
+		<user id="system.user.test3">
+			<username id="user.test3.username">qtptest_nogr</username>
+			<password id="user.test3.password">1</password>
+			<role>Collateral Analyst</role>
+			<role>Collateral Guest</role>
+			<role>Collateral Manager</role>
+			<role>Colline Sys Admin</role>
+			<role>DIV</role>
+			<role>Front Office</role>
+			<role>Middle Office</role>
+			<role>Operations</role>
+			<role>Self Service Client</role>
+			<role>Self Service Cpty</role>
+			<role>admin</role>
+			<role>guest</role>
+			<role>user</role>
+			<approvalProfile>
+				<pay>All</pay>
+				<receive>All</receive>
+			</approvalProfile>
+			<preferences>
+				<currency>USD</currency>
+				<party>MaigOrg</party>
+				<collateralRegion>All</collateralRegion>
+				<collateralGroup>All</collateralGroup>
+				<collateralCategory>All</collateralCategory>
+				<businessLine>All</businessLine>
+				<notifyFeedStatus>false</notifyFeedStatus>
+			</preferences>
+			<accessStatus>Granted</accessStatus>
+			<changePasswordConstraints>
+				<allowReuseOfPasswords>Yes</allowReuseOfPasswords>
+				<afterWeeks>0</afterWeeks>
+				<maxFailedPasswordAttempts>any</maxFailedPasswordAttempts>
+				<maxPasswordAge>forever</maxPasswordAge>
+			</changePasswordConstraints>
+			<status>Approved</status>
+		</user>
+		<!--system preference -->
+		<systemPreference id="system.preference.default">
+			<messaging>
+				<suspendOutgoingMessaging>false</suspendOutgoingMessaging>
+			</messaging>
+			<applicationPreferences>
+				<theme>Colline</theme>
+				<errorReportingEmailAddress>user@hostname</errorReportingEmailAddress>
+				<sessionTimeOut>30</sessionTimeOut>
+				<exposureStatementMaxTableItems>100</exposureStatementMaxTableItems>
+				<maxWaitTimeForGui>2</maxWaitTimeForGui>
+				<maxWaitTimeForReport>10</maxWaitTimeForReport>
+				<maxWaitTimeForTask>10</maxWaitTimeForTask>
+				<zipFormatReportsForTask>false</zipFormatReportsForTask>
+				<thresholdToZipReports>500</thresholdToZipReports>
+				<minimumValidationCheck>true</minimumValidationCheck>
+				<tradeFeedLockRetryTimes>3</tradeFeedLockRetryTimes>
+				<tradeFeedLockRetryInterval>5000</tradeFeedLockRetryInterval>
+				<tradeFeedLockBatchSize>500</tradeFeedLockBatchSize>
+				<reportDataSaveBatchSize>500</reportDataSaveBatchSize>
+				<cutOffRetryTimes>3</cutOffRetryTimes>
+				<cutOffRetryInterval>5000</cutOffRetryInterval>
+				<checkCorruptedStatementLockInterval>5</checkCorruptedStatementLockInterval>
+				<deltaTradeFeedExcludeMtmColumns>true</deltaTradeFeedExcludeMtmColumns>
+				<deltaFeedIgnoreTradeManualOverride>false</deltaFeedIgnoreTradeManualOverride>
+				<enableTaskRecovery>true</enableTaskRecovery>
+				<fxDecimalPlaces>6</fxDecimalPlaces>
+				<enableAmountAbbreviations>true</enableAmountAbbreviations>
+				<currencyUnformatInCsvReport>false</currencyUnformatInCsvReport>
+				<csvSeparator>Comma</csvSeparator>
+				<excelFormat>xls</excelFormat>
+				<enableDateBasedValuation>false</enableDateBasedValuation>
+				<forcePrincipalAndCounterpartyFiltersToBePopulated>false</forcePrincipalAndCounterpartyFiltersToBePopulated>
+				<changeDateFormatInIsoFromatForTradeOutputsAndAssetSettlementsReports>false</changeDateFormatInIsoFromatForTradeOutputsAndAssetSettlementsReports>
+				<maxNotifyAgreementEligibilityRules>100</maxNotifyAgreementEligibilityRules>
+				<maxNumberOfAutoReject>0</maxNumberOfAutoReject>
+				<enableAutomaticBookingApproval>true</enableAutomaticBookingApproval>
+				<tolaranceCurrency>USD</tolaranceCurrency>
+			</applicationPreferences>
+			<communication>
+				<taskSchedulerEmailMessage>You have been send an email from the Colline task scheduler. Please open the attachment.</taskSchedulerEmailMessage>
+				<enableExternalDelivery>true</enableExternalDelivery>
+			</communication>
+			<labels>
+				<headerFooterFontSize>7</headerFooterFontSize>
+				<footerMarginSize>50</footerMarginSize>
+			</labels>
+			<emailInformation>
+				<smtpServerAddress>172.20.20.50</smtpServerAddress>
+			</emailInformation>
+		</systemPreference>
+		<!-- organisation -->
+		<organisation id="org.main">
+			<organisationId id="org.main.id">1</organisationId>
+			<longName id="org.main.lname">MainOrg</longName>
+			<shortName id="org.main.sname">MainOrg</shortName>
+			<code id="org.main.code">MainOrg</code>
+		</organisation>
+		<organisation id="org.p1">
+			<longName id="org.p1.lname">QTPPrincipal</longName>
+			<shortName id="org.p1.sname">QTPPrincipal</shortName>
+			<code id="org.p1.code">QTPPrincipal</code>
+			<role ref="org.role.cr.name"/>
+		</organisation>
+		<organisation id="org.c1">
+			<longName id="org.c1.lname">QTPCounterparty</longName>
+			<shortName id="org.c1.sname">QTPCounterparty</shortName>
+			<code id="org.c1.code">QTPCounterparty</code>
+			<role ref="org.role.cp.name"/>
+		</organisation>
+		<organisation id="org.cutodian1">
+			<longName id="org.cutodian1.lname">QTPCounterparty</longName>
+			<shortName id="org.cutodian1.sname">QTPCounterparty</shortName>
+			<code id="org.cutodian1.code">QTPCounterparty</code>
+			<role ref="org.role.cp.name"/>
+		</organisation>
+		<organisation id="org.issuer">
+			<longName id="org.issuer1.lname">QTP_Eligible_Issuer</longName>
+			<shortName id="org.issuer1.sname">QTP_Eligible_Issuer</shortName>
+			<code id="org.issuer1.code">QTP_Eligible_Issuer</code>
+			<role ref="org.role.is.name"/>
+		</organisation>
+		<!-- organisation global preference -->
+		<organisationGlobalPreference id="organisation.global.preference.default">
+			<debtClassification>SEN</debtClassification>
+			<ratingAgency>SandP</ratingAgency>
+			<defaultExternalSystem>QTP</defaultExternalSystem>
+			<defaultInventoryManagerSourceSystem>MANUAL</defaultInventoryManagerSourceSystem>
+			<parentOrganisationIdentifier>true</parentOrganisationIdentifier>
+		</organisationGlobalPreference>
+		<!-- rate set -->
+		<fxRateSet id="fxRateSet.standard">
+			<fxRateSetName id="fxRateSet.standard.name">Standard FX Rates</fxRateSetName>
+		</fxRateSet>
+		<fxRateSet id="fxRateSet.default">
+			<fxRateSetName id="fxRateSet.default.name">qtp_FxRate</fxRateSetName>
+		</fxRateSet>
+		<!-- asset -->
+		<assetDefinition id="cash">
+			<assetName id="cash.name">qtp_cash</assetName>
+			<status>enabled</status>
+			<category>Cash</category>
+			<externalName id="cash.exname">qtp_cash</externalName>
+		</assetDefinition>
+		<assetDefinition id="cash.usd">
+			<parent ref="cash"/>
+			<assetName id="cash.usd.name">qtp_cash_usd</assetName>
+			<status>enabled</status>
+			<category>Cash</category>
+			<currencyOfDenomination ref="ccy.usd.name"/>
+			<externalName id="cash.usd.exname">qtp_cash_usd</externalName>
+		</assetDefinition>
+		<assetDefinition id="cash.usd1">
+			<parent ref="cash"/>
+			<assetName id="cash.usd1.name">CASH-USD</assetName>
+			<status>enabled</status>
+			<category>Cash</category>
+			<currencyOfDenomination ref="ccy.usd.name"/>
+			<externalName id="cash.usd1.exname">CASH-USD</externalName>
+		</assetDefinition>
+		<assetDefinition id="cash.eur1">
+			<parent ref="cash"/>
+			<assetName id="cash.eur1.name">qtp_cash_eur1</assetName>
+			<status>enabled</status>
+			<category>Cash</category>
+			<currencyOfDenomination ref="ccy.eur.name"/>
+			<externalName id="cash.eur1.exname">qtp_cash_eur1</externalName>
+		</assetDefinition>
+		<assetDefinition id="cash.gbp">
+			<parent ref="cash"/>
+			<assetName id="cash.gbp.name">qtp_cash_gbp</assetName>
+			<status>enabled</status>
+			<category>Cash</category>
+			<currencyOfDenomination ref="ccy.gbp.name"/>
+			<externalName id="cash.gbp.exname">qtp_cash_gbp</externalName>
+		</assetDefinition>
+		<assetDefinition id="bond">
+			<assetName id="bond.name">qtp_bond</assetName>
+			<status>enabled</status>
+			<category>FI Securities</category>
+			<externalName id="bond.exname">qtp_bond</externalName>
+		</assetDefinition>
+		<assetDefinition id="bond.usd">
+			<parent ref="bond"/>
+			<assetName id="bond.usd.name">qtp_bond_usd</assetName>
+			<status>enabled</status>
+			<category>FI Securities</category>
+			<currencyOfDenomination ref="ccy.usd.name"/>
+			<externalName id="bond.usd.exname">qtp_bond_usd</externalName>
+		</assetDefinition>
+		<assetDefinition id="bond.eur2">
+			<parent ref="bond"/>
+			<assetName id="bond.eur2.name">qtp_bond_eur2</assetName>
+			<status>enabled</status>
+			<category>FI Securities</category>
+			<currencyOfDenomination ref="ccy.eur.name"/>
+			<externalName id="bond.eur2.exname">qtp_bond_eur2</externalName>
+		</assetDefinition>
+		<assetDefinition id="bond.gbp">
+			<parent ref="bond"/>
+			<assetName id="bond.gbp.name">qtp_bond_gbp</assetName>
+			<status>enabled</status>
+			<category>FI Securities</category>
+			<currencyOfDenomination ref="ccy.gbp.name"/>
+			<externalName id="bond.gbp.exname">qtp_bond_gbp</externalName>
+		</assetDefinition>
+		<assetDefinition id="equity">
+			<assetName id="equity.name">qtp_equity</assetName>
+			<status>enabled</status>
+			<category>Equities</category>
+			<externalName id="equity.exname">qtp_equity</externalName>
+		</assetDefinition>
+		<assetDefinition id="equity.usd">
+			<parent ref="equity"/>
+			<assetName id="equity.usd.name">qtp_equity_usd</assetName>
+			<status>enabled</status>
+			<category>Equities</category>
+			<currencyOfDenomination ref="ccy.usd.name"/>
+			<externalName id="equity.usd.exname">qtp_equity_usd</externalName>
+		</assetDefinition>
+		<assetDefinition id="equity.eur1">
+			<parent ref="equity"/>
+			<assetName id="equity.eur1.name">qtp_equity_eur1</assetName>
+			<status>enabled</status>
+			<category>Equities</category>
+			<currencyOfDenomination ref="ccy.eur.name"/>
+			<externalName id="equity.eur1.exname">qtp_equity_eur1</externalName>
+		</assetDefinition>
+		<assetDefinition id="equity.gbp">
+			<parent ref="equity"/>
+			<assetName id="equity.gbp.name">qtp_equity_gbp</assetName>
+			<status>enabled</status>
+			<category>Equities</category>
+			<currencyOfDenomination ref="ccy.gbp.name"/>
+			<externalName id="equity.gbp.exname">qtp_equity_gbp</externalName>
+		</assetDefinition>
+		<assetDefinition id="other">
+			<assetName id="other.name">qtp_other</assetName>
+			<status>enabled</status>
+			<category>Other</category>
+			<externalName id="other.exname">qtp_other</externalName>
+		</assetDefinition>
+		<assetDefinition id="commodity">
+			<assetName id="commodity.name">qtp-commodity</assetName>
+			<status>enabled</status>
+			<category>Commodities</category>
+			<externalName id="commodity.exname">qtp-commodity</externalName>
+		</assetDefinition>
+		<!-- collateral configuration letter configuration -->
+		<letterConfiguration id="margin.call.letter.configuration.default">
+    	</letterConfiguration>
+		<!-- collateral configuration collateral preference -->
+		<collateralPreference id="collateral.preference.default">
+			<letterInformation>
+				<letterHeader/>
+				<letterFooter/>
+				<letterEmailText/>
+				<!--secondPrincipalLogo>String</secondPrincipalLogo -->
+				<leftMargin>36</leftMargin>
+				<rightMargin>36</rightMargin>
+				<topMargin>36</topMargin>
+				<bottomMargin>36</bottomMargin>
+			</letterInformation>
+			<collateralRules>
+				<agreementFourEyes>false</agreementFourEyes>
+				<tradesFourEyes>false</tradesFourEyes>
+				<workflowFourEyes>false</workflowFourEyes>
+				<settlementStatusFourEyes>false</settlementStatusFourEyes>
+				<settlementStatusFourEyesControl>
+					<fromStatus>ALL</fromStatus>
+					<toStatus>ALL</toStatus>
+					<excludeFromStatus>None</excludeFromStatus>
+					<excludeToStatus>None</excludeToStatus>
+				</settlementStatusFourEyesControl>
+				<settlementDataFourEyes>false</settlementDataFourEyes>
+				<securitiesFourEyes>false</securitiesFourEyes>
+				<organisationFourEyes>false</organisationFourEyes>
+				<ruleTemplateFourEyes>false</ruleTemplateFourEyes>
+				<userAdministrationFourEyesFor>false</userAdministrationFourEyesFor>
+				<roleAdministrationFourEyes>false</roleAdministrationFourEyes>
+				<conditionSettlementStatusFourEyes>false</conditionSettlementStatusFourEyes>
+				<conditionSettlementStatusFourEyesControl>
+					<fromStatus>ALL</fromStatus>
+					<toStatus>ALL</toStatus>
+					<excludeFromStatus>None</excludeFromStatus>
+					<excludeToStatus>None</excludeToStatus>
+				</conditionSettlementStatusFourEyesControl>
+				<noAuthorisedStatus>false</noAuthorisedStatus>
+				<!--<includePendingCancelled>false</includePendingCancelled>-->
+				<workflowOverwrite>false</workflowOverwrite>
+				<workflowWaive>false</workflowWaive>
+				<workflowDispute>false</workflowDispute>
+				<applyRoundingRuleToSubstitutionLetter>false</applyRoundingRuleToSubstitutionLetter>
+				<mandatoryCommentWhenDisputeCondition>false</mandatoryCommentWhenDisputeCondition>
+			</collateralRules>
+			<general>
+				<defaultFXRates>Standard FX Rates</defaultFXRates>
+				<defaultPriceSource>Default</defaultPriceSource>
+				<feedStatusDays>5</feedStatusDays>
+				<refreshCachedDataOfInventoryManager>OnLoad</refreshCachedDataOfInventoryManager>
+				<feedResultDisplayNumber>10</feedResultDisplayNumber>
+				<organizationThresholdLineNumber/>
+				<allowTradeFeedToOverrideManuallyLockedTrades>false</allowTradeFeedToOverrideManuallyLockedTrades>
+				<onlyAllowAssetBookingFeedForApprovedAgreements>false</onlyAllowAssetBookingFeedForApprovedAgreements>
+				<alertHandling>
+					<accept>true</accept>
+				</alertHandling>
+			</general>
+			<taskManager>
+				<deletePartialFile>true</deletePartialFile>
+			</taskManager>
+		</collateralPreference>
+		<!-- holiday centres -->
+		<holidayCentre id="hc.europe">
+			<holidayCentreName id="hc.europe.name">EUROPE</holidayCentreName>
+			<holidayCentreDescription id="hc.europe.desc">EUROPE</holidayCentreDescription>
+			<status>enabled</status>
+			<weekendDay1>Saturday</weekendDay1>
+			<weekendDay2>Sunday</weekendDay2>
+		</holidayCentre>
+		<holidayCentre id="hc.frankfurt">
+			<holidayCentreName id="hc.frankfurt.name">FRANKFURT</holidayCentreName>
+			<holidayCentreDescription id="hc.frankfurt.desc">FRANKFURT</holidayCentreDescription>
+			<status>enabled</status>
+			<weekendDay1>Saturday</weekendDay1>
+			<weekendDay2>Sunday</weekendDay2>
+		</holidayCentre>
+		<holidayCentre id="hc.hongkong">
+			<holidayCentreName id="hc.hongkong.name">HONG KONG</holidayCentreName>
+			<holidayCentreDescription id="hc.hongkong.desc">HONG KONG</holidayCentreDescription>
+			<status>enabled</status>
+			<weekendDay1>Saturday</weekendDay1>
+			<weekendDay2>Sunday</weekendDay2>
+		</holidayCentre>
+		<holidayCentre id="hc.london">
+			<holidayCentreName id="hc.london.name">LONDON</holidayCentreName>
+			<holidayCentreDescription id="hc.london.desc">LONDON</holidayCentreDescription>
+			<status>enabled</status>
+			<weekendDay1>Saturday</weekendDay1>
+			<weekendDay2>Sunday</weekendDay2>
+		</holidayCentre>
+		<holidayCentre id="hc.newyork">
+			<holidayCentreName id="hc.newyork.name">NEW YORK</holidayCentreName>
+			<holidayCentreDescription id="hc.newyork.desc">NEW YORK</holidayCentreDescription>
+			<status>enabled</status>
+			<weekendDay1>Saturday</weekendDay1>
+			<weekendDay2>Sunday</weekendDay2>
+		</holidayCentre>
+		<holidayCentre id="hc.paris">
+			<holidayCentreName id="hc.paris.name">PARIS</holidayCentreName>
+			<holidayCentreDescription id="hc.paris.desc">PARIS</holidayCentreDescription>
+			<status>enabled</status>
+			<weekendDay1>Saturday</weekendDay1>
+			<weekendDay2>Sunday</weekendDay2>
+		</holidayCentre>
+		<holidayCentre id="hc.tokyo">
+			<holidayCentreName id="hc.tokyo.name">TOKYO</holidayCentreName>
+			<holidayCentreDescription id="hc.tokyo.desc">TOKYO</holidayCentreDescription>
+			<status>enabled</status>
+			<weekendDay1>Saturday</weekendDay1>
+			<weekendDay2>Sunday</weekendDay2>
+		</holidayCentre>
+		<holidayCentre id="hc.test1">
+			<holidayCentreName id="hc.test1.name">qtp_holiday_centre</holidayCentreName>
+			<holidayCentreDescription id="hc.test1.desc">qtp_holiday_centre</holidayCentreDescription>
+			<status>enabled</status>
+			<weekendDay1>Saturday</weekendDay1>
+			<weekendDay2>Sunday</weekendDay2>
+		</holidayCentre>
+		<holidayCentre id="hc.test2">
+			<holidayCentreName id="hc.test2.name">qtp_holiday_centre2</holidayCentreName>
+			<holidayCentreDescription id="hc.test2.desc">qtp_holiday_centre2</holidayCentreDescription>
+			<status>enabled</status>
+			<weekendDay1>Saturday</weekendDay1>
+			<weekendDay2>Sunday</weekendDay2>
+		</holidayCentre>
+		<holidayCentre id="hc.test3">
+			<holidayCentreName id="hc.test3.name">qtp_holiday_centre3</holidayCentreName>
+			<holidayCentreDescription id="hc.test3.desc">qtp_holiday_centre3</holidayCentreDescription>
+			<status>enabled</status>
+			<weekendDay1>Saturday</weekendDay1>
+			<weekendDay2>Sunday</weekendDay2>
+		</holidayCentre>
+		<holidayCentre id="hc.test4">
+			<holidayCentreName id="hc.test4.name">qtp_holiday_centre4</holidayCentreName>
+			<holidayCentreDescription id="hc.test4.desc">qtp_holiday_centre4</holidayCentreDescription>
+			<status>enabled</status>
+			<weekendDay1>Saturday</weekendDay1>
+			<weekendDay2>Sunday</weekendDay2>
+		</holidayCentre>
+		<region id="region.asia">
+			<regionName id="region.asia.name">ASIA</regionName>
+			<country ref="ctr.id.name"/>
+		</region>
+		<region id="region.eur">
+			<regionName id="region.eur.name">EUROPE</regionName>
+			<country ref="ctr.eu.name"/>
+		</region>
+		<region id="region.test1">
+			<regionName id="region.test1.name">smoke</regionName>
+			<country ref="ctr.cn.name"/>
+		</region>
+		<region id="region.test2">
+			<regionName id="region.test2.name">smoke2</regionName>
+			<country ref="ctr.jp.name"/>
+		</region>
+		<umbrellaRule id="umbrella.rule.fund">
+			<umbrellaRuleName id="umbrella.rule.fund.name">Convenience Margining</umbrellaRuleName>
+			<collateral>Sub-Agreement</collateral>
+		</umbrellaRule>
+		<umbrellaRule id="umbrella.rule.um">
+			<umbrellaRuleName id="umbrella.rule.um.name">MultiFund Netting</umbrellaRuleName>
+			<collateral>Umbrella</collateral>
+		</umbrellaRule>
+		<instrument id="bond.instrument1">
+			<assetClass>qtp_bond</assetClass>
+			<assetType>qtp_bond_usd</assetType>
+			<instrumentId>
+				<primary>true</primary>
+				<value id="bond.instrument1.name">qtp_Bond_Instrument</value>
+			</instrumentId>
+			<market>qtp_Market</market>
+			<securityStatus>Approved</securityStatus>
+		</instrument>
+		<instrument id="equity.instrument1">
+			<assetClass>qtp_equity</assetClass>
+			<assetType>qtp_equity_usd</assetType>
+			<instrumentId>
+				<primary>true</primary>
+				<value id="equity.instrument1.name">qtp_Equity_Instrument</value>
+			</instrumentId>
+			<market>qtp_Market</market>
+			<securityStatus>Approved</securityStatus>
+		</instrument>
+		<tsaRule id="TSArule">
+			<tsaRuleName id="TSAruleName">QTP_TSA</tsaRuleName>
+		</tsaRule>
+		<stpConfigurations id="default.stp.configuration">
+			<enableStp>No</enableStp>
+			<interLevelRuleLogic>And</interLevelRuleLogic>
+			<IntraLevelRuleLogic>And</IntraLevelRuleLogic>
+			<ruleEvaluationMechanism>Until Failure</ruleEvaluationMechanism>
+		</stpConfigurations>
+		<systemPreference id="system.preferences.default">
+			<applicationPreferences>
+				<enableAmountAbbreviations>true</enableAmountAbbreviations>
+			</applicationPreferences>
+		</systemPreference>
+	</systemData>
+</dataBean>

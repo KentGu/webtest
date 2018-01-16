@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+
+		<agreement id="agr12186.notnet">
+			<agreementId id="agr12186.id">2557</agreementId>
+		</agreement>
+
+		<exposureEventDetail id="vm.recall.50000">
+			<action>VM Recall</action>
+			<agreementRequirement>50,000.00</agreementRequirement>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="im.recall.50000">
+			<action>IM Recall</action>
+			<agreementRequirement>50,000.00</agreementRequirement>
+		</exposureEventDetail>
+
+		<exposureManagementMessage id="im.vm.Recall.autoEmailSuccess">
+			<messageSummary>
+				<successfulAccount>2</successfulAccount>
+			</messageSummary>
+			<messageDetail>
+				<source>Auto Send (Letter)</source>
+				<message>Margin Recall letter sent via Email for Princ:QTPPrincipal/Cpty:QTPCounterparty/Desc:12186_2/AgrId:2557</message>
+			</messageDetail>
+			<messageDetail>
+				<source>Auto Send (Letter)</source>
+				<message>Margin Recall letter sent via Email for Princ:QTPPrincipal/Cpty:QTPCounterparty/Desc:12186_2/AgrId:2557</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<exposureEventSearch id="agr12186.issued">
+			<agrId ref="agr12186.id"/>
+		</exposureEventSearch>
+
+		<exposureEventDetail id="vmRecall.CpyAmount">
+			<action>VM Recall</action>
+			<counterpartyAmount>0.00</counterpartyAmount>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="vmRecall.CpyAmount.49900">
+			<action>VM Recall</action>
+			<counterpartyAmount>49900</counterpartyAmount>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="imRecall.CpyAmount">
+			<action>IM Recall</action>
+			<counterpartyAmount>0.00</counterpartyAmount>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="imRecall.CpyAmount.50000">
+			<action>IM Recall</action>
+			<counterpartyAmount>50000</counterpartyAmount>
+		</exposureEventDetail>
+
+
+		<assetBookingSummary id="asset.type.cash.USD">
+			<assetType ref="cash.usd1.name"/>
+		</assetBookingSummary>
+
+		<exposureManagementMessage id="vm.im.Recall.autoBookingSuccess">
+			<messageSummary>
+				<successfulAccount>2</successfulAccount>
+				<unsuccessfulAccount>0</unsuccessfulAccount>
+			</messageSummary>
+			<messageDetail>
+				<source>Auto Book</source>
+				<message>Princ:QTPPrincipal/Cpty:QTPCounterparty/Desc:12186_2/AgrId:2557/Event:Recall CASH-USD IM Recall 50,000.00 auto booking created.</message>
+			</messageDetail>
+			<messageDetail>
+				<source>Auto Book</source>
+				<message>Princ:QTPPrincipal/Cpty:QTPCounterparty/Desc:12186_2/AgrId:2557/Event:Recall CASH-USD VM Recall 49,900.00 auto booking created.</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+
+		<assetBookingSummary id="vm.recall.autoBook.systemDraft.49900">
+			<assetType ref="cash.usd1.name"/>
+			<movement>Recall</movement>
+			<status>System Draft</status>
+			<bookingSource>Auto Book</bookingSource>
+			<vmMarketValue>49,900.00</vmMarketValue>
+		</assetBookingSummary>
+
+		<assetBookingSummary id="im.recall.autoBook.systemDraft.50000">
+			<assetType ref="cash.usd1.name"/>
+			<movement>Recall</movement>
+			<status>System Draft</status>
+			<bookingSource>Auto Book</bookingSource>
+			<vmMarketValue>50,000.00</vmMarketValue>
+		</assetBookingSummary>
+
+		<taskSchedulerDetail id="autoBookCashforAgr12186">
+			<taskName>Auto Book Cash</taskName>
+			<misc1 ref="agr12186.id"/>
+		</taskSchedulerDetail>
+
+		<taskSchedulerMessage id="autoBookCashforAgr12186.success">
+			<message>Auto Book Cash: Auto Book Cash Task Finished with 2 successful [^,]*</message>
+		</taskSchedulerMessage>
+		
+
+
+	</scenarioData>
+</dataBean>

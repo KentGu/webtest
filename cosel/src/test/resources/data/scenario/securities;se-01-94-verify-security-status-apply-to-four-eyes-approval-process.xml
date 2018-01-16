@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <loginCredential id="first-User">
+            <username>tatal</username>
+            <password>1</password>
+        </loginCredential>
+        <collateralPreference id="applyFourEyes.Securities">
+            <collateralRules>
+                <securitiesFourEyes>true</securitiesFourEyes>
+            </collateralRules>
+        </collateralPreference>
+
+        <instrument id="bondinstrument">
+            <assetClass>qtp_bond</assetClass>
+            <assetType>qtp_bond_usd</assetType>
+            <instrumentId>
+                <value id="bondinstrument.id" random="true" prefix="bond_"/>
+            </instrumentId>
+            <market>USA</market>
+            <description id="bondinstrument.des" random="true"/>
+            <issuer>
+                <filter>QTP_Eligible_Issuer4</filter>
+                <linkText>QTP_Eligible_Issuer4</linkText>
+            </issuer>
+            <maturityDate>T+100</maturityDate>
+            <currencyOfDenomination>USD</currencyOfDenomination>
+            <manuallyOverrideLastCouponDate>true</manuallyOverrideLastCouponDate>
+            <nextCouponDate>T+1</nextCouponDate>
+            <manuallyOverrideNextCouponDate>true</manuallyOverrideNextCouponDate>
+            <lastCouponDate>T</lastCouponDate>
+            <accrualBasis>Act/Act</accrualBasis>
+            <couponRate>0</couponRate>
+            <recordDate>T</recordDate>
+            <issueDate>T</issueDate>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <securitySearch id="SecuritySearch">
+            <instrument>
+                <type>Starting with</type>
+                <filter ref="bondinstrument.id"/>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="SearchSecurity">
+            <instrument ref="bondinstrument.id"/>
+        </securitySearchResult>
+
+        <instrument id="instrument.Status.Unable.to.Approve">
+                <approve disable="true"></approve>
+        </instrument>
+
+        <loginCredential id="Second-User">
+            <username>talatR</username>
+            <password>1</password>
+        </loginCredential>
+
+        <securitySearchResult id="SearchWillBeApprovedBond">
+            <instrument ref="bondinstrument.id"/>
+        </securitySearchResult>
+
+        <instrument id="instrument.Status.Approved">
+            <saveInstrument disable="true"></saveInstrument>
+            <securityStatus>Approved</securityStatus>
+        </instrument>
+
+        <instrument id="instrument.change">
+            <manuallyOverrideLastCouponDate>true</manuallyOverrideLastCouponDate>
+            <nextCouponDate>T+1</nextCouponDate>
+            <manuallyOverrideNextCouponDate>true</manuallyOverrideNextCouponDate>
+            <lastCouponDate>T</lastCouponDate>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <instrument id="instrument.Status.amended">
+            <securityStatus>Amended</securityStatus>
+        </instrument>
+
+        <instrument id="addEquityInstrument">
+            <assetClass>qtp_equity</assetClass>
+            <assetType>qtp_equity_usd</assetType>
+            <instrumentId>
+                <type>ISIN</type>
+                <value id="equityinstrument.id" random="true"/>
+            </instrumentId>
+            <market>USA</market>
+            <description id="equityinstrument.des" random="true"/>
+            <issuer>
+                <filter>QTP_Eligible_Issuer4</filter>
+                <linkText>QTP_Eligible_Issuer4</linkText>
+            </issuer>
+            <maturityDate>T+100</maturityDate>
+            <issueDate>T</issueDate>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <securitySearch id="equitySearch">
+            <instrument>
+                <type>Starting with</type>
+                <filter ref="equityinstrument.id"/>
+                <linkText ref="equityinstrument.id"/>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="SearchEquity">
+            <instrument ref="equityinstrument.id"/>
+        </securitySearchResult>
+
+        <instrument id="equityInstrument.Status.Save">
+            <approve disable="true"></approve>
+        </instrument>
+
+        <securitySearchResult id="EquityWillBeApproved">
+            <instrument ref="equityinstrument.id"/>
+        </securitySearchResult>
+
+        <instrument id="EquityInstrument.Status.Approved">
+           <saveInstrument disable="true"></saveInstrument>
+        </instrument>
+
+        <instrument id="EquityInstrument.change">
+           <currencyOfDenomination>GBP</currencyOfDenomination>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <instrument id="EquityInstrument.Status.amended">
+            <securityStatus>Amended</securityStatus>
+        </instrument>
+
+        <instrument id="addCommodityInstrument">
+            <assetClass>qtp-commodity</assetClass>
+            <assetType>qtp-commodity-usd</assetType>
+            <instrumentId>
+                <type>ISIN</type>
+                <value id="CommodityInstrument.id" random="true"/>
+            </instrumentId>
+            <market>USA</market>
+            <description id="CommodityInstrument.des" random="true"/>
+            <issuer>
+                <filter>QTP_Eligible_Issuer4</filter>
+                <linkText>QTP_Eligible_Issuer4</linkText>
+            </issuer>
+            <maturityDate>T+100</maturityDate>
+            <priceSource>
+                <priceSourceName>Default</priceSourceName>
+                <dirtyPrice>1</dirtyPrice>
+                <lastPriceChange>T</lastPriceChange>
+                <priceDate>T</priceDate>
+            </priceSource>
+            <issueDate>T</issueDate>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <securitySearch id="CommoditySearch">
+            <instrument>
+                <type>Starting with</type>
+                <filter ref="CommodityInstrument.id"/>
+                <linkText ref="CommodityInstrument.id"/>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="SearchCommodity">
+            <instrument ref="CommodityInstrument.id"/>
+        </securitySearchResult>
+
+        <instrument id="CommodityInstrument.Status.Save">
+           <approve disable="true"></approve>
+        </instrument>
+
+        <securitySearchResult id="CommodityWillBeApproved">
+            <instrument ref="CommodityInstrument.id"/>
+        </securitySearchResult>
+
+        <instrument id="CommodityInstrument.Status.Approved">
+            <saveInstrument disable="true"></saveInstrument>
+            <securityStatus>Approved</securityStatus>
+        </instrument>
+
+        <instrument id="CommodityInstrument.change">
+            <currencyOfDenomination>GBP</currencyOfDenomination>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <instrument id="CommodityInstrument.Status.amended">
+            <securityStatus>Amended</securityStatus>
+        </instrument>
+
+        <instrument id="addPropertyInstrument">
+            <assetClass>qtp-properties</assetClass>
+            <assetType>qtp-properties-usd</assetType>
+            <instrumentId>
+                <type>ISIN</type>
+                <value id="propertiesInstrument.id" random="true" prefix="properties_"/>
+            </instrumentId>
+            <market>USA</market>
+            <description id="propertiesInstrument.des" random="true"/>
+            <issuer>
+                <filter>QTP_Eligible_Issuer4</filter>
+                <linkText>QTP_Eligible_Issuer4</linkText>
+            </issuer>
+            <maturityDate>T+100</maturityDate>
+            <priceSource>
+                <priceSourceName>Default</priceSourceName>
+                <dirtyPrice>1</dirtyPrice>
+                <lastPriceChange>T</lastPriceChange>
+                <priceDate>T</priceDate>
+            </priceSource>
+            <issueDate>T</issueDate>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <securitySearch id="propertiesSearch">
+            <instrument>
+                <type>Starting with</type>
+                <filter ref="propertiesInstrument.id"/>
+                <linkText ref="propertiesInstrument.id"/>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="Searchproperties">
+            <instrument ref="propertiesInstrument.id"/>
+        </securitySearchResult>
+
+        <instrument id="propertiesInstrument.Status.Save">
+           <approve disable="true"></approve>
+        </instrument>
+
+        <securitySearchResult id="propertiesWillBeApproved">
+            <instrument ref="propertiesInstrument.id"/>
+        </securitySearchResult>
+
+        <instrument id="propertiesInstrument.Status.Approved">
+            <securityStatus>Approved</securityStatus>
+        </instrument>
+
+        <instrument id="propertiesInstrument.change">
+            <currencyOfDenomination>GBP</currencyOfDenomination>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <instrument id="propertiesInstrument.Status.amended">
+            <securityStatus>Amended</securityStatus>
+        </instrument>
+
+    </scenarioData>
+
+</dataBean>

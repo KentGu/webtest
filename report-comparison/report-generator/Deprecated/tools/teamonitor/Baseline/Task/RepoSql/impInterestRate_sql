@@ -1,0 +1,5 @@
+pre#InterestRates_Before#select * from COLINTERESTRATE where rateDate = to_date('2011-12-09','yyyy-MM-DD')
+
+post#InterestRates_After#select * from COLINTERESTRATE where rateDate = to_date('2011-12-09','yyyy-MM-DD')
+
+val#1#`expr ${InterestRates_After} - ${InterestRates_Before}`

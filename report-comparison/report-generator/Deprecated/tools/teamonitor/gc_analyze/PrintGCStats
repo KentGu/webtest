@@ -1,0 +1,505 @@
+#! /bin/nawk -f
+
+# Copyright 1998-2002 Sun Microsystems, Inc.  All rights reserved.
+
+# PrintGCStats - summarize statistics about garbage collection, in particular gc
+# pause time totals, averages, maximum and standard deviations.
+# 
+# Attribution:  modified by Alka Gupta, written by John Coomes, based on earlier work by Peter Kessler,
+# Ross Knippel and Jon Masamitsu, all of Sun Microsystems..
+
+#Note: This script is provided "as-is" and is not supported by Sun Microsystems, Inc., Ubiquity Corporation or the authors.The user assumes sole responsibility for any inaccuracies in the data produced by this script. Note that the format of the "verbose:gc" output used as input to this script will change in future releases of the Java2 SDK, and thus this script may not work with those future releases. Sun Microsystems, Inc. makes no commitment to provide updated versions of this script.However, users of this script are free to modify it as long as the author and purpose of the modifications are clearly documented.
+
+#
+# The input to this script should be the output from the HotSpot(TM)
+# Virtual Machine when run with one or more of the following flags:
+#
+# -verbose:gc			# produces minimal output so statistics are
+#				# limited, but available in all VMs
+#
+# -XX:+PrintGCTimeStamps	# enables time-based statistics (e.g.,
+#				# allocation rates, intervals), but only
+#				# available in JDK 1.4.0.
+#
+# -XX:+PrintGCDetails		# enables more detailed statistics gathering,
+#				# but only available in JDK 1.4.1.
+#
+# Recommended command-line with JDK 1.4.1 and later:
+#
+#	java -XX:+PrintGCTimeStamps -XX:+PrintGCDetails ...
+#
+# ------------------------------------------------------------------------------
+# 
+# Usage:
+#
+# PrintGCStats -v ncpu=<n> [-v interval=<seconds>] [-v verbose=1] [file ...]
+# 
+# ncpu		- number of cpus on the machine where java was run, used to
+#		  compute cpu time available and gc 'load' factors.  No default;
+#		  must be specified on the command line (defaulting to 1 is too
+#		  error prone).
+#
+# interval	- print statistics at the end of each interval; requires
+#		  output from -XX:+PrintGCTimeStamps.  Default is 0 (disabled).
+#
+# verbose	- if non-zero, print each item on a separate line in addition
+#		  to the summary statistics
+# 
+# ------------------------------------------------------------------------------
+#
+# Output statistics:
+#
+# gen0(s)   - young gen collection time, excluding gc_prologue & gc_epilogue.
+# gen0t(s)  - young gen collection time, including gc_prologue & gc_epilogue
+# cmsIM(s)  - CMS initial mark pause
+# cmsRM(s)  - CMS remark pause
+# GC(s)     - all stop-the-world GC pauses
+# cmsCM(s)  - CMS concurrent mark phase
+# cmsCP(s)  - CMS concurrent preclean phase
+# cmsCS(s)  - CMS concurrent sweep phase
+# cmsCR(s)  - CMS concurrent reset phase
+# alloc(MB) - object allocation in MB ***
+# promo(MB) - object promotion in MB ***
+#
+# *** - these values are approximate, as we do not track
+#       allocations that might occur directly into older generations.
+
+BEGIN {
+  # Seconds between printing per-interval statistics; a negative value disables
+  # intervals (the default).  Allow command line to override.
+  timeStampDelta = interval == 0 ? -1 : interval;
+
+  # Number of cpus.  Require this on the command line (defaulting to 1 is
+  # too error prone).
+  if (ncpu == 0) {
+    print "PrintGCStats -v ncpu=<n> [-v interval=<seconds>] [-v verbose=1]", \
+      "[file ...]"
+    exit(1);
+  }
+
+  # A note on time stamps:  the firstTimeStamp is not always assumed to be 0 so
+  # that we can get accurate elapsed time measurement for a partial log (e.g.,
+  # from the steady-state portion of a log from a long running server).  This
+  # means that the elapsed time measurement can be wrong if a program runs for a
+  # significant amount of time before the first gc time stamp is reported.  The
+  # best way to fix this is to have the VM emit a time stamp when heap
+  # initialization is complete.
+  firstTimeStamp = -1.0;	# sentinel
+  prevTimeStamp = lastTimeStamp = firstTimeStamp;
+
+  lastFileName = "";	# Used to detect when the input file has changed.
+
+  # This value is added to time stamps so that input from multiple files appears
+  # to have monotonically increaseing timestamps.
+  timeStampOffset = 0.0;
+
+  gen0c_idx = 0;	# With PrintGCDetails, DefNew collection time only.
+  gen0t_idx = 1;	# Includes gc_prologue() & gc_epilogue().
+  gen1t_idx = 2;	# Full GCs or Tenured GCs
+  cmsIM_idx = 3;	# CMS Initial Mark
+  cmsRM_idx = 4;	# CMS Remark
+  totgc_idx = 5;	# Total gc pause time
+
+  # These must be greater than the totgc_idx.
+  cmsCM_idx = 6;	# CMS Concurrent Mark
+  cmsCP_idx = 7;	# CMS Concurrent Preclean
+  cmsCS_idx = 8;	# CMS Concurrent Sweep
+  cmsCR_idx = 9;	# CMS Concurrent Reset
+  MB_a_idx = 10;	# MB allocated
+  MB_p_idx = 11;	# MB promoted
+  last_idx = 12;	# This is just the last *named* index; a corresponding
+			# delta_* array item exists for each of the above items
+			# starting at this point in the array.
+  
+  # Init arrays.
+  name_v[gen0c_idx]	= "gen0(s)";
+  name_v[gen0t_idx]	= "gen0t(s)";
+  name_v[gen1t_idx]	= "gen1t(s)";
+  name_v[cmsIM_idx]	= "cmsIM(s)";
+  name_v[cmsRM_idx]	= "cmsRM(s)";
+  name_v[totgc_idx]	= "GC(s)";
+  name_v[cmsCM_idx]	= "cmsCM(s)";
+  name_v[cmsCP_idx]	= "cmsCP(s)";
+  name_v[cmsCS_idx]	= "cmsCS(s)";
+  name_v[cmsCR_idx]	= "cmsCR(s)";
+  name_v[MB_a_idx]	= "alloc(MB)";
+  name_v[MB_p_idx]	= "promo(MB)";
+  for (i = 0; i < last_idx; ++i) {
+    count_v[i] = 0;
+    sum_v[i] = 0.0;
+    max_v[i] = 0.0;
+    sum_of_sq_v[i] = 0.0;
+    name_v[last_idx + i] = name_v[i];	# Copy names.
+  }
+
+  # Heap sizes at the start & end of the last gen0 collection.
+  gen0_sizes[0] = 0;
+  gen0_sizes[1] = 0;
+
+  initIntervalVars();
+
+  last_cmsRcount = 0;
+  printFirstHeader = 1;
+
+  # Six columns:  name, count, total, mean, max, standard deviation
+  headfmt = "%-9s" "  %7s" "  %10s"   "  %8s"   "  %7s"   "  %7s"   "\n";
+  datafmt = "%-9s" "  %7d" "  %10.3f" "  %8.5f" "  %7.3f" "  %7.4f" "\n";
+}
+
+function initIntervalVars() {
+  for (i = 0; i < last_idx; ++i) {
+    count_v[last_idx + i] = 0;
+    sum_v[last_idx + i] = 0.0;
+    max_v[last_idx + i] = 0.0;
+    sum_of_sq_v[last_idx + i] = 0.0;
+  }
+}
+
+function ratio(dividend, divisor) {
+  result = 0.0;
+  if (divisor != 0.0) {
+    result = dividend / divisor;
+  }
+  return result;
+}
+
+function stddev(count, sum, sum_of_squares) {
+  if (count < 2) return 0.0;
+  sum_squared_over_count = (sum * sum) / count;
+  # This has happened on occasion--not sure why--but only for total gc time,
+  # which includes samples from different populations.
+  if (sum_of_squares < sum_squared_over_count) return -1.0;
+#  print "stddev", count, sum, sum_of_squares, sum_squared_over_count;
+  return sqrt((sum_of_squares - sum_squared_over_count) / (count - 1));
+}
+
+function printHeader() {
+  printf(headfmt, "what", "count", "total", "mean", "max", "stddev");
+}
+
+function printData(idx) {
+  cnt = count_v[idx];
+  sec = sum_v[idx];
+  sd = stddev(cnt, sec, sum_of_sq_v[idx]);
+  printf(datafmt, name_v[idx], cnt, sec, ratio(sec, cnt), max_v[idx], sd);
+}
+
+function printRate(name, tot, tot_units, period, period_units) {
+  printf("%-21s = %10.3f %-2s / %10.3f %-2s = %7.3f %s/%s\n",
+    name, tot, tot_units, period, period_units, ratio(tot, period),
+    tot_units, period_units);
+}
+
+function printPercent(name, tot, tot_units, period, period_units) {
+  printf("%-21s = %10.3f %-2s / %10.3f %-2s = %7.3f%%\n",
+    name, tot, tot_units, period, period_units, ratio(tot * 100.0, period));
+}
+
+function recordStatsInternal(idx, seconds) {
+  count_v[idx] += 1;
+  sum_v[idx] += seconds;
+  sum_of_sq_v[idx] += seconds * seconds;
+  if (seconds > max_v[idx]) max_v[idx] = seconds;
+}
+
+function recordStats(idx, seconds) {
+  if (verbose) print name_v[idx] ":" NR ":" seconds;
+  recordStatsInternal(idx, seconds);
+  recordStatsInternal(idx + last_idx, seconds);
+  if (idx < totgc_idx) recordStatsInternal(totgc_idx, seconds);
+}
+
+function parseHeapSizes(sizes, str) {
+  if (!match(str, "[0-9]+K->")) return 0;
+  sizes[0] = substr(str, RSTART, RLENGTH - 3) + 0;
+  if (!match(str, "K->[0-9]+K")) return 0;
+  sizes[1] = substr(str, RSTART + 3, RLENGTH - 1) + 0;
+}
+
+function recordGen0Kb(str) {
+  # Allocation info.
+  tmp_kb[0] = tmp_kb[1] = 0;
+  parseHeapSizes(tmp_kb, str);
+  str = substr(str, RSTART + RLENGTH);
+#  print $0;
+#  print  tmp_kb[1],tmp_kb[0],gen0_sizes[1],gen0_sizes[0];
+  recordStats(MB_a_idx, (tmp_kb[0] - gen0_sizes[1]) / 1024.0);
+  gen0_sizes[0] = tmp_kb[0];
+  gen0_sizes[1] = tmp_kb[1];
+
+  # Promotion info.  Amount promoted is inferred from the last nnnK->nnnK
+  # on the line, taking into account the amount collected:
+  # 
+  # promoted = change-in-overall-heap-occupancy - change-in-gen0-occupancy -
+  #   change-in-gen1-occupancy
+  tmp_kb[0] = tmp_kb[1] = 0;
+  parseHeapSizes(tmp_kb, str);
+  str = substr(str, RSTART + RLENGTH);
+  if (match(str, "[0-9]+K->[0-9]+K")) {
+    # There is a 3rd heap size on the line; the 2nd one just parsed was likely
+    # from Tenured.  Get the 3rd one and use that for the overall heap.
+
+    # This is buggy, in that the amount promoted is later compared to gc0
+    # time, but the gc time for this case is attributed to gc1 (the attribution
+    # is done elsewhere).  So just ignore this case for now. 
+
+#     gen1_sizes[0] = tmp_kb[0];
+#     gen1_sizes[1] = tmp_kb[1];
+#     tmp_kb[0] = tmp_kb[1] = 0;
+#     parseHeapSizes(tmp_kb, str);
+#     kb_promo = tmp_kb[1] - tmp_kb[0] - (gen0_sizes[1] - gen0_sizes[0]);
+#     kb_promo -= (gen1_sizes[1] - gen1_sizes[0]);
+#     recordStats(MB_p_idx, kb_promo / 1024.0);
+  } else {
+    # Only gen0 was collected.
+    kb_promo = tmp_kb[1] - tmp_kb[0] - (gen0_sizes[1] - gen0_sizes[0]);
+    recordStats(MB_p_idx, kb_promo / 1024.0);
+  }
+}
+
+function printInterval() {
+  # Check for a time stamp.
+  pi_tmp_str = $0;
+  tInt = sub(/:? ? ?\[(Full )?GC.*/, "", pi_tmp_str);
+  if (! match(pi_tmp_str, "[0-9]+\.[0-9]+(e[+-][0-9]+)?$")) return;
+  pi_tmp_str = substr(pi_tmp_str, RSTART, RLENGTH);
+  pi_tmp = pi_tmp_str + 0.0;
+
+  # Update the global time stamp vars.
+  if (lastFileName == FILENAME) {
+    lastTimeStamp = timeStampOffset + pi_tmp;
+  } else {
+    if (firstTimeStamp < 0) {
+      # First call of the run; initialize.
+      lastTimeStamp = pi_tmp;
+      firstTimeStamp = prevTimeStamp = lastTimeStamp;
+    } else {
+      # First call after the input file changed.
+      timeStampOffset = lastTimeStamp;
+      lastTimeStamp = timeStampOffset + pi_tmp;
+    }
+    lastFileName = FILENAME;
+#     printf("%10.3f %10.6f %s %s\n", timeStampOffset, pi_tmp,
+#       pi_tmp_str, FILENAME);
+  }
+
+  # Print out the statistics every timeStampDelta seconds.
+  if (timeStampDelta < 0) return;
+  if ((lastTimeStamp - prevTimeStamp) > timeStampDelta) {
+    prevTimeStamp = lastTimeStamp;
+    if ((printFirstHeader == 1) ||
+    ((last_cmsRcount == 0) && (count_v[cmsRM_idx] != 0))) {
+      printf("Incremental statistics at %d second intervals\n", timeStampDelta);
+      printHeader();
+      last_cmsRcount = count_v[cmsRM_idx];
+      printFirstHeader = 0;
+    }
+
+    printf("interval=%d, time=%5.3f secs, line=%d\n",
+      int((lastTimeStamp - firstTimeStamp) / timeStampDelta),
+      lastTimeStamp, NR);
+    for (i = 0; i < last_idx; ++i) {
+      if (count_v[last_idx + i] > 0) {
+	printData(last_idx + i);
+      }
+    }
+  
+    initIntervalVars();
+  }
+}
+
+# Match CMS initial mark output
+/\[1 CMS-initial-mark: [0-9]+K\([0-9]+K\)\] [0-9]+K\([0-9]+K\), [0-9][0-9.]* secs\]/ {
+  tString = $0;
+  tInt = sub(/.*, /, "", tString);
+  tInt = sub(/ secs.*/, "", tString);
+  secs = tString +0;
+  recordStats(cmsIM_idx, secs);
+  next;
+}
+
+# Match cms remark output
+/\[1 CMS-remark.*, [0-9][0-9.]*\ secs\]/ {
+  tString = $0;
+  tInt = sub(/.*, /, "", tString);
+  tInt = sub(/ secs.*/, "", tString);
+  secs = tString +0;
+  recordStats(cmsRM_idx, secs);
+  # recordStats incremented the total gc count; undo that.
+  count_v[totgc_idx] -= 1;
+  next;
+}
+
+# Match cms concurrent phase output
+/\[CMS-concurrent-(mark|preclean|sweep|reset): [0-9.]+\/[0-9.]+ secs\]/ {
+  tString = $0;
+  tInt = sub(".*CMS-concurrent-", "", tString);
+  if (match(tString, "^mark:")) {
+    tIdx = cmsCM_idx;
+  } else if (match(tString, "^sweep:")) {
+    tIdx = cmsCS_idx;
+  } else if (match(tString, "^preclean:")) {
+    tIdx = cmsCP_idx;
+  } else {
+    tIdx = cmsCR_idx;
+  }
+  tInt = sub("(mark|preclean|sweep|reset): *", "", tString);
+  tInt = sub("/.*", "", tString);
+  secs = tString + 0;
+  recordStats(tIdx, secs);
+  next;
+}
+
+# Match PrintGCDetails output for Tenured
+/\[GC.*\[(Def|Par)New: [0-9]+K->[0-9]+K\([0-9]+K\),.*secs\].*\[Tenured: [0-9]+K->[0-9]+K\([0-9]+K\),.*secs\]/ {
+  tString = $0;
+  tInt = sub(/.*, /, "", tString);
+  tInt = sub(/ secs.*/, "", tString);
+  secs = tString +0;
+  recordStats(gen1t_idx, secs);
+  printInterval();
+  next;
+}
+
+# Match PrintGCDetails output for Train.
+/\[GC.*\[(Def|Par)New: [0-9]+K->[0-9]+K\([0-9]+K\),.*secs\].*\[Train: [0-9]+K->[0-9]+K\([0-9]+K\),.*secs\]/ {
+
+  tString = $0;
+  tInt = sub(/.*, /, "", tString);
+  tInt = sub(/ secs.*/, "", tString);
+  secs = tString +0;
+  recordStats(gen1t_idx, secs);
+
+  printInterval();
+  next;
+}
+
+# Match PrintGCDetails output for DefNew or ParNew
+/\[GC.*\[(Def|Par)New: [0-9]+K->[0-9]+K\([0-9]+K\),.*secs\]/ {
+  # Total time during a DefNew/ParNew collection.
+  tString = $0;
+  tInt = sub(/.*, /, "", tString);
+  tInt = sub(/ secs\].*/, "", tString);
+  secs = tString +0;
+  recordStats(gen0t_idx, secs);
+
+  # Time for DefNew/ParNew only.
+  tString = $0;
+  tInt = sub(/ secs\].*/, "", tString);
+  tInt = sub(/.*, /, "", tString);
+  secs = tString +0;
+  # Skip the update of the totgc numbers, that was handled above.
+  recordStatsInternal(gen0c_idx, secs);
+  recordStatsInternal(gen0c_idx + last_idx, secs);
+
+  recordGen0Kb($0);
+  printInterval();
+  next;
+}
+
+/\[GC.*\[.*\], [0-9][0-9.]* secs\]/ {
+  tString = $0;
+  tInt = sub(/.*, /, "", tString);
+  tInt = sub(/ secs.*/, "", tString);
+  secs = tString +0;
+  # If a line is for generation 1, we give it all the time.
+  # If it is just for generation 0, we give that generation the time.
+  if ($0 ~ /\[1: /) {
+    recordStats(gen1t_idx, secs);
+  } else if ($0 ~ /\[0: /) {
+    recordStats(gen0c_idx, secs);
+    recordGen0Kb($0);
+  }
+  printInterval();
+  next;
+}
+
+# Match pre-GC-interface output
+/\[GC .*, [0-9][0-9.]* secs\]/ {
+  tString = $0;
+  tInt = sub(/.*, /, "", tString);
+  tInt = sub(/ secs.*/, "", tString);
+  secs = tString +0;
+  recordStats(gen0c_idx, secs);
+  recordGen0Kb($0);
+  printInterval();
+  next;
+}
+
+# Match pre-GC-interface output
+/\[Full GC .*, [0-9][0-9.]* secs\]/ {
+  tString = $0;
+  tInt = sub(/.*, /, "", tString);
+  tInt = sub(/ secs.*/, "", tString);
+  secs = tString +0;
+  recordStats(gen1t_idx, secs);
+  printInterval();
+  next;
+}
+
+# Match +TraceGen*Time output
+# $1           $2 $3         $4     $5   $6      $7
+/\[Accumulated GC generation [0-9]+ time [0-9.]+ secs\]/ {
+  if ($4 == 0) {
+    gc0caccum = $6 +0;
+  } else if ($4 == 1) {
+    gc1taccum = $6 +0;
+  } else {
+    printf("Accumulated GC generation out of bounds\n");
+  }
+  next;
+}
+
+END {
+  if (interval >= 0) print "";
+
+  printHeader();
+  for (i = 0; i < last_idx; ++i) {
+    if (count_v[i] > 0) {
+      printData(i);
+    }
+  }
+
+  if (lastTimeStamp != firstTimeStamp) {
+    # Elapsed time.
+    tot_time = lastTimeStamp - firstTimeStamp;
+    # Elapsed time scaled by ncpu.
+    tot_cpu_time = tot_time * ncpu;
+    # Sequential gc time scaled by ncpu.
+    seq_gc_cpu_time = sum_v[totgc_idx] * ncpu;
+    # Concurrent gc time (scaling not necessary).
+    cms_gc_cpu_time = sum_v[cmsCM_idx] + sum_v[cmsCP_idx] + \
+      sum_v[cmsCS_idx] + sum_v[cmsCR_idx];
+    # Cpu time available to mutators.
+    mut_cpu_time = tot_cpu_time - seq_gc_cpu_time - cms_gc_cpu_time;
+
+    print "";
+    printRate("alloc/elapsed_time",
+      sum_v[MB_a_idx], "MB", tot_time, "s");
+    printRate("alloc/tot_cpu_time",
+      sum_v[MB_a_idx], "MB", tot_cpu_time, "s");
+    printRate("alloc/mut_cpu_time",
+      sum_v[MB_a_idx], "MB", mut_cpu_time, "s");
+    printRate("promo/elapsed_time",
+      sum_v[MB_p_idx], "MB", tot_time, "s");
+    printRate("promo/gc0_time",
+      sum_v[MB_p_idx], "MB", sum_v[gen0t_idx], "s");
+    printPercent("gc_seq_load",
+      seq_gc_cpu_time, "s", tot_cpu_time, "s");
+    printPercent("gc_conc_load",
+      cms_gc_cpu_time, "s", tot_cpu_time, "s");
+    printPercent("gc_tot_load",
+      seq_gc_cpu_time + cms_gc_cpu_time, "s", tot_cpu_time, "s");
+  }
+
+  if (gc0caccum != 0 || gc1taccum != 0) {
+    genAccum = gc0caccum + gc1taccum;
+    printf("Accum\t%7.3f\t\t\t%7.3f\t\t\t%7.3f\n",
+	   gc0caccum, gc1taccum, genAccum);
+    gc0cdelta = gc0cseconds - gc0caccum;
+    gc1tdelta = gc1tseconds - gc1taccum;
+    gcDelta = gcSeconds - genAccum;
+    printf("Delta\t%7.3f\t\t\t%7.3f\t\t\t%7.3f\n",
+	   gc0cdelta, gc1tdelta, gcDelta);
+  }
+}

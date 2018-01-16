@@ -1,0 +1,57 @@
+1:Reports:Agreements Report:null:baseline_agmt
+1:Reports:Frequency Distribution:null:null
+1:Reports:Asset Holdings and Valuation Report:null:baseline_ahv
+1:Reports:Asset Management Report:null:baseline_assetmanagement
+1:Reports:Asset Settlements Report:null:baseline_assetsettlement
+1:Reports:Audit Agreements Report:null:baseline_audagmt
+1:Reports:Audit Asset Definition Report:null:baseline_audassetdef
+1:Reports:Audit Assets Report:null:baseline_audasset
+1:Reports:Audit Holiday Centres Report:null:baseline_audhc
+1:Reports:Audit Interest Rates Report:null:baseline_audir
+1:Reports:Audit Organisations Report:null:baseline_audorg
+1:Reports:Audit Settlement Details Report:null:baseline_settdetails
+1:Reports:Audit Statements Report:null:baseline_audstme
+1:Reports:Audit Trades Report:null:baseline_audtrades
+1:Reports:Concentration Limits Report:null:baseline_conlimits
+1:Reports:Corporate Actions Report:null:baseline_corpactions
+1:Reports:Daily Exposure Report:null:baseline_de
+1:Reports:Historical Exposure Report:null:baseline_histexposure
+1:Reports:Historical FX Rates Report:null:baseline_histfx
+1:Workflow:Recalculate Interest Manager:./sql/recalculateinterestmanager_sql:null:1800
+1:Reports:Cash And Accrual Report:null:baseline_cashandaccrual
+1:Reports:Historical Interest Rate Report:null:baseline_histir
+1:Reports:Interest Applied Report:null:baseline_intapplied
+1:Reports:Interest Calculations Scheduled Report:null:baseline_intcal
+1:Workflow:Apply Effective and Maturity dates:./sql/applyeffectiveandmaturitydates_sql:null
+1:Workflow:Approve All Organisations:./sql/approveallorganisations_sql:null
+1:Workflow:Approve All Agreements:./sql/approveallagreements_sql:null
+1:Workflow:Approve All Statements:./sql/approveallstatements_sql:null:1800
+1:Workflow:Auto Email Call/Recall:./sql/autoemailcallrecall_sql:null:1800
+1:Workflow:Auto Email Interest Statement:./sql/autoemailintereststatement_sql:null:1800
+1:Workflow:External Exposures Reset:./sql/externalexposurereset_sql:null
+1:Workflow:Cut-Off:./sql/cutoff_sql:null
+1:Workflow:Distribute UDL:./sql/distributeudl_sql:null
+0:Workflow:Process Outstanding:./sql/processoutstanding_sql:null
+0:Workflow:Process Approve Settlements:./sql/processapprovesettlements_sql:null
+1:Workflow:Purge Feed Log:null:null
+1:Workflow:Purge Live Interest:null:null
+1:Workflow:Purge Self Service Attachments:null:null
+1:Task Manager:Import FX Rates:null:null
+0:Workflow:Recalculate Statements:./sql/recalculatestatements_sql:null:1800
+1:Workflow:Remove Mature Assets:null:null
+1:Workflow:Remove Mature Trades:null:null
+1:Workflow:Remove Unused System Drafts:null:null
+1:Workflow:Start-Up Dashboard Reset:null:null
+1:Workflow:Todays Events Reset:null:null
+1:System:Purge Audit Log:null:null
+1:System:Purge Event Log:null:null
+1:System:Purge Reports:null:null
+1:Reconciliation:Purge Reconciliation:null:null
+1:Reconciliation:Run Reconciliation:null:null
+1:Task Manager:Import Agreements:null:null
+1:Task Manager:Import Asset Pricing:null:null
+1:Task Manager:Import Collateral Booking:null:null
+1:Task Manager:Import External Independent Amounts:null:null
+1:Task Manager:Import Interest Rates:null:null
+0:Workflow:Net Older Collateral Bookings:./sql/netoldercollateralbookings_sql:null:1800
+1:Admin:Empty Task:null:null

@@ -1,0 +1,32 @@
+I'm FILE_TASKEXECLOG=taskexec.log_RELEASE_GIT_BRANCH_14.1.0_Final_Sprint_PATCH1_20140920041305
+I'm database---------=COLLINE2014_1_0_BASE_NOI_1211 creditderivative 172.20.20.99:1521 pst11g1
+Target Version: RELEASE_GIT_BRANCH_14.1.0_Final_Sprint_PATCH1
+Target Path:/home/test/server/colline/cluster5_2/bin
+-------------I am task =Approve All Organisations 1
+Task is Workflow : Approve All Organisations 1
+2014-09-20 04:13:06
+Waiting 1000 second for Task  Approve All Organisations 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Approve All Organisations 1] at: 2014-09-20 04:13:06,447
+Finished starting task: [Workflow:Approve All Organisations 1] at: 2014-09-20 04:13:06,502
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Approve All Organisations. Please wait ...
+----------break now --------
+-------------I am task =Approve All Agreements 1
+Task is Workflow : Approve All Agreements 1
+2014-09-20 04:13:28
+Waiting 1000 second for Task  Approve All Agreements 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Approve All Agreements 1] at: 2014-09-20 04:13:28,495
+Finished starting task: [Workflow:Approve All Agreements 1] at: 2014-09-20 04:13:28,516
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Approve All Agreements. Please wait ...
+----------break now --------

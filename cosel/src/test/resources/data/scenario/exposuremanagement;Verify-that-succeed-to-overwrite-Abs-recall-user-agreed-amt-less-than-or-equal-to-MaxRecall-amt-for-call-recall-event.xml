@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/exposureManagement.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <agreement id="agr19400.net">
+            <agreementId id="agrid">2608</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="call.requirementAmount.10m">
+            <action>Call</action>
+            <agreementRequirement>10,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="recall.requirementAmount.17m">
+            <action>Recall</action>
+            <agreementRequirement>17,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="call.requirementAmount.10m.userAgreedAmount.6m">
+            <overwrite>true</overwrite>
+            <userAgreedAmount>6m</userAgreedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="recall.requirementAmount.17m.userAgreedAmount.14m">
+            <userAgreedAmount>14m</userAgreedAmount>
+        </exposureEventDetail>
+
+        <marginLetter id="call.agreementRequirementAmt.10m.agreedAmt.6m">
+            <letterType>Margin Call</letterType>
+            <letterSetupDetails>
+                <marginCall>
+                    <agreementRequirementAmt>10,000,000.00</agreementRequirementAmt>
+                    <agreedAmt>6,000,000.00</agreedAmt>
+                </marginCall>
+            </letterSetupDetails>
+        </marginLetter>
+
+        <marginLetter id="call.agreementRequirementAmt.17m.agreedAmt.14m">
+            <letterType>Margin Recall</letterType>
+            <letterSetupDetails>
+                <marginCall>
+                    <agreementRequirementAmt>17,000,000.00</agreementRequirementAmt>
+                    <agreedAmt>14,000,000.00</agreedAmt>
+                </marginCall>
+            </letterSetupDetails>
+        </marginLetter>
+
+        <marginLetter id="callAndRecall.agreementRequirementAmtCall.10m.agreementRequirementAmtRecall.17m.agreedAmtCall.6m.agreedAmtRecall.14m.agreedAmtNet.20m">
+            <letterType>Margin Call &amp; Recall</letterType>
+            <letterSetupDetails>
+                <marginCall>
+                    <agreementRequirementAmtCall>10,000,000.00</agreementRequirementAmtCall>
+                    <agreementRequirementAmtRecall>17,000,000.00</agreementRequirementAmtRecall>
+                    <agreedAmtCall>6,000,000.00</agreedAmtCall>
+                    <agreedAmtRecall>14,000,000.00</agreedAmtRecall>
+                    <agreedAmtNet>20,000,000.00</agreedAmtNet>
+                </marginCall>
+            </letterSetupDetails>
+        </marginLetter>
+
+        <exposureEventDetail id="call.requirementAmount.10m.userAgreedAmount.2m">
+            <userAgreedAmount>2m</userAgreedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="recall.requirementAmount.17m.userAgreedAmount.17m">
+            <userAgreedAmount>17m</userAgreedAmount>
+        </exposureEventDetail>
+        
+        <bookingDetail id="call.value.2m.requiredAmount.2m">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Call</bookingMovement>
+                    <movement>Call</movement>
+                    <value>2,000,000.00</value>
+                    <requiredAmount>2,000,000.00</requiredAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="recall.value.17m.requiredAmount.17m">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Recall</bookingMovement>
+                    <movement>Recall</movement>
+                    <value>17,000,000.00</value>
+                    <requiredAmount>17,000,000.00</requiredAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <exposureEventDetail id="call.requirementAmount.10m.userAgreedAmount.-6m">
+            <userAgreedAmount>-6m</userAgreedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="recall.requirementAmount.17m.userAgreedAmount.-13m">
+            <userAgreedAmount>-13m</userAgreedAmount>
+        </exposureEventDetail>
+
+        <bookingDetail id="call.value.6m.requiredAmount.6m">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Call</bookingMovement>
+                    <movement>Call</movement>
+                    <value>6,000,000.00</value>
+                    <requiredAmount>6,000,000.00</requiredAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="recall.value.13m.requiredAmount.13m">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Recall</bookingMovement>
+                    <movement>Recall</movement>
+                    <value>13,000,000.00</value>
+                    <requiredAmount>13,000,000.00</requiredAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+    </scenarioData>
+</dataBean>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xsi:noNamespaceSchemaLocation="http://artifactory.london.lombardrisk.com:8081/artifactory/libs-snapshot-local/com/lombardrisk/cobiz/1.0.0-SNAPSHOT/cobiz-1.0.0-SNAPSHOT.jar!/schemas/dataBean.xsd">
+<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/smoke.xml" xpointer="element(/1/1)"/>
+<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+
+<scenarioData>
+
+<organisation id="SmokeBranchPrincipal">
+
+    <longName id="org.bphb.lname" random="true"/>
+    <shortName id="org.bphb.sname" random="true"/>
+    <code id="org.bphb.code" random="true"/>
+    <role ref="org.role.cr.name"/>
+    <role ref="org.role.cp.name"/>
+    <role ref="org.role.bh.name"/>
+    <address>
+        <contact>someone</contact>
+        <address1>somewhere1</address1>
+        <address2>somewhere2</address2>
+        <address3>somewhere3</address3>
+        <address4>somewhere4</address4>
+        <address5>somewhere5</address5>
+        <title>manager</title>
+        <label>label</label>
+        <tel>12345678</tel>
+        <fax>12345678</fax>
+        <email>test@test.com</email>
+        <ftp>ftp://127.0.0.1</ftp>
+        <notes>some notes</notes>
+        <enable>true</enable>
+    </address>
+    <status>Approved</status>
+</organisation>
+
+<organisation id="SmokePrincipal">
+
+    <longName id="org.phb.lname" random="true"/>
+    <shortName id="org.phb.sname" random="true"/>
+    <code id="org.phb.code" random="true"/>
+    <role ref="org.role.cr.name"/>
+    <role ref="org.role.cp.name"/>
+    <!--<longName>SmokePrincipalLong</longName>-->
+    <!--<shortName>SmokePrincipalShort</shortName>-->
+    <!--<code>SmokePrincipalCode</code>-->
+    <!--<role ref="org.role.cr.name"/>-->
+    <!--<role ref="org.role.cp.name"/>-->
+    <address>
+        <contact>someone</contact>
+        <address1>somewhere1</address1>
+        <address2>somewhere2</address2>
+        <address3>somewhere3</address3>
+        <address4>somewhere4</address4>
+        <address5>somewhere5</address5>
+        <title>manager</title>
+        <label>label</label>
+        <tel>12345678</tel>
+        <fax>12345678</fax>
+        <email>test@test.com</email>
+        <ftp>ftp://127.0.0.1</ftp>
+        <notes>some notes</notes>
+        <enable>true</enable>
+    </address>
+
+    <relationship>
+        <parent>false</parent>
+        <type>branch</type>
+        <organisationSearch>
+            <filter ref="org.bphb.lname"/>
+            <linkText ref="org.bphb.lname"/>
+        </organisationSearch>
+    </relationship>
+
+    <relationship>
+        <parent>true</parent>
+        <type>subsidiary</type>
+        <organisationSearch>
+            <filter>MainOrg</filter>
+            <linkText>MainOrg</linkText>
+        </organisationSearch>
+    </relationship>
+
+    <status>Approved</status>
+</organisation>
+
+
+    <!--<organisationSearch id = "MainOrgSearch">-->
+        <!--<filter>MainOrg</filter>-->
+        <!--<linkText>MainOrg</linkText>-->
+    <!--</organisationSearch>-->
+
+    <!--<organisation id = "MainOrgApprove">-->
+        <!--<status>Approved</status>-->
+    <!--</organisation>-->
+
+<!--<organisationSearch id="MainOrg1">-->
+    <!--<filter>LRS</filter>-->
+    <!--<linkText>LRS</linkText>-->
+<!--</organisationSearch>-->
+
+    </scenarioData>
+</dataBean>

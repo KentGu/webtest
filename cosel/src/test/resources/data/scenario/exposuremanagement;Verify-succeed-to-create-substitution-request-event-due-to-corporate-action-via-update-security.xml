@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <securitySearch id="26495.bond.usd.1">
+            <matured>All</matured>
+            <instrument>
+                <filter id="26495.bond.usd.1.id">26495_bond_usd_1</filter>
+                <!--<linkText ref="26527.bond.usd"/>-->
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="26495.bond.usd.1.approve">
+            <instrument ref="26495.bond.usd.1.id"/>
+        </securitySearchResult>
+
+        <instrument id="26495.bond.usd.1.changeRecordDate.tMinus5.MaturityDate.tPlus1000">
+            <maturityDate>t+1000</maturityDate>
+            <recordDate>t-5</recordDate>
+        </instrument>
+
+        <securitySearch id="26495.equity.usd.1">
+            <matured>All</matured>
+            <instrument>
+                <filter id="26495.equity.usd.1.id">26495_equity_usd_1</filter>
+                <!--<linkText ref="29482.equity.usd.id"/>-->
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="26495.equity.usd.1.approve">
+            <instrument ref="26495.equity.usd.1.id"/>
+        </securitySearchResult>
+
+        <instrument id="26495.equity.usd.1.changeRecordDate.tPlus1000.MaturityDate.tPlus5">
+            <maturityDate>t+5</maturityDate>
+            <recordDate>t+1000</recordDate>
+        </instrument>
+
+        <securitySearch id="26495.equity.usd.2">
+            <matured>All</matured>
+            <instrument>
+                <filter id="26495.equity.usd.2.id">26495_equity_usd_2</filter>
+                <!--<linkText ref="29482.equity.usd.id"/>-->
+            </instrument>
+            <matured>All</matured>
+        </securitySearch>
+
+        <securitySearchResult id="26495.equity.usd.2.approve">
+            <instrument ref="26495.equity.usd.2.id"/>
+        </securitySearchResult>
+
+        <instrument id="26495.equity.usd.2.changeRecordDate.tPlus1000.MaturityDate.tMinus5">
+            <maturityDate>t-5</maturityDate>
+            <recordDate>t+1000</recordDate>
+        </instrument>
+
+        <agreement id="agr26495">
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+        <agreement id="agr26495.net">
+            <agreementId id="agrid">2605</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="reasonForSub">
+            <column>Reason for Sub</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="source">
+            <column>Source</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="recall.agreementReqiuement.4m">
+            <action>Recall</action>
+            <callStatus>Pending Review</callStatus>
+            <source></source>
+            <element></element>
+            <agreementRequirement>4,000,000.00</agreementRequirement>
+            <eventId id="recall.agreementReqiuement.4m.event"/>
+        </exposureEventDetail>
+
+        <exposureEventSearch id="agr26495.search">
+            <agrId ref="agrid"/>
+        </exposureEventSearch>
+
+        <exposureEventDetail id="bond.usd.1.subRequest.requirementAmount.1m.reasonForSub.RecordDatedue">
+            <action>Substitution Request</action>
+            <callStatus>Pending Review</callStatus>
+            <source>System</source>
+            <element>26495_bond_usd_1,m1</element>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <reasonForSub>Record Date due</reasonForSub>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="equity.usd.1.subRequest.requirementAmount.2m.reasonForSub.MaturityDue">
+            <action>Substitution Request</action>
+            <callStatus>Pending Review</callStatus>
+            <source>System</source>
+            <element>26495_equity_usd_1,m1</element>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <reasonForSub>Maturity due</reasonForSub>
+        </exposureEventDetail>
+
+        <marginLetter id="createSubstitutionRequestLetter">
+            <letterType>Substitution Request</letterType>
+            <!--<letterSetupDetails>-->
+                <!--<emailAttachments>-->
+                    <!--<assetHoldingsandValuationReport>true</assetHoldingsandValuationReport>-->
+                <!--</emailAttachments>-->
+            <!--</letterSetupDetails>-->
+        </marginLetter>
+
+        <exposureEventDetail id="bond.usd.1.subRequest.requirementAmount.1m.reasonForSub.RecordDatedue.issued">
+            <action>Substitution Request</action>
+            <callStatus>Request Issued</callStatus>
+            <source>System</source>
+            <element>26495_bond_usd_1,m1</element>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <reasonForSub>Record Date due</reasonForSub>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="equity.usd.1.subRequest.requirementAmount.2m.reasonForSub.MaturityDue.issued">
+            <action>Substitution Request</action>
+            <callStatus>Request Issued</callStatus>
+            <source>System</source>
+            <element>26495_equity_usd_1,m1</element>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <reasonForSub>Maturity due</reasonForSub>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="bond.usd.1.subRequest.requirementAmount.1m.reasonForSub.RecordDatedue.completed">
+            <action>Substitution Request</action>
+            <callStatus>Completed</callStatus>
+            <source>System</source>
+            <element>26495_bond_usd_1,m1</element>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <reasonForSub>Record Date due</reasonForSub>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="equity.usd.1.subRequest.requirementAmount.2m.reasonForSub.MaturityDue.completed">
+            <action>Substitution Request</action>
+            <callStatus>Completed</callStatus>
+            <source>System</source>
+            <element>26495_equity_usd_1,m1</element>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <reasonForSub>Maturity due</reasonForSub>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="bond.usd.1.subRequest.requirementAmount.1m.reasonForSub.RecordDatedue.waived">
+            <action>Substitution Request</action>
+            <callStatus>Waived</callStatus>
+            <source>System</source>
+            <element>26495_bond_usd_1,m1</element>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <reasonForSub>Record Date due</reasonForSub>
+            <comments>t</comments>
+        </exposureEventDetail>
+
+        <exposureManagementFilter id="subFilter.waived">
+            <filter>
+                <filterName id="addedUserFilter">test_26495</filterName>
+                <filterDescription>test_26495</filterDescription>
+                <copyFilter>Waived</copyFilter>
+            </filter>
+            <copyFilterMenu>Substitution Filters</copyFilterMenu>
+            <icon>iCall</icon>
+        </exposureManagementFilter>
+
+        <exposureManagementFilter id="agr26495.addedUserFilter">
+            <filter>
+                <filterName ref="addedUserFilter"/>
+            </filter>
+        </exposureManagementFilter>
+
+        <bookingDetail id="bond.usd.1.recall.1m">
+            <!--<instrumentSearch>-->
+                <!--<instrument>-->
+                    <!--<filter>26495_bond_usd_1,m1</filter>-->
+                <!--</instrument>-->
+            <!--</instrumentSearch>-->
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <instrumentId>26495_bond_usd_1,m1</instrumentId>
+                    <nominalAmount>1m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="bond.usd.2.delivery.1m">
+            <instrumentSearch>
+                <instrument>
+                    <filter>26495_bond_usd_2,m2</filter>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <instrumentId></instrumentId>
+                    <requiredAmount>-1,000,000.00</requiredAmount>
+                    <nominalAmount>1m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="equity.usd.1.recall.1.2m">
+            <!--<instrumentSearch>-->
+            <!--<instrument>-->
+            <!--<filter>26495_bond_usd_1,m1</filter>-->
+            <!--</instrument>-->
+            <!--</instrumentSearch>-->
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <instrumentId>26495_equity_usd_1,m1</instrumentId>
+                    <nominalAmount>1.2m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="bond.usd.2.delivery.1.2m">
+            <instrumentSearch>
+                <instrument>
+                    <filter>26495_bond_usd_2,m2</filter>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <instrumentId></instrumentId>
+                    <requiredAmount>-2,000,000.00</requiredAmount>
+                    <nominalAmount>1.2m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+
+
+
+
+
+
+    </scenarioData>
+</dataBean>

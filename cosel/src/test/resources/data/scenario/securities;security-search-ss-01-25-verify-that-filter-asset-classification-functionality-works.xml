@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <collateralStaticData id="Asset-Classification1">
+            <type>Asset Classification</type>
+            <dataName>AC1</dataName>
+            <description random="true"></description>
+            <status>enabled</status>
+        </collateralStaticData>
+
+        <collateralStaticData id="Asset-Classification2">
+            <type>Asset Classification</type>
+            <dataName>AC2</dataName>
+            <description random="true"></description>
+            <status>enabled</status>
+        </collateralStaticData>
+
+        <collateralStaticData id="Asset-Classification3">
+            <type>Asset Classification</type>
+            <dataName>AC3</dataName>
+            <description random="true"></description>
+            <status>enabled</status>
+        </collateralStaticData>
+
+        <assetDefinition id="C1">
+            <assetClassification>AC1</assetClassification>
+            <assetName>C1</assetName>
+            <status>enabled</status>
+            <description random="true"/>
+            <assetType>
+                <filter>qtp_bond_usd,qtp_bond_gbp,qtp_equity_usd,</filter>
+            </assetType>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </assetDefinition>
+
+        <assetDefinition id="C2">
+            <assetClassification>AC1</assetClassification>
+            <assetName>C2</assetName>
+            <status>enabled</status>
+            <description random="true"></description>
+            <assetType>
+                <filter>qtp_bond_usd,qtp_bond_gbp</filter>
+            </assetType>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </assetDefinition>
+
+        <assetDefinition id="C3">
+            <assetClassification>AC1</assetClassification>
+            <assetName>C3</assetName>
+            <status></status>
+            <description random="true"></description>
+            <assetType>
+                <filter>qtp_bond_usd,qtp_equity_usd</filter>
+            </assetType>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </assetDefinition>
+
+        <assetDefinition id="C4">
+            <assetClassification>AC3</assetClassification>
+            <assetName>C4</assetName>
+            <status>enabled</status>
+            <description random="true"></description>
+            <assetType>
+                <filter>qtp_bond_usd,qtp_bond_gbp,qtp_equity_usd</filter>
+            </assetType>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </assetDefinition>
+
+        <assetDefinition id="C5">
+            <assetClassification>AC3</assetClassification>
+            <assetName>C5</assetName>
+            <status>enabled</status>
+            <description random="true"></description>
+            <assetType>
+                <filter>qtp_bond_usd,qtp_bond_gbp</filter>
+            </assetType>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </assetDefinition>
+
+        <assetDefinition id="C6">
+            <assetClassification>AC3</assetClassification>
+            <assetName>C6</assetName>
+            <status>enabled</status>
+            <description random="true"></description>
+            <assetType>
+                <filter>qtp_bond_usd,qtp_equity_usd</filter>
+            </assetType>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </assetDefinition>
+
+
+        <instrument id="instrument-insxxx001">
+            <assetClass>qtp_bond</assetClass>
+            <assetType>qtp_bond_usd</assetType>
+            <assetClassification>
+                <assetClassificationName>AC1</assetClassificationName>
+                <assetcategory>C1</assetcategory>
+            </assetClassification>
+            <instrumentId>
+                <value id="bondinstrument.id" random="false" prefix="insxxx001"/>
+            </instrumentId>
+            <market>USA</market>
+            <description id="bondinstrument.des" random="false" prefix="bondinstrument.des"/>
+            <issuer>
+                <filter>QTP_Eligible_Issuer4</filter>
+                <linkText>QTP_Eligible_Issuer4</linkText>
+            </issuer>
+            <priceSource>
+                <priceSourceName ref="ps.default.name"/>
+                <cleanPrice>1m</cleanPrice>
+                <priceLevel>Mid</priceLevel>
+                <lastPriceChange>T</lastPriceChange>
+                <priceDate>T</priceDate>
+            </priceSource>
+            <maturityDate>T+100</maturityDate>
+            <couponRate>10</couponRate>
+            <recordDate>T</recordDate>
+            <issueDate>T</issueDate>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <securitySearch id="SecuritySearch">
+            <instrument>
+                <type>Starting with</type>
+                <filter ref="bondinstrument.id"/>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="SearchSecurity">
+            <instrument ref="bondinstrument.id"/>
+        </securitySearchResult>
+
+        <securitySearchResult id="SearchWillBeApproved">
+            <instrument ref="bondinstrument.id"/>
+        </securitySearchResult>
+
+        <instrument id="instrument.Status.Approved">
+            <securityStatus>Approved</securityStatus>
+        </instrument>
+
+        <instrument id="instrument-insxxx002">
+            <assetClass>qtp_bond</assetClass>
+            <assetType>qtp_bond_gbp</assetType>
+            <assetClassification>
+            <assetClassificationName>AC1</assetClassificationName>
+            <assetcategory>C2</assetcategory>
+            </assetClassification>
+            <assetClassification>
+                <assetClassificationName>AC3</assetClassificationName>
+                <assetcategory>C5</assetcategory>
+            </assetClassification>
+            <instrumentId>
+                <value id="insxxx002.id" random="false" prefix="insxxx002"/>
+            </instrumentId>
+            <market>USA</market>
+            <description id="bondinstrument.des" random="true" />
+            <issuer>
+                <filter>QTP_Eligible_Issuer4</filter>
+                <linkText>QTP_Eligible_Issuer4</linkText>
+            </issuer>
+            <priceSource>
+                <priceSourceName ref="ps.default.name"/>
+                <cleanPrice>1m</cleanPrice>
+                <priceLevel>Mid</priceLevel>
+                <lastPriceChange>T</lastPriceChange>
+                <priceDate>T</priceDate>
+            </priceSource>
+            <maturityDate>T+100</maturityDate>
+            <couponRate>10</couponRate>
+            <recordDate>T</recordDate>
+            <issueDate>T</issueDate>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <securitySearch id="SecuritySearch-002">
+            <instrument>
+                <type>Starting with</type>
+                <filter ref="insxxx002.id"/>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="SearchSecurity-002">
+            <instrument ref="insxxx002.id"/>
+        </securitySearchResult>
+
+        <securitySearchResult id="SearchWillBeApproved-002">
+            <instrument ref="insxxx002.id"/>
+        </securitySearchResult>
+
+        <instrument id="instrument.Status.Approved-002">
+            <securityStatus>Approved</securityStatus>
+        </instrument>
+
+        <instrument id="instrument-insxxx003">
+            <assetClass>qtp_bond</assetClass>
+            <assetType>qtp_bond_usd</assetType>
+            <assetClassification>
+                <assetClassificationName>AC1</assetClassificationName>
+                <!--<assetcategory>C2</assetcategory>-->
+            </assetClassification>
+            <assetClassification>
+                <assetClassificationName>AC3</assetClassificationName>
+                <!--<assetcategory>C5</assetcategory>-->
+            </assetClassification>
+            <instrumentId>
+                <value id="insxxx003.id" random="false" prefix="insxxx003"/>
+            </instrumentId>
+            <market>USA</market>
+            <description id="bondinstrument.des" random="true" />
+            <issuer>
+                <filter>QTP_Eligible_Issuer4</filter>
+                <linkText>QTP_Eligible_Issuer4</linkText>
+            </issuer>
+            <priceSource>
+                <priceSourceName ref="ps.default.name"/>
+                <cleanPrice>1m</cleanPrice>
+                <priceLevel>Mid</priceLevel>
+                <lastPriceChange>T</lastPriceChange>
+                <priceDate>T</priceDate>
+            </priceSource>
+            <maturityDate>T+100</maturityDate>
+            <couponRate>10</couponRate>
+            <recordDate>T</recordDate>
+            <issueDate>T</issueDate>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <securitySearch id="SecuritySearch-003">
+            <instrument>
+                <type>Starting with</type>
+                <filter ref="insxxx003.id"/>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="SearchSecurity-003">
+            <instrument ref="insxxx003.id"/>
+        </securitySearchResult>
+
+        <securitySearchResult id="SearchWillBeApproved-003">
+            <instrument ref="insxxx003.id"/>
+        </securitySearchResult>
+
+        <instrument id="instrument.Status.Approved-003">
+            <securityStatus>Approved</securityStatus>
+        </instrument>
+
+        <instrument id="instrument-insxxx004">
+            <assetClass>qtp_equity</assetClass>
+            <assetType>qtp_equity_usd</assetType>
+            <assetClassification>
+                <assetClassificationName>AC1</assetClassificationName>
+                <!--<assetcategory>C2</assetcategory>-->
+            </assetClassification>
+            <assetClassification>
+                <assetClassificationName>AC3</assetClassificationName>
+                <assetcategory>C4</assetcategory>
+            </assetClassification>
+            <instrumentId>
+                <value id="insxxx004.id" random="false" prefix="insxxx004"/>
+            </instrumentId>
+            <market>USA</market>
+            <description id="bondinstrument.des" random="true" />
+            <issuer>
+                <filter>QTP_Eligible_Issuer4</filter>
+                <linkText>QTP_Eligible_Issuer4</linkText>
+            </issuer>
+            <maturityDate>T+100</maturityDate>
+            <recordDate>T</recordDate>
+            <issueDate>T</issueDate>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <securitySearch id="SecuritySearch-004">
+            <instrument>
+                <type>Starting with</type>
+                <filter ref="insxxx004.id"/>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="SearchSecurity-004">
+            <instrument ref="insxxx004.id"/>
+        </securitySearchResult>
+
+        <securitySearchResult id="SearchWillBeApproved-004">
+            <instrument ref="insxxx004.id"/>
+        </securitySearchResult>
+
+        <instrument id="instrument.Status.Approved-004">
+            <securityStatus>Approved</securityStatus>
+        </instrument>
+
+        <securitySearch id="SecuritySearch.All.Instrument.starting.with.insxxx00">
+            <instrument>
+                <type>Starting with</type>
+                <filter>insxxx00</filter>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="Instrument-001.Instrument-002.Instrument-003.Instrument-004">
+            <instrument>insxxx001</instrument>
+            <instrument>insxxx002</instrument>
+            <instrument>insxxx003</instrument>
+            <instrument>insxxx004</instrument>
+        </securitySearchResult>
+
+        <securitySearch id="SecuritySearch.for.assetClassification">
+              <assetClassification>AC1</assetClassification>
+        </securitySearch>
+
+        <securitySearchResult id="SecuritySearch.for.assetClassification.results">
+            <instrument>insxxx001</instrument>
+            <instrument>insxxx002</instrument>
+        </securitySearchResult>
+
+        <securitySearch id="SecuritySearch.with.assetCategory">
+            <assetClassification>AC1</assetClassification>
+            <assetCategory>C2</assetCategory>
+        </securitySearch>
+
+        <securitySearchResult id="SecuritySearch.with.assetCategory.results">
+            <instrument>insxxx002</instrument>
+        </securitySearchResult>
+
+        <securitySearch id="SecuritySearch.with.assetType">
+            <assetClassification>AC1</assetClassification>
+            <assetType>qtp_bond_usd</assetType>
+            <assetCategory>C2</assetCategory>
+        </securitySearch>
+
+        <securitySearchResult id="SecuritySearch.with.assetType.results" apply="false">
+        </securitySearchResult>
+
+        <securitySearch id="SecuritySearch.with.assetType.Bond">
+            <assetClassification>AC1</assetClassification>
+            <assetType>qtp_bond_gbp</assetType>
+            <assetCategory>C2</assetCategory>
+        </securitySearch>
+
+        <securitySearch id="SecuritySearch.with.assetType.USD">
+            <assetClassification></assetClassification>
+            <assetType>qtp_bond_usd</assetType>
+            <assetCategory></assetCategory>
+        </securitySearch>
+
+        <securitySearchResult id="SecuritySearch.USD.results" apply="true">
+        </securitySearchResult>
+
+    </scenarioData>
+
+</dataBean>

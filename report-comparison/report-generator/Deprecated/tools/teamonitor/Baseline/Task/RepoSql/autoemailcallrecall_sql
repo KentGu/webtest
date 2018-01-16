@@ -1,0 +1,10 @@
+pre#CALLRECALL_IN_EE#select count(*) as num1 from colworkflow inner join colworkflowproc  on colworkflow.id =colworkflowproc.id inner join colagreementheader on colworkflow.agreementid =colagreementheader.id inner join colstatementstatus on colworkflow.agreementid =colstatementstatus.agreementid where colworkflow.actionid in (51,52)    and colworkflow.used=1 and colworkflow.todayworkflow=1 and colworkflowproc.marginCallStatus=65  and wrong = 0 and colagreementheader.statusid = 68 and colstatementstatus.statusid=68
+
+pre#CALLRECALL_IN_EE_tab3#select count(*) from colworkflow inner join colworkflowproc  on colworkflow.id =colworkflowproc.id inner join colagreementheader on colworkflow.agreementid =colagreementheader.id inner join colstatementstatus on colworkflow.agreementid =colstatementstatus.agreementid where colworkflow.actionid in (51,52)    and colworkflow.used=1 and colworkflow.todayworkflow=1 and colworkflowproc.marginCallStatus=65  and wrong = 0 and colagreementheader.statusid = 68 and colstatementstatus.statusid=68 and colworkflow.eeinittab=3
+
+pre#LETTERS_BEFORE#select count(*) as num2 from colletters
+
+post#LETTERS_AFTER#select count(*)as num3 from colletters
+
+val#1#`expr ${CALLRECALL_IN_EE} - ${CALLRECALL_IN_EE_tab3} / 2` -eq `expr ${LETTERS_AFTER} - ${LETTERS_BEFORE}`
+val#2#${LETTERS_AFTER} -ge ${LETTERS_BEFORE}

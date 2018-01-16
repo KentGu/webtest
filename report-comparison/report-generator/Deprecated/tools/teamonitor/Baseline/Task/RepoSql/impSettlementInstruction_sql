@@ -1,0 +1,5 @@
+pre#SettleInstruction_Before#select count(1) from ColPayInst where instvalue like 'BaselineTest%'
+
+post#SettleInstruction_After#select count(1) from ColPayInst where instvalue like 'BaselineTest%'
+
+val#1#`expr ${SettleInstruction_After} - ${SettleInstruction_Before}`

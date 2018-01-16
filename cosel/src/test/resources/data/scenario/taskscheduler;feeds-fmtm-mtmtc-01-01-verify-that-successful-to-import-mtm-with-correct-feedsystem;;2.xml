@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/feeds.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <agreement>
+            <agreementId id="feed.mtm.otc.net.trade.agreement.id">536</agreementId>
+            <agreementDescription id="feed.mtm.otc.net.trade.agreement.description">T5328_OTC_NET_Agreement_Description</agreementDescription>
+        </agreement>
+
+        <feedMtM id="feed.mtm.otc.net.trade">
+            <feedSystem ref="org.feed.system.qtp.name"/>
+            <tradeRef ref="check.feed.mtm.otc.net.trade.ref"/>
+            <mtm id="feed.mtm.otc.net.trade.mtm.value">999</mtm>
+            <mtmCcy id="feed.mtm.otc.net.trade.ccy">EUR</mtmCcy>
+            <quality id="feed.mtm.otc.net.trade.quality">55</quality>
+            <prcDate id="feed.mtm.otc.net.trade.valuation.date">2016-01-01</prcDate>
+            <misc4 id="feed.mtm.otc.net.trade.misc4">testing</misc4>
+            <miscMtm id="feed.mtm.otc.net.trade.misc.mtm">25</miscMtm>
+        </feedMtM>
+
+        <feedStatus id="feed.mtm.otc.net.trade.status">
+            <status>Successful</status>
+            <valuationFile ref="file.path"/>
+            <description>MTM Feed</description>
+            <successfulFeed>
+                <total>1</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <agreementSearch id="feed.mtm.otc.net.trade.agreement.search">
+            <systemId ref="feed.mtm.otc.net.trade.agreement.id"/>
+            <description>
+                <filter ref="feed.mtm.otc.net.trade.agreement.description"/>
+                <linkText ref="feed.mtm.otc.net.trade.agreement.description"/>
+            </description>
+        </agreementSearch>
+
+        <agreementSearchResult id="feed.mtm.otc.net.trade.agreement.search.result">
+            <agreementId ref="feed.mtm.otc.net.trade.agreement.id"/>
+            <description ref="feed.mtm.otc.net.trade.agreement.description"/>
+        </agreementSearchResult>
+
+        <agreementExposureSummary id="feed.mtm.otc.net.trade.product.type">
+            <productList>
+                <productType ref="product.test1.name"/>
+            </productList>
+        </agreementExposureSummary>
+
+        <tradeDetail id="check.feed.mtm.otc.net.trade">
+            <tradeInformation>
+                <productType ref="product.test1.name"/>
+                <tradeIdentifierPartyA id="check.feed.mtm.otc.net.trade.ref">T5328_ID_Party_A</tradeIdentifierPartyA>
+                <partyABranchName>T5328_Party_A_Name</partyABranchName>
+                <partyBBranchName>T5328_Party_B_Name</partyBBranchName>
+            </tradeInformation>
+            <valuationInformation>
+                <principalValuationAmount>
+                    <amount ref="feed.mtm.otc.net.trade.mtm.value"/>
+                    <currency ref="feed.mtm.otc.net.trade.ccy"/>
+                </principalValuationAmount>
+                <valuationDate>1/1/2016</valuationDate>
+                <sourceSystem ref="org.feed.system.qtp.name"/>
+            </valuationInformation>
+            <tradeMiscellaneousFields>
+                <misc4 ref="feed.mtm.otc.net.trade.misc4"/>
+                <miscMtm ref="feed.mtm.otc.net.trade.misc.mtm"/>
+            </tradeMiscellaneousFields>
+        </tradeDetail>
+
+        <taskSchedulerDetail id="task.feed.mtm">
+            <type>Task Manager</type>
+            <taskName>Import MtM</taskName>
+            <additionalInfo id="task.feed.agreement.server.path">/home/ec2-user/Feed/FeedMtM</additionalInfo>
+        </taskSchedulerDetail>
+
+        <variable id="file.path"/>
+
+        <taskSchedulerMessage id="task.feed.mtm.message">
+            <!--<message>MtM Import: Import MtM: Imported 1 MtM from :(\S+).(\S+)</message>-->
+            <message>Import MtM: Total MtMs: 1; Successfull Imports 1 MtMs.</message>
+        </taskSchedulerMessage>
+    </scenarioData>
+</dataBean>

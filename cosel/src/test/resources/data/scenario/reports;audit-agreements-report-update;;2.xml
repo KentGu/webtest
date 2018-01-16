@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <agreementSearch id="filter.with.description">
+            <description>
+                <filter>fcm_agr_audit_update</filter>
+            </description>
+        </agreementSearch>
+        <agreement id="agreement.fcm">
+            <agreementDescription>fcm_agr_audit_update</agreementDescription>
+            <principalVMCollateralAssetClass name="pvClassName1">
+                <collateralAssetClassName>qtp_bond</collateralAssetClassName>
+                <collateralAssetType name="pvTypeName1">
+                    <collateralAssetTypeName>qtp_bond_usd</collateralAssetTypeName>
+                    <haircutRule>
+                        <haircutAdjustment name="pvTypeHaircutName1">
+                            <valuationPercentage>56</valuationPercentage>
+                        </haircutAdjustment>
+                    </haircutRule>
+                    <concentrationLimitRule name="pvTypeClName1">
+                        <trigger>2000</trigger>
+                        <value>100</value>
+                    </concentrationLimitRule>
+                </collateralAssetType>
+                <concentrationLimitRule name="pvClassClName1">
+                    <trigger>1000</trigger>
+                    <value>100</value>
+                </concentrationLimitRule>
+            </principalVMCollateralAssetClass>
+            <principalIMCollateralAssetClass name="piClassName1">
+                <collateralAssetClassName>qtp_cash</collateralAssetClassName>
+                <collateralAssetType name="piTypeName1">
+                    <collateralAssetTypeName>CASH-USD</collateralAssetTypeName>
+                    <concentrationLimitRule name="piTypeClName1">
+                        <trigger>1000</trigger>
+                        <value>100</value>
+                    </concentrationLimitRule>
+                </collateralAssetType>
+                <concentrationLimitRule name="piClassClName1">
+                    <trigger>1000</trigger>
+                    <value>100</value>
+                </concentrationLimitRule>
+            </principalIMCollateralAssetClass>
+            <counterpartyVMCollateralAssetClass name="cvClassName1">
+                <collateralAssetClassName>qtp_equity</collateralAssetClassName>
+                <collateralAssetType name="cvTypeName1">
+                    <collateralAssetTypeName>qtp_equity_usd</collateralAssetTypeName>
+                    <concentrationLimitRule name="cvTypeClName1">
+                        <trigger>2000</trigger>
+                        <value>100</value>
+                    </concentrationLimitRule>
+                </collateralAssetType>
+                <concentrationLimitRule name="cvClassClName1">
+                    <trigger>1000</trigger>
+                    <value>100</value>
+                </concentrationLimitRule>
+            </counterpartyVMCollateralAssetClass>
+            <counterpartyIMCollateralAssetClass name="ciClassName1">
+                <collateralAssetClassName>qtp-commodity</collateralAssetClassName>
+                <collateralAssetType name="ciTypeName1">
+                    <collateralAssetTypeName>qtp-commodity-usd</collateralAssetTypeName>
+                    <concentrationLimitRule name="ciTypeClName1">
+                        <trigger>1000</trigger>
+                        <value>100</value>
+                    </concentrationLimitRule>
+                </collateralAssetType>
+                <concentrationLimitRule name="ciClassClName1">
+                    <trigger>2000</trigger>
+                    <value>100</value>
+                </concentrationLimitRule>
+            </counterpartyIMCollateralAssetClass>
+        </agreement>
+        <agreement id="agreement.fcm.with.all.contents.update">
+            <principal>
+                <filter>QTPPrincipal</filter>
+                <linkText>QTPPrincipal</linkText>
+            </principal>
+            <counterparty>
+                <filter>QTPCounterparty</filter>
+                <linkText>QTPCounterparty</linkText>
+            </counterparty>
+            <custodian>
+                <filter>QTPCustodian</filter>
+                <linkText>QTPCustodian</linkText>
+            </custodian>
+            <businessLine>Clearing</businessLine>
+            <ccp>LCH</ccp>
+            <regulatoryAgreement>true</regulatoryAgreement>
+            <agreedJurisdiction>
+                <filter>Dodd Frank</filter>
+                <linkText>Dodd Frank</linkText>
+            </agreedJurisdiction>
+            <otherJurisdiction>
+                <filter>EMIR</filter>
+                <linkText>EMIR</linkText>
+            </otherJurisdiction>
+            <!--<agreementDescription id="agr.des" prefix="fcm_agr" random="true"/>-->
+            <agreementDescription id="agr.des">fcm_agr_audit_update</agreementDescription>
+            <group>smoke</group>
+            <region>smoke</region>
+            <category>IR Swaps</category>
+            <collateralManager>QTPPrincipal - qtp_Label_120141015192348</collateralManager>
+            <notes>note</notes>
+            <agreementName ref="agr.des"/>
+            <externalId ref="agr.des"/>
+            <rank>1</rank>
+            <linkageSet>L1</linkageSet>
+            <principalInformation>
+                <partyBranch>QTPPrincipalBranch1</partyBranch>
+                <partyNav>1m</partyNav>
+                <partyNavCurrency>GBP</partyNavCurrency>
+                <valuationAgent>true</valuationAgent>
+                <primaryContact>QTPPrincipal</primaryContact>
+                <ccEmailContact>QTPPrincipal</ccEmailContact>
+                <interestContact>QTPPrincipal</interestContact>
+                <interestCcEmailContact>QTPPrincipal</interestCcEmailContact>
+            </principalInformation>
+            <counterpartyInformation>
+                <partyBranch>QTPCounterpartyBranch2</partyBranch>
+                <partyNav>2m</partyNav>
+                <partyNavCurrency>JPY</partyNavCurrency>
+                <valuationAgent>false</valuationAgent>
+                <primaryContact>QTPCounterparty</primaryContact>
+                <ccEmailContact>QTPCounterparty</ccEmailContact>
+                <interestContact>QTPCounterparty</interestContact>
+                <interestCcEmailContact>QTPCounterparty</interestCcEmailContact>
+            </counterpartyInformation>
+            <masterDocumentation>ESLA 1996</masterDocumentation>
+            <creditSupportDocumentation>EMA CSD 2004</creditSupportDocumentation>
+            <signoffDate>t</signoffDate>
+            <signoffBy>name</signoffBy>
+            <agreementDate>t</agreementDate>
+            <principalTransferCurrency>EUR</principalTransferCurrency>
+            <counterpartyTransferCurrency>EUR</counterpartyTransferCurrency>
+            <principalTerminationCurrency>EUR</principalTerminationCurrency>
+            <counterpartyTerminationCurrency>EUR</counterpartyTerminationCurrency>
+            <type>Pledge Agreement</type>
+            <nettingIAandMtM>Not-Net</nettingIAandMtM>
+            <vmRehypothecationRights>true</vmRehypothecationRights>
+            <imRehypothecationRights>true</imRehypothecationRights>
+            <signoffNotes>signoffNotes</signoffNotes>
+            <segregation>true</segregation>
+            <grossCalc>Net</grossCalc>
+            <tsa>true</tsa>
+            <tsaRule>QTP_TSA</tsaRule>
+            <flush>true</flush>
+            <fxRate>qtp_FxRate</fxRate>
+            <priceSource>Default</priceSource>
+            <sendConfirmationLetterToCounterparty>true</sendConfirmationLetterToCounterparty>
+            <sendConfirmationLetterToCustodian>true</sendConfirmationLetterToCustodian>
+            <custodianInformation>
+                <primaryContact>QTPCustodian</primaryContact>
+            </custodianInformation>
+            <vmCallFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </vmCallFrequency>
+            <imCallFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </imCallFrequency>
+            <holidayCentre>HONG KONG</holidayCentre>
+            <defaultTradeValuationRule>Counterparty Valuation Amount</defaultTradeValuationRule>
+            <tradeMappingRuleFlag>true</tradeMappingRuleFlag>
+            <tradeMappingRule>
+                <field>Trade Date</field>
+                <rule>Equal</rule>
+                <value>T</value>
+                <operator>END</operator>
+            </tradeMappingRule>
+            <agreementIA>
+            </agreementIA>
+            <product>
+                <productName>QTP</productName>
+                <exposurePercentageMTM>90</exposurePercentageMTM>
+                <settlementPeriod>T</settlementPeriod>
+                <upfrontCalculationMethodology>Percentage of Alternative Exposure</upfrontCalculationMethodology>
+                <externalIADetail>
+                    <principalUpfronts>true</principalUpfronts>
+                    <fixedPercentage>70</fixedPercentage>
+                </externalIADetail>
+            </product>
+            <product>
+                <productName>Pro9</productName>
+                <exposurePercentageMTM>70</exposurePercentageMTM>
+                <settlementPeriod>T+1</settlementPeriod>
+                <upfrontCalculationMethodology>External IA</upfrontCalculationMethodology>
+                <externalIADetail>
+                    <cptyUpfronts>true</cptyUpfronts>
+                    <fixedValue>1m</fixedValue>
+                    <currencySet>GBP</currencySet>
+                    <confidenceLevel>1</confidenceLevel>
+                    <days>2</days>
+                    <multiplier>2</multiplier>
+                    <minimumCollateral>2k</minimumCollateral>
+                    <maturityBucket>bucket</maturityBucket>
+                    <riskHistory>history</riskHistory>
+                    <comments>comments</comments>
+                    <mic1>m1</mic1>
+                    <mic2>m2</mic2>
+                    <mic3>m3</mic3>
+                    <mic4>m4</mic4>
+                    <mic5>m5</mic5>
+                </externalIADetail>
+            </product>
+            <vmInterest>true</vmInterest>
+            <imInterest>true</imInterest>
+            <vminterestCalculationsMethod>Compound</vminterestCalculationsMethod>
+            <vmCalculationRule>First of the Month</vmCalculationRule>
+            <vmPayMethod>Capitalise</vmPayMethod>
+            <vmReceiveMethod>Capitalise</vmReceiveMethod>
+            <imInterestCalculationsMethod>Compound excl Weekend</imInterestCalculationsMethod>
+            <imCalculationRule>Last Business Day</imCalculationRule>
+            <imPayMethod>Capitalise</imPayMethod>
+            <imReceiveMethod>Capitalise</imReceiveMethod>
+            <allowNegativeEffectiveInterestRate>true</allowNegativeEffectiveInterestRate>
+            <concentrationLimitTrigger>4k</concentrationLimitTrigger>
+            <eligibilityRulesTemplate>not_net_eligibility_rule</eligibilityRulesTemplate>
+            <gracePeriod>0</gracePeriod>
+            <applicableAgencies>true</applicableAgencies>
+            <collateralApplicableAgency>
+                <referenceRatingAgencies>MOODYS</referenceRatingAgencies>
+                <referenceRatingAgencies>SandP</referenceRatingAgencies>
+                <debtClassification>SUB</debtClassification>
+                <selectionOfAgencyUseValue>3</selectionOfAgencyUseValue>
+                <selectionOfAgencyUseType>Lower</selectionOfAgencyUseType>
+                <applicationOfRatings>Higher</applicationOfRatings>
+            </collateralApplicableAgency>
+            <exposureCushionRule>true</exposureCushionRule>
+            <collateralExposureCushionRule>
+                <ECPercentage>90</ECPercentage>
+                <ECFixedValue>10m</ECFixedValue>
+                <ECCalculationMethod>Maximum</ECCalculationMethod>
+                <ECAssetClassApplicability>qtp_bond</ECAssetClassApplicability>
+                <ECAssetClassApplicability>qtp_cash</ECAssetClassApplicability>
+                <ECDirection>Held</ECDirection>
+            </collateralExposureCushionRule>
+            <applicableParty>Applicable to Principal Only</applicableParty>
+            <applicableType>VM Only</applicableType>
+            <principalVMCollateralAssetClass  name="pvClassName1">
+                <collateralAssetClassName>qtp_bond</collateralAssetClassName>
+                <collateralAssetType name="pvTypeName1">
+                    <collateralAssetTypeName>qtp_bond_usd</collateralAssetTypeName>
+                    <templateVsAgreementEligibilityRules>Template + Agreement</templateVsAgreementEligibilityRules>
+                    <assetNote1>note1</assetNote1>
+                    <assetNote2>note2</assetNote2>
+                    <assetNote3>note3</assetNote3>
+                    <haircutRule>
+                        <haircutSchedule>
+                            <haircutRule>fixed</haircutRule>
+                            <fixedValuation>98</fixedValuation>
+                        </haircutSchedule>
+                        <haircutAdjustment name="pvTypeHaircutName1">
+                            <type>Adjust</type>
+                            <instrumentField>Currency</instrumentField>
+                            <rule>Equal</rule>
+                            <value>
+                                <filter>USD</filter>
+                                <linkText>USD</linkText>
+                            </value>
+                            <operation>Add</operation>
+                            <valuationPercentage>5</valuationPercentage>
+                        </haircutAdjustment>
+                    </haircutRule>
+                    <eligibilityRule>
+                        <minimumEligibilityRating>
+                            <agency>SandP</agency>
+                            <rating>A</rating>
+                        </minimumEligibilityRating>
+                        <minimumEligibilityRating>
+                            <agency>MOODYS</agency>
+                            <rating>A1</rating>
+                        </minimumEligibilityRating>
+                        <minimumEligibilityRating>
+                            <agency>Fitch</agency>
+                            <rating>A-</rating>
+                        </minimumEligibilityRating>
+                        <ratingEligibilityMethod>OR</ratingEligibilityMethod>
+                        <minEligibilityCqs>5</minEligibilityCqs>
+                        <issueDate>T</issueDate>
+                        <maturityBasis>From Issue Date</maturityBasis>
+                        <maturityTimeValue>4</maturityTimeValue>
+                        <maturityTimeType>Days</maturityTimeType>
+                        <roleCorrelation>Branch</roleCorrelation>
+                        <ultimateParentCorrelation>true</ultimateParentCorrelation>
+                        <closeLinkCorrelation>true</closeLinkCorrelation>
+                        <industryCorrelation>true</industryCorrelation>
+                        <udfRule>
+                            <securityUdf>UDF 1</securityUdf>
+                            <eligibilityRule>Equal</eligibilityRule>
+                            <value>UDF1</value>
+                        </udfRule>
+                        <eligibleCurrency>GBP</eligibleCurrency>
+                        <eligibleCountry>CHINA</eligibleCountry>
+                        <eligibleIssuer>
+                            <filter>QTP_Eligible_Issuer</filter>
+                            <linkText>QTP_Eligible_Issuer</linkText>
+                        </eligibleIssuer>
+                    </eligibilityRule>
+                    <concentrationLimitRule name="pvTypeClName1">
+                        <trigger>1k</trigger>
+                        <currency>GBP</currency>
+                        <rule>Issuance Holding</rule>
+                        <to>A/A2</to>
+                        <method>Min Issuance</method>
+                        <value>1m</value>
+                        <group>1</group>
+                    </concentrationLimitRule>
+                </collateralAssetType>
+                <concentrationLimitRule name="pvClassClName1">
+                    <trigger>2k</trigger>
+                    <currency>EUR</currency>
+                    <rule>Class Holding</rule>
+                    <method>Max Value</method>
+                    <value>7m</value>
+                </concentrationLimitRule>
+            </principalVMCollateralAssetClass>
+            <principalIMCollateralAssetClass name="piClassName1">
+                <collateralAssetClassName>qtp_cash</collateralAssetClassName>
+                <collateralAssetType name="piTypeName1">
+                    <collateralAssetTypeName>CASH-USD</collateralAssetTypeName>
+                    <templateVsAgreementEligibilityRules>Agreement Only</templateVsAgreementEligibilityRules>
+                    <assetNote1>note1</assetNote1>
+                    <assetNote2>note2</assetNote2>
+                    <assetNote3>note3</assetNote3>
+                    <haircutRule>
+                        <haircutSchedule>
+                            <haircutRule>fixed</haircutRule>
+                            <fixedValuation>89</fixedValuation>
+                        </haircutSchedule>
+                        <haircutAdjustment>
+                            <type>Adjust</type>
+                            <instrumentField>Currency</instrumentField>
+                            <rule>Equal</rule>
+                            <value>
+                                <filter>Principal Transfer Currency</filter>
+                                <linkText>Principal Transfer Currency</linkText>
+                            </value>
+                            <valuationPercentage>7</valuationPercentage>
+                        </haircutAdjustment>
+                    </haircutRule>
+                    <interestRule>
+                        <agreementRate>Rate-A</agreementRate>
+                        <bpSpread>
+                            <effectiveValue>10</effectiveValue>
+                            <effectiveDate>T</effectiveDate>
+                        </bpSpread>
+                        <reinvestRate>Rate-B</reinvestRate>
+                    </interestRule>
+                    <whtRule>
+                        <whtRate>WhtPI</whtRate>
+                        <whtApplied>
+                            <effectiveDate>T</effectiveDate>
+                            <applied>true</applied>
+                        </whtApplied>
+                    </whtRule>
+                    <concentrationLimitRule name="piTypeClName1">
+                        <trigger>2k</trigger>
+                        <currency>JPY</currency>
+                        <method>Max Value</method>
+                        <value>10m</value>
+                    </concentrationLimitRule>
+                </collateralAssetType>
+                <concentrationLimitRule name="piClassClName1">
+                    <trigger>3k</trigger>
+                    <currency>EUR</currency>
+                    <method>Max Value</method>
+                    <value>10m</value>
+                </concentrationLimitRule>
+                <autoBookingRule>
+                    <applicableTo>IM</applicableTo>
+                    <assetType>CASH-USD</assetType>
+                    <tolerance>Fixed Amt</tolerance>
+                    <amount>2m</amount>
+                    <value>Default</value>
+                    <movement>Recall</movement>
+                    <bookingStatus>Pending</bookingStatus>
+                    <createWithLetter>true</createWithLetter>
+                </autoBookingRule>
+            </principalIMCollateralAssetClass>
+            <counterpartyVMCollateralAssetClass name="cvClassName1">
+                <collateralAssetClassName>qtp_equity</collateralAssetClassName>
+                <collateralAssetType name="cvTypeName1">
+                    <collateralAssetTypeName>qtp_equity_usd</collateralAssetTypeName>
+                    <templateVsAgreementEligibilityRules>Template + Agreement</templateVsAgreementEligibilityRules>
+                    <assetNote1>note1</assetNote1>
+                    <assetNote2>note2</assetNote2>
+                    <assetNote3>note3</assetNote3>
+                    <haircutRule>
+                        <haircutSchedule>
+                            <haircutRule>fixed</haircutRule>
+                            <fixedValuation>70</fixedValuation>
+                        </haircutSchedule>
+                        <haircutAdjustment>
+                            <type>Override</type>
+                            <instrumentField>Currency</instrumentField>
+                            <rule>Equal</rule>
+                            <value>
+                                <filter>USD</filter>
+                                <linkText>USD</linkText>
+                            </value>
+                            <valuationPercentage>90</valuationPercentage>
+                        </haircutAdjustment>
+                    </haircutRule>
+                    <eligibilityRule>
+                        <minEligibilityCqs>8</minEligibilityCqs>
+                        <roleCorrelation>Branch</roleCorrelation>
+                        <ultimateParentCorrelation>true</ultimateParentCorrelation>
+                        <closeLinkCorrelation>true</closeLinkCorrelation>
+                        <industryCorrelation>true</industryCorrelation>
+                    </eligibilityRule>
+                    <concentrationLimitRule name="cvTypeClName1">
+                        <trigger>4k</trigger>
+                        <currency>EUR</currency>
+                        <rule>Issuer Holding</rule>
+                        <to>A/A2/A</to>
+                        <method>Max %</method>
+                        <value>80</value>
+                    </concentrationLimitRule>
+                </collateralAssetType>
+                <concentrationLimitRule name="cvClassClName1">
+                    <trigger>5k</trigger>
+                    <currency>JPY</currency>
+                    <rule>Country Holding</rule>
+                    <to>A/A2/A</to>
+                    <method>Max Value</method>
+                    <value>7m</value>
+                </concentrationLimitRule>
+            </counterpartyVMCollateralAssetClass>
+            <counterpartyIMCollateralAssetClass name="ciClassName1">
+                <collateralAssetClassName>qtp-commodity</collateralAssetClassName>
+                <collateralAssetType name="ciTypeName1">
+                    <collateralAssetTypeName>qtp-commodity-usd</collateralAssetTypeName>
+                    <templateVsAgreementEligibilityRules>Template Only</templateVsAgreementEligibilityRules>
+                    <assetNote1>note1</assetNote1>
+                    <assetNote2>note2</assetNote2>
+                    <assetNote3>note3</assetNote3>
+                    <haircutRule>
+                        <haircutSchedule>
+                            <haircutRule>fixed</haircutRule>
+                            <fixedValuation>78</fixedValuation>
+                        </haircutSchedule>
+                        <haircutAdjustment>
+                            <type>Adjust</type>
+                            <instrumentField>UDF 4</instrumentField>
+                            <rule>Equal</rule>
+                            <value>
+                                <filter>2</filter>
+                            </value>
+                            <valuationPercentage>10</valuationPercentage>
+                        </haircutAdjustment>
+                    </haircutRule>
+                    <eligibilityRule>
+                        <minEligibilityCqs>5</minEligibilityCqs>
+                        <roleCorrelation>Group</roleCorrelation>
+                        <ultimateParentCorrelation>true</ultimateParentCorrelation>
+                        <closeLinkCorrelation>true</closeLinkCorrelation>
+                        <industryCorrelation>true</industryCorrelation>
+                        <udfRule>
+                            <securityUdf>UDF 5</securityUdf>
+                            <eligibilityRule>Not Equal</eligibilityRule>
+                            <value>udf5</value>
+                        </udfRule>
+                        <eligibleCurrency>AOK</eligibleCurrency>
+                        <eligibleCountry>CHILE</eligibleCountry>
+                        <eligibleIssuer>
+                            <filter>QTP_Eligible_Issuer3</filter>
+                            <linkText>QTP_Eligible_Issuer3</linkText>
+                        </eligibleIssuer>
+                    </eligibilityRule>
+                    <concentrationLimitRule name="ciTypeClName1">
+                        <trigger>6k</trigger>
+                        <currency>GBP</currency>
+                        <rule>Instrument Holding</rule>
+                        <method>Max %</method>
+                        <value>98</value>
+                    </concentrationLimitRule>
+                </collateralAssetType>
+                <concentrationLimitRule name="ciClassClName1">
+                    <trigger>7k</trigger>
+                    <currency>JPY</currency>
+                    <rule>Industry Holding</rule>
+                    <to>C/C/C</to>
+                    <method>Max Value</method>
+                    <value>10m</value>
+                </concentrationLimitRule>
+            </counterpartyIMCollateralAssetClass>
+            <applyThresholdMTARounding>separate</applyThresholdMTARounding>
+            <applyOrganisationThreshold>true</applyOrganisationThreshold>
+            <VMrounding>
+                <delivery>Down</delivery>
+                <recall>Up</recall>
+            </VMrounding>
+            <splitTheDifferenceValue>1000</splitTheDifferenceValue>
+            <splitTheDifferenceType>Exposure</splitTheDifferenceType>
+            <vmPrincipalFixedTrigger>
+                <fixedValues>
+                    <threshold>
+                        <fixedAmount>
+                            <amount>1000</amount>
+                        </fixedAmount>
+                    </threshold>
+                    <minimumTransfer>
+                        <percentageOfNAV>10</percentageOfNAV>
+                    </minimumTransfer>
+                    <roundingAmount>100</roundingAmount>
+                </fixedValues>
+            </vmPrincipalFixedTrigger>
+            <vmCounterpartyFixedTrigger>
+                <timeContingentValues>
+                    <row>
+                        <threshold>1k</threshold>
+                        <thresholdCurrency>GBP</thresholdCurrency>
+                        <thresholdType>Infinity</thresholdType>
+                        <minimumTransfer>2k</minimumTransfer>
+                        <minimumTransferType>Fixed</minimumTransferType>
+                        <roundingAmount>200</roundingAmount>
+                        <timeBasedIA>2k</timeBasedIA>
+                    </row>
+                </timeContingentValues>
+            </vmCounterpartyFixedTrigger>
+            <imPrincipalFixedTrigger>
+                <navContingentValues>
+                    <row>
+                        <threshold>2k</threshold>
+                        <thresholdType>Infinity</thresholdType>
+                        <minimumTransfer>80</minimumTransfer>
+                        <minimumTransferType>% of NAV</minimumTransferType>
+                        <roundingAmount>300</roundingAmount>
+                    </row>
+                </navContingentValues>
+            </imPrincipalFixedTrigger>
+            <imCounterpartyFixedTrigger>
+                <ratingContingentValues>
+                    <referenceRatingAgencies>Fitch</referenceRatingAgencies>
+                    <applicationOfRatings>Lower</applicationOfRatings>
+                    <row>
+                        <ratingLevel>AAA</ratingLevel>
+                        <threshold>1k</threshold>
+                        <thresholdType>Fixed</thresholdType>
+                        <minimumTransfer>1k</minimumTransfer>
+                        <minimumTransferType>% of NAV</minimumTransferType>
+                        <roundingAmount>500</roundingAmount>
+
+                    </row>
+                </ratingContingentValues>
+            </imCounterpartyFixedTrigger>
+            <additionalField>
+                <fieldName>Date</fieldName>
+                <value>date</value>
+            </additionalField>
+            <settlementBucket>
+                <bookingType>VM</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter>IM Call/Return</filter>
+                    <linkText>IM Call/Return</linkText>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>VM</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter>IM Call/Return</filter>
+                    <linkText>IM Call/Return</linkText>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>IM</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter>IM Call/Return</filter>
+                    <linkText>IM Call/Return</linkText>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>IM</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter>IM Call/Return</filter>
+                    <linkText>IM Call/Return</linkText>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>VM Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter>IM Call/Return</filter>
+                    <linkText>IM Call/Return</linkText>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>VM Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter>IM Call/Return</filter>
+                    <linkText>IM Call/Return</linkText>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>IM Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter>IM Call/Return</filter>
+                    <linkText>IM Call/Return</linkText>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>IM Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter>IM Call/Return</filter>
+                    <linkText>IM Call/Return</linkText>
+                </bucket>
+            </settlementBucket>
+            <!--<distributionTask>-->
+                <!--<distributionTaskName>ext_freq_2</distributionTaskName>-->
+                <!--<report>Exposures</report>-->
+                <!--<frequency>Daily</frequency>-->
+                <!--<businessAdjustType>RollForward</businessAdjustType>-->
+                <!--<medium>Email</medium>-->
+                <!--<principalContact>-->
+                    <!--<primaryContact>QTPPrincipal</primaryContact>-->
+                    <!--<ccEmailContact>ALL</ccEmailContact>-->
+                <!--</principalContact>-->
+                <!--<counterpartyContact>-->
+                    <!--<primaryContact>QTPCounterparty</primaryContact>-->
+                    <!--<ccEmailContact>ALL</ccEmailContact>-->
+                <!--</counterpartyContact>-->
+            <!--</distributionTask>-->
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <payFourEyeConditions>
+                <conditionRule>Max Value</conditionRule>
+                <fixedValue>
+                    <amount>10m</amount>
+                </fixedValue>
+                <percentageOftotalExposure>30</percentageOftotalExposure>
+            </payFourEyeConditions>
+            <receiveFourEyeConditions>
+                <conditionRule>Min Value</conditionRule>
+                <fixedValue>
+                    <amount>2m</amount>
+                </fixedValue>
+                <percentageOftotalExposure>40</percentageOftotalExposure>
+            </receiveFourEyeConditions>
+            <agreementStatus>Pending</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+
+        <auditAgreementsReportFilter id="audit.agreement.by.description">
+            <agreementDescription>
+                <filter ref="agr.des"/>
+            </agreementDescription>
+            <startDate>t-1000</startDate>
+        </auditAgreementsReportFilter>
+        <variable id="auditReportPath"/>
+
+        <reportValidationRules id="reportRule">
+            <reportValidationRule><operator>>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Region</fieldName><value>ALL</value></field><field><fieldName>Group</fieldName><value>ALL</value></field><field><fieldName>extId</fieldName><value ref="agr.des" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Principal Interest CC E-mail Contact</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>QTPPrincipal</value></field></reportValidationRule>
+            <reportValidationRule><operator>>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Region</fieldName><value>ALL</value></field><field><fieldName>Group</fieldName><value>ALL</value></field><field><fieldName>extId</fieldName><value ref="agr.des" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Principal CC E-mail Contact</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>QTPPrincipal</value></field></reportValidationRule>
+            <reportValidationRule><operator>>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Region</fieldName><value>ALL</value></field><field><fieldName>Group</fieldName><value>ALL</value></field><field><fieldName>extId</fieldName><value ref="agr.des" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Counterparty Interest CC E-mail Contact</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>QTPCounterparty</value></field></reportValidationRule>
+            <reportValidationRule><operator>>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Region</fieldName><value>ALL</value></field><field><fieldName>Group</fieldName><value>ALL</value></field><field><fieldName>extId</fieldName><value ref="agr.des" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Counterparty CC E-mail Contact</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>QTPCounterparty</value></field></reportValidationRule>
+        </reportValidationRules>
+
+    </scenarioData>
+</dataBean>

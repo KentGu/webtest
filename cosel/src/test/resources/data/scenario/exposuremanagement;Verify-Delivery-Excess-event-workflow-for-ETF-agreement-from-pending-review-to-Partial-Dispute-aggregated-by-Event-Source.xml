@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <agreement id="agr29014.etf">
+            <agreementId id="agrid">2658</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="model">
+            <column>Model</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="notificationStatus">
+            <column>Statement Notification Status</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="top.vm.delivery">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-3,000,000.00</agreementRequirement>
+            <model></model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="top.fee.delivery">
+            <action>Fee Delivery(Excess)</action>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <model></model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="top.vm.delivery.pendingReview">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-3,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model></model>
+            <disputeValue>0.00</disputeValue>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="top.fee.delivery.pendingReview">
+            <action>Fee Delivery(Excess)</action>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model></model>
+            <disputeValue>0.00</disputeValue>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.o2.agreementRequirement.-1m.pendingReview">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model>o2</model>
+            <disputeValue>0.00</disputeValue>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.o1.agreementRequirement.-2m.pendingReview">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-2,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model>o1</model>
+            <disputeValue>0.00</disputeValue>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="fee.delivery.o1.agreementRequirement.-1m.pendingReview">
+            <action>Fee Delivery(Excess)</action>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model>o1</model>
+            <disputeValue>0.00</disputeValue>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.o1.agreementRequirement.-2m.MarginRequestIssued.disputeValue.-1m">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-2,000,000.00</agreementRequirement>
+            <callStatus>Margin Request Issued</callStatus>
+            <model>o1</model>
+            <disputeValue>-1,000,000.00</disputeValue>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.o1.agreementRequirement.-2m.PartialDispute.disputeValue.-1m">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-2,000,000.00</agreementRequirement>
+            <callStatus>Partial Dispute</callStatus>
+            <model>o1</model>
+            <disputeValue>-1,000,000.00</disputeValue>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.o2.agreementRequirement.-1m.pendingReview.disputeValue.1m">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model>o2</model>
+            <disputeValue>1,000,000.00</disputeValue>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.o2.agreementRequirement.-1m.MarginRequestIssued.disputeValue.-1m">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <callStatus>Margin Request Issued</callStatus>
+            <model>o2</model>
+            <disputeValue>-1,000,000.00</disputeValue>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.o2.agreementRequirement.-1m.PartialDispute.disputeValue.-1m">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <callStatus>Partial Dispute</callStatus>
+            <model>o2</model>
+            <disputeValue>-1,000,000.00</disputeValue>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="top.vm.delivery.pendingReview.disputeValue.0.counterpartyAmount.-3m">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-3,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model></model>
+            <disputeValue>0.00</disputeValue>
+            <counterpartyAmount>-3,000,000.00</counterpartyAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="top.vm.delivery.PartialDispute.disputeValue.-2m.counterpartyAmount.-5m">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-3,000,000.00</agreementRequirement>
+            <callStatus>Partial Dispute</callStatus>
+            <model></model>
+            <disputeValue>-2,000,000.00</disputeValue>
+            <counterpartyAmount>-5,000,000.00</counterpartyAmount>
+        </exposureEventDetail>
+
+
+        <exposureEventDetail id="counterpartyAmount.-3m">
+            <counterpartyAmount>-3m</counterpartyAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="counterpartyAmount.-2m">
+            <counterpartyAmount>-2m</counterpartyAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="callStatus.MarginRequestIssued">
+            <callStatus>Margin Request Issued</callStatus>
+        </exposureEventDetail>
+
+        <bookingDetail id="cash.usd.applyRequirementAmount">
+            <instrumentSearch>
+                <instrument>
+                    <filter ref="cash.usd1.name"/>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail clickApplyButton="true">
+                    <bookingMovement>VM Delivery(Excess)</bookingMovement>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+\\
+    </scenarioData>
+</dataBean>

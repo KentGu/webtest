@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/xbrowser.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <passwordChange id="changePassword">
+            <oldPassword>1</oldPassword>
+            <newPassword>1</newPassword>
+            <confirmPassword>1</confirmPassword>
+        </passwordChange>
+
+        <userFavourite id="deleteUserFavourite">
+            <favouriteName random="true" id="favouriteName"/>
+            <!--<location></location>-->
+        </userFavourite>
+
+        <userFavourite id="userFavourite">
+            <favouriteName ref="favouriteName" />
+        </userFavourite>
+
+        <userPreference id="userPreference">
+            <tableSize>30</tableSize>
+            <timeZone>CET</timeZone>
+            <collateralRegion>smoke</collateralRegion>
+            <!--<collateralRegion>EUROPE</collateralRegion>-->
+            <collateralGroup>smoke</collateralGroup>
+            <linkageSet>L1</linkageSet>
+            <linkageSet>L3</linkageSet>
+            <businessLine>OTC</businessLine>
+            <businessLine>Repo</businessLine>
+            <dashboardLink>EM</dashboardLink>
+        </userPreference>
+    </scenarioData>
+</dataBean>

@@ -1,0 +1,398 @@
+I'm FILE_TASKEXECLOG=taskexec.log_RELEASE_14_0_SP1_P6_20141008011403
+I'm database---------=COLLINE2014_0_0_BASELINE_0119 creditderivative 172.20.20.34:1521 ora11g
+Target Version: RELEASE_14_0_SP1_P6
+Target Path:/home/test/server/colline/cluster5_2/bin
+-------------I am task =External Exposures Reset 4
+Task is Workflow : External Exposures Reset 4
+2014-10-08 01:14:03
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:External Exposures Reset 4] at: 2014-10-08 01:14:03,693
+Finished starting task: [Workflow:External Exposures Reset 4] at: 2014-10-08 01:14:03,727
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Workflow:Ext Exp Reset: Ext Exp Reset Task Initiated. 
+Waiting 4000 second for Task  External Exposures Reset 4 execute
+Sorry, no more waiting. External Exposures Reset 4,  TIME_Execute = 18051.303783676, TIME4TASKEXECUTION =4000.
+-------------I am task =Recalculate Workflow 1
+Task is Workflow : Recalculate Workflow 1
+2014-10-08 06:15:05
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Recalculate Workflow 1] at: 2014-10-08 06:15:05,608
+Finished starting task: [Workflow:Recalculate Workflow 1] at: 2014-10-08 06:15:05,625
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Start to recalculate workflow.
+Recalculate workflow has been triggered.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+Waiting 3000 second for Task  Recalculate Workflow 1 execute
+-------------I am task =Recalculate based on Day change 1
+Task is Workflow : Recalculate based on Day change 1
+2014-10-08 06:20:02
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Recalculate based on Day change 1] at: 2014-10-08 06:20:03,291
+Finished starting task: [Workflow:Recalculate based on Day change 1] at: 2014-10-08 06:20:03,308
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Workflow:Recalculate based on Day change Task Initiated. 
+Workflow:Recalculate based on Day change Task complete. 
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+Waiting 500 second for Task  Recalculate based on Day change 1 execute
+-------------I am task =Recalculate Interest Manager 4
+Task is Workflow : Recalculate Interest Manager 4
+2014-10-08 06:20:20
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Recalculate Interest Manager 4] at: 2014-10-08 06:20:20,805
+Finished starting task: [Workflow:Recalculate Interest Manager 4] at: 2014-10-08 06:20:20,824
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Recalculate Interest manage. Please wait ...
+Workflow:Recalculate Interest Manager: Data is recalculated.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+Waiting 200 second for Task  Recalculate Interest Manager 4 execute
+-------------I am task =Approve All Organisations 3
+Task is Workflow : Approve All Organisations 3
+2014-10-08 06:20:42
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Approve All Organisations 3] at: 2014-10-08 06:20:43,364
+Finished starting task: [Workflow:Approve All Organisations 3] at: 2014-10-08 06:20:43,378
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Approve All Organisations. Please wait ...
+Workflow:Approve All Organisations: 1  Organisations are approved.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+Waiting 500 second for Task  Approve All Organisations 3 execute
+-------------I am task =Approve All Agreements 3
+Task is Workflow : Approve All Agreements 3
+2014-10-08 06:21:00
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Approve All Agreements 3] at: 2014-10-08 06:21:00,884
+Finished starting task: [Workflow:Approve All Agreements 3] at: 2014-10-08 06:21:00,898
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Approve All Agreements. Please wait ...
+Workflow:Approve All Agreements: 1  agreements are approved.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+Waiting 180 second for Task  Approve All Agreements 3 execute
+-------------I am task =Approve All Statements 7
+Task is Workflow : Approve All Statements 7
+2014-10-08 06:21:17
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Approve All Statements 7] at: 2014-10-08 06:21:18,415
+Finished starting task: [Workflow:Approve All Statements 7] at: 2014-10-08 06:21:18,429
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Approve All Statements. Please wait ...
+Workflow:Approve All Statements: 76  statements are triggered to approve.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+Waiting 180 second for Task  Approve All Statements 7 execute
+-------------I am task =Auto Email Call/Recall 1
+-----------SQL Select before task execute ------
+Number of Auto Email Call/Recall 1 is: 
+  COUNT(1)
+----------
+	 0
+Task is Workflow : Auto Email Call/Recall 1
+2014-10-08 06:21:35
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Auto Email Call/Recall 1] at: 2014-10-08 06:21:36,209
+Finished starting task: [Workflow:Auto Email Call/Recall 1] at: 2014-10-08 06:21:36,227
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Auto Email Call/Recall. Please wait ...
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+Waiting 5000 second for Task  Auto Email Call/Recall 1 execute
+-------------I am task =Auto Email Statement Notification 1
+Task is Workflow : Auto Email Statement Notification 1
+2014-10-08 06:21:53
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Auto Email Statement Notification 1] at: 2014-10-08 06:21:53,729
+Finished starting task: [Workflow:Auto Email Statement Notification 1] at: 2014-10-08 06:21:53,746
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Auto Email Statement Notification. Please wait ...
+Auto Email Statement Notification: 266 Statement Notification letters have been triggered.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+Waiting 2000 second for Task  Auto Email Statement Notification 1 execute
+-------------I am task =Import Counterparty Amount 3
+Task is Task Manager : Import Counterparty Amount 3
+2014-10-08 06:23:25
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import Counterparty Amount 3] at: 2014-10-08 06:23:26,303
+Finished starting task: [Task Manager:Import Counterparty Amount 3] at: 2014-10-08 06:23:26,322
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import Counterparty Amount. Please wait ...
+Import Counterparty Amount: Imported 10 Counterparty Amount(s).
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+Waiting 800 second for Task  Import Counterparty Amount 3 execute
+-------------I am task =Auto Book Cash 1
+Task is Workflow : Auto Book Cash 1
+2014-10-08 06:23:43
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Auto Book Cash 1] at: 2014-10-08 06:23:43,824
+Finished starting task: [Workflow:Auto Book Cash 1] at: 2014-10-08 06:23:43,842
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Workflow:Auto Book Cash: Auto Book Cash Task Initiated. 
+Workflow:Auto Book Cash: Auto Book Cash Task Finished with 10 successful and 0 failed. 
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+Waiting 180 second for Task  Auto Book Cash 1 execute
+-------------I am task =Auto Email Interest Statement 1
+Task is Workflow : Auto Email Interest Statement 1
+2014-10-08 06:24:00
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Auto Email Interest Statement 1] at: 2014-10-08 06:24:01,329
+Finished starting task: [Workflow:Auto Email Interest Statement 1] at: 2014-10-08 06:24:01,343
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Auto Email Interest Statement. Please wait ...
+Auto Email Interest Statement: 3857 Interest letters have been sent successfully.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+Waiting 2000 second for Task  Auto Email Interest Statement 1 execute
+-------------I am task =Distribute UDL 1
+Task is Workflow : Distribute UDL 1
+2014-10-08 06:37:43
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Distribute UDL 1] at: 2014-10-08 06:37:44,420
+Finished starting task: [Workflow:Distribute UDL 1] at: 2014-10-08 06:37:44,443
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started User Define Letter. Please wait ...
+Workflow:User Define Letter: Processed (33374) agreement.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+Waiting 7000 second for Task  Distribute UDL 1 execute
+-------------I am task =Recalculate Securities 1
+Task is Workflow : Recalculate Securities 1
+2014-10-08 08:00:24
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Recalculate Securities 1] at: 2014-10-08 08:00:25,365
+Finished starting task: [Workflow:Recalculate Securities 1] at: 2014-10-08 08:00:25,383
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Recalculate Securities. Please wait ...
+Workflow:Securities recalculated: 13507.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+Waiting 2000 second for Task  Recalculate Securities 1 execute
+-----------It's Recalculate Securities 1 task, sleep 1800 seconds for msg calc. ------
+-------------I am task =Recalculate Statements 1
+-----------SQL Select before task execute ------
+Number of Agreement statementstatus approved in New York is: 
+  COUNT(1)
+----------
+      5835
+Task is Workflow : Recalculate Statements 1
+2014-10-08 08:35:58
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Recalculate Statements 1] at: 2014-10-08 08:35:58,598
+Finished starting task: [Workflow:Recalculate Statements 1] at: 2014-10-08 08:35:58,628
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Start to recalculate statements.
+Recalculate statements has been triggered.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+Waiting 4000 second for Task  Recalculate Statements 1 execute
+-------------I am task =Process Outstanding 1
+Task is Workflow : Process Outstanding 1
+2014-10-08 08:42:06
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Process Outstanding 1] at: 2014-10-08 08:42:06,524
+Finished starting task: [Workflow:Process Outstanding 1] at: 2014-10-08 08:42:06,545
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Process Outstanding Settlements. Please wait ...
+Workflow:Process Outstanding Settlements: 1301 outstanding settlements have been processed.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+Waiting 180 second for Task  Process Outstanding 1 execute
+-------------I am task =Process Approve Trade Settlements 1
+Task is Workflow : Process Approve Trade Settlements 1
+2014-10-08 08:42:23
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Process Approve Trade Settlements 1] at: 2014-10-08 08:42:24,061
+Finished starting task: [Workflow:Process Approve Trade Settlements 1] at: 2014-10-08 08:42:24,077
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Processing Repo Trade Settlement Status. Please wait ...
+Workflow:Process all repo trade settlement status: 10032  repo trades are processed.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+Waiting 180 second for Task  Process Approve Trade Settlements 1 execute
+-------------I am task =Process Approve Settlements 4
+Task is Workflow : Process Approve Settlements 4
+2014-10-08 08:42:41
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Process Approve Settlements 4] at: 2014-10-08 08:42:41,572
+Finished starting task: [Workflow:Process Approve Settlements 4] at: 2014-10-08 08:42:41,593
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Approve Settlements. Please wait ...
+Workflow:Process Auto Approve Settlements: All outstanding settlements have been settled.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+Waiting 180 second for Task  Process Approve Settlements 4 execute
+-------------I am task =Net Older Collateral Bookings 1
+Task is Workflow : Net Older Collateral Bookings 1
+2014-10-08 08:42:58
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Net Older Collateral Bookings 1] at: 2014-10-08 08:42:59,097
+Finished starting task: [Workflow:Net Older Collateral Bookings 1] at: 2014-10-08 08:42:59,124
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Netted Security Booking entries older than 35 days:2540 entries netted.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+Waiting 200 second for Task  Net Older Collateral Bookings 1 execute
+-------------I am task =Settlement Risk 1
+Task is Workflow : Settlement Risk 1
+2014-10-08 08:43:21
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Settlement Risk 1] at: 2014-10-08 08:43:21,641
+Finished starting task: [Workflow:Settlement Risk 1] at: 2014-10-08 08:43:21,658
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Settlement Risk. Please wait ...
+Trades: Settlement Risk: Total of 3069 trades are settled.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+Waiting 300 second for Task  Settlement Risk 1 execute
+-------------I am task =Apply Effective and Maturity dates 1
+Task is Workflow : Apply Effective and Maturity dates 1
+2014-10-08 08:46:14
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Apply Effective and Maturity dates 1] at: 2014-10-08 08:46:14,950
+Finished starting task: [Workflow:Apply Effective and Maturity dates 1] at: 2014-10-08 08:46:14,977
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started settling trades. Please wait ...
+Trades: Settle Trades: Total of 25760 trades are settled.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+Waiting 300 second for Task  Apply Effective and Maturity dates 1 execute
+-------------I am task =Dashboard Refresh 1
+Task is Workflow : Dashboard Refresh 1
+2014-10-08 08:46:47
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Dashboard Refresh 1] at: 2014-10-08 08:46:47,528
+Finished starting task: [Workflow:Dashboard Refresh 1] at: 2014-10-08 08:46:47,544
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Workflow:Dashboard refresh: Dashboard is recalculated.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+Waiting 180 second for Task  Dashboard Refresh 1 execute
+-------------I am task =Reset Total Settlement Amount 4
+Task is Workflow : Reset Total Settlement Amount 4
+2014-10-08 08:48:24
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Reset Total Settlement Amount 4] at: 2014-10-08 08:48:25,086
+Finished starting task: [Workflow:Reset Total Settlement Amount 4] at: 2014-10-08 08:48:25,099
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Total Settlement Amount Reset: Total Settlement Amount Task Initiated. 
+Total Settlement Amount Reset: Total Settlement Amount has been reset. 
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+Waiting 180 second for Task  Reset Total Settlement Amount 4 execute
+-------------I am task =Todays Events Reset 1
+Task is Workflow : Todays Events Reset 1
+2014-10-08 08:48:42
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Todays Events Reset 1] at: 2014-10-08 08:48:42,593
+Finished starting task: [Workflow:Todays Events Reset 1] at: 2014-10-08 08:48:42,604
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Todays Events Reset. Please wait ...
+Workflow:Todays Events Reset: All todays ticked events have been reset
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+Waiting 200 second for Task  Todays Events Reset 1 execute
+-------------I am task =Start-Up Dashboard Reset 1
+Task is 'Workflow : Start-Up Dashboard Reset 1'
+2014-10-08 08:48:59
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Start-Up Dashboard Reset 1] at: 2014-10-08 08:49:00,090
+Finished starting task: [Workflow:Start-Up Dashboard Reset 1] at: 2014-10-08 08:49:00,207
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Workflow:Start-Up Dashboard Reset: All start-up actions have been reset
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+Waiting 600 second for Task  Start-Up Dashboard Reset 1 execute
+-------------I am task =Import Counterparty Amount 1
+Task is Task Manager : Import Counterparty Amount 1
+2014-10-08 08:49:17
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import Counterparty Amount 1] at: 2014-10-08 08:49:17,854
+Finished starting task: [Task Manager:Import Counterparty Amount 1] at: 2014-10-08 08:49:17,871
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import Counterparty Amount. Please wait ...
+Waiting 7200 second for Task  Import Counterparty Amount 1 execute

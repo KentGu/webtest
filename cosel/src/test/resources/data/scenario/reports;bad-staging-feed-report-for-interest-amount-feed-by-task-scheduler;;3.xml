@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+
+        <taskSchedulerDetail id="task.scheduler.import.interest.amount">
+            <type>Task Manager</type>
+            <taskName>Import Interest Amount</taskName>
+            <additionalInfo id="task.scheduler.import.interest.amount.server.path">/home/ec2-user/TaskScheduler/ImportInterestAmount</additionalInfo>
+        </taskSchedulerDetail>
+
+        <feedInterestAmount id="task.feed.interest.amount">
+            <agreementId>a</agreementId>
+            <legalId></legalId>
+            <eventId>b</eventId>
+            <assetType></assetType>
+            <interestSource></interestSource>
+            <direction></direction>
+            <startDate>c</startDate>
+            <endDate>d</endDate>
+            <agreedAmount></agreedAmount>
+            <agreedWhtAmount>e</agreedWhtAmount>
+        </feedInterestAmount>
+
+        <feedInterestAmount id="task.feed.modified.incorrect.staging.report">
+            <rowNumber>2</rowNumber>
+            <failureReason ref="failure.reason1"/>
+            <agreementId></agreementId>
+            <legalId>F13658AgrForIntAmountExtId</legalId>
+            <eventId>749503</eventId>
+            <assetType></assetType>
+            <interestSource></interestSource>
+            <direction>Pay</direction>
+            <startDate></startDate>
+            <endDate></endDate>
+            <agreedAmount></agreedAmount>
+            <agreedWhtAmount></agreedWhtAmount>
+        </feedInterestAmount>
+
+        <feedInterestAmount id="task.feed.modified.correct.staging.report">
+            <rowNumber>2</rowNumber>
+            <failureReason ref="failure.reason2"/>
+            <agreementId></agreementId>
+            <legalId>F13658AgrForIntAmountExtId</legalId>
+            <eventId>749503</eventId>
+            <assetType></assetType>
+            <interestSource></interestSource>
+            <direction>Pay</direction>
+            <startDate></startDate>
+            <endDate></endDate>
+            <agreedAmount>-1.03</agreedAmount>
+            <agreedWhtAmount></agreedWhtAmount>
+        </feedInterestAmount>
+
+        <variable id="file.name"/>
+
+        <taskSchedulerMessage id="feed.csv.successful">
+            <message>Market Data: Import Interest Amount: Imported 1 Interest Amount from :(\S+).csv</message>
+        </taskSchedulerMessage>
+
+        <badStagingFeedReportFilter id="search.by.feed.interest.amount">
+            <feedTask>Feed Interest Amount</feedTask>
+        </badStagingFeedReportFilter>
+
+        <variable id="badStagingFeedReportPath"/>
+
+        <reportValidationRules id="reportRule1">
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Failure reason</fieldName>
+                    <value id="failure.reason1">[Column: 6] direction - Field is compulsory but no value was found | [Column: 7] startDate - Unable to parse 'c' as date (using format yyyy-MM-dd) | [Column: 8] endDate - Unable to parse 'd' as date (using format yyyy-MM-dd) | [Column: 9] agreedAmount - Field is compulsory but no value was found</value>
+                </field>
+                <field><fieldName>agreementId</fieldName><value>a</value></field>
+                <field><fieldName>legalId</fieldName><value></value></field>
+                <field><fieldName>eventId</fieldName><value>b</value></field>
+                <field><fieldName>assetType</fieldName><value></value></field>
+                <field><fieldName>interestSource</fieldName><value></value></field>
+                <field><fieldName>direction</fieldName><value></value></field>
+                <field><fieldName>startDate</fieldName><value>c</value></field>
+                <field><fieldName>endDate</fieldName><value>d</value></field>
+                <field><fieldName>agreedAmount</fieldName><value></value></field>
+                <field><fieldName>agreedWhtAmount</fieldName><value>e</value></field>
+            </reportValidationRule>
+        </reportValidationRules>
+
+        <variable id="file.name"/>
+
+        <reportValidationRules id="reportRule2">
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Failure reason</fieldName>
+                    <value id="failure.reason2">[Column: 9] agreedAmount - Field is compulsory but no value was found</value>
+                </field>
+                <field><fieldName>agreementId</fieldName><value></value></field>
+                <field><fieldName>legalId</fieldName><value>F13658AgrForIntAmountExtId</value></field>
+                <field><fieldName>eventId</fieldName><value>749503</value></field>
+                <field><fieldName>assetType</fieldName><value></value></field>
+                <field><fieldName>interestSource</fieldName><value></value></field>
+                <field><fieldName>direction</fieldName><value>Pay</value></field>
+                <field><fieldName>startDate</fieldName><value></value></field>
+                <field><fieldName>endDate</fieldName><value></value></field>
+                <field><fieldName>agreedAmount</fieldName><value></value></field>
+                <field><fieldName>agreedWhtAmount</fieldName><value></value></field>
+            </reportValidationRule>
+        </reportValidationRules>
+
+        <interestEventSearch id="search.interest.event.by.agr.description">
+            <description>
+                <type>Starting with</type>
+                <filter>F13658AgrForIntAmountDesc</filter>
+                <linkText>F13658AgrForIntAmountDesc</linkText>
+            </description>
+            <dateRange>
+                <startDate>1/1/2017</startDate>
+                <endDate>12/31/2017</endDate>
+            </dateRange>
+        </interestEventSearch>
+
+
+        <interestEventDetail id="event.id" name="check.interest.event">
+            <eventId>749503</eventId>
+            <description>F13658AgrForIntAmountDesc</description>
+            <cashAssetType>qtp_cash_usd</cashAssetType>
+            <interestSource>Net Interest</interestSource>
+        </interestEventDetail>
+
+        <interestEventDetail id="interest.amount.-1.03" name="check.interest.event">
+            <eventId>749503</eventId>
+            <agreedInterestAmount>-1.03</agreedInterestAmount>
+        </interestEventDetail>
+
+    </scenarioData>
+</dataBean>

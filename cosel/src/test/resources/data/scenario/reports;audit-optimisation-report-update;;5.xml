@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <optimisationRule id="ranking.Agreement.ori">
+            <ruleName>ranking_agr_update</ruleName>
+            <optimisationFilterRuleAttribute name="ranking.asset.name1">
+                <attributeName>Agreement Name</attributeName>
+                <attributeDetail name="detail.name1">
+                    <inputValue>eeenamE</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name2">
+                <attributeName>Group</attributeName>
+                <attributeDetail  name="detail.name21">
+                    <selectedValue>smoke</selectedValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail name="detail.name22">
+                    <selectedValue>smoke2</selectedValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name3">
+                <attributeName>Principal</attributeName>
+                <attributeDetail name="detail.name31">
+                    <type>Long Name</type>
+                    <filterValue>
+                        <linkText>QTPPrincipal</linkText>
+                    </filterValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail name="detail.name32">
+                    <type>Short Name</type>
+                    <filterValue>
+                        <linkText>QTPPrincipal2</linkText>
+                    </filterValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name4">
+                <attributeName>Region</attributeName>
+                <attributeDetail name="detail.name41">
+                    <selectedValue>EUROPE</selectedValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail name="detail.name42">
+                    <selectedValue>smoke</selectedValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <attributeDetail name="detail.name43">
+                    <selectedValue>ASIA</selectedValue>
+                    <rankValue>3</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name5">
+                <attributeName>Agreement Rank Number</attributeName>
+                <attributeDetail  name="detail.name51">
+                    <selectedValue>ASC</selectedValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name6">
+                <attributeName>Date</attributeName>
+                <attributeDetail  name="detail.name61">
+                    <inputValue>t</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name7">
+                <attributeName>Agreement Description</attributeName>
+                <attributeDetail  name="detail.name71">
+                    <inputValue>test</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name72">
+                    <inputValue>TEST2</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name8">
+                <attributeName>External ID</attributeName>
+                <attributeDetail  name="detail.name81">
+                    <inputValue>exid</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name82">
+                    <inputValue>EXID</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name9">
+                <attributeName>Agreement Status</attributeName>
+                <attributeDetail  name="detail.name91">
+                    <selectedValue>Approved</selectedValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name92">
+                    <selectedValue>Amended</selectedValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name10">
+                <attributeName>Credit Support Documentation</attributeName>
+                <attributeDetail  name="detail.name101">
+                    <selectedValue>2001 Margin Provisions</selectedValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name102">
+                    <selectedValue>EMA CSD 2001</selectedValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name11">
+                <attributeName>Author</attributeName>
+                <attributeDetail  name="detail.name111">
+                    <inputValue>23ER</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name112">
+                    <inputValue>sdfg</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name12">
+                <attributeName>Version</attributeName>
+                <attributeDetail  name="detail.name121">
+                    <inputValue>1</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name122">
+                    <inputValue>15.0</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name13">
+                <attributeName>Category</attributeName>
+                <attributeDetail  name="detail.name131">
+                    <selectedValue>IP Swaps</selectedValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name132">
+                    <selectedValue>Dollar Repo</selectedValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name14">
+                <attributeName>Business Line</attributeName>
+                <attributeDetail  name="detail.name141">
+                    <selectedValue>Clearing</selectedValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name142">
+                    <selectedValue>Repo</selectedValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name15">
+                <attributeName>Linkage Set</attributeName>
+                <attributeDetail  name="detail.name151">
+                    <selectedValue>L1</selectedValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name152">
+                    <selectedValue>L2</selectedValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name16">
+                <attributeName>Netting IA and MTM</attributeName>
+                <attributeDetail  name="detail.name161">
+                    <selectedValue>Not-Net</selectedValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name162">
+                    <selectedValue>Net</selectedValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name17">
+                <attributeName>Gross Calc</attributeName>
+                <attributeDetail  name="detail.name171">
+                    <selectedValue>Gross</selectedValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name172">
+                    <selectedValue>Gross IM</selectedValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name18">
+                <attributeName>Counterparty</attributeName>
+                <attributeDetail  name="detail.name181">
+                    <type>Short Name</type>
+                    <filterValue>
+                        <linkText>QTPCounterparty2</linkText>
+                    </filterValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name182">
+                    <type>Code</type>
+                    <filterValue>
+                        <linkText>QTPCounterparty</linkText>
+                    </filterValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name19">
+                <attributeName>Custodian</attributeName>
+                <attributeDetail  name="detail.name191">
+                    <type>Long Name</type>
+                    <filterValue>
+                        <linkText>QTPCustodian</linkText>
+                    </filterValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name192">
+                    <type>Code</type>
+                    <filterValue>
+                        <linkText>QTPCustodian2</linkText>
+                    </filterValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name20">
+                <attributeName>CCP</attributeName>
+                <attributeDetail  name="detail.name201">
+                    <selectedValue>ICE</selectedValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name202">
+                    <selectedValue>LCH</selectedValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+        </optimisationRule>
+        <optimisationRule id="ranking.Agreement.update">
+            <ruleName id="rule.name">ranking_agr_update</ruleName>
+            <optimisationFilterRuleAttribute name="ranking.asset.name1">
+                <attributeName>Agreement Name</attributeName>
+                <attributeDetail name="detail.name1">
+                    <inputValue>eeeddnamE</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <groupRank>20</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name2">
+                <attributeName>Group</attributeName>
+                <attributeDetail  name="detail.name21">
+                    <selectedValue>smoke2</selectedValue>
+                    <rankValue>3</rankValue>
+                </attributeDetail>
+                <attributeDetail name="detail.name22">
+                    <selectedValue>smoke</selectedValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <groupRank>19</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name3">
+                <attributeName>Principal</attributeName>
+                <attributeDetail name="detail.name31">
+                    <type>Short Name</type>
+                    <filterValue>
+                        <filter>QTPPrincipalSubsidiary1</filter>
+                        <linkText>QTPPrincipalSubsidiary1</linkText>
+                    </filterValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <attributeDetail name="detail.name32">
+                    <type>Code</type>
+                    <filterValue>
+                        <filter>QTPPrincipal</filter>
+                        <linkText>QTPPrincipal</linkText>
+                    </filterValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <groupRank>18</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name4">
+                <attributeName>Region</attributeName>
+                <attributeDetail name="detail.name41">
+                    <selectedValue>R1</selectedValue>
+                    <rankValue>3</rankValue>
+                </attributeDetail>
+                <attributeDetail name="detail.name42">
+                    <selectedValue>R2</selectedValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail name="detail.name43">
+                    <selectedValue>R3</selectedValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <groupRank>17</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name5">
+                <attributeName>Agreement Rank Number</attributeName>
+                <attributeDetail  name="detail.name51">
+                    <selectedValue>DESC</selectedValue>
+                </attributeDetail>
+                <groupRank>16</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name6">
+                <attributeName>Date</attributeName>
+                <attributeDetail  name="detail.name61">
+                    <inputValue>t+2</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <groupRank>15</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name7">
+                <attributeName>Agreement Description</attributeName>
+                <attributeDetail  name="detail.name71">
+                    <inputValue>testSDS</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name72">
+                    <inputValue>sfdf</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <groupRank>14</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name8">
+                <attributeName>External ID</attributeName>
+                <attributeDetail  name="detail.name81">
+                    <inputValue>12333</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name82">
+                    <inputValue>gfgs</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <groupRank>13</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name9">
+                <attributeName>Agreement Status</attributeName>
+                <attributeDetail  name="detail.name91">
+                    <selectedValue>Amended</selectedValue>
+                    <rankValue>3</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name92">
+                    <selectedValue>Approved</selectedValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <groupRank>12</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name10">
+                <attributeName>Credit Support Documentation</attributeName>
+                <attributeDetail  name="detail.name101">
+                    <selectedValue>GESLA 1996</selectedValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name102">
+                    <selectedValue>OSLA 1995</selectedValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <groupRank>11</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name11">
+                <attributeName>Author</attributeName>
+                <attributeDetail  name="detail.name111">
+                    <inputValue>DFDSF</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name112">
+                    <inputValue>GGS</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <groupRank>10</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name12">
+                <attributeName>Version</attributeName>
+                <attributeDetail  name="detail.name121">
+                    <inputValue>12</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name122">
+                    <inputValue>16.0</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <groupRank>9</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name13">
+                <attributeName>Category</attributeName>
+                <attributeDetail  name="detail.name131">
+                    <selectedValue>Dollar Repo</selectedValue>
+                    <rankValue>3</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name132">
+                    <selectedValue>Non Dollar Repo</selectedValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <groupRank>8</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name14">
+                <attributeName>Business Line</attributeName>
+                <attributeDetail  name="detail.name141">
+                    <selectedValue>ETF</selectedValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name142">
+                    <selectedValue>OTC</selectedValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <groupRank>7</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name15">
+                <attributeName>Linkage Set</attributeName>
+                <attributeDetail  name="detail.name151">
+                    <selectedValue>L3</selectedValue>
+                    <rankValue>3</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name152">
+                    <selectedValue>L1</selectedValue>
+                    <rankValue>4</rankValue>
+                </attributeDetail>
+                <groupRank>6</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name16">
+                <attributeName>Netting IA and MTM</attributeName>
+                <attributeDetail  name="detail.name161">
+                    <selectedValue>Auto-Net</selectedValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name162">
+                    <selectedValue>Not-Net</selectedValue>
+                    <rankValue>3</rankValue>
+                </attributeDetail>
+                <groupRank>5</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name17">
+                <attributeName>Gross Calc</attributeName>
+                <attributeDetail  name="detail.name171">
+                    <selectedValue>Gross IM</selectedValue>
+                    <rankValue>3</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name172">
+                    <selectedValue>Net</selectedValue>
+                    <rankValue>4</rankValue>
+                </attributeDetail>
+                <groupRank>4</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name18">
+                <attributeName>Counterparty</attributeName>
+                <attributeDetail  name="detail.name181">
+                    <type>Long Name</type>
+                    <filterValue>
+                        <filter>QTPCounterpartySubsidiary1</filter>
+                        <linkText>QTPCounterpartySubsidiary1</linkText>
+                    </filterValue>
+                    <rankValue>4</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name182">
+                    <type>Short Name</type>
+                    <filterValue>
+                        <filter>QTPCounterparty2</filter>
+                        <linkText>QTPCounterparty2</linkText>
+                    </filterValue>
+                    <rankValue>3</rankValue>
+                </attributeDetail>
+                <groupRank>3</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name19">
+                <attributeName>Custodian</attributeName>
+                <attributeDetail  name="detail.name191">
+                    <type>Code</type>
+                    <filterValue>
+                        <filter>QTPCustodian2</filter>
+                        <linkText>QTPCustodian2</linkText>
+                    </filterValue>
+                    <rankValue>3</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name192">
+                    <type>Short Name</type>
+                    <filterValue>
+                        <filter>QTPCustodian</filter>
+                        <linkText>QTPCustodian</linkText>
+                    </filterValue>
+                    <rankValue>4</rankValue>
+                </attributeDetail>
+                <groupRank>2</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name20">
+                <attributeName>CCP</attributeName>
+                <attributeDetail  name="detail.name201">
+                    <selectedValue>LCH</selectedValue>
+                    <rankValue>3</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name202">
+                    <selectedValue>ICE</selectedValue>
+                    <rankValue>4</rankValue>
+                </attributeDetail>
+                <groupRank>1</groupRank>
+            </optimisationFilterRuleAttribute>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </optimisationRule>
+
+
+
+
+        <auditOptimisationRuleReportFilter id="audit.optimisation.report.filter">
+            <operation>Modify</operation>
+            <ruleName>
+                <filter ref="rule.name"/>
+            </ruleName>
+        </auditOptimisationRuleReportFilter>
+        <variable id="auditReportPath"/>
+
+        <reportValidationRules id="reportRule">
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Agreement Name</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>20.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Agreement Name</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>eeenamE</value></field><field><fieldName>Value After</fieldName><value>eeeddnamE</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Agreement Name</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Group</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>19.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Group</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>smoke</value></field><field><fieldName>Value After</fieldName><value>smoke2</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Group</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>3.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Group</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>19.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Group</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>smoke2</value></field><field><fieldName>Value After</fieldName><value>smoke</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Group</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>1.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Principal</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>3.0</value></field><field><fieldName>Value After</fieldName><value>18.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Principal</value></field><field><fieldName>Element</fieldName><value>Paired Attribute</value></field><field><fieldName>Value Before</fieldName><value>Long Name</value></field><field><fieldName>Value After</fieldName><value>Short Name</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Principal</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>QTPPrincipal</value></field><field><fieldName>Value After</fieldName><value>QTPPrincipalSubsidiary1</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Principal</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Principal</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>QTPPrincipal2</value></field><field><fieldName>Value After</fieldName><value>QTPPrincipal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Principal</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>1.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Principal</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>3.0</value></field><field><fieldName>Value After</fieldName><value>18.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Principal</value></field><field><fieldName>Element</fieldName><value>Paired Attribute</value></field><field><fieldName>Value Before</fieldName><value>Short Name</value></field><field><fieldName>Value After</fieldName><value>Code</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Region</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>EUROPE</value></field><field><fieldName>Value After</fieldName><value>R1</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Region</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>4.0</value></field><field><fieldName>Value After</fieldName><value>17.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Region</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>3.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Region</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>smoke</value></field><field><fieldName>Value After</fieldName><value>R2</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Region</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>1.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Region</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>4.0</value></field><field><fieldName>Value After</fieldName><value>17.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Region</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>4.0</value></field><field><fieldName>Value After</fieldName><value>17.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Region</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>ASIA</value></field><field><fieldName>Value After</fieldName><value>R3</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Region</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>3.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Agreement Rank Number</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>5.0</value></field><field><fieldName>Value After</fieldName><value>16.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Agreement Rank Number</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>ASC</value></field><field><fieldName>Value After</fieldName><value>DESC</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Category</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>13.0</value></field><field><fieldName>Value After</fieldName><value>8.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Category</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>Dollar Repo</value></field><field><fieldName>Value After</fieldName><value>Non Dollar Repo</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Category</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>1.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Date</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>t</value></field><field><fieldName>Value After</fieldName><value>t+2</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Date</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>6.0</value></field><field><fieldName>Value After</fieldName><value>15.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Date</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Business Line</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>14.0</value></field><field><fieldName>Value After</fieldName><value>7.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Business Line</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>Clearing</value></field><field><fieldName>Value After</fieldName><value>ETF</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Business Line</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Business Line</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>1.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Business Line</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>14.0</value></field><field><fieldName>Value After</fieldName><value>7.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Business Line</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>Repo</value></field><field><fieldName>Value After</fieldName><value>OTC</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Linkage Set</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>3.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Linkage Set</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>15.0</value></field><field><fieldName>Value After</fieldName><value>6.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Linkage Set</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>L1</value></field><field><fieldName>Value After</fieldName><value>L3</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Netting IA and MTM</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Netting IA and MTM</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>Not-Net</value></field><field><fieldName>Value After</fieldName><value>Auto-Net</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Netting IA and MTM</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>16.0</value></field><field><fieldName>Value After</fieldName><value>5.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Linkage Set</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>15.0</value></field><field><fieldName>Value After</fieldName><value>6.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Linkage Set</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>L2</value></field><field><fieldName>Value After</fieldName><value>L1</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Linkage Set</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>4.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Netting IA and MTM</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>3.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Netting IA and MTM</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>Net</value></field><field><fieldName>Value After</fieldName><value>Not-Net</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Netting IA and MTM</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>16.0</value></field><field><fieldName>Value After</fieldName><value>5.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Gross Calc</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>Gross</value></field><field><fieldName>Value After</fieldName><value>Gross IM</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Gross Calc</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>3.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Gross Calc</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>17.0</value></field><field><fieldName>Value After</fieldName><value>4.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Gross Calc</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>17.0</value></field><field><fieldName>Value After</fieldName><value>4.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Gross Calc</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>Gross IM</value></field><field><fieldName>Value After</fieldName><value>Net</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Gross Calc</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>4.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Counterparty</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>18.0</value></field><field><fieldName>Value After</fieldName><value>3.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Counterparty</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>3.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Counterparty</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>QTPCounterparty</value></field><field><fieldName>Value After</fieldName><value>QTPCounterparty2</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Counterparty</value></field><field><fieldName>Element</fieldName><value>Paired Attribute</value></field><field><fieldName>Value Before</fieldName><value>Code</value></field><field><fieldName>Value After</fieldName><value>Short Name</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Counterparty</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>4.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Counterparty</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>18.0</value></field><field><fieldName>Value After</fieldName><value>3.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Counterparty</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>QTPCounterparty2</value></field><field><fieldName>Value After</fieldName><value>QTPCounterpartySubsidiary1</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Counterparty</value></field><field><fieldName>Element</fieldName><value>Paired Attribute</value></field><field><fieldName>Value Before</fieldName><value>Short Name</value></field><field><fieldName>Value After</fieldName><value>Long Name</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Custodian</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>QTPCustodian</value></field><field><fieldName>Value After</fieldName><value>QTPCustodian2</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Custodian</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>3.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Custodian</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>19.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Custodian</value></field><field><fieldName>Element</fieldName><value>Paired Attribute</value></field><field><fieldName>Value Before</fieldName><value>Long Name</value></field><field><fieldName>Value After</fieldName><value>Code</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Custodian</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>QTPCustodian2</value></field><field><fieldName>Value After</fieldName><value>QTPCustodian</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Custodian</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>4.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Custodian</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>19.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Custodian</value></field><field><fieldName>Element</fieldName><value>Paired Attribute</value></field><field><fieldName>Value Before</fieldName><value>Code</value></field><field><fieldName>Value After</fieldName><value>Short Name</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>CCP</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>4.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>CCP</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>LCH</value></field><field><fieldName>Value After</fieldName><value>ICE</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>CCP</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>20.0</value></field><field><fieldName>Value After</fieldName><value>1.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>CCP</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>ICE</value></field><field><fieldName>Value After</fieldName><value>LCH</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>CCP</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>3.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>CCP</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>20.0</value></field><field><fieldName>Value After</fieldName><value>1.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Agreement Description</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>TEST2</value></field><field><fieldName>Value After</fieldName><value>sfdf</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Agreement Description</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>7.0</value></field><field><fieldName>Value After</fieldName><value>14.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Agreement Description</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>1.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Agreement Description</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>7.0</value></field><field><fieldName>Value After</fieldName><value>14.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Agreement Description</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>test</value></field><field><fieldName>Value After</fieldName><value>testSDS</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Agreement Description</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>External ID</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>External ID</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>exid</value></field><field><fieldName>Value After</fieldName><value>12333</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>External ID</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>8.0</value></field><field><fieldName>Value After</fieldName><value>13.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Agreement Status</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>Approved</value></field><field><fieldName>Value After</fieldName><value>Amended</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Agreement Status</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>9.0</value></field><field><fieldName>Value After</fieldName><value>12.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Agreement Status</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>3.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>External ID</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>8.0</value></field><field><fieldName>Value After</fieldName><value>13.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>External ID</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>EXID</value></field><field><fieldName>Value After</fieldName><value>gfgs</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>External ID</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>1.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Agreement Status</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>9.0</value></field><field><fieldName>Value After</fieldName><value>12.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Agreement Status</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>Amended</value></field><field><fieldName>Value After</fieldName><value>Approved</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Agreement Status</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>1.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Credit Support Documentation</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>2001 Margin Provisions</value></field><field><fieldName>Value After</fieldName><value>GESLA 1996</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Credit Support Documentation</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>10.0</value></field><field><fieldName>Value After</fieldName><value>11.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Credit Support Documentation</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Credit Support Documentation</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>EMA CSD 2001</value></field><field><fieldName>Value After</fieldName><value>OSLA 1995</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Credit Support Documentation</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>10.0</value></field><field><fieldName>Value After</fieldName><value>11.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Credit Support Documentation</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>1.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Author</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>23ER</value></field><field><fieldName>Value After</fieldName><value>DFDSF</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Author</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>11.0</value></field><field><fieldName>Value After</fieldName><value>10.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Author</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Author</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>11.0</value></field><field><fieldName>Value After</fieldName><value>10.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Author</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>sdfg</value></field><field><fieldName>Value After</fieldName><value>GGS</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Author</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>1.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Version</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>ASC</value></field><field><fieldName>Value After</fieldName><value>12</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Version</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Version</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>12.0</value></field><field><fieldName>Value After</fieldName><value>9.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Category</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>13.0</value></field><field><fieldName>Value After</fieldName><value>8.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Version</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>15.0</value></field><field><fieldName>Value After</fieldName><value>16.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Version</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>12.0</value></field><field><fieldName>Value After</fieldName><value>9.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_agr_update</value></field><field><fieldName>Rule Type</fieldName><value>Agreement ranking</value></field><field><fieldName>Attribute</fieldName><value>Version</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>1.0</value></field></reportValidationRule>
+
+        </reportValidationRules>
+
+    </scenarioData>
+</dataBean>

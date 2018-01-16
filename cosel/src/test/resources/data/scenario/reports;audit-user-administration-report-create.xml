@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <user id="audit.user.create">
+            <username id="audit.user.name" random="true" prefix="user_" />
+            <password>1</password>
+            <confirmPassword>1</confirmPassword>
+        </user>
+        <user id="audit.user.edit">
+            <username ref="audit.user.name" />
+            <role>admin</role>
+            <role>Collateral Analyst</role>
+            <role>Front Office</role>
+            <approvalProfile>
+                <pay>All</pay>
+                <receive>All</receive>
+            </approvalProfile>
+            <preferences>
+                <collateralRegion>smoke</collateralRegion>
+                <collateralGroup>smoke</collateralGroup>
+                <collateralCategory>ALL</collateralCategory>
+                <businessLine>OTC</businessLine>
+                <principalFilter>
+                    <filter ref="org.p1.lname" />
+                    <linkText ref="org.p1.lname" />
+                </principalFilter>
+                <counterpartyFilter>
+                    <filter ref="org.c1.lname"/>
+                    <linkText ref="org.c1.lname" />
+                </counterpartyFilter>
+                <email>123456@email.com</email>
+                <telNumber>021-2222</telNumber>
+                <fullName>myFullName</fullName>
+                <notifyFeedStatus>true</notifyFeedStatus>
+            </preferences>
+            <accessStatus>Granted</accessStatus>
+            <changePasswordConstraints>
+                <allowReuseOfPasswords>Yes</allowReuseOfPasswords>
+                <afterWeeks>3</afterWeeks>
+                <maxFailedPasswordAttempts>3</maxFailedPasswordAttempts>
+                <maxPasswordAge>weeks</maxPasswordAge>
+            </changePasswordConstraints>
+            <changePassword>
+                <newPassword>2</newPassword>
+                <confirmPassword>2</confirmPassword>
+            </changePassword>
+        </user>
+
+
+
+
+        <auditUserAdministrationReportFilter id="audit.user.administer.by.username">
+            <user ref="audit.user.name"/>
+            <startDate>t-1000</startDate>
+        </auditUserAdministrationReportFilter>
+        <variable id="auditReportPath" />
+
+        <reportValidationRules id="audit.user.administer.report.rule">
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>User</fieldName><value ref="audit.user.name"/></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>password</value></field><field><fieldName>Value Before</fieldName><value>*****</value></field><field><fieldName>Value After</fieldName><value>*****</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>User</fieldName><value ref="audit.user.name"/></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>allowPwdReuse</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>true</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>User</fieldName><value ref="audit.user.name"/></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>maxFailures</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>-1</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>User</fieldName><value ref="audit.user.name"/></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>maxPwdAge</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>-1</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>User</fieldName><value ref="audit.user.name"/></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>statusId</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>Approved</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>User</fieldName><value ref="audit.user.name"/></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>currencyId</value></field><field><fieldName>Value Before</fieldName><value>ALL</value></field><field><fieldName>Value After</fieldName><value>ADP</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>User</fieldName><value ref="audit.user.name"/></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>partyId</value></field><field><fieldName>Value Before</fieldName><value>0</value></field><field><fieldName>Value After</fieldName><value>1</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>User</fieldName><value ref="audit.user.name"/></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>colRegion</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>smoke</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>User</fieldName><value ref="audit.user.name"/></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>colUserView</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>ALL</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>User</fieldName><value ref="audit.user.name"/></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>userGroup</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>smoke</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>User</fieldName><value ref="audit.user.name"/></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>colCategory</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>ALL</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>User</fieldName><value ref="audit.user.name"/></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>principalFilter</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>QTPPrincipal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>User</fieldName><value ref="audit.user.name"/></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>cptyFilter</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>QTPCounterparty</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>User</fieldName><value ref="audit.user.name"/></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>userEmail</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>123456@email.com</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>User</fieldName><value ref="audit.user.name"/></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>userTel</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>021-2222</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>User</fieldName><value ref="audit.user.name"/></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>fullName</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>myFullName</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>User</fieldName><value ref="audit.user.name"/></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>notifyFeedStatus</value></field><field><fieldName>Value Before</fieldName><value>false</value></field><field><fieldName>Value After</fieldName><value>true</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>User</fieldName><value ref="audit.user.name"/></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>businessLine</value></field><field><fieldName>Value Before</fieldName><value>ALL</value></field><field><fieldName>Value After</fieldName><value>OTC</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>User</fieldName><value ref="audit.user.name"/></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>maxFailures</value></field><field><fieldName>Value Before</fieldName><value>-1</value></field><field><fieldName>Value After</fieldName><value>3</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>User</fieldName><value ref="audit.user.name"/></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>userRoles</value></field><field><fieldName>Value Before</fieldName><value>[user]</value></field><field><fieldName>Value After</fieldName><value>[Collateral Analyst, Front Office, admin, user]</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>User</fieldName><value ref="audit.user.name"/></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>approvalProfilePay</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>All</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>User</fieldName><value ref="audit.user.name"/></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>approvalProfileReceive</value></field><field><fieldName>Value Before</fieldName><value>N/A</value></field><field><fieldName>Value After</fieldName><value>All</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>User</fieldName><value ref="audit.user.name"/></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>password</value></field><field><fieldName>Value Before</fieldName><value>*****</value></field><field><fieldName>Value After</fieldName><value>*****</value></field></reportValidationRule>
+
+        </reportValidationRules>
+    </scenarioData>
+</dataBean>

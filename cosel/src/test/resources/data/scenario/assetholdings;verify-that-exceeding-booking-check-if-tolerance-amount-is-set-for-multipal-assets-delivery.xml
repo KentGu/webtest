@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+		<assetDefinition id="bondAssetClass">
+			<assetName id="bondAssetClass.name" random="true"/>
+			<status>enabled</status>
+			<category>FI Securities</category>
+			<externalName id="bondAssetClass.external.name" random="true"/>
+			<toleranceAccount>200</toleranceAccount>
+			<toleranceAccountCurrency>USD</toleranceAccountCurrency>
+		</assetDefinition>
+
+		<assetDefinition id="equityAssetClass">
+			<assetName id="equityAssetClass.name" random="true"/>
+			<status>enabled</status>
+			<category>Equities</category>
+			<externalName id="equityAssetClass.external.name" random="true"/>
+			<toleranceAccount>300</toleranceAccount>
+			<toleranceAccountCurrency>USD</toleranceAccountCurrency>
+		</assetDefinition>
+
+		<assetDefinition id="bondAssetType">
+			<parent>
+				<assetName ref="bondAssetClass.name"/>
+			</parent>
+			<assetName id="bondAssetType.name" random="true" />
+			<status>enabled</status>
+			<category>FI Securities</category>
+			<holidayCentre>EUROPE</holidayCentre>
+			<currencyOfDenomination>USD</currencyOfDenomination>
+			<externalName id="bondAssetType.external.name" random="true" />
+		</assetDefinition>
+
+		<assetDefinition id="equityAssetType">
+			<parent>
+				<assetName ref="equityAssetClass.name"/>
+			</parent>
+			<assetName id="equityAssetType.name" random="true" />
+			<status>enabled</status>
+			<category>Equities</category>
+			<holidayCentre>EUROPE</holidayCentre>
+			<currencyOfDenomination>USD</currencyOfDenomination>
+			<externalName id="equityAssetType.external.name" random="true" />
+		</assetDefinition>
+
+		<instrument id="bondinstrument">
+			<assetClass ref="bondAssetClass.name"/>
+			<assetType ref="bondAssetType.name"/>
+			<instrumentId>
+				<value id="bondinstrument.id" random="true"/>
+			</instrumentId>
+			<description id="bondinstrument.desc" random="true"/>
+			<issuer>
+				<filter>QTP_Eligible_Issuer4</filter>
+				<linkText>QTP_Eligible_Issuer4</linkText>
+			</issuer>
+			<maturityDate>T+100</maturityDate>
+			<priceSource>
+				<priceSourceName>Default</priceSourceName>
+				<dirtyPrice>100</dirtyPrice>
+				<lastPriceChange>T</lastPriceChange>
+				<cleanPrice>100</cleanPrice>
+				<priceDate>T</priceDate>
+			</priceSource>
+			<couponRate>0</couponRate>
+			<issueDate>T</issueDate>
+			<securityStatus>Approved</securityStatus>
+		</instrument>
+
+		<securitySearch id="bondSecuritySearchAmended">
+			<instrument>
+				<type>Starting with</type>
+				<filter ref="bondinstrument.id"/>
+				<linkText ref="bondinstrument.id"/>
+			</instrument>
+		</securitySearch>
+
+		<securitySearchResult id="bondSecuritySearchWillBeApproved">
+			<instrument ref="bondinstrument.id"/>
+		</securitySearchResult>
+
+		<instrument id="equityinstrument">
+			<assetClass ref="equityAssetClass.name"/>
+			<assetType ref="equityAssetType.name"/>
+			<instrumentId>
+				<value id="equityinstrument.id" random="true"/>
+			</instrumentId>
+			<description id="equityinstrument.desc" random="true"/>
+			<issuer>
+				<filter>QTP_Eligible_Issuer4</filter>
+				<linkText>QTP_Eligible_Issuer4</linkText>
+			</issuer>
+			<maturityDate>T+100</maturityDate>
+			<priceSource>
+				<priceSourceName>Default</priceSourceName>
+				<dirtyPrice>1</dirtyPrice>
+				<lastPriceChange>T</lastPriceChange>
+				<priceDate>T</priceDate>
+			</priceSource>
+			<issueDate>T</issueDate>
+			<securityStatus>Approved</securityStatus>
+		</instrument>
+
+		<securitySearch id="equitySecuritySearchAmended">
+			<instrument>
+				<type>Starting with</type>
+				<filter ref="equityinstrument.id"/>
+				<linkText ref="equityinstrument.id"/>
+			</instrument>
+		</securitySearch>
+
+		<securitySearchResult id="equitySecuritySearchWillBeApproved">
+			<instrument ref="equityinstrument.id"/>
+		</securitySearchResult>
+
+		<agreement id="clearingAgreement">
+			<principal id="p1">
+				<criteria>Containing</criteria>
+				<type>Code</type>
+				<filter ref="org.p1.lname"/>
+				<linkText ref="org.p1.lname"/>
+			</principal>
+			<counterparty id="c">
+				<criteria>Containing</criteria>
+				<type>Long Name</type>
+				<filter ref="org.c1.lname"/>
+				<linkText ref="org.c1.lname"/>
+			</counterparty>
+			<businessLine>Clearing</businessLine>
+			<ccp>ICE</ccp>
+			<agreementDescription id="agr.desc" random="true"/>
+			<agreementDate>T</agreementDate>
+			<baseCurrency>USD</baseCurrency>
+			<callFrequency>
+				<legalReviewFrequency>Daily</legalReviewFrequency>
+			</callFrequency>
+			<holidayCentre ref="hc.europe.name"/>
+			<product id="p">
+				<productName ref="product.test1.name"/>
+			</product>
+			<collateralAssetClass>
+				<collateralAssetClassName ref="bondAssetClass.name"/>
+				<collateralAssetType>
+					<collateralAssetTypeName ref="bondAssetType.name"/>
+				</collateralAssetType>
+			</collateralAssetClass>
+			<collateralAssetClass>
+				<collateralAssetClassName ref="equityAssetClass.name"/>
+				<collateralAssetType>
+					<collateralAssetTypeName ref="equityAssetType.name"/>
+				</collateralAssetType>
+			</collateralAssetClass>
+			<settlementBucket>
+				<bookingType>Net</bookingType>
+				<direction>Call/Return</direction>
+				<bucket>
+					<filter ref="payInstrBucket.vcr.name"/>
+					<linkText ref="payInstrBucket.vcr.name"/>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>Net</bookingType>
+				<direction>Delivery/Recall</direction>
+				<bucket>
+					<filter ref="payInstrBucket.vrd.name"/>
+					<linkText ref="payInstrBucket.vrd.name"/>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>Interest</bookingType>
+				<direction>Pay</direction>
+				<bucket>
+					<filter ref="payInstrBucket.pay.name"/>
+					<linkText ref="payInstrBucket.pay.name"/>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>Interest</bookingType>
+				<direction>Receive</direction>
+				<bucket>
+					<filter ref="payInstrBucket.rec.name"/>
+					<linkText ref="payInstrBucket.rec.name"/>
+				</bucket>
+			</settlementBucket>
+			<letterAndDeliveryGroupDetails>
+				<letterDistributionMedium>Email</letterDistributionMedium>
+			</letterAndDeliveryGroupDetails>
+			<agreementStatus>Pending</agreementStatus>
+			<agreementStatus>Approved</agreementStatus>
+			<statementStatus>Pending</statementStatus>
+			<statementStatus>Approved</statementStatus>
+			<agreementId id="agmt.id"/>
+		</agreement>
+
+		<agreementExposureSummary id="ProductQTP">
+			<productList>
+				<productType ref="product.test1.name"/>
+			</productList>
+		</agreementExposureSummary>
+
+		<tradeDetail id = "amount-2000000trade">
+			<tradeInformation>
+				<!--<productType ref="product.test1.name"/>-->
+				<tradeDate>T</tradeDate>
+				<effectiveDate>T</effectiveDate>
+				<maturityDate>T+1000</maturityDate>
+				<tradeIdentifierPartyA random="true"/>
+				<partyABranchName random="true"/>
+				<partyBBranchName random="true"/>
+			</tradeInformation>
+			<valuationInformation>
+				<principalValuationAmount>
+					<amount>-2000000</amount>
+					<currency>USD</currency>
+				</principalValuationAmount>
+				<valuationDate>T</valuationDate>
+			</valuationInformation>
+		</tradeDetail>
+
+		<exposureEventDetail id="tickDelivery2000000Event">
+			<eventId id="deliveryEventId"/>
+			<action>Delivery</action>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="deliveryEventCheck" name="check">
+			<action>Delivery</action>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="delivery2000000Event" name="check">
+			<agreementRequirement>-2,000,000.00</agreementRequirement>
+			<action>Delivery</action>
+		</exposureEventDetail>
+		
+		<feedAssetBooking id="feedBooking1000000Delivery">
+			<agreementId ref="agmt.id"/>
+			<assetType ref="bondAssetType.name"/>
+			<instrumentID ref="bondinstrument.id"/>
+			<parAmount>1000000</parAmount>
+			<movement>Delivery</movement>
+			<settlementStatus>pending</settlementStatus>
+			<linkToEvent>true</linkToEvent>
+			<Event ref="deliveryEventId"/>
+		</feedAssetBooking>
+
+		<feedResult id="booking1000000DeliveryFeedResult">
+			<fileUploaded id="booking1000000DeliveryFeedResultFile"/>
+			<successfullyImported>1</successfullyImported>
+			<unsuccessfulImports>0</unsuccessfulImports>
+		</feedResult>
+
+		<feedStatus id="booking1000000DeliveryFeedStatus">
+			<status>Successful</status>
+			<valuationFile ref="booking1000000DeliveryFeedResultFile"/>
+			<description>Asset Booking</description>
+			<successfulFeed>
+				<total>1</total>
+			</successfulFeed>
+		</feedStatus>
+
+
+		<feedAssetBooking id="feedBooking1000200Delivery">
+			<agreementId ref="agmt.id"/>
+			<assetType ref="equityAssetType.name"/>
+			<instrumentID ref="equityinstrument.id"/>
+			<parAmount>1000200</parAmount>
+			<movement>Delivery</movement>
+			<settlementStatus>pending</settlementStatus>
+			<linkToEvent>true</linkToEvent>
+			<Event ref="deliveryEventId"/>
+		</feedAssetBooking>
+
+		<feedResult id="booking1000200DeliveryFeedResult">
+			<fileUploaded id="booking1000200DeliveryFeedResultFile"/>
+			<successfullyImported>1</successfullyImported>
+			<unsuccessfulImports>0</unsuccessfulImports>
+		</feedResult>
+
+		<feedStatus id="booking1000200DeliveryFeedStatus">
+			<status>Successful</status>
+			<valuationFile ref="booking1000200DeliveryFeedResultFile"/>
+			<description>Asset Booking</description>
+			<successfulFeed apply="true">
+				<total>1</total>
+				<entry>
+					<content>There are already bookings associated to this event.</content>
+				</entry>
+			</successfulFeed>
+		</feedStatus>
+
+		<agreementSearch id="agrSearch">
+			<description>
+				<filter ref="agr.desc"/>
+			</description>
+		</agreementSearch>
+
+		<agreementSearchResult id="agrSearchResult">
+			<description ref="agr.desc" />
+		</agreementSearchResult>
+
+		<assetBookingSummary id="qtp_bond_usd">
+			<assetType ref="bondAssetType.name"/>
+		</assetBookingSummary>
+
+		<assetBookingSummary id="booking1Pending">
+			<assetType ref="bondAssetType.name"/>
+			<instrumentId ref="bondinstrument.id" />
+			<movement>Delivery</movement>
+			<nominalAmount>-1,000,000.00</nominalAmount>
+			<status>Pending</status>
+		</assetBookingSummary>
+
+		<bookingDetail id="booking1ChangeToCancelled">
+			<bookingInformation>
+				<settlementStatusInfo>
+					<settlementStatus>Cancelled</settlementStatus>
+					<settlementComment random="true"/>
+				</settlementStatusInfo>
+			</bookingInformation>
+			<alertHandling>
+				<!--<content>Canceling this booking would lead to Recall/Return of assets no longer held. Please ensure you review your bookings.</content>-->
+				<accept>true</accept>
+			</alertHandling>
+			<save>save</save>
+		</bookingDetail>
+
+		<assetBookingSummary id="qtp_equity_usd">
+			<assetType ref="equityAssetType.name"/>
+		</assetBookingSummary>
+
+		<assetBookingSummary id="booking2Pending">
+			<assetType ref="equityAssetType.name"/>
+			<instrumentId ref="equityinstrument.id" />
+			<movement>Delivery</movement>
+			<nominalAmount>-1,000,200.00</nominalAmount>
+			<status>Pending</status>
+		</assetBookingSummary>
+
+		<bookingDetail id="booking2ChangeToCancelled">
+			<bookingInformation>
+				<settlementStatusInfo>
+					<settlementStatus>Cancelled</settlementStatus>
+					<settlementComment random="true"/>
+				</settlementStatusInfo>
+			</bookingInformation>
+			<alertHandling>
+				<accept>true</accept>
+			</alertHandling>
+			<save>save</save>
+		</bookingDetail>
+
+		<feedAssetBooking id="feedBooking3amount1000000Delivery">
+			<agreementId ref="agmt.id"/>
+			<assetType ref="bondAssetType.name"/>
+			<instrumentID ref="bondinstrument.id"/>
+			<parAmount>1000000</parAmount>
+			<movement>Delivery</movement>
+			<settlementStatus>pending</settlementStatus>
+			<linkToEvent>true</linkToEvent>
+			<Event ref="deliveryEventId"/>
+		</feedAssetBooking>
+
+
+		<feedResult id="booking3amount1000000DeliveryFeedResult">
+			<fileUploaded id="booking3amount1000000DeliveryFeedResultFile"/>
+			<successfullyImported>1</successfullyImported>
+			<unsuccessfulImports>0</unsuccessfulImports>
+		</feedResult>
+
+
+		<feedStatus id="booking3amount1000000DeliveryFeedStatus">
+			<status>Successful</status>
+			<valuationFile ref="booking3amount1000000DeliveryFeedResultFile"/>
+			<description>Asset Booking</description>
+			<successfulFeed apply="true">
+				<total>1</total>
+				<entry>
+					<content>There are already bookings associated to this event.</content>
+				</entry>
+			</successfulFeed>
+		</feedStatus>
+
+		<feedAssetBooking id="feedBooking4amount1000300Delivery">
+			<agreementId ref="agmt.id"/>
+			<assetType ref="equityAssetType.name"/>
+			<instrumentID ref="equityinstrument.id"/>
+			<parAmount>1000300</parAmount>
+			<movement>Delivery</movement>
+			<settlementStatus>pending</settlementStatus>
+			<linkToEvent>true</linkToEvent>
+			<Event ref="deliveryEventId"/>
+		</feedAssetBooking>
+
+		<feedResult id="booking4amount1000300DeliveryFeedResult">
+			<fileUploaded id="booking4amount1000300DeliveryFeedResultFile"/>
+			<successfullyImported>1</successfullyImported>
+			<unsuccessfulImports>0</unsuccessfulImports>
+		</feedResult>
+
+		<feedStatus id="booking4amount1000300DeliveryFeedStatus">
+			<status>Successful</status>
+			<valuationFile ref="booking4amount1000300DeliveryFeedResultFile"/>
+			<description>Asset Booking</description>
+			<successfulFeed apply="true">
+				<total>1</total>
+				<entry>
+					<content>There are already bookings associated to this event.</content>
+				</entry>
+			</successfulFeed>
+		</feedStatus>
+
+		<assetBookingSummary id="booking3Pending">
+			<assetType ref="bondAssetType.name"/>
+			<instrumentId ref="bondinstrument.id" />
+			<movement>Delivery</movement>
+			<nominalAmount>-1,000,000.00</nominalAmount>
+			<status>Pending</status>
+		</assetBookingSummary>
+
+		<bookingDetail id="booking3ChangeToCancelled">
+			<bookingInformation>
+				<settlementStatusInfo>
+					<settlementStatus>Cancelled</settlementStatus>
+					<settlementComment random="true"/>
+				</settlementStatusInfo>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+		<assetBookingSummary id="booking4Pending">
+			<assetType ref="equityAssetType.name"/>
+			<instrumentId ref="equityinstrument.id" />
+			<movement>Delivery</movement>
+			<nominalAmount>-1,000,300.00</nominalAmount>
+			<status>Pending</status>
+		</assetBookingSummary>
+
+		<bookingDetail id="booking4ChangeToCancelled">
+			<bookingInformation>
+				<settlementStatusInfo>
+					<settlementStatus>Cancelled</settlementStatus>
+					<settlementComment random="true"/>
+				</settlementStatusInfo>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+		<feedAssetBooking id="feedBooking5amount1000000Delivery">
+			<agreementId ref="agmt.id"/>
+			<assetType ref="bondAssetType.name"/>
+			<instrumentID ref="bondinstrument.id"/>
+			<parAmount>1000000</parAmount>
+			<movement>Delivery</movement>
+			<settlementStatus>pending</settlementStatus>
+			<linkToEvent>true</linkToEvent>
+			<Event ref="deliveryEventId"/>
+		</feedAssetBooking>
+
+		<feedResult id="booking5amount1000000DeliveryFeedResult">
+			<fileUploaded id="booking5amount1000000DeliveryFeedResultFile"/>
+			<successfullyImported>1</successfullyImported>
+			<unsuccessfulImports>0</unsuccessfulImports>
+		</feedResult>
+
+		<feedStatus id="booking5amount1000000DeliveryFeedStatus">
+			<status>Successful</status>
+			<valuationFile ref="booking5amount1000000DeliveryFeedResultFile"/>
+			<description>Asset Booking</description>
+			<successfulFeed apply="true">
+				<total>1</total>
+				<entry>
+					<content>There are already bookings associated to this event.</content>
+				</entry>
+			</successfulFeed>
+		</feedStatus>
+
+
+		<feedAssetBooking id="feedBooking6amount1000400Delivery">
+			<agreementId ref="agmt.id"/>
+			<assetType ref="equityAssetType.name"/>
+			<instrumentID ref="equityinstrument.id"/>
+			<parAmount>1000400</parAmount>
+			<movement>Delivery</movement>
+			<settlementStatus>pending</settlementStatus>
+			<linkToEvent>true</linkToEvent>
+			<Event ref="deliveryEventId"/>
+		</feedAssetBooking>
+
+		<feedResult id="booking6amount1000400DeliveryFeedResult">
+			<fileUploaded id="booking6amount1000400DeliveryFeedResultFile"/>
+			<successfullyImported>1</successfullyImported>
+			<unsuccessfulImports>0</unsuccessfulImports>
+		</feedResult>
+
+
+		<feedStatus id="booking6amount1000400DeliveryFeedStatus" >
+			<status>Successful</status>
+			<valuationFile ref="booking6amount1000400DeliveryFeedResultFile"/>
+			<description>Asset Booking</description>
+			<successfulFeed apply="true">
+				<total>1</total>
+				<entry>
+					<parameter>
+						<parameterName>EventId</parameterName>
+						<parameterValue ref="deliveryEventId"/>
+					</parameter>
+					<parameter>
+						<parameterName>AssetType</parameterName>
+						<parameterValue ref="equityAssetType.name"/>
+					</parameter>
+					<parameter>
+						<parameterName>InstrumentID</parameterName>
+						<parameterValue ref="equityinstrument.id"/>
+					</parameter>
+					<parameter>
+						<parameterName>Movement</parameterName>
+						<parameterValue>Delivery</parameterValue>
+					</parameter>
+					<parameter>
+						<parameterName>ParAmount</parameterName>
+						<parameterValue>2000400</parameterValue>
+					</parameter>
+					<content>Excess deliver/return bookings have be made via feed.</content>
+				</entry>
+			</successfulFeed>
+		</feedStatus>
+
+		<assetBookingSummary id="feedBooking5amount1000000DeliveryDetail">
+			<assetType ref="bondAssetType.name"/>
+			<instrumentId ref="bondinstrument.id" />
+			<movement>Delivery</movement>
+			<nominalAmount>-1,000,000.00</nominalAmount>
+			<bookingSource>Fed</bookingSource>
+			<status>Pending</status>
+		</assetBookingSummary>
+
+
+		<assetBookingSummary id="feedBooking6amount1000400Delivery">
+			<assetType ref="equityAssetType.name"/>
+			<instrumentId ref="equityinstrument.id" />
+			<movement>Delivery</movement>
+			<nominalAmount>-1,000,400.00</nominalAmount>
+			<bookingSource>Fed</bookingSource>
+			<status>Pending</status>
+		</assetBookingSummary>
+
+
+
+
+
+	</scenarioData>
+</dataBean>

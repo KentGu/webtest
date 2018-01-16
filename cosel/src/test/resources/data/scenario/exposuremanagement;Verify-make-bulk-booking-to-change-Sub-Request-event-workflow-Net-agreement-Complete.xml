@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/exposureManagement.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <agreement id="agr26522.net">
+            <agreementId id="agrid">2591</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="Source">
+            <column>Source</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="bookedAmountFirstLeg">
+            <column>Booked Amount First Leg</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="bookedAmountSecondLeg">
+            <column>Booked Amount Second Leg</column>
+        </exposureEventDetail>
+
+        <substitutionEventSearch id="agr26522_recall">
+            <description>
+                <filter>26522_1</filter>
+                <linkText>26522_1</linkText>
+            </description>
+        </substitutionEventSearch>
+
+        <substitutionEventDetail id="bond_usd_delivery_4000000">
+            <instrumentId>26522_bond_usd</instrumentId>
+        </substitutionEventDetail>
+
+        <exposureEventDetail id="substitutionRequest.bond.usd.created">
+            <element>26522_bond_usd</element>
+            <action>Substitution Request</action>
+            <source>Manual</source>
+        </exposureEventDetail>
+
+         <marginLetter id="createSubstitutionRequestLetter">
+            <letterType>Substitution Request</letterType>
+        </marginLetter>
+
+        <exposureEventDetail id="substitutionRequest.bond.usd.RequestIssued">
+            <element>26522_bond_usd</element>
+            <action>Substitution Request</action>
+            <callStatus>Request Issued</callStatus>
+            <source>Manual</source>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="substitutionRequest.bond.usd.tick">
+            <action>Substitution Request</action>
+            <callStatus>Request Issued</callStatus>
+            <source>Manual</source>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="substitutionRequest.element.withoutCashGBP">
+            <action>Substitution Request</action>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="substitutionRequest.element.addCashGBP">
+            <action>Substitution Request</action>
+            <instrumentID>CASH-GBP</instrumentID>
+        </exposureEventDetail>
+
+        <bookingDetail id="Recall.bond.usd.notional.2m">
+            <!--<instrumentSearch>-->
+                <!--<instrument>-->
+                    <!--<filter>26522_bond_usd</filter>-->
+                <!--</instrument>-->
+            <!--</instrumentSearch>-->
+            <bookingInformation>
+                <bookingInformationDetail clickPlusButton="true">
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <bookingNumber>1.1</bookingNumber>
+                    <movement>Recall</movement>
+                    <nominalAmount>2m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="Recall.cash.GBP.notional.2m">
+            <instrumentSearch>
+                <instrument>
+                    <filter>CASH-GBP</filter>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <!--<bookingNumber>1.3</bookingNumber>-->
+                    <movement>Recall</movement>
+                    <nominalAmount>2m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="Delivery.bond.gbp.notional.1m">
+            <instrumentSearch>
+                <instrument>
+                    <filter>26522_bond_gpb</filter>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail clickPlusButton="true">
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <movement>Delivery</movement>
+                    <nominalAmount>1m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="Delivery.cash.usd.notional.4m">
+            <instrumentSearch>
+                <instrument>
+                    <filter>CASH-USD</filter>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <movement>Delivery</movement>
+                    <nominalAmount>4m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <exposureEventDetail id="substitutionRequest.bond.usd.completed.leg1.6m.leg2.6m">
+            <action>Substitution Request</action>
+            <bookedAmountFirstLeg>6,000,000.00</bookedAmountFirstLeg>
+            <bookedAmountSecondLeg>-6,000,000.00</bookedAmountSecondLeg>
+            <callStatus>Completed</callStatus>
+            <source>Manual</source>
+            <eventId id="eventId"/>
+        </exposureEventDetail>
+
+        <assetBookingSummary id="asset.type.CASH.USD">
+            <assetType>CASH-USD</assetType>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="CASH.USD.delivery.4m">
+            <assetType>CASH-USD</assetType>
+            <movement>Delivery</movement>
+            <nominalAmount>-4,000,000.00</nominalAmount>
+        </assetBookingSummary>
+
+        <bookingDetail id="booking.checkEventId">
+            <bookingInformation>
+                <eventId ref="eventId"/>
+            </bookingInformation>
+        </bookingDetail>
+
+        <assetBookingSummary id="asset.type.CASH.GBP">
+            <assetType>CASH-GBP</assetType>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="asset.type.bond.USD">
+            <assetType>qtp_bond_usd</assetType>
+        </assetBookingSummary>
+
+
+        <assetBookingSummary id="CASH.GBP.Recall.2m">
+            <assetType>CASH-GBP</assetType>
+            <movement>Recall</movement>
+            <nominalAmount>2,000,000.00</nominalAmount>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="bond.usd.recall.2m">
+            <assetType>qtp_bond_usd</assetType>
+            <instrumentId>26522_bond_usd</instrumentId>
+            <movement>Recall</movement>
+            <nominalAmount>2,000,000.00</nominalAmount>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="bond.gbp.delivery.1m">
+            <assetType>qtp_bond_usd</assetType>
+            <instrumentId>26522_bond_gpb</instrumentId>
+            <movement>Delivery</movement>
+            <nominalAmount>-1,000,000.00</nominalAmount>
+        </assetBookingSummary>
+
+
+    </scenarioData>
+</dataBean>

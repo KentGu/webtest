@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <securitySearch id="27917.bond.usd">
+            <matured>All</matured>
+            <instrument>
+                <filter id="27917.bond.usd.id">27917_bond_usd_1</filter>
+                <!--<linkText ref="26527.bond.usd"/>-->
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="27917.bond.usd.approve">
+            <instrument ref="27917.bond.usd.id"/>
+        </securitySearchResult>
+
+        <instrument id="27917.bond.usd.changeMaturityDate.tPlus5.changeRecordDate.tMinus5">
+            <maturityDate>t+5</maturityDate>
+            <recordDate>t-5</recordDate>
+        </instrument>
+
+        <agreement id="agr27917.repo">
+            <agreementId id="agrid">2632</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="subConfirmation.top">
+            <action>Substitution Confirmation</action>
+            <externalId id="agr.umb.externalId">27917_umb</externalId>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subConfirmation.top.agreementRequirement.-6m.pendingReview">
+            <action>Substitution Confirmation</action>
+            <externalId ref="agr.umb.externalId"/>
+            <agreementRequirement>-6,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subConfirmation.fund1.agreementRequirement.-1m.pendingReview">
+            <action>Substitution Confirmation</action>
+            <externalId id="agr.f1.externalId">27917_f1</externalId>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subConfirmation.fund2.agreementRequirement.-2m.pendingReview">
+            <action>Substitution Confirmation</action>
+            <externalId id="agr.f2.externalId">27917_f2</externalId>
+            <agreementRequirement>-2,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subConfirmation.fund3.agreementRequirement.-3m.pendingReview">
+            <action>Substitution Confirmation</action>
+            <externalId id="agr.f3.externalId">27917_f3</externalId>
+            <agreementRequirement>-3,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subConfirmation.fund1.agreementRequirement.-1m.RequestConfirmed">
+            <action>Substitution Confirmation</action>
+            <externalId ref="agr.f1.externalId"/>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <callStatus>Request Confirmed</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subConfirmation.fund2.agreementRequirement.-2m.PartiallyBooked">
+            <action>Substitution Confirmation</action>
+            <externalId ref="agr.f2.externalId"/>
+            <agreementRequirement>-2,000,000.00</agreementRequirement>
+            <callStatus>Partially Booked</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subConfirmation.fund1.agreementRequirement.-1m.PartiallyBooked">
+            <action>Substitution Confirmation</action>
+            <externalId ref="agr.f1.externalId"/>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <callStatus>Partially Booked</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subConfirmation.fund2.agreementRequirement.-2m.Completed">
+            <action>Substitution Confirmation</action>
+            <externalId ref="agr.f2.externalId"/>
+            <agreementRequirement>-2,000,000.00</agreementRequirement>
+            <callStatus>Completed</callStatus>
+            <comments>t</comments>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subConfirmation.fund3.agreementRequirement.-3m.RequestConfirmed">
+            <action>Substitution Confirmation</action>
+            <externalId ref="agr.f3.externalId"/>
+            <agreementRequirement>-3,000,000.00</agreementRequirement>
+            <callStatus>Request Confirmed</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subConfirmation.top.agreementRequirement.-6m.RequestConfirmed">
+            <action>Substitution Confirmation</action>
+            <externalId ref="agr.umb.externalId"/>
+            <agreementRequirement>-6,000,000.00</agreementRequirement>
+            <callStatus>Request Confirmed</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subConfirmation.fund1.agreementRequirement.-1m.Completed">
+            <action>Substitution Confirmation</action>
+            <externalId ref="agr.f1.externalId"/>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <callStatus>Completed</callStatus>
+            <comments>t</comments>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subConfirmation.fund1.agreementRequirement.-1m.Waived">
+            <action>Substitution Confirmation</action>
+            <externalId ref="agr.f1.externalId"/>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <callStatus>Waived</callStatus>
+            <comments>t</comments>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subConfirmation.fund2.agreementRequirement.-2m.Waived">
+            <action>Substitution Confirmation</action>
+            <externalId ref="agr.f2.externalId"/>
+            <agreementRequirement>-2,000,000.00</agreementRequirement>
+            <callStatus>Waived</callStatus>
+            <comments>t</comments>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subConfirmation.fund3.agreementRequirement.-3m.PartiallyBooked">
+            <action>Substitution Confirmation</action>
+            <externalId ref="agr.f3.externalId"/>
+            <agreementRequirement>-3,000,000.00</agreementRequirement>
+            <callStatus>Partially Booked</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subConfirmation.fund3.agreementRequirement.-3m.Completed">
+            <action>Substitution Confirmation</action>
+            <externalId ref="agr.f3.externalId"/>
+            <agreementRequirement>-3,000,000.00</agreementRequirement>
+            <callStatus>Completed</callStatus>
+            <comments>t</comments>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subConfirmation.fund3.agreementRequirement.-3m.Waived">
+            <action>Substitution Confirmation</action>
+            <externalId ref="agr.f3.externalId"/>
+            <agreementRequirement>-3,000,000.00</agreementRequirement>
+            <callStatus>Waived</callStatus>
+            <comments>t</comments>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subConfirmation.top.agreementRequirement.-6m.Completed">
+            <action>Substitution Confirmation</action>
+            <externalId ref="agr.umb.externalId"/>
+            <agreementRequirement>-6,000,000.00</agreementRequirement>
+            <callStatus>Completed</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subConfirmation.top.agreementRequirement.-6m.Waived">
+            <action>Substitution Confirmation</action>
+            <externalId ref="agr.umb.externalId"/>
+            <agreementRequirement>-6,000,000.00</agreementRequirement>
+            <callStatus>Waived</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subConfirmation.top.agreementRequirement.-6m.PartiallyBooked">
+            <action>Substitution Confirmation</action>
+            <externalId ref="agr.umb.externalId"/>
+            <agreementRequirement>-6,000,000.00</agreementRequirement>
+            <callStatus>Partially Booked</callStatus>
+        </exposureEventDetail>
+    </scenarioData>
+</dataBean>

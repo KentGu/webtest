@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/approvalManager.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <agreement>
+            <principal>
+                <filter id="agreement.fund1.principal">QTPPrincipalSubsidiary1</filter>
+            </principal>
+            <counterparty>
+                <filter id="agreement.fund1.counterparty">QTPCounterpartySubsidiary1</filter>
+            </counterparty>
+            <agreementDescription id="agreement.fund1.description">T24571_Fund1_Description</agreementDescription>
+            <externalId id="agreement.fund1.external.id">T24571_Fund1_External_ID</externalId>
+            <agreementId id="agreement.fund1.id">1023</agreementId>
+            <collateralAssetClass>
+                <collateralAssetClassName id="agreement.fund1.asset.class" ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName id="agreement.fund1.asset.type" ref="cash.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <bucket>
+                    <filter id="agreement.fund1.bucket">VM Call/Return</filter>
+                </bucket>
+            </settlementBucket>
+        </agreement>
+
+        <agreement>
+            <principal>
+                <filter id="agreement.fund2.principal">QTPPrincipalSubsidiary1</filter>
+            </principal>
+            <counterparty>
+                <filter id="agreement.fund2.counterparty">QTPCounterpartySubsidiary1</filter>
+            </counterparty>
+            <agreementDescription id="agreement.fund2.description">T24571_Fund2_Description</agreementDescription>
+            <externalId id="agreement.fund2.external.id">T24571_Fund2_External_ID</externalId>
+            <agreementId id="agreement.fund2.id">1024</agreementId>
+            <collateralAssetClass>
+                <collateralAssetClassName id="agreement.fund2.asset.class" ref="bond.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName id="agreement.fund2.asset.type" ref="bond.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <bucket>
+                    <filter id="agreement.fund2.bucket">VM Call/Return</filter>
+                </bucket>
+            </settlementBucket>
+        </agreement>
+
+        <agreement>
+            <principal>
+                <filter id="agreement.fund3.principal">QTPPrincipalSubsidiary1</filter>
+            </principal>
+            <counterparty>
+                <filter id="agreement.fund3.counterparty">QTPCounterpartySubsidiary1</filter>
+            </counterparty>
+            <agreementDescription id="agreement.fund3.description">T24571_Fund3_Description</agreementDescription>
+            <externalId id="agreement.fund3.external.id">T24571_Fund3_External_ID</externalId>
+            <agreementId id="agreement.fund3.id">1025</agreementId>
+            <collateralAssetClass>
+                <collateralAssetClassName id="agreement.fund3.asset.class" ref="equity.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName id="agreement.fund3.asset.type" ref="equity.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <bucket>
+                    <filter id="agreement.fund3.bucket">VM Call/Return</filter>
+                </bucket>
+            </settlementBucket>
+        </agreement>
+
+        <agreement>
+            <principal>
+                <filter id="agreement.umberlla.principal">QTPPrincipal</filter>
+            </principal>
+            <counterparty>
+                <filter id="agreement.umberlla.counterparty">QTPCounterparty</filter>
+            </counterparty>
+            <agreementDescription id="agreement.umberlla.description">T24571_UM_Description</agreementDescription>
+            <externalId id="agreement.umberlla.external.id">T24571_UM_External_ID</externalId>
+            <agreementId id="agreement.umberlla.id">1026</agreementId>
+            <collateralAssetClass>
+                <collateralAssetClassName id="agreement.umberlla.asset.class" ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName id="agreement.umberlla.asset.type" ref="cash.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <bucket>
+                    <filter id="agreement.umberlla.bucket">VM Call/Return</filter>
+                </bucket>
+            </settlementBucket>
+        </agreement>
+
+        <approvalManagerSettlementInstructions id="search.approval.manager.settlement.instructions"/>
+
+        <approvalManagerSettlementInstructionsSearchResult id="search.result.approval.manager.settlement.instruction.fund1">
+            <organisation ref="agreement.fund1.counterparty"/>
+            <agreementId ref="agreement.fund1.id"/>
+            <assetClass ref="agreement.fund1.asset.class"/>
+            <assetType ref="agreement.fund1.asset.type"/>
+            <bucket ref="agreement.fund1.bucket"/>
+        </approvalManagerSettlementInstructionsSearchResult>
+
+        <approvalManagerSettlementInstructionsSearchResult id="search.result.approval.manager.settlement.instruction.fund2">
+            <organisation ref="agreement.fund2.counterparty"/>
+            <agreementId ref="agreement.fund2.id"/>
+            <assetClass ref="agreement.fund2.asset.class"/>
+            <assetType ref="agreement.fund2.asset.type"/>
+            <bucket ref="agreement.fund2.bucket"/>
+        </approvalManagerSettlementInstructionsSearchResult>
+
+        <approvalManagerSettlementInstructionsSearchResult id="search.result.approval.manager.settlement.instruction.fund3">
+            <organisation ref="agreement.fund3.counterparty"/>
+            <agreementId ref="agreement.fund3.id"/>
+            <assetClass ref="agreement.fund3.asset.class"/>
+            <assetType ref="agreement.fund3.asset.type"/>
+            <bucket ref="agreement.fund3.bucket"/>
+        </approvalManagerSettlementInstructionsSearchResult>
+
+        <approvalManagerSettlementInstructionsSearchResult id="search.result.approval.manager.settlement.instruction.umberlla">
+            <organisation ref="agreement.umberlla.counterparty"/>
+            <agreementId ref="agreement.umberlla.id"/>
+            <assetClass ref="agreement.umberlla.asset.class"/>
+            <assetType ref="agreement.umberlla.asset.type"/>
+            <bucket ref="agreement.umberlla.bucket"/>
+        </approvalManagerSettlementInstructionsSearchResult>
+
+        <approvalManagerSettlementInstructionsSearchResult id="approval.all.ok">
+            <alertHandling>
+                <accept>true</accept>
+                <content>^Do you want to approve all\?$</content>
+            </alertHandling>
+        </approvalManagerSettlementInstructionsSearchResult>
+
+        <settlementDataSearch id="search.settlement.data">
+            <description>
+                <type>Starting with</type>
+                <filter>T24571</filter>
+                <linkText>T24571</linkText>
+            </description>
+        </settlementDataSearch>
+
+        <settlementDataSearchResult id="settlement.data.fund1">
+            <principal ref="agreement.fund1.principal"/>
+            <counterparty ref="agreement.fund1.counterparty"/>
+            <paymentBucket ref="agreement.fund1.bucket"/>
+            <assetClass ref="agreement.fund1.asset.class"/>
+            <assetType ref="agreement.fund1.asset.type"/>
+            <description ref="agreement.fund1.description"/>
+            <status>Approved</status>
+        </settlementDataSearchResult>
+
+        <settlementDataSearchResult id="settlement.data.fund2">
+            <principal ref="agreement.fund2.principal"/>
+            <counterparty ref="agreement.fund2.counterparty"/>
+            <paymentBucket ref="agreement.fund2.bucket"/>
+            <assetClass ref="agreement.fund2.asset.class"/>
+            <assetType ref="agreement.fund2.asset.type"/>
+            <description ref="agreement.fund2.description"/>
+            <status>Approved</status>
+        </settlementDataSearchResult>
+
+        <settlementDataSearchResult id="settlement.data.fund3">
+            <principal ref="agreement.fund3.principal"/>
+            <counterparty ref="agreement.fund3.counterparty"/>
+            <paymentBucket ref="agreement.fund3.bucket"/>
+            <assetClass ref="agreement.fund3.asset.class"/>
+            <assetType ref="agreement.fund3.asset.type"/>
+            <description ref="agreement.fund3.description"/>
+            <status>Approved</status>
+        </settlementDataSearchResult>
+
+        <settlementDataSearchResult id="settlement.data.umberlla">
+            <principal ref="agreement.umberlla.principal"/>
+            <counterparty ref="agreement.umberlla.counterparty"/>
+            <paymentBucket ref="agreement.umberlla.bucket"/>
+            <assetClass ref="agreement.umberlla.asset.class"/>
+            <assetType ref="agreement.umberlla.asset.type"/>
+            <description ref="agreement.umberlla.description"/>
+            <status>Approved</status>
+        </settlementDataSearchResult>
+
+    </scenarioData>
+</dataBean>

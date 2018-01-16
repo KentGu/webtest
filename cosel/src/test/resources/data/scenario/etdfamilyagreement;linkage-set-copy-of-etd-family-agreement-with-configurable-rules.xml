@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/ETDFamilyAgreement.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <collateralStaticData id="linkageSet.familyAgreement">
+            <type>Linkage Set</type>
+            <dataName id="linkageSet.familyAgreement.name" random="true"></dataName>
+            <description ref="linkageSet.familyAgreement.name"></description>
+            <status>enabled</status>
+        </collateralStaticData>
+
+        <agreementSummary id="summary2">
+            <saveToLinkageSet ref="linkageSet.familyAgreement.name"/>
+            <partyAndCounterpartyDetails>
+                <familyAgreement>True</familyAgreement>
+                <configurableRule check="true">true</configurableRule>
+                <agreedJurisdiction check="true">EMIR</agreedJurisdiction>
+            </partyAndCounterpartyDetails>
+        </agreementSummary>
+
+        <agreementSearch id="linkageset2.search">
+            <description>
+                <filter ref="agr.desc.family.linkageset2"/>
+            </description>
+            <familyAgreement>Yes</familyAgreement>
+            <configurableRule>Yes</configurableRule>
+        </agreementSearch>
+
+        <agreementSearchResult id="linkageset2.search.result">
+            <description ref="agr.desc.family.linkageset2"/>
+        </agreementSearchResult>
+
+        <agreementSearch id="linkageset1.search">
+            <description>
+                <filter ref="agr.desc.family.linkageset1"/>
+            </description>
+        </agreementSearch>
+
+        <agreementSearchResult id="linkageset1.search.result">
+            <description ref="agr.desc.family.linkageset1"/>
+        </agreementSearchResult>
+
+        <agreement id="family.configurableRule.etd.agreement.linkageset1">
+            <agreementId id="agreement.id.configRule.linkageset1" random="true"/>
+            <principal>
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter>QTPPrincipal</filter>
+                <linkText>QTPPrincipal</linkText>
+            </principal>
+            <counterparty>
+                <criteria>Containing</criteria>
+                <type>Long Name</type>
+                <filter>QTPCounterparty</filter>
+                <linkText>QTPCounterparty</linkText>
+            </counterparty>
+            <linkageSet ref="linkageSet.familyAgreement.name"/>
+            <businessLine>ETD</businessLine>
+            <principalRole>Member</principalRole>
+            <familyAgreement>true</familyAgreement>
+            <configurableRule>false</configurableRule>
+            <ccp ref="ccp.lch.name"/>
+            <agreementDescription id="agr.desc.family.linkageset1" random="true"/>
+            <agreementName random="true"/>
+            <externalId id="agr.desc.family.ext.linkageset1" random="true"/>
+            <baseCurrency>GBP</baseCurrency>
+            <agreementDate>T</agreementDate>
+            <callFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </callFrequency>
+            <holidayCentre ref="hc.europe.name"/>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+        </agreement>
+
+        <agreement id="family.configurableRule.etd.agreement.linkageset2">
+            <agreementId id="agreement.id.configRule.linkageset2" random="true"/>
+            <principal>
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter>QTPPrincipal</filter>
+                <linkText>QTPPrincipal</linkText>
+            </principal>
+            <counterparty>
+                <criteria>Containing</criteria>
+                <type>Long Name</type>
+                <filter>QTPCounterparty</filter>
+                <linkText>QTPCounterparty</linkText>
+            </counterparty>
+            <linkageSet ref="linkageSet.familyAgreement.name"/>
+            <businessLine>ETD</businessLine>
+            <principalRole>Member</principalRole>
+            <familyAgreement>true</familyAgreement>
+            <configurableRule>true</configurableRule>
+            <agreedJurisdiction>
+                <filter>EMIR</filter>
+                <linkText>EMIR</linkText>
+            </agreedJurisdiction>
+            <ccp ref="ccp.lch.name"/>
+            <agreementDescription id="agr.desc.family.linkageset2" random="true"/>
+            <agreementName random="true"/>
+            <externalId id="agr.desc.family.ext.linkageset2" random="true"/>
+            <baseCurrency>GBP</baseCurrency>
+            <agreementDate>T</agreementDate>
+            <callFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </callFrequency>
+            <holidayCentre ref="hc.europe.name"/>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+        </agreement>
+    </scenarioData>
+</dataBean>

@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <!---->
+        <instrument id="securityinstrument">
+            <assetClass>qtp_bond</assetClass>
+            <assetType>qtp_bond_usd</assetType>
+            <assetClassification>
+                <assetClassificationName>classification_2590</assetClassificationName>
+                <assetcategory>class_A</assetcategory>
+            </assetClassification>
+            <instrumentId>
+                <value id="securityinstrument.id" random="true" prefix="Security_"/>
+            </instrumentId>
+            <market>USA</market>
+            <description id="bondinstrument.des" random="false" prefix="bondinstrument.des"/>
+            <issuer>
+                <filter>QTP_Eligible_Issuer4</filter>
+                <linkText>QTP_Eligible_Issuer4</linkText>
+            </issuer>
+            <priceSource>
+                <priceSourceName ref="ps.default.name"/>
+                <cleanPrice>1m</cleanPrice>
+                <priceLevel>Mid</priceLevel>
+                <lastPriceChange>T</lastPriceChange>
+                <priceDate>T</priceDate>
+            </priceSource>
+            <maturityDate>T+100</maturityDate>
+            <couponRate>10</couponRate>
+            <recordDate>T</recordDate>
+            <issueDate>T</issueDate>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <securitySearch id="SecuritySearch">
+            <instrument>
+                <type>Starting with</type>
+                <filter ref="securityinstrument.id"/>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="SearchWillBeApproved">
+            <instrument ref="securityinstrument.id"/>
+        </securitySearchResult>
+
+        <instrument id="instrument.Status.Approved">
+            <securityStatus>Approved</securityStatus>
+        </instrument>
+
+        <securitySearch id="SecuritySearch.Bond-USD.Instrument">
+            <instrument>
+                <type>Starting with</type>
+                <filter ref="securityinstrument.id"/>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="SearchSecurity">
+            <instrument ref="securityinstrument.id"/>
+        </securitySearchResult>
+
+        <instrument id="edit.Security">
+            <assetType>qtp_bond_eur2</assetType>
+            <filter>QTP_Eligible_Issuer4</filter>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <!--Add Agreement-->
+
+        <agreement id="agrSearch">
+            <agreementId id="agrid">2674</agreementId>
+        </agreement>
+
+        <agreementSearchResult id="agrSearchResult">
+            <agreementId ref="agrid"/>
+        </agreementSearchResult>
+
+        <exposureEventDetail id="delivery.agreementRequirement.1m">
+            <action>VM Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <disputeValue>0.00</disputeValue>
+            <counterpartyAmount>0.00</counterpartyAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="call.completed">
+            <action>VM Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <sysCalculatedAmount>1,000,000.00</sysCalculatedAmount>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <assetBookingSummary id="qtp_bond">
+            <assetType>qtp_bond_usd</assetType>
+        </assetBookingSummary>
+
+        <bookingDetail id="qtp_bond_Instrument_Search">
+            <instrumentSearch>
+                <instrumentId>
+                    <type>Exactly matching</type>
+                    <filter ref="securityinstrument.id"/>
+                </instrumentId>
+                <linkText ref="securityinstrument.id"></linkText>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <imAmount>1m</imAmount>
+                    <settlementDate>T+100</settlementDate>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <alertHandling>
+                <display>true</display>
+                <context>A corporate action is due in 0 day(s). Do you wish to proceed?</context>
+                <accept>true</accept>
+            </alertHandling>
+            <alertHandling>
+                <display>true</display>
+                <accept>true</accept>
+            </alertHandling>
+            <save>saveAndComplete</save>
+        </bookingDetail>
+
+        <instrument id="validationError">
+            <validationError>
+                <context>Cannot Change Asset Type, it has the following dependencies on 'Agreement Bookings': Dependent AgreementId: 2674. The agreement is not eligible for Asset qtp_bond_eur2</context>
+            </validationError>
+        </instrument>
+        <!--GBP-->
+
+        <instrument id="securitybondinstrument">
+            <assetClass>qtp_bond</assetClass>
+            <assetType>qtp_bond_gbp</assetType>
+            <instrumentId>
+                <value id="bondinstrument.id" random="true" prefix="gbp_"/>
+            </instrumentId>
+            <market>USA</market>
+            <description id="bondinstrument.des" random="false" prefix="bondinstrument.des"/>
+            <issuer>
+                <filter>QTP_Eligible_Issuer4</filter>
+                <linkText>QTP_Eligible_Issuer4</linkText>
+            </issuer>
+            <priceSource>
+                <priceSourceName ref="ps.default.name"/>
+                <cleanPrice>1</cleanPrice>
+                <lastPriceChange>T</lastPriceChange>
+                <priceDate>T</priceDate>
+            </priceSource>
+            <maturityDate>T+100</maturityDate>
+            <couponRate>10</couponRate>
+            <recordDate>T</recordDate>
+            <issueDate>T</issueDate>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <securitySearch id="SecuritySearchBond">
+            <instrument>
+                <type>Starting with</type>
+                <filter ref="bondinstrument.id"/>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="SearchWillBeApprovedBond">
+            <instrument ref="bondinstrument.id"/>
+        </securitySearchResult>
+
+        <instrument id="security.instrument.Status.Approved">
+            <securityStatus>Approved</securityStatus>
+        </instrument>
+
+        <securitySearch id="SecuritySearch.Bond-USD.Instrument">
+            <instrument>
+                <type>Starting with</type>
+                <filter ref="bondinstrument.id"/>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="BondSearchSecurity">
+            <instrument ref="bondinstrument.id"/>
+        </securitySearchResult>
+
+        <instrument id="bond.edit.Security">
+            <assetType>qtp_bond_usd</assetType>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <exposureEventDetail id="delivery.agreementRequirement.1m">
+            <action>VM Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <disputeValue>0.00</disputeValue>
+            <counterpartyAmount>0.00</counterpartyAmount>
+        </exposureEventDetail>
+
+        <assetBookingSummary id="qtp_bond_gbp">
+            <assetType>qtp_bond_gbp</assetType>
+        </assetBookingSummary>
+
+        <bookingDetail id="qtp_bond_Instrument_Search_gbp">
+            <instrumentSearch>
+                <instrumentId>
+                    <type>Exactly matching</type>
+                    <filter ref="bondinstrument.id"/>
+                </instrumentId>
+                <linkText ref="bondinstrument.id"></linkText>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <imAmount>1m</imAmount>
+                    <settlementDate>T+100</settlementDate>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <alertHandling>
+                <display>true</display>
+                <context>A corporate action is due in 0 day(s). Do you wish to proceed?</context>
+                <accept>true</accept>
+            </alertHandling>
+            <alertHandling>
+                <display>true</display>
+                <accept>true</accept>
+            </alertHandling>
+            <save>saveAndComplete</save>
+        </bookingDetail>
+
+        <exposureEventDetail id="agrid">
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <instrument id="Instrument.Edit.Amended.usd">
+            <assetType>qtp_bond_usd</assetType>
+            <filter>QTP_Eligible_Issuer4</filter>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <instrument id="security.instrument.Status.Amended">
+            <securityStatus>Amended</securityStatus>
+        </instrument>
+
+        <instrument id="Instrument.Edit.Amended.gbp">
+            <assetType>qtp_bond_usd</assetType>
+            <filter>QTP_Eligible_Issuer4</filter>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <!--Equity-->
+
+        <instrument id="Equitysecurityinstrument">
+            <assetClass>qtp_equity</assetClass>
+            <assetType>qtp_equity_gbp</assetType>
+            <assetClassification>
+                <assetClassificationName>classification_2590</assetClassificationName>
+                <assetcategory>class_B</assetcategory>
+            </assetClassification>
+            <instrumentId>
+                <value id="equityinstrument.id" random="true" prefix="equity2_"/>
+            </instrumentId>
+            <market>UK</market>
+            <description id="equityinstrument.des" random="false" prefix="bondinstrument.des"/>
+            <issuer>
+                <filter>QTP_Eligible_Issuer4</filter>
+                <linkText>QTP_Eligible_Issuer4</linkText>
+            </issuer>
+            <priceSource>
+                <priceSourceName>Default</priceSourceName>
+                <dirtyPrice>1</dirtyPrice>
+                <lastPriceChange>T</lastPriceChange>
+                <priceDate>T</priceDate>
+            </priceSource>
+            <maturityDate>T+100</maturityDate>
+            <recordDate>T</recordDate>
+            <issueDate>T</issueDate>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <securitySearch id="EquitySecuritySearch">
+            <instrument>
+                <type>Starting with</type>
+                <filter ref="equityinstrument.id"/>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="EquitySearchWillBeApproved">
+            <instrument ref="equityinstrument.id"/>
+        </securitySearchResult>
+
+        <instrument id="Equity.instrument.Status.Approved">
+            <securityStatus>Approved</securityStatus>
+        </instrument>
+
+        <securitySearchResult id="EquitySearchSecurity">
+            <instrument ref="equityinstrument.id"/>
+        </securitySearchResult>
+
+        <exposureEventDetail id="Equity.delivery.agreementRequirement.1m">
+            <action>VM Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <disputeValue>0.00</disputeValue>
+            <counterpartyAmount>0.00</counterpartyAmount>
+        </exposureEventDetail>
+
+        <assetBookingSummary id="qtp_equity">
+            <assetType>qtp_equity_gbp</assetType>
+        </assetBookingSummary>
+
+        <bookingDetail id="qtp_equity_Instrument_Search">
+            <instrumentSearch>
+                <instrumentId>
+                    <type>Exactly matching</type>
+                    <filter ref="equityinstrument.id"/>
+                </instrumentId>
+                <linkText ref="equityinstrument.id"></linkText>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <imAmount>1m</imAmount>
+                    <settlementDate>T+100</settlementDate>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <alertHandling>
+                <display>true</display>
+                <context>A corporate action is due in 0 day(s). Do you wish to proceed?</context>
+                <accept>true</accept>
+            </alertHandling>
+            <alertHandling>
+                <display>true</display>
+                <accept>true</accept>
+            </alertHandling>
+            <save>saveAndComplete</save>
+        </bookingDetail>
+
+        <instrument id="Equity.Instrument.Edit.Amended">
+            <assetType>qtp_equity_usd</assetType>
+            <filter>QTP_Eligible_Issuer4</filter>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <instrument id="equity.Instrument.validationError">
+            <validationError>
+                <context>asset category is invalid: class_B.</context>
+            </validationError>
+        </instrument>
+    </scenarioData>
+
+</dataBean>

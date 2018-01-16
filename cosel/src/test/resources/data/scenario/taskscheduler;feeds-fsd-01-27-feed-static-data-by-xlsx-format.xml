@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/taskScheduler.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <taskSchedulerDetail id="task.feed.otc.product">
+            <type>Task Manager</type>
+            <taskName>Import Static Data</taskName>
+            <additionalInfo>/home/ec2-user/Feed/FeedStaticData</additionalInfo>
+        </taskSchedulerDetail>
+
+        <variable id="file.path"/>
+
+        <taskSchedulerMessage id="task.feed.otc.product.message">
+            <message>Import Static Data: Imported 1 Static Data from :(\S+).xlsx</message>
+        </taskSchedulerMessage>
+
+        <feedStaticData id="feed.otc.product">
+            <scheme_type>Collateral</scheme_type>
+            <scheme id="feed.otc.product.scheme">Products</scheme>
+            <static_data_name id="feed.otc.product.data.name" random="true"/>
+            <description ref="feed.otc.product.data.name"/>
+        </feedStaticData>
+
+        <feedStatus id="feed.success.log">
+            <!--<systemName>QTP</systemName>-->
+            <status>Successful</status>
+            <valuationFile ref="feed.success.result.file"/>
+            <description>Feed Static Data</description>
+            <successfulFeed>
+                <total>1</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <collateralStaticData id="check.otc.product">
+            <type ref="feed.otc.product.scheme"/>
+            <dataName ref="feed.otc.product.data.name"/>
+            <description ref="feed.otc.product.data.name"/>
+            <status>enabled</status>
+        </collateralStaticData>
+
+
+    </scenarioData>
+</dataBean>

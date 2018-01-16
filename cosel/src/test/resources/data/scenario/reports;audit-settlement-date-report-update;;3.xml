@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <settlementDataSearch id="settlement.data.search.principal">
+            <organisation>
+                <filter>34252prinUpdate</filter>
+                <linkText>34252prinUpdate</linkText>
+            </organisation>
+        </settlementDataSearch>
+        <settlementDataSearchResult id="settlement.data.search.result">
+            <organisation>34252prinUpdate</organisation>
+        </settlementDataSearchResult>
+        <settlementData id="settlement.data.update.principal">
+            <copyFromBucket>Pay</copyFromBucket>
+            <copyFromAssetType>CASH-USD</copyFromAssetType>
+            <!--<agreement>34252agmt2/QTPPrincipal/ /587</agreement>-->
+            <principal>
+                <account>
+                    <accountName>Account Number</accountName>
+                    <value>testc1</value>
+                </account>
+                <account>
+                    <accountName>Beneficiary Bank</accountName>
+                    <value>testc2</value>
+                </account>
+                <account>
+                    <accountName>Ultimate Custodian</accountName>
+                    <selectValue>
+                        <filter>QTPCustodian</filter>
+                        <linkText>QTPCustodian</linkText>
+                    </selectValue>
+                </account>
+            </principal>
+        </settlementData>
+
+        <auditSettlementDetailsReportFilter id="audit.settlement.detail.report.filter">
+            <operation>Modify</operation>
+            <organisation>
+                <filter>34252prinUpdate</filter>
+                <linkText>34252prinUpdate</linkText>
+            </organisation>
+        </auditSettlementDetailsReportFilter>
+        <variable id="auditReportPath"/>
+
+        <reportValidationRules id="reportRule">
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>34252prinUpdate</value></field><field><fieldName>Asset Class</fieldName><value>qtp_bond</value></field><field><fieldName>Asset Type</fieldName><value>qtp_bond_usd</value></field><field><fieldName>Bucket</fieldName><value>Standard</value></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Editor Screen</fieldName><value>Collateral - Static Data - Settlement Data</value></field><field><fieldName>Attribute</fieldName><value>Account Number</value></field><field><fieldName>Value Before</fieldName><value>anp</value></field><field><fieldName>Value After</fieldName><value></value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>34252prinUpdate</value></field><field><fieldName>Asset Class</fieldName><value>qtp_bond</value></field><field><fieldName>Asset Type</fieldName><value>qtp_bond_usd</value></field><field><fieldName>Bucket</fieldName><value>Standard</value></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Editor Screen</fieldName><value>Collateral - Static Data - Settlement Data</value></field><field><fieldName>Attribute</fieldName><value>Status</value></field><field><fieldName>Value Before</fieldName><value>Approved</value></field><field><fieldName>Value After</fieldName><value>Amended</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>34252prinUpdate</value></field><field><fieldName>Asset Class</fieldName><value>qtp_bond</value></field><field><fieldName>Asset Type</fieldName><value>qtp_bond_usd</value></field><field><fieldName>Bucket</fieldName><value>Standard</value></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Editor Screen</fieldName><value>Collateral - Static Data - Settlement Data</value></field><field><fieldName>Attribute</fieldName><value>Status</value></field><field><fieldName>Value Before</fieldName><value>Amended</value></field><field><fieldName>Value After</fieldName><value>Approved</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>34252prinUpdate</value></field><field><fieldName>Asset Class</fieldName><value>qtp_bond</value></field><field><fieldName>Asset Type</fieldName><value>qtp_bond_usd</value></field><field><fieldName>Bucket</fieldName><value>Standard</value></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Editor Screen</fieldName><value>Collateral - Static Data - Settlement Data</value></field><field><fieldName>Attribute</fieldName><value>Beneficiary Bank</value></field><field><fieldName>Value Before</fieldName><value>bbp</value></field><field><fieldName>Value After</fieldName><value></value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Organisation</fieldName><value>34252prinUpdate</value></field><field><fieldName>Asset Class</fieldName><value>qtp_bond</value></field><field><fieldName>Asset Type</fieldName><value>qtp_bond_usd</value></field><field><fieldName>Bucket</fieldName><value>Standard</value></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Editor Screen</fieldName><value>Collateral - Static Data - Settlement Data</value></field><field><fieldName>Attribute</fieldName><value>Ultimate Custodian</value></field><field><fieldName>Value Before</fieldName><value>507</value></field><field><fieldName>Value After</fieldName><value>512</value></field></reportValidationRule>
+
+        </reportValidationRules>
+
+    </scenarioData>
+</dataBean>

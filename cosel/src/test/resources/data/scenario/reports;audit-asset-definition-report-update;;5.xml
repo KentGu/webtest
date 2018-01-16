@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <collateralStaticData id="asset.classification">
+            <type ref="scheme.assetClassification.name"/>
+            <dataName id="classificationName">auditAssetDefinitionClassification</dataName>
+        </collateralStaticData>
+
+        <collateralStaticData id="asset.classification.update">
+            <type ref="scheme.assetClassification.name"/>
+            <dataName ref="classificationName"/>
+            <description random="true"/>
+            <status>enabled</status>
+        </collateralStaticData>
+
+        <assetDefinition id="class.commodity">
+            <assetName id="commodity.asset.class.name">auditAssetDefinitionClassCommodity</assetName>
+        </assetDefinition>
+
+        <assetDefinition id="class.commodity.update">
+            <assetName ref="commodity.asset.class.name"/>
+            <status>enabled</status>
+            <category>Commodities</category>
+            <externalName random="true"/>
+            <tolerancePercentage>30</tolerancePercentage>
+            <toleranceAccount>5m</toleranceAccount>
+            <toleranceAccountCurrency>CNY</toleranceAccountCurrency>
+        </assetDefinition>
+
+        <assetDefinition id="type.commodity">
+            <parent>
+                <assetName ref="commodity.asset.class.name"/>
+            </parent>
+            <assetName id="commodityType">auditAssetDefinitionTypeCommodity</assetName>
+        </assetDefinition>
+
+        <assetDefinition id="type.commodity.update">
+            <parent>
+                <assetName ref="commodity.asset.class.name"/>
+            </parent>
+            <assetName ref="commodityType"/>
+            <status>enabled</status>
+            <category>Commodities</category>
+            <currencyOfDenomination>USD</currencyOfDenomination>
+            <settlementDate>T+6</settlementDate>
+            <holidayCentre>EUROPE</holidayCentre>
+            <roundingAmount>300</roundingAmount>
+            <roundingRule>Up</roundingRule>
+            <deliveryBookingPriority>Low</deliveryBookingPriority>
+            <recallBookingPriority>High</recallBookingPriority>
+            <externalName id="extName" random="true"/>
+        </assetDefinition>
+
+        <assetDefinition id="category.with.commodity.type">
+            <assetClassification ref="classificationName"/>
+            <assetName id="category.name">auditAssetDefinitionCategory</assetName>
+        </assetDefinition>
+
+        <assetDefinition id="category.with.commodity.type.update">
+            <assetClassification ref="classificationName"/>
+            <assetName ref="category.name"/>
+            <status>enabled</status>
+            <description random="true"/>
+            <assetType>
+                <filter ref="commodityType"/>
+                <linkText ref="commodityType"/>
+            </assetType>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </assetDefinition>
+
+        <auditAssetDefinitionReportFilter id="audit.asset.definition.by.class.type">
+            <assetClass ref="commodity.asset.class.name"/>
+            <assetType ref="commodityType"/>
+            <assetClassification>
+                <assetClassificationName ref="classificationName"/>
+                <assetcategory ref="category.name"/>
+            </assetClassification>
+            <startDate>t-1000</startDate>
+        </auditAssetDefinitionReportFilter>
+        <variable id="auditReportPath"/>
+        <reportValidationRules id="audit.asset.report.commodity.rule">
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value>auditAssetDefinitionClassCommodity</value>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value>auditAssetDefinitionTypeCommodity</value>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Modify</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>DaysInYear</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value>0</value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>360</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value>auditAssetDefinitionClassCommodity</value>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value>auditAssetDefinitionTypeCommodity</value>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Modify</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>DelBookingPriority</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value>Medium</value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>Low</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value>auditAssetDefinitionClassCommodity</value>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value>auditAssetDefinitionTypeCommodity</value>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Modify</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>DenomCurrency</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value>ATS</value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>USD</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value>auditAssetDefinitionClassCommodity</value>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value>auditAssetDefinitionTypeCommodity</value>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Modify</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>ExtName</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value>auditAssetDefinitionTypeCommodity</value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value ref="extName"/>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value>auditAssetDefinitionClassCommodity</value>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value>auditAssetDefinitionTypeCommodity</value>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Modify</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>HolidayCenters</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value>HONG KONG</value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>EUROPE</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value>auditAssetDefinitionClassCommodity</value>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value>auditAssetDefinitionTypeCommodity</value>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Modify</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>RecBookingPriority</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value>Medium</value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>High</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value>auditAssetDefinitionClassCommodity</value>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value>auditAssetDefinitionTypeCommodity</value>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Modify</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>RefRate</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value>N/A</value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>qtp_Interest_Rate1</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value>auditAssetDefinitionClassCommodity</value>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value>auditAssetDefinitionTypeCommodity</value>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Modify</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>RoundingRule</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value>Nearest</value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>Up</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value>auditAssetDefinitionClassCommodity</value>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value>auditAssetDefinitionTypeCommodity</value>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Modify</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>SettlementDate</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value>T</value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>T6</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value>auditAssetDefinitionClassCommodity</value>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value>auditAssetDefinitionTypeCommodity</value>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Modify</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>SettlementRounding</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value>2000.0</value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>300.0</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value>auditAssetDefinitionClassification</value>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value>auditAssetDefinitionCategory</value>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Category</value>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Modify</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value>auditAssetDefinitionTypeEquity</value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>auditAssetDefinitionTypeCommodity</value>
+                </field>
+            </reportValidationRule>
+
+        </reportValidationRules>
+    </scenarioData>
+</dataBean>

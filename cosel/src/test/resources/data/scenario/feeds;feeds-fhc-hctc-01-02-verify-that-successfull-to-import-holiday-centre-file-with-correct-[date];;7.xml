@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/feeds.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <feedHolidayCentre id="feed.holiday.centres.teachers.day">
+            <city id="feed.holiday.centres.teachers.day.city">T5322CityCSV</city>
+            <date id="feed.holiday.centres.teachers.day.date">1990-09-10</date>
+            <description id="feed.holiday.centres.teachers.day.desc">Teachers' Day</description>
+        </feedHolidayCentre>
+
+        <feedResult id="feed.holiday.centres.teachers.day.result">
+            <fileUploaded id="feed.holiday.centres.teachers.day.result.file"/>
+            <unsuccessfulImports>0</unsuccessfulImports>
+        </feedResult>
+
+        <feedStatus id="feed.holiday.centres.teachers.day.status">
+            <status>Successful</status>
+            <valuationFile ref="feed.holiday.centres.teachers.day.result.file"/>
+            <description>feed holidays</description>
+            <successfulFeed>
+                <total>1</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <holidayCentre id="check.feed.holiday.centres.teachers.day">
+            <holidayCentreName ref="feed.holiday.centres.teachers.day.city"/>
+            <holidayCentreDescription ref="feed.holiday.centres.teachers.day.city"/>
+            <holiday>
+                <date ref="feed.holiday.centres.teachers.day.date"/>
+                <description ref="feed.holiday.centres.teachers.day.desc"/>
+            </holiday>
+        </holidayCentre>
+    </scenarioData>
+</dataBean>

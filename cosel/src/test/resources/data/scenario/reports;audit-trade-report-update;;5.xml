@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <agreementSearch id="filter.with.description.etf">
+            <description>
+                <filter id="agr.des">audit_trade_etf</filter>
+            </description>
+        </agreementSearch>
+        <agreement id="agreement.etf">
+            <agreementDescription ref="agr.des" />
+        </agreement>
+        <agreementExposureSummary id="product.qtp">
+            <productList>
+                <productType>qtp_Etf</productType>
+            </productList>
+        </agreementExposureSummary>
+        <tradeDetail id="etf.trade">
+            <tradeInformation>
+                <tradeIdentifierPartyA id="trade.id">audit_trade_update_etf_a</tradeIdentifierPartyA>
+            </tradeInformation>
+        </tradeDetail>
+        <tradeDetail id="etf.trade.update">
+            <tradeInformation>
+                <strategy>strategy_trade</strategy>
+                <underlying>underlying_trade</underlying>
+                <tradeDate>T</tradeDate>
+                <startDate>T</startDate>
+                <endDate>T+1000</endDate>
+                <!--<tradeIdentifierPartyA id="trade.identify.party.a" random="true" />-->
+                <tradeIdentifier2PartyA  id="trade.identify2.party.a" random="true" />
+                <partyABranchName>a</partyABranchName>
+                <!--<tradeIdentifierPartyB id="trade.identify.party.b" random="true" />-->
+                <partyBBranchName>b</partyBBranchName>
+                <orderType>Create</orderType>
+                <orderNumber>1</orderNumber>
+                <instructionReleaseStatus>Held</instructionReleaseStatus>
+                <counterpartyOrderNumber>2</counterpartyOrderNumber>
+            </tradeInformation>
+            <securityInformation>
+                <instrumentId>
+                    <filter>qtp_Bond_Instrument</filter>
+                    <linkText>qtp_Bond_Instrument, qtp_Market</linkText>
+                </instrumentId>
+                <notional>1m</notional>
+                <couponAccrual>700</couponAccrual>
+                <haircut>78</haircut>
+                <tradePrice>100</tradePrice>
+            </securityInformation>
+            <cashInformation>
+                <cashComponent>
+                    <amount>2m</amount>
+                    <currency>USD</currency>
+                </cashComponent>
+                <fee>
+                    <amount>1m</amount>
+                    <currency>EUR</currency>
+                </fee>
+            </cashInformation>
+            <adjustmentInformation>
+            </adjustmentInformation>
+            <exposureInformation>
+                <valutionAmountType>Counterparty Valuation Amount</valutionAmountType>
+                <counterPartyValuationAmount>
+                    <amount>3m</amount>
+                    <currency>EUR</currency>
+                </counterPartyValuationAmount>
+                <excludeValueFromCalculations>true</excludeValueFromCalculations>
+                <valuationDate>T</valuationDate>
+                <collateralComment>comments</collateralComment>
+            </exposureInformation>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 1</fieldName>
+                <value>info1</value>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 2</fieldName>
+                <value>info2</value>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 3</fieldName>
+                <value>info3</value>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 4</fieldName>
+                <value>info4</value>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 5</fieldName>
+                <value>info5</value>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 6</fieldName>
+                <value>info6</value>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 7</fieldName>
+                <value>info7</value>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 8</fieldName>
+                <value>info8</value>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 9</fieldName>
+                <value>info9</value>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 10</fieldName>
+                <value>info10</value>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 11</fieldName>
+                <value>info11</value>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 12</fieldName>
+                <value>info12</value>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 13</fieldName>
+                <value>info13</value>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 14</fieldName>
+                <value>info14</value>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 15</fieldName>
+                <value>info15</value>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 16</fieldName>
+                <value>info16</value>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 17</fieldName>
+                <value>info17</value>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 18</fieldName>
+                <value>info18</value>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 19</fieldName>
+                <value>info19</value>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 20</fieldName>
+                <value>20</value>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 21</fieldName>
+                <value>21.21</value>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 22</fieldName>
+                <value>22.22</value>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 23</fieldName>
+                <value>23.23</value>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 24</fieldName>
+                <value>24.24</value>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 25</fieldName>
+                <value>25.25</value>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 26</fieldName>
+                <value>26.26</value>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 27</fieldName>
+                <value>27.27</value>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 28</fieldName>
+                <value>28.28</value>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 29</fieldName>
+                <value>29</value>
+            </tradeMiscellaneousFields>
+            <tradeMiscellaneousFields>
+                <fieldName>Misc 30</fieldName>
+                <value>30</value>
+            </tradeMiscellaneousFields>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </tradeDetail>
+
+        <auditTradesReportFilter id="audit.trade.report.filter">
+            <operation>Modify</operation>
+            <agreementDescription>
+                <filter ref="agr.des" />
+            </agreementDescription>
+        </auditTradesReportFilter>
+        <variable id="auditReportPath"/>
+
+        <reportValidationRules id="reportRule">
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Principal Valuation Amount</value></field><field><fieldName>Value Before</fieldName><value>'10,000,000.00</value></field><field><fieldName>Value After</fieldName><value>'0.00</value></field><field><fieldName>Difference</fieldName><value>'-10,000,000.00.00</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Price Source</value></field><field><fieldName>Value Before</fieldName><value>PS1</value></field><field><fieldName>Value After</fieldName><value>Default</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>AllowFeedOverride</value></field><field><fieldName>Value Before</fieldName><value>true</value></field><field><fieldName>Value After</fieldName><value>false</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Security Haircut</value></field><field><fieldName>Value Before</fieldName><value>100.00</value></field><field><fieldName>Value After</fieldName><value>78.00</value></field><field><fieldName>Difference</fieldName><value>-22.00</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Strategy</value></field><field><fieldName>Value Before</fieldName><value>Strategy</value></field><field><fieldName>Value After</fieldName><value>strategy_trade</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>TradePrice</value></field><field><fieldName>Value Before</fieldName><value>200.00</value></field><field><fieldName>Value After</fieldName><value>100.00</value></field><field><fieldName>Difference</fieldName><value>-100.00</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Trade Identifier 2 Party A</value></field><field><fieldName>Value Before</fieldName><value>aa</value></field><field><fieldName>Value After</fieldName><value ref="trade.identify2.party.a" /></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Underlying</value></field><field><fieldName>Value Before</fieldName><value>Underlying</value></field><field><fieldName>Value After</fieldName><value>underlying_trade</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>UserComment</value></field><field><fieldName>Value Before</fieldName><value>Collateral Comment</value></field><field><fieldName>Value After</fieldName><value>comments</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>CashComponent</value></field><field><fieldName>Value Before</fieldName><value>4,000,000.00</value></field><field><fieldName>Value After</fieldName><value>2,000,000.00</value></field><field><fieldName>Difference</fieldName><value>-2,000,000.00</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Coupon Accrual</value></field><field><fieldName>Value Before</fieldName><value>200.00</value></field><field><fieldName>Value After</fieldName><value>700.00</value></field><field><fieldName>Difference</fieldName><value>500.00</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Counterparty Valuation Amount</value></field><field><fieldName>Value Before</fieldName><value>0.00</value></field><field><fieldName>Value After</fieldName><value>3,000,000.00</value></field><field><fieldName>Difference</fieldName><value>3,000,000.00</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Counterparty Valuation Currency</value></field><field><fieldName>Value Before</fieldName><value>USD</value></field><field><fieldName>Value After</fieldName><value>EUR</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Fee</value></field><field><fieldName>Value Before</fieldName><value>3000000.0</value></field><field><fieldName>Value After</fieldName><value>1000000.0</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Fee Currency</value></field><field><fieldName>Value Before</fieldName><value>USD</value></field><field><fieldName>Value After</fieldName><value>EUR</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Manually Overridden By User</value></field><field><fieldName>Value Before</fieldName><value>sa</value></field><field><fieldName>Value After</fieldName><value>qtptest</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>LastUpdatedBy</value></field><field><fieldName>Value Before</fieldName><value>sa</value></field><field><fieldName>Value After</fieldName><value>qtptest</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Party A Branch Name</value></field><field><fieldName>Value Before</fieldName><value>aa</value></field><field><fieldName>Value After</fieldName><value>a</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Party B Branch Name</value></field><field><fieldName>Value Before</fieldName><value>bb</value></field><field><fieldName>Value After</fieldName><value>b</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>SecurityId</value></field><field><fieldName>Value Before</fieldName><value>19.00</value></field><field><fieldName>Value After</fieldName><value>18.00</value></field><field><fieldName>Difference</fieldName><value>-1.00</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Valuation Information</value></field><field><fieldName>Value Before</fieldName><value>Principal Valuation Amount</value></field><field><fieldName>Value After</fieldName><value>Counterparty Valuation  Amount</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Exclude Valuation</value></field><field><fieldName>Value Before</fieldName><value>No</value></field><field><fieldName>Value After</fieldName><value>Yes</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Exchanged Notional 1 Amount</value></field><field><fieldName>Value Before</fieldName><value>2,000,000.00</value></field><field><fieldName>Value After</fieldName><value>1,000,000.00</value></field><field><fieldName>Difference</fieldName><value>-1,000,000.00</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Order Number</value></field><field><fieldName>Value Before</fieldName><value>2</value></field><field><fieldName>Value After</fieldName><value>1</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Instrument ID</value></field><field><fieldName>Value Before</fieldName><value>qtp-Bond-Usd-Instrument</value></field><field><fieldName>Value After</fieldName><value>qtp_Bond_Instrument</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Misc7</value></field><field><fieldName>Value Before</fieldName><value>Misc 1</value></field><field><fieldName>Value After</fieldName><value>info7</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Misc8</value></field><field><fieldName>Value Before</fieldName><value>Misc 1</value></field><field><fieldName>Value After</fieldName><value>info8</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Misc9</value></field><field><fieldName>Value Before</fieldName><value>23.66</value></field><field><fieldName>Value After</fieldName><value>info9</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Misc10</value></field><field><fieldName>Value Before</fieldName><value>56.44</value></field><field><fieldName>Value After</fieldName><value>info10</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Misc11</value></field><field><fieldName>Value Before</fieldName><value>Misc 1</value></field><field><fieldName>Value After</fieldName><value>info11</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Misc12</value></field><field><fieldName>Value Before</fieldName><value>Misc 1</value></field><field><fieldName>Value After</fieldName><value>info12</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Misc13</value></field><field><fieldName>Value Before</fieldName><value>Misc 1</value></field><field><fieldName>Value After</fieldName><value>info13</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Misc14</value></field><field><fieldName>Value Before</fieldName><value>Misc 1</value></field><field><fieldName>Value After</fieldName><value>info14</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Misc15</value></field><field><fieldName>Value Before</fieldName><value>Misc 1</value></field><field><fieldName>Value After</fieldName><value>info15</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Misc16</value></field><field><fieldName>Value Before</fieldName><value>Misc 1</value></field><field><fieldName>Value After</fieldName><value>info16</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Misc17</value></field><field><fieldName>Value Before</fieldName><value>Misc 1</value></field><field><fieldName>Value After</fieldName><value>info17</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Misc18</value></field><field><fieldName>Value Before</fieldName><value>Misc 1</value></field><field><fieldName>Value After</fieldName><value>info18</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Misc19</value></field><field><fieldName>Value Before</fieldName><value>23</value></field><field><fieldName>Value After</fieldName><value>info19</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Misc21</value></field><field><fieldName>Value Before</fieldName><value>33.0</value></field><field><fieldName>Value After</fieldName><value>21.21</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Misc22</value></field><field><fieldName>Value Before</fieldName><value>44.0</value></field><field><fieldName>Value After</fieldName><value>22.22</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Misc23</value></field><field><fieldName>Value Before</fieldName><value>33.0</value></field><field><fieldName>Value After</fieldName><value>23.23</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Misc24</value></field><field><fieldName>Value Before</fieldName><value>44.0</value></field><field><fieldName>Value After</fieldName><value>24.24</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Misc25</value></field><field><fieldName>Value Before</fieldName><value>44.0</value></field><field><fieldName>Value After</fieldName><value>25.25</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Misc26</value></field><field><fieldName>Value Before</fieldName><value>55.0</value></field><field><fieldName>Value After</fieldName><value>26.26</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Misc27</value></field><field><fieldName>Value Before</fieldName><value>55.0</value></field><field><fieldName>Value After</fieldName><value>27.27</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Misc28</value></field><field><fieldName>Value Before</fieldName><value>66.0</value></field><field><fieldName>Value After</fieldName><value>28.28</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Misc29</value></field><field><fieldName>Value Before</fieldName><value>700.0</value></field><field><fieldName>Value After</fieldName><value>29.0</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Misc30</value></field><field><fieldName>Value Before</fieldName><value>77.0</value></field><field><fieldName>Value After</fieldName><value>30.0</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Misc2</value></field><field><fieldName>Value Before</fieldName><value>Misc 1</value></field><field><fieldName>Value After</fieldName><value>info2</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Misc1</value></field><field><fieldName>Value Before</fieldName><value>Misc 1</value></field><field><fieldName>Value After</fieldName><value>info1</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Misc3</value></field><field><fieldName>Value Before</fieldName><value>Misc 1</value></field><field><fieldName>Value After</fieldName><value>info3</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Misc4</value></field><field><fieldName>Value Before</fieldName><value>Misc 1</value></field><field><fieldName>Value After</fieldName><value>info4</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Misc5</value></field><field><fieldName>Value Before</fieldName><value>Misc 1</value></field><field><fieldName>Value After</fieldName><value>info5</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Misc6</value></field><field><fieldName>Value Before</fieldName><value>Misc 1</value></field><field><fieldName>Value After</fieldName><value>info6</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Principal</fieldName><value>QTPPrincipal</value></field><field><fieldName>Counterparty</fieldName><value>QTPCounterparty</value></field><field><fieldName>Agreement Description</fieldName><value ref="agr.des" /></field><field><fieldName>Trade Id</fieldName><value ref="trade.id" /></field><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Attribute</fieldName><value>Counterparty Order Number</value></field><field><fieldName>Value Before</fieldName><value>2</value></field><field><fieldName>Value After</fieldName><value>22</value></field><field><fieldName>Difference</fieldName><value>N/A</value></field></reportValidationRule>
+
+        </reportValidationRules>
+
+    </scenarioData>
+</dataBean>

@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+		<assetDefinition id="bond.class.with.tolerance.percentage.40.amount.100.gbp">
+			<assetName id="bondAssetClass.name" random="true"/>
+			<status>enabled</status>
+			<category>FI Securities</category>
+			<externalName id="bondAssetClass.external.name" random="true"/>
+			<tolerancePercentage>40</tolerancePercentage>
+			<toleranceAccount>0.0001m</toleranceAccount>
+			<toleranceAccountCurrency>GBP</toleranceAccountCurrency>
+		</assetDefinition>
+
+
+		<assetDefinition id="bond.type.under.new.created.bond.class">
+			<parent>
+				<assetName ref="bondAssetClass.name"/>
+			</parent>
+			<assetName id="bondAssetType.name" random="true" />
+			<status>enabled</status>
+			<category>FI Securities</category>
+			<holidayCentre>EUROPE</holidayCentre>
+			<currencyOfDenomination>GBP</currencyOfDenomination>
+			<externalName id="bondAssetType.external.name" random="true" />
+		</assetDefinition>
+
+
+		<instrument id="bond.instrument.with.price.100">
+			<assetClass ref="bondAssetClass.name"/>
+			<assetType ref="bondAssetType.name"/>
+			<instrumentId>
+				<value id="bondinstrument.id" random="true"/>
+			</instrumentId>
+			<description id="bondinstrument.desc" random="true"/>
+			<issuer>
+				<filter>QTP_Eligible_Issuer4</filter>
+				<linkText>QTP_Eligible_Issuer4</linkText>
+			</issuer>
+			<maturityDate>T+100</maturityDate>
+			<priceSource>
+				<priceSourceName>Default</priceSourceName>
+				<dirtyPrice>100</dirtyPrice>
+				<lastPriceChange>T</lastPriceChange>
+				<cleanPrice>100</cleanPrice>
+				<priceDate>T</priceDate>
+			</priceSource>
+			<couponRate>0</couponRate>
+			<issueDate>T</issueDate>
+			<securityStatus>Approved</securityStatus>
+		</instrument>
+
+		<fxRateSet id="fx.rate.with.base.usd.risk.gbp.bid.2.offer.2">
+			<fxRateSetName id="fx.rate.name" random="true"/>
+			<fxUpdatePermission>qtptest</fxUpdatePermission>
+			<fxUpdatePermission>user</fxUpdatePermission>
+			<fxRate>
+				<riskCurrency>GBP</riskCurrency>
+				<bid>0.5</bid>
+				<offer>0.5</offer>
+				<rateType>Standard</rateType>
+			</fxRate>
+		</fxRateSet>
+
+		<collateralPreference id="collateral.preference.with.new.created.fx.rate">
+			<general>
+				<defaultFXRates ref="fx.rate.name"/>
+				<alertHandling>
+					<accept>true</accept>
+				</alertHandling>
+			</general>
+		</collateralPreference>
+
+		<collateralPreference id="collateral.preference.default">
+			<general>
+				<defaultFXRates>Standard FX Rates</defaultFXRates>
+			</general>
+		</collateralPreference>
+
+
+		<agreement id="otc.agreement.with.base.currency.usd.tick.all.bonds">
+			<principal id="p1">
+				<criteria>Containing</criteria>
+				<type>Code</type>
+				<filter ref="org.p1.lname"/>
+				<linkText ref="org.p1.lname"/>
+			</principal>
+			<counterparty id="c">
+				<criteria>Containing</criteria>
+				<type>Long Name</type>
+				<filter ref="org.c1.lname"/>
+				<linkText ref="org.c1.lname"/>
+			</counterparty>
+			<agreementDescription id="agr.desc" random="true"/>
+			<agreementDate>T</agreementDate>
+			<baseCurrency>USD</baseCurrency>
+			<fxRate ref="fx.rate.name"/>
+			<callFrequency>
+				<legalReviewFrequency>Daily</legalReviewFrequency>
+			</callFrequency>
+			<holidayCentre ref="hc.europe.name"/>
+			<product id="p">
+				<productName ref="product.test1.name"/>
+			</product>
+			<collateralAssetClass>
+				<collateralAssetClassName ref="bondAssetClass.name"/>
+				<collateralAssetType>
+					<collateralAssetTypeName ref="bondAssetType.name"/>
+				</collateralAssetType>
+			</collateralAssetClass>
+			<settlementBucket>
+				<bookingType>Net</bookingType>
+				<direction>Call/Return</direction>
+				<bucket>
+					<filter ref="payInstrBucket.vcr.name"/>
+					<linkText ref="payInstrBucket.vcr.name"/>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>Net</bookingType>
+				<direction>Delivery/Recall</direction>
+				<bucket>
+					<filter ref="payInstrBucket.vrd.name"/>
+					<linkText ref="payInstrBucket.vrd.name"/>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>Interest</bookingType>
+				<direction>Pay</direction>
+				<bucket>
+					<filter ref="payInstrBucket.pay.name"/>
+					<linkText ref="payInstrBucket.pay.name"/>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>Interest</bookingType>
+				<direction>Receive</direction>
+				<bucket>
+					<filter ref="payInstrBucket.rec.name"/>
+					<linkText ref="payInstrBucket.rec.name"/>
+				</bucket>
+			</settlementBucket>
+			<letterAndDeliveryGroupDetails>
+				<letterDistributionMedium>Email</letterDistributionMedium>
+			</letterAndDeliveryGroupDetails>
+			<agreementStatus>Pending</agreementStatus>
+			<agreementStatus>Approved</agreementStatus>
+			<statementStatus>Pending</statementStatus>
+			<statementStatus>Approved</statementStatus>
+			<agreementId id="agmt.id"/>
+		</agreement>
+
+		<agreementExposureSummary id="qtp.product">
+			<productList>
+				<productType ref="product.test1.name"/>
+			</productList>
+		</agreementExposureSummary>
+
+
+
+		<tradeDetail id = "otc.trade.with.amount.500">
+			<tradeInformation>
+				<!--<productType ref="product.test1.name"/>-->
+				<tradeDate>T</tradeDate>
+				<effectiveDate>T</effectiveDate>
+				<maturityDate>T+1000</maturityDate>
+				<tradeIdentifierPartyA random="true"/>
+				<partyABranchName random="true"/>
+				<partyBBranchName random="true"/>
+			</tradeInformation>
+			<valuationInformation>
+				<principalValuationAmount>
+					<amount>500</amount>
+					<currency>USD</currency>
+				</principalValuationAmount>
+				<valuationDate>T</valuationDate>
+			</valuationInformation>
+		</tradeDetail>
+
+		<bookingDetail id="booking.with.bond.instrument.amount.2000500.call">
+			<instrumentSearch>
+				<instrumentId>
+					<filter ref="bondinstrument.id"/>
+				</instrumentId>
+				<linkText ref="bondinstrument.id"/>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>2000500</nominalAmount>
+					<movement>Call</movement>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+		<agreement id="agreement.new.created.above.will.be.approved.from.amended.status">
+			<statementStatus>Approved</statementStatus>
+		</agreement>
+
+		<exposureEventDetail id="tick.event.previous.agreement.produced.return.amount.2000000">
+			<eventId id="deliveryEventId"/>
+			<agreementRequirement>-2,000,000.00</agreementRequirement>
+			<action>Return</action>
+		</exposureEventDetail>
+
+
+		<exposureEventDetail id="event.previous.agreement.produced" name="check">
+			<eventId ref="deliveryEventId"/>
+			<action>Return</action>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="event.with.action.return.amount.2000000" name="check">
+			<action>Return</action>
+			<agreementRequirement>-2,000,000.00</agreementRequirement>
+		</exposureEventDetail>
+
+
+		<bookingDetail id="bulk.booking.on.bond.class.with.amount.1000000">
+			<instrumentSearch>
+				<instrument>
+					<filter ref="bondinstrument.id"/>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>1000000</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="bulk.booking.on.bond.class.with.amount.1000500">
+			<instrumentSearch>
+				<instrument>
+					<filter ref="bondinstrument.id"/>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>1000500</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+
+		<bookingDetail id="bulk.booking.on.bond.class.with.amount.1000400">
+			<instrumentSearch>
+				<instrument>
+					<filter ref="bondinstrument.id"/>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>1000400</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+
+
+		<exposureManagementMessage id="booking.warning.message.shown.expected.-2000200.actual.-20000500">
+			<messageDetail>
+				<index>1</index>
+				<message>Attempting to make a booking that exceeds the required amount (Expected: -2,000,200.00, Actual: -2,000,500.00) Continue?</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<exposureManagementMessage id="booking.warning.message.shown.expected.-2000200.actual.-2000400">
+			<messageDetail>
+				<index>1</index>
+				<message>Attempting to make a booking that exceeds the required amount (Expected: -2,000,200.00, Actual: -2,000,400.00) Continue?</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+
+
+		<exposureManagementMessage id="override.warning.message.shown.expected.-2000200.actual.-2000400">
+			<messageDetail>
+				<index>1</index>
+				<message>Attempting to make a booking that exceeds the required amount (Expected: -2,000,200.00, Actual: -2,000,400.00) Continue?</message>
+				<overrideWarning>true</overrideWarning>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<agreementSearch id="search.agreement.by.agreement.description">
+			<description>
+				<filter ref="agr.desc"/>
+			</description>
+		</agreementSearch>
+
+		<agreementSearchResult id="agreement.search.result">
+			<description ref="agr.desc" />
+		</agreementSearchResult>
+
+		<assetBookingSummary id="bond.type">
+			<assetType ref="bondAssetType.name"/>
+		</assetBookingSummary>
+
+		<assetBookingSummary id="return.booking.on.bond.class.with.amount.1000000">
+			<assetType ref="bondAssetType.name"/>
+			<instrumentId ref="bondinstrument.id" />
+			<movement>Return</movement>
+			<nominalAmount>-1,000,000.00</nominalAmount>
+			<status>Pending</status>
+		</assetBookingSummary>
+
+		<assetBookingSummary id="return.booking.on.bond.class.with.amount.1000400">
+			<assetType ref="bondAssetType.name"/>
+			<instrumentId ref="bondinstrument.id" />
+			<movement>Return</movement>
+			<nominalAmount>-1,000,400.00</nominalAmount>
+			<status>Pending</status>
+		</assetBookingSummary>
+
+		<bookingDetail id="return.booking.on.bond.class.with.amount.1000100.will.pop.up.warning.message">
+			<bookingInformation>
+				<settlementStatusInfo>
+					<settlementStatus>Query</settlementStatus>
+					<settlementComment random="true"/>
+				</settlementStatusInfo>
+				<bookingInformationDetail>
+					<nominalAmount>1000100</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<alertHandling>
+				<accept>true</accept>
+				<!--<content>[\s\S*]Attempting to make a booking that exceeds the required amount. Continue? (Expected: -2000200.00, Actual: -2000500.00)</content>-->
+			</alertHandling>
+			<save>save</save>
+		</bookingDetail>
+
+		<assetBookingSummary id="return.booking.on.bond.class.with.amount.1000100">
+			<assetType ref="bondAssetType.name"/>
+			<instrumentId ref="bondinstrument.id" />
+			<movement>Return</movement>
+			<nominalAmount>-1,000,100.00</nominalAmount>
+			<status>Pending</status>
+		</assetBookingSummary>
+
+
+		<bookingDetail id="return.booking.on.bond.class.with.amount.1000300.willnot.pop.up.warning.message">
+			<bookingInformation>
+				<settlementStatusInfo>
+					<settlementStatus>Query</settlementStatus>
+					<settlementComment random="true"/>
+				</settlementStatusInfo>
+				<bookingInformationDetail>
+					<nominalAmount>1000300</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+		<assetBookingSummary id="return.booking.on.bond.class.with.amount.1000300">
+			<assetType ref="bondAssetType.name"/>
+			<instrumentId ref="bondinstrument.id" />
+			<movement>Return</movement>
+			<nominalAmount>-1,000,300.00</nominalAmount>
+			<status>Pending</status>
+		</assetBookingSummary>
+
+
+
+		<bookingDetail id="return.booking.on.bond.class.with.amount.1000100.cancelled">
+			<bookingInformation>
+				<settlementStatusInfo>
+					<settlementStatus>Cancelled</settlementStatus>
+					<settlementComment random="true"/>
+				</settlementStatusInfo>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+		<bookingDetail id="return.booking.on.bond.class.with.amount.1000300.cancelled">
+			<bookingInformation>
+				<settlementStatusInfo>
+					<settlementStatus>Cancelled</settlementStatus>
+					<settlementComment random="true"/>
+				</settlementStatusInfo>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+		<exposureEventDetail id="tick.event.previous.agreement.produced.return.amount.2000000">
+			<eventId id="deliveryEventId"/>
+			<agreementRequirement>-2,000,000.00</agreementRequirement>
+			<action>Return</action>
+			<callStatus>Margin Request Received</callStatus>
+		</exposureEventDetail>
+
+
+		<bookingDetail id="bulk.booking.on.bond.class.with.amount.1000100">
+			<instrumentSearch>
+				<instrument>
+					<filter ref="bondinstrument.id"/>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>1000100</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<assetBookingSummary id="return.booking.on.bond.class.with.amount.1000000.status.not.cancelled">
+			<assetType ref="bondAssetType.name"/>
+			<instrumentId ref="bondinstrument.id" />
+			<movement>Return</movement>
+			<nominalAmount>-1,000,000.00</nominalAmount>
+			<status>Pending</status>
+		</assetBookingSummary>
+
+		<assetBookingSummary id="return.booking.on.bond.class.with.amount.1000100.status.not.cancelled">
+			<assetType ref="bondAssetType.name"/>
+			<instrumentId ref="bondinstrument.id" />
+			<movement>Return</movement>
+			<nominalAmount>-1,000,100.00</nominalAmount>
+			<status>Pending</status>
+		</assetBookingSummary>
+
+
+
+
+
+
+
+
+	</scenarioData>
+</dataBean>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/exposureManagement.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <collateralPreference id="setWorkflowDisbute.WorkflowApplyFourEyes">
+            <collateralRules>
+                <workflowFourEyes>true</workflowFourEyes>
+            </collateralRules>
+        </collateralPreference>
+
+        <agreement id="agr10924.amended">
+            <agreementId>2612</agreementId>
+        </agreement>
+
+        <exposureEventSearch id="agr10924.amended.amendedWaived.approved.search">
+            <agrId>2612,2613,2614</agrId>
+        </exposureEventSearch>
+
+        <exposureEventDetail id="agr10924.amended.wrkStatusDisabled">
+            <agrId id="agr1">2612</agrId>
+            <wrkStatus disable="true">Amended</wrkStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="agr10924.amendedWaived.wrkStatusDisabled">
+            <agrId id="agr2">2613</agrId>
+            <wrkStatus disable="true">Amended-Waived</wrkStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="agr10924.approved.wrkStatusDisabled">
+            <agrId id="agr3">2614</agrId>
+            <wrkStatus>Approved</wrkStatus>
+        </exposureEventDetail>
+
+        <loginCredential id="loginWithUserB">
+            <username>t10924</username>
+            <password>1</password>
+        </loginCredential>
+
+        <exposureEventDetail id="agr10924.amended.wrkStatusEnabled">
+            <agrId ref="agr1"/>
+            <wrkStatus disable="false" apply="true" variation="Amended,Approved"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="agr10924.amendedWaived.wrkStatusEnabled">
+            <agrId ref="agr2"/>
+            <wrkStatus disable="false" apply="true" variation="Amended-Waived,Approved"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="agr10924.approved.wrkStatusEnabled">
+            <agrId ref="agr3"/>
+            <wrkStatus disable="false" apply="true" variation="Approved"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="agr10924.amended.wrkStatusEnabled.changeToApproved">
+            <agrId ref="agr1"/>
+            <wrkStatus>Approved</wrkStatus>
+            <comments>t</comments>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="agr10924.amendedWaived.wrkStatusEnabled.changeToApproved">
+            <agrId ref="agr2"/>
+            <wrkStatus>Approved</wrkStatus>
+            <comments>t</comments>
+        </exposureEventDetail>
+
+        <collateralPreference id="setWorkflowDisbute.NotTickWorkflowApplyFourEyes">
+            <collateralRules>
+                <workflowFourEyes>false</workflowFourEyes>
+            </collateralRules>
+        </collateralPreference>
+
+        <loginCredential id="loginWithUserA">
+            <username>qtptest</username>
+            <password>1</password>
+        </loginCredential>
+
+    </scenarioData>
+</dataBean>

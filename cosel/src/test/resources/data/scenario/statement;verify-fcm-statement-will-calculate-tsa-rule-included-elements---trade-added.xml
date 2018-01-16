@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns=""
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+		<agreementSearch id="filter.agmt.description">
+			<description><filter>8882_agmt</filter></description>
+		</agreementSearch>
+		<agreementSearchResult id="agreement.description">
+			<description>8882_agmt</description>
+		</agreementSearchResult>
+
+		<agreementExposureSummary id="product.QTP">
+			<productList>
+				<productType>QTP</productType>
+			</productList>
+		</agreementExposureSummary>
+
+		<tradeDetail id="trade">
+			<tradeInformation>
+				<tradeDate>t</tradeDate>
+				<maturityDate>t+100</maturityDate>
+				<effectiveDate>t</effectiveDate>
+				<tradeIdentifierPartyA id="traderef" random="true" />
+				<partyABranchName ref="traderef"/>
+				<partyBBranchName ref="traderef"/>
+			</tradeInformation>
+			<valuationInformation>
+				<principalValuationAmount>
+					<amount>1m</amount>
+				</principalValuationAmount>
+				<valuationDate>T</valuationDate>
+			</valuationInformation>
+			<ccpTradeInformation>
+				<tsaCurrency>USD</tsaCurrency>
+				<pai>123.456</pai>
+				<resetToParAmount>123.456</resetToParAmount>
+				<imInterest>123.456</imInterest>
+				<ndfCashflow>123.456</ndfCashflow>
+				<initialCoupon>123.456</initialCoupon>
+				<upfrontFee>123.456</upfrontFee>
+				<creditEventCashAmount>123.456</creditEventCashAmount>
+				<tsaMisc1>123.456</tsaMisc1>
+				<successionEventCashAmount>123.456</successionEventCashAmount>
+				<tsaMisc2>123.456</tsaMisc2>
+				<transferValue>123.456</transferValue>
+				<tsaMisc3>123.456</tsaMisc3>
+				<bankedCoupon>123.456</bankedCoupon>
+			</ccpTradeInformation>
+		</tradeDetail>
+
+
+
+		<agreementStatement id="statement.info">
+			<marginCallCalculation>
+				<fcmReq>
+					<totalSettlementAmount apply="true">740.74</totalSettlementAmount>
+					<totalResetToPar>123.46</totalResetToPar>
+					<totalInitialCoupon>123.46</totalInitialCoupon>
+					<otherCashAdjustments apply="false"/>
+					<bankedCoupon>123.46</bankedCoupon>
+					<pai>123.46</pai>
+					<imInterest>123.46</imInterest>
+					<ndfCashflow>123.46</ndfCashflow>
+					<upfrontFee apply="false"/>
+				</fcmReq>
+			</marginCallCalculation>
+		</agreementStatement>
+
+
+
+
+
+	</scenarioData>
+</dataBean>

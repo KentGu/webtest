@@ -1,0 +1,6 @@
+pre#STMT_UPDATED#update colstatementstatus set statusid= 69 where colstatementstatus.agreementid in (select id from colagreementheader where statusid =68 )
+pre#STMT_NEED_APPR_BEFORE#select count(*) from colstatementstatus where statusid=69 and agreementid in (select id from colagreementheader where statusid =68 )
+
+post#STMT_NEED_APPR_AFTER#select count(*) from colstatementstatus where statusid=69 and agreementid in (select id from colagreementheader where statusid =68 )
+
+val#1#${STMT_NEED_APPR_AFTER} -eq 0

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <collateralStaticData id="Instrument-Id-Type-CUSP">
+            <type>Instrument Id Type</type>
+            <dataName random="true" prefix="Instrument_Type_"/>
+            <description>CUSP</description>
+            <status>enabled</status>
+        </collateralStaticData>
+
+        <collateralStaticData id="Instrument-Id-Type-RIC">
+            <type>Instrument Id Type</type>
+            <dataName random="true" prefix="Instrument_Type_"/>
+            <description>RIC</description>
+            <status>enabled</status>
+        </collateralStaticData>
+
+        <collateralStaticData id="Instrument-Id-Type-ISIN">
+            <type>Instrument Id Type</type>
+            <dataName random="true" prefix="Instrument_Type_"/>
+            <description>ISIN</description>
+            <status>enabled</status>
+        </collateralStaticData>
+
+        <collateralStaticData id="Instrument-Id-Type-ABC">
+            <type>Instrument Id Type</type>
+            <dataName random="true" prefix="Instrument_Type_"/>
+            <description>ABC</description>
+            <status>enabled</status>
+        </collateralStaticData>
+
+        <assetDefinition id="add-Equaties-class">
+            <assetName id="equities.asset.name" random="true" prefix="Equities_class"/>
+            <status>enabled</status>
+            <category>Equities</category>
+            <externalName>Equities</externalName>
+        </assetDefinition>
+
+        <assetDefinition id="add-Equaties-type">
+            <parent>
+            <assetName ref="equities.asset.name"/>
+            </parent>
+            <assetName random="true" prefix="United_States"/>
+            <status>enabled</status>
+            <category>Equities</category>
+            <holidayCentre>HONG KONG</holidayCentre>
+        </assetDefinition>
+
+        <assetDefinition id="add-Commodity-type">
+            <parent>
+            <assetName ref="equities.asset.name"/>
+            </parent>
+            <assetName random="true" prefix="Commo_Emmission"/>
+            <status>enabled</status>
+            <category>Commodities</category>
+            <holidayCentre>HONG KONG</holidayCentre>
+        </assetDefinition>
+
+        <assetDefinition id="add-Properties-type">
+            <parent>
+            <assetName ref="equities.asset.name"/>
+            </parent>
+            <assetName random="true" prefix="Pro_USA"/>
+            <status>enabled</status>
+            <category>Other</category>
+            <holidayCentre>HONG KONG</holidayCentre>
+        </assetDefinition>
+
+
+        <securitySearch id="instrument.bond">
+            <instrument>
+            <filter>qtp_bond</filter>
+            </instrument>
+        </securitySearch>
+
+        <instrument id="bondinstrument">
+            <assetClass>qtp_bond</assetClass>
+            <assetType>qtp_bond_usd</assetType>
+            <instrumentId>
+            <type>ISIN</type>
+            <value id="bondinstrument.id" random="true"/>
+            </instrumentId>
+            <market>USA</market>
+            <instrumentId>
+            <type>CUSP</type>
+            <value id="bondinstrument.id2" random="true"/>
+            </instrumentId>
+            <market>USA</market>
+            <description id="bondinstrument.des" random="true"/>
+            <issuer>
+            <filter>QTP_Eligible_Issuer4</filter>
+            <linkText>QTP_Eligible_Issuer4</linkText>
+            </issuer>
+            <maturityDate>T+100</maturityDate>
+            <priceSource>
+            <priceSourceName>Default</priceSourceName>
+            <dirtyPrice>100</dirtyPrice>
+            <lastPriceChange>T</lastPriceChange>
+            <cleanPrice>100</cleanPrice>
+            <priceDate>T</priceDate>
+            </priceSource>
+            <couponRate>0</couponRate>
+            <issueDate>T</issueDate>
+            <securityStatus>Approved</securityStatus>
+        </instrument>
+
+        <securitySearch id="bondSecuritySearchAmended">
+            <instrument>
+            <type>Starting with</type>
+            <filter ref="bondinstrument.id"/>
+            <linkText ref="bondinstrument.id"/>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="bondSecuritySearchWillBeApproved">
+            <instrument ref="bondinstrument.id"/>
+        </securitySearchResult>
+
+        <instrument id="bondinstrumentDuplicate">
+            <assetClass>qtp_bond</assetClass>
+            <assetType>qtp_bond_usd</assetType>
+            <instrumentId>
+            <type>RIC</type>
+            <value id="bondinstrument.id"/>
+            </instrumentId>
+            <market>USA</market>
+            <description id="bondinstrument.des" random="true"/>
+            <issuer>
+            <filter>QTP_Eligible_Issuer4</filter>
+            <linkText>QTP_Eligible_Issuer4</linkText>
+            </issuer>
+            <maturityDate>T+100</maturityDate>
+            <currencyOfDenomination>GBP</currencyOfDenomination>
+            <priceSource>
+            <priceSourceName>Default</priceSourceName>
+            <dirtyPrice>100</dirtyPrice>
+            <lastPriceChange>T</lastPriceChange>
+            <cleanPrice>100</cleanPrice>
+            <priceDate>T</priceDate>
+            </priceSource>
+            <couponRate>0</couponRate>
+            <issueDate>T</issueDate>
+            <securityStatus>Approved</securityStatus>
+    </instrument>
+
+        <instrument id="bondinstrumentABC">
+            <assetClass>qtp_bond</assetClass>
+            <assetType>qtp_bond_usd</assetType>
+            <instrumentId>
+            <type>ABC</type>
+            <value id="bondinstrument.id3" random="true" prefix="bond_"/>
+            </instrumentId>
+            <market>USA</market>
+            <description id="bondinstrument.des" random="true"/>
+            <issuer>
+            <filter>QTP_Eligible_Issuer4</filter>
+            <linkText>QTP_Eligible_Issuer4</linkText>
+            </issuer>
+            <maturityDate>T+100</maturityDate>
+            <currencyOfDenomination>GBP</currencyOfDenomination>
+            <priceSource>
+            <priceSourceName>Default</priceSourceName>
+            <dirtyPrice>100</dirtyPrice>
+            <lastPriceChange>T</lastPriceChange>
+            <cleanPrice>100</cleanPrice>
+            <priceDate>T</priceDate>
+            </priceSource>
+            <couponRate>0</couponRate>
+            <issueDate>T</issueDate>
+            <securityStatus>Approved</securityStatus>
+        </instrument>
+
+        <instrument id="equity_United_States">
+            <assetClass>qtp_equity</assetClass>
+            <assetType>qtp_equity_usd</assetType>
+            <instrumentId>
+            <value id="equityinstrument.id" random="true"/>
+            </instrumentId>
+            <description id="equityinstrument.desc" random="true"/>
+            <issuer>
+            <filter>QTP_Eligible_Issuer4</filter>
+            <linkText>QTP_Eligible_Issuer4</linkText>
+            </issuer>
+            <maturityDate>T+100</maturityDate>
+            <priceSource>
+            <priceSourceName>Default</priceSourceName>
+            <dirtyPrice>1</dirtyPrice>
+            <lastPriceChange>T</lastPriceChange>
+            <priceDate>T</priceDate>
+            </priceSource>
+            <issueDate>T</issueDate>
+            <securityStatus>Approved</securityStatus>
+        </instrument>
+
+        <securitySearch id="equitySecuritySearch">
+            <instrument>
+            <type>Starting with</type>
+            <filter ref="equityinstrument.id"/>
+            <linkText ref="equityinstrument.id"/>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="equitySecuritySearchApproved">
+            <instrument ref="equityinstrument.id"/>
+        </securitySearchResult>
+
+        <feedSecurityTemplate id="feed.template.security">
+            <DRIF>05-10-2017</DRIF>
+            <ASSET_CLASS>Agency Bonds</ASSET_CLASS>
+            <ASSET_TYPE>Agency-US FFCB (FED FIRM CRED BK)</ASSET_TYPE>
+            <CCY>USD</CCY>
+            <EXTISIN>test01</EXTISIN>
+            <EXTISIN_TYPE>CUSIP</EXTISIN_TYPE>
+            <MARKET>EUR CCT</MARKET>
+            <INSTRUMENT>CCT E JAN 96 06</INSTRUMENT>
+            <MATY>01-01-2016</MATY>
+            <UND_COUPON>0.6</UND_COUPON>
+            <ISSUER>167</ISSUER>
+            <ISSUE_DATE>05-10-2017</ISSUE_DATE>
+            <ACCRUAL_BASIS>Act/Act</ACCRUAL_BASIS>
+            <FREQUENCY>Semi-Annually</FREQUENCY>
+            <EV_PRICE>50</EV_PRICE>
+            <ACC_DDAT>50</ACC_DDAT>
+            <INFLAT_RATIO>1</INFLAT_RATIO>
+            <RECORD_DATE>28-05-2017</RECORD_DATE>
+            <EX_DIV_DATE>28-05-2017</EX_DIV_DATE>
+            <RATING1>A+</RATING1>
+            <RATING2>Aa1</RATING2>
+            <RATING3>A</RATING3>
+            <RATING4>BBB</RATING4>
+            <RATING5>B</RATING5>
+            <RATING6>D</RATING6>
+            <INUSE>false</INUSE>
+        </feedSecurityTemplate>
+
+
+        </scenarioData>
+
+</dataBean>

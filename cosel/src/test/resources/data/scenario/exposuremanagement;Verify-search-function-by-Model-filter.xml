@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/exposureManagement.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <agreement id="agr20347.multimodel">
+            <agreementId id="agrid">2583</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="model">
+            <column>Model</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="delivery.top">
+            <action>Delivery</action>
+            <agreementRequirement>-1,240,092.25</agreementRequirement>
+            <model></model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="return.model.testCGBP">
+            <action>Return</action>
+            <agreementRequirement>-150,000.00</agreementRequirement>
+            <model>testC_GBP</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="recall.model.AbCUSD">
+            <action>Recall</action>
+            <agreementRequirement>800,000.00</agreementRequirement>
+            <model>AbC_USD</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="return.model.abcGBP">
+            <action>Return</action>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <model>abc_GBP</model>
+        </exposureEventDetail>
+
+        <exposureEventSearch id="model.abcGBP">
+            <agrId></agrId>
+            <model>abc_GBP</model>
+        </exposureEventSearch>
+
+        <exposureEventSearch id="model.abc">
+            <model>abc*</model>
+        </exposureEventSearch>
+
+        <exposureEventSearch id="model.cgbp">
+            <model>c_gbp</model>
+        </exposureEventSearch>
+
+        <exposureEventDetail id="delivery.top.notdisplay" apply="false">
+            <action>Delivery</action>
+            <agreementRequirement>-1,240,092.25</agreementRequirement>
+            <model></model>
+        </exposureEventDetail>
+    </scenarioData>
+</dataBean>

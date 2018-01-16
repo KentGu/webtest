@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+
+        <collateralStaticData id="col.static.data.mcat1">
+            <type>Model Category</type>
+            <dataName id="model.cat.name">MCAT1</dataName>
+            <description ref="model.cat.name"/>
+            <status>enabled</status>
+        </collateralStaticData>
+
+        <collateralStaticData id="col.static.data.statement.udf">
+            <type>User Defined Statement Fields</type>
+            <dataName id="statement.udfa">UDF_A</dataName>
+            <description ref="statement.udfa"/>
+            <status>enabled</status>
+        </collateralStaticData>
+
+        <statementCalcRule id="calc.rule.udfa">
+            <businessLine>ETD</businessLine>
+            <ruleName id="etd.calc.rule.name" random="true"></ruleName>
+            <ruleType>Statement</ruleType>
+            <ruleFileName>EtdStatementUDFA_500.drl</ruleFileName>
+            <userDefinedFields>
+                <fieldName ref="statement.udfa"/>
+                <valueFed>false</valueFed>
+                <statementSection>TE</statementSection>
+            </userDefinedFields>
+        </statementCalcRule>
+
+        <feedAgreement id="feed.etd.agreement">
+            <principal ref="org.p1.lname"/>
+            <principalRole>Member</principalRole>
+            <counterpartycode ref="org.c1.lname"/>
+            <region ref="region.test1.name"/>
+            <principalContact ref="org.p1.lname"></principalContact>
+            <principalinterestcontact ref="org.p1.lname"></principalinterestcontact>
+            <cptyinterestcontact ref="org.c1.lname"></cptyinterestcontact>
+            <cptyContact ref="org.c1.lname"></cptyContact>
+            <agreement_description id="etd.agrmt.desc" random="true" prefix="feed_etd_agr1_"/>
+            <businessLine>ETD</businessLine>
+            <status>67</status>
+            <netting_Calc>Net</netting_Calc>
+            <netting_Interest>Net</netting_Interest>
+            <master_documentation ref="master.documentation.1987.isda.master.name"/>
+            <credit_support_documentation ref="credit.documentation.margin.provisions.name"/>
+            <base_currency id="agr.base.currency">USD</base_currency>
+            <marginType>Hedge</marginType>
+            <TSARule>QTP_TSA</TSARule>
+            <base_currency ref="ccy.usd.name"/>
+            <original_date random="true" variation="t"/>
+            <netting_MTM_And_IA>Net</netting_MTM_And_IA>
+            <holiday_centre ref="hc.test1.name"/>
+            <time_zone ref="system.staticData.timeZone.cet.name"/>
+            <frequency>Daily</frequency>
+            <frequency_start random="true" variation="t"/>
+            <non_workingday_adjusttype>RollForward</non_workingday_adjusttype>
+            <notification_time>13.00</notification_time>
+            <resolution_time>10.00</resolution_time>
+            <resolution_day>same</resolution_day>
+            <statementCalc ref="etd.calc.rule.name"/>
+            <allowAdjustments>true</allowAdjustments>
+            <fxRateRule ref="fxRateSet.standard.name"/>
+            <modelEligRules>
+                <modelEligRule>
+                    <modelName id="usd.model.name">USD</modelName>
+                    <modelCategory ref="model.cat.name"/>
+                    <modelCcy id="model.usd.ccy.name">USD</modelCcy>
+                </modelEligRule>
+            </modelEligRules>
+
+            <settlementInstructions>
+                <settlementInstruction>
+                    <modelName ref="usd.model.name"/>
+                    <modelCategory ref="model.cat.name"/>
+                    <bookingType>Cash</bookingType>
+                    <direction>Wire In/Wire Out</direction>
+                    <bucket>Standard</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <modelName ref="usd.model.name"/>
+                    <modelCategory ref="model.cat.name"/>
+                    <bookingType>IM</bookingType>
+                    <direction>Wire In/Wire Out</direction>
+                    <bucket>Standard</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <modelName ref="usd.model.name"/>
+                    <modelCategory ref="model.cat.name"/>
+                    <bookingType>IM</bookingType>
+                    <direction>Pledge In/Pledge Out</direction>
+                    <bucket>Standard</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <modelName ref="usd.model.name"/>
+                    <modelCategory ref="model.cat.name"/>
+                    <bookingType>Cash Interest</bookingType>
+                    <direction>Pay/Receive</direction>
+                    <bucket>Standard</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <modelName ref="usd.model.name"/>
+                    <modelCategory ref="model.cat.name"/>
+                    <bookingType>IM Interest</bookingType>
+                    <direction>Pay/Receive</direction>
+                    <bucket>Standard</bucket>
+                </settlementInstruction>
+            </settlementInstructions>
+            <asset>
+                <assetName ref="bond.usd.name"/>
+                <applicableParty></applicableParty>
+                <applicableType></applicableType>
+                <eligibility>
+                    <elig_ultimateParent_correlation>true</elig_ultimateParent_correlation>
+                    <elig_closeLink_correlation>true</elig_closeLink_correlation>
+                </eligibility>
+            </asset>
+            <rounding_delivery>Up</rounding_delivery>
+            <rounding_recall>Down</rounding_recall>
+            <distMedium>Email</distMedium>
+        </feedAgreement>
+
+        <feedResult id="feed.etd.agreement.result">
+            <successfullyImported>1</successfullyImported>
+            <unsuccessfulImports>0</unsuccessfulImports>
+        </feedResult>
+
+        <agreementSearch id="etd.agrmt.search">
+            <description>
+                <filter ref="etd.agrmt.desc"/>
+            </description>
+        </agreementSearch>
+
+        <agreementSearchResult id="etd.agrmt.search.result">
+            <description ref="etd.agrmt.desc"/>
+        </agreementSearchResult>
+
+        <etdAgreementStatement id="model.category.USD">
+            <etdAssetHoldingSummary>
+                <agreementBaseCurrency>USD</agreementBaseCurrency>
+                <etdModelAndModelCategoryAssetHoldingSummary>
+                    <modelCategory ref="model.cat.name"/>
+                    <model ref="model.usd.ccy.name"/>
+                    <etdAssetHoldingSummaryDetail>
+                        <pendingExcessOrDeficit>1000</pendingExcessOrDeficit>
+                    </etdAssetHoldingSummaryDetail>
+                </etdModelAndModelCategoryAssetHoldingSummary>
+            </etdAssetHoldingSummary>
+        </etdAgreementStatement>
+
+        <agreementStatement id="etd.statement.udfa.500">
+            <marginCallCalculation>
+                <etdReq>
+                    <sod>
+                        <etdStatementUdf>
+                            <udfName ref="statement.udfa"/>
+                            <udfValue>500.0</udfValue>
+                        </etdStatementUdf>
+                    </sod>
+                    <adj>
+                        <etdStatementUdf>
+                            <udfName ref="statement.udfa"/>
+                            <udfValue>500.0</udfValue>
+                        </etdStatementUdf>
+                    </adj>
+                </etdReq>
+            </marginCallCalculation>
+        </agreementStatement>
+
+    </scenarioData>
+</dataBean>

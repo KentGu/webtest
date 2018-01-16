@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl" ?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)" />
+    <xi:include href="../feature/approvalManager.xml" xpointer="element(/1/1)" />
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <instrument id="instrument.bond">
+            <assetClass id="instrument.bond.asset.class" ref="bond.name"/>
+            <assetType id="instrument.bond.asset.type" ref="bond.usd.name"/>
+            <description id="instrument.bond.description">T26797_Bond_Description</description>
+            <market id="instrument.bond.market">automation</market>
+            <instrumentId>
+                <type>CUSIP</type>
+                <value id="instrument.bond.cusip.id">T26797_Bond_CUSIP_ID</value>
+                <primary>true</primary>
+            </instrumentId>
+            <instrumentId>
+                <type>ISIN</type>
+                <value id="instrument.bond.isin.id">T26797_Bond_ISIN_ID</value>
+            </instrumentId>
+            <instrumentId>
+                <type>Other</type>
+                <value id="instrument.bond.other.id">T26797_Bond_Other_ID</value>
+            </instrumentId>
+        </instrument>
+
+        <instrument id="instrument.equity">
+            <assetClass id="instrument.equity.asset.class" ref="equity.name"/>
+            <assetType id="instrument.equity.asset.type" ref="equity.usd.name"/>
+            <description id="instrument.equity.description">T26797_Equity_Description</description>
+            <market id="instrument.equity.market">automation</market>
+            <instrumentId>
+                <type>CUSIP</type>
+                <value id="instrument.equity.cusip.id">T26797_Equity_CUSIP_ID</value>
+                <primary>true</primary>
+            </instrumentId>
+            <instrumentId>
+                <type>ISIN</type>
+                <value id="instrument.equity.isin.id">T26797_Equity_ISIN_ID</value>
+            </instrumentId>
+            <instrumentId>
+                <type>Other</type>
+                <value id="instrument.equity.other.id">T26797_Equity_Other_ID</value>
+            </instrumentId>
+        </instrument>
+
+        <approvalManagerSecuritiesDataSearch id="search.approval.manager.security.bond.cusip">
+            <assetClass ref="instrument.bond.asset.class"/>
+            <assetType ref="instrument.bond.asset.type"/>
+            <market>
+                <type>Exactly matching</type>
+                <filter ref="instrument.bond.market"/>
+                <linkText ref="instrument.bond.market"/>
+            </market>
+            <description>
+                <type>Exactly matching</type>
+                <filter ref="instrument.bond.description"/>
+                <linkText ref="instrument.bond.description"/>
+            </description>
+            <instrument>
+                <type>Exactly matching</type>
+                <filter ref="instrument.bond.cusip.id"/>
+                <linkText ref="instrument.bond.cusip.id"/>
+            </instrument>
+            <instrumentIdType>CUSIP</instrumentIdType>
+        </approvalManagerSecuritiesDataSearch>
+
+        <approvalManagerSecuritiesDataSearch id="search.approval.manager.security.bond.isin">
+            <assetClass ref="instrument.bond.asset.class"/>
+            <assetType ref="instrument.bond.asset.type"/>
+            <market>
+                <type>Exactly matching</type>
+                <filter ref="instrument.bond.market"/>
+                <linkText ref="instrument.bond.market"/>
+            </market>
+            <description>
+                <type>Exactly matching</type>
+                <filter ref="instrument.bond.description"/>
+                <linkText ref="instrument.bond.description"/>
+            </description>
+            <instrument>
+                <type>Exactly matching</type>
+                <filter ref="instrument.bond.isin.id"/>
+                <linkText id="instrument.bond.isin.id"/>
+            </instrument>
+            <instrumentIdType>ISIN</instrumentIdType>
+        </approvalManagerSecuritiesDataSearch>
+
+        <approvalManagerSecuritiesDataSearch id="search.approval.manager.security.bond.other">
+            <assetClass ref="instrument.bond.asset.class"/>
+            <assetType ref="instrument.bond.asset.type"/>
+            <market>
+                <type>Exactly matching</type>
+                <filter ref="instrument.bond.market"/>
+                <linkText ref="instrument.bond.market"/>
+            </market>
+            <description>
+                <type>Exactly matching</type>
+                <filter ref="instrument.bond.description"/>
+                <linkText ref="instrument.bond.description"/>
+            </description>
+            <instrument>
+                <type>Exactly matching</type>
+                <filter ref="instrument.bond.other.id"/>
+                <linkText ref="instrument.bond.other.id"/>
+            </instrument>
+            <instrumentIdType>Other</instrumentIdType>
+        </approvalManagerSecuritiesDataSearch>
+
+        <approvalManagerSecuritiesDataSearchResult id="search.result.approval.manager.security.bond">
+            <instrument ref="instrument.bond.cusip.id"/>
+            <market ref="instrument.bond.market"/>
+            <assetClass ref="instrument.bond.asset.class"/>
+            <assetType ref="instrument.bond.asset.type"/>
+            <description ref="instrument.bond.description"/>
+        </approvalManagerSecuritiesDataSearchResult>
+
+        <approvalManagerSecuritiesDataSearch id="search.approval.manager.security.equity.cusip">
+            <assetClass ref="instrument.equity.asset.class"/>
+            <assetType ref="instrument.equity.asset.type"/>
+            <market>
+                <type>Exactly matching</type>
+                <filter ref="instrument.equity.market"/>
+                <linkText ref="instrument.equity.market"/>
+            </market>
+            <description>
+                <type>Exactly matching</type>
+                <filter ref="instrument.equity.description"/>
+                <linkText ref="instrument.equity.description"/>
+            </description>
+            <instrument>
+                <type>Exactly matching</type>
+                <filter ref="instrument.equity.cusip.id"/>
+                <linkText ref="instrument.equity.cusip.id"/>
+            </instrument>
+            <instrumentIdType>CUSIP</instrumentIdType>
+        </approvalManagerSecuritiesDataSearch>
+
+        <approvalManagerSecuritiesDataSearch id="search.approval.manager.security.equity.isin">
+            <assetClass ref="instrument.equity.asset.class"/>
+            <assetType ref="instrument.equity.asset.type"/>
+            <market>
+                <type>Exactly matching</type>
+                <filter ref="instrument.equity.market"/>
+                <linkText ref="instrument.equity.market"/>
+            </market>
+            <description>
+                <type>Exactly matching</type>
+                <filter ref="instrument.equity.description"/>
+                <linkText ref="instrument.equity.description"/>
+            </description>
+            <instrument>
+                <type>Exactly matching</type>
+                <filter ref="instrument.equity.isin.id"/>
+                <linkText ref="instrument.equity.isin.id"/>
+            </instrument>
+            <instrumentIdType>ISIN</instrumentIdType>
+        </approvalManagerSecuritiesDataSearch>
+
+        <approvalManagerSecuritiesDataSearch id="search.approval.manager.security.equity.other">
+            <assetClass ref="instrument.equity.asset.class"/>
+            <assetType ref="instrument.equity.asset.type"/>
+            <market>
+                <type>Exactly matching</type>
+                <filter ref="instrument.equity.market"/>
+                <linkText ref="instrument.equity.market"/>
+            </market>
+            <description>
+                <type>Exactly matching</type>
+                <filter ref="instrument.equity.description"/>
+                <linkText ref="instrument.equity.description"/>
+            </description>
+            <instrument>
+                <type>Exactly matching</type>
+                <filter ref="instrument.equity.other.id"/>
+                <linkText ref="instrument.equity.other.id"/>
+            </instrument>
+            <instrumentIdType>Other</instrumentIdType>
+        </approvalManagerSecuritiesDataSearch>
+
+        <approvalManagerSecuritiesDataSearchResult id="search.result.approval.manager.security.equity">
+            <instrument ref="instrument.equity.cusip.id"/>
+            <market ref="instrument.equity.market"/>
+            <assetClass ref="instrument.equity.asset.class"/>
+            <assetType ref="instrument.equity.asset.type"/>
+            <description ref="instrument.equity.description"/>
+        </approvalManagerSecuritiesDataSearchResult>
+    </scenarioData>
+</dataBean>

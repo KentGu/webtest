@@ -1,0 +1,12 @@
+pre#NUM1#select 1 as num2 from dual 
+pre#NUM2#select 2 as num2 from dual 
+pre#NUM3#select 3 as num2 from dual 
+pre#NUM7#select 3 as num2 from dual 
+
+post#NUM4#select 4 as num3 from dual 
+post#NUM5#select 5 as num3 from dual 
+
+val#1#${NUM1} -gt ${NUM2}
+val#2#${NUM2} -eq `expr ${NUM3} - ${NUM1}`
+val#3#${NUM5} -eq `expr ${NUM4} + ${NUM1}`
+val#4#${NUM4} -eq ${NUM5}

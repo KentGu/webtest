@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/feeds.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <feedAgreement id="feed.fcm.agreement">
+            <legal_id id="agreement.legal.id">T32748Agreement4ExternalID</legal_id>
+            <principal id="agreement.principal">QTPPrincipal2</principal>
+            <cptyOrgRegion id="agreement.cpty.org.region">ALL</cptyOrgRegion>
+            <custodian id="agreement.custodian">QTPCustodian2</custodian>
+            <umbrellaAgreement id="agreement.umbrella.agreement">false</umbrellaAgreement>
+            <counterpartycode id="agreement.counterparty.code">QTPCounterparty2</counterpartycode>
+            <principalContact id="agreement.principal.contact">QTPPrincipal2</principalContact>
+            <cptyContact id="agreement.cpty.contact">QTPCounterparty2</cptyContact>
+            <principalinterestcontact id="agreement.principal.interest.contact">QTPPrincipal2</principalinterestcontact>
+            <cptyinterestcontact id="agreement.cpty.interest.contact">QTPCounterparty2</cptyinterestcontact>
+            <group id="agreement.group">smoke</group>
+            <agreement_description id="agreement.agreement.description">T32748Agreement4Description</agreement_description>
+            <region id="agreement.region">smoke</region>
+            <category id="agreement.category">IR Swaps</category>
+            <colManager id="agreement.col.manager">QTPPrincipal2 - qtp_Label_120141015193427</colManager>
+            <notes id="agreement.notes">Notes</notes>
+            <CCP id="agreement.ccp">LCH</CCP>
+            <principalNAV id="agreement.principal.nav">2000.0</principalNAV>
+            <principalCCy id="agreement.principal.ccy">USD</principalCCy>
+            <cptyNAV id="agreement.cpty.nav">3000.0</cptyNAV>
+            <cptyCCy id="agreement.cpty.ccy">USD</cptyCCy>
+            <master_documentation id="agreement.master.documentation">EMA 2004</master_documentation>
+            <credit_support_documentation id="agreement.credit.support.documentation">GMRA</credit_support_documentation>
+            <createDate>2017-11-29</createDate>
+            <original_date>2017-11-29</original_date>
+            <reviewDate>2017-11-29</reviewDate>
+            <reciprocity id="agreement.reciprocity">Bilateral</reciprocity>
+            <prcTransferCcy id="agreement.prc.transfer.ccy">CAD</prcTransferCcy>
+            <cptyTransferCcy id="agreement.cpty.transfer.ccy">USD</cptyTransferCcy>
+            <prcTerminationCcy id="agreement.pre.termination.ccy">EUR</prcTerminationCcy>
+            <cptyTerminationCcy id="agreement.cpty.termination.ccy">CAD</cptyTerminationCcy>
+            <base_currency id="agreement.base.currency">USD</base_currency>
+            <colType id="agreement.col.type">Pledge Agreement</colType>
+            <signOffBy id="agreement.sign.off.by">gukai</signOffBy>
+            <rehypothecation_flag id="agreement.rehypothecation.flag">N</rehypothecation_flag>
+            <rehypothecation id="agreement.rehypothecation">Bilateral</rehypothecation>
+            <im_rehypothecation_flag id="agreement.im.rehypothecation.flag">N</im_rehypothecation_flag>
+            <imRehypothecation id="agreement.im.rehypothecation">Bilateral</imRehypothecation>
+            <netting_MTM_And_IA id="agreement.netting.mtm.and.ia">Not-Net</netting_MTM_And_IA>
+            <netting_Calc id="agreement.netting.calc">Gross</netting_Calc>
+            <netting_Interest id="agreement.netting.interest">Gross IM</netting_Interest>
+            <calcMTM>false</calcMTM>
+            <TSA id="agreement.tsa">true</TSA>
+            <TSARule id="agreement.tsa.rule">QTP_TSA</TSARule>
+            <frequency id="agreement.frequency">Daily</frequency>
+            <non_workingday_adjusttype id="agreement.non.working.day.adjust.type">None</non_workingday_adjusttype>
+            <frequency_start id="agreement.frequency.start">2016-12-01</frequency_start>
+            <notification_time id="agreement.notification.time">09.00</notification_time>
+            <resolution_time id="agreement.resolution.time">17.00</resolution_time>
+            <resolution_day id="agreement.resolution.day">Next Day</resolution_day>
+            <time_zone id="agreement.time.zone">America/New_York</time_zone>
+            <holiday_centre id="agreement.holiday.centre">NEW YORK</holiday_centre>
+            <clientRelease>true</clientRelease>
+            <tradeValuationRule id="agreement.trade.valuation.rule">I</tradeValuationRule>
+            <fxRateRule id="agreement.fx.rate.rule">Standard FX Rates</fxRateRule>
+            <product>
+                <productName id="agreement.product.1.product.name">QTP</productName>
+                <exposurePerc id="agreement.product.1.exposure.perc">80.0</exposurePerc>
+                <settlementPeriod id="agreement.product.1.settlement.period">T+2</settlementPeriod>
+                <upfrontCalculMethod id="agreement.product.1.upfront.calcul.method">No Upfronts</upfrontCalculMethod>
+                <principleUpfronts>false</principleUpfronts>
+                <principleFixedPerc id="agreement.product.1.principle.fixed.perc">0.0</principleFixedPerc>
+                <principleFixedValue id="agreement.product.1.principle.fixed.value">0.0</principleFixedValue>
+                <perOfNotionalCcy id="agreement.product.1.per.of.notional.ccy">Default base CCY</perOfNotionalCcy>
+                <haircutCalcMethod id="agreement.product.1.haircut.calc.method">No Haircut</haircutCalcMethod>
+                <includeValuation>false</includeValuation>
+                <externalIaSettings>
+                    <externalIaSetting>
+                        <currencySet id="agreement.product.1.external.ia.currency.set">Default</currencySet>
+                        <confidenceLevel id="agreement.product.1.external.ia.confidence.level">0.0</confidenceLevel>
+                        <days id="agreement.product.1.external.ia.days">0</days>
+                        <multiplier id="agreement.product.1.external.ia.multiplier">1.0</multiplier>
+                        <minimumCollateral id="agreement.product.1.external.ia.minimum.collateral">0</minimumCollateral>
+                    </externalIaSetting>
+                </externalIaSettings>
+            </product>
+            <interestCalcMethod id="agreement.interest.calc.method">Compound excl Weekend and Holiday</interestCalcMethod>
+            <calcRule id="agreement.calc.rule">Last of the Month</calcRule>
+            <interest_pay_method id="agreement.interest.pay.method">Capitalise</interest_pay_method>
+            <interest_receive_method id="agreement.interest.receive.method">Physical Payment</interest_receive_method>
+            <calcDate id="agreement.calc.date">T+2</calcDate>
+            <gracePeriod id="agreement.grace.period">Infinity</gracePeriod>
+            <rating_method id="agreement.rating.method">Both</rating_method>
+            <applicableToBoth>true</applicableToBoth>
+            <applicableToVI>true</applicableToVI>
+            <allowNegativeEffRate>true</allowNegativeEffRate>
+            <asset>
+                <assetName id="agreement.asset.1.asset.name">qtp_cash_usd</assetName>
+                <settlementDateAbbriviated id="agreement.asset.1.settlement.date.abbriviated">T</settlementDateAbbriviated>
+                <fixedVal>true</fixedVal>
+                <valuePercent id="agreement.asset.1.value.percent">100.0</valuePercent>
+                <cash_rate id="agreement.asset.1.cash.rate">qtp_Interest_Rate1</cash_rate>
+                <applicableParty id="agreement.asset.1.applicable.party">PC</applicableParty>
+                <applicableType id="agreement.asset.1.applicable.type">VI</applicableType>
+                <elig_method id="agreement.asset.1.elig.method">and</elig_method>
+                <internal_Reuse_Policy id="agreement.asset.1.internal.reuse.policy">false</internal_Reuse_Policy>
+                <cashAsset>true</cashAsset>
+                <deliveryPriority id="agreement.asset.1.delivery.priority">High</deliveryPriority>
+                <recallPriority id="agreement.asset.1.recall.priority">High</recallPriority>
+                <templateVsAgreementEligibilityRule id="agreement.asset.1.template.vs.agreement.eligibility.rule">Template Only</templateVsAgreementEligibilityRule>
+            </asset>
+            <cptytriggertype id="agreement.cpty.trigger.type">Fixed</cptytriggertype>
+            <rounding_delivery id="agreement.rounding.delivery">Up</rounding_delivery>
+            <rounding_recall id="agreement.rounding.recall">Down</rounding_recall>
+            <std_value id="agreement.std.value">200.0</std_value>
+            <principaltriggertype id="agreement.principal.trigger.type">Fixed</principaltriggertype>
+            <principalFixedThresholdType id="agreement.principal.fixed.threshold.type">Percentage of NAV</principalFixedThresholdType>
+            <principalFixedThresholdValue id="agreement.principal.fixed.threshold.value">20.0</principalFixedThresholdValue>
+            <principalFixedThresholdCcy id="agreement.principal.fixed.threshold.ccy">USD</principalFixedThresholdCcy>
+            <principalFixedMTAType id="agreement.principal.fixed.mta.type">Percentage of NAV+IA</principalFixedMTAType>
+            <principalFixedMTAValue id="agreement.principal.fixed.mta.value">50.0</principalFixedMTAValue>
+            <principalFixedRoundingAmount id="agreement.principal.fixed.rounding.amount">500</principalFixedRoundingAmount>
+            <stdIM_value id="agreement.std.im.value">0.0</stdIM_value>
+            <std_type id="agreement.std.type">Exposure</std_type>
+            <FINRA4210Adjustment>false</FINRA4210Adjustment>
+            <principalNotRatedAssumeNR>false</principalNotRatedAssumeNR>
+            <distMedium id="agreement.dist.medium">Email</distMedium>
+            <conditionRule id="agreement.condition.rule">--</conditionRule>
+            <conditionFixedAmount id="agreement.condition.fixed.amount">0.0</conditionFixedAmount>
+            <conditionPercentageOfTotalExposure id="agreement.condition.percentage.of.total.exposure">0.0</conditionPercentageOfTotalExposure>
+            <conditionRuleReceive id="agreement.condition.rule.receive">--</conditionRuleReceive>
+            <conditionFixedAmountReceive id="agreement.condition.fixed.amount.receive">0.0</conditionFixedAmountReceive>
+            <conditionPercentageOfTotalExposureReceive id="agreement.condition.percentage.of.total.exposure.receive">0.0</conditionPercentageOfTotalExposureReceive>
+            <agreementName id="agreement.agreement.name">T32748Agreement4AgreementName</agreementName>
+            <cptyFixedThresholdType id="agreement.cpty.fixed.threshold.type">Percentage of Total Notional</cptyFixedThresholdType>
+            <cptyFixedThresholdValue id="agreement.cpty.fixed.threshold.value">30.0</cptyFixedThresholdValue>
+            <cptyFixedMTAType id="agreement.cpty.fixed.mta.type">Percentage of EXP-COL</cptyFixedMTAType>
+            <cptyFixedRoundingAmount id="agreement.cpty.fixed.rounding.amount">1000</cptyFixedRoundingAmount>
+            <cptyFixedThresholdCcy id="agreement.cpty.fixed.threshold.ccy">USD</cptyFixedThresholdCcy>
+            <principalFixedMtaCcy id="agreement.principal.fixed.mta.ccy">USD</principalFixedMtaCcy>
+            <principalFixedRoundingAmountCcy id="agreement.principal.fixed.rounding.amount.ccy">USD</principalFixedRoundingAmountCcy>
+            <cptyFixedRoundingAmountCcy id="agreement.cpty.fixed.rounding.amount.ccy">USD</cptyFixedRoundingAmountCcy>
+            <enableInterestCalc id="agreement.enable.interest.calc">true</enableInterestCalc>
+            <enableApplicableAgencies>false</enableApplicableAgencies>
+            <cptyFixedMTAValue id="agreement.cpty.fixed.mta.value">40.0</cptyFixedMTAValue>
+            <cptyFixedMtaCcy id="agreement.cpty.fixed.mta.ccy">USD</cptyFixedMtaCcy>
+            <cptyNotRatedAssumeNR>false</cptyNotRatedAssumeNR>
+            <tsa_level id="agreement.tsa.level">Component</tsa_level>
+            <settlement id="agreement.settlement">Item</settlement>
+            <elig_rule_template id="agreement.elig.rule.template">not_net_eligibility_rule</elig_rule_template>
+            <exposureCushion id="agreement.exposure.cushion">false</exposureCushion>
+            <ecPercentage id="agreement.ec.percentage">0.0</ecPercentage>
+            <ecFixedValue id="agreement.ec.fixed.value">0.0</ecFixedValue>
+            <messageResponseToleranceAmount id="agreement.message.response.tolerance.amount">0.0</messageResponseToleranceAmount>
+            <messageWorkflow id="agreement.message.workflow">Margin,Substitution</messageWorkflow>
+            <price_source id="agreement.price.source">PS3</price_source>
+            <regulatoryAgreement>true</regulatoryAgreement>
+            <agreedJurisdiction id="agreement.agreed.juris.diction">IOSCO</agreedJurisdiction>
+            <prinSegType id="agreement.prin.seg.type">Segregated Direct Dealer Holding</prinSegType>
+            <cptySegType id="agreement.cpty.seg.type">Segregated Dealer Affiliate Holding</cptySegType>
+            <prinIMSegType id="agreement.prin.im.seg.type">Third Party Custodian of Dealer Holding</prinIMSegType>
+            <cptyIMSegType id="agreement.cpty.im.seg.type">Tri-Party Collateral Agent Holding</cptyIMSegType>
+            <other_Jurisdiction id="agreement.other.juris.diction">Standard CSA</other_Jurisdiction>
+            <rank id="agreement.rank">5</rank>
+            <businessLine id="agreement.business.line">Clearing</businessLine>
+            <multi_model>false</multi_model>
+            <segregation>true</segregation>
+            <im_frequency id="agreement.im.frequency">Quarterly</im_frequency>
+            <im_non_workingday_adjusttype id="agreement.im.non.working.day.adjust.type">None</im_non_workingday_adjusttype>
+            <im_frequency_start id="agreement.im.frequency.start">2016-12-01</im_frequency_start>
+            <im_notification_time id="agreement.im.notification.time">11.00</im_notification_time>
+            <im_resolution_day id="agreement.im.resolution.day">Same</im_resolution_day>
+            <im_resolution_time id="agreement.im.resolution.time">12.00</im_resolution_time>
+            <sendConfirmationLetter>
+                <counterparty>false</counterparty>
+                <custodian>false</custodian>
+                <custodianContact id="agreement.send.confirmation.letter.custodian.contact">QTPCustodian2_1</custodianContact>
+            </sendConfirmationLetter>
+            <applicableAgencies>
+                <referenceRatingAgencies id="agreement.applicable.agencies.reference.rating.agencies">All</referenceRatingAgencies>
+                <applicableOfRating id="agreement.applicable.agencies.applicable.of.rating">Lower</applicableOfRating>
+                <selectionOfAgency>
+                    <direction id="agreement.applicable.agencies.selection.of.agency.direction">Higher</direction>
+                </selectionOfAgency>
+            </applicableAgencies>
+            <principalInternalOnly>
+                <mtaInternalOnly>false</mtaInternalOnly>
+                <roundingInternalOnly>false</roundingInternalOnly>
+            </principalInternalOnly>
+            <cptyInternalOnly>
+                <mtaInternalOnly>false</mtaInternalOnly>
+                <roundingInternalOnly>false</roundingInternalOnly>
+            </cptyInternalOnly>
+            <netVmImEventInSameDirection>false</netVmImEventInSameDirection>
+            <netVmImInterest>false</netVmImInterest>
+            <im_interestCalcMethod id="agreement.im.interest.calc.method">Compound excl Weekend</im_interestCalcMethod>
+            <im_calcRule id="agreement.im.calc.rule">Last of the Month Adjusted</im_calcRule>
+            <im_interest_pay_method id="agreement.im.interest.pay.method">Physical Payment</im_interest_pay_method>
+            <im_interest_receive_method id="agreement.im.interest.receive.method">Capitalise</im_interest_receive_method>
+            <im_enableInterestCalc id="agreement.im.enable.interest.calc">true</im_enableInterestCalc>
+            <notifLetterType id="agreement.notif.letter.type">Margin</notifLetterType>
+            <letterTemplateType id="agreement.letter.template.type">QTP_Standard_English</letterTemplateType>
+            <exposureTemplateType id="agreement.exposure.template.type">QTP_Standard_English</exposureTemplateType>
+            <modelDetByFeed>false</modelDetByFeed>
+            <tradeCalcRule>
+                <includeFailedOpenLeg>false</includeFailedOpenLeg>
+                <includeFailedCloseLeg>false</includeFailedCloseLeg>
+            </tradeCalcRule>
+            <asset_classes>
+                <asset_class>
+                    <asset_class_name id="agreement.asset.classes.1.asset.class.name">qtp_cash</asset_class_name>
+                    <applicableParty id="agreement.asset.classes.1.applicable.party">PC</applicableParty>
+                    <applicableType id="agreement.asset.classes.1.applicable.type">VI</applicableType>
+                </asset_class>
+            </asset_classes>
+            <settlementInstructions>
+                <settlementInstruction>
+                    <bookingType>VM</bookingType>
+                    <direction>Call/Return</direction>
+                    <bucket id="agreement.bucket.1">VM Call/Return</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>VM</bookingType>
+                    <direction>Recall/Delivery</direction>
+                    <bucket id="agreement.bucket.2">VM Recall/Delivery</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>IM</bookingType>
+                    <direction>Call/Return</direction>
+                    <bucket id="agreement.bucket.3">IM Call/Return</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>IM</bookingType>
+                    <direction>Recall/Delivery</direction>
+                    <bucket id="agreement.bucket.4">IM Recall/Delivery</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>VM Interest</bookingType>
+                    <direction>Pay</direction>
+                    <bucket id="agreement.bucket.5">Pay</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>VM Interest</bookingType>
+                    <direction>Receive</direction>
+                    <bucket id="agreement.bucket.6">Receive</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>IM Interest</bookingType>
+                    <direction>Pay</direction>
+                    <bucket id="agreement.bucket.7">Pay</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>IM Interest</bookingType>
+                    <direction>Receive</direction>
+                    <bucket id="agreement.bucket.8">Receive</bucket>
+                </settlementInstruction>
+            </settlementInstructions>
+            <concentrationLimitTrigger id="agreement.concentration.limit.trigger">2000.0</concentrationLimitTrigger>
+            <enableSTP id="agreement.enable.stp">Default</enableSTP>
+            <stpIntraDayEvent>false</stpIntraDayEvent>
+            <flush id="agreement.flush">false</flush>
+            <applyOrganisationThreshold id="agreement.apply.organisation.threshold">Yes</applyOrganisationThreshold>
+            <applyOrgCL>false</applyOrgCL>
+            <applySTDtoNoCall>true</applySTDtoNoCall>
+        </feedAgreement>
+
+        <feedResult id="feed.agreement.result">
+            <fileUploaded id="feed.agreement.result.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedStatus id="feed.agreement.status">
+            <status>Successful</status>
+            <valuationFile ref="feed.agreement.result.file"/>
+            <description>Agreements</description>
+            <successfulFeed>
+                <total>1</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <agreementSearch id="search.feed.agreement.agreement">
+            <description>
+                <filter ref="agreement.agreement.description"/>
+                <linkText ref="agreement.agreement.description"/>
+            </description>
+            <externalId>
+                <filter ref="agreement.legal.id"/>
+                <linkText ref="agreement.legal.id"/>
+            </externalId>
+        </agreementSearch>
+
+        <agreementSearchResult id="search.result.feed.agreement.agreement">
+            <description ref="agreement.agreement.description"/>
+            <externalId ref="agreement.legal.id"/>
+        </agreementSearchResult>
+
+        <agreementSummary id="check.feed.etf.agreement.summary">
+            <partyAndCounterpartyDetails>
+                <principal ref="agreement.principal"/>
+                <counterparty ref="agreement.counterparty.code"/>
+                <custodian ref="agreement.custodian"/>
+                <counterpartyOrgRegion ref="agreement.cpty.org.region"/>
+                <region ref="agreement.region"/>
+                <group ref="agreement.group"/>
+                <businessLine ref="agreement.business.line"/>
+                <ccp ref="agreement.ccp"/>
+                <regulatory>Yes</regulatory>
+                <agreedJurisdiction ref="agreement.agreed.juris.diction"/>
+                <otherJurisdiction ref="agreement.other.juris.diction"/>
+                <agreementDescription ref="agreement.agreement.description"/>
+                <category ref="agreement.category"/>
+                <collateralManager ref="agreement.col.manager"/>
+                <agreementName ref="agreement.agreement.name"/>
+                <externalId ref="agreement.legal.id"/>
+                <notes ref="agreement.notes"/>
+                <rank ref="agreement.rank"/>
+            </partyAndCounterpartyDetails>
+            <documentationDetails>
+                <principalContact ref="agreement.principal.contact"/>
+                <principalCCEmail>
+                    <contact ref="agreement.principal.contact"/>
+                </principalCCEmail>
+                <principalInterestcontact ref="agreement.principal.interest.contact"/>
+                <principalInterestCCEmail>
+                    <contact ref="agreement.principal.interest.contact"/>
+                </principalInterestCCEmail>
+                <counterpartyContact ref="agreement.cpty.contact"/>
+                <counterpartyCCEmail>
+                    <contact ref="agreement.cpty.contact"/>
+                </counterpartyCCEmail>
+                <counterpartyInterestcontact ref="agreement.cpty.interest.contact"/>
+                <counterpartyInterestCCEmail>
+                    <contact ref="agreement.cpty.interest.contact"/>
+                </counterpartyInterestCCEmail>
+                <sendConfirmationLetterTo>
+                    <counterpary>No</counterpary>
+                    <custodian>No</custodian>
+                    <custodianContact ref="agreement.send.confirmation.letter.custodian.contact"/>
+                    <custodianCCEmail>
+                        <contact ref="agreement.send.confirmation.letter.custodian.contact"/>
+                    </custodianCCEmail>
+                </sendConfirmationLetterTo>
+                <principalNAV>
+                    <amount ref="agreement.principal.nav"/>
+                    <currency ref="agreement.principal.ccy"/>
+                </principalNAV>
+                <principalValuationAgent>false</principalValuationAgent>
+                <counterpartyNAV>
+                    <amount ref="agreement.cpty.nav"/>
+                    <currency ref="agreement.cpty.ccy"/>
+                </counterpartyNAV>
+                <counterpartyValuationAgent>false</counterpartyValuationAgent>
+                <masterDocumentation ref="agreement.master.documentation"/>
+                <creditSupportDocumentation ref="agreement.credit.support.documentation"/>
+                <signoffBy ref="agreement.sign.off.by"/>
+                <reciprocity>
+                    <reciprocity ref="agreement.reciprocity"/>
+                    <rehypothecationRights>No</rehypothecationRights>
+                    <imRehypothecationRights>No</imRehypothecationRights>
+                </reciprocity>
+                <baseCurrency>US Dollar</baseCurrency>
+                <vmPrincipalTransferCurrency>Canadian Dollar</vmPrincipalTransferCurrency>
+                <vmCounterpartyTransferCurrency>US Dollar</vmCounterpartyTransferCurrency>
+                <principalTerminationCurrency>Euro</principalTerminationCurrency>
+                <counterpartyTerminationCurrency>Canadian Dollar</counterpartyTerminationCurrency>
+                <type ref="agreement.col.type"/>
+                <creditContingentRights>No</creditContingentRights>
+                <nettingIAandMtM ref="agreement.netting.mtm.and.ia"/>
+                <segregation>Yes</segregation>
+                <principalVMSeg ref="agreement.prin.seg.type"/>
+                <principalIMSeg ref="agreement.prin.im.seg.type"/>
+                <counterpartyVMSeg ref="agreement.cpty.seg.type"/>
+                <counterpartyIMSeg ref="agreement.cpty.im.seg.type"/>
+                <flush>No</flush>
+                <tsa>Yes</tsa>
+                <tsaRule ref="agreement.tsa.rule"/>
+                <netVMIMEventsInSameDirection>false</netVMIMEventsInSameDirection>
+                <netVMIMInterest>false</netVMIMInterest>
+                <grossCalc ref="agreement.netting.calc"/>
+                <interestCalc ref="agreement.netting.interest"/>
+                <fxRates ref="agreement.fx.rate.rule"/>
+                <priceSource ref="agreement.price.source"/>
+            </documentationDetails>
+            <valuationFrequencyAndCallScheduleDetails>
+                <vmLegalReviewFrequency>
+                    <legalReviewFrequency ref="agreement.frequency"/>
+                    <rollForward>not applied</rollForward>
+                    <rollBackward>not applied</rollBackward>
+                    <frequencyStart>2016-12-1</frequencyStart>
+                </vmLegalReviewFrequency>
+                <vmNotificationTime>09:00</vmNotificationTime>
+                <vmResolutionTime>
+                    <resolutionTime>17:00</resolutionTime>
+                    <resolutionTimeType ref="agreement.resolution.day"/>
+                </vmResolutionTime>
+                <imLegalReviewFrequency>
+                    <legalReviewFrequency ref="agreement.im.frequency"/>
+                    <rollForward>not applied</rollForward>
+                    <rollBackward>not applied</rollBackward>
+                    <frequencyStart>2016-12-1</frequencyStart>
+                </imLegalReviewFrequency>
+                <imNotificationTime>11:00</imNotificationTime>
+                <imResolutionTime>
+                    <resolutionTime>12:00</resolutionTime>
+                    <resolutionTimeType>Same Day</resolutionTimeType>
+                </imResolutionTime>
+                <timeZone ref="agreement.time.zone"/>
+                <holidayCentres>
+                    <holidayCentre ref="agreement.holiday.centre"/>
+                </holidayCentres>
+                <clientReleaseRequiredSelfService>Yes</clientReleaseRequiredSelfService>
+            </valuationFrequencyAndCallScheduleDetails>
+            <collateralisedPortfolioDetails>
+                <defaultTradeValuationRule>Independent Valuation Amount</defaultTradeValuationRule>
+                <product>
+                    <productName ref="agreement.product.1.product.name"/>
+                    <exposurePercentageMTM ref="agreement.product.1.exposure.perc"/>
+                    <settlementPeriod>T+2</settlementPeriod>
+                    <upfrontCalculationMethodology>No Upfronts</upfrontCalculationMethodology>
+                    <upfrontsParty>Cpty</upfrontsParty>
+                    <percentage ref="agreement.product.1.principle.fixed.perc"/>
+                    <fixedAmount>0.00</fixedAmount>
+                </product>
+            </collateralisedPortfolioDetails>
+            <collateralRules>
+                <enableVMInterestCalculation>Enable</enableVMInterestCalculation>
+                <enableIMInterestCalculation>Enable</enableIMInterestCalculation>
+                <vminterestCalculationsMethod ref="agreement.interest.calc.method"/>
+                <vmCalculationRule ref="agreement.calc.rule"/>
+                <vmPayMethod ref="agreement.interest.pay.method"/>
+                <vmReceiveMethod ref="agreement.interest.receive.method"/>
+                <imInterestCalculationsMethod ref="agreement.im.interest.calc.method"/>
+                <imCalculationRule ref="agreement.im.calc.rule"/>
+                <imPayMethod ref="agreement.im.interest.pay.method"/>
+                <imReceiveMethod ref="agreement.im.interest.receive.method"/>
+                <interestSettlementDate ref="agreement.calc.date"/>
+                <allowNegativeEffectiveRate>Allowed</allowNegativeEffectiveRate>
+                <concentrationLimitTrigger ref="agreement.concentration.limit.trigger"/>
+                <ratingMethod>Issue/Issuer (SEN)</ratingMethod>
+                <eligibilityRuleTemplate ref="agreement.elig.rule.template"/>
+                <gracePeriod ref="agreement.grace.period"/>
+                <applyOrganisationConcentrationLimitRule>True</applyOrganisationConcentrationLimitRule>
+                <enableApplicableAgencies>Disable</enableApplicableAgencies>
+            </collateralRules>
+            <principalAndCounterpartyVMIMCollateralEligibleForReceipt>
+                <assetClass ref="agreement.asset.classes.1.asset.class.name"/>
+                <assetType ref="agreement.asset.1.asset.name"/>
+                <templateVsAgreementEligibilityRules ref="agreement.asset.1.template.vs.agreement.eligibility.rule"/>
+                <settlementPeriod ref="agreement.asset.1.settlement.date.abbriviated"/>
+                <deliveryPriority ref="agreement.asset.1.delivery.priority"/>
+                <recallPriority ref="agreement.asset.1.recall.priority"/>
+                <contractualReuseRights>No</contractualReuseRights>
+                <internalPolicyPermitsReuse>No</internalPolicyPermitsReuse>
+                <rules>Fixed</rules>
+                <valuationPercentage ref="agreement.asset.1.value.percent"/>
+                <rate ref="agreement.asset.1.cash.rate"/>
+            </principalAndCounterpartyVMIMCollateralEligibleForReceipt>
+            <collateralThresholdAndMinimumTransferDetails>
+                <applyOrganisationThreshold>true</applyOrganisationThreshold>
+                <rounding>
+                    <delivery ref="agreement.rounding.delivery"/>
+                    <recall ref="agreement.rounding.recall"/>
+                    <exposureStd>200.00 USD</exposureStd>
+                    <applySTDtoNoCall>true</applySTDtoNoCall>
+                </rounding>
+                <principalFixedValue>
+                    <threshold>Percentage of NAV - 20.00</threshold>
+                    <mininumTransfer>Percentage of NAV+IA 50.00</mininumTransfer>
+                    <roundingAmount>500.00 USD</roundingAmount>
+                </principalFixedValue>
+                <counterpartyFixedValue>
+                    <threshold>Percentage of Total Notional - 30.00</threshold>
+                    <mininumTransfer>Percentage of EXP-COL - 40.00</mininumTransfer>
+                    <roundingAmount>1,000.00 USD</roundingAmount>
+                </counterpartyFixedValue>
+            </collateralThresholdAndMinimumTransferDetails>
+            <settlementInformationConfiguration>
+                <settlement ref="agreement.settlement"/>
+                <tsaLevel ref="agreement.tsa.level"/>
+                <settlementBucket>
+                    <bookingType>VM</bookingType>
+                    <direction>Call/Return</direction>
+                    <bucket ref="agreement.bucket.1"/>
+                </settlementBucket>
+                <settlementBucket>
+                    <bookingType>VM</bookingType>
+                    <direction>Recall/Delivery</direction>
+                    <bucket ref="agreement.bucket.2"/>
+                </settlementBucket>
+                <settlementBucket>
+                    <bookingType>IM</bookingType>
+                    <direction>Call/Return</direction>
+                    <bucket ref="agreement.bucket.3"/>
+                </settlementBucket>
+                <settlementBucket>
+                    <bookingType>IM</bookingType>
+                    <direction>Recall/Delivery</direction>
+                    <bucket ref="agreement.bucket.4"/>
+                </settlementBucket>
+                <settlementBucket>
+                    <bookingType>VM Interest</bookingType>
+                    <direction>Pay</direction>
+                    <bucket ref="agreement.bucket.5"/>
+                </settlementBucket>
+                <settlementBucket>
+                    <bookingType>VM Interest</bookingType>
+                    <direction>Receive</direction>
+                    <bucket ref="agreement.bucket.6"/>
+                </settlementBucket>
+                <settlementBucket>
+                    <bookingType>IM Interest</bookingType>
+                    <direction>Pay</direction>
+                    <bucket ref="agreement.bucket.7"/>
+                </settlementBucket>
+                <settlementBucket>
+                    <bookingType>IM Interest</bookingType>
+                    <direction>Receive</direction>
+                    <bucket ref="agreement.bucket.8"/>
+                </settlementBucket>
+            </settlementInformationConfiguration>
+            <reportingDetails>
+                <notificationLetterType ref="agreement.notif.letter.type"/>
+                <letterTemplateType ref="agreement.letter.template.type"/>
+                <exposureStatementTemplateType ref="agreement.exposure.template.type"/>
+                <letterDistributionMedium ref="agreement.dist.medium"/>
+                <stpIntraDayEvents>No</stpIntraDayEvents>
+                <payFourEyeConditions>
+                    <fixedValue>
+                        <amount ref="agreement.condition.fixed.amount"/>
+                        <currency ref="agreement.base.currency"/>
+                    </fixedValue>
+                    <percentageOftotalExposure ref="agreement.condition.percentage.of.total.exposure"/>
+                </payFourEyeConditions>
+                <receiveFourEyeConditions>
+                    <fixedValue>
+                        <amount ref="agreement.base.currency"/>
+                        <currency ref="agreement.condition.fixed.amount.receive"/>
+                    </fixedValue>
+                    <percentageOftotalExposure ref="agreement.condition.percentage.of.total.exposure.receive"/>
+                </receiveFourEyeConditions>
+            </reportingDetails>
+        </agreementSummary>
+    </scenarioData>
+</dataBean>

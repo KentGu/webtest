@@ -1,0 +1,5 @@
+pre#NAV_Before#select count(1) from colagreementheader where NavPrincipal=12300 and NavPrincipalCur = 45600
+
+post#NAV_After#select count(1) from colagreementheader where NavPrincipal=12300 and NavPrincipalCur = 45600
+
+val#1#`expr ${NAV_After} - ${NAV_Before}`

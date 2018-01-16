@@ -1,0 +1,33 @@
+I'm FILE_TASKEXECLOG=taskexec.log_RELEASE_2012_3_2_0_20140915235426
+I'm database---------=COLLINE201232_BASE_0819 creditderivative 172.20.20.99:1521 pst4
+Target Version: RELEASE_2012_3_2_0
+Target Path:/home/test/server/colline/cluster/bin
+-------------I am task =Audit User Administration Report 1
+Task is Reports : Audit User Administration Report 1
+2014-09-15 23:54:26
+Waiting 180 second for Task  Audit User Administration Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Audit User Administration Report 1] at: 2014-09-15 23:54:26,803
+Finished starting task: [Reports:Audit User Administration Report 1] at: 2014-09-15 23:54:26,954
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Audit User Administration. Please wait ...
+Created Report for:Audit User Administration:PSTBaseline_audUserAdmin
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import MtM 1
+Task is Task Manager : Import MtM 1
+2014-09-15 23:54:46
+Waiting 180 second for Task  Import MtM 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import MtM 1] at: 2014-09-15 23:54:46,602
+Finished starting task: [Task Manager:Import MtM 1] at: 2014-09-15 23:54:46,636
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import MtM. Please wait ...
+Error: MtM Import: No File Found under:/home/test/share/feeddata/2012_3_5/baseline/MTM/
+ abort
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh

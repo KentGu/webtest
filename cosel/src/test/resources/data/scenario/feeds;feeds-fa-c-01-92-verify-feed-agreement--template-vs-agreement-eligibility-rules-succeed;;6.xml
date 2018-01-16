@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/feeds.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <feedAgreement id="feed.non.net.otc.agreement.eligibility.rule">
+            <principal ref="org.p1.lname"/>
+            <counterpartycode ref="org.c1.lname"/>
+            <businessLine>OTC</businessLine>
+            <agreement_description id="feed.non.net.otc.agreement.eligibility.rule.desc" random="true" prefix="feed_agr1_"/>
+            <region ref="region.test1.name"/>
+            <legal_id id="feed.non.net.otc.agreement.eligibility.rule.external.id" random="true"/>
+            <master_documentation ref="master.documentation.1987.isda.master.name"/>
+            <credit_support_documentation ref="credit.documentation.margin.provisions.name"/>
+            <netting_MTM_And_IA>Not-Net</netting_MTM_And_IA>
+            <base_currency ref="ccy.usd.name"/>
+            <original_date random="true" variation="t"/>
+            <im_frequency>Daily</im_frequency>
+            <frequency>Daily</frequency>
+            <im_frequency_start random="true" variation="t"/>
+            <frequency_start random="true" variation="t"/>
+            <im_notification_time>13.00</im_notification_time>
+            <notification_time>13.00</notification_time>
+            <im_resolution_time>10.00</im_resolution_time>
+            <resolution_time>10.00</resolution_time>
+            <im_resolution_day>same</im_resolution_day>
+            <resolution_day>same</resolution_day>
+            <time_zone ref="system.staticData.timeZone.cet.name"/>
+            <holiday_centre ref="hc.test1.name"/>
+            <im_non_workingday_adjusttype>None</im_non_workingday_adjusttype>
+            <non_workingday_adjusttype>None</non_workingday_adjusttype>
+            <product>
+                <productName>QTP</productName>
+                <settlementPeriod>T</settlementPeriod>
+            </product>
+            <elig_rule_template>net_eligibility_rule</elig_rule_template>
+            <asset>
+                <assetName ref="bond.usd.name"/>
+                <settlementDateAbbriviated>T</settlementDateAbbriviated>
+                <applicableParty>PC</applicableParty>
+                <applicableType></applicableType>
+                <templateVsAgreementEligibilityRule id="bond.usd.name.tem.vs.agr.eli.rule">Agreement Only</templateVsAgreementEligibilityRule>
+            </asset>
+            <asset>
+                <assetName ref="bond.gbp.name"/>
+                <settlementDateAbbriviated>T</settlementDateAbbriviated>
+                <applicableParty>P</applicableParty>
+                <applicableType></applicableType>
+                <templateVsAgreementEligibilityRule id="bond.gbp.name.tem.vs.agr.eli.rule">Template Only</templateVsAgreementEligibilityRule>
+            </asset>
+            <asset>
+                <assetName ref="bond.eur2.name"/>
+                <settlementDateAbbriviated>T</settlementDateAbbriviated>
+                <applicableParty>PC</applicableParty>
+                <applicableType></applicableType>
+                <templateVsAgreementEligibilityRule id="bond.eur2.name.tem.vs.agr.eli.rule">Template Only</templateVsAgreementEligibilityRule>
+            </asset>
+            <asset>
+                <assetName ref="equity.usd.name"/>
+                <settlementDateAbbriviated>T</settlementDateAbbriviated>
+                <applicableParty>C</applicableParty>
+                <applicableType></applicableType>
+                <templateVsAgreementEligibilityRule id="equity.usd.name.tem.vs.agr.eli.rule">Remove From Template</templateVsAgreementEligibilityRule>
+            </asset>
+            <asset>
+                <assetName ref="cash.usd.name"/>
+                <settlementDateAbbriviated>T</settlementDateAbbriviated>
+                <applicableParty>PC</applicableParty>
+                <applicableType></applicableType>
+                <templateVsAgreementEligibilityRule id="cash.usd.name.tem.vs.agr.eli.rule">Template + Agreement</templateVsAgreementEligibilityRule>
+            </asset>
+            <rounding_delivery>Up</rounding_delivery>
+            <rounding_recall>Down</rounding_recall>
+            <settlementInstructions>
+                <settlementInstruction>
+                    <bookingType>VM</bookingType>
+                    <direction>Call/Return</direction>
+                    <bucket>VM Call/Return</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>VM</bookingType>
+                    <direction>Delivery/Recall</direction>
+                    <bucket>VM Recall/Delivery</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>IM</bookingType>
+                    <direction>Call/Return</direction>
+                    <bucket>IM Call/Return</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>IM</bookingType>
+                    <direction>Delivery/Recall</direction>
+                    <bucket>IM Recall/Delivery</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>VM Interest</bookingType>
+                    <direction>Pay</direction>
+                    <bucket>Pay</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>VM Interest</bookingType>
+                    <direction>Receive</direction>
+                    <bucket>Receive</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>IM Interest</bookingType>
+                    <direction>Pay</direction>
+                    <bucket>Pay</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>IM Interest</bookingType>
+                    <direction>Receive</direction>
+                    <bucket>Receive</bucket>
+                </settlementInstruction>
+            </settlementInstructions>
+            <distMedium>Email</distMedium>
+            <applyOrgCL>false</applyOrgCL>
+        </feedAgreement>
+
+        <feedResult id="feed.non.net.otc.agreement.eligibility.rule.result">
+            <fileUploaded id="feed.non.net.otc.agreement.eligibility.rule.result.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedStatus id="feed.non.net.otc.agreement.eligibility.rule.status">
+            <systemName>QTP</systemName>
+            <status>Successful</status>
+            <valuationFile ref="feed.non.net.otc.agreement.eligibility.rule.result.file"/>
+            <description>Agreements</description>
+            <successfulFeed>
+                <importType>Agreements</importType>
+                <valuationFile ref="feed.non.net.otc.agreement.eligibility.rule.result.file"/>
+                <total>1</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <agreementSearch id="feed.non.net.otc.agreement.eligibility.rule.search">
+            <description>
+                <filter ref="feed.non.net.otc.agreement.eligibility.rule.desc"/>
+                <linkText ref="feed.non.net.otc.agreement.eligibility.rule.desc"/>
+            </description>
+            <externalId ref="feed.non.net.otc.agreement.eligibility.rule.external.id"/>
+        </agreementSearch>
+
+        <agreementSearchResult id="feed.non.net.otc.agreement.eligibility.rule.search.result">
+            <description ref="feed.non.net.otc.agreement.eligibility.rule.desc"/>
+            <externalId ref="feed.non.net.otc.agreement.eligibility.rule.external.id"/>
+        </agreementSearchResult>
+
+        <agreementSummary id="feed.non.net.otc.agreement.eligibility.rule.summary">
+            <principalCollateralEligibleForReceipt>
+                <assetType ref="bond.eur2.name"/>
+                <templateVsAgreementEligibilityRules ref="bond.eur2.name.tem.vs.agr.eli.rule"/>
+                <settlementPeriod>T</settlementPeriod>
+            </principalCollateralEligibleForReceipt>
+            <principalCollateralEligibleForReceipt>
+                <assetType ref="bond.gbp.name"/>
+                <templateVsAgreementEligibilityRules ref="bond.gbp.name.tem.vs.agr.eli.rule"/>
+                <settlementPeriod>T</settlementPeriod>
+            </principalCollateralEligibleForReceipt>
+            <principalCollateralEligibleForReceipt>
+                <assetType ref="bond.usd.name"/>
+                <templateVsAgreementEligibilityRules ref="bond.usd.name.tem.vs.agr.eli.rule"/>
+                <settlementPeriod>T</settlementPeriod>
+            </principalCollateralEligibleForReceipt>
+            <principalCollateralEligibleForReceipt>
+                <assetType ref="cash.usd.name"/>
+                <templateVsAgreementEligibilityRules ref="cash.usd.name.tem.vs.agr.eli.rule"/>
+                <settlementPeriod>T</settlementPeriod>
+            </principalCollateralEligibleForReceipt>
+
+            <counterpartyCollateralEligibleForReceipt>
+                <assetType ref="bond.eur2.name"/>
+                <templateVsAgreementEligibilityRules ref="bond.eur2.name.tem.vs.agr.eli.rule"/>
+                <settlementPeriod>T</settlementPeriod>
+            </counterpartyCollateralEligibleForReceipt>
+            <counterpartyCollateralEligibleForReceipt>
+                <assetType ref="bond.usd.name"/>
+                <templateVsAgreementEligibilityRules ref="bond.usd.name.tem.vs.agr.eli.rule"/>
+                <settlementPeriod>T</settlementPeriod>
+            </counterpartyCollateralEligibleForReceipt>
+            <counterpartyCollateralEligibleForReceipt>
+                <assetType ref="cash.usd.name"/>
+                <templateVsAgreementEligibilityRules ref="cash.usd.name.tem.vs.agr.eli.rule"/>
+                <settlementPeriod>T</settlementPeriod>
+            </counterpartyCollateralEligibleForReceipt>
+            <counterpartyCollateralEligibleForReceipt>
+                <assetType ref="equity.usd.name"/>
+                <templateVsAgreementEligibilityRules ref="equity.usd.name.tem.vs.agr.eli.rule"/>
+                <settlementPeriod>T</settlementPeriod>
+            </counterpartyCollateralEligibleForReceipt>
+        </agreementSummary>
+
+        <agreement id="agreement.complete"/>
+
+    </scenarioData>
+</dataBean>

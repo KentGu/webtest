@@ -1,0 +1,15 @@
+year=`date '+%Y'`
+month=`date '+%m'|awk -F0 '{if ($0~/0[0-9]/){print$2} else {print$0}}'`
+if [ ${month} -gt 1 ]; then
+	month=`expr ${month} - 1`
+else
+	month=12 && year=`expr ${year} -1`
+fi
+date_str=`eval echo ${year}${month}`
+
+pre#IM_UPDATED#update colinterestmanagergroup set haschanged =1  where monthrange =  '20126' and toMonth='20126'
+pre#IM_NEED_RECAL_BEFORE#select count(*) as num2  from colinterestmanagergroup  where monthrange = '20126' and toMonth='20126' 
+
+post#IM_NEED_RECAL_AFTER#select count(*) as num3  from colinterestmanagergroup  where monthrange = '20126' and toMonth='20126' and haschanged=1 
+
+val#1#${IM_NEED_RECAL_AFTER} -eq 0

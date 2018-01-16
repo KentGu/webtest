@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+		<assetDefinition id="bond.class.with.tolerance.percentage.5.amount.6m.usd">
+			<assetName id="bondAssetClass.name" random="true"/>
+			<status>enabled</status>
+			<category>FI Securities</category>
+			<externalName id="bondAssetClass.external.name" random="true"/>
+			<tolerancePercentage>5</tolerancePercentage>
+			<toleranceAccount>6m</toleranceAccount>
+			<toleranceAccountCurrency>USD</toleranceAccountCurrency>
+		</assetDefinition>
+
+
+		<assetDefinition id="bond.type.under.new.created.bond.class">
+			<parent>
+				<assetName ref="bondAssetClass.name"/>
+			</parent>
+			<assetName id="bondAssetType.name" random="true" />
+			<status>enabled</status>
+			<category>FI Securities</category>
+			<holidayCentre>EUROPE</holidayCentre>
+			<currencyOfDenomination>GBP</currencyOfDenomination>
+			<externalName id="bondAssetType.external.name" random="true" />
+		</assetDefinition>
+
+
+		<instrument id="bond.instrument.with.price.100">
+			<assetClass ref="bondAssetClass.name"/>
+			<assetType ref="bondAssetType.name"/>
+			<instrumentId>
+				<value id="bondinstrument.id" random="true"/>
+			</instrumentId>
+			<description id="bondinstrument.desc" random="true"/>
+			<issuer>
+				<filter>QTP_Eligible_Issuer4</filter>
+				<linkText>QTP_Eligible_Issuer4</linkText>
+			</issuer>
+			<maturityDate>T+100</maturityDate>
+			<priceSource>
+				<priceSourceName>Default</priceSourceName>
+				<dirtyPrice>100</dirtyPrice>
+				<lastPriceChange>T</lastPriceChange>
+				<cleanPrice>100</cleanPrice>
+				<priceDate>T</priceDate>
+			</priceSource>
+			<couponRate>0</couponRate>
+			<issueDate>T</issueDate>
+			<securityStatus>Approved</securityStatus>
+		</instrument>
+
+		<agreement id="otc.not.net.agreement.with.base.currency.usd.tick.all.bonds">
+			<principal id="p1">
+				<criteria>Containing</criteria>
+				<type>Code</type>
+				<filter ref="org.p1.lname"/>
+				<linkText ref="org.p1.lname"/>
+			</principal>
+			<counterparty id="c">
+				<criteria>Containing</criteria>
+				<type>Long Name</type>
+				<filter ref="org.c1.lname"/>
+				<linkText ref="org.c1.lname"/>
+			</counterparty>
+			<agreementDescription id="agr.desc" random="true"/>
+			<agreementDate>T</agreementDate>
+			<baseCurrency>USD</baseCurrency>
+			<nettingIAandMtM>Not-Net</nettingIAandMtM>
+			<vmCallFrequency>
+				<legalReviewFrequency>Daily</legalReviewFrequency>
+			</vmCallFrequency>
+			<imCallFrequency>
+				<legalReviewFrequency>Daily</legalReviewFrequency>
+			</imCallFrequency>
+			<holidayCentre ref="hc.europe.name"/>
+			<product id="p">
+				<productName ref="product.test1.name"/>
+			</product>
+			<collateralAssetClass>
+				<collateralAssetClassName ref="bondAssetClass.name"/>
+				<collateralAssetType>
+					<collateralAssetTypeName ref="bondAssetType.name"/>
+				</collateralAssetType>
+			</collateralAssetClass>
+			<settlementBucket>
+				<bookingType>VM</bookingType>
+				<direction>Call/Return</direction>
+				<bucket>
+					<filter>Standard</filter>
+					<linkText>Standard</linkText>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>VM</bookingType>
+				<direction>Delivery/Recall</direction>
+				<bucket>
+					<filter>Standard</filter>
+					<linkText>Standard</linkText>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>IM</bookingType>
+				<direction>Call/Return</direction>
+				<bucket>
+					<filter>Standard</filter>
+					<linkText>Standard</linkText>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>IM</bookingType>
+				<direction>Delivery/Recall</direction>
+				<bucket>
+					<filter>Standard</filter>
+					<linkText>Standard</linkText>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>VM Interest</bookingType>
+				<direction>Pay</direction>
+				<bucket>
+					<filter>Standard</filter>
+					<linkText>Standard</linkText>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>VM Interest</bookingType>
+				<direction>Receive</direction>
+				<bucket>
+					<filter>Standard</filter>
+					<linkText>Standard</linkText>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>IM Interest</bookingType>
+				<direction>Pay</direction>
+				<bucket>
+					<filter>Standard</filter>
+					<linkText>Standard</linkText>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>IM Interest</bookingType>
+				<direction>Receive</direction>
+				<bucket>
+					<filter>Standard</filter>
+					<linkText>Standard</linkText>
+				</bucket>
+			</settlementBucket>
+			<letterAndDeliveryGroupDetails>
+				<letterDistributionMedium>Email</letterDistributionMedium>
+			</letterAndDeliveryGroupDetails>
+			<agreementStatus>Pending</agreementStatus>
+			<agreementStatus>Approved</agreementStatus>
+			<statementStatus>Pending</statementStatus>
+			<statementStatus>Approved</statementStatus>
+			<agreementId id="agmt.id"/>
+		</agreement>
+
+		<agreementSearch id="search.agreement.by.agreement.description">
+			<description>
+				<filter ref="agr.desc"/>
+			</description>
+		</agreementSearch>
+
+		<agreementSearchResult id="agreement.search.result">
+			<description ref="agr.desc"/>
+		</agreementSearchResult>
+
+		<agreementExposureSummary id="qtp.product">
+			<productList>
+				<productType ref="product.test1.name"/>
+			</productList>
+		</agreementExposureSummary>
+
+
+
+		<tradeDetail id = "otc.trade.with.principal.amount.1m.deal.level.amount.1m">
+			<tradeInformation>
+				<!--<productType ref="product.test1.name"/>-->
+				<tradeDate>T</tradeDate>
+				<effectiveDate>T</effectiveDate>
+				<maturityDate>T+1000</maturityDate>
+				<tradeIdentifierPartyA random="true"/>
+				<partyABranchName random="true"/>
+				<partyBBranchName random="true"/>
+			</tradeInformation>
+			<valuationInformation>
+				<principalValuationAmount>
+					<amount>1000000</amount>
+					<currency>USD</currency>
+				</principalValuationAmount>
+				<valuationDate>T</valuationDate>
+			</valuationInformation>
+			<collateralInformation>
+				<dealLevelUpfront>true</dealLevelUpfront>
+				<dealLevelType>Independent Amount</dealLevelType>
+				<cptyDealLevelAmount>1000000</cptyDealLevelAmount>
+				<!--<dealLevelAmount>1000000</dealLevelAmount>-->
+			</collateralInformation>
+		</tradeDetail>
+
+		<assetBookingSummary id="bond.type">
+			<assetType ref="bondAssetType.name"/>
+		</assetBookingSummary>
+
+		<bookingDetail id="booking.with.bond.instrument.vmamount.-3m.imamount.-4m">
+			<instrumentSearch>
+				<instrumentId>
+					<filter ref="bondinstrument.id"/>
+				</instrumentId>
+				<linkText ref="bondinstrument.id"/>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<vmAmount>3000000</vmAmount>
+				</bookingInformationDetail>
+				<bookingInformationDetail>
+					<imAmount>4000000</imAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+		<agreement id="agreement.new.created.above.will.be.approved.from.amended.status">
+			<statementStatus>Approved</statementStatus>
+		</agreement>
+
+		<exposureEventDetail id="tick.event.previous.agreement.produced.vmreturn.amount.2000000">
+			<eventId id="vmreturnEventId"/>
+			<agreementRequirement>-2,000,000.00</agreementRequirement>
+			<action>VM Return</action>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="tick.event.previous.agreement.produced.imreturn.amount.3000000">
+			<eventId id="imreturnEventId"/>
+			<agreementRequirement>-3,000,000.00</agreementRequirement>
+			<action>IM Return</action>
+		</exposureEventDetail>
+
+
+
+		<bookingDetail id="bulk.booking.on.vm.amount.2m">
+			<instrumentSearch>
+				<instrument>
+					<filter ref="bondinstrument.id"/>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<agreementDiscription ref="agr.desc"/>
+					<principalShortName ref="org.p1.lname"/>
+					<counterpartyShortName ref="org.c1.lname"/>
+					<agreementId ref="agmt.id"/>
+					<bookingMovement>VM Return</bookingMovement>
+					<vmAmount>2000000</vmAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="bulk.booking.on.im.amount.1m">
+			<instrumentSearch>
+				<instrument>
+					<filter ref="bondinstrument.id"/>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<agreementDiscription ref="agr.desc"/>
+					<principalShortName ref="org.p1.lname"/>
+					<counterpartyShortName ref="org.c1.lname"/>
+					<agreementId ref="agmt.id"/>
+					<bookingMovement>IM Return</bookingMovement>
+					<imAmount>1000000</imAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<exposureManagementMessage id="Expected:-3000000Actual:-1000000">
+			<messageDetail>
+				<index>2</index>
+				<message>Attempting to make a booking that does not meet the Required Amount. (Expected: -3,000,000.00, Actual: -1,000,000.00) Continue?</message>
+				<overrideWarning>true</overrideWarning>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<exposureManagementMessage id="no.warning.message.shown">
+			<messageDetail>
+				<message>No errors or warnings found.</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+
+
+		<bookingDetail id="bulk.booking.on.vm.amount.2100000">
+			<instrumentSearch>
+				<instrument>
+					<filter ref="bondinstrument.id"/>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<agreementDiscription ref="agr.desc"/>
+					<principalShortName ref="org.p1.lname"/>
+					<counterpartyShortName ref="org.c1.lname"/>
+					<agreementId ref="agmt.id"/>
+					<bookingMovement>VM Return</bookingMovement>
+					<vmAmount>2100000</vmAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="bulk.booking.on.vm.amount.2250000">
+			<instrumentSearch>
+				<instrument>
+					<filter ref="bondinstrument.id"/>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<agreementDiscription ref="agr.desc"/>
+					<principalShortName ref="org.p1.lname"/>
+					<counterpartyShortName ref="org.c1.lname"/>
+					<agreementId ref="agmt.id"/>
+					<bookingMovement>VM Return</bookingMovement>
+					<vmAmount>2250000</vmAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="bulk.booking.on.vm.amount.2600000">
+			<instrumentSearch>
+				<instrument>
+					<filter ref="bondinstrument.id"/>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<agreementDiscription ref="agr.desc"/>
+					<principalShortName ref="org.p1.lname"/>
+					<counterpartyShortName ref="org.c1.lname"/>
+					<agreementId ref="agmt.id"/>
+					<bookingMovement>VM Return</bookingMovement>
+					<vmAmount>2600000</vmAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+
+		<bookingDetail id="bulk.booking.on.im.amount.3150000">
+			<instrumentSearch>
+				<instrument>
+					<filter ref="bondinstrument.id"/>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<agreementDiscription ref="agr.desc"/>
+					<principalShortName ref="org.p1.lname"/>
+					<counterpartyShortName ref="org.c1.lname"/>
+					<agreementId ref="agmt.id"/>
+					<bookingMovement>IM Return</bookingMovement>
+					<imAmount>3150000</imAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="bulk.booking.on.im.amount.3200000">
+			<instrumentSearch>
+				<instrument>
+					<filter ref="bondinstrument.id"/>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<agreementDiscription ref="agr.desc"/>
+					<principalShortName ref="org.p1.lname"/>
+					<counterpartyShortName ref="org.c1.lname"/>
+					<agreementId ref="agmt.id"/>
+					<bookingMovement>IM Return</bookingMovement>
+					<imAmount>3200000</imAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="bulk.booking.on.im.amount.3300000">
+			<instrumentSearch>
+				<instrument>
+					<filter ref="bondinstrument.id"/>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<agreementDiscription ref="agr.desc"/>
+					<principalShortName ref="org.p1.lname"/>
+					<counterpartyShortName ref="org.c1.lname"/>
+					<agreementId ref="agmt.id"/>
+					<bookingMovement>IM Return</bookingMovement>
+					<imAmount>3300000</imAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+
+		<exposureManagementMessage id="expected.amount.3150000.actual.amount.3200000">
+			<messageDetail>
+				<index>2</index>
+				<message>Attempting to make a booking that exceeds the required amount (Expected: -3,150,000.00, Actual: -3,200,000.00) Continue?</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+
+
+		<exposureManagementMessage id="expected.amount.2100000.actual.amount.2250000">
+			<messageDetail>
+				<index>1</index>
+				<message>Attempting to make a booking that exceeds the required amount (Expected: -2,100,000.00, Actual: -2,250,000.00) Continue?</message>
+				<overrideWarning>true</overrideWarning>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<exposureManagementMessage id="expected.amount.2100000.actual.amount.2600000">
+			<messageDetail>
+				<index>1</index>
+				<message>Attempting to make a booking that exceeds the required amount (Expected: -2,100,000.00, Actual: -2,600,000.00) Continue?</message>
+				<overrideWarning>true</overrideWarning>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<exposureManagementMessage id="expected.amount.3150000.actual.amount.3300000">
+			<messageDetail>
+				<index>2</index>
+				<message>Attempting to make a booking that exceeds the required amount (Expected: -3,150,000.00, Actual: -3,300,000.00) Continue?</message>
+				<overrideWarning>true</overrideWarning>
+			</messageDetail>
+		</exposureManagementMessage>
+
+
+
+
+
+
+	</scenarioData>
+</dataBean>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <letterConfiguration id="Recall.tickCreateSystemDraft.callandRecall.tickCreateSystemDraft">
+            <marginLetter>
+                <letterType>Recall</letterType>
+                <createSystemDraft>true</createSystemDraft>
+            </marginLetter>
+            <marginLetter>
+                <letterType>Call &amp; Recall</letterType>
+                <createSystemDraft>true</createSystemDraft>
+            </marginLetter>
+        </letterConfiguration>
+
+        <agreement id="agr31320.otc.net">
+            <agreementId id="agrid">2628</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="call.agreementRequirement.1m.pendingReview">
+            <action>Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="recall.agreementRequirement.2m.pendingReview">
+            <action>Recall</action>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <marginLetter id="createCallLetter">
+            <letterType>Margin Call</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <assetHoldingsandValuationReport>true</assetHoldingsandValuationReport>
+                </emailAttachments>
+            </letterSetupDetails>
+        </marginLetter>
+
+        <exposureEventDetail id="call.agreementRequirement.1m.MarginRequestIssued">
+            <action>Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Margin Request Issued</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="recall.agreementRequirement.2m.MarginRequestIssued">
+            <action>Recall</action>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <callStatus>Margin Request Issued</callStatus>
+        </exposureEventDetail>
+
+        <marginLetter id="createRecallLetter.norminalAmountRequired.apply.1k">
+            <letterType>Margin Recall</letterType>
+            <requestTypeAndAssetSelection>
+                <eligibleAssetSelection>
+                    <movementAssets>
+                        <eligibleAssetSelectionDetail>
+                            <norminalAmountRequired>1k</norminalAmountRequired>
+                        </eligibleAssetSelectionDetail>
+                        <eligibleAsset>
+                            <instrumentId>qtp-Bond-Usd-Instrument</instrumentId>
+                        </eligibleAsset>
+                    </movementAssets>
+                </eligibleAssetSelection>
+                <alertHandling>
+                    <accept>true</accept>
+                </alertHandling>
+            </requestTypeAndAssetSelection>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <assetHoldingsandValuationReport>true</assetHoldingsandValuationReport>
+                </emailAttachments>
+            </letterSetupDetails>
+        </marginLetter>
+
+        <agreement id="agr31320">
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+        <marginLetter id="createCallAndRecallLetter.norminalAmountRequired.apply.2k">
+            <letterType>Margin Call &amp; Recall</letterType>
+            <requestTypeAndAssetSelection>
+                <eligibleAssetSelection>
+                    <movementAssets>
+                        <eligibleAssetSelectionDetail>
+                            <norminalAmountRequired>2k</norminalAmountRequired>
+                        </eligibleAssetSelectionDetail>
+                        <eligibleAsset>
+                            <instrumentId id="bond.usd.instrumentId">qtp-Bond-Usd-Instrument</instrumentId>
+                        </eligibleAsset>
+                    </movementAssets>
+                </eligibleAssetSelection>
+                <alertHandling>
+                    <accept>true</accept>
+                </alertHandling>
+                <eligibleAssetSelection>
+                </eligibleAssetSelection>
+            </requestTypeAndAssetSelection>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <assetHoldingsandValuationReport>true</assetHoldingsandValuationReport>
+                </emailAttachments>
+            </letterSetupDetails>
+        </marginLetter>
+
+        <assetBookingSummary id="asset.type.bond.usd">
+            <assetType>qtp_bond_usd</assetType>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="bond.usd.recall.systemDraft.2k">
+            <assetType>qtp_bond_usd</assetType>
+            <!--<instrumentId>qtp-Bond-Usd-Instrument</instrumentId>-->
+            <movement>Recall</movement>
+            <status>System Draft</status>
+            <bookingSource>Auto Book</bookingSource>
+            <marketValue>2,000.00</marketValue>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="bond.usd.recall.systemDraft.1k">
+            <assetType>qtp_bond_usd</assetType>
+            <!--<instrumentId>qtp-Bond-Usd-Instrument</instrumentId>-->
+            <movement>Recall</movement>
+            <status>System Draft</status>
+            <bookingSource>Auto Book</bookingSource>
+            <marketValue>1,000.00</marketValue>
+        </assetBookingSummary>
+
+
+
+
+    </scenarioData>
+</dataBean>

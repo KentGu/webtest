@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+		<agreement id="agr21583.multiModel.fcm">
+			<agreementId id="agr21583.id">2507</agreementId>
+		</agreement>
+
+		<multiModelAgreementStatement id="m1">
+			<multimodelAssetHoldingSummary>
+				<modelName>m1</modelName>
+			</multimodelAssetHoldingSummary>
+		</multiModelAgreementStatement>
+
+		<collateralAssetHoldingSummary id="addedAssetTypeAllPresent">
+			<collateralAssetHoldingSummaryList>
+				<assetClass ref="equity.name"/>
+				<assetTypeHoldingSummaryList>
+					<assetType ref="equity.usd.name"/>
+				</assetTypeHoldingSummaryList>
+			</collateralAssetHoldingSummaryList>
+			<collateralAssetHoldingSummaryList>
+				<assetClass ref="cash.name"/>
+				<assetTypeHoldingSummaryList>
+					<assetType>CASH-GBP</assetType>
+				</assetTypeHoldingSummaryList>
+				<assetTypeHoldingSummaryList>
+					<assetType>CASH-EUR</assetType>
+				</assetTypeHoldingSummaryList>
+			</collateralAssetHoldingSummaryList>
+			<collateralAssetHoldingSummaryList>
+				<assetClass ref="bond.name"/>
+				<assetTypeHoldingSummaryList>
+					<assetType ref="bond.eur2.name"/>
+				</assetTypeHoldingSummaryList>
+			</collateralAssetHoldingSummaryList>
+		</collateralAssetHoldingSummary>
+
+		<assetBookingSummary id="asset.type.CASH.EUR">
+			<assetType>CASH-EUR</assetType>
+		</assetBookingSummary>
+
+		<cashMovementDetail id="Booking1.CapPay.TSA.1m">
+			<assetType>CASH-EUR</assetType>
+			<bookingType>Cashflow</bookingType>
+			<movementType>Capitalise pay</movementType>
+			<amount>1m</amount>
+		</cashMovementDetail>
+
+		<cashMovementSummary id="Booking1.CapPay.TSA.1m.open">
+			<assetType>CASH-EUR</assetType>
+		</cashMovementSummary>
+
+		<cashMovementDetail id="Booking1.CapPay.TSA.groupSettlementIdIsEmpty">
+			<groupSettlementId></groupSettlementId>
+		</cashMovementDetail>
+
+		<cashMovementDetail id="Booking2.CapPay.TSA.2m">
+			<assetType>CASH-EUR</assetType>
+			<bookingType>Cashflow</bookingType>
+			<movementType>Capitalise pay</movementType>
+			<amount>2m</amount>
+		</cashMovementDetail>
+
+		<cashMovementSummary id="Booking2.CapPay.TSA.2m.open">
+			<assetType>CASH-EUR</assetType>
+			<Amount>2,000,000.00</Amount>
+		</cashMovementSummary>
+
+		<cashMovementDetail id="Booking2.CapPay.TSA.groupSettlementIdIsEmpty">
+			<groupSettlementId></groupSettlementId>
+		</cashMovementDetail>
+
+		<assetBookingSummary id="asset.type.CASH.GBP">
+			<assetType>CASH-GBP</assetType>
+		</assetBookingSummary>
+
+		<cashMovementDetail id="Booking3.CapPay.TSA.3m">
+			<assetType>CASH-GBP</assetType>
+			<bookingType>Cashflow</bookingType>
+			<movementType>Capitalise pay</movementType>
+			<amount>3m</amount>
+		</cashMovementDetail>
+
+		<cashMovementSummary id="Booking3.CapPay.TSA.3m.open">
+			<assetType>CASH-GBP</assetType>
+		</cashMovementSummary>
+
+		<cashMovementDetail id="Booking3.CapPay.TSA.groupSettlementIdIsEmpty">
+			<groupSettlementId></groupSettlementId>
+		</cashMovementDetail>
+
+
+	</scenarioData>
+</dataBean>

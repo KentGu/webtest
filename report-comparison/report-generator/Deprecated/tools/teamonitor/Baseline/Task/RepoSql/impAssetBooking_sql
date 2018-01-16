@@ -1,0 +1,5 @@
+pre#Booking_Before#select count(1) from ColSecurityParAmount where description like 'Baseline'
+
+post#Booking_After#select count(1) from ColSecurityParAmount where description like 'Baseline'
+
+val#1#`expr ${Booking_After} - ${Booking_Before}`

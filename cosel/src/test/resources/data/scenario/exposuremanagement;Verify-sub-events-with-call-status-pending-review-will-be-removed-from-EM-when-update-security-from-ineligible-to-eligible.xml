@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <securitySearch id="26757.bond.usd">
+            <matured>All</matured>
+            <instrument>
+                <filter id="26757.bond.usd.id">26757_bond_usd_1</filter>
+                <!--<linkText ref="26527.bond.usd"/>-->
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="26757.bond.usd.approve">
+            <instrument ref="26757.bond.usd.id"/>
+        </securitySearchResult>
+
+        <instrument id="26757.bond.usd.changeMaturityDate.tPlus10.changeRecordDate.tMinus10">
+            <recordDate>t-10</recordDate>
+            <maturityDate>t+10</maturityDate>
+        </instrument>
+
+        <securitySearch id="26757.equity.usd">
+            <matured>All</matured>
+            <instrument>
+                <filter id="26757.equity.usd.id">26757_equity_usd_1</filter>
+                <!--<linkText ref="29482.equity.usd.id"/>-->
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="26757.equity.usd.approve">
+            <instrument ref="26757.equity.usd.id"/>
+        </securitySearchResult>
+
+        <instrument id="26757.equity.usd.changeRecordDate.tMinus10">
+            <recordDate>t-10</recordDate>
+        </instrument>
+
+        <eligibilityRulesTemplateSearch id="ERT.26757">
+            <eligibilityRulesTemplateName>
+                <filter id="ERT.26757">26757_EL</filter>
+                <linkText ref="ERT.26757"/>
+            </eligibilityRulesTemplateName>
+        </eligibilityRulesTemplateSearch>
+
+        <eligibilityRulesTemplate id="ERT.cash.usd.selectPC">
+            <templateName ref="ERT.26757"/>
+            <collateralAssetClass name="qtp_cash">
+                <collateralAssetClassName>qtp_cash</collateralAssetClassName>
+                <collateralAssetType name="CASH-USD">
+                    <collateralAssetTypeName>CASH-USD</collateralAssetTypeName>
+                </collateralAssetType>
+            </collateralAssetClass>
+        </eligibilityRulesTemplate>
+
+        <eligibilityRulesTemplate id="ERT.cash.usd.selectP">
+            <collateralAssetClass name="qtp_cash">
+                <collateralAssetType name="CASH-USD">
+                    <applicableParty>P</applicableParty>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </eligibilityRulesTemplate>
+
+        <eligibilityRulesTemplate id="ERT.26757.approve">
+            <templateName ref="ERT.26757"/>
+        </eligibilityRulesTemplate>
+        
+        <agreement id="agr26757.otc.net">
+            <agreementId id="agrid">2642</agreementId>
+        </agreement>
+
+        <agreement id="bond.usd.noEligibilityRule">
+            <collateralAssetClass name="qtp_bond">
+                <collateralAssetClassName>qtp_bond</collateralAssetClassName>
+                <collateralAssetType name="qtp_bond_usd">
+                    <collateralAssetTypeName>qtp_bond_usd</collateralAssetTypeName>
+                    <eligibilityRule>
+                        <excludeInstrument>
+                            <filter>26757_bond_usd_1</filter>
+                            <linkText>26757_bond_usd_1,m1</linkText>
+                        </excludeInstrument>
+                    </eligibilityRule>
+                </collateralAssetType>
+            </collateralAssetClass>
+        </agreement>
+
+        <agreement id="bond.usd.withEligibilityRule.excludeInstrumentId">
+            <collateralAssetClass name="qtp_bond">
+                <collateralAssetClassName>qtp_bond</collateralAssetClassName>
+                <collateralAssetType name="qtp_bond_usd">
+                    <collateralAssetTypeName>qtp_bond_usd</collateralAssetTypeName>
+                    <eligibilityRule>
+                        <excludeInstrument>
+                            <filter>26757_bond_usd_1</filter>
+                            <linkText>26757_bond_usd_1,m1</linkText>
+                        </excludeInstrument>
+                    </eligibilityRule>
+                </collateralAssetType>
+            </collateralAssetClass>
+        </agreement>
+
+        <agreement id="equity.usd.noEligibilityRule">
+            <collateralAssetClass name="qtp_equity">
+                <collateralAssetClassName>qtp_equity</collateralAssetClassName>
+                <collateralAssetType name="qtp_equity_usd">
+                    <collateralAssetTypeName>qtp_equity_usd</collateralAssetTypeName>
+                    <eligibilityRule>
+                        <eligibleCurrency>GBP</eligibleCurrency>
+                    </eligibilityRule>
+                </collateralAssetType>
+            </collateralAssetClass>
+        </agreement>
+
+        <agreement id="equity.usd.withEligibilityRule.EligibleCurrencies.GBP">
+            <collateralAssetClass name="qtp_equity">
+                <collateralAssetClassName>qtp_equity</collateralAssetClassName>
+                <collateralAssetType name="qtp_equity_usd">
+                    <collateralAssetTypeName>qtp_equity_usd</collateralAssetTypeName>
+                    <eligibilityRule>
+                        <eligibleCurrency>GBP</eligibleCurrency>
+                    </eligibilityRule>
+                </collateralAssetType>
+            </collateralAssetClass>
+        </agreement>
+
+        <agreement id="agr26757">
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+
+        <securitySearch id="instrument.equity.usd">
+            <instrument>
+                <filter>26757_equity_usd_1</filter>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="instrument.equity.usd.searchResult">
+            <instrument>26757_equity_usd_1</instrument>
+        </securitySearchResult>
+
+        <instrument id="instrument.equity.usd.currency.GBP">
+            <currencyOfDenomination>GBP</currencyOfDenomination>
+            <securityStatus>Approved</securityStatus>
+        </instrument>
+
+        <exposureEventDetail id="subReq.agreementRequirement.4m">
+            <action>Substitution Request</action>
+            <agreementRequirement>4,000,000.00</agreementRequirement>
+            <element>CASH-USD</element>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subReq.agreementRequirement.2m">
+            <action>Substitution Request</action>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <element>26757_equity_usd_1,m1</element>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subCon.agreementRequirement.1m">
+            <action>Substitution Confirmation</action>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <element>26757_bond_usd_1,m1</element>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+
+        <agreement id="bond.usd.withEligibilityRule.excludeInstrumentId1">
+            <collateralAssetClass name="qtp_bond">
+                <collateralAssetClassName>qtp_bond</collateralAssetClassName>
+                <collateralAssetType name="qtp_bond_usd">
+                    <collateralAssetTypeName>qtp_bond_usd</collateralAssetTypeName>
+                </collateralAssetType>
+            </collateralAssetClass>
+        </agreement>
+
+        <agreement id="bond.usd.withEligibilityRule.NotExcludeInstrumentId">
+            <collateralAssetClass name="qtp_bond">
+                <collateralAssetClassName>qtp_bond</collateralAssetClassName>
+                <collateralAssetType name="qtp_bond_usd">
+                    <collateralAssetTypeName>qtp_bond_usd</collateralAssetTypeName>
+                    <eligibilityRule>
+                        <excludeInstrument remove="true">
+                            <linkText>26757_bond_usd_1,m1</linkText>
+                        </excludeInstrument>
+                    </eligibilityRule>
+                </collateralAssetType>
+            </collateralAssetClass>
+        </agreement>
+
+        <agreement id="cash.usd.notSelectedInAgreement">
+            <collateralAssetClass name="qtp_cash">
+                <collateralAssetClassName>qtp_cash</collateralAssetClassName>
+                <collateralAssetType name="CASH-USD">
+                    <collateralAssetTypeName>CASH-USD</collateralAssetTypeName>
+                </collateralAssetType>
+            </collateralAssetClass>
+        </agreement>
+
+        <agreement id="cash.usd.SelectedForPCInAgreement">
+            <collateralAssetClass name="qtp_cash">
+                <collateralAssetClassName>qtp_cash</collateralAssetClassName>
+                <collateralAssetType name="CASH-USD">
+                    <collateralAssetTypeName>CASH-USD</collateralAssetTypeName>
+                    <templateVsAgreementEligibilityRules>Template + Agreement</templateVsAgreementEligibilityRules>
+                </collateralAssetType>
+            </collateralAssetClass>
+        </agreement>
+
+        <exposureEventDetail id="subReq.agreementRequirement.4m.notDisplay" apply="false">
+            <action>Substitution Request</action>
+            <agreementRequirement>4,000,000.00</agreementRequirement>
+            <element>CASH-USD</element>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subReq.agreementRequirement.2m.notDisplay" apply="false">
+            <action>Substitution Request</action>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <element>26757_equity_usd_1,m1</element>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subCon.agreementRequirement.1m.notDisplay" apply="false">
+            <action>Substitution Confirmation</action>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <element>26757_bond_usd_1,m1</element>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+    </scenarioData>
+</dataBean>

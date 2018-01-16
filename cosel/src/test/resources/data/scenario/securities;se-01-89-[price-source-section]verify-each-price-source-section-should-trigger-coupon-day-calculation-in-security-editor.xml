@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <instrument id="bondinstrument">
+            <assetClass>qtp_bond</assetClass>
+            <assetType>qtp_bond_usd</assetType>
+            <instrumentId>
+            <value id="bondinstrument.id" random="true" prefix="bond_"/>
+            </instrumentId>
+            <market>USA</market>
+            <description id="bondinstrument.des" random="true"/>
+            <issuer>
+            <filter>QTP_Eligible_Issuer4</filter>
+            <linkText>QTP_Eligible_Issuer4</linkText>
+            </issuer>
+            <maturityDate>T+100</maturityDate>
+            <currencyOfDenomination>USD</currencyOfDenomination>
+            <manuallyOverrideLastCouponDate>true</manuallyOverrideLastCouponDate>
+            <nextCouponDate>T-85</nextCouponDate>
+            <manuallyOverrideNextCouponDate>true</manuallyOverrideNextCouponDate>
+            <lastCouponDate>T-90</lastCouponDate>
+            <accrualBasis>Act/Act</accrualBasis>
+            <couponRate>0</couponRate>
+            <recordDate>T</recordDate>
+            <issueDate>T</issueDate>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <securitySearch id="SecuritySearch">
+            <instrument>
+            <type>Starting with</type>
+            <filter ref="bondinstrument.id"/>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="SearchWillBeApprovedBond">
+            <instrument ref="bondinstrument.id"/>
+        </securitySearchResult>
+
+        <securitySearchResult id="SearchSecurity">
+            <instrument ref="bondinstrument.id"/>
+        </securitySearchResult>
+
+        <instrument id="instrument.Check.Values">
+        <couponDayCount>85</couponDayCount>
+        </instrument>
+
+        <instrument id="instrument.AccrualBasis">
+            <accrualBasis>30/360</accrualBasis>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <instrument id="instrument.CouponDaysCount.Check.Values">
+            <couponDayCount>83</couponDayCount>
+        </instrument>
+
+        <instrument id="instrument.AccrualBasis.12">
+            <manuallyOverrideLastCouponDate>true</manuallyOverrideLastCouponDate>
+            <nextCouponDate>T-13</nextCouponDate>
+            <manuallyOverrideNextCouponDate>true</manuallyOverrideNextCouponDate>
+            <lastCouponDate>T-37</lastCouponDate>
+            <couponRate>0</couponRate>
+            <accrualBasis>30E/Act</accrualBasis>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <instrument id="instrument.CouponDaysCount.Check.Values.12">
+            <couponDayCount>12</couponDayCount>
+        </instrument>
+
+        <instrument id="instrument.AccrualBasis.13">
+            <accrualBasis>Act/Act</accrualBasis>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <instrument id="instrument.CouponDaysCount.Check.Values.13">
+            <couponDayCount>13</couponDayCount>
+        </instrument>
+
+        <instrument id="instrument.CouponDayCount.12">
+            <manuallyOverrideLastCouponDate>true</manuallyOverrideLastCouponDate>
+            <nextCouponDate>T-12</nextCouponDate>
+            <manuallyOverrideNextCouponDate>true</manuallyOverrideNextCouponDate>
+            <lastCouponDate>T-37</lastCouponDate>
+            <couponRate>0</couponRate>
+            <accrualBasis>Act/Act</accrualBasis>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <instrument id="instrument.CouponDayCount.Check.Values.12">
+            <couponDayCount>12</couponDayCount>
+        </instrument>
+
+        <instrument id="instrument.CouponDayCount.34">
+            <accrualBasis>Act/Act</accrualBasis>
+            <manuallyOverrideLastCouponDate>true</manuallyOverrideLastCouponDate>
+            <nextCouponDate>T-34</nextCouponDate>
+            <manuallyOverrideNextCouponDate>true</manuallyOverrideNextCouponDate>
+            <lastCouponDate>T-34</lastCouponDate>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <instrument id="instrument.CouponDayCount.Check.Values.34">
+            <couponDayCount>34</couponDayCount>
+        </instrument>
+
+        <instrument id="instrument.CouponDayCount.83">
+            <accrualBasis>Act/Act</accrualBasis>
+            <manuallyOverrideLastCouponDate>true</manuallyOverrideLastCouponDate>
+            <nextCouponDate>T-83</nextCouponDate>
+            <manuallyOverrideNextCouponDate>true</manuallyOverrideNextCouponDate>
+            <lastCouponDate>T-83</lastCouponDate>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <instrument id="instrument.CouponDayCount.Check.Values.83">
+            <couponDayCount>83</couponDayCount>
+        </instrument>
+
+        <instrument id="instrument.CouponDayCount.84">
+            <accrualBasis>Act/Act</accrualBasis>
+            <manuallyOverrideLastCouponDate>true</manuallyOverrideLastCouponDate>
+            <nextCouponDate>T-84</nextCouponDate>
+            <manuallyOverrideNextCouponDate>true</manuallyOverrideNextCouponDate>
+            <lastCouponDate>T-84</lastCouponDate>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <instrument id="instrument.CouponDayCount.Check.Values.84">
+            <couponDayCount>84</couponDayCount>
+        </instrument>
+
+        <instrument id="instrument.CouponDayCount.empty">
+            <accrualBasis>Act/Act</accrualBasis>
+            <manuallyOverrideLastCouponDate>true</manuallyOverrideLastCouponDate>
+            <nextCouponDate>T</nextCouponDate>
+            <manuallyOverrideNextCouponDate>true</manuallyOverrideNextCouponDate>
+            <lastCouponDate>T</lastCouponDate>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <instrument id="instrument.CouponDayCount.Check.Values.empty">
+            <couponDayCount>0</couponDayCount>
+        </instrument>
+
+    </scenarioData>
+
+</dataBean>

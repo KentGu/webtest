@@ -1,0 +1,1153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <optimisationRule id="ranking.asset.ori">
+            <ruleName>ranking_asset_update</ruleName>
+            <optimisationFilterRuleAttribute name="ranking.asset.name1">
+                <attributeName>Maturity</attributeName>
+                <attributeDetail name="detail.name1">
+                    <selectedValue>ASC</selectedValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name2">
+                <attributeName>Issuer Rating Level</attributeName>
+                <attributeDetail name="detail.name21">
+                    <type>MOODYS</type>
+                    <selectedValue>ASC</selectedValue>
+                </attributeDetail>
+                <attributeDetail name="detail.name22">
+                    <type>SandP</type>
+                    <selectedValue>DESC</selectedValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name3">
+                <attributeName>Record Date</attributeName>
+                <attributeDetail  name="detail.name3">
+                    <selectedValue>ASC</selectedValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name4">
+                <attributeName>UDF 10</attributeName>
+                <attributeDetail name="detail.name41">
+                    <inputValue>www</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail name="detail.name42">
+                    <inputValue>eee</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name5">
+                <attributeName>Asset Type</attributeName>
+                <attributeDetail  name="detail.name5">
+                    <selectedValue>CASH-USD</selectedValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name6">
+                <attributeName>Source System</attributeName>
+                <attributeDetail  name="detail.name6">
+                    <selectedValue>FS1</selectedValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name7">
+                <attributeName>Delivery Booking Priority</attributeName>
+                <attributeDetail  name="detail.name71">
+                    <selectedValue>High</selectedValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name72">
+                    <selectedValue>Medium</selectedValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name8">
+                <attributeName>Recall Booking Priority</attributeName>
+                <attributeDetail  name="detail.name81">
+                    <selectedValue>Low</selectedValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name82">
+                    <selectedValue>High</selectedValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name9">
+                <attributeName>Issuer</attributeName>
+                <attributeDetail  name="detail.name91">
+                    <type>Long Name</type>
+                    <filterValue>
+                        <linkText>QTP_Eligible_Issuer2</linkText>
+                    </filterValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name92">
+                    <type>Code</type>
+                    <filterValue>
+                        <linkText>QTP_Eligible_Issuer3</linkText>
+                    </filterValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name10">
+                <attributeName>Country of Issuer</attributeName>
+                <attributeDetail  name="detail.name101">
+                    <selectedValue>HONG KONG</selectedValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name102">
+                    <selectedValue>CHINA</selectedValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name11">
+                <attributeName>Issue Rating Level</attributeName>
+                <attributeDetail  name="detail.name111">
+                    <type>MOODYS</type>
+                    <selectedValue>ASC</selectedValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name112">
+                    <type>SandP</type>
+                    <selectedValue>DESC</selectedValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name12">
+                <attributeName>Next Coupon Date</attributeName>
+                <attributeDetail  name="detail.name121">
+                    <selectedValue>DESC</selectedValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name13">
+                <attributeName>Ex Div Date</attributeName>
+                <attributeDetail  name="detail.name131">
+                    <selectedValue>ASC</selectedValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name14">
+                <attributeName>Issue Date</attributeName>
+                <attributeDetail  name="detail.name141">
+                    <selectedValue>ASC</selectedValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name15">
+                <attributeName>UDF 16</attributeName>
+                <attributeDetail  name="detail.name151">
+                    <selectedValue>DESC</selectedValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name16">
+                <attributeName>UDF 17</attributeName>
+                <attributeDetail  name="detail.name161">
+                    <selectedValue>ASC</selectedValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name17">
+                <attributeName>UDF 18</attributeName>
+                <attributeDetail  name="detail.name171">
+                    <selectedValue>ASC</selectedValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name18">
+                <attributeName>UDF 19</attributeName>
+                <attributeDetail  name="detail.name181">
+                    <selectedValue>ASC</selectedValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name19">
+                <attributeName>UDF 20</attributeName>
+                <attributeDetail  name="detail.name191">
+                    <selectedValue>DESC</selectedValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name20">
+                <attributeName>UDF 21</attributeName>
+                <attributeDetail  name="detail.name201">
+                    <selectedValue>DESC</selectedValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name21">
+                <attributeName>UDF 22</attributeName>
+                <attributeDetail  name="detail.name211">
+                    <selectedValue>ASC</selectedValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name22">
+                <attributeName>UDF 23</attributeName>
+                <attributeDetail  name="detail.name221">
+                    <selectedValue>ASC</selectedValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name23">
+                <attributeName>UDF 24</attributeName>
+                <attributeDetail  name="detail.name231">
+                    <selectedValue>ASC</selectedValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name24">
+                <attributeName>UDF 25</attributeName>
+                <attributeDetail  name="detail.name241">
+                    <selectedValue>DESC</selectedValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name25">
+                <attributeName>UDF 26</attributeName>
+                <attributeDetail  name="detail.name251">
+                    <selectedValue>ASC</selectedValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name26">
+                <attributeName>UDF 27</attributeName>
+                <attributeDetail  name="detail.name261">
+                    <selectedValue>DESC</selectedValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name27">
+                <attributeName>UDF 28</attributeName>
+                <attributeDetail  name="detail.name271">
+                    <selectedValue>ASC</selectedValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name28">
+                <attributeName>UDF 29</attributeName>
+                <attributeDetail  name="detail.name281">
+                    <selectedValue>ASC</selectedValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name29">
+                <attributeName>UDF 30</attributeName>
+                <attributeDetail  name="detail.name291">
+                    <selectedValue>ASC</selectedValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name30">
+                <attributeName>UDF 1</attributeName>
+                <attributeDetail  name="detail.name301">
+                    <inputValue>RW</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name302">
+                    <inputValue>sdf</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name31">
+                <attributeName>UDF 11</attributeName>
+                <attributeDetail  name="detail.name311">
+                    <inputValue>sdf2</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name312">
+                    <inputValue>sgh</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name32">
+                <attributeName>UDF 12</attributeName>
+                <attributeDetail  name="detail.name321">
+                    <inputValue>123</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name322">
+                    <inputValue>zxc</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name33">
+                <attributeName>UDF 13</attributeName>
+                <attributeDetail  name="detail.name331">
+                    <inputValue>wer</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name332">
+                    <inputValue>g5gt</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name34">
+                <attributeName>UDF 14</attributeName>
+                <attributeDetail  name="detail.name341">
+                    <inputValue>dfg</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name342">
+                    <inputValue>rer4</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name35">
+                <attributeName>UDF 15</attributeName>
+                <attributeDetail  name="detail.name351">
+                    <inputValue>frth</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name352">
+                    <inputValue>DEG</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name36">
+                <attributeName>UDF 2</attributeName>
+                <attributeDetail  name="detail.name361">
+                    <inputValue>gfdgr</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name362">
+                    <inputValue>gfggt5</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name37">
+                <attributeName>UDF 3</attributeName>
+                <attributeDetail  name="detail.name371">
+                    <inputValue>r4gt</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name372">
+                    <inputValue>gye5t</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name38">
+                <attributeName>UDF 4</attributeName>
+                <attributeDetail  name="detail.name381">
+                    <inputValue>g4grt</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name382">
+                    <inputValue>g4tght</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name39">
+                <attributeName>UDF 5</attributeName>
+                <attributeDetail  name="detail.name391">
+                    <inputValue>g56y</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name392">
+                    <inputValue>h5555</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name40">
+                <attributeName>UDF 6</attributeName>
+                <attributeDetail  name="detail.name401">
+                    <inputValue>htgg</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name402">
+                    <inputValue>3DDF</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name41">
+                <attributeName>UDF 7</attributeName>
+                <attributeDetail  name="detail.name411">
+                    <inputValue>fdrfsd</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name412">
+                    <inputValue>hther</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name42">
+                <attributeName>UDF 8</attributeName>
+                <attributeDetail  name="detail.name421">
+                    <inputValue>gtrgth</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name422">
+                    <inputValue>hy6u</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name43">
+                <attributeName>UDF 9</attributeName>
+                <attributeDetail  name="detail.name431">
+                    <inputValue>htryjum</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name432">
+                    <inputValue>jhfgjfgj</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name44">
+                <attributeName>Asset Class</attributeName>
+                <attributeDetail  name="detail.name441">
+                    <selectedValue>qtp_bond</selectedValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name442">
+                    <selectedValue>qtp_equity</selectedValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name45">
+                <attributeName>Currency</attributeName>
+                <attributeDetail  name="detail.name451">
+                    <selectedValue>AUD</selectedValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name452">
+                    <selectedValue>ANG</selectedValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name46">
+                <attributeName>Instrument ID</attributeName>
+                <attributeDetail  name="detail.name461">
+                    <filterValue>
+                        <linkText>qtp-Bond-Usd-Instrument2</linkText>
+                    </filterValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name462">
+                    <filterValue>
+                        <linkText>qtp-Bond-Usd5-Instrument</linkText>
+                    </filterValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name47">
+                <attributeName>Market</attributeName>
+                <attributeDetail  name="detail.name471">
+                    <filterValue>
+                        <linkText>m1</linkText>
+                    </filterValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name48">
+                <attributeName>Book/Business Line</attributeName>
+                <attributeDetail  name="detail.name481">
+                    <selectedValue>OTC</selectedValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name482">
+                    <selectedValue>Repo</selectedValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name49">
+                <attributeName>Notional</attributeName>
+                <attributeDetail  name="detail.name491">
+                    <selectedValue>ASC</selectedValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+        </optimisationRule>
+        <optimisationRule id="ranking.asset.update">
+            <ruleName id="rule.name">ranking_asset_update</ruleName>
+            <optimisationFilterRuleAttribute name="ranking.asset.name1">
+                <attributeName>Maturity</attributeName>
+                <attributeDetail name="detail.name1">
+                    <selectedValue>DESC</selectedValue>
+                </attributeDetail>
+                <groupRank>49</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name2">
+                <attributeName>Issuer Rating Level</attributeName>
+                <attributeDetail name="detail.name21">
+                    <type>Fitch</type>
+                    <selectedValue>DESC</selectedValue>
+                </attributeDetail>
+                <attributeDetail name="detail.name22">
+                    <type>MOODYS</type>
+                    <selectedValue>ASC</selectedValue>
+                </attributeDetail>
+                <groupRank>48</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name3">
+                <attributeName>Record Date</attributeName>
+                <attributeDetail  name="detail.name3">
+                    <selectedValue>DESC</selectedValue>
+                </attributeDetail>
+                <groupRank>47</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name4">
+                <attributeName>UDF 10</attributeName>
+                <attributeDetail name="detail.name41">
+                    <inputValue>SSS</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <attributeDetail name="detail.name42">
+                    <inputValue>ERTT</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <groupRank>46</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name5">
+                <attributeName>Asset Type</attributeName>
+                <attributeDetail  name="detail.name5">
+                    <selectedValue>CASH-EUR</selectedValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <groupRank>45</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name6">
+                <attributeName>Source System</attributeName>
+                <attributeDetail  name="detail.name6">
+                    <selectedValue>FS1</selectedValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <groupRank>44</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name7">
+                <attributeName>Delivery Booking Priority</attributeName>
+                <attributeDetail  name="detail.name71">
+                    <selectedValue>Low</selectedValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name72">
+                    <selectedValue>High</selectedValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <groupRank>43</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name8">
+                <attributeName>Recall Booking Priority</attributeName>
+                <attributeDetail  name="detail.name81">
+                    <selectedValue>Medium</selectedValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name82">
+                    <selectedValue>Low</selectedValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <groupRank>42</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name9">
+                <attributeName>Issuer</attributeName>
+                <attributeDetail  name="detail.name91">
+                    <type>Code</type>
+                    <filterValue>
+                        <filter>QTP_Eligible_Issuer4</filter>
+                        <linkText>QTP_Eligible_Issuer4</linkText>
+                    </filterValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name92">
+                    <type>Short Name</type>
+                    <filterValue>
+                        <filter>QTP_Eligible_Issuer2</filter>
+                        <linkText>QTP_Eligible_Issuer2</linkText>
+                    </filterValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <groupRank>41</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name10">
+                <attributeName>Country of Issuer</attributeName>
+                <attributeDetail  name="detail.name101">
+                    <selectedValue>EUROPE</selectedValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name102">
+                    <selectedValue>AUSTRALIA</selectedValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <groupRank>40</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name11">
+                <attributeName>Issue Rating Level</attributeName>
+                <attributeDetail  name="detail.name111">
+                    <type>Fitch</type>
+                    <selectedValue>DESC</selectedValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name112">
+                    <type>MOODYS</type>
+                    <selectedValue>ASC</selectedValue>
+                </attributeDetail>
+                <groupRank>39</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name12">
+                <attributeName>Next Coupon Date</attributeName>
+                <attributeDetail  name="detail.name121">
+                    <selectedValue>ASC</selectedValue>
+                </attributeDetail>
+                <groupRank>38</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name13">
+                <attributeName>Ex Div Date</attributeName>
+                <attributeDetail  name="detail.name131">
+                    <selectedValue>DESC</selectedValue>
+                </attributeDetail>
+                <groupRank>37</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name14">
+                <attributeName>Issue Date</attributeName>
+                <attributeDetail  name="detail.name141">
+                    <selectedValue>DESC</selectedValue>
+                </attributeDetail>
+                <groupRank>36</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name15">
+                <attributeName>UDF 16</attributeName>
+                <attributeDetail  name="detail.name151">
+                    <selectedValue>ASC</selectedValue>
+                </attributeDetail>
+                <groupRank>35</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name16">
+                <attributeName>UDF 17</attributeName>
+                <attributeDetail  name="detail.name161">
+                    <selectedValue>DESC</selectedValue>
+                </attributeDetail>
+                <groupRank>34</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name17">
+                <attributeName>UDF 18</attributeName>
+                <attributeDetail  name="detail.name171">
+                    <selectedValue>DESC</selectedValue>
+                </attributeDetail>
+                <groupRank>33</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name18">
+                <attributeName>UDF 19</attributeName>
+                <attributeDetail  name="detail.name181">
+                    <selectedValue>DESC</selectedValue>
+                </attributeDetail>
+                <groupRank>32</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name19">
+                <attributeName>UDF 20</attributeName>
+                <attributeDetail  name="detail.name191">
+                    <selectedValue>ASC</selectedValue>
+                </attributeDetail>
+                <groupRank>31</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name20">
+                <attributeName>UDF 21</attributeName>
+                <attributeDetail  name="detail.name201">
+                    <selectedValue>ASC</selectedValue>
+                </attributeDetail>
+                <groupRank>30</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name21">
+                <attributeName>UDF 22</attributeName>
+                <attributeDetail  name="detail.name211">
+                    <selectedValue>DESC</selectedValue>
+                </attributeDetail>
+                <groupRank>29</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name22">
+                <attributeName>UDF 23</attributeName>
+                <attributeDetail  name="detail.name221">
+                    <selectedValue>DESC</selectedValue>
+                </attributeDetail>
+                <groupRank>28</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name23">
+                <attributeName>UDF 24</attributeName>
+                <attributeDetail  name="detail.name231">
+                    <selectedValue>DESC</selectedValue>
+                </attributeDetail>
+                <groupRank>27</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name24">
+                <attributeName>UDF 25</attributeName>
+                <attributeDetail  name="detail.name241">
+                    <selectedValue>ASC</selectedValue>
+                </attributeDetail>
+                <groupRank>26</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name25">
+                <attributeName>UDF 26</attributeName>
+                <attributeDetail  name="detail.name251">
+                    <selectedValue>DESC</selectedValue>
+                </attributeDetail>
+                <groupRank>25</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name26">
+                <attributeName>UDF 27</attributeName>
+                <attributeDetail  name="detail.name261">
+                    <selectedValue>ASC</selectedValue>
+                </attributeDetail>
+                <groupRank>24</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name27">
+                <attributeName>UDF 28</attributeName>
+                <attributeDetail  name="detail.name271">
+                    <selectedValue>DESC</selectedValue>
+                </attributeDetail>
+                <groupRank>23</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name28">
+                <attributeName>UDF 29</attributeName>
+                <attributeDetail  name="detail.name281">
+                    <selectedValue>DESC</selectedValue>
+                </attributeDetail>
+                <groupRank>22</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name29">
+                <attributeName>UDF 30</attributeName>
+                <attributeDetail  name="detail.name291">
+                    <selectedValue>DESC</selectedValue>
+                </attributeDetail>
+                <groupRank>21</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name30">
+                <attributeName>UDF 1</attributeName>
+                <attributeDetail  name="detail.name301">
+                    <inputValue>asdd</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name302">
+                    <inputValue>gfhgh</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <groupRank>20</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name31">
+                <attributeName>UDF 11</attributeName>
+                <attributeDetail  name="detail.name311">
+                    <inputValue>dreg</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name312">
+                    <inputValue>grgthy</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <groupRank>19</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name32">
+                <attributeName>UDF 12</attributeName>
+                <attributeDetail  name="detail.name321">
+                    <inputValue>qwegrg</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name322">
+                    <inputValue>4rtgt</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <groupRank>18</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name33">
+                <attributeName>UDF 13</attributeName>
+                <attributeDetail  name="detail.name331">
+                    <inputValue>grgr</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name332">
+                    <inputValue>g5yuu</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <groupRank>17</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name34">
+                <attributeName>UDF 14</attributeName>
+                <attributeDetail  name="detail.name341">
+                    <inputValue>hyumj</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name342">
+                    <inputValue>hrhyjh</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <groupRank>16</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name35">
+                <attributeName>UDF 15</attributeName>
+                <attributeDetail  name="detail.name351">
+                    <inputValue>g4r5gth</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name352">
+                    <inputValue>SSDG</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <groupRank>15</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name36">
+                <attributeName>UDF 2</attributeName>
+                <attributeDetail  name="detail.name361">
+                    <inputValue>gfgfdh</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name362">
+                    <inputValue>htttt</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <groupRank>14</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name37">
+                <attributeName>UDF 3</attributeName>
+                <attributeDetail  name="detail.name371">
+                    <inputValue>grrrtt</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name372">
+                    <inputValue>5hytjy</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <groupRank>13</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name38">
+                <attributeName>UDF 4</attributeName>
+                <attributeDetail  name="detail.name381">
+                    <inputValue>ggrr</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name382">
+                    <inputValue>htyuyu</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <groupRank>12</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name39">
+                <attributeName>UDF 5</attributeName>
+                <attributeDetail  name="detail.name391">
+                    <inputValue>httt</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name392">
+                    <inputValue>55yth</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <groupRank>11</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name40">
+                <attributeName>UDF 6</attributeName>
+                <attributeDetail  name="detail.name401">
+                    <inputValue>gttttt</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name402">
+                    <inputValue>grgty</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <groupRank>10</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name41">
+                <attributeName>UDF 7</attributeName>
+                <attributeDetail  name="detail.name411">
+                    <inputValue>4ggt</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name412">
+                    <inputValue>gregt</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <groupRank>9</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name42">
+                <attributeName>UDF 8</attributeName>
+                <attributeDetail  name="detail.name421">
+                    <inputValue>5tyyy</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name422">
+                    <inputValue>thrthy</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <groupRank>8</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name43">
+                <attributeName>UDF 9</attributeName>
+                <attributeDetail  name="detail.name431">
+                    <inputValue>fewt</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name432">
+                    <inputValue>htyy</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <groupRank>7</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name44">
+                <attributeName>Asset Class</attributeName>
+                <attributeDetail  name="detail.name441">
+                    <selectedValue>qtp_cash</selectedValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name442">
+                    <selectedValue>qtp_other</selectedValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <groupRank>6</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name45">
+                <attributeName>Currency</attributeName>
+                <attributeDetail  name="detail.name451">
+                    <selectedValue>ARA</selectedValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name452">
+                    <selectedValue>BBD</selectedValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <groupRank>5</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name46">
+                <attributeName>Instrument ID</attributeName>
+                <attributeDetail  name="detail.name461">
+                    <filterValue>
+                        <filter>qtp-Bond-Usd2-Instrument</filter>
+                        <linkText>qtp-Bond-Usd2-Instrument</linkText>
+                    </filterValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name462">
+                    <filterValue>
+                        <filter>qtp-Bond-Usd3-Instrument</filter>
+                        <linkText>qtp-Bond-Usd3-Instrument</linkText>
+                    </filterValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <groupRank>4</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name47">
+                <attributeName>Market</attributeName>
+                <attributeDetail  name="detail.name471">
+                    <filterValue>
+                        <filter>qtp_Market</filter>
+                        <linkText>qtp_Market</linkText>
+                    </filterValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <groupRank>3</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name48">
+                <attributeName>Book/Business Line</attributeName>
+                <attributeDetail  name="detail.name481">
+                    <selectedValue>ETF</selectedValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <attributeDetail  name="detail.name482">
+                    <selectedValue>Clearing</selectedValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <groupRank>2</groupRank>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="ranking.asset.name49">
+                <attributeName>Notional</attributeName>
+                <attributeDetail  name="detail.name491">
+                    <selectedValue>DESC</selectedValue>
+                </attributeDetail>
+                <groupRank>1</groupRank>
+            </optimisationFilterRuleAttribute>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </optimisationRule>
+
+
+
+
+        <auditOptimisationRuleReportFilter id="audit.optimisation.report.filter">
+            <operation>Modify</operation>
+            <ruleName>
+                <filter ref="rule.name"/>
+            </ruleName>
+        </auditOptimisationRuleReportFilter>
+        <variable id="auditReportPath"/>
+
+        <reportValidationRules id="reportRule">
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Delivery Booking Priority</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>High</value></field><field><fieldName>Value After</fieldName><value>Low</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Delivery Booking Priority</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>7.0</value></field><field><fieldName>Value After</fieldName><value>43.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Delivery Booking Priority</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Recall Booking Priority</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>8.0</value></field><field><fieldName>Value After</fieldName><value>42.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Recall Booking Priority</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>Low</value></field><field><fieldName>Value After</fieldName><value>Medium</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Recall Booking Priority</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Delivery Booking Priority</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>7.0</value></field><field><fieldName>Value After</fieldName><value>43.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Delivery Booking Priority</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>Medium</value></field><field><fieldName>Value After</fieldName><value>High</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Delivery Booking Priority</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>1.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Recall Booking Priority</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>High</value></field><field><fieldName>Value After</fieldName><value>Low</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Recall Booking Priority</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>8.0</value></field><field><fieldName>Value After</fieldName><value>42.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Recall Booking Priority</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>1.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Issuer</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>QTP_Eligible_Issuer3</value></field><field><fieldName>Value After</fieldName><value>QTP_Eligible_Issuer2</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Issuer</value></field><field><fieldName>Element</fieldName><value>Paired Attribute</value></field><field><fieldName>Value Before</fieldName><value>Code</value></field><field><fieldName>Value After</fieldName><value>Short Name</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Issuer</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>9.0</value></field><field><fieldName>Value After</fieldName><value>41.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Issuer</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>1.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Issuer</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Issuer</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>9.0</value></field><field><fieldName>Value After</fieldName><value>41.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Issuer</value></field><field><fieldName>Element</fieldName><value>Paired Attribute</value></field><field><fieldName>Value Before</fieldName><value>Long Name</value></field><field><fieldName>Value After</fieldName><value>Code</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Issuer</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>QTP_Eligible_Issuer2</value></field><field><fieldName>Value After</fieldName><value>QTP_Eligible_Issuer4</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Country of Issuer</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Country of Issuer</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>10.0</value></field><field><fieldName>Value After</fieldName><value>40.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Country of Issuer</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>HONG KONG</value></field><field><fieldName>Value After</fieldName><value>EUROPE</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Issue Rating Level</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>ASC</value></field><field><fieldName>Value After</fieldName><value>DESC</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Issue Rating Level</value></field><field><fieldName>Element</fieldName><value>Paired Attribute</value></field><field><fieldName>Value Before</fieldName><value>MOODYS</value></field><field><fieldName>Value After</fieldName><value>Fitch</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Issue Rating Level</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>11.0</value></field><field><fieldName>Value After</fieldName><value>39.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Country of Issuer</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>10.0</value></field><field><fieldName>Value After</fieldName><value>40.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Country of Issuer</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>1.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Country of Issuer</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>CHINA</value></field><field><fieldName>Value After</fieldName><value>AUSTRALIA</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Issue Rating Level</value></field><field><fieldName>Element</fieldName><value>Paired Attribute</value></field><field><fieldName>Value Before</fieldName><value>SandP</value></field><field><fieldName>Value After</fieldName><value>MOODYS</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Issue Rating Level</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>11.0</value></field><field><fieldName>Value After</fieldName><value>39.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Issue Rating Level</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>DESC</value></field><field><fieldName>Value After</fieldName><value>ASC</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Next Coupon Date</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>DESC</value></field><field><fieldName>Value After</fieldName><value>ASC</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Next Coupon Date</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>12.0</value></field><field><fieldName>Value After</fieldName><value>38.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Ex Div Date</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>ASC</value></field><field><fieldName>Value After</fieldName><value>DESC</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Ex Div Date</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>13.0</value></field><field><fieldName>Value After</fieldName><value>37.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Issue Date</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>14.0</value></field><field><fieldName>Value After</fieldName><value>36.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Issue Date</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>ASC</value></field><field><fieldName>Value After</fieldName><value>DESC</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 17</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>ASC</value></field><field><fieldName>Value After</fieldName><value>DESC</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 17</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>16.0</value></field><field><fieldName>Value After</fieldName><value>34.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 16</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>15.0</value></field><field><fieldName>Value After</fieldName><value>35.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 16</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>DESC</value></field><field><fieldName>Value After</fieldName><value>ASC</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 18</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>ASC</value></field><field><fieldName>Value After</fieldName><value>DESC</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 18</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>17.0</value></field><field><fieldName>Value After</fieldName><value>33.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 19</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>18.0</value></field><field><fieldName>Value After</fieldName><value>32.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 19</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>ASC</value></field><field><fieldName>Value After</fieldName><value>DESC</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 21</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>20.0</value></field><field><fieldName>Value After</fieldName><value>30.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 21</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>DESC</value></field><field><fieldName>Value After</fieldName><value>ASC</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 20</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>DESC</value></field><field><fieldName>Value After</fieldName><value>ASC</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 20</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>19.0</value></field><field><fieldName>Value After</fieldName><value>31.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 22</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>ASC</value></field><field><fieldName>Value After</fieldName><value>DESC</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 22</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>21.0</value></field><field><fieldName>Value After</fieldName><value>29.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 23</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>22.0</value></field><field><fieldName>Value After</fieldName><value>28.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 23</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>ASC</value></field><field><fieldName>Value After</fieldName><value>DESC</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 24</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>23.0</value></field><field><fieldName>Value After</fieldName><value>27.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 24</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>ASC</value></field><field><fieldName>Value After</fieldName><value>DESC</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 25</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>24.0</value></field><field><fieldName>Value After</fieldName><value>26.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 25</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>DESC</value></field><field><fieldName>Value After</fieldName><value>ASC</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 26</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>ASC</value></field><field><fieldName>Value After</fieldName><value>DESC</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 28</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>ASC</value></field><field><fieldName>Value After</fieldName><value>DESC</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 28</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>27.0</value></field><field><fieldName>Value After</fieldName><value>23.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 27</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>26.0</value></field><field><fieldName>Value After</fieldName><value>24.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 27</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>DESC</value></field><field><fieldName>Value After</fieldName><value>ASC</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 29</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>ASC</value></field><field><fieldName>Value After</fieldName><value>DESC</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 30</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>29.0</value></field><field><fieldName>Value After</fieldName><value>21.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 30</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>ASC</value></field><field><fieldName>Value After</fieldName><value>DESC</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 29</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>28.0</value></field><field><fieldName>Value After</fieldName><value>22.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 1</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>RW</value></field><field><fieldName>Value After</fieldName><value>asdd</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 1</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>30.0</value></field><field><fieldName>Value After</fieldName><value>20.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 1</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 1</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>30.0</value></field><field><fieldName>Value After</fieldName><value>20.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 1</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>1.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 1</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>sdf</value></field><field><fieldName>Value After</fieldName><value>gfhgh</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 11</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 11</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>31.0</value></field><field><fieldName>Value After</fieldName><value>19.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 11</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>sdf2</value></field><field><fieldName>Value After</fieldName><value>dreg</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 11</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>sgh</value></field><field><fieldName>Value After</fieldName><value>grgthy</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 11</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>1.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 11</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>31.0</value></field><field><fieldName>Value After</fieldName><value>19.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 12</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>32.0</value></field><field><fieldName>Value After</fieldName><value>18.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 12</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>zxc</value></field><field><fieldName>Value After</fieldName><value>4rtgt</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 12</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>1.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 12</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>32.0</value></field><field><fieldName>Value After</fieldName><value>18.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 12</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>123</value></field><field><fieldName>Value After</fieldName><value>qwegrg</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 12</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 13</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>33.0</value></field><field><fieldName>Value After</fieldName><value>17.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 13</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>wer</value></field><field><fieldName>Value After</fieldName><value>grgr</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 13</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 13</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>33.0</value></field><field><fieldName>Value After</fieldName><value>17.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 13</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>g5gt</value></field><field><fieldName>Value After</fieldName><value>g5yuu</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 13</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>1.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 14</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>34.0</value></field><field><fieldName>Value After</fieldName><value>16.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 14</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>dfg</value></field><field><fieldName>Value After</fieldName><value>hyumj</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 14</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 14</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>34.0</value></field><field><fieldName>Value After</fieldName><value>16.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 14</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>rer4</value></field><field><fieldName>Value After</fieldName><value>hrhyjh</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 14</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>1.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 15</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>DEG</value></field><field><fieldName>Value After</fieldName><value>SSDG</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 15</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>35.0</value></field><field><fieldName>Value After</fieldName><value>15.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 15</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 15</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>frth</value></field><field><fieldName>Value After</fieldName><value>g4r5gth</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 15</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>35.0</value></field><field><fieldName>Value After</fieldName><value>15.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 15</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>1.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 2</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 2</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>36.0</value></field><field><fieldName>Value After</fieldName><value>14.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 2</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>gfdgr</value></field><field><fieldName>Value After</fieldName><value>gfgfdh</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 2</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>36.0</value></field><field><fieldName>Value After</fieldName><value>14.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 3</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 3</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>r4gt</value></field><field><fieldName>Value After</fieldName><value>grrrtt</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 3</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>37.0</value></field><field><fieldName>Value After</fieldName><value>13.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 3</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>1.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 3</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>gye5t</value></field><field><fieldName>Value After</fieldName><value>5hytjy</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 3</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>37.0</value></field><field><fieldName>Value After</fieldName><value>13.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 4</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>g4grt</value></field><field><fieldName>Value After</fieldName><value>ggrr</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 4</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 4</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>38.0</value></field><field><fieldName>Value After</fieldName><value>12.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 4</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>g4tght</value></field><field><fieldName>Value After</fieldName><value>htyuyu</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 4</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>38.0</value></field><field><fieldName>Value After</fieldName><value>12.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 4</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>1.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 5</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>g56y</value></field><field><fieldName>Value After</fieldName><value>httt</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 5</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>39.0</value></field><field><fieldName>Value After</fieldName><value>11.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 5</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 5</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>h5555</value></field><field><fieldName>Value After</fieldName><value>55yth</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 5</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>1.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 5</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>39.0</value></field><field><fieldName>Value After</fieldName><value>11.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 6</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>3DDF</value></field><field><fieldName>Value After</fieldName><value>grgty</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 6</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>1.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 6</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>40.0</value></field><field><fieldName>Value After</fieldName><value>10.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 7</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>41.0</value></field><field><fieldName>Value After</fieldName><value>9.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 7</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 7</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>fdrfsd</value></field><field><fieldName>Value After</fieldName><value>4ggt</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 6</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 6</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>40.0</value></field><field><fieldName>Value After</fieldName><value>10.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 6</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>htgg</value></field><field><fieldName>Value After</fieldName><value>gttttt</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 7</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>hther</value></field><field><fieldName>Value After</fieldName><value>gregt</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 7</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>1.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 7</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>41.0</value></field><field><fieldName>Value After</fieldName><value>9.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 8</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>gtrgth</value></field><field><fieldName>Value After</fieldName><value>5tyyy</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 8</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>42.0</value></field><field><fieldName>Value After</fieldName><value>8.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 8</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 8</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>hy6u</value></field><field><fieldName>Value After</fieldName><value>thrthy</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 8</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>42.0</value></field><field><fieldName>Value After</fieldName><value>8.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 8</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>1.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 9</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>htryjum</value></field><field><fieldName>Value After</fieldName><value>fewt</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 9</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>43.0</value></field><field><fieldName>Value After</fieldName><value>7.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 9</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 9</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>jhfgjfgj</value></field><field><fieldName>Value After</fieldName><value>htyy</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 9</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>43.0</value></field><field><fieldName>Value After</fieldName><value>7.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 9</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>1.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Asset Class</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>44.0</value></field><field><fieldName>Value After</fieldName><value>6.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Asset Class</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>qtp_bond</value></field><field><fieldName>Value After</fieldName><value>qtp_cash</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Asset Class</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Asset Class</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>44.0</value></field><field><fieldName>Value After</fieldName><value>6.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Asset Class</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>qtp_equity</value></field><field><fieldName>Value After</fieldName><value>qtp_other</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Asset Class</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>1.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Instrument ID</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>46.0</value></field><field><fieldName>Value After</fieldName><value>4.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Currency</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Currency</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>AUD</value></field><field><fieldName>Value After</fieldName><value>ARA</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Currency</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>45.0</value></field><field><fieldName>Value After</fieldName><value>5.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Currency</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>45.0</value></field><field><fieldName>Value After</fieldName><value>5.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Currency</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>1.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Currency</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>ANG</value></field><field><fieldName>Value After</fieldName><value>BBD</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Instrument ID</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>46.0</value></field><field><fieldName>Value After</fieldName><value>4.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Market</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>47.0</value></field><field><fieldName>Value After</fieldName><value>3.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>IM Book/Business Line</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>48.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>IM Book/Business Line</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>OTC</value></field><field><fieldName>Value After</fieldName><value>ETF</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>IM Book/Business Line</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>IM Notional</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>ASC</value></field><field><fieldName>Value After</fieldName><value>DESC</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>IM Notional</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>49.0</value></field><field><fieldName>Value After</fieldName><value>1.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>IM Book/Business Line</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>Repo</value></field><field><fieldName>Value After</fieldName><value>Clearing</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>IM Book/Business Line</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>1.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>IM Book/Business Line</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>48.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Maturity</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>ASC</value></field><field><fieldName>Value After</fieldName><value>DESC</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Maturity</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>49.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Issuer Rating Level</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>ASC</value></field><field><fieldName>Value After</fieldName><value>DESC</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Issuer Rating Level</value></field><field><fieldName>Element</fieldName><value>Paired Attribute</value></field><field><fieldName>Value Before</fieldName><value>MOODYS</value></field><field><fieldName>Value After</fieldName><value>Fitch</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Issuer Rating Level</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>48.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Record Date</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>ASC</value></field><field><fieldName>Value After</fieldName><value>DESC</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Record Date</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>3.0</value></field><field><fieldName>Value After</fieldName><value>47.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Issuer Rating Level</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>DESC</value></field><field><fieldName>Value After</fieldName><value>ASC</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Issuer Rating Level</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>48.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Issuer Rating Level</value></field><field><fieldName>Element</fieldName><value>Paired Attribute</value></field><field><fieldName>Value Before</fieldName><value>SandP</value></field><field><fieldName>Value After</fieldName><value>MOODYS</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 10</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>eee</value></field><field><fieldName>Value After</fieldName><value>ERTT</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 10</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>1.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 10</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>4.0</value></field><field><fieldName>Value After</fieldName><value>46.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Asset Type</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>CASH-USD</value></field><field><fieldName>Value After</fieldName><value>CASH-EUR</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Asset Type</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>5.0</value></field><field><fieldName>Value After</fieldName><value>45.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset Asset Type</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 10</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>www</value></field><field><fieldName>Value After</fieldName><value>SSS</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 10</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>4.0</value></field><field><fieldName>Value After</fieldName><value>46.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 10</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>IM Source System</value></field><field><fieldName>Element</fieldName><value>Same Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>1.0</value></field><field><fieldName>Value After</fieldName><value>2.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>ranking_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset ranking</value></field><field><fieldName>Attribute</fieldName><value>IM Source System</value></field><field><fieldName>Element</fieldName><value>Cross Attribute Rank</value></field><field><fieldName>Value Before</fieldName><value>6.0</value></field><field><fieldName>Value After</fieldName><value>44.0</value></field></reportValidationRule>
+
+        </reportValidationRules>
+
+    </scenarioData>
+</dataBean>

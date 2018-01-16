@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+		<agreement id="agr">
+			<principal id="p1">
+				<criteria>Containing</criteria>
+				<type>Code</type>
+				<filter ref="org.p1.lname"/>
+				<linkText ref="org.p1.lname"/>
+			</principal>
+			<counterparty id="c">
+				<criteria>Containing</criteria>
+				<type>Long Name</type>
+				<filter ref="org.c1.lname"/>
+				<linkText ref="org.c1.lname"/>
+			</counterparty>
+			<agreementDescription id="agr.desc" random="true"/>
+			<agreementDate>T</agreementDate>
+			<nettingIAandMtM>Not-Net</nettingIAandMtM>
+			<segregation>true</segregation>
+			<vmCallFrequency>
+				<legalReviewFrequency>Daily</legalReviewFrequency>
+			</vmCallFrequency>
+			<imCallFrequency>
+				<legalReviewFrequency>Daily</legalReviewFrequency>
+			</imCallFrequency>
+			<holidayCentre ref="hc.europe.name"/>
+			<product id="p">
+				<productName ref="product.test1.name"/>
+			</product>
+			<collateralAssetClass>
+				<collateralAssetClassName ref="cash.name"/>
+				<autoBookingRule>
+					<applicableTo>VM</applicableTo>
+					<assetType ref="cash.usd.name"/>
+					<tolerance>Fixed Amt</tolerance>
+					<amount>5000000</amount>
+					<value>Use Agreement Amount</value>
+					<movement>Delivery</movement>
+					<bookingStatus>System Draft</bookingStatus>
+					<createWithLetter>true</createWithLetter>
+				</autoBookingRule>
+				<autoBookingRule>
+					<applicableTo>IM</applicableTo>
+					<assetType ref="cash.usd.name"/>
+					<tolerance>Fixed Amt</tolerance>
+					<amount>5000000</amount>
+					<value>Use Agreement Amount</value>
+					<movement>Return</movement>
+					<bookingStatus>System Draft</bookingStatus>
+					<createWithLetter>true</createWithLetter>
+				</autoBookingRule>
+				<collateralAssetType>
+					<collateralAssetTypeName ref="cash.usd.name"/>
+				</collateralAssetType>
+			</collateralAssetClass>
+			<settlementBucket>
+				<bookingType>VM</bookingType>
+				<direction>Call/Return</direction>
+				<bucket>
+					<filter ref="payInstrBucket.vcr.name"/>
+					<linkText ref="payInstrBucket.vcr.name"/>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>VM</bookingType>
+				<direction>Delivery/Recall</direction>
+				<bucket>
+					<filter ref="payInstrBucket.vrd.name"/>
+					<linkText ref="payInstrBucket.vrd.name"/>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>IM</bookingType>
+				<direction>Call/Return</direction>
+				<bucket>
+					<filter ref="payInstrBucket.std.name"/>
+					<linkText ref="payInstrBucket.std.name"/>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>IM</bookingType>
+				<direction>Delivery/Recall</direction>
+				<bucket>
+					<filter ref="payInstrBucket.std.name"/>
+					<linkText ref="payInstrBucket.std.name"/>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>VM Interest</bookingType>
+				<direction>Pay</direction>
+				<bucket>
+					<filter ref="payInstrBucket.std.name"/>
+					<linkText ref="payInstrBucket.std.name"/>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>VM Interest</bookingType>
+				<direction>Receive</direction>
+				<bucket>
+					<filter ref="payInstrBucket.std.name"/>
+					<linkText ref="payInstrBucket.std.name"/>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>IM Interest</bookingType>
+				<direction>Pay</direction>
+				<bucket>
+					<filter ref="payInstrBucket.std.name"/>
+					<linkText ref="payInstrBucket.std.name"/>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>IM Interest</bookingType>
+				<direction>Receive</direction>
+				<bucket>
+					<filter ref="payInstrBucket.std.name"/>
+					<linkText ref="payInstrBucket.std.name"/>
+				</bucket>
+			</settlementBucket>
+			<letterAndDeliveryGroupDetails>
+				<letterDistributionMedium>Email</letterDistributionMedium>
+			</letterAndDeliveryGroupDetails>
+			<agreementStatus>Pending</agreementStatus>
+			<agreementStatus>Approved</agreementStatus>
+			<statementStatus>Pending</statementStatus>
+			<statementStatus>Approved</statementStatus>
+			<agreementId id="agmt.id"/>
+		</agreement>
+
+		<agreementExposureSummary id="ProductQTP">
+			<productList>
+				<productType ref="product.test1.name"/>
+			</productList>
+		</agreementExposureSummary>
+
+		<tradeDetail id = "trade">
+			<tradeInformation>
+				<!--<productType ref="product.test1.name"/>-->
+				<tradeDate>T</tradeDate>
+				<effectiveDate>T</effectiveDate>
+				<maturityDate>T+1000</maturityDate>
+				<tradeIdentifierPartyA random="true"/>
+				<partyABranchName random="true"/>
+				<partyBBranchName random="true"/>
+			</tradeInformation>
+			<valuationInformation>
+				<principalValuationAmount>
+					<amount>-2m</amount>
+					<currency>USD</currency>
+				</principalValuationAmount>
+				<valuationDate>T</valuationDate>
+			</valuationInformation>
+		</tradeDetail>
+		<assetBookingSummary id="CashUSDType">
+			<assetType ref="cash.usd.name"/>
+		</assetBookingSummary>
+
+		<bookingDetail id="booking1">
+			<assetType ref="cash.usd.name"/>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<imAmount>0.5m</imAmount>
+					<movement>Call</movement>
+				</bookingInformationDetail>
+				<settlementDate>T</settlementDate>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+		<agreementSearch id="agrSearch">
+			<description>
+				<filter ref="agr.desc"/>
+			</description>
+		</agreementSearch>
+
+		<agreementSearchResult id="agrSearchResult">
+			<description ref="agr.desc" />
+		</agreementSearchResult>
+
+		<marginLetter id="marginDeliveyAndReturnLetter">
+			<letterType>Margin Return &amp; Delivery</letterType>
+			<requestTypeAndAssetSelection>
+				<alertHandling>
+					<accept>true</accept>
+				</alertHandling>
+			</requestTypeAndAssetSelection>
+		</marginLetter>
+
+		<assetBookingSummary id="assetHodingDetailForVMDelivery">
+			<movement>Delivery</movement>
+			<status>System Draft</status>
+			<bookingSource>Auto Book</bookingSource>
+			<vmMarketValue>-2,000,000.00</vmMarketValue>
+		</assetBookingSummary>
+
+		<assetBookingSummary id="assetHodingDetailForIMReturn">
+			<movement>Return</movement>
+			<status>System Draft</status>
+			<bookingSource>Auto Book</bookingSource>
+			<imMarketValue>-500,000.00</imMarketValue>
+		</assetBookingSummary>
+
+		<exposureEventDetail id="vmDeliveryEvent" name="checkVMDelivery">
+			<action>VM Delivery</action>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="vmDeliveryEventCheck" name="checkVMDelivery">
+			<action>VM Delivery</action>
+			<agreementRequirement>-2,000,000.00</agreementRequirement>
+		</exposureEventDetail>
+
+
+		<exposureEventDetail id="imReturnEvent" name="checkIMReturn">
+			<action>IM Return</action>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="imReturnEventCheck" name="checkIMReturn">
+			<action>IM Return</action>
+			<agreementRequirement>-500,000.00</agreementRequirement>
+		</exposureEventDetail>
+
+
+
+
+
+
+
+
+
+
+
+	</scenarioData>
+</dataBean>

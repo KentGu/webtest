@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/feeds.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <organisation id="ultimate.parent.org">
+            <shortName id="ultimate.parent.org.name" random="true"/>
+            <longName ref="ultimate.parent.org.name"/>
+            <code ref="ultimate.parent.org.name"/>
+            <role>Collateral relationship</role>
+            <ultimateParent>
+                <type>Long Name</type>
+                <filter ref="org.p1.lname"/>
+                <linkText ref="org.p1.lname"/>
+            </ultimateParent>
+            <relationship>
+                <parent>true</parent>
+                <type>Subsidiary</type>
+                <organisationSearch>
+                    <type>Long Name</type>
+                    <filter ref="org.main.lname"/>
+                    <linkText ref="org.main.lname"/>
+                </organisationSearch>
+            </relationship>
+            <address>
+                <contact>contact name</contact>
+                <address1>address1</address1>
+                <title>title</title>
+                <label>label</label>
+                <tel>888888</tel>
+                <fax>888888</fax>
+                <email>test@test.com</email>
+                <ftp>ftp://test.com</ftp>
+                <notes>notes</notes>
+                <enable>true</enable>
+            </address>
+            <status>Approved</status>
+        </organisation>
+
+        <feedAgreement id="feed.otc.agreement.concentration.rules.max.percentage">
+            <principal ref="ultimate.parent.org.name"/>
+            <counterpartycode ref="org.c1.lname"/>
+            <businessLine>OTC</businessLine>
+            <agreement_description id="feed.otc.agreement.concentration.rules.max.percentage.desc" random="true" prefix="feed_agr1_"/>
+            <region ref="region.test1.name"/>
+            <legal_id id="feed.otc.agreement.concentration.rules.max.percentage.external.id" random="true"/>
+            <master_documentation ref="master.documentation.1987.isda.master.name"/>
+            <credit_support_documentation ref="credit.documentation.margin.provisions.name"/>
+            <netting_MTM_And_IA>Net</netting_MTM_And_IA>
+            <base_currency ref="ccy.usd.name"/>
+            <original_date random="true" variation="t"/>
+            <frequency>Daily</frequency>
+            <frequency_start random="true" variation="t"/>
+            <notification_time>13.00</notification_time>
+            <resolution_time>10.00</resolution_time>
+            <resolution_day>same</resolution_day>
+            <time_zone ref="system.staticData.timeZone.cet.name"/>
+            <holiday_centre ref="hc.test1.name"/>
+            <non_workingday_adjusttype>None</non_workingday_adjusttype>
+            <product>
+                <productName>QTP</productName>
+                <settlementPeriod>T</settlementPeriod>
+            </product>
+            <asset>
+                <assetName ref="bond.usd.name"/>
+                <settlementDateAbbriviated>T</settlementDateAbbriviated>
+                <applicableType></applicableType>
+                <applicableParty></applicableParty>
+                <concentration_rules>
+                    <concentration_rule>
+                        <concentration_rule id="bond.usd.name.concen.rule">Ultimate Parent Holding</concentration_rule>
+                        <rating_from id="bond.usd.name.concen.rating.from">AAA/Aaa/AAA</rating_from>
+                        <rating_to id="bond.usd.name.concen.rating.to">NR/NR/NR</rating_to>
+                        <element ref="org.p1.lname"/>
+                        <method id="bond.usd.name.concen.method">Max %</method>
+                        <value id="bond.usd.name.concen.value">75</value>
+                    </concentration_rule>
+                </concentration_rules>
+            </asset>
+            <rounding_delivery>Up</rounding_delivery>
+            <rounding_recall>Down</rounding_recall>
+            <settlementInstructions>
+                <settlementInstruction>
+                    <bookingType>Net</bookingType>
+                    <direction>Call/Return</direction>
+                    <bucket>VM Call/Return</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>Net</bookingType>
+                    <direction>Delivery/Recall</direction>
+                    <bucket>VM Recall/Delivery</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>Interest</bookingType>
+                    <direction>Pay</direction>
+                    <bucket>Pay</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>Interest</bookingType>
+                    <direction>Receive</direction>
+                    <bucket>Receive</bucket>
+                </settlementInstruction>
+            </settlementInstructions>
+            <distMedium>Email</distMedium>
+            <applyOrgCL>false</applyOrgCL>
+        </feedAgreement>
+
+        <feedResult id="feed.otc.agreement.concentration.rules.max.percentage.result">
+            <fileUploaded id="feed.otc.agreement.concentration.rules.max.percentage.result.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedStatus id="feed.otc.agreement.concentration.rules.max.percentage.status">
+            <systemName>QTP</systemName>
+            <status>Successful</status>
+            <valuationFile ref="feed.otc.agreement.concentration.rules.max.percentage.result.file"/>
+            <description>Agreements</description>
+            <successfulFeed>
+                <importType>Agreements</importType>
+                <valuationFile ref="feed.otc.agreement.concentration.rules.max.percentage.result.file"/>
+                <total>1</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <agreementSearch id="feed.otc.agreement.concentration.rules.max.percentage.search">
+            <description>
+                <filter ref="feed.otc.agreement.concentration.rules.max.percentage.desc"/>
+                <linkText ref="feed.otc.agreement.concentration.rules.max.percentage.desc"/>
+            </description>
+            <externalId ref="feed.otc.agreement.concentration.rules.max.percentage.external.id"/>
+        </agreementSearch>
+
+        <agreementSearchResult id="feed.otc.agreement.concentration.rules.max.percentage.search.result">
+            <description ref="feed.otc.agreement.concentration.rules.max.percentage.desc"/>
+            <externalId ref="feed.otc.agreement.concentration.rules.max.percentage.external.id"/>
+        </agreementSearchResult>
+
+        <agreement id="agreement.complete"/>
+
+        <agreementSummary id="feed.otc.agreement.concentration.rules.max.percentage.summary">
+            <principalCollateralEligibleForReceipt>
+                <assetType ref="bond.usd.name"/>
+                <concLimitRuleSet>Yes</concLimitRuleSet>
+            </principalCollateralEligibleForReceipt>
+        </agreementSummary>
+
+        <agreement id="check.otc.agreement.concentration.rules.max.percentage">
+            <collateralAssetClass>
+                <collateralAssetClassName ref="bond.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="bond.usd.name"/>
+                    <concentrationLimitRule>
+                        <rule ref="bond.usd.name.concen.rule"/>
+                        <element ref="org.p1.lname"/>
+                        <from ref="bond.usd.name.concen.rating.from"/>
+                        <to ref="bond.usd.name.concen.rating.to"/>
+                        <method ref="bond.usd.name.concen.method"/>
+                        <value ref="bond.usd.name.concen.value"/>
+                    </concentrationLimitRule>
+                </collateralAssetType>
+            </collateralAssetClass>
+        </agreement>
+
+    </scenarioData>
+</dataBean>

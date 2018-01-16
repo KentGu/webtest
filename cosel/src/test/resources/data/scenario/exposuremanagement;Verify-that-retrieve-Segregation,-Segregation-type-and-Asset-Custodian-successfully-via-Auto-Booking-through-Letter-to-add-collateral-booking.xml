@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <agreement id="agr27964.otc.net.NotTickSegregation">
+            <agreementId id="agrid">2645</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="call.agreementRequirement.1m">
+            <action>Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="counterpartyAmount.1m">
+            <counterpartyAmount>1m</counterpartyAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="counterpartyAmount.-1m">
+            <counterpartyAmount>-1m</counterpartyAmount>
+        </exposureEventDetail>
+
+        <marginLetter id="createCallLetter">
+            <letterType>Margin Call</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <assetHoldingsandValuationReport>true</assetHoldingsandValuationReport>
+                </emailAttachments>
+            </letterSetupDetails>
+        </marginLetter>
+
+        <marginLetter id="createDeliveryLetter">
+            <letterType>Margin Delivery</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <assetHoldingsandValuationReport>true</assetHoldingsandValuationReport>
+                </emailAttachments>
+            </letterSetupDetails>
+        </marginLetter>
+
+        <assetBookingSummary id="asset.type.CASH.USD">
+            <assetType ref="cash.usd1.name"/>
+        </assetBookingSummary>
+
+
+        <assetBookingSummary id="CASH.USD.call.1m">
+            <assetType ref="cash.usd1.name"/>
+            <movement>Call</movement>
+            <status>Pending</status>
+            <collateralValue>1,000,000.00</collateralValue>
+        </assetBookingSummary>
+
+        <bookingDetail id="cash.call.1m.Segregation.no.SegregationType.blank">
+            <bookingInformation>
+                <segregation>No</segregation>
+                <segregationType></segregationType>
+            </bookingInformation>
+        </bookingDetail>
+
+        <agreement id="agr27964.otc.net.TickSegregation">
+            <agreementId id="agrid">2646</agreementId>
+        </agreement>
+
+        <agreement id="agr27964.fcm.TickSegregation">
+            <agreementId id="agrid">2647</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="im.delivery.agreementRequirement.-1m">
+            <action>IM Delivery</action>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.call.agreementRequirement.1m">
+            <action>VM Call(Deficit)</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <assetBookingSummary id="CASH.USD.vm.call.1m">
+            <assetType ref="cash.usd1.name"/>
+            <movement>Call</movement>
+            <status>Pending</status>
+            <vmCollateralValue>1,000,000.00</vmCollateralValue>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="CASH.USD.im.delivery.1m">
+            <assetType ref="cash.usd1.name"/>
+            <movement>Delivery</movement>
+            <status>Pending</status>
+            <imCollateralValue>-1,000,000.00</imCollateralValue>
+        </assetBookingSummary>
+
+        <bookingDetail id="cash.vm.call.1m.Segregation.yes.SegregationType.SegregatedDirectDealerHolding">
+            <bookingInformation>
+                <segregation>Yes</segregation>
+                <segregationType>Segregated Direct Dealer Holding</segregationType>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="cash.delivery.im.1m.Segregation.yes.SegregationType.TriPartyCollateralAgentHolding">
+            <bookingInformation>
+                <segregation>Yes</segregation>
+                <segregationType>Tri-Party Collateral Agent Holding</segregationType>
+            </bookingInformation>
+        </bookingDetail>
+
+        <agreement id="agr27964">
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+    </scenarioData>
+</dataBean>

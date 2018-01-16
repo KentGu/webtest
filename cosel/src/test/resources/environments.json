@@ -1,0 +1,29 @@
+[
+  {
+    "applicationServers": [
+      {
+        "id": 0,
+        "name": "colline",
+        "url": "http://localhost:8080/",
+        "username": "ec2-user",
+        "key" : "src/test/resources/lrmtech-colline-server-singapore.pem",
+        "hardwareInformation" : {
+          "os" : "linux"
+        }
+      }
+    ],
+    "databaseServers": [
+      {
+        "id": 0,
+        "name": "oracle",
+        "driver": null,
+        "host": "localhost",
+        "port": "1521",
+        "instance": null,
+        "dump": "data/system/default.xml",
+        "username": null,
+        "password": null
+      }
+    ]
+  }
+]

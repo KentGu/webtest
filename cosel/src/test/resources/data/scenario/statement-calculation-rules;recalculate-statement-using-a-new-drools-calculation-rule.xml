@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <statementCalcRule id="calc.rule.1">
+            <businessLine>ETD</businessLine>
+            <ruleName id="etd.calc.rule.name" random="true"></ruleName>
+            <ruleType>Statement</ruleType>
+            <ruleFileName>EtdStatement.drl</ruleFileName>
+        </statementCalcRule>
+
+        <feedResult id="feed.etd.agreement.result">
+            <successfullyImported>1</successfullyImported>
+            <unsuccessfulImports>0</unsuccessfulImports>
+        </feedResult>
+
+        <feedResult id="feed.fx.rate.result">
+            <successfullyImported>3</successfullyImported>
+            <unsuccessfulImports>0</unsuccessfulImports>
+        </feedResult>
+
+        <collateralStaticData id="col.static.data.d1">
+            <type>Model Category</type>
+            <dataName id="model.cat.name" random="true" prefix="Category_USD_"/>
+            <description ref="model.cat.name"/>
+            <status>enabled</status>
+        </collateralStaticData>
+
+        <feedAgreement id="feed.etd.agreement">
+            <principal ref="org.p1.lname"/>
+            <principalRole>Member</principalRole>
+            <counterpartycode ref="org.c1.lname"/>
+            <region ref="region.test1.name"/>
+            <principalContact ref="org.p1.lname"></principalContact>
+            <principalinterestcontact ref="org.p1.lname"></principalinterestcontact>
+            <cptyinterestcontact ref="org.c1.lname"></cptyinterestcontact>
+            <cptyContact ref="org.c1.lname"></cptyContact>
+            <agreement_description id="etd.agrmt.desc" random="true"></agreement_description>
+            <businessLine>ETD</businessLine>
+            <status>67</status>
+            <netting_Calc>Net</netting_Calc>
+            <netting_Interest>Net</netting_Interest>
+            <master_documentation ref="master.documentation.1987.isda.master.name"/>
+            <credit_support_documentation ref="credit.documentation.margin.provisions.name"/>
+            <base_currency id="agr.base.currency">USD</base_currency>
+            <marginType>Hedge</marginType>
+            <TSARule>QTP_TSA</TSARule>
+            <base_currency ref="ccy.usd.name"/>
+            <original_date random="true" variation="t"/>
+            <netting_MTM_And_IA>Net</netting_MTM_And_IA>
+            <holiday_centre ref="hc.test1.name"/>
+            <time_zone ref="system.staticData.timeZone.cet.name"/>
+            <frequency>Daily</frequency>
+            <frequency_start random="true" variation="t"/>
+            <non_workingday_adjusttype>RollForward</non_workingday_adjusttype>
+            <notification_time>13.00</notification_time>
+            <resolution_time>10.00</resolution_time>
+            <resolution_day>same</resolution_day>
+            <fxRateRule ref="fxRateSet.standard.name"/>
+            <modelEligRules>
+                <modelEligRule>
+                    <modelName id="usd.model.name">USD</modelName>
+                    <modelCategory ref="model.cat.name"/>
+                    <modelCcy ref="model.usd.ccy.name"/>
+                </modelEligRule>
+                <modelEligRule>
+                    <modelName id="gbp.model.name">GBP</modelName>
+                    <modelCategory ref="model.cat.name"/>
+                    <modelCcy ref="model.gbp.ccy.name"/>
+                </modelEligRule>
+                <modelEligRule>
+                    <modelName id="eur.model.name">EUR</modelName>
+                    <modelCategory ref="model.cat.name"/>
+                    <modelCcy ref="model.eur.ccy.name"/>
+                </modelEligRule>
+            </modelEligRules>
+
+            <settlementInstructions>
+                <settlementInstruction>
+                    <modelName>USD</modelName>
+                    <modelCategory ref="model.cat.name"/>
+                    <bookingType>Cash</bookingType>
+                    <direction>Wire In/Wire Out</direction>
+                    <bucket>Standard</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <modelName>USD</modelName>
+                    <modelCategory ref="model.cat.name"/>
+                    <bookingType>IM</bookingType>
+                    <direction>Wire In/Wire Out</direction>
+                    <bucket>Standard</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <modelName>USD</modelName>
+                    <modelCategory ref="model.cat.name"/>
+                    <bookingType>IM</bookingType>
+                    <direction>Pledge In/Pledge Out</direction>
+                    <bucket>Standard</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <modelName>USD</modelName>
+                    <modelCategory ref="model.cat.name"/>
+                    <bookingType>Cash Interest</bookingType>
+                    <direction>Pay/Receive</direction>
+                    <bucket>Standard</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <modelName>USD</modelName>
+                    <modelCategory ref="model.cat.name"/>
+                    <bookingType>IM Interest</bookingType>
+                    <direction>Pay/Receive</direction>
+                    <bucket>Standard</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <modelName>GBP</modelName>
+                    <modelCategory ref="model.cat.name"/>
+                    <bookingType>Cash</bookingType>
+                    <direction>Wire In/Wire Out</direction>
+                    <bucket>Standard</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <modelName>GBP</modelName>
+                    <modelCategory ref="model.cat.name"/>
+                    <bookingType>IM</bookingType>
+                    <direction>Wire In/Wire Out</direction>
+                    <bucket>Standard</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <modelName>GBP</modelName>
+                    <modelCategory ref="model.cat.name"/>
+                    <bookingType>IM</bookingType>
+                    <direction>Pledge In/Pledge Out</direction>
+                    <bucket>Standard</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <modelName>GBP</modelName>
+                    <modelCategory ref="model.cat.name"/>
+                    <bookingType>Cash Interest</bookingType>
+                    <direction>Pay/Receive</direction>
+                    <bucket>Standard</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <modelName>GBP</modelName>
+                    <modelCategory ref="model.cat.name"/>
+                    <bookingType>IM Interest</bookingType>
+                    <direction>Pay/Receive</direction>
+                    <bucket>Standard</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <modelName>EUR</modelName>
+                    <modelCategory ref="model.cat.name"/>
+                    <bookingType>Cash</bookingType>
+                    <direction>Wire In/Wire Out</direction>
+                    <bucket>Standard</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <modelName>EUR</modelName>
+                    <modelCategory ref="model.cat.name"/>
+                    <bookingType>IM</bookingType>
+                    <direction>Wire In/Wire Out</direction>
+                    <bucket>Standard</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <modelName>EUR</modelName>
+                    <modelCategory ref="model.cat.name"/>
+                    <bookingType>IM</bookingType>
+                    <direction>Pledge In/Pledge Out</direction>
+                    <bucket>Standard</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <modelName>EUR</modelName>
+                    <modelCategory ref="model.cat.name"/>
+                    <bookingType>Cash Interest</bookingType>
+                    <direction>Pay/Receive</direction>
+                    <bucket>Standard</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <modelName>EUR</modelName>
+                    <modelCategory ref="model.cat.name"/>
+                    <bookingType>IM Interest</bookingType>
+                    <direction>Pay/Receive</direction>
+                    <bucket>Standard</bucket>
+                </settlementInstruction>
+            </settlementInstructions>
+            <asset>
+                <assetName ref="bond.usd.name"/>
+                <applicableParty></applicableParty>
+                <applicableType></applicableType>
+                <eligibility>
+                    <elig_ultimateParent_correlation>true</elig_ultimateParent_correlation>
+                    <elig_closeLink_correlation>true</elig_closeLink_correlation>
+                </eligibility>
+            </asset>
+            <rounding_delivery>Up</rounding_delivery>
+            <rounding_recall>Down</rounding_recall>
+            <distMedium>Email</distMedium>
+        </feedAgreement>
+
+        <feedFxRate id="feed.USD.fx.rate">
+            <fxRate>1.000000</fxRate>
+            <currency id="model.usd.ccy.name">USD</currency>
+        </feedFxRate>
+        <feedFxRate id="feed.GBP.fx.rate">
+            <fxRate>0.640700</fxRate>
+            <currency id="model.gbp.ccy.name">GBP</currency>
+        </feedFxRate>
+        <feedFxRate id="feed.EUR.fx.rate">
+            <fxRate>0.920300</fxRate>
+            <currency id="model.eur.ccy.name">EUR</currency>
+        </feedFxRate>
+
+        <agreementSearch id="etd.agrmt.search">
+            <description>
+                <filter ref="etd.agrmt.desc"/>
+            </description>
+        </agreementSearch>
+
+        <agreementSearchResult id="etd.agrmt.search.result">
+            <description ref="etd.filter.agrmt.desc"/>
+        </agreementSearchResult>
+
+        <agreement id="add.drools.rule">
+            <userDefinedStatementCalc ref="etd.calc.rule.name"/>
+        </agreement>
+
+        <etdAgreementStatement id="pending.ed.1000">
+            <etdAssetHoldingSummary>
+                <agreementBaseCurrency>USD</agreementBaseCurrency>
+                <etdModelAndModelCategoryAssetHoldingSummary>
+                    <modelCategory ref="model.cat.name"></modelCategory>
+                    <model>USD</model>
+                    <etdAssetHoldingSummaryDetail>
+                        <pendingExcessOrDeficit>1000</pendingExcessOrDeficit>
+                    </etdAssetHoldingSummaryDetail>
+                </etdModelAndModelCategoryAssetHoldingSummary>
+                <etdModelAndModelCategoryAssetHoldingSummary>
+                    <modelCategory ref="model.cat.name"></modelCategory>
+                    <model>GBP</model>
+                    <etdAssetHoldingSummaryDetail>
+                        <pendingExcessOrDeficit>1000</pendingExcessOrDeficit>
+                    </etdAssetHoldingSummaryDetail>
+                </etdModelAndModelCategoryAssetHoldingSummary>
+                <etdModelAndModelCategoryAssetHoldingSummary>
+                    <modelCategory ref="model.cat.name"></modelCategory>
+                    <model>EUR</model>
+                    <etdAssetHoldingSummaryDetail>
+                        <pendingExcessOrDeficit>1000</pendingExcessOrDeficit>
+                    </etdAssetHoldingSummaryDetail>
+                </etdModelAndModelCategoryAssetHoldingSummary>
+            </etdAssetHoldingSummary>
+        </etdAgreementStatement>
+
+    </scenarioData>
+</dataBean>

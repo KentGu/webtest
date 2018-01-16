@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <organisationSearch id="mainOrgSearch">
+            <filter>MainOrg</filter>
+            <linkText>MainOrg</linkText>
+        </organisationSearch>
+
+        <organisationSearch id="org1Search">
+            <filter ref="org1.short.name" />
+            <linkText ref="org1.short.name" />
+        </organisationSearch>
+
+        <organisation id="addOrg1IntoMainOrgSubsidiary">
+            <relationship>
+                <parent>false</parent>
+                <type>Subsidiary</type>
+                <organisationSearch>
+                    <filter ref="org1.short.name"/>
+                    <linkText ref="org1.short.name"/>
+                </organisationSearch>
+            </relationship>
+        </organisation>
+
+        <organisation id="approveOrg1Again">
+            <status>Approved</status>
+        </organisation>
+
+        <organisation id="org1Branch">
+            <shortName id="org1Branch.shortName" random="true"/>
+            <longName ref="org1Branch.shortName" random="true"/>
+            <code ref="org1Branch.shortName" random="true"/>
+            <role ref="org.role.bh.name"/>
+            <role ref="org.role.cr.name"/>
+            <role ref="org.role.cp.name"/>
+            <externalCode>
+                <systemName>MANUAL</systemName>
+                <externalCode id="org1Branch.manual.external.code" random="true"/>
+            </externalCode>
+            <externalCode>
+                <systemName>QTP</systemName>
+                <externalCode ref="org1Branch.manual.external.code" />
+            </externalCode>
+            <status>Approved</status>
+        </organisation>
+
+        <organisation id="org4Branch">
+            <shortName id="org4Branch.shortName" random="true"/>
+            <longName ref="org4Branch.shortName" random="true"/>
+            <code ref="org4Branch.shortName" random="true"/>
+            <role ref="org.role.bh.name"/>
+            <role ref="org.role.cr.name"/>
+            <role ref="org.role.cp.name"/>
+            <externalCode>
+                <systemName>MANUAL</systemName>
+                <externalCode id="org4Branch.manual.external.code" random="true"/>
+            </externalCode>
+            <externalCode>
+                <systemName>QTP</systemName>
+                <externalCode ref="org4Branch.manual.external.code"/>
+            </externalCode>
+            <status>Approved</status>
+        </organisation>
+
+        <organisation id="org2">
+            <shortName id="org2.short.name" random="true"/>
+            <longName  ref="org2.short.name" random="true"/>
+            <code ref="org2.short.name" random="true"/>
+            <role ref="org.role.is.name"/>
+            <status>Approved</status>
+        </organisation>
+
+        <organisation id="org1">
+            <shortName id="org1.short.name" random="true"/>
+            <longName  ref="org1.short.name" random="true"/>
+            <code ref="org1.short.name" random="true"/>
+            <role ref="org.role.cr.name" />
+            <address>
+                <contact>someone</contact>
+                <address1>somewhere1</address1>
+                <address2>somewhere2</address2>
+                <address3>somewhere3</address3>
+                <address4>somewhere4</address4>
+                <address5>somewhere5</address5>
+                <title>manager</title>
+                <label>label</label>
+                <tel>12345678</tel>
+                <fax>12345678</fax>
+                <email>test@test.com</email>
+                <ftp>ftp://127.0.0.1</ftp>
+                <notes>some notes</notes>
+                <enable>true</enable>
+            </address>
+            <ultimateParent>
+                <filter ref="org2.short.name" />
+                <linkText ref="org2.short.name"/>
+            </ultimateParent>
+            <relationship>
+                <parent>false</parent>
+                <type>Branch</type>
+                <organisationSearch>
+                    <filter ref="org1Branch.shortName" />
+                    <linkText ref="org1Branch.shortName" />
+                </organisationSearch>
+            </relationship>
+            <status>Approved</status>
+        </organisation>
+
+        <organisation id="org4">
+            <shortName id="org4.short.name" random="true"/>
+            <longName  ref="org4.short.name" random="true"/>
+            <code ref="org4.short.name" random="true"/>
+            <role ref="org.role.cr.name" />
+            <role ref="org.role.cp.name" />
+            <address>
+                <contact>someone</contact>
+                <address1>somewhere1</address1>
+                <address2>somewhere2</address2>
+                <address3>somewhere3</address3>
+                <address4>somewhere4</address4>
+                <address5>somewhere5</address5>
+                <title>manager</title>
+                <label>label</label>
+                <tel>12345678</tel>
+                <fax>12345678</fax>
+                <email>test@test.com</email>
+                <ftp>ftp://127.0.0.1</ftp>
+                <notes>some notes</notes>
+                <enable>true</enable>
+            </address>
+            <relationship>
+                <parent>false</parent>
+                <type>Branch</type>
+                <organisationSearch>
+                    <filter ref="org4Branch.shortName" />
+                    <linkText ref="org4Branch.shortName" />
+                </organisationSearch>
+            </relationship>
+            <status>Approved</status>
+        </organisation>
+
+        <agreement id="agr1">
+            <principal>
+                <filter ref="org1.short.name"/>
+                <linkText ref="org1.short.name"/>
+            </principal>
+            <counterparty>
+                <filter ref="org4.short.name"/>
+                <linkText ref="org4.short.name"/>
+            </counterparty>
+            <agreementDescription id="agr1.des" random="true"/>
+            <principalInformation>
+                <allPartyBranches>true</allPartyBranches>
+            </principalInformation>
+            <counterpartyInformation>
+                <allPartyBranches>true</allPartyBranches>
+            </counterpartyInformation>
+            <agreementDate>T</agreementDate>
+            <callFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </callFrequency>
+            <holidayCentre ref="hc.europe.name"/>
+            <product id="agr1.pro1">
+                <productName ref="product.test1.name"/>
+            </product>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="bond.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="bond.usd.name"/>
+                    <eligibilityRule>
+                        <ultimateParentCorrelation>true</ultimateParentCorrelation>
+                    </eligibilityRule>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vcr.name"/>
+                    <linkText ref="payInstrBucket.vcr.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vrd.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.pay.name"/>
+                    <linkText ref="payInstrBucket.pay.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.rec.name"/>
+                    <linkText ref="payInstrBucket.rec.name"/>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementStatus>Pending</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <statementStatus>Approved</statementStatus>
+            <agreementId id="agreementBondUsdUltimateParentTickOn.id"/>
+        </agreement>
+
+
+        <agreement id="agr2">
+            <principal>
+                <filter ref="org1.short.name"/>
+                <linkText ref="org1.short.name"/>
+            </principal>
+            <counterparty>
+                <filter ref="org4.short.name"/>
+                <linkText ref="org4.short.name"/>
+            </counterparty>
+            <agreementDescription id="agr2.des" random="true"/>
+            <principalInformation>
+                <allPartyBranches>true</allPartyBranches>
+            </principalInformation>
+            <counterpartyInformation>
+                <allPartyBranches>true</allPartyBranches>
+            </counterpartyInformation>
+            <agreementDate>T</agreementDate>
+            <callFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </callFrequency>
+            <holidayCentre ref="hc.europe.name"/>
+            <product id="agr2.pro1">
+                <productName ref="product.test1.name"/>
+            </product>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="equity.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="equity.usd.name"/>
+                    <eligibilityRule>
+                        <ultimateParentCorrelation>true</ultimateParentCorrelation>
+                    </eligibilityRule>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vcr.name"/>
+                    <linkText ref="payInstrBucket.vcr.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vrd.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.pay.name"/>
+                    <linkText ref="payInstrBucket.pay.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.rec.name"/>
+                    <linkText ref="payInstrBucket.rec.name"/>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementStatus>Pending</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <statementStatus>Approved</statementStatus>
+            <agreementId id="agr2.id"/>
+        </agreement>
+
+
+
+        <feedTrade id="feed1">
+            <principal ref="org1Branch.manual.external.code"/>
+            <counterparty ref="org4Branch.manual.external.code"/>
+            <system>QTP</system>
+            <product ref="product.test1.name" />
+            <orgCode ref="org4Branch.manual.external.code" />
+            <tradeRef random="true"/>
+            <tradeRef2 random="true" />
+            <dealDate>2015-10-10</dealDate>
+            <startDate>2016-10-10</startDate>
+            <endDate>2017-10-10</endDate>
+            <notional>500</notional>
+            <notional2nd>100</notional2nd>
+            <currency>USD</currency>
+            <currency2nd>USD</currency2nd>
+            <mtmValuation>8023</mtmValuation>
+            <mtmValuationDate>2017-10-10</mtmValuationDate>
+            <mtmValuationLocalSysCcy>USD</mtmValuationLocalSysCcy>
+            <indepMtmValuation>5000</indepMtmValuation>
+            <indepMtmValuationCcy>AUD</indepMtmValuationCcy>
+            <underlyingDescription>trade testing</underlyingDescription>
+            <tradePrice>11</tradePrice>
+            <dirtyMarketPrice>22</dirtyMarketPrice>
+            <cleanMarketPrice>33</cleanMarketPrice>
+            <hairCut>5</hairCut>
+            <priceChange>88</priceChange>
+            <priceAge>2</priceAge>
+            <descriptionId>8023</descriptionId>
+            <accrual>111</accrual>
+            <principalDealLevelUpfront>0</principalDealLevelUpfront>
+            <principalDealLevelAmount>1000</principalDealLevelAmount>
+            <principalDealLevelCurrency>USD</principalDealLevelCurrency>
+            <principalDealLevelType>Lock-up Margin</principalDealLevelType>
+            <counterpartyDealLevelUpfront>1</counterpartyDealLevelUpfront>
+            <counterpartyDealLevelAmount>2000</counterpartyDealLevelAmount>
+            <counterpartyDealLevelCurrency>USD</counterpartyDealLevelCurrency>
+            <counterpartyDealLevelType>Independent Amount</counterpartyDealLevelType>
+            <strategy>LR</strategy>
+            <cptyRef>LR</cptyRef>
+            <misc1>misc1</misc1>
+            <misc1>misc2</misc1>
+            <misc1>misc3</misc1>
+            <misc1>misc4</misc1>
+            <misc1>misc5</misc1>
+            <operation>a</operation>
+            <altMtmValuation>4000</altMtmValuation>
+            <altmtmValuationCcy>USD</altmtmValuationCcy>
+            <originalPartyB>partyB</originalPartyB>
+            <upfrontFee>5555</upfrontFee>
+        </feedTrade>
+
+        <feedTrade id="feed2">
+            <principal ref="org1Branch.manual.external.code"/>
+            <counterparty ref="org4Branch.manual.external.code"/>
+            <system>QTP</system>
+            <product ref="product.test1.name" />
+            <orgCode ref="org4Branch.manual.external.code" />
+            <tradeRef random="true"/>
+            <tradeRef2 random="true" />
+            <dealDate>2015-10-10</dealDate>
+            <startDate>2016-10-10</startDate>
+            <endDate>2017-10-10</endDate>
+            <notional>500</notional>
+            <notional2nd>100</notional2nd>
+            <currency>USD</currency>
+            <currency2nd>USD</currency2nd>
+            <mtmValuation>8023</mtmValuation>
+            <mtmValuationDate>2017-10-10</mtmValuationDate>
+            <mtmValuationLocalSysCcy>USD</mtmValuationLocalSysCcy>
+            <indepMtmValuation>5000</indepMtmValuation>
+            <indepMtmValuationCcy>AUD</indepMtmValuationCcy>
+            <underlyingDescription>trade testing</underlyingDescription>
+            <tradePrice>11</tradePrice>
+            <dirtyMarketPrice>22</dirtyMarketPrice>
+            <cleanMarketPrice>33</cleanMarketPrice>
+            <hairCut>5</hairCut>
+            <priceChange>88</priceChange>
+            <priceAge>2</priceAge>
+            <descriptionId>8023</descriptionId>
+            <accrual>111</accrual>
+            <principalDealLevelUpfront>0</principalDealLevelUpfront>
+            <principalDealLevelAmount>1000</principalDealLevelAmount>
+            <principalDealLevelCurrency>USD</principalDealLevelCurrency>
+            <principalDealLevelType>Lock-up Margin</principalDealLevelType>
+            <counterpartyDealLevelUpfront>1</counterpartyDealLevelUpfront>
+            <counterpartyDealLevelAmount>2000</counterpartyDealLevelAmount>
+            <counterpartyDealLevelCurrency>USD</counterpartyDealLevelCurrency>
+            <counterpartyDealLevelType>Independent Amount</counterpartyDealLevelType>
+            <strategy>LR</strategy>
+            <cptyRef>LR</cptyRef>
+            <misc1>misc1</misc1>
+            <misc1>misc2</misc1>
+            <misc1>misc3</misc1>
+            <misc1>misc4</misc1>
+            <misc1>misc5</misc1>
+            <operation>a</operation>
+            <altMtmValuation>4000</altMtmValuation>
+            <altmtmValuationCcy>USD</altmtmValuationCcy>
+            <originalPartyB>partyB</originalPartyB>
+            <upfrontFee>5555</upfrontFee>
+        </feedTrade>
+
+        <feedResult id="feed1Log">
+            <uploadState>Upload Complete!</uploadState>
+            <successfullyImported>1</successfullyImported>
+            <unsuccessfulImports>0</unsuccessfulImports>
+        </feedResult>
+
+        <feedResult id="feed2Log">
+            <uploadState>Upload Complete!</uploadState>
+            <successfullyImported>1</successfullyImported>
+            <unsuccessfulImports>0</unsuccessfulImports>
+        </feedResult>
+    </scenarioData>
+
+
+</dataBean>

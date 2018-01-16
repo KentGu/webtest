@@ -1,0 +1,71 @@
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/feeds.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <agreement>
+            <agreementId id="otc.net.agreement.id">523</agreementId>
+            <externalId id="otc.net.agreement.external.id">T4877AgreementFCMExternalID</externalId>
+            <model>
+                <modelEligibilityRule>
+                    <modelName id="otc.net.agreement.model.name">T4877ModelName</modelName>
+                </modelEligibilityRule>
+            </model>
+        </agreement>
+
+        <feedExternalIA id="feed.external.ia.principal">
+            <AGREEMENTID ref="otc.net.agreement.id"/>
+            <legal_id ref="otc.net.agreement.external.id"/>
+            <PRODUCT id="feed.external.ia.principal.product" ref="product.test1.name"/>
+            <AMOUNT id="feed.external.ia.principal.amnt">-12000</AMOUNT>
+            <CURRENCY id="feed.external.ia.principal.ccy" ref="ccy.usd.name"/>
+            <ValuationDate id="feed.external.ia.principal.valuation.date">2009-6-25</ValuationDate>
+            <externalSystem id="feed.external.ia.principal.external.sys" ref="org.feed.system.qtp.name"/>
+            <scaleUp>true</scaleUp>
+            <Model ref="otc.net.agreement.model.name"/>
+            <payParty>PP</payParty>
+        </feedExternalIA>
+
+        <feedResult id="feed.external.ia.principal.result">
+            <fileUploaded id="feed.external.ia.principal.result.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedStatus id="feed.external.ia.principal.status">
+            <status>Successful</status>
+            <valuationFile ref="feed.external.ia.principal.result.file"/>
+            <successfulFeed apply="true">
+                <total>1</total>
+                <entry>
+                    <content>payParty is invalid</content>
+                </entry>
+            </successfulFeed>
+        </feedStatus>
+
+        <agreementSearch id="feed.external.ia.principal.agreement.search">
+            <systemId ref="otc.net.agreement.id"/>
+            <externalId>
+                <filter ref="otc.net.agreement.external.id"/>
+                <linkText ref="otc.net.agreement.external.id"/>
+            </externalId>
+        </agreementSearch>
+
+        <agreementSearchResult id="feed.external.ia.principal.agreement.search.result">
+            <agreementId ref="otc.net.agreement.id"/>
+            <externalId ref="otc.net.agreement.external.id"/>
+        </agreementSearchResult>
+
+        <multiModelAgreementStatement id="feed.external.ia.principal.agreement.statement">
+            <multimodelAssetHoldingSummary>
+                <modelName ref="otc.net.agreement.model.name"/>
+            </multimodelAssetHoldingSummary>
+        </multiModelAgreementStatement>
+
+        <agreementStatement id="check.feed.external.ia.principal.agreement">
+            <exposureSummary>
+                <!--<principalPaysIndependentAmount ref="feed.external.ia.principal.amnt"/>-->
+                <principalPaysIndependentAmount>-24,000.00</principalPaysIndependentAmount>
+            </exposureSummary>
+        </agreementStatement>
+    </scenarioData>
+</dataBean>

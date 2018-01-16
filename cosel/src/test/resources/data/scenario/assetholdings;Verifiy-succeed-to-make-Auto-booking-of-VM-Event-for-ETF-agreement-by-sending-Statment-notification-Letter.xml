@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+		<agreement id="agr28826.etf">
+			<agreementId id="agr28826.id">2564</agreementId>
+		</agreement>
+
+		<exposureEventDetail id="model">
+			<column>Model</column>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="agr28826.event">
+		</exposureEventDetail>
+
+		<exposureEventDetail id="VMDelivery.agreementRequirement.1036283.91">
+			<action>VM Delivery(Excess)</action>
+			<agreementRequirement>-1,036,283.91</agreementRequirement>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="VMCall.agreementRequirement.963716.09">
+			<action>VM Call(Deficit)</action>
+			<agreementRequirement>963,716.09</agreementRequirement>
+			<model>o1</model>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="VMDelivery.agreementRequirement.2000000.00">
+			<action>VM Delivery(Excess)</action>
+			<agreementRequirement>-2,000,000.00</agreementRequirement>
+			<model>o2</model>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="cashDelivery.agreementRequirement.611550.80">
+			<action>Cash Delivery(Excess)</action>
+			<agreementRequirement>-611,550.80</agreementRequirement>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="cashDelivery.agreementRequirement.2000000.01">
+			<action>Cash Delivery(Excess)</action>
+			<agreementRequirement>-2,000,000.01</agreementRequirement>
+			<model>o2</model>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="cashCall.agreementRequirement.1388449.21">
+			<action>Cash Call(Deficit)</action>
+			<agreementRequirement>1,388,449.21</agreementRequirement>
+			<model>o1</model>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="FeeDelivery.agreementRequirement.1000000.01">
+			<action>Fee Delivery(Excess)</action>
+			<agreementRequirement>-1,000,000.01</agreementRequirement>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="FeeDelivery.agreementRequirement.2000000.01">
+			<action>Fee Delivery(Excess)</action>
+			<agreementRequirement>-2,000,000.01</agreementRequirement>
+			<model>o2</model>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="FeeCall.agreementRequirement.1000000.00">
+			<action>Fee Call(Deficit)</action>
+			<agreementRequirement>1,000,000.00</agreementRequirement>
+			<model>o1</model>
+		</exposureEventDetail>
+
+
+		<marginLetter id="createStatementNotificationLetter">
+			<letterType>Statement Notification</letterType>
+			<letterSetupDetails>
+				<emailAttachments>
+					<assetHoldingsandValuationReport>true</assetHoldingsandValuationReport>
+				</emailAttachments>
+			</letterSetupDetails>
+		</marginLetter>
+
+
+		<assetBookingSummary id="asset.type.CASH.EUR">
+			<assetType id="cash.eur.name">CASH-EUR</assetType>
+		</assetBookingSummary>
+
+		<assetBookingSummary id="cash.eur.delivery.autobook.1440456">
+			<bookingSource>Auto Book</bookingSource>
+			<nominalAmount>-1,440,456.00</nominalAmount>
+			<movement>Delivery</movement>
+			<status>System Draft</status>
+			<model>o2</model>
+		</assetBookingSummary>
+		
+		<bookingDetail id="cash.eur.delivery.autobook.1440456.net">
+			<bookingInformation>
+				<bookingType>Net</bookingType>
+			</bookingInformation>
+		</bookingDetail>
+		
+		<bookingDetail id="changeStatusToCancelled">
+			<bookingInformation>
+				<settlementStatusInfo>
+					<settlementComment>t</settlementComment>
+					<settlementStatus>Cancelled</settlementStatus>
+				</settlementStatusInfo>
+			</bookingInformation>
+			<alertHandling>
+				<accept>true</accept>
+			</alertHandling>
+			<save>save</save>
+		</bookingDetail>
+
+		<agreement id="autorule.vm.call">
+			<collateralAssetClass>
+				<collateralAssetClassName>qtp_cash</collateralAssetClassName>
+				<autoBookingRule>
+					<movement>Call</movement>
+					<value>Use Agreement Amount</value>
+				</autoBookingRule>
+			</collateralAssetClass>
+		</agreement>
+
+		<agreement id="agr28826">
+			<agreementStatus>Approved</agreementStatus>
+			<statementStatus>Approved</statementStatus>
+		</agreement>
+
+		<assetBookingSummary id="cash.eur.call.autobook.694095.31">
+			<bookingSource>Auto Book</bookingSource>
+			<nominalAmount>694,095.31</nominalAmount>
+			<movement>Call</movement>
+			<status>System Draft</status>
+			<model>o1</model>
+		</assetBookingSummary>
+
+		<bookingDetail id="cash.eur.call.autobook.694095.31.net">
+			<bookingInformation>
+				<bookingType>Net</bookingType>
+			</bookingInformation>
+		</bookingDetail>
+
+
+
+
+
+
+
+	</scenarioData>
+</dataBean>

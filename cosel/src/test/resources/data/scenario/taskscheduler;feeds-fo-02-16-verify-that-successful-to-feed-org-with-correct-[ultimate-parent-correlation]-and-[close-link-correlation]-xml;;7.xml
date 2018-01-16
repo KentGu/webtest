@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/taskScheduler.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <feedOrganisation id="feed.organisation.invalid.ultimate.parenets.invalid.close.links">
+            <orgHeader>
+                <orgCode id="feed.organisation.invalid.ultimate.parenets.invalid.close.links.code">T32500Organisation3Code</orgCode>
+                <longName id="feed.organisation.invalid.ultimate.parenets.invalid.close.links.lname">T32500Organisation3LongName</longName>
+                <shortName id="feed.organisation.invalid.ultimate.parenets.invalid.close.links.sname">T32500Organisation3ShortName</shortName>
+            </orgHeader>
+            <orgRole id="feed.organisation.invalid.ultimate.parenets.invalid.close.links.role">Branch</orgRole>
+            <region id="feed.organisation.invalid.ultimate.parenets.invalid.close.links.region">ALL</region>
+            <ultimateParents>
+                <ultimateParent id="feed.organisation.invalid.ultimate.parenets.invalid.close.links.ultimate.parent">:!@#$%^*()__+</ultimateParent>
+            </ultimateParents>
+            <closeLinks>
+                <closeLink id="feed.organisation.invalid.ultimate.parenets.invalid.close.links.close.link">:!@#$%^*()__+</closeLink>
+            </closeLinks>
+        </feedOrganisation>
+
+        <feedStatus id="feed.organisation.invalid.ultimate.parenets.invalid.close.links.status">
+            <status>Successful</status>
+            <valuationFile ref="feed.organisation.invalid.ultimate.parenets.invalid.close.links.result.file"/>
+            <description>Organisation</description>
+            <successfulFeed>
+                <total>1</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <organisationSearch id="feed.organisation.invalid.ultimate.parenets.invalid.close.links.search">
+            <criteria>Exactly matching</criteria>
+            <type>Short Name</type>
+            <filter ref="feed.organisation.invalid.ultimate.parenets.invalid.close.links.sname"/>
+            <linkText ref="feed.organisation.invalid.ultimate.parenets.invalid.close.links.sname"/>
+        </organisationSearch>
+
+        <organisation id="check.feed.organisation.invalid.ultimate.parenets.invalid.close.links">
+            <shortName ref="feed.organisation.invalid.ultimate.parenets.invalid.close.links.sname"/>
+            <longName ref="feed.organisation.invalid.ultimate.parenets.invalid.close.links.lname"/>
+            <code ref="feed.organisation.invalid.ultimate.parenets.invalid.close.links.code"/>
+            <role ref="feed.organisation.invalid.ultimate.parenets.invalid.close.links.role"/>
+            <region ref="feed.organisation.invalid.ultimate.parenets.invalid.close.links.region"/>
+            <ultimateParent>
+                <linkText></linkText>
+            </ultimateParent>
+            <closeLink>
+                <linkText></linkText>
+            </closeLink>
+        </organisation>
+
+        <taskSchedulerDetail id="task.feed.organisation">
+            <type>Task Manager</type>
+            <taskName>Import Organisations 1</taskName>
+            <additionalInfo id="task.feed.agreement.server.path">/home/ec2-user/Feed/FeedOrganisation</additionalInfo>
+        </taskSchedulerDetail>
+
+        <taskSchedulerMessage id="task.feed.organisation.message">
+            <message>(Organisation: Imported 0 Organisations from file:(\S+).(xml|xls) - Modified 1 entries.|Organisation: Imported 1 Organisations from file:(\S+).xml)</message>
+        </taskSchedulerMessage>
+
+        <variable id="file.path"/>
+    </scenarioData>
+</dataBean>

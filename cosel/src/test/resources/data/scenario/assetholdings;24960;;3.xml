@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+
+		<agreementSearch id="search.agreement.by.agreement.description">
+			<description>
+				<filter>24960agreement</filter>
+			</description>
+		</agreementSearch>
+
+		<agreementSearchResult id="agreement.search.result">
+			<description>24960agreement</description>
+		</agreementSearchResult>
+
+
+		<exposureEventDetail id="even.with.call.10m">
+			<action>Call</action>
+			<agreementRequirement>10,000,000.00</agreementRequirement>
+		</exposureEventDetail>
+
+
+
+		<bookingDetail id="bulk.booking.with.24960.instrument2.1m.call">
+			<instrumentSearch>
+				<instrument>
+					<filter>24960bondinstrument2</filter>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>1m</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+
+		<exposureManagementMessage id="warning.message.with.error.instrument2">
+			<messageDetail>
+				<index>1</index>
+				<message>24960agreement/QTPPrincipal/QTPCounterparty/525: Attempting to make a booking that does not meet the Required Amount. (Expected: 10,000,000.00, Actual: 1,000,000.00) Continue?</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+
+
+
+
+
+
+
+	</scenarioData>
+</dataBean>

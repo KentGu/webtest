@@ -1,0 +1,216 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.lombardrisk</groupId>
+        <artifactId>collina</artifactId>
+        <version>15.2.2-SNAPSHOT</version>
+    </parent>
+    <artifactId>cosel</artifactId>
+    <version>15.2.2-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>Colline Test Repository</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <argLine>-Dfile.encoding=UTF-8</argLine>
+        <!--<xmlFileName>suites/demo.xml</xmlFileName>-->
+        <cucumberTags>@SmokeTest</cucumberTags>
+        <!--<testThread>1</testThread>-->
+        <test-thread>1</test-thread>
+        <report-format>html</report-format>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.lombardrisk</groupId>
+            <artifactId>cobiz</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.uncommons</groupId>
+            <artifactId>reportng</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.testng</groupId>
+                    <artifactId>testng</artifactId>
+                </exclusion>
+            </exclusions>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.inject</groupId>
+            <artifactId>guice</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>default-prepare-agent-integration</id>
+                        <goals>
+                            <goal>prepare-agent-integration</goal>
+                        </goals>
+                        <configuration>
+                            <!-- passing property which will contains settings for JaCoCo agent.
+                            If not specified, then "argLine" would be used for "jar" packaging -->
+                            <propertyName>failsafeArgLine</propertyName>
+                            <destFile>${project.build.directory}/result/jacoco-it.exec</destFile>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                    <!--<skipTests>true</skipTests>-->
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>default-integration-test</id>
+                        <goals>
+                            <goal>integration-test</goal>
+                            <!--can't remove otherwise build success even if integration test failed-->
+                            <goal>verify</goal>
+                        </goals>
+                        <configuration>
+                            <!--<forkMode>once</forkMode>-->
+                            <!--<forkCount>0</forkCount>-->
+                            <!--<argLine>-Dfile.encoding=UTF-8</argLine>-->
+                            <!--<testFailureIgnore>true</testFailureIgnore>-->
+                            <encoding>UTF-8</encoding>
+                            <!--<suiteXmlFiles>-->
+                                <!--<suiteXmlFile>${xmlFileName}</suiteXmlFile>-->
+                            <!--</suiteXmlFiles>-->
+                            <!--<includes>-->
+                            <!--<include>**/Parallel**IT.java</include>-->
+                            <!--</includes>-->
+                            <!--<systemProperties>-->
+                            <!--<surefire.rerunFailingTestsCount>${surefire.rerunFailingTestsCount}</surefire.rerunFailingTestsCount>-->
+                            <!--</systemProperties>-->
+                            <parallel>classes</parallel>
+                            <threadCount>${test-thread}</threadCount>
+                            <properties>
+                                <!-- <xmlFileName>suites/default.xml</xmlFileName> -->
+                                <property>
+                                    <name>usedefaultlisteners</name>
+                                    <value>false</value>
+                                </property>
+                                <property>
+                                    <name>listener</name>
+                                    <!--experimental optional reports org.yiwan.webcore.testng.ResultListener,org.yiwan.webcore.testng.RetryListener,org.yiwan.webcore.testng.Hook,org.yiwan.webcore.testng.HTMLReporter,org.yiwan.webcore.testng.XLSReporter -->
+                                    <value>org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter
+                                    </value>
+                                </property>
+                                <!--<property>-->
+                                    <!--<name>parallel</name>-->
+                                    <!--<value>classes</value>-->
+                                <!--</property>-->
+                                <!--<property>-->
+                                    <!--<name>threadcount</name>-->
+                                    <!--<value>${testThread}</value>-->
+                                <!--</property>-->
+                            </properties>
+                            <systemPropertyVariables>
+                                <org.uncommons.reportng.title>Colline Automation Test Report</org.uncommons.reportng.title>
+                                <org.uncommons.reportng.escape-output>false</org.uncommons.reportng.escape-output>
+                            </systemPropertyVariables>
+                            <!--<argLine>${failsafeArgLine}</argLine>-->
+                            <reportsDirectory>${project.build.directory}/result/reportng-reports</reportsDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+                <configuration>
+                    <argLine>-Xms512M -Xmx2048M -XX:PermSize=512m -XX:MaxPermSize=1024m -Xss2048k</argLine>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.yiwan</groupId>
+                <artifactId>cucumber-jvm-parallel-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>generateRunners</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>generateRunners</goal>
+                        </goals>
+                        <configuration>
+                            <!-- Mandatory -->
+                            <!-- comma separated list of package names to scan for glue code -->
+                            <glue>
+                                <package>com.lombardrisk.glue.hooks</package>
+                                <package>com.lombardrisk.glue.steps</package>
+                            </glue>
+                            <!-- These are the default values -->
+                            <!-- Where to output the generated tests -->
+                            <outputDirectory>${project.build.directory}/generated-test-sources/cucumber</outputDirectory>
+                            <!-- The directory containing your feature files.  -->
+                            <featuresDirectory>src/test/resources/features/</featuresDirectory>
+                            <!-- Directory where the cucumber report files shall be written  -->
+                            <cucumberOutputDir>${project.build.directory}/result/cucumber-reports</cucumberOutputDir>
+                            <!-- comma separated list of output formats -->
+                            <plugins>
+                                <plugin>
+                                    <name>${report-format}</name>
+                                </plugin>
+                                <!--<plugin>-->
+                                    <!--<name>rerun</name>-->
+                                <!--</plugin>-->
+                                <!--<plugin>-->
+                                    <!--<name>html</name>-->
+                                <!--</plugin>-->
+                                <!--<plugin>-->
+                                    <!--<name>com.example.CustomHtmlFormatter</name>-->
+                                    <!--<extension>html</extension>-->
+                                <!--</plugin>-->
+                            </plugins>
+                            <!-- CucumberOptions.strict property -->
+                            <strict>true</strict>
+                            <!-- CucumberOptions.monochrome property -->
+                            <monochrome>true</monochrome>
+                            <!-- The tags to run, maps to CucumberOptions.tags property -->
+                            <tags>
+                                <tag>${cucumberTags}</tag>
+                                <tag>~@manual</tag>
+                                <tag>~@deprecated</tag>
+                                <tag>~@todo</tag>
+                                <tag>~@wip</tag>
+                                <tag>~@ignore</tag>
+                            </tags>
+                            <!-- If set to true, only feature files containing the required tags shall be generated. -->
+                            <!-- Excluded tags (~@notMe) are ignored. -->
+                            <!--<filterFeaturesByTags>true</filterFeaturesByTags>-->
+                            <!-- Generate TestNG runners instead of JUnit ones. -->
+                            <useTestNG>true</useTestNG>
+                            <!-- The naming scheme to use for the generated test classes.  One of 'simple' or 'feature-title' -->
+                            <namingScheme>feature-title</namingScheme>
+                            <!-- The class naming pattern to use.  Only required/used if naming scheme is 'pattern'.-->
+                            <namingPattern>Parallel{c}IT</namingPattern>
+                            <!-- One of [SCENARIO, FEATURE]. SCENARIO generates one runner per scenario.  FEATURE generates a runner per feature. -->
+                            <parallelScheme>SCENARIO</parallelScheme>
+                            <!-- Specify a custom template for the generated sources (this is a path relative to the project base directory) -->
+                            <customVmTemplate>src/test/resources/cucumber-testng-runner.java.vm</customVmTemplate>
+                            <!-- Specify a custom package name for generated sources. Default is no package.-->
+                            <packageName>com.lombardrisk.bdd.cases</packageName>
+                            <!--cucumber TestNG super test class, default value is cucumber.api.testng.AbstractTestNGCucumberTests-->
+                            <!--<testNGSuperClass>com.lombardrisk.test.TestNGFeature</testNGSuperClass>-->
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

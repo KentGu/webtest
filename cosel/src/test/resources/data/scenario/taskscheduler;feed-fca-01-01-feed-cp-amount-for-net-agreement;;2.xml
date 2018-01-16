@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/taskScheduler.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <agreement>
+            <externalId id="agreement.external.id">T6108Agreement2ExternalID</externalId>
+            <agreementDescription id="agreement.description">T6108Agreement2</agreementDescription>
+            <agreementId id="agreement.id">578</agreementId>
+        </agreement>
+        
+        <feedCounterpartyAmount id="feed.counterparty.amount">
+            <agreement_id ref="agreement.id"/>
+            <legal_id ref="agreement.external.id"/>
+            <action id="feed.counterparty.amount.action">Delivery</action>
+            <eventType id="feed.counterparty.amount.event.type">Net</eventType>
+            <counterpartyAmount id="feed.counterparty.amount.cpty.amt">1000000</counterpartyAmount>
+            <counterpartyExposureAmount id="feed.counterparty.amount.cpty.expo.amt">1000000</counterpartyExposureAmount>
+            <currency id="feed.counterparty.amount.currency" ref="ccy.eur.name"/>
+            <!--<model></model>-->
+        </feedCounterpartyAmount>
+
+        <feedStatus id="feed.counterparty.amount.status">
+            <status>Successful</status>
+            <valuationFile ref="file"/>
+            <description>Counterparty Amount</description>
+            <successfulFeed>
+                <total>1</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <agreementSearch id="feed.counterparty.amount.agreement.search">
+            <systemId ref="agreement.id"/>
+            <externalId>
+                <filter ref="agreement.external.id"/>
+                <linkText ref="agreement.external.id"/>
+            </externalId>
+            <description>
+                <filter ref="agreement.description"/>
+                <linkText ref="agreement.description"/>
+            </description>
+        </agreementSearch>
+
+        <agreementSearchResult id="feed.counterparty.amount.agreement.search.result">
+            <agreementId ref="agreement.id"/>
+            <description ref="agreement.description"/>
+        </agreementSearchResult>
+
+        <exposureEventDetail id="orignal.feed.counterparty.amount" name="feed.counterparty.amount.em.event">
+            <eventId id="orignal.feed.counterparty.amount.event.id">13012</eventId>
+            <agrId ref="agreement.id"/>
+            <externalId ref="agreement.external.id"/>
+            <description ref="agreement.description"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="check.feed.counterparty.amount.agreement" name="feed.counterparty.amount.em.event">
+            <eventId ref="orignal.feed.counterparty.amount.event.id"/>
+            <agrId ref="agreement.id"/>
+            <externalId ref="agreement.external.id"/>
+            <description ref="agreement.description"/>
+            <action ref="feed.counterparty.amount.action"/>
+            <!--<marginType ref="feed.counterparty.amount.event.type"/>-->
+            <counterpartyAmount ref="feed.counterparty.amount.cpty.amt"/>
+            <cptyExposure ref="feed.counterparty.amount.cpty.expo.amt"/>
+            <agrBaseCcy ref="feed.counterparty.amount.currency"/>
+        </exposureEventDetail>
+
+        <taskSchedulerDetail id="task.feed.counterparty.amount">
+            <type>Task Manager</type>
+            <taskName>Import Counterparty Amount</taskName>
+            <additionalInfo id="task.feed.counterparty.amount.server.path">/home/ec2-user/Feed/FeedCounterpartyAmount</additionalInfo>
+        </taskSchedulerDetail>
+
+        <variable id="file"/>
+
+        <taskSchedulerMessage id="task.feed.counterparty.amount.message">
+            <!--<message>Counterparty Amount Import :(\S+).(xml|xlsx|xls|csv)</message>-->
+            <message>Import Counterparty Amount: Imported 1 Counterparty Amount from :(\S+).(xlsx|xls|xml|csv)</message>
+        </taskSchedulerMessage>
+    </scenarioData>
+</dataBean>

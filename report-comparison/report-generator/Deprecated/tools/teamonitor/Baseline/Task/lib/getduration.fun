@@ -1,0 +1,90 @@
+getduration(){
+  STARTTIME_=$1
+  ENDTIME_=$2
+
+  DATE_TAIL=`echo ${STARTTIME_} | awk -F- '{print$3}'`
+  START_MM=`echo ${STARTTIME_} | awk -F- '{print$2}'`
+  TIME_TAIL=`echo ${STARTTIME_} | awk '{print$2}'`
+
+  START_DD=`echo ${DATE_TAIL} | awk  '{print$1}'`
+  START_H=`echo ${TIME_TAIL} | awk -F: '{print$1}'`
+  START_M=`echo ${TIME_TAIL} | awk -F: '{print$2}'`
+  START_S=`echo ${TIME_TAIL} | awk -F: '{print$3}'`
+
+  S_TOTAL=`expr ${START_MM} \* 30 \* 24 \* 3600 + ${START_DD} \* 24 \* 3600 + ${START_H} \* 3600 + ${START_M} \* 60 + ${START_S}`
+
+
+
+  DATE_TAIL=`echo ${ENDTIME_} | awk -F- '{print$3}'`
+  END_MM=`echo ${ENDTIME_} | awk -F- '{print$2}'`
+
+  TIME_TAIL=`echo ${ENDTIME_} | awk '{print$2}'`
+
+  END_DD=`echo ${DATE_TAIL} | awk  '{print$1}'`
+  END_H=`echo ${TIME_TAIL} | awk -F: '{print$1}'`
+  END_M=`echo ${TIME_TAIL} | awk -F: '{print$2}'`
+  END_S=`echo ${TIME_TAIL} | awk -F: '{print$3}'`
+
+  E_TOTAL=`expr ${END_MM} \* 30 \* 24 \* 3600 + ${END_DD} \* 24 \* 3600 + ${END_H} \* 3600 + ${END_M} \* 60 + ${END_S}`
+
+
+  if [ ${END_MM} -eq 4 ] && [ ${START_MM} -eq 3 ]; then
+    E_TOTAL=`expr ${E_TOTAL} + 3600 \* 24`
+  elif [ ${END_MM} -eq 6 ] && [ ${START_MM} -eq 5 ]; then
+    E_TOTAL=`expr ${E_TOTAL} + 3600 \* 24`
+    elif [ ${END_MM} -eq 8 ] && [ ${START_MM} -eq 7 ]; then
+        E_TOTAL=`expr ${E_TOTAL} + 3600 \* 24`
+  fi
+  export DURATION_=`expr ${E_TOTAL} - ${S_TOTAL}`
+
+}
+
+getMyDuration(){
+  STARTTIME_=$1
+  ENDTIME_=$2
+
+  DATE_TAIL=`echo ${STARTTIME_} | awk -F- '{print$3}'`
+  START_MM=`echo ${STARTTIME_} | awk -F- '{print$2}'`
+  TIME_TAIL=`echo ${STARTTIME_} | awk '{print$2}'`
+
+  START_DD=`echo ${DATE_TAIL} | awk  '{print$1}'`
+  START_H=`echo ${TIME_TAIL} | awk -F: '{print$1}'`
+  START_M=`echo ${TIME_TAIL} | awk -F: '{print$2}'`
+  START_S=`echo ${TIME_TAIL} | awk -F: '{print$3}'`
+
+  S_TOTAL=`expr ${START_MM} \* 30 \* 24 \* 3600 + ${START_DD} \* 24 \* 3600 + ${START_H} \* 3600 + ${START_M} \* 60 + ${START_S}`
+
+
+
+  DATE_TAIL=`echo ${ENDTIME_} | awk -F- '{print$3}'`
+  END_MM=`echo ${ENDTIME_} | awk -F- '{print$2}'`
+
+  TIME_TAIL=`echo ${ENDTIME_} | awk '{print$2}'`
+
+  END_DD=`echo ${DATE_TAIL} | awk  '{print$1}'`
+  END_H=`echo ${TIME_TAIL} | awk -F: '{print$1}'`
+  END_M=`echo ${TIME_TAIL} | awk -F: '{print$2}'`
+  END_S=`echo ${TIME_TAIL} | awk -F: '{print$3}'`
+
+  E_TOTAL=`expr ${END_MM} \* 30 \* 24 \* 3600 + ${END_DD} \* 24 \* 3600 + ${END_H} \* 3600 + ${END_M} \* 60 + ${END_S}`
+
+
+  if [ ${END_MM} -eq 4 ] && [ ${START_MM} -eq 3 ]; then
+    E_TOTAL=`expr ${E_TOTAL} + 3600 \* 24`
+  elif [ ${END_MM} -eq 6 ] && [ ${START_MM} -eq 5 ]; then
+    E_TOTAL=`expr ${E_TOTAL} + 3600 \* 24`
+    elif [ ${END_MM} -eq 8 ] && [ ${START_MM} -eq 7 ]; then
+        E_TOTAL=`expr ${E_TOTAL} + 3600 \* 24`
+  fi
+
+  export my_DURATION_=`expr ${E_TOTAL} - ${S_TOTAL}`
+}
+
+getNanoDuration(){
+  STARTTIME_=$1
+  ENDTIME_=$2
+
+  export Nano_DURATION_=$(echo "$2-$1"|bc)
+  echo "*******************************Nano_DURATION_="${Nano_DURATION_}
+}
+

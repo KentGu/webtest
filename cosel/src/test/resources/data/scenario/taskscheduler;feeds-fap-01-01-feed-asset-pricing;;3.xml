@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/taskScheduler.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <feedAssetPricing id="feed.asset.bond.pricing.not.existed">
+            <DRIF>2014-11-05</DRIF>
+            <ASSET_CLASS id="feed.asset.bond.pricing.not.existed.asset.class">qtp_bond</ASSET_CLASS>
+            <ASSET_TYPE id="feed.asset.bond.pricing.not.existed.asset.type">qtp_bond_usd</ASSET_TYPE>
+            <EXTISIN id="feed.asset.bond.pricing.not.existed.intrument.id">T6107_QTP_BOND_USD_Instrument_Not_Existed</EXTISIN>
+            <MARKET id="feed.asset.bond.pricing.not.existed.market">automation</MARKET>
+            <EV_PRICE id="feed.asset.bond.pricing.not.existed.clean.price">10</EV_PRICE>
+            <ACC_DDAT id="feed.asset.bond.pricing.not.existed.coupon.accrual">1.5</ACC_DDAT>
+            <INFLAT_RATIO id="feed.asset.bond.pricing.not.existed.factor">2</INFLAT_RATIO>
+            <PRICE_SOURCE id="feed.asset.bond.pricing.not.existed.price.source.name">Default</PRICE_SOURCE>
+            <PRICE_LEVEL >Bid</PRICE_LEVEL>
+            <PRICE_FACTOR id="feed.asset.bond.pricing.not.existed.price.factor">1</PRICE_FACTOR>
+        </feedAssetPricing>
+
+        <feedStatus id="feed.asset.bond.pricing.not.existed.status">
+            <valuationFile ref="file"/>
+            <status>Failed</status>
+            <description>Asset Pricing</description>
+            <failedFeed apply="true">
+                <total>1</total>
+                <entry>
+                    <content>Security Instrument(T6107_QTP_BOND_USD_Instrument_Not_Existed) is not valid</content>
+                </entry>
+            </failedFeed>
+        </feedStatus>
+
+        <securitySearch id="feed.asset.bond.pricing.not.existed.search"/>
+
+        <securitySearchResult id="feed.asset.bond.pricing.not.existed.search.result"/>
+
+        <instrument id="check.feed.asset.bond.pricing.not.existed"/>
+
+        <taskSchedulerDetail id="task.feed.asset.pricing">
+            <type>Task Manager</type>
+            <taskName>Import Asset Pricing</taskName>
+            <additionalInfo id="task.feed.agreement.server.path">/home/ec2-user/Feed/FeedAssetPricing</additionalInfo>
+        </taskSchedulerDetail>
+
+        <variable id="file"/>
+
+        <taskSchedulerMessage id="task.feed.asset.pricing.message">
+            <message>Market Data: Import Asset Pricing: Imported 0 Asset Pricing from :(\S+).(xml|csv|xlsx)</message>
+        </taskSchedulerMessage>
+    </scenarioData>
+</dataBean>

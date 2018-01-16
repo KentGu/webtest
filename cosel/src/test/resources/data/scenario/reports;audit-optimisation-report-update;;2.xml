@@ -1,0 +1,1029 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <optimisationRule id="filter.asset.ori">
+            <ruleName>fiilter_asset_update</ruleName>
+            <optimisationFilterRuleAttribute name="filter.asset.name1">
+                <attributeName>Delivery Booking Priority</attributeName>
+                <attributeDetail name="detail.name1">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>Low</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name2">
+                <attributeName>Instrument ID</attributeName>
+                <attributeDetail name="detail.name21">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>qtp-Bond-Usd-Instrument</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name22">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>qtp-Equity-Usd-Instrument</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute  name="filter.asset.name3">
+                <attributeName>UDF 15</attributeName>
+                <attributeDetail  name="detail.name3">
+                    <operator>Contains</operator>
+                    <inputValue>rrr</inputValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name4">
+                <attributeName>UDF 16</attributeName>
+                <attributeDetail name="detail.name41">
+                    <operator>Less Than</operator>
+                    <filterRuleAttributeValue>
+                        <inputValue>888</inputValue>
+                    </filterRuleAttributeValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name42">
+                    <operator>Greater Than</operator>
+                    <filterRuleAttributeValue>
+                        <inputValue>111</inputValue>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name5">
+                <attributeName>Asset Class</attributeName>
+                <attributeDetail name="detail.name5">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>qtp_bond</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name6">
+                <attributeName>Party A</attributeName>
+                <attributeDetail name="detail.name6">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <inputValue>a</inputValue>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name7">
+                <attributeName>Group</attributeName>
+                <attributeDetail name="detail.name7">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>smoke</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name8">
+                <attributeName>Market</attributeName>
+                <attributeDetail name="detail.name81">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>automation</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name82">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>m1</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name9">
+                <attributeName>Issuer</attributeName>
+                <attributeDetail name="detail.name91">
+                    <type>Short Name</type>
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>QTP_Eligible_Issuer2</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name92">
+                    <type>Long Name</type>
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>QTP_Eligible_Issuer3</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name10">
+                <attributeName>Country of Issuer</attributeName>
+                <attributeDetail name="detail.name101">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>CHINA</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name102">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>AUSTRALIA</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name11">
+                <attributeName>Issue Rating</attributeName>
+                <attributeDetail name="detail.name111">
+                    <type>SandP</type>
+                    <operator>Equal</operator>
+                    <selectedValue>AAA</selectedValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name112">
+                    <type>MOODYS</type>
+                    <operator>Equal</operator>
+                    <selectedValue>A1</selectedValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name12">
+                <attributeName>Issuer Rating</attributeName>
+                <attributeDetail name="detail.name121">
+                    <type>MOODYS</type>
+                    <operator>Equal</operator>
+                    <selectedValue>Aaa</selectedValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name122">
+                    <type>Fitch</type>
+                    <operator>Equal</operator>
+                    <selectedValue>BBB+</selectedValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name13">
+                <attributeName>Maturity</attributeName>
+                <attributeDetail name="detail.name131">
+                    <operator>Equal</operator>
+                    <inputValue>t</inputValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name132">
+                    <operator>Not Equal</operator>
+                    <inputValue>t+40</inputValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name14">
+                <attributeName>Next Coupon Date</attributeName>
+                <attributeDetail name="detail.name141">
+                    <operator>Equal</operator>
+                    <inputValue>t</inputValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name142">
+                    <operator>Equal</operator>
+                    <inputValue>t+1</inputValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name15">
+                <attributeName>Ex Div Date</attributeName>
+                <attributeDetail name="detail.name151">
+                    <operator>Equal</operator>
+                    <inputValue>t+3</inputValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name152">
+                    <operator>Equal</operator>
+                    <inputValue>t+4</inputValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name16">
+                <attributeName>Record Date</attributeName>
+                <attributeDetail name="detail.name161">
+                    <operator>Equal</operator>
+                    <inputValue>t+5</inputValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name162">
+                    <operator>Equal</operator>
+                    <inputValue>t+6</inputValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name17">
+                <attributeName>Issue Date</attributeName>
+                <attributeDetail name="detail.name171">
+                    <operator>Not Equal</operator>
+                    <inputValue>t+4</inputValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name172">
+                    <operator>Equal</operator>
+                    <inputValue>t+1</inputValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name18">
+                <attributeName>UDF 1</attributeName>
+                <attributeDetail name="detail.name181">
+                    <operator>Equal</operator>
+                    <inputValue>test</inputValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name182">
+                    <operator>Contains</operator>
+                    <inputValue>ert</inputValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name19">
+                <attributeName>Asset Type</attributeName>
+                <attributeDetail name="detail.name191">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>qtp_bond_usd</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name192">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>qtp_other_usd</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name20">
+                <attributeName>Currency of Denomination</attributeName>
+                <attributeDetail name="detail.name201">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>AFA</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name202">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>ALL</selectOption>
+                        <selectOption>ANG</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name21">
+                <attributeName>Source System</attributeName>
+                <attributeDetail name="detail.name211">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>FS1</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name22">
+                <attributeName>Book/Business Line</attributeName>
+                <attributeDetail name="detail.name221">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>ETF</selectOption>
+                        <selectOption>Repo</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name222">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>OTC</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name23">
+                <attributeName>Rehypothecation Permitted</attributeName>
+                <attributeDetail name="detail.name231">
+                    <operator>Equal</operator>
+                    <selectedValue>Yes</selectedValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name24">
+                <attributeName>Party B</attributeName>
+                <attributeDetail name="detail.name241">
+                    <operator>Equal</operator>
+                    <inputValue>qweer</inputValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name242">
+                    <operator>Equal</operator>
+                    <inputValue>ertyyy</inputValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name25">
+                <attributeName>Linkage Set</attributeName>
+                <attributeDetail name="detail.name251">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>L1</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name252">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>L2</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name26">
+                <attributeName>Region</attributeName>
+                <attributeDetail name="detail.name261">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>R1</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name262">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>R2</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name27">
+                <attributeName>Principal</attributeName>
+                <attributeDetail name="detail.name271">
+                    <type>Short Name</type>
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>QTPPrincipal2</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name272">
+                    <type>Code</type>
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>QTPPrincipal</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name28">
+                <attributeName>Counterparty</attributeName>
+                <attributeDetail name="detail.name281">
+                    <type>Long Name</type>
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>QTPCounterparty2</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name282">
+                    <type>Code</type>
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>QTP_Cpty_RC</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name29">
+                <attributeName>Asset Owner</attributeName>
+                <attributeDetail name="detail.name291">
+                    <type>Long Name</type>
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>MainOrg</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name292">
+                    <type>Short Name</type>
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>Calibration</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name30">
+                <attributeName>Rehypothecated</attributeName>
+                <attributeDetail name="detail.name301">
+                    <operator>Equal</operator>
+                    <selectedValue>Yes</selectedValue>
+                </attributeDetail>
+            </optimisationFilterRuleAttribute>
+        </optimisationRule>
+        <optimisationRule id="filter.asset.update">
+            <ruleName id="rule.name">fiilter_asset_update</ruleName>
+            <availabilityBetweenFrom>3</availabilityBetweenFrom>
+            <availabilityBetweenTo>7</availabilityBetweenTo>
+            <minimunNotional>3000</minimunNotional>
+            <includeCollineData>false</includeCollineData>
+            <optimisationFilterRuleAttribute name="filter.asset.name1">
+                <attributeName>Delivery Booking Priority</attributeName>
+                <attributeDetail name="detail.name1">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>High</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+                <groupAndOr>Or</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name2">
+                <attributeName>Instrument ID</attributeName>
+                <attributeDetail name="detail.name21">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <filter>qtp-Bond-Eur2-Instrument</filter>
+                        <selectOption>qtp-Bond-Eur2-Instrument</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name22">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <filter>qtp-Bond-Usd-Instrument1</filter>
+                        <selectOption>qtp-Bond-Usd-Instrument1</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+                <groupAndOr>And</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute  name="filter.asset.name3">
+                <attributeName>UDF 15</attributeName>
+                <attributeDetail  name="detail.name3">
+                    <operator>Like</operator>
+                    <inputValue>sdff</inputValue>
+                </attributeDetail>
+                <groupAndOr>Or</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name4">
+                <attributeName>UDF 16</attributeName>
+                <attributeDetail name="detail.name41">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <inputValue>333</inputValue>
+                    </filterRuleAttributeValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name42">
+                    <operator>Greater Than Equal</operator>
+                    <filterRuleAttributeValue>
+                        <inputValue>222</inputValue>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+                <groupAndOr>Or</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name5">
+                <attributeName>Asset Class</attributeName>
+                <attributeDetail name="detail.name5">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>qtp_cash</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+                <groupAndOr>Or</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name6">
+                <attributeName>Party A</attributeName>
+                <attributeDetail name="detail.name6">
+                    <operator>Starts With</operator>
+                    <filterRuleAttributeValue>
+                        <inputValue>QQQ</inputValue>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+                <groupAndOr>And</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name7">
+                <attributeName>Group</attributeName>
+                <attributeDetail name="detail.name7">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>smoke2</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+                <groupAndOr>Or</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name8">
+                <attributeName>Market</attributeName>
+                <attributeDetail name="detail.name81">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>qtp_Market</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name82">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>automation</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+                <groupAndOr>And</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name9">
+                <attributeName>Issuer</attributeName>
+                <attributeDetail name="detail.name91">
+                    <type>Code</type>
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>QTP_Eligible_Issuer</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name92">
+                    <type>Short Name</type>
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>QTP_Eligible_Issuer2</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+                <groupAndOr>Or</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name10">
+                <attributeName>Country of Issuer</attributeName>
+                <attributeDetail name="detail.name101">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>HONG KONG</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name102">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>EUROPE</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+                <groupAndOr>And</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name11">
+                <attributeName>Issue Rating</attributeName>
+                <attributeDetail name="detail.name111">
+                    <type>Fitch</type>
+                    <operator>Not Equal</operator>
+                    <selectedValue>A</selectedValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name112">
+                    <type>SandP</type>
+                    <operator>Not Equal</operator>
+                    <selectedValue>BBB</selectedValue>
+                </attributeDetail>
+                <groupAndOr>Or</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name12">
+                <attributeName>Issuer Rating</attributeName>
+                <attributeDetail name="detail.name121">
+                    <type>SandP</type>
+                    <operator>Not Equal</operator>
+                    <selectedValue>CCC</selectedValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name122">
+                    <type>MOODYS</type>
+                    <operator>Not Equal</operator>
+                    <selectedValue>Baa1</selectedValue>
+                </attributeDetail>
+                <groupAndOr>And</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name13">
+                <attributeName>Maturity</attributeName>
+                <attributeDetail name="detail.name131">
+                    <operator>Not Equal</operator>
+                    <inputValue>t+2</inputValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name132">
+                    <operator>Equal</operator>
+                    <inputValue>t+4</inputValue>
+                </attributeDetail>
+                <groupAndOr>Or</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name14">
+                <attributeName>Next Coupon Date</attributeName>
+                <attributeDetail name="detail.name141">
+                    <operator>Not Equal</operator>
+                    <inputValue>t-3</inputValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name142">
+                    <operator>Not Equal</operator>
+                    <inputValue>t+3</inputValue>
+                </attributeDetail>
+                <groupAndOr>And</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name15">
+                <attributeName>Ex Div Date</attributeName>
+                <attributeDetail name="detail.name151">
+                    <operator>Not Equal</operator>
+                    <inputValue>t-3</inputValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name152">
+                    <operator>Not Equal</operator>
+                    <inputValue>t-4</inputValue>
+                </attributeDetail>
+                <groupAndOr>Or</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name16">
+                <attributeName>Record Date</attributeName>
+                <attributeDetail name="detail.name161">
+                    <operator>Not Equal</operator>
+                    <inputValue>t-5</inputValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name162">
+                    <operator>Not Equal</operator>
+                    <inputValue>t-6</inputValue>
+                </attributeDetail>
+                <groupAndOr>And</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name17">
+                <attributeName>Issue Date</attributeName>
+                <attributeDetail name="detail.name171">
+                    <operator>Equal</operator>
+                    <inputValue>t-4</inputValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name172">
+                    <operator>Not Equal</operator>
+                    <inputValue>t-1</inputValue>
+                </attributeDetail>
+                <groupAndOr>Or</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name18">
+                <attributeName>UDF 1</attributeName>
+                <attributeDetail name="detail.name181">
+                    <operator>Not Equal</operator>
+                    <inputValue>test22</inputValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name182">
+                    <operator>Starts With</operator>
+                    <inputValue>te</inputValue>
+                </attributeDetail>
+                <groupAndOr>And</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name19">
+                <attributeName>Asset Type</attributeName>
+                <attributeDetail name="detail.name191">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>CASH-GBP</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name192">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>qtp_Repo_usd</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+                <groupAndOr>Or</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name20">
+                <attributeName>Currency of Denomination</attributeName>
+                <attributeDetail name="detail.name201">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>ANG</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name202">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>YUM</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+                <groupAndOr>Or</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name21">
+                <attributeName>Source System</attributeName>
+                <attributeDetail name="detail.name211">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>FS1</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+                <groupAndOr>And</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name22">
+                <attributeName>Book/Business Line</attributeName>
+                <attributeDetail name="detail.name221">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>OTC</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name222">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>Repo</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+                <groupAndOr>Or</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name23">
+                <attributeName>Rehypothecation Permitted</attributeName>
+                <attributeDetail name="detail.name231">
+                    <operator>Not Equal</operator>
+                    <selectedValue>No</selectedValue>
+                </attributeDetail>
+                <groupAndOr>And</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name24">
+                <attributeName>Party B</attributeName>
+                <attributeDetail name="detail.name241">
+                    <operator>Not Equal</operator>
+                    <inputValue>wewwe</inputValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name242">
+                    <operator>Not Equal</operator>
+                    <inputValue>sdsd</inputValue>
+                </attributeDetail>
+                <groupAndOr>Or</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name25">
+                <attributeName>Linkage Set</attributeName>
+                <attributeDetail name="detail.name251">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>L3</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name252">
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>L1</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+                <groupAndOr>And</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name26">
+                <attributeName>Region</attributeName>
+                <attributeDetail name="detail.name261">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>R3</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name262">
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption>R1</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+                <groupAndOr>Or</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name27">
+                <attributeName>Principal</attributeName>
+                <attributeDetail name="detail.name271">
+                    <type>Code</type>
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <filter>QTP_Prin_RC</filter>
+                        <selectOption>QTP_Prin_RC</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name272">
+                    <type>Long Name</type>
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <filter>QTPPrincipal2</filter>
+                        <selectOption>QTPPrincipal2</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+                <groupAndOr>And</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name28">
+                <attributeName>Counterparty</attributeName>
+                <attributeDetail name="detail.name281">
+                    <type>Short Name</type>
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <filter>QTPCounterparty</filter>
+                        <selectOption>QTPCounterparty</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name282">
+                    <type>Long Name</type>
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <filter>QTPCounterparty2</filter>
+                        <selectOption>QTPCounterparty2</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+                <groupAndOr>And</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name29">
+                <attributeName>Asset Owner</attributeName>
+                <attributeDetail name="detail.name291">
+                    <type>Short Name</type>
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <filter>QTP_Eligible_Issuer3</filter>
+                        <selectOption>QTP_Eligible_Issuer3</selectOption>
+                    </filterRuleAttributeValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail name="detail.name292">
+                    <type>Code</type>
+                    <operator>Not Equal</operator>
+                    <filterRuleAttributeValue>
+                        <filter>QTP_Eligible_Issuer</filter>
+                        <selectOption>QTP_Eligible_Issuer</selectOption>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+                <groupAndOr>And</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute name="filter.asset.name30">
+                <attributeName>Rehypothecated</attributeName>
+                <attributeDetail name="detail.name301">
+                    <operator>Not Equal</operator>
+                    <selectedValue>No</selectedValue>
+                </attributeDetail>
+                <groupAndOr>End</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </optimisationRule>
+
+        <auditOptimisationRuleReportFilter id="audit.optimisation.report.filter">
+            <operation>Modify</operation>
+            <ruleName>
+                <filter ref="rule.name"/>
+            </ruleName>
+        </auditOptimisationRuleReportFilter>
+        <variable id="auditReportPath"/>
+
+        <reportValidationRules id="reportRule">
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Market</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Market</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Market</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>automation</value></field><field><fieldName>Value After</fieldName><value>qtp_Market</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Market</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Market</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>m1</value></field><field><fieldName>Value After</fieldName><value>automation</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Issuer</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Issuer</value></field><field><fieldName>Element</fieldName><value>Paired Attribute</value></field><field><fieldName>Value Before</fieldName><value>Short Name</value></field><field><fieldName>Value After</fieldName><value>Code</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Issuer</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>QTP_Eligible_Issuer2</value></field><field><fieldName>Value After</fieldName><value>QTP_Eligible_Issuer</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Issuer</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Issuer</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Country of Issuer</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Country of Issuer</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Country of Issuer</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>CHINA</value></field><field><fieldName>Value After</fieldName><value>HONG KONG</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Country of Issuer</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Country of Issuer</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Country of Issuer</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>AUSTRALIA</value></field><field><fieldName>Value After</fieldName><value>EUROPE</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Issue Rating</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>58</value></field><field><fieldName>Value After</fieldName><value>A</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Issue Rating</value></field><field><fieldName>Element</fieldName><value>Paired Attribute</value></field><field><fieldName>Value Before</fieldName><value>SandP</value></field><field><fieldName>Value After</fieldName><value>Fitch</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Issue Rating</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Issue Rating</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Issue Rating</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>85</value></field><field><fieldName>Value After</fieldName><value>BBB</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Issue Rating</value></field><field><fieldName>Element</fieldName><value>Paired Attribute</value></field><field><fieldName>Value Before</fieldName><value>MOODYS</value></field><field><fieldName>Value After</fieldName><value>SandP</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Issue Rating</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Issue Rating</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Issuer Rating</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>81</value></field><field><fieldName>Value After</fieldName><value>CCC</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Issuer Rating</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Issuer Rating</value></field><field><fieldName>Element</fieldName><value>Paired Attribute</value></field><field><fieldName>Value Before</fieldName><value>56</value></field><field><fieldName>Value After</fieldName><value>55</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Issuer Rating</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Issuer Rating</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>110</value></field><field><fieldName>Value After</fieldName><value>Baa1</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Issuer Rating</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Issuer Rating</value></field><field><fieldName>Element</fieldName><value>Paired Attribute</value></field><field><fieldName>Value Before</fieldName><value>57</value></field><field><fieldName>Value After</fieldName><value>56</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Issuer Rating</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Maturity</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Maturity</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Maturity</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>t</value></field><field><fieldName>Value After</fieldName><value>t+2</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Maturity</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Maturity</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Not Equal</value></field><field><fieldName>Value After</fieldName><value>Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Maturity</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>t+40</value></field><field><fieldName>Value After</fieldName><value>t+4</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Next Coupon Date</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>t</value></field><field><fieldName>Value After</fieldName><value>t-3</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Next Coupon Date</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Next Coupon Date</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Next Coupon Date</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>t+1</value></field><field><fieldName>Value After</fieldName><value>t+3</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Next Coupon Date</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Next Coupon Date</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Ex Div Date</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Ex Div Date</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Ex Div Date</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>t+4</value></field><field><fieldName>Value After</fieldName><value>t-4</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Record Date</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Record Date</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>t+5</value></field><field><fieldName>Value After</fieldName><value>t-5</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Record Date</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Ex Div Date</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Ex Div Date</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>t+3</value></field><field><fieldName>Value After</fieldName><value>t-3</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Ex Div Date</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Book/Business Line</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Book/Business Line</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Book/Business Line</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>OTC</value></field><field><fieldName>Value After</fieldName><value>Repo</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Party B</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Party B</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Party B</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>qweer</value></field><field><fieldName>Value After</fieldName><value>wewwe</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Rehypothecation Permitted</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Rehypothecation Permitted</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Rehypothecation Permitted</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>Yes</value></field><field><fieldName>Value After</fieldName><value>No</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Linkage Set</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Not Equal</value></field><field><fieldName>Value After</fieldName><value>Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Linkage Set</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Linkage Set</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>L1</value></field><field><fieldName>Value After</fieldName><value>L3</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Party B</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Party B</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Party B</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>ertyyy</value></field><field><fieldName>Value After</fieldName><value>sdsd</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Linkage Set</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Linkage Set</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>L2</value></field><field><fieldName>Value After</fieldName><value>L1</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Linkage Set</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Not Equal</value></field><field><fieldName>Value After</fieldName><value>Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Region</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Region</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>R1</value></field><field><fieldName>Value After</fieldName><value>R3</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Region</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Region</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Region</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>R2</value></field><field><fieldName>Value After</fieldName><value>R1</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Region</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Principal</value></field><field><fieldName>Element</fieldName><value>Paired Attribute</value></field><field><fieldName>Value Before</fieldName><value>Short Name</value></field><field><fieldName>Value After</fieldName><value>Code</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Principal</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Principal</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Principal</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>QTPPrincipal2</value></field><field><fieldName>Value After</fieldName><value>QTP_Prin_RC</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Principal</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>QTPPrincipal</value></field><field><fieldName>Value After</fieldName><value>QTPPrincipal2</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Principal</value></field><field><fieldName>Element</fieldName><value>Paired Attribute</value></field><field><fieldName>Value Before</fieldName><value>Code</value></field><field><fieldName>Value After</fieldName><value>Long Name</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Principal</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Principal</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Counterparty</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Counterparty</value></field><field><fieldName>Element</fieldName><value>Paired Attribute</value></field><field><fieldName>Value Before</fieldName><value>Code</value></field><field><fieldName>Value After</fieldName><value>Long Name</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Counterparty</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>QTP_Cpty_RC</value></field><field><fieldName>Value After</fieldName><value>QTPCounterparty2</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Counterparty</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>QTPCounterparty2</value></field><field><fieldName>Value After</fieldName><value>QTPCounterparty</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Counterparty</value></field><field><fieldName>Element</fieldName><value>Paired Attribute</value></field><field><fieldName>Value Before</fieldName><value>Long Name</value></field><field><fieldName>Value After</fieldName><value>Short Name</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Counterparty</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Counterparty</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Asset Owner</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>MainOrg</value></field><field><fieldName>Value After</fieldName><value>QTP_Eligible_Issuer3</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Asset Owner</value></field><field><fieldName>Element</fieldName><value>Paired Attribute</value></field><field><fieldName>Value Before</fieldName><value>Long Name</value></field><field><fieldName>Value After</fieldName><value>Short Name</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Asset Owner</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Asset Owner</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Record Date</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Record Date</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Record Date</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>t+6</value></field><field><fieldName>Value After</fieldName><value>t-6</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Asset Owner</value></field><field><fieldName>Element</fieldName><value>Paired Attribute</value></field><field><fieldName>Value Before</fieldName><value>Short Name</value></field><field><fieldName>Value After</fieldName><value>Code</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Asset Owner</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>Calibration</value></field><field><fieldName>Value After</fieldName><value>QTP_Eligible_Issuer</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Asset Owner</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Asset Owner</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Rehypothecated</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>Yes</value></field><field><fieldName>Value After</fieldName><value>No</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Rehypothecated</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 1</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 1</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>test</value></field><field><fieldName>Value After</fieldName><value>test22</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 1</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Issue Date</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>t+4</value></field><field><fieldName>Value After</fieldName><value>t-4</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Issue Date</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Issue Date</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Not Equal</value></field><field><fieldName>Value After</fieldName><value>Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 1</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Contains</value></field><field><fieldName>Value After</fieldName><value>Starts With</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 1</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>ert</value></field><field><fieldName>Value After</fieldName><value>te</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 1</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Issue Date</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>t+1</value></field><field><fieldName>Value After</fieldName><value>t-1</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Issue Date</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Issue Date</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Asset Type</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>qtp_bond_usd</value></field><field><fieldName>Value After</fieldName><value>CASH-GBP</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Asset Type</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Asset Type</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Not Equal</value></field><field><fieldName>Value After</fieldName><value>Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Asset Type</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Asset Type</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Not Equal</value></field><field><fieldName>Value After</fieldName><value>Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Asset Type</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>qtp_other_usd</value></field><field><fieldName>Value After</fieldName><value>qtp_Repo_usd</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Currency of Denomination</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Currency of Denomination</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Currency of Denomination</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>AFA</value></field><field><fieldName>Value After</fieldName><value>ANG</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Currency of Denomination</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Currency of Denomination</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>ALL,ANG</value></field><field><fieldName>Value After</fieldName><value>YUM</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Currency of Denomination</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Not Equal</value></field><field><fieldName>Value After</fieldName><value>Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Source System</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Source System</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Book/Business Line</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Book/Business Line</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>ETF,Repo</value></field><field><fieldName>Value After</fieldName><value>OTC</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Book/Business Line</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset others condition</value></field><field><fieldName>Element</fieldName><value>Include Colline Data</value></field><field><fieldName>Value Before</fieldName><value>Yes</value></field><field><fieldName>Value After</fieldName><value>No</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset others condition</value></field><field><fieldName>Element</fieldName><value>minNotional</value></field><field><fieldName>Value Before</fieldName><value>5000000.0</value></field><field><fieldName>Value After</fieldName><value>3000.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset others condition</value></field><field><fieldName>Element</fieldName><value>Availability To</value></field><field><fieldName>Value Before</fieldName><value>5</value></field><field><fieldName>Value After</fieldName><value>7</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset others condition</value></field><field><fieldName>Element</fieldName><value>Availability From</value></field><field><fieldName>Value Before</fieldName><value>1</value></field><field><fieldName>Value After</fieldName><value>3</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Delivery Booking Priority</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>Low</value></field><field><fieldName>Value After</fieldName><value>High</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Delivery Booking Priority</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Delivery Booking Priority</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Instrument ID</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>qtp-Bond-Usd-Instrument</value></field><field><fieldName>Value After</fieldName><value>qtp-Bond-Eur2-Instrument</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Instrument ID</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Instrument ID</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 16</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Less Than</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 16</value></field><field><fieldName>Element</fieldName><value>Value Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 16</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>888</value></field><field><fieldName>Value After</fieldName><value>333</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Instrument ID</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Instrument ID</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Instrument ID</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>qtp-Equity-Usd-Instrument</value></field><field><fieldName>Value After</fieldName><value>qtp-Bond-Usd-Instrument1</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 15</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Contains</value></field><field><fieldName>Value After</fieldName><value>Like</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 15</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>rrr</value></field><field><fieldName>Value After</fieldName><value>sdff</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 15</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 16</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Greater Than</value></field><field><fieldName>Value After</fieldName><value>Greater Than Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 16</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>111</value></field><field><fieldName>Value After</fieldName><value>222</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset UDF 16</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Asset Class</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>qtp_bond</value></field><field><fieldName>Value After</fieldName><value>qtp_cash</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Asset Class</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Not Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>Asset Asset Class</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Party A</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>a</value></field><field><fieldName>Value After</fieldName><value>QQQ</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Party A</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>Or</value></field><field><fieldName>Value After</fieldName><value>And</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Party A</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Equal</value></field><field><fieldName>Value After</fieldName><value>Starts With</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Group</value></field><field><fieldName>Element</fieldName><value>Operand</value></field><field><fieldName>Value Before</fieldName><value>Not Equal</value></field><field><fieldName>Value After</fieldName><value>Equal</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Group</value></field><field><fieldName>Element</fieldName><value>Attribute Joining Condition</value></field><field><fieldName>Value Before</fieldName><value>And</value></field><field><fieldName>Value After</fieldName><value>Or</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>fiilter_asset_update</value></field><field><fieldName>Rule Type</fieldName><value>Asset filter</value></field><field><fieldName>Attribute</fieldName><value>IM Group</value></field><field><fieldName>Element</fieldName><value>Attribute</value></field><field><fieldName>Value Before</fieldName><value>smoke</value></field><field><fieldName>Value After</fieldName><value>smoke2</value></field></reportValidationRule>
+
+        </reportValidationRules>
+
+    </scenarioData>
+</dataBean>

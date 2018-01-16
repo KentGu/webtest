@@ -1,0 +1,149 @@
+I'm FILE_TASKEXECLOG=taskexec.log_RELEASE_BRANCH_14.1.0_PREVIEW_1_PATCH18_20140919060157
+I'm database---------=COLLINE2014_1_0_BASE_0424 creditderivative 172.20.20.34:1521 ora11g
+Target Version: RELEASE_BRANCH_14.1.0_PREVIEW_1_PATCH18
+Target Path:/home/test/server/colline/cluster5_2_new/bin
+-------------I am task =Import External Independent Amounts 5
+Task is Task Manager : Import External Independent Amounts 5
+2014-09-19 06:01:58
+Waiting 500 second for Task  Import External Independent Amounts 5 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import External Independent Amounts 5] at: 2014-09-19 06:01:59,112
+Finished starting task: [Task Manager:Import External Independent Amounts 5] at: 2014-09-19 06:01:59,138
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import External IA. Please wait ...
+Sorry, no more waiting. Import External Independent Amounts 5,  TIME_Execute = 500.818069074, TIME4TASKEXECUTION =500.
+-------------I am task =Import NAV 1
+Task is Task Manager : Import NAV 1
+2014-09-19 06:10:30
+Waiting 1000 second for Task  Import NAV 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import NAV 1] at: 2014-09-19 06:10:30,461
+Finished starting task: [Task Manager:Import NAV 1] at: 2014-09-19 06:10:30,482
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import NAV. Please wait ...
+Sorry, no more waiting. Import NAV 1,  TIME_Execute = 1000.663886639, TIME4TASKEXECUTION =1000.
+-------------I am task =Import Portfolio TSA 1
+Task is Task Manager : Import Portfolio TSA 1
+2014-09-19 06:27:21
+Waiting 500 second for Task  Import Portfolio TSA 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import Portfolio TSA 1] at: 2014-09-19 06:27:21,668
+Finished starting task: [Task Manager:Import Portfolio TSA 1] at: 2014-09-19 06:27:21,692
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import Portfolio TSA. Please wait ...
+Sorry, no more waiting. Import Portfolio TSA 1,  TIME_Execute = 500.194690182, TIME4TASKEXECUTION =500.
+-------------I am task =Import Settlement Instructions 1
+Task is Task Manager : Import Settlement Instructions 1
+2014-09-19 06:35:51
+Waiting 300 second for Task  Import Settlement Instructions 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import Settlement Instructions 1] at: 2014-09-19 06:35:52,415
+Finished starting task: [Task Manager:Import Settlement Instructions 1] at: 2014-09-19 06:35:52,443
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import Settlement Instruction. Please wait ...
+Sorry, no more waiting. Import Settlement Instructions 1,  TIME_Execute = 300.732667881, TIME4TASKEXECUTION =300.
+-------------I am task =Remove Mature Assets 1
+Task is Workflow : Remove Mature Assets 1
+2014-09-19 06:41:03
+Waiting 2000 second for Task  Remove Mature Assets 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Remove Mature Assets 1] at: 2014-09-19 06:41:03,710
+Finished starting task: [Workflow:Remove Mature Assets 1] at: 2014-09-19 06:41:03,732
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Remove Mature Assets. Please wait ...
+Collateral:Remove Mature Assets: Total of 5116 assets are removed.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Remove Mature Trades 1
+Task is Workflow : Remove Mature Trades 1
+2014-09-19 06:41:26
+Waiting 3000 second for Task  Remove Mature Trades 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Remove Mature Trades 1] at: 2014-09-19 06:41:26,843
+Finished starting task: [Workflow:Remove Mature Trades 1] at: 2014-09-19 06:41:26,866
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Remove Mature Trades. Please wait ...
+Trades:Remove Mature Trades: Total of 5146 trades have been removed.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Reset Trading Inactive 1
+Task is Workflow : Reset Trading Inactive 1
+2014-09-19 06:45:40
+Waiting 180 second for Task  Reset Trading Inactive 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Reset Trading Inactive 1] at: 2014-09-19 06:45:40,956
+Finished starting task: [Workflow:Reset Trading Inactive 1] at: 2014-09-19 06:45:40,976
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Reset Trading Inactive Task. Please wait ...
+Sorry, no more waiting. Reset Trading Inactive 1,  TIME_Execute = 180.612592445, TIME4TASKEXECUTION =180.
+-------------I am task =Import FX Rates 3
+Task is Task Manager : Import FX Rates 3
+2014-09-19 06:48:51
+Waiting 500 second for Task  Import FX Rates 3 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import FX Rates 3] at: 2014-09-19 06:48:52,119
+Finished starting task: [Task Manager:Import FX Rates 3] at: 2014-09-19 06:48:52,136
+--debug timeout :20.0
+----------break now --------
+--debug clean up start
+--debug clean up finished
+Failed to trigger task Task Manager:Import FX Rates 3 within 20.0 seconds. please try again! 
+Error 6001, Unable to trigger task
+-------------I am task =Import Interest Rates 3
+Task is Task Manager : Import Interest Rates 3
+2014-09-19 06:49:16
+Waiting 180 second for Task  Import Interest Rates 3 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Task Manager:Import Interest Rates 3] at: 2014-09-19 06:49:17,103
+Finished starting task: [Task Manager:Import Interest Rates 3] at: 2014-09-19 06:49:17,116
+--debug timeout :20.0
+----------break now --------
+--debug clean up start
+--debug clean up finished
+Failed to trigger task Task Manager:Import Interest Rates 3 within 20.0 seconds. please try again! 
+Error 6001, Unable to trigger task
+-------------I am task =Empty Task
+Task is Admin : Empty Task
+2014-09-19 06:49:41
+Waiting 180 second for Task  Empty Task execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Admin:Empty Task] at: 2014-09-19 06:49:42,139
+Finished starting task: [Admin:Empty Task] at: 2014-09-19 06:49:42,153
+--debug timeout :20.0
+----------break now --------
+--debug clean up start
+--debug clean up finished
+Failed to trigger task Admin:Empty Task within 20.0 seconds. please try again! 
+Error 6001, Unable to trigger task

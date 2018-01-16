@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+
+        <agreement id="agr21274-id">
+            <agreementId id="agrid">2604</agreementId>
+        </agreement>
+
+      <multiModelAgreementStatement id="m1">
+          <multimodelAssetHoldingSummary>
+              <modelName>Model1</modelName>
+          </multimodelAssetHoldingSummary>
+      </multiModelAgreementStatement>
+
+        <assetBookingSummary id="cash.USD">
+            <assetType>CASH-USD</assetType>
+        </assetBookingSummary>
+
+
+        <bookingDetail id="AgreementOverviewValues">
+            <agreementOverview>
+                <totalCallRequired>1,000,000.00</totalCallRequired>
+                <totalRecallRequired>0.00</totalRecallRequired>
+                <maxRecallHolding>0.00</maxRecallHolding>
+                <maxRecallAvailable>0.00</maxRecallAvailable>
+                <totalDeliveryRequired>0.00</totalDeliveryRequired>
+                <totalReturnRequired>0.00</totalReturnRequired>
+                <maxReturnAvailable>0.00</maxReturnAvailable>
+                <maxReturnHolding>0.00</maxReturnHolding>
+              </agreementOverview>
+              </bookingDetail>
+
+                <bookingDetail id="CallBooking1Cash.requiredAmount1.2M">
+                   <bookingInformation>
+                       <bookingInformationDetail>
+                           <requiredAmount apply="true">1.2M</requiredAmount>
+                       </bookingInformationDetail>
+                   </bookingInformation>
+                    <save>notSaveOrCancel</save>
+                </bookingDetail>
+
+
+                <bookingDetail id="CallBooking1Cash.nominalAmount1.2M">
+                    <bookingInformation>
+                        <bookingInformationDetail>
+                            <nominalAmount>1,200,000.00</nominalAmount>
+                        </bookingInformationDetail>
+                    </bookingInformation>
+                </bookingDetail>
+
+            <assetBookingSummary id="qtp_USD">
+                <assetType>qtp_equity_usd</assetType>
+            </assetBookingSummary>
+
+               <bookingDetail id="qtp-Equity-Usd.search">
+            <instrumentSearch>
+                <instrumentId>
+                    <type>Exactly matching</type>
+                    <filter>qtp-Equity-Usd-Instrument</filter>
+                </instrumentId>
+                <linkText>qtp-Equity-Usd-Instrument</linkText>
+            </instrumentSearch>
+            <save>notSaveOrCancel</save>
+        </bookingDetail>
+
+
+        <bookingDetail id="EquityAgreementOverviewValues">
+            <agreementOverview>
+                <totalCallRequired>100,000.00</totalCallRequired>
+                <totalRecallRequired>0.00</totalRecallRequired>
+                <maxRecallHolding>0.00</maxRecallHolding>
+                <maxRecallAvailable>0.00</maxRecallAvailable>
+                <totalDeliveryRequired>0.00</totalDeliveryRequired>
+                <maxReturnAvailable>0.00</maxReturnAvailable>
+                <maxReturnHolding>0.00</maxReturnHolding>
+            </agreementOverview>
+        </bookingDetail>
+
+        <bookingDetail id="CallBooking1Cash.EquityRequiredAmount1.2M">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <requiredAmount apply="true">1.2M</requiredAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <save>notSaveOrCancel</save>
+        </bookingDetail>
+
+        <bookingDetail id="CallBooking1Cash.EquityNominalAmount1.2M">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <nominalAmount>120,000.00</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <assetBookingSummary id="qtp_bond">
+            <assetType>qtp_bond_usd</assetType>
+        </assetBookingSummary>
+
+        <bookingDetail id="qtp_bond_Instrument">
+            <instrumentSearch>
+                <instrumentId>
+                    <type>Exactly matching</type>
+                    <filter>qtp_Bond_Instrument</filter>
+                </instrumentId>
+                <linkText>qtp_Bond_Instrument</linkText>
+            </instrumentSearch>
+            <save>notSaveOrCancel</save>
+        </bookingDetail>
+
+        <bookingDetail id="BondAgreementOverviewValues">
+            <agreementOverview>
+                <totalCallRequired>1,000,000.00</totalCallRequired>
+                <totalRecallRequired>0.00</totalRecallRequired>
+                <maxRecallHolding>0.00</maxRecallHolding>
+                <maxRecallAvailable>0.00</maxRecallAvailable>
+                <totalDeliveryRequired>0.00</totalDeliveryRequired>
+                <totalReturnRequired>0.00</totalReturnRequired>
+                <maxReturnAvailable>0.00</maxReturnAvailable>
+                <maxReturnHolding>0.00</maxReturnHolding>
+            </agreementOverview>
+        </bookingDetail>
+
+
+        <bookingDetail id="CallBooking1Cash.BondRequiredAmount1.2M">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bondRequiredAmount apply="true">1.2m</bondRequiredAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <save>notSaveOrCancel</save>
+        </bookingDetail>
+
+        <bookingDetail id="CallBooking1Cash.BondNominalAmount1.2M">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <nominalAmount>1,200,000.00</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+
+        <multiModelAgreementStatement id="m2">
+            <multimodelAssetHoldingSummary>
+                <modelName>Model2</modelName>
+            </multimodelAssetHoldingSummary>
+        </multiModelAgreementStatement>
+
+        <assetBookingSummary id="qtp_cash">
+            <assetType>CASH-EUR</assetType>
+        </assetBookingSummary>
+
+        <bookingDetail id="AgreementOverviewValues.m2">
+            <agreementOverview>
+                <totalCallRequired>750,000.00</totalCallRequired>
+                <totalRecallRequired>0.00</totalRecallRequired>
+                <maxRecallHolding>0.00</maxRecallHolding>
+                <maxRecallAvailable>0.00</maxRecallAvailable>
+                <totalDeliveryRequired>0.00</totalDeliveryRequired>
+                <totalReturnRequired>0.00</totalReturnRequired>
+                <maxReturnAvailable>0.00</maxReturnAvailable>
+                <maxReturnHolding>0.00</maxReturnHolding>
+            </agreementOverview>
+            </bookingDetail>
+
+            <bookingDetail id="CallBooking1Cash.requiredAmount1.2M.m2">
+                <bookingInformation>
+                    <bookingInformationDetail>
+                        <requiredAmount apply="true">1.2M</requiredAmount>
+                    </bookingInformationDetail>
+                </bookingInformation>
+                <save>notSaveOrCancel</save>
+            </bookingDetail>
+
+            <bookingDetail id="CallBooking1Cash.nominalAmount1.2M.m2">
+                <bookingInformation>
+                    <bookingInformationDetail>
+                        <nominalAmount>1,200,000.00</nominalAmount>
+                    </bookingInformationDetail>
+                </bookingInformation>
+            </bookingDetail>
+
+
+
+            <multiModelAgreementStatement id="m2">
+                <multimodelAssetHoldingSummary>
+                    <modelName>Model2</modelName>
+                </multimodelAssetHoldingSummary>
+            </multiModelAgreementStatement>
+
+
+            <assetBookingSummary id="qtp_equity">
+                <assetType>qtp_equity_eur1</assetType>
+            </assetBookingSummary>
+
+
+            <bookingDetail id="qtp-Equity-Eur.search">
+                <instrumentSearch>
+                    <instrumentId>
+                        <type>Exactly matching</type>
+                        <filter>qtp-Equity-Eur1-Instrument</filter>
+                    </instrumentId>
+                    <linkText>qtp-Equity-Eur1-Instrument</linkText>
+                </instrumentSearch>
+                <save>notSaveOrCancel</save>
+            </bookingDetail>
+
+        <bookingDetail id="EquityAgreementOverviewValues.m2">
+            <agreementOverview>
+                <totalCallRequired>75,000.00</totalCallRequired>
+                <totalRecallRequired>0.00</totalRecallRequired>
+                <maxRecallHolding>0.00</maxRecallHolding>
+                <maxRecallAvailable>0.00</maxRecallAvailable>
+                <totalDeliveryRequired>0.00</totalDeliveryRequired>
+                <maxReturnAvailable>0.00</maxReturnAvailable>
+                <maxReturnHolding>0.00</maxReturnHolding>
+            </agreementOverview>
+        </bookingDetail>
+
+            <bookingDetail id="CallBooking1Cash.EquityRequiredAmount1.2M.m2">
+                <bookingInformation>
+                    <bookingInformationDetail>
+                        <bondRequiredAmount apply="true">1.2M</bondRequiredAmount>
+                    </bookingInformationDetail>
+                </bookingInformation>
+                <save>notSaveOrCancel</save>
+            </bookingDetail>
+
+            <bookingDetail id="CallBooking1Cash.EquityNominalAmount1.2M.m2">
+                <bookingInformation>
+                    <bookingInformationDetail>
+                        <nominalAmount>120,000.00</nominalAmount>
+                    </bookingInformationDetail>
+                </bookingInformation>
+            </bookingDetail>
+
+
+        <multiModelAgreementStatement id="m2">
+            <multimodelAssetHoldingSummary>
+                <modelName>Model2</modelName>
+            </multimodelAssetHoldingSummary>
+        </multiModelAgreementStatement>
+
+
+        <assetBookingSummary id="qtp-bond-Eur2.search">
+            <assetType>qtp_bond_eur2</assetType>
+        </assetBookingSummary>
+
+
+        <bookingDetail id="qtp_bond_Eur2">
+            <instrumentSearch>
+                <instrumentId>
+                    <type>Exactly matching</type>
+                    <filter>qtp-Bond-Eur2-Instrument</filter>
+                </instrumentId>
+                <linkText>qtp-Bond-Eur2-Instrument</linkText>
+            </instrumentSearch>
+            <save>notSaveOrCancel</save>
+        </bookingDetail>
+
+
+    <bookingDetail id="BondAgreementOverviewValues.Eur2">
+            <agreementOverview>
+                <totalCallRequired>750,000.00</totalCallRequired>
+                <totalRecallRequired>0.00</totalRecallRequired>
+                <maxRecallHolding>0.00</maxRecallHolding>
+                <maxRecallAvailable>0.00</maxRecallAvailable>
+                <totalDeliveryRequired>0.00</totalDeliveryRequired>
+                <totalReturnRequired>0.00</totalReturnRequired>
+                <maxReturnAvailable>0.00</maxReturnAvailable>
+                <maxReturnHolding>0.00</maxReturnHolding>
+            </agreementOverview>
+        </bookingDetail>
+
+        <bookingDetail id="CallBooking1Cash.BondRequiredAmount1.2M.Eur2">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bondRequiredAmount apply="true">1.2M</bondRequiredAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <save>notSaveOrCancel</save>
+        </bookingDetail>
+
+
+        <bookingDetail id="CallBooking1Cash.BondNominalAmount1.2M.Eur2">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <nominalAmount>1,200,000.00</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+    </scenarioData>
+
+</dataBean>

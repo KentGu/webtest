@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/feeds.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <feedOrganisationContact id="feed.organisation.contact.normal.modify">
+            <orgHeader>
+                <orgCode id="feed.organisation.contact.normal.modify.code">T3740Organisation1Code</orgCode>
+                <longName id="feed.organisation.contact.normal.modify.lname">T3740Organisation1LongName</longName>
+                <shortName id="feed.organisation.contact.normal.modify.sname">T3740Organisation1ShortName</shortName>
+            </orgHeader>
+            <orgRole id="feed.organisation.contact.normal.modify.role">Collateral relationship</orgRole>
+            <orgAddress>
+                <contactName id="feed.organisation.contact.normal.modify.contact.name">testContact</contactName>
+                <address id="feed.organisation.contact.normal.modify.address">testAddress1</address>
+                <title id="feed.organisation.contact.normal.modify.title">testTitle1</title>
+                <label id="feed.organisation.contact.normal.modify.label">testLabel</label>
+                <telephoneNumber id="feed.organisation.contact.normal.modify.tel">1234567890</telephoneNumber>
+                <faxNumber id="feed.organisation.contact.normal.modify.fax">0987654321</faxNumber>
+                <email id="feed.organisation.contact.normal.modify.email">test1@test.com</email>
+                <ftp id="feed.organisation.contact.normal.modify.ftp">ftp://test1.com</ftp>
+                <notes id="feed.organisation.contact.normal.modify.note">testNote1</notes>
+                <enabled>true</enabled>
+            </orgAddress>
+        </feedOrganisationContact>
+
+        <feedResult id="feed.organisation.contact.normal.modify.result">
+            <fileUploaded id="feed.organisation.contact.normal.modify.result.file"/>
+            <unsuccessfulImports>0</unsuccessfulImports>
+            <unchangedOrIgnoredImports>0</unchangedOrIgnoredImports>
+        </feedResult>
+
+        <feedStatus id="feed.organisation.contact.normal.modify.status">
+            <status>Successful</status>
+            <valuationFile ref="feed.organisation.contact.normal.modify.result.file"/>
+            <description>Organisation</description>
+            <successfulFeed>
+                <total>1</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <organisationSearch id="feed.organisation.contact.normal.modify.search">
+            <criteria>Exactly matching</criteria>
+            <type>Short Name</type>
+            <filter ref="feed.organisation.contact.normal.modify.sname"/>
+            <linkText ref="feed.organisation.contact.normal.modify.sname"/>
+        </organisationSearch>
+
+        <organisation id="check.feed.organisation.contact.normal.modify">
+            <shortName ref="feed.organisation.contact.normal.modify.sname"/>
+            <longName ref="feed.organisation.contact.normal.modify.lname"/>
+            <code ref="feed.organisation.contact.normal.modify.code"/>
+            <role ref="feed.organisation.contact.normal.modify.role"/>
+            <address>
+                <contact ref="feed.organisation.contact.normal.modify.contact.name"/>
+                <address1 ref="feed.organisation.contact.normal.modify.address"/>
+                <title ref="feed.organisation.contact.normal.modify.title"/>
+                <label ref="feed.organisation.contact.normal.modify.label"/>
+                <tel ref="feed.organisation.contact.normal.modify.tel"/>
+                <fax ref="feed.organisation.contact.normal.modify.fax"/>
+                <email ref="feed.organisation.contact.normal.modify.email"/>
+                <ftp ref="feed.organisation.contact.normal.modify.ftp"/>
+                <notes ref="feed.organisation.contact.normal.modify.note"/>
+            </address>
+        </organisation>
+    </scenarioData>
+</dataBean>

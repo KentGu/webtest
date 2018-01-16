@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/smoke.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+
+    <scenarioData>
+
+        <!--<userPreference id = "SmokeDashboardLink">-->
+            <!--<dashboardLink>EM</dashboardLink>-->
+        <!--</userPreference>-->
+
+        <instrument id="SmokeSecurityBond-USD">
+            <assetClass ref="bond.name"/>
+            <assetType ref="bond.usd.name"/>
+            <instrumentId>
+                <primary>true</primary>
+                <type>CUSIP</type>
+                <value id="Securitybond_usd001" random="true"/>
+            </instrumentId>
+            <!--<market>m1</market>-->
+            <description>SmokeTestSecurity</description>
+            <issuer>
+                <filter ref="org.issuer1.sname"/>
+                <linkText ref="org.issuer1.sname"/>
+            </issuer>
+            <maturityDate>T+90</maturityDate>
+            <priceSource>
+                <priceSourceName>Default</priceSourceName>
+                <dirtyPrice>100</dirtyPrice>
+                <lastPriceChange>T</lastPriceChange>
+                <!--<priceLevel>Bid</priceLevel>-->
+                <priceDate>T</priceDate>
+            </priceSource>
+            <couponRate>100</couponRate>
+            <manuallyOverrideNextCouponDate>true</manuallyOverrideNextCouponDate>
+            <nextCouponDate>t-10</nextCouponDate>
+            <manuallyOverrideLastCouponDate>true</manuallyOverrideLastCouponDate>
+            <lastCouponDate>t-10</lastCouponDate>
+            <recordDate>t-10</recordDate>
+            <issueDate>T</issueDate>
+            <!--<securityStatus>Approved</securityStatus>-->
+        </instrument>
+
+        <securitySearch id="SmokeSecurityBond-USDSearch">
+            <instrument>
+                <type>Starting with</type>
+                <filter ref="Securitybond_usd001"/>
+                <linkText ref="Securitybond_usd001"/>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="SmokeSecurityBond-USDSearchResult">
+            <instrument ref="Securitybond_usd001"/>
+        </securitySearchResult>
+
+        <agreement id="SmokeAgreement003">
+            <principal>
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter>AlexPrcPrimaryC</filter>
+                <linkText>AlexPrcPrimaryC</linkText>
+            </principal>
+            <counterparty>
+                <criteria>Containing</criteria>
+                <type>Long Name</type>
+                <filter>QTPCounterparty</filter>
+                <linkText id="agreement.counterparty">QTPCounterparty</linkText>
+            </counterparty>
+            <agreementDescription id="agreement.description">SmokeOTCagr3Desc</agreementDescription>
+            <agreementName random="true"/>
+            <externalId  random="true"/>
+            <agreementDate>T</agreementDate>
+            <nettingIAandMtM>Net</nettingIAandMtM>
+            <!--<grossCalc>Net</grossCalc>-->
+            <interestCalc>Net</interestCalc>
+            <callFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </callFrequency>
+            <timeZone ref="system.staticData.timeZone.hk.desc"/>
+            <holidayCentre ref="hc.europe.name"/>
+            <product>
+                <productName ref="product.test1.name"/>
+            </product>
+            <!--<interest>true</interest>-->
+            <!--<interestCalculationsMethod>Simple</interestCalculationsMethod>-->
+            <!--<calculationRule>First of the Month</calculationRule>-->
+            <!--<payMethod>Physical Payment</payMethod>-->
+            <!--<receiveMethod>Capitalise</receiveMethod>-->
+            <!--<interestSettlementDate>T+2</interestSettlementDate>-->
+            <collateralAssetClass>
+                <collateralAssetClassName ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="cash.usd.name"/>
+                    <interestRule>
+                        <agreementRate ref="SmokeInterestRateName"/>
+                    </interestRule>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="bond.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="bond.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="equity.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="equity.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vcr.name"/>
+                    <linkText ref="payInstrBucket.vcr.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vrd.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.pay.name"/>
+                    <linkText ref="payInstrBucket.pay.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.rec.name"/>
+                    <linkText ref="payInstrBucket.rec.name"/>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementStatus>Pending</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <statementStatus>Approved</statementStatus>
+            <agreementId id="smoke.otc.agr3id"/>
+        </agreement>
+
+        <agreementExposureSummary id="ProductQTP">
+            <productList>
+                <productType ref="product.test1.name"/>
+            </productList>
+        </agreementExposureSummary>
+
+        <tradeDetail id = "SmokeTrade003">
+            <tradeInformation>
+                <!--<productType ref="product.test1.name"/>-->
+                <tradeDate>T</tradeDate>
+                <effectiveDate>T</effectiveDate>
+                <maturityDate>T+1000</maturityDate>
+                <tradeIdentifierPartyA random="true"/>
+                <partyABranchName random="true"/>
+                <partyBBranchName random="true"/>
+            </tradeInformation>
+
+            <valuationInformation>
+                <principalValuationAmount>
+                    <amount>105000</amount>
+                    <currency>USD</currency>
+                </principalValuationAmount>
+                <valuationDate>T</valuationDate>
+            </valuationInformation>
+
+            <collateralInformation>
+                <dealLevelUpfront>true</dealLevelUpfront>
+                <dealLevelType>Independent Amount</dealLevelType>
+                <!--<dealLevelAmount>10000</dealLevelAmount>-->
+                <cptyDealLevelAmount>10000</cptyDealLevelAmount>
+                <currency>USD</currency>
+            </collateralInformation>
+        </tradeDetail>
+
+        <exposureEventSearch id ="SmokeEMPrinCptySearchCR">
+            <principal>1224-1</principal>
+            <counterparty>1224-2</counterparty>
+        </exposureEventSearch>
+
+        <exposureEventDetail id="EMResult001">
+            <agreementRequirement>115,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="EMResult002">
+            <agreementRequirement>115,000.00</agreementRequirement>
+            <callStatus>Margin Request Issued</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="EventCall001Completed">
+            <agreementRequirement>115,000.00</agreementRequirement>
+            <counterpartyAmount>115,000.00</counterpartyAmount>
+            <callStatus>Completed</callStatus>
+            <stmtStatus>false</stmtStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="EventCall001">
+            <agrId ref = "smoke.otc.agr3id" />
+            <action>Call</action>
+        </exposureEventDetail>
+
+        <exposureEventDetail id = "EMCounterpartyAmount001">
+            <counterpartyAmount>115000</counterpartyAmount>
+        </exposureEventDetail>
+
+        <bookingDetail id="EMgroupbooking001">
+            <assetType ref="bond.usd.name"/>
+            <instrumentSearch>
+                <instrumentId>
+                    <type>Starting with</type>
+                    <filter ref="Securitybond_usd001"/>
+                    <linkText ref="Securitybond_usd001"/>
+                </instrumentId>
+                <linkText ref="Securitybond_usd001"/>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <nominalAmount>115000</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <save>saveAndComplete</save>
+            <!--<alertHandling>-->
+                <!--<content>[\s\S]*</content>-->
+                <!--<accept>false</accept>-->
+            <!--</alertHandling>-->
+        </bookingDetail>
+
+        <agreementSearch id = "SmokeAgreementSearch003">
+            <description>
+                <filter>SmokeOTCagr3Desc</filter>
+                <linkText>SmokeOTCagr3Desc</linkText>
+            </description>
+        </agreementSearch>
+
+        <agreementSearchResult id = "SmokeAgreementSearchResult003">
+            <agreementId ref="smoke.otc.agr3id"/>
+            <principal>AlexPrcPrimaryL</principal>
+            <counterparty ref="agreement.counterparty"/>
+            <cptyId ref="agreement.counterparty"/>
+            <description ref="agreement.description"/>
+            <status>Approved</status>
+        </agreementSearchResult>
+
+        <tradeDetail id = "SmokeTrade004">
+            <tradeInformation>
+                <!--<productType ref="product.test1.name"/>-->
+                <tradeDate>T</tradeDate>
+                <effectiveDate>T</effectiveDate>
+                <maturityDate>T+1000</maturityDate>
+                <tradeIdentifierPartyA random="true"/>
+                <partyABranchName random="true"/>
+                <partyBBranchName random="true"/>
+            </tradeInformation>
+
+            <valuationInformation>
+                <principalValuationAmount>
+                    <amount>-105000</amount>
+                    <currency>USD</currency>
+                </principalValuationAmount>
+                <valuationDate>T</valuationDate>
+            </valuationInformation>
+
+            <collateralInformation>
+                <dealLevelUpfront>true</dealLevelUpfront>
+                <dealLevelType>Independent Amount</dealLevelType>
+                <!--<dealLevelAmount>-10000</dealLevelAmount>-->
+                <cptyDealLevelAmount>-10000</cptyDealLevelAmount>
+                <currency>USD</currency>
+            </collateralInformation>
+        </tradeDetail>
+
+        <agreement id="SmokeAgreement003StatementStatus">
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+        <exposureEventDetail id="EventDelivery001">
+            <agrId ref="smoke.otc.agr3id" />
+            <action>Return</action>
+            <agreementRequirement>-115,000.00</agreementRequirement>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="EventDelivery001Partial">
+            <agrId ref="smoke.otc.agr3id"/>
+            <action>Return</action>
+            <agreementRequirement>-115,000.00</agreementRequirement>
+            <callStatus>Partial Dispute</callStatus>
+            <counterpartyAmount>-215,000.00</counterpartyAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id ="EMCounterpartyAmount002">
+            <counterpartyAmount>-215000</counterpartyAmount>
+        </exposureEventDetail>
+
+        <bookingDetail id="EMbulkbooking001">
+            <assetType ref="bond.usd.name"/>
+            <instrumentSearch>
+                <instrument>
+                    <filter ref="Securitybond_usd001"/>
+                    <linkText ref="Securitybond_usd001"/>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <nominalAmount>115000</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <save>save</save>
+            <!--<alertHandling>-->
+                <!--<content>[\s\S]*</content>-->
+                <!--<accept>false</accept>-->
+            <!--</alertHandling>-->
+        </bookingDetail>
+
+    </scenarioData>
+</dataBean>

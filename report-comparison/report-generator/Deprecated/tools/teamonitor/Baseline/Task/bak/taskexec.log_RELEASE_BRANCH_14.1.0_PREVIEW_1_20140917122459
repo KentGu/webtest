@@ -1,0 +1,109 @@
+I'm FILE_TASKEXECLOG=taskexec.log_RELEASE_BRANCH_14.1.0_PREVIEW_1_20140917122459
+I'm database---------=COLLINE20141_BASE_J_0215 creditderivative 172.20.20.34:1521 ora11g
+Target Version: RELEASE_BRANCH_14.1.0_PREVIEW_1
+Target Path:/home/test/server/colline/cluster5_2/bin
+-------------I am task =Approve All Organisations 1
+Task is Workflow : Approve All Organisations 1
+2014-09-17 12:24:59
+Waiting 1000 second for Task  Approve All Organisations 1 execute
+Cant connect to Colline Server.
+javax.naming.CommunicationException: Could not obtain connection to any of these urls: 172.20.20.95:1099 and discovery failed with error: javax.naming.CommunicationException: Receive timed out [Root exception is java.net.SocketTimeoutException: Receive timed out] [Root exception is javax.naming.CommunicationException: Failed to connect to server /172.20.20.95:1099 [Root exception is javax.naming.ServiceUnavailableException: Failed to connect to server /172.20.20.95:1099 [Root exception is java.net.ConnectException: Connection refused]]]
+	at org.jnp.interfaces.NamingContext.checkRef(NamingContext.java:1763)
+	at org.jnp.interfaces.NamingContext.lookup(NamingContext.java:693)
+	at org.jnp.interfaces.NamingContext.lookup(NamingContext.java:686)
+	at javax.naming.InitialContext.lookup(InitialContext.java:411)
+	at com.lombardrisk.common.ServiceLocations.findHome(ServiceLocations.java:127)
+	at com.lombardrisk.f3.taskmgr.TaskManagerProcessor.getResources(TaskManagerProcessor.java:170)
+	at com.lombardrisk.f3.taskmgr.TaskManagerProcessor.initResources(TaskManagerProcessor.java:524)
+	at com.lombardrisk.f3.taskmgr.TaskManagerProcessor.<init>(TaskManagerProcessor.java:87)
+	at com.lombardrisk.f3.taskmgr.TaskManagerProcessor.getInstance(TaskManagerProcessor.java:97)
+	at com.lombardrisk.f3.F3TaskManager.main(F3TaskManager.java:28)
+Caused by: javax.naming.CommunicationException: Failed to connect to server /172.20.20.95:1099 [Root exception is javax.naming.ServiceUnavailableException: Failed to connect to server /172.20.20.95:1099 [Root exception is java.net.ConnectException: Connection refused]]
+	at org.jnp.interfaces.NamingContext.getServer(NamingContext.java:335)
+	at org.jnp.interfaces.NamingContext.checkRef(NamingContext.java:1734)
+	... 9 more
+Caused by: javax.naming.ServiceUnavailableException: Failed to connect to server /172.20.20.95:1099 [Root exception is java.net.ConnectException: Connection refused]
+	at org.jnp.interfaces.NamingContext.getServer(NamingContext.java:305)
+	... 10 more
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.jnp.interfaces.TimedSocketFactory.createSocket(TimedSocketFactory.java:97)
+	at org.jnp.interfaces.TimedSocketFactory.createSocket(TimedSocketFactory.java:82)
+	at org.jnp.interfaces.NamingContext.getServer(NamingContext.java:301)
+	... 10 more
+----------break now --------
+-------------I am task =Approve All Agreements 1
+Task is Workflow : Approve All Agreements 1
+2014-09-17 12:25:24
+Waiting 1000 second for Task  Approve All Agreements 1 execute
+Cant connect to Colline Server.
+javax.naming.CommunicationException: Could not obtain connection to any of these urls: 172.20.20.95:1099 and discovery failed with error: javax.naming.CommunicationException: Receive timed out [Root exception is java.net.SocketTimeoutException: Receive timed out] [Root exception is javax.naming.CommunicationException: Failed to connect to server /172.20.20.95:1099 [Root exception is javax.naming.ServiceUnavailableException: Failed to connect to server /172.20.20.95:1099 [Root exception is java.net.ConnectException: Connection refused]]]
+	at org.jnp.interfaces.NamingContext.checkRef(NamingContext.java:1763)
+	at org.jnp.interfaces.NamingContext.lookup(NamingContext.java:693)
+	at org.jnp.interfaces.NamingContext.lookup(NamingContext.java:686)
+	at javax.naming.InitialContext.lookup(InitialContext.java:411)
+	at com.lombardrisk.common.ServiceLocations.findHome(ServiceLocations.java:127)
+	at com.lombardrisk.f3.taskmgr.TaskManagerProcessor.getResources(TaskManagerProcessor.java:170)
+	at com.lombardrisk.f3.taskmgr.TaskManagerProcessor.initResources(TaskManagerProcessor.java:524)
+	at com.lombardrisk.f3.taskmgr.TaskManagerProcessor.<init>(TaskManagerProcessor.java:87)
+	at com.lombardrisk.f3.taskmgr.TaskManagerProcessor.getInstance(TaskManagerProcessor.java:97)
+	at com.lombardrisk.f3.F3TaskManager.main(F3TaskManager.java:28)
+Caused by: javax.naming.CommunicationException: Failed to connect to server /172.20.20.95:1099 [Root exception is javax.naming.ServiceUnavailableException: Failed to connect to server /172.20.20.95:1099 [Root exception is java.net.ConnectException: Connection refused]]
+	at org.jnp.interfaces.NamingContext.getServer(NamingContext.java:335)
+	at org.jnp.interfaces.NamingContext.checkRef(NamingContext.java:1734)
+	... 9 more
+Caused by: javax.naming.ServiceUnavailableException: Failed to connect to server /172.20.20.95:1099 [Root exception is java.net.ConnectException: Connection refused]
+	at org.jnp.interfaces.NamingContext.getServer(NamingContext.java:305)
+	... 10 more
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.jnp.interfaces.TimedSocketFactory.createSocket(TimedSocketFactory.java:97)
+	at org.jnp.interfaces.TimedSocketFactory.createSocket(TimedSocketFactory.java:82)
+	at org.jnp.interfaces.NamingContext.getServer(NamingContext.java:301)
+	... 10 more
+----------break now --------
+-------------I am task =Approve All Statements 5
+Task is Workflow : Approve All Statements 5
+2014-09-17 12:25:49
+Waiting 1000 second for Task  Approve All Statements 5 execute
+Cant connect to Colline Server.
+javax.naming.CommunicationException: Could not obtain connection to any of these urls: 172.20.20.95:1099 and discovery failed with error: javax.naming.CommunicationException: Receive timed out [Root exception is java.net.SocketTimeoutException: Receive timed out] [Root exception is javax.naming.CommunicationException: Failed to connect to server /172.20.20.95:1099 [Root exception is javax.naming.ServiceUnavailableException: Failed to connect to server /172.20.20.95:1099 [Root exception is java.net.ConnectException: Connection refused]]]
+	at org.jnp.interfaces.NamingContext.checkRef(NamingContext.java:1763)
+	at org.jnp.interfaces.NamingContext.lookup(NamingContext.java:693)
+	at org.jnp.interfaces.NamingContext.lookup(NamingContext.java:686)
+	at javax.naming.InitialContext.lookup(InitialContext.java:411)
+	at com.lombardrisk.common.ServiceLocations.findHome(ServiceLocations.java:127)
+	at com.lombardrisk.f3.taskmgr.TaskManagerProcessor.getResources(TaskManagerProcessor.java:170)
+	at com.lombardrisk.f3.taskmgr.TaskManagerProcessor.initResources(TaskManagerProcessor.java:524)
+	at com.lombardrisk.f3.taskmgr.TaskManagerProcessor.<init>(TaskManagerProcessor.java:87)
+	at com.lombardrisk.f3.taskmgr.TaskManagerProcessor.getInstance(TaskManagerProcessor.java:97)
+	at com.lombardrisk.f3.F3TaskManager.main(F3TaskManager.java:28)
+Caused by: javax.naming.CommunicationException: Failed to connect to server /172.20.20.95:1099 [Root exception is javax.naming.ServiceUnavailableException: Failed to connect to server /172.20.20.95:1099 [Root exception is java.net.ConnectException: Connection refused]]
+	at org.jnp.interfaces.NamingContext.getServer(NamingContext.java:335)
+	at org.jnp.interfaces.NamingContext.checkRef(NamingContext.java:1734)
+	... 9 more
+Caused by: javax.naming.ServiceUnavailableException: Failed to connect to server /172.20.20.95:1099 [Root exception is java.net.ConnectException: Connection refused]
+	at org.jnp.interfaces.NamingContext.getServer(NamingContext.java:305)
+	... 10 more
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.jnp.interfaces.TimedSocketFactory.createSocket(TimedSocketFactory.java:97)
+	at org.jnp.interfaces.TimedSocketFactory.createSocket(TimedSocketFactory.java:82)
+	at org.jnp.interfaces.NamingContext.getServer(NamingContext.java:301)
+	... 10 more
+----------break now --------

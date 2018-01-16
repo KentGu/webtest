@@ -1,0 +1,18 @@
+package mypackage;
+
+import com.lombardrisk.colline.stp.dto.ruledata.ETDStatementModelRuleData;
+import com.lombardrisk.colline.stp.dto.ruledata.ETDStatementRuleData;
+import com.lombardrisk.colline.statement.logic.external.api.statementsummary.ETDStandardCalculations;
+import com.lombardrisk.colline.collateralquerycommon.client.CollateralConstants.DefaultFund;
+
+rule "EtdStatement"
+    dialect "java"
+    no-loop true
+
+    	when
+    	    $statement : ETDStatementRuleData()
+    	then
+			for(ETDStatementModelRuleData model : $statement.getModelRuleData()) {
+				model.setStatementUDF("UDF_A", 500.0);
+			}
+    end

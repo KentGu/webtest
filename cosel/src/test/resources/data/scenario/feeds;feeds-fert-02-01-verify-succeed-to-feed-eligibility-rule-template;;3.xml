@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/feeds.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <feedEligibilityRulesTemplate id="feed.net.eligibility.rule.template">
+            <name id="feed.net.eligibility.rule.template.name" random="true"/>
+            <netting_MTM_And_IA>Net</netting_MTM_And_IA>
+            <gracePeriod id="feed.net.eligibility.rule.template.grace.period">Infinity</gracePeriod>
+            <concentrationLimit>
+                <concentrationLimitTrigger id="feed.net.eligibility.rule.template.con.trigger">80</concentrationLimitTrigger>
+                <rating_method>Issuer</rating_method>
+            </concentrationLimit>
+            <enableApplicableAgencies>true</enableApplicableAgencies>
+            <applicableAgencies>
+                <referenceRatingAgencies>Fitch</referenceRatingAgencies>
+                <debtClassification id="feed.net.eligibility.rule.template.debt.classification">SUB</debtClassification>
+                <selectionOfAgency>
+                    <use id="feed.net.eligibility.rule.template.selection.agency.use">80</use>
+                    <direction id="feed.net.eligibility.rule.template.selection.agency.direction">Higher</direction>
+                </selectionOfAgency>
+                <applicableOfRating id="feed.net.eligibility.rule.template.applicable.rating">Lower</applicableOfRating>
+            </applicableAgencies>
+            <asset_classes>
+                <asset_class>
+                    <asset_class_name id="feed.net.eligibility.rule.template.qtp.bond">qtp_bond</asset_class_name>
+                    <concentration_rules>
+                        <concentration_rule>
+                            <trigger>1.00</trigger>
+                            <triggerCCY>GBP</triggerCCY>
+                            <concentration_rule>Country Holding</concentration_rule>
+                            <element>AUSTRALIA</element>
+                            <rating_from>AAA/Aaa/AAA</rating_from>
+                            <rating_to>B/B2/B</rating_to>
+                            <method>Max Value</method>
+                            <value>80.00</value>
+                            <group>2</group>
+                        </concentration_rule>
+                    </concentration_rules>
+                </asset_class>
+                <asset_class>
+                    <asset_class_name id="feed.net.eligibility.rule.template.qtp.cash.name">qtp_cash</asset_class_name>
+                    <concentration_rules>
+                        <concentration_rule>
+                            <trigger>2.00</trigger>
+                            <triggerCCY>AUD</triggerCCY>
+                            <concentration_rule>Class Holding</concentration_rule>
+                            <method>Max %</method>
+                            <value>70.00</value>
+                            <group>1</group>
+                        </concentration_rule>
+                    </concentration_rules>
+                </asset_class>
+                <asset_class>
+                    <asset_class_name id="feed.net.eligibility.rule.template.qtp.equity.name">qtp_equity</asset_class_name>
+                    <concentration_rules>
+                        <concentration_rule>
+                            <trigger>3.00</trigger>
+                            <triggerCCY>USD</triggerCCY>
+                            <concentration_rule>Issuer Holding</concentration_rule>
+                            <element>QTP_Eligible_Issuer</element>
+                            <rating_from>AAA/Aaa/AAA</rating_from>
+                            <rating_to>CC/Ca/CC</rating_to>
+                            <method>Max %</method>
+                            <value>88.00</value>
+                            <group>4</group>
+                        </concentration_rule>
+                        <concentration_rule>
+                            <trigger>4.00</trigger>
+                            <triggerCCY>SRG</triggerCCY>
+                            <concentration_rule>Industry Holding</concentration_rule>
+                            <element>Auto Parts &amp; Equipment</element>
+                            <rating_from>AAA/Aaa/AAA</rating_from>
+                            <rating_to>NR/NR/NR</rating_to>
+                            <method>Max %</method>
+                            <value>90.00</value>
+                            <group>5</group>
+                        </concentration_rule>
+                    </concentration_rules>
+                </asset_class>
+            </asset_classes>
+            <assets>
+                <asset>
+                    <assetName id="feed.net.eligibility.rule.template.qtp.bond.usd">qtp_bond_usd</assetName>
+                    <applicableParty>PC</applicableParty>
+                    <settlementDateAbbriviated id="feed.net.eligibility.rule.template.qtp.bond.usd.settlement.date">T</settlementDateAbbriviated>
+                    <!--<ratingMethod id="feed.net.eligibility.rule.template.qtp.bond.usd.rating.method">Rating</ratingMethod>-->
+                    <!--<ratingMethod2 id="feed.net.eligibility.rule.template.qtp.bond.usd.rating.method2">CQS</ratingMethod2>-->
+                    <eligibility>
+                        <miniEligiblityCQS id="feed.net.eligibility.rule.template.qtp.bond.usd.eli.rule.mini.cqs">2</miniEligiblityCQS>
+                    </eligibility>
+                </asset>
+                <asset>
+                    <assetName id="feed.net.eligibility.rule.template.qtp.cash.usd">qtp_cash_usd</assetName>
+                    <applicableParty>P</applicableParty>
+                    <settlementDateAbbriviated id="feed.net.eligibility.rule.template.qtp.cash.usd.settlement.date">T+7</settlementDateAbbriviated>
+                    <fixedVal>true</fixedVal>
+                    <valuePercent>80</valuePercent>
+                    <concentration_rules>
+                        <concentration_rule>
+                            <trigger>1.00</trigger>
+                            <triggerCCY>AUD</triggerCCY>
+                            <concentration_rule>Type Holding</concentration_rule>
+                            <method>Max %</method>
+                            <value>98.00</value>
+                            <group>6</group>
+                        </concentration_rule>
+                    </concentration_rules>
+                    <haircutAdjustments>
+                        <haircutAdjustment>
+                            <adjustmentType>Adjust</adjustmentType>
+                            <instrumentField>Currency</instrumentField>
+                            <rule>Equal</rule>
+                            <value>USD</value>
+                            <operation>Add</operation>
+                            <valuePercentage>88.00</valuePercentage>
+                        </haircutAdjustment>
+                    </haircutAdjustments>
+                </asset>
+                <asset>
+                    <assetName id="feed.net.eligibility.rule.template.qtp_equity.usd.name">qtp_equity_usd</assetName>
+                    <applicableParty>C</applicableParty>
+                    <settlementDateAbbriviated id="feed.net.eligibility.rule.template.qtp_equity.usd.settlement.date">T+3</settlementDateAbbriviated>
+                    <notes id="feed.net.eligibility.rule.template.qtp_equity.usd.note1">123</notes>
+                    <notes2 id="feed.net.eligibility.rule.template.qtp_equity.usd.note2">abc</notes2>
+                    <notes3 id="feed.net.eligibility.rule.template.qtp_equity.usd.note3">ccc</notes3>
+                    <fixedVal>true</fixedVal>
+                    <valuePercent>80</valuePercent>
+                </asset>
+            </assets>
+        </feedEligibilityRulesTemplate>
+
+        <feedResult id="feed.net.eligibility.rule.template.result">
+            <fileUploaded id="feed.net.eligibility.rule.template.result.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedStatus id="feed.net.eligibility.rule.template.status">
+            <status>Successful</status>
+            <valuationFile ref="feed.net.eligibility.rule.template.result.file"/>
+            <description>Eligibility Rules Template</description>
+            <successfulFeed>
+                <total>1</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <approvalManagerEligibilityRulesTemplateSearch id="feed.net.eligibility.rule.template.status.search">
+            <eligibilityRulesTemplateName>
+                <filter ref="feed.net.eligibility.rule.template.name"/>
+                <linkText ref="feed.net.eligibility.rule.template.name"/>
+            </eligibilityRulesTemplateName>
+        </approvalManagerEligibilityRulesTemplateSearch>
+
+        <approvalManagerEligibilityRulesTemplateSearchResult id="feed.net.eligibility.rule.template.status.search.result">
+            <eligibilityRulesTemplateName ref="feed.net.eligibility.rule.template.name"/>
+        </approvalManagerEligibilityRulesTemplateSearchResult>
+
+        <eligibilityRulesTemplate id="check.feed.net.eligibility.rule.template">
+            <templateName ref="feed.net.eligibility.rule.template.name"/>
+            <nettingIAandMtM>Net</nettingIAandMtM>
+            <gracePeriod ref="feed.net.eligibility.rule.template.grace.period"/>
+            <concentrationLimitTrigger ref="feed.net.eligibility.rule.template.con.trigger"/>
+            <useIssuerRating>true</useIssuerRating>
+            <applicableAgencies>true</applicableAgencies>
+            <referenceRatingAgencies>Fitch</referenceRatingAgencies>
+            <debtClassification ref="feed.net.eligibility.rule.template.debt.classification"/>
+            <selectionOfAgenciesUse ref="feed.net.eligibility.rule.template.selection.agency.use"/>
+            <selectionofAgenciesUseDirection ref="feed.net.eligibility.rule.template.selection.agency.direction"/>
+            <applicationOfRatings ref="feed.net.eligibility.rule.template.applicable.rating"/>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="feed.net.eligibility.rule.template.qtp.bond"/>
+                <concentrationLimitRule>
+                    <trigger>1.00</trigger>
+                    <currency>GBP</currency>
+                    <rule>Country Holding</rule>
+                    <element>
+                        <linkText>AUSTRALIA</linkText>
+                    </element>
+                    <from>AAA/Aaa/AAA</from>
+                    <to>B/B2/B</to>
+                    <method>Max Value</method>
+                    <value>80.00</value>
+                    <group>2</group>
+                </concentrationLimitRule>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="feed.net.eligibility.rule.template.qtp.bond.usd"/>
+                    <applicableParty>Both</applicableParty>
+                    <!--<applicableType>VI</applicableType>-->
+                    <settlementDate ref="feed.net.eligibility.rule.template.qtp.bond.usd.settlement.date"/>
+                    <eligibilityRule>
+                        <minEligibilityCqs ref="feed.net.eligibility.rule.template.qtp.bond.usd.eli.rule.mini.cqs"/>
+                    </eligibilityRule>
+                    <!--<haircutRule>-->
+                        <!--<haircutSchedule>-->
+                            <!--<leftCheck>true</leftCheck>-->
+                            <!--<leftApply ref="feed.net.eligibility.rule.template.qtp.bond.usd.rating.method"/>-->
+                            <!--<rightCheck>true</rightCheck>-->
+                            <!--<rightApply ref="feed.net.eligibility.rule.template.qtp.bond.usd.rating.method2"/>-->
+                        <!--</haircutSchedule>-->
+                    <!--</haircutRule>-->
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="feed.net.eligibility.rule.template.qtp.cash.name"/>
+                <concentrationLimitRule>
+                    <trigger>2.00</trigger>
+                    <currency>AUD</currency>
+                    <rule>Class Holding</rule>
+                    <method>Max %</method>
+                    <value>70.00</value>
+                    <group>1</group>
+                </concentrationLimitRule>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="feed.net.eligibility.rule.template.qtp.cash.usd"/>
+                    <applicableParty>P</applicableParty>
+                    <!--<applicableType>IM</applicableType>-->
+                    <settlementDate ref="feed.net.eligibility.rule.template.qtp.cash.usd.settlement.date"/>
+                    <concentrationLimitRule>
+                        <trigger>1.00</trigger>
+                        <currency>AUD</currency>
+                        <rule>Type Holding</rule>
+                        <method>Max %</method>
+                        <value>98.00</value>
+                        <group>6</group>
+                    </concentrationLimitRule>
+                    <haircutRule>
+                        <haircutAdjustment>
+                            <type>Adjust</type>
+                            <instrumentField>Currency</instrumentField>
+                            <rule>Equal</rule>
+                            <value>USD</value>
+                            <operation>Add</operation>
+                            <valuationPercentage>88</valuationPercentage>
+                        </haircutAdjustment>
+                    </haircutRule>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="feed.net.eligibility.rule.template.qtp.equity.name"/>
+                <concentrationLimitRule>
+                    <trigger>3.00</trigger>
+                    <currency>USD</currency>
+                    <rule>Issuer Holding</rule>
+                    <element>
+                        <linkText>QTP_Eligible_Issuer</linkText>\
+                    </element>
+                    <from>AAA/Aaa/AAA</from>
+                    <to>CC/Ca/CC</to>
+                    <method>Max %</method>
+                    <value>88.00</value>
+                    <group>4</group>
+                </concentrationLimitRule>
+                <concentrationLimitRule>
+                    <trigger>4.00</trigger>
+                    <currency>SRG</currency>
+                    <rule>Industry Holding</rule>
+                    <element>
+                        <linkText>25101010-Auto Parts &amp; Equipment</linkText>
+                    </element>
+                    <from>AAA/Aaa/AAA</from>
+                    <to>NR/NR/NR</to>
+                    <method>Max %</method>
+                    <value>90.00</value>
+                    <group>5</group>
+                </concentrationLimitRule>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="feed.net.eligibility.rule.template.qtp_equity.usd.name"/>
+                    <applicableParty>C</applicableParty>
+                    <!--<applicableType>VM</applicableType>-->
+                    <settlementDate ref="feed.net.eligibility.rule.template.qtp_equity.usd.settlement.date"/>
+                    <assetNote1 ref="feed.net.eligibility.rule.template.qtp_equity.usd.note1"/>
+                    <assetNote2 ref="feed.net.eligibility.rule.template.qtp_equity.usd.note2"/>
+                    <assetNote3 ref="feed.net.eligibility.rule.template.qtp_equity.usd.note3"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+        </eligibilityRulesTemplate>
+    </scenarioData>
+</dataBean>

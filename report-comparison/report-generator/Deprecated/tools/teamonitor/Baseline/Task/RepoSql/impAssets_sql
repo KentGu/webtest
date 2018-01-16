@@ -1,0 +1,5 @@
+pre#Asset_Before#select count(1) from colsecurities where instrumentid like 'Baseline_%'
+
+post#Asset_After#select count(1) from colsecurities where instrumentid like 'Baseline_%'
+
+val#1#`expr ${Asset_After} - ${Asset_Before}`

@@ -1,0 +1,47 @@
+I'm FILE_TASKEXECLOG=taskexec.log_RELEASE_GIT_BRANCH_14.1.0_Final_Sprint_PATCH1_20140922100119
+I'm database---------=COLLINE2014_1_0_BASE_NOI_1211 creditderivative 172.20.20.99:1521 pst11g1
+Target Version: RELEASE_GIT_BRANCH_14.1.0_Final_Sprint_PATCH1
+Target Path:/home/test/server/colline/cluster5_2/bin
+-------------I am task =Approve All Organisations 1
+Task is Workflow : Approve All Organisations 1
+2014-09-22 10:01:19
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Approve All Organisations 1] at: 2014-09-22 10:01:20,112
+Finished starting task: [Workflow:Approve All Organisations 1] at: 2014-09-22 10:01:20,174
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Approve All Organisations. Please wait ...
+Waiting 1000 second for Task  Approve All Organisations 1 execute
+Sorry, no more waiting. Approve All Organisations 1,  TIME_Execute = 1000.875144450, TIME4TASKEXECUTION =1000.
+-------------I am task =Approve All Agreements 1
+Task is Workflow : Approve All Agreements 1
+2014-09-22 10:18:11
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Approve All Agreements 1] at: 2014-09-22 10:18:11,591
+Finished starting task: [Workflow:Approve All Agreements 1] at: 2014-09-22 10:18:11,612
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Approve All Agreements. Please wait ...
+Waiting 1000 second for Task  Approve All Agreements 1 execute
+-------------I am task =Approve All Statements 5
+Task is Workflow : Approve All Statements 5
+2014-09-22 10:20:34
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Approve All Statements 5] at: 2014-09-22 10:20:34,834
+Finished starting task: [Workflow:Approve All Statements 5] at: 2014-09-22 10:20:34,853
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Approve All Statements. Please wait ...
+Workflow:Approve All Statements: 0  statements are triggered to approve.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+Waiting 1000 second for Task  Approve All Statements 5 execute
+-----------It's Approve All Statements task, sleep 900 seconds for msg calc. ------

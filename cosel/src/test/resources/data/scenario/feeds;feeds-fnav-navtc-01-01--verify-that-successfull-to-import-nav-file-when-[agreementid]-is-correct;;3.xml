@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/feeds.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <agreement>
+            <agreementDescription id="agreement.otc.not.net.description">T5185_OTC_NOT_NET_Agreement</agreementDescription>
+            <externalId id="agreement.otc.not.net.external.id">T5185_OTC_NOT_NET_Agreement_External_ID</externalId>
+            <agreementId id="agreement.otc.not.net.agreement.id">529</agreementId>
+        </agreement>
+
+        <feedNAV id="feed.nav.otc.not.net.agreement">
+            <agreementId ref="agreement.otc.not.net.agreement.id"/>
+            <legal_id ref="agreement.otc.not.net.external.id"/>
+            <principalNAV id="feed.nav.otc.not.net.agreement.principal.nav">888</principalNAV>
+            <principalCCy id="feed.nav.otc.not.net.agreement.principal.ccy" ref="ccy.usd.name"/>
+            <cptyNAV id="feed.nav.otc.not.net.agreement.cpty.nav">777</cptyNAV>
+            <cptyCCy id="feed.nav.otc.not.net.agreement.cpty.ccy" ref="ccy.gbp.name"/>
+        </feedNAV>
+
+        <feedResult id="feed.nav.otc.not.net.agreement.result">
+            <fileUploaded id="feed.nav.otc.not.net.agreement.result.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedStatus id="feed.nav.otc.not.net.agreement.status">
+            <status>Successful</status>
+            <description>NAV</description>
+            <valuationFile ref="feed.nav.otc.not.net.agreement.result.file"/>
+            <successfulFeed>
+                <total>1</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <agreementSearch id="feed.nav.otc.not.net.agreement.search">
+            <systemId ref="agreement.otc.not.net.agreement.id"/>
+            <externalId>
+                <filter ref="agreement.otc.not.net.external.id"/>
+                <linkText ref="agreement.otc.not.net.external.id"/>
+            </externalId>
+            <description>
+                <filter ref="agreement.otc.not.net.description"/>
+                <linkText ref="agreement.otc.not.net.description"/>
+            </description>
+        </agreementSearch>
+
+        <agreementSearchResult id="feed.nav.otc.not.net.agreement.search.result">
+            <agreementId ref="agreement.otc.not.net.agreement.id"/>
+            <description ref="agreement.otc.not.net.description"/>
+            <externalId ref="agreement.otc.not.net.external.id"/>
+        </agreementSearchResult>
+
+        <agreementSummary id="check.feed.nav.otc.not.net.agreement">
+            <documentationDetails>
+                <principalNAV>888.00 USD</principalNAV>
+                <counterpartyNAV>777.00 GBP</counterpartyNAV>
+            </documentationDetails>
+        </agreementSummary>
+    </scenarioData>
+</dataBean>

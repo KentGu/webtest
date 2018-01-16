@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="smoke_suite" verbose="1">
+    <test name="smoke">
+        <!--<parameter name="os" value="windows" />-->
+        <!--<parameter name="os_version" value="7"/>-->
+        <parameter name="browser" value="ie"/>
+        <!--<parameter name="browser_version" value="10" />-->
+        <!-- <parameter name="resolution" value="1024x768" /> -->
+        <!--<classes>-->
+            <!--<class name="Smoke"/>-->
+            <!--<class name="ApprovalManager"/>-->
+        <!--</classes>-->
+        <packages>
+            <package name="com.lombardrisk.bdd.cases"/>
+        </packages>
+    </test>
+</suite>

@@ -1,0 +1,18 @@
+[
+  {
+    "applicationServers": [
+      {
+        "id": 0,
+        "name": "colline",
+        "url": "http://localhost:8080/"
+      }
+    ],
+    "databaseServers": [
+      {
+      	"id": 0,
+        "name": "oracle",
+        "dump": "data/system/default.xml"
+      }
+    ]
+  }
+]

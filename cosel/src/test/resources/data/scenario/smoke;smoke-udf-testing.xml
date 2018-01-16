@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xsi:noNamespaceSchemaLocation="http://artifactory.london.lombardrisk.com:8081/artifactory/libs-snapshot-local/com/lombardrisk/cobiz/1.0.0-SNAPSHOT/cobiz-1.0.0-SNAPSHOT.jar!/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/smoke.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+
+        <systemPreference id="TickEnableDateBasedValuation">
+            <applicationPreferences>
+                <enableDateBasedValuation>true</enableDateBasedValuation>
+            </applicationPreferences>
+        </systemPreference>
+
+
+        <organisationStaticData id="OrgUDF1">
+            <type>User Defined Organisation Fields</type>
+            <dataName>UDF 1</dataName>
+        </organisationStaticData>
+
+        <organisationStaticData id="EnableOrgUDF1">
+            <status>Enabled</status>
+        </organisationStaticData>
+
+        <organisationStaticData id="OrgUDF16">
+            <type>User Defined Organisation Fields</type>
+            <dataName>UDF 16</dataName>
+        </organisationStaticData>
+
+        <organisationStaticData id="EnableOrgUDF16">
+            <status>enabled</status>
+        </organisationStaticData>
+
+        <collateralStaticData id="CollateralSecurityUDF1">
+            <type>User Defined Security Fields</type>
+            <dataName>UDF 1</dataName>
+        </collateralStaticData>
+
+        <collateralStaticData id="EnableCollateralSecurityUDF1">
+            <status>enabled</status>
+        </collateralStaticData>
+
+        <collateralStaticData id="CollateralSecurityUDF16">
+            <type>User Defined Security Fields</type>
+            <dataName>UDF 16</dataName>
+        </collateralStaticData>
+
+        <collateralStaticData id="EnableCollateralSecurityUDF16">
+            <status>enabled</status>
+        </collateralStaticData>
+
+        <collateralStaticData id="CollateralAgreementUDF1">
+            <type>User Defined Agreement Fields</type>
+            <dataName>UDF 1</dataName>
+        </collateralStaticData>
+
+        <collateralStaticData id="EnableCollateralAgreementUDF1">
+            <status>enabled</status>
+        </collateralStaticData>
+
+        <udfValue id="CollateralUDFValuesORGUDF_UDF1">
+            <type>Scheme</type>
+            <dataName>ORGUDF_UDF 1</dataName>
+        </udfValue>
+
+        <udfValue id="EnableCollateralUDFValuesORGUDF_UDF1">
+            <status>enabled</status>
+        </udfValue>
+
+        <udfValue id="CollateralUDFValuesORGUDF_UDF16">
+            <type>Scheme</type>
+            <dataName>ORGUDF_UDF 16</dataName>
+        </udfValue>
+
+        <udfValue id="EnableCollateralUDFValuesORGUDF_UDF16">
+            <status>enabled</status>
+        </udfValue>
+
+        <udfValue id="CollateralUDFValuesSECUDF_UDF1">
+            <type>Scheme</type>
+            <dataName>SECUDF_UDF 1</dataName>
+        </udfValue>
+
+        <udfValue id="EnableCollateralUDFValuesSECUDF_UDF1">
+            <status>enabled</status>
+        </udfValue>
+
+        <udfValue id="CollateralUDFValuesSECUDF_UDF16">
+            <type>Scheme</type>
+            <dataName>SECUDF_UDF 16</dataName>
+        </udfValue>
+
+        <udfValue id="EnableCollateralUDFValuesSECUDF_UDF16">
+            <status>enabled</status>
+        </udfValue>
+
+        <udfValue id="CollateralUDFValuesAGRUDF_UDF1">
+            <type>Scheme</type>
+            <dataName>AGRUDF_UDF 1</dataName>
+        </udfValue>
+
+        <udfValue id="EnableCollateralUDFValuesAGRUDF_UDF1">
+            <status>enabled</status>
+        </udfValue>
+
+        <udfValue id="AddValue1ToORGUDF_UDF1">
+            <type>ORGUDF_UDF 1</type>
+            <dataName id="OrgValue1_1" random="true" suffix="OrgValue1_1"/>
+            <description random="true" suffix="DOrgValue1_1"/>
+            <status>enabled</status>
+        </udfValue>
+
+        <udfValue id="AddValue2ToORGUDF_UDF1">
+            <type>ORGUDF_UDF 1</type>
+            <dataName id="OrgValue1_2" random="true" suffix="OrgValue1_2"/>
+            <description random="true" suffix="DOrgValue1_2"/>
+            <status>enabled</status>
+        </udfValue>
+
+        <udfValue id="AddValue3ToORGUDF_UDF1">
+            <type>ORGUDF_UDF 1</type>
+            <dataName id="OrgValue1_3" random="true" suffix="OrgValue1_3"/>
+            <description random="true" suffix="DOrgValue1_3"/>
+            <status>enabled</status>
+        </udfValue>
+
+        <udfValue id="AddValue1ToORGUDF_UDF16">
+            <type>ORGUDF_UDF 16</type>
+            <dataName id="OrgValue16_1" random="true" suffix="OrgValue16_1"/>
+            <description random="true" suffix="DOrgValue16_1"/>
+            <status>enabled</status>
+        </udfValue>
+
+        <udfValue id="AddValue2ToORGUDF_UDF16">
+            <type>ORGUDF_UDF 16</type>
+            <dataName id="OrgValue16_2" random="true" suffix="OrgValue16_2"/>
+            <description random="true" suffix="DOrgValue16_2"/>
+            <status>enabled</status>
+        </udfValue>
+
+        <udfValue id="AddValue3ToORGUDF_UDF16">
+            <type>ORGUDF_UDF 16</type>
+            <dataName id="OrgValue16_3" random="true" suffix="OrgValue16_3"/>
+            <description random="true" suffix="DOrgValue16_3"/>
+            <status>enabled</status>
+        </udfValue>
+
+        <udfValue id="AddValue1ToSECUDF_UDF1">
+            <type>SECUDF_UDF 1</type>
+            <dataName id="SECUDF_UDF1_1" random="true" suffix="SECUDF_UDF1_1"/>
+            <description random="true" suffix="DSECUDF_UDF1_1"/>
+            <status>enabled</status>
+        </udfValue>
+
+        <udfValue id="AddValue2ToSECUDF_UDF1">
+            <type>SECUDF_UDF 1</type>
+            <dataName id="SECUDF_UDF1_2" random="true" suffix="SECUDF_UDF1_2"/>
+            <description random="true" suffix="DSECUDF_UDF1_2"/>
+            <status>enabled</status>
+        </udfValue>
+
+        <udfValue id="AddValue3ToSECUDF_UDF1">
+            <type>SECUDF_UDF 1</type>
+            <dataName id="SECUDF_UDF1_3" random="true" suffix="SECUDF_UDF1_3"/>
+            <description random="true" suffix="DSECUDF_UDF1_3"/>
+            <status>enabled</status>
+        </udfValue>
+
+        <udfValue id="AddValue1ToSECUDF_UDF16">
+            <type>SECUDF_UDF 16</type>
+            <dataName id="SECUDF_UDF16_1" random="true" suffix="SECUDF_UDF16_1"/>
+            <description random="true" suffix="DSECUDF_UDF16_1"/>
+            <status>enabled</status>
+        </udfValue>
+
+        <udfValue id="AddValue2ToSECUDF_UDF16">
+            <type>SECUDF_UDF16</type>
+            <dataName id="SECUDF_UDF16_2" random="true" suffix="SECUDF_UDF16_2"/>
+            <description random="true" suffix="DSECUDF_UDF16_2"/>
+            <status>enabled</status>
+        </udfValue>
+
+        <udfValue id="AddValue3ToSECUDF_UDF16">
+            <type>SECUDF_UDF 16</type>
+            <dataName id="SECUDF_UDF16_3" random="true" suffix="SECUDF_UDF16_3"/>
+            <description random="true" suffix="DSECUDF_UDF16_3"/>
+            <status>enabled</status>
+        </udfValue>
+
+        <udfValue id="AddValue1ToAGRUDF_UDF1">
+            <type>AGRUDF_UDF 1</type>
+            <dataName id="AGRUDF_UDF1_1" random="true" suffix="AGRUDF_UDF1_1"/>
+            <description random="true" suffix="DAGRUDF_UDF1_1"/>
+            <status>enabled</status>
+        </udfValue>
+
+        <udfValue id="AddValue2ToAGRUDF_UDF1">
+            <type>AGRUDF_UDF 1</type>
+            <dataName id="AGRUDF_UDF1_2" random="true" suffix="AGRUDF_UDF1_2"/>
+            <description random="true" suffix="DAGRUDF_UDF1_2"/>
+            <status>enabled</status>
+        </udfValue>
+
+        <instrument id="SmokeUDFInstr001">
+            <assetClass>qtp_bond</assetClass>
+            <assetType>qtp_bond_usd</assetType>
+            <instrumentId>
+                <primary>true</primary>
+                <type>CUSIP</type>
+                <value id="SmokeInstr001" random="true"/>
+            </instrumentId>
+            <market>SMOKE1</market>
+            <description>SmokeTestSecurity</description>
+            <issuer>
+                <filter>Calibration</filter>
+                <linkText>Calibration</linkText>
+            </issuer>
+            <maturityDate>T+90</maturityDate>
+            <currencyofDenomination>GBP</currencyofDenomination>
+            <priceSource>
+                <priceSourceName>Default</priceSourceName>
+                <dirtyPrice>100</dirtyPrice>
+                <lastPriceChange>T</lastPriceChange>
+                <!--<priceLevel>Bid</priceLevel>-->
+                <priceDate>T</priceDate>
+            </priceSource>
+            <couponRate>100</couponRate>
+            <manuallyOverrideNextCouponDate>true</manuallyOverrideNextCouponDate>
+            <nextCouponDate>t-10</nextCouponDate>
+            <manuallyOverrideLastCouponDate>true</manuallyOverrideLastCouponDate>
+            <lastCouponDate>t-10</lastCouponDate>
+            <recordDate>t-10</recordDate>
+            <issueDate>T</issueDate>
+            <additionalField>
+                <fieldName>UDF 1</fieldName>
+                <value>SecurityValue1_1</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 16</fieldName>
+                <value>10</value>
+            </additionalField>
+            <!--<securityStatus>Approved</securityStatus>-->
+        </instrument>
+
+        <securitySearch id="SmokeUDFInstr001Search">
+            <instrument>
+                <type>Starting with</type>
+                <filter ref="SmokeInstr001"/>
+                <linkText ref="SmokeInstr001"/>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="SmokeUDFInstr001SearchResult">
+            <instrument ref="SmokeInstr001"/>
+        </securitySearchResult>
+
+        <instrument id="SmokeUDFInstr002">
+            <assetClass>qtp_bond</assetClass>
+            <assetType>qtp_bond_usd</assetType>
+            <instrumentId>
+                <primary>true</primary>
+                <type>CUSIP</type>
+                <value ref="SmokeInstr001"/>
+            </instrumentId>
+            <market>SMOKE2</market>
+            <description>SmokeTestSecurity</description>
+            <issuer>
+                <filter>Calibration</filter>
+                <linkText>Calibration</linkText>
+            </issuer>
+            <maturityDate>T+90</maturityDate>
+            <currencyofDenomination>GBP</currencyofDenomination>
+            <priceSource>
+                <priceSourceName>Default</priceSourceName>
+                <dirtyPrice>100</dirtyPrice>
+                <lastPriceChange>T</lastPriceChange>
+                <!--<priceLevel>Bid</priceLevel>-->
+                <priceDate>T</priceDate>
+            </priceSource>
+            <couponRate>100</couponRate>
+            <manuallyOverrideNextCouponDate>true</manuallyOverrideNextCouponDate>
+            <nextCouponDate>t-10</nextCouponDate>
+            <manuallyOverrideLastCouponDate>true</manuallyOverrideLastCouponDate>
+            <lastCouponDate>t-10</lastCouponDate>
+            <recordDate>t-10</recordDate>
+            <issueDate>T</issueDate>
+            <additionalField>
+                <fieldName>UDF 1</fieldName>
+                <value>SecurityValue1_2</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 16</fieldName>
+                <value>20</value>
+            </additionalField>
+            <!--<securityStatus>Approved</securityStatus>-->
+        </instrument>
+
+        <securitySearch id="SmokeUDFInstr002Search">
+            <instrument>
+                <type>Starting with</type>
+                <filter ref="SmokeInstr002"/>
+                <linkText ref="SmokeInstr002"/>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="SmokeUDFInstr002SearchResult">
+            <instrument ref="SmokeInstr002"/>
+        </securitySearchResult>
+
+        <feedAssetPricing id="UDFfeedassetpricings001">
+            <DRIF>12/07/2016</DRIF>
+            <EXTISIN ref="SmokeInstr001"/>
+            <MARKET>SMOKE1</MARKET>
+            <EV_PRICE>100</EV_PRICE>
+            <ACC_DDAT>1</ACC_DDAT>
+            <INFLAT_RATIO>1</INFLAT_RATIO>
+        </feedAssetPricing>
+
+        <feedAssetPricing id="UDFfeedassetpricings002">
+            <DRIF>13/07/2016</DRIF>
+            <EXTISIN ref="SmokeInstr001"/>
+            <MARKET>SMOKE1</MARKET>
+            <EV_PRICE>200</EV_PRICE>
+            <ACC_DDAT>1</ACC_DDAT>
+            <INFLAT_RATIO>1</INFLAT_RATIO>
+        </feedAssetPricing>
+
+        <feedAssetPricing id="UDFfeedassetpricings003">
+            <DRIF>14/07/2016</DRIF>
+            <EXTISIN ref="SmokeInstr001"/>
+            <MARKET>SMOKE1</MARKET>
+            <EV_PRICE>300</EV_PRICE>
+            <ACC_DDAT>1</ACC_DDAT>
+            <INFLAT_RATIO>1</INFLAT_RATIO>
+        </feedAssetPricing>
+
+        <feedFxRate id="UDFfeedfxrate001">
+            <fxRate>0.5</fxRate>
+            <fxRateOffer>0.5</fxRateOffer>
+            <currency>GBP</currency>
+            <fxRateSet ref="fxRateSet.default.name"/>
+            <rateDate>12-Jul-2016</rateDate>
+        </feedFxRate>
+
+        <feedFxRate id="UDFfeedfxrate002">
+            <fxRate>0.6</fxRate>
+            <fxRateOffer>0.6</fxRateOffer>
+            <currency>GBP</currency>
+            <fxRateSet ref="fxRateSet.default.name"/>
+            <rateDate>13-Jul-2016</rateDate>
+        </feedFxRate>
+
+        <feedFxRate id="UDFfeedfxrate003">
+            <fxRate>0.7</fxRate>
+            <fxRateOffer>0.7</fxRateOffer>
+            <currency>GBP</currency>
+            <fxRateSet ref="fxRateSet.default.name"/>
+            <rateDate>14-Jul-2016</rateDate>
+        </feedFxRate>
+
+        <interestRate id="UDFaddinterestrate001">
+            <interestRateName id="UDFinterestrate001" random="true" suffix="SmokeInterestRate"/>
+            <description>SmokeInterestRate</description>
+            <refixFrequency>Daily</refixFrequency>
+            <status>enabled</status>
+            <type>Interest</type>
+        </interestRate>
+
+        <holidayCentre id="UDFsmokeholidaycentres001">
+            <holidayCentreName id="UDFsmokeholidaycentre" random="true" suffinx="smokeholidaycentre"/>
+            <description>UDFsmokeholidaycentreDESC</description>
+            <weekendDay1>Saturday</weekendDay1>
+            <weekendDay2>Sunday</weekendDay2>
+            <status>enabled</status>
+        </holidayCentre>
+
+        <organisation id="SmokeBranchPrincipalForUDF">
+            <longName id="org.bphbu.lname" random="true" prefix="SmokeBranchPrincipalForUDFLong"/>
+            <shortName id="org.bphbu.sname" random="true" prefix="SmokeBranchPrincipalForUDFShort"/>
+            <code id="org.bphbu.code" random="true"/>
+            <role ref="org.role.cr.name"/>
+            <role ref="org.role.bh.name"/>
+            <address>
+                <contact>someone</contact>
+                <address1>somewhere1</address1>
+                <address2>somewhere2</address2>
+                <address3>somewhere3</address3>
+                <address4>somewhere4</address4>
+                <address5>somewhere5</address5>
+                <title>manager</title>
+                <label>label</label>
+                <tel>12345678</tel>
+                <fax>12345678</fax>
+                <email>test@test.com</email>
+                <ftp>ftp://127.0.0.1</ftp>
+                <notes>some notes</notes>
+                <enable>true</enable>
+            </address>
+            <status>Approved</status>
+        </organisation>
+
+        <organisation id="SmokePrincipalForUDF">
+            <longName id="org.phbu.lname" random="true" prefix="SmokePrincipalForUDFLong"/>
+            <shortName id="org.phbu.sname" random="true" prefix="SmokePrincipalForUDFShort"/>
+            <code id="org.phbu.code" random="true"/>
+            <role ref="org.role.cr.name"/>
+            <!--<role ref="org.role.cp.name"/>-->
+            <address>
+                <contact>someone</contact>
+                <address1>somewhere1</address1>
+                <address2>somewhere2</address2>
+                <address3>somewhere3</address3>
+                <address4>somewhere4</address4>
+                <address5>somewhere5</address5>
+                <title>manager</title>
+                <label>label</label>
+                <tel>12345678</tel>
+                <fax>12345678</fax>
+                <email>test@test.com</email>
+                <ftp>ftp://127.0.0.1</ftp>
+                <notes>some notes</notes>
+                <enable>true</enable>
+            </address>
+
+            <relationship>
+                <parent>false</parent>
+                <type>branch</type>
+                <organisationSearch>
+                    <filter ref="org.bphbu.lname"/>
+                    <linkText ref="org.bphbu.lname"/>
+                </organisationSearch>
+            </relationship>
+
+            <relationship>
+                <parent>true</parent>
+                <type>subsidiary</type>
+                <organisationSearch>
+                    <filter>MainOrg</filter>
+                    <linkText>MainOrg</linkText>
+                </organisationSearch>
+            </relationship>
+
+            <status>Approved</status>
+        </organisation>
+
+        <organisationSearch id="SmokePrincipalForUDFSearch">
+            <filter id="org.phbu.sname"/>
+            <linkText id="org.phbu.sname"/>
+        </organisationSearch>
+
+        <organisation id="SmokePrincipalForUDFWithValues">
+            <additionalFields>
+                <UDF1 ref="OrgValue1_1"/>
+                <UDF16 ref="OrgValue16_1"/>
+            </additionalFields>
+            <status>Approved</status>
+        </organisation>
+
+        <organisation id="SmokeBranchCptyForUDF">
+            <longName id="org.bchbu.lname" random="true" prefix="SmokeBranchCptyForUDFLong"/>
+            <shortName id="org.bchbu.sname" random="true" prefix="SmokeBranchCptyForUDFShort"/>
+            <code id="org.bchbu.code" random="true"/>
+            <role ref="org.role.cr.name"/>
+            <role ref="org.role.bh.name"/>
+            <address>
+                <contact>someone</contact>
+                <address1>somewhere1</address1>
+                <address2>somewhere2</address2>
+                <address3>somewhere3</address3>
+                <address4>somewhere4</address4>
+                <address5>somewhere5</address5>
+                <title>manager</title>
+                <label>label</label>
+                <tel>12345678</tel>
+                <fax>12345678</fax>
+                <email>test@test.com</email>
+                <ftp>ftp://127.0.0.1</ftp>
+                <notes>some notes</notes>
+                <enable>true</enable>
+            </address>
+            <status>Approved</status>
+        </organisation>
+
+        <organisation id="SmokeCptyForUDF">
+            <longName id="org.chbu.lname" random="true" prefix="SmokeCptyForUDFLong"/>
+            <shortName id="org.chbu.sname" random="true" prefix="SmokeCptyForUDFShort"/>
+            <code id="org.chbu.code" random="true"/>
+            <role ref="org.role.cr.name"/>
+            <role ref="org.role.cp.name"/>
+            <!--<role ref="org.role.cp.name"/>-->
+            <address>
+                <contact>someone</contact>
+                <address1>somewhere1</address1>
+                <address2>somewhere2</address2>
+                <address3>somewhere3</address3>
+                <address4>somewhere4</address4>
+                <address5>somewhere5</address5>
+                <title>manager</title>
+                <label>label</label>
+                <tel>12345678</tel>
+                <fax>12345678</fax>
+                <email>test@test.com</email>
+                <ftp>ftp://127.0.0.1</ftp>
+                <notes>some notes</notes>
+                <enable>true</enable>
+            </address>
+
+            <relationship>
+                <parent>false</parent>
+                <type>branch</type>
+                <organisationSearch>
+                    <filter ref="org.bchbu.lname"/>
+                    <linkText ref="org.bchbu.lname"/>
+                </organisationSearch>
+            </relationship>
+
+            <relationship>
+                <parent>true</parent>
+                <type>subsidiary</type>
+                <organisationSearch>
+                    <filter>MainOrg</filter>
+                    <linkText>MainOrg</linkText>
+                </organisationSearch>
+            </relationship>
+
+            <status>Approved</status>
+        </organisation>
+
+        <organisationSearch id="SmokeCptyForUDFSearch">
+            <filter id="org.phbu.sname"/>
+            <linkText id="org.phbu.sname"/>
+        </organisationSearch>
+
+        <organisation id="SmokeCptyForUDFWithValues">
+            <additionalFields>
+                <UDF1></UDF1>
+                <UDF16></UDF16>
+            </additionalFields>
+            <status>Approved</status>
+        </organisation>
+
+        <agreement id="SmokeAgreementUDF001">
+            <principal>
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter ref="org.phbu.code"/>
+                <linkText ref="org.phbu.code"/>
+            </principal>
+            <counterparty>
+                <criteria>Containing</criteria>
+                <type>Long Name</type>
+                <filter ref="org.chbu.lname"/>
+                <linkText ref="org.chbu.lname"/>
+            </counterparty>
+            <agreementDescription id="SmokeAgreementUDF001Desc" random="true" suffix="SmokeAgreementUDF001Desc"/>
+            <agreementName id="SmokeAgreementUDF001Name" random="true" suffix="SmokeAgreementUDF001Name"/>
+            <externalId id="SmokeAgreementUDF001ExternalId"  random="true"/>
+            <principalInformation>
+                <partyBranch ref="org.bphbu.sname"/>
+            </principalInformation>
+            <counterpartyInformation>
+                <partyBranch ref="org.bchbu.sname"/>
+            </counterpartyInformation>
+            <agreementDate>T</agreementDate>
+            <valuationDate>T-1</valuationDate>
+            <nettingIAandMtM>Not-Net</nettingIAandMtM>
+            <fxRate ref="fxRateSet.default.name"/>
+            <!--<tsa>true</tsa>-->
+            <!--<tsaRule ref="TSAruleName"/>-->
+            <!--<grossCalc>Net</grossCalc>-->
+            <!--<interestCalc>Net</interestCalc>-->
+            <vmCallFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </vmCallFrequency>
+            <imCallFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </imCallFrequency>
+            <holidayCentre ref="UDFsmokeholidaycentre"/>
+            <product id="pro1">
+                <productName ref="product.test1.name"/>
+            </product>
+            <!--<interest>true</interest>-->
+            <!--<interestCalculationsMethod>Simple</interestCalculationsMethod>-->
+            <!--<calculationRule>First of the Month</calculationRule>-->
+            <!--<payMethod>Physical Payment</payMethod>-->
+            <!--<receiveMethod>Capitalise</receiveMethod>-->
+            <!--<interestSettlementDate>T+2</interestSettlementDate>-->
+            <collateralAssetClass>
+                <collateralAssetClassName>qtp_cash</collateralAssetClassName>
+                <collateralAssetType>
+                    <collateralAssetTypeName>qtp_cash_usd</collateralAssetTypeName>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName>qtp_cash</collateralAssetClassName>
+                <collateralAssetType>
+                    <collateralAssetTypeName>qtp_cash_gbp</collateralAssetTypeName>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName>qtp_bond</collateralAssetClassName>
+                <collateralAssetType>
+                    <collateralAssetTypeName>qtp_bond_usd</collateralAssetTypeName>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName>qtp_equity</collateralAssetClassName>
+                <collateralAssetType>
+                    <collateralAssetTypeName>qtp_equity_usd</collateralAssetTypeName>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <additionalField>
+                <fieldName>UDF 1</fieldName>
+                <value id="AGRUDF_UDF1_1"/>
+            </additionalField>
+            <settlementBucket>
+                <bookingType>VM</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vcr.name"/>
+                    <linkText ref="payInstrBucket.vcr.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>VM</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vrd.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>IM</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.ird.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>IM</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vrd.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>VM Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.pay.name"/>
+                    <linkText ref="payInstrBucket.pay.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>VM Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.rec.name"/>
+                    <linkText ref="payInstrBucket.rec.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>IM Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.pay.name"/>
+                    <linkText ref="payInstrBucket.pay.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>IM Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.rec.name"/>
+                    <linkText ref="payInstrBucket.rec.name"/>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementStatus>Pending</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <statementStatus>Approved</statementStatus>
+            <agreementId id="SmokeAgreementUDF001Id"/>
+        </agreement>
+
+        <agreementSearch id="SearchSmokeAgreementUDF001ByUDF">
+            <additionalField>
+                <udfName>UDF 1</udfName>
+                <type>Exactly matching</type>
+                <filter id="AGRUDF_UDF1_1"/>
+            </additionalField>
+        </agreementSearch>
+
+        <agreementSearchResult id="SearchResultForSmokeAgreementUDF001ByUDF">
+            <agreementId ref="SmokeAgreementUDF001Id"/>
+        </agreementSearchResult>
+
+        <feedTrade id="FeedUDFAgrTrade001">
+            <legal_id ref="SmokeAgreementUDF001ExternalId"/>
+            <system ref="org.feed.system.ltrades.name"/>
+            <product ref="product.test1.name"/>
+            <tradeRef id="tradeRefId001" random="true"/>
+            <mtmValuation>1000000</mtmValuation>
+            <operation>A</operation>
+            <mtmValuationDate>T-2</mtmValuationDate>
+            <mtmValuationLocalSysCcy>GBP</mtmValuationLocalSysCcy>
+            <principalDealLevelUpfront>1</principalDealLevelUpfront>
+            <principalDealLevelAmount>1000</principalDealLevelAmount>
+            <principalDealLevelCurrency>GBP</principalDealLevelCurrency>
+            <principalDealLevelType>Independent Amount</principalDealLevelType>
+        </feedTrade>
+
+        <feedTrade id="FeedUDFAgrTrade001Update1">
+            <!--<legal_id ref="SmokeAgreementUDF001ExternalId"/>-->
+            <legal_id ref="SmokeAgreementUDF001ExternalId"/>
+            <system ref="org.feed.system.ltrades.name"/>
+            <product ref="product.test1.name"/>
+            <tradeRef ref="tradeRefId001"/>
+            <mtmValuation>2000000</mtmValuation>
+            <operation>U</operation>
+            <mtmValuationDate>T-1</mtmValuationDate>
+            <mtmValuationLocalSysCcy>GBP</mtmValuationLocalSysCcy>
+            <principalDealLevelUpfront>2</principalDealLevelUpfront>
+            <principalDealLevelAmount>2000</principalDealLevelAmount>
+            <principalDealLevelCurrency>GBP</principalDealLevelCurrency>
+            <principalDealLevelType>Independent Amount</principalDealLevelType>
+        </feedTrade>
+
+        <feedTrade id="FeedUDFAgrTrade001Update2">
+            <legal_id ref="SmokeAgreementUDF001ExternalId"/>
+            <system ref="org.feed.system.ltrades.name"/>
+            <product ref="product.test1.name"/>
+            <tradeRef ref="tradeRefId001"/>
+            <mtmValuation>3000000</mtmValuation>
+            <operation>U</operation>
+            <mtmValuationDate>T</mtmValuationDate>
+            <mtmValuationLocalSysCcy>GBP</mtmValuationLocalSysCcy>
+            <principalDealLevelUpfront>3</principalDealLevelUpfront>
+            <principalDealLevelAmount>3000</principalDealLevelAmount>
+            <principalDealLevelCurrency>GBP</principalDealLevelCurrency>
+            <principalDealLevelType>Independent Amount</principalDealLevelType>
+        </feedTrade>
+
+        <exposureEventSearch id="EMSearchByPrincipalCounterparty">
+            <principal ref="org.phbu.lname"/>
+            <counterparty ref="org.chbu.lname"/>
+        </exposureEventSearch>
+
+        <exposureEventDetail id="UDFTickVMCallEvent">
+            <agrId ref="SmokeAgreementUDF001Id"/>
+            <action>VM Call</action>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="UDFTickIMCallEvent">
+            <agrId ref="SmokeAgreementUDF001Id"/>
+            <action>IM Call</action>
+        </exposureEventDetail>
+
+        <agreementSearch id="SearchTemp">
+            <systemId ref="SmokeAgreementUDF001Id"/>
+        </agreementSearch>
+
+        <agreementSearchResult id="SearchResultTemp">
+            <agreementId ref="SmokeAgreementUDF001Id"/>
+        </agreementSearchResult>
+
+        <assetBookingSummary id="BondUSDType">
+            <assetType>qtp_bond_usd</assetType>
+        </assetBookingSummary>
+
+        <bookingDetail id="UDFIMCallGroupBooking001">
+            <assetType>qtp_bond_usd</assetType>
+            <instrumentSearch>
+                <instrumentId>
+                    <type>Starting with</type>
+                    <filter ref="SmokeInstr001"/>
+                    <linkText ref="SmokeInstr001"/>
+                </instrumentId>
+                <linkText ref="SmokeInstr001"/>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <movement>Call</movement>
+                    <nominalAmount>5000000</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <save>saveAndComplete</save>
+            <!--<alertHandling>-->
+            <!--<content>[\s\S]*</content>-->
+            <!--<accept>false</accept>-->
+            <!--</alertHandling>-->
+        </bookingDetail>
+
+        <bookingDetail id="UDFVMCallBulkBooking001">
+            <assetType>qtp_cash_gbp</assetType>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <movement>Call</movement>
+                    <nominalAmount>5000000</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <save>save</save>
+            <!--<alertHandling>-->
+            <!--<content>[\s\S]*</content>-->
+            <!--<accept>false</accept>-->
+            <!--</alertHandling>-->
+        </bookingDetail>
+
+    </scenarioData>
+
+</dataBean>

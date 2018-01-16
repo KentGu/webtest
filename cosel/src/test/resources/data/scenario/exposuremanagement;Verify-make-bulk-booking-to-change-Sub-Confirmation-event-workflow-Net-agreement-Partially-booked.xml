@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/exposureManagement.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <!--<instrument id="26527.bond.usd">-->
+            <!--<assetClass>qtp_bond</assetClass>-->
+            <!--<assetType>qtp_bond_usd</assetType>-->
+            <!--<instrumentId>-->
+                <!--<value id="26527.bond.usd">26527_bond_usd</value>-->
+            <!--</instrumentId>-->
+            <!--<couponRate>1</couponRate>-->
+            <!--<description>26527_bond_usd</description>-->
+            <!--<issuer>-->
+                <!--<filter>QTP_Eligible_Issuer4</filter>-->
+                <!--<linkText>QTP_Eligible_Issuer4</linkText>-->
+            <!--</issuer>-->
+            <!--<maturityDate>t+5</maturityDate>-->
+            <!--<recordDate>t+5</recordDate>-->
+            <!--<priceSource>-->
+                <!--<priceSourceName>Default</priceSourceName>-->
+                <!--<dirtyPrice>100</dirtyPrice>-->
+                <!--<lastPriceChange>t</lastPriceChange>-->
+                <!--<priceDate>t</priceDate>-->
+            <!--</priceSource>-->
+            <!--<issueDate>t</issueDate>-->
+        <!--</instrument>-->
+
+        <securitySearch id="26527.bond.usd.1">
+            <matured>All</matured>
+            <instrument>
+                <filter id="26527.bond.usd">26527_bond_usd</filter>
+                <!--<linkText ref="26527.bond.usd"/>-->
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="26527.bond.usd.approve">
+            <instrument ref="26527.bond.usd"/>
+        </securitySearchResult>
+
+        <instrument id="26527.bond.usd.changeMaturityDateAndRecordDate.tPlus5">
+            <maturityDate>t+5</maturityDate>
+            <recordDate>t+5</recordDate>
+        </instrument>
+
+        <!--<instrument id="26527.bond.usd.2">-->
+            <!--<assetClass>qtp_bond</assetClass>-->
+            <!--<assetType>qtp_bond_usd</assetType>-->
+            <!--<instrumentId>-->
+                <!--<value id="26527.bond.usd.2">26527_bond_usd_2</value>-->
+            <!--</instrumentId>-->
+            <!--<description>26527_bond_usd_2</description>-->
+            <!--<couponRate>1</couponRate>-->
+            <!--<issuer>-->
+                <!--<filter>QTP_Eligible_Issuer4</filter>-->
+                <!--<linkText>QTP_Eligible_Issuer4</linkText>-->
+            <!--</issuer>-->
+            <!--<maturityDate>t+5</maturityDate>-->
+            <!--<recordDate>t+5</recordDate>-->
+            <!--<priceSource>-->
+                <!--<priceSourceName>Default</priceSourceName>-->
+                <!--<dirtyPrice>100</dirtyPrice>-->
+                <!--<lastPriceChange>t</lastPriceChange>-->
+                <!--<priceDate>t</priceDate>-->
+            <!--</priceSource>-->
+            <!--<issueDate>t</issueDate>-->
+        <!--</instrument>-->
+
+        <securitySearch id="26527.bond.usd.2">
+            <matured>All</matured>
+            <instrument>
+                <filter id="26527.bond.usd.2">26527_bond_usd_2</filter>
+                <linkText ref="26527.bond.usd.2"/>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="26527.bond.usd.2.approve">
+            <instrument ref="26527.bond.usd.2"/>
+        </securitySearchResult>
+
+        <instrument id="26527.bond.usd.2.changeMaturityDateAndRecordDate.tPlus5">
+            <maturityDate>t+5</maturityDate>
+            <recordDate>t+5</recordDate>
+        </instrument>
+
+        <agreement id="agr26527">
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+        <agreement id="agr26527.net">
+            <agreementId id="agrid">2595</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="Source">
+            <column>Source</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="bookedAmountFirstLeg">
+            <column>Booked Amount First Leg</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="bookedAmountSecondLeg">
+            <column>Booked Amount Second Leg</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="substitutionConfirmed.bond.usd.1.sourceSystem">
+            <element ref="26527.bond.usd"/>
+            <action>Substitution Confirmation</action>
+            <source>System</source>
+            <eventId id="substitutionConfirmed.bond.usd.1.event"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="substitutionConfirmed.bond.usd.2.sourceSystem">
+            <element ref="26527.bond.usd.2"/>
+            <action>Substitution Confirmation</action>
+            <source>System</source>
+            <eventId id="substitutionConfirmed.bond.usd.2.event"/>
+        </exposureEventDetail>
+
+        <bookingDetail id="26527.bond.usd.return">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <instrumentId disable="true" ref="26527.bond.usd"/>
+                    <value>-4,000,000.00</value>
+                    <movement>Return</movement>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="26527.bond.usd.call">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <bookingNumber>2.2</bookingNumber>
+                    <instrumentId></instrumentId>
+                    <movement>Call</movement>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="26527.bond.usd.2.return">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <instrumentId disable="true" ref="26527.bond.usd.2"/>
+                    <value>-4,000,000.00</value>
+                    <movement>Return</movement>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="26527.bond.usd.2.call">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <bookingNumber>1.2</bookingNumber>
+                    <instrumentId></instrumentId>
+                    <movement>Call</movement>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="26527.bond.usd.return.3m">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <instrumentId ref="26527.bond.usd"/>
+                    <movement>Return</movement>
+                    <nominalAmount>3m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="26527.bond.usd.call.1m">
+            <instrumentSearch>
+                <instrument>
+                    <filter>CASH-GBP</filter>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <bookingNumber>2.2</bookingNumber>
+                    <instrumentId></instrumentId>
+                    <movement>Call</movement>
+                    <nominalAmount>1m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="26527.bond.usd.2.call.2m">
+            <instrumentSearch>
+                <instrument>
+                    <filter>CASH-USD</filter>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <bookingNumber>1.2</bookingNumber>
+                    <instrumentId></instrumentId>
+                    <movement>Call</movement>
+                    <nominalAmount>2m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <exposureManagementMessage id="warning.message.bond2.leg1Andleg2Difference.1m">
+            <messageDetail>
+                <type>Warning</type>
+                <message>The collateral booking cannot be completed. The net value of items booked for delivery is not equal to receipt. The difference is 1,000,000.00.</message>
+            </messageDetail>
+        </exposureManagementMessage>
+
+        <exposureManagementMessage id="warning.message.bond1.leg1Andleg2Difference.-2m">
+            <messageDetail>
+                <type>Warning</type>
+                <message>The collateral booking cannot be completed. The net value of items booked for delivery is not equal to receipt. The difference is -2,000,000.00.</message>
+            </messageDetail>
+        </exposureManagementMessage>
+
+        <exposureManagementMessage id="warning.message.notional.0">
+            <messageDetail>
+                <type>Warning</type>
+                <message>Booking with 0 notional. Booking will be ignored.</message>
+            </messageDetail>
+        </exposureManagementMessage>
+
+        <exposureManagementMessage id="overrideWarning">
+            <messageDetail>
+                <overrideWarning>true</overrideWarning>
+            </messageDetail>
+            <messageDetail>
+                <overrideWarning>true</overrideWarning>
+            </messageDetail>
+            <messageDetail>
+                <overrideWarning>true</overrideWarning>
+            </messageDetail>
+        </exposureManagementMessage>
+
+        <exposureEventDetail id="substitutionConfirmed.bond.usd.1.PartiallyBooked">
+            <element ref="26527.bond.usd"/>
+            <action>Substitution Confirmation</action>
+            <source>System</source>
+            <callStatus>Partially Booked</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="substitutionConfirmed.bond.usd.2.PartiallyBooked">
+            <element ref="26527.bond.usd.2"/>
+            <action>Substitution Confirmation</action>
+            <source>System</source>
+            <callStatus>Partially Booked</callStatus>
+        </exposureEventDetail>
+
+    </scenarioData>
+</dataBean>

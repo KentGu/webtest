@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <securitySearch id="26493.bond.usd">
+            <matured>All</matured>
+            <instrument>
+                <filter id="26493.bond.usd.id">26493_bond_usd_1</filter>
+                <!--<linkText ref="26527.bond.usd"/>-->
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="26493.bond.usd.approve">
+            <instrument ref="26493.bond.usd.id"/>
+        </securitySearchResult>
+
+        <instrument id="26493.bond.usd.changeRecordDate.tPlus8">
+            <maturityDate>t+1000</maturityDate>
+            <recordDate>t+8</recordDate>
+        </instrument>
+
+        <securitySearch id="26493.equity.usd">
+            <matured>All</matured>
+            <instrument>
+                <filter id="26493.equity.usd.id">26493_equity_usd_1</filter>
+                <!--<linkText ref="29482.equity.usd.id"/>-->
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="26493.equity.usd.approve">
+            <instrument ref="26493.equity.usd.id"/>
+        </securitySearchResult>
+
+        <instrument id="26493.equity.usd.changeRecordDate.tPlus7">
+            <maturityDate>t+1000</maturityDate>
+            <recordDate>t+7</recordDate>
+        </instrument>
+
+        <agreement id="agr26493">
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+        <agreement id=" agr26493.fcm">
+            <agreementId id="agrid">2607</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="reasonForSub">
+            <column>Reason for Sub</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="source">
+            <column>Source</column>
+        </exposureEventDetail>
+
+        <substitutionEventSearch id="agr26493.recall">
+            <agreementId ref="agrid"/>
+        </substitutionEventSearch>
+
+        <substitutionEventDetail id="cash.usd.notional.3.5m.vmNotional.2m.imNotional.1.5m">
+            <instrumentId>CASH-USD</instrumentId>
+            <assetHoldingsNotional>-3,500,000.00</assetHoldingsNotional>
+            <assetHoldingsCashVMNotional>-2,000,000.00</assetHoldingsCashVMNotional>
+            <assetHoldingsIMNotional>-1,500,000.00</assetHoldingsIMNotional>
+        </substitutionEventDetail>
+
+        <substitutionEventDetail id="bond.usd.notional.1.5m.vmNotional.0.7m.imNotional.0.8m">
+            <instrumentId>26493_bond_usd_1,m1</instrumentId>
+            <assetHoldingsNotional>-1,500,000.00</assetHoldingsNotional>
+            <assetHoldingsCashVMNotional>-700,000.00</assetHoldingsCashVMNotional>
+            <assetHoldingsIMNotional>-800,000.00</assetHoldingsIMNotional>
+        </substitutionEventDetail>
+
+        <substitutionEventDetail id="equity.usd.notional.2m.vmNotional.1m.imNotional.1m">
+            <instrumentId>26493_equity_usd_1,m1</instrumentId>
+            <assetHoldingsNotional>-2,000,000.00</assetHoldingsNotional>
+            <assetHoldingsCashVMNotional>-1,000,000.00</assetHoldingsCashVMNotional>
+            <assetHoldingsIMNotional>-1,000,000.00</assetHoldingsIMNotional>
+        </substitutionEventDetail>
+
+        <exposureEventDetail id="subRequest.reasonForSub.AssetTypeNotEligibleagreement.requirement.3.5m.element.cash">
+            <action>Substitution Request</action>
+            <reasonForSub>Asset Type not eligible</reasonForSub>
+            <source>System</source>
+            <callStatus>Pending Review</callStatus>
+            <element>CASH-USD</element>
+            <agreementRequirement>3,500,000.00</agreementRequirement>
+            <eventId id="subRequest.cash.usd"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subRequest.reasonForSub.blank.requirement.0m.element.equity">
+            <action>Substitution Request</action>
+            <reasonForSub></reasonForSub>
+            <source>Manual</source>
+            <callStatus>Pending Review</callStatus>
+            <element>26493_equity_usd_1,m1</element>
+            <agreementRequirement>0.00</agreementRequirement>
+            <eventId id="subRequest.reasonForSub.blank"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subRequest.reasonForSub.blank.requirement.0m.element.cash">
+            <element>CASH-USD</element>
+            <eventId ref="subRequest.reasonForSub.blank"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subRequest.reasonForSub.blank.requirement.0m.element.bond">
+            <element>26493_bond_usd_1,m1</element>
+            <eventId ref="subRequest.reasonForSub.blank"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subRequest.reasonForSub.RecordDateDue.requirement.2m.element.equity">
+            <action>Substitution Request</action>
+            <reasonForSub>Record Date due</reasonForSub>
+            <source>System</source>
+            <callStatus>Pending Review</callStatus>
+            <element>26493_equity_usd_1,m1</element>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <eventId id="subRequest.equity.usd"/>
+        </exposureEventDetail>
+
+
+        <dailyExposureReportFilter id="agr26493.DailyExposureReport.search">
+            <outputFormat>
+                <internalValue>Reason for Substitution</internalValue>
+                <displayOrder>Column 1</displayOrder>
+                <groupLevel>Group Level 1</groupLevel>
+            </outputFormat>
+            <agreementDescription>
+                <filter>26493_1</filter>
+            </agreementDescription>
+            <eventCategory>Substitution</eventCategory>
+        </dailyExposureReportFilter>
+
+        <variable id="repoDailyExporesureReportPath"/>
+
+        <reportValidationRules id="repoDailyExporesureReport.rule">
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Reason for Substitution</fieldName><value></value></field><field><fieldName>Action</fieldName><value>Substitution Request</value></field><field><fieldName>Event Id</fieldName><value ref="subRequest.reasonForSub.blank"/></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Reason for Substitution</fieldName><value>Asset Type not eligible</value></field><field><fieldName>Action</fieldName><value>Substitution Request</value></field><field><fieldName>Event Id</fieldName><value ref="subRequest.cash.usd"/></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Reason for Substitution</fieldName><value>Record Date due</value></field><field><fieldName>Action</fieldName><value>Substitution Request</value></field><field><fieldName>Event Id</fieldName><value ref="subRequest.equity.usd"/></field></reportValidationRule>
+        </reportValidationRules>
+
+        <historicalExposureReportFilter id="agr26493.HistoricalExposure.search">
+            <outputFormat>
+                <internalValue>Reason for Substitution</internalValue>
+                <displayOrder>Column 1</displayOrder>
+                <groupLevel>Group Level 1</groupLevel>
+            </outputFormat>
+            <agreementDescription>
+                <filter>26493_1</filter>
+            </agreementDescription>
+            <recordFrom>t-10000</recordFrom>
+            <timeTo>23:30:00</timeTo>
+            <eventCategory>Substitution</eventCategory>
+        </historicalExposureReportFilter>
+
+        <variable id="HistoricalExporesureReportPath"/>
+
+        <reportValidationRules id="HistoricalExporesureReport.rule">
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Reason for Substitution</fieldName><value></value></field><field><fieldName>Action</fieldName><value>Substitution Request</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Reason for Substitution</fieldName><value>Asset Type not eligible</value></field><field><fieldName>Action</fieldName><value>Substitution Request</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Reason for Substitution</fieldName><value>Record Date due</value></field><field><fieldName>Action</fieldName><value>Substitution Request</value></field></reportValidationRule>
+        </reportValidationRules>
+
+        <ineligibleAssetReportFilter id="agr26493.IneligibleAssetReport.search">
+            <agreementDescription>
+                <filter>26493_1</filter>
+            </agreementDescription>
+        </ineligibleAssetReportFilter>
+
+        <variable id="IneligibleAssetReportPath"/>
+
+        <reportValidationRules id="IneligibleAssetReport.rule">
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Instrument Id</fieldName><value>CASH-USD</value></field><field><fieldName>Eligibility Rule Failed</fieldName><value>Asset Type not eligible</value></field><field><fieldName>Nominal Position</fieldName><value>-2,000,000.00</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Instrument Id</fieldName><value>CASH-USD</value></field><field><fieldName>Eligibility Rule Failed</fieldName><value>Asset Type not eligible</value></field><field><fieldName>Nominal Position</fieldName><value>-1,500,000.00</value></field></reportValidationRule>
+        </reportValidationRules>
+    </scenarioData>
+</dataBean>

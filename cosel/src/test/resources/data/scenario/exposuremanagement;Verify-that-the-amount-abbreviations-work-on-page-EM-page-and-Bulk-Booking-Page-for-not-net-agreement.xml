@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/exposureManagement.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <systemPreference id="enableAmountAbbreviations.false">
+            <applicationPreferences>
+                <enableAmountAbbreviations>false</enableAmountAbbreviations>
+            </applicationPreferences>
+        </systemPreference>
+
+        <agreement id="agr30205.fcm">
+            <agreementId id="agrid">2661</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="im.recall.agreementRequirement.2m.userAgreedAmount.1m">
+            <overwrite>true</overwrite>
+            <userAgreedAmount>1m</userAgreedAmount>
+        </exposureEventDetail>
+
+        <exposureManagementMessage id="UserAgreedAmountNotValid">
+            <messageDetail>
+                <message variation="failLog">Princ:QTPPrincipal/Cpty:QTPCounterparty/Desc:30205_1/AgrId:2661: User Agreed Amount is not a valid number (abbreviations not supported). Princ:QTPPrincipal/Cpty:QTPCounterparty/Desc:30205_1/AgrId:2661: User Agreed Amount is not a valid number (abbreviations not supported). </message>
+            </messageDetail>
+        </exposureManagementMessage>
+
+        <exposureEventDetail id="im.recall.agreementRequirement.2m">
+            <action>IM Recall</action>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.agreementRequirement.2b">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-2,000,000,000.00</agreementRequirement>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.recall.agreementRequirement.2m.userAgreedAmount.1000000">
+            <action>IM Recall</action>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <userAgreedAmount>1,000,000.00</userAgreedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.agreementRequirement.2b.userAgreedAmount.1000000000">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-2,000,000,000.00</agreementRequirement>
+            <userAgreedAmount>1,000,000,000.00</userAgreedAmount>
+        </exposureEventDetail>
+
+        <bookingDetail id="cash.usd.im.recall.1m">
+            <instrumentSearch>
+                <instrument>
+                    <filter ref="cash.usd1.name"/>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>IM Recall</bookingMovement>
+                    <imAmount>1m</imAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="cash.usd.vm.delivery.1b">
+            <instrumentSearch>
+                <instrument>
+                    <filter ref="cash.usd1.name"/>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>VM Delivery(Excess)</bookingMovement>
+                    <vmAmount>1b</vmAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <exposureManagementMessage id="IMNotionalNotValid">
+            <messageDetail>
+                <type>Error</type>
+                <message>IM Notional is not a valid number (abbreviations not supported).</message>
+            </messageDetail>
+        </exposureManagementMessage>
+
+        <exposureManagementMessage id="VMNotionalNotValid">
+            <messageDetail>
+                <type>Error</type>
+                <message>VM Notional is not a valid number (abbreviations not supported).</message>
+            </messageDetail>
+        </exposureManagementMessage>
+
+        <bookingDetail id="cash.usd.im.recall.1k">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>IM Recall</bookingMovement>
+                    <imAmount>1k</imAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="cash.usd.vm.delivery.1a">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>VM Delivery(Excess)</bookingMovement>
+                    <vmAmount>1a</vmAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="cash.usd.im.recall.aaa">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>IM Recall</bookingMovement>
+                    <imAmount>aaa</imAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="cash.usd.vm.delivery.k2">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>VM Delivery(Excess)</bookingMovement>
+                    <vmAmount>k2</vmAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="cash.usd.im.recall.a200.00">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>IM Recall</bookingMovement>
+                    <imAmount>a200.00</imAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="cash.usd.vm.delivery.1m">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>VM Delivery(Excess)</bookingMovement>
+                    <vmAmount>1m</vmAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+
+        <systemPreference id="enableAmountAbbreviations.true">
+            <applicationPreferences>
+                <enableAmountAbbreviations>true</enableAmountAbbreviations>
+            </applicationPreferences>
+        </systemPreference>
+
+        <agreement id="agr30205.fcm.2">
+            <agreementId id="agrid">2662</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="im.recall.agreementRequirement.2m.2">
+            <action>IM Recall</action>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.agreementRequirement.2b.2">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-2,000,000,000.00</agreementRequirement>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.recall.agreementRequirement.2m.2.userAgreedAmount.1000000">
+            <action>IM Recall</action>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <userAgreedAmount>1,000,000.00</userAgreedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.agreementRequirement.2b.2.userAgreedAmount.1000000000">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-2,000,000,000.00</agreementRequirement>
+            <userAgreedAmount>1,000,000,000.00</userAgreedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.recall.agreementRequirement.2m.userAgreedAmount.1a">
+            <overwrite>true</overwrite>
+            <userAgreedAmount>1a</userAgreedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.agreementRequirement.2b.userAgreedAmount.a100">
+            <overwrite>true</overwrite>
+            <userAgreedAmount>a100</userAgreedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.recall.agreementRequirement.2m.userAgreedAmount.2km">
+            <overwrite>true</overwrite>
+            <userAgreedAmount>2km</userAgreedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.agreementRequirement.2b.userAgreedAmount.k2m">
+            <overwrite>true</overwrite>
+            <userAgreedAmount>k2m</userAgreedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.recall.agreementRequirement.2m.userAgreedAmount.k200">
+            <overwrite>true</overwrite>
+            <userAgreedAmount>k200</userAgreedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.agreementRequirement.2b.userAgreedAmount.aaa">
+            <overwrite>true</overwrite>
+            <userAgreedAmount>aaa</userAgreedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.recall.agreementRequirement.2m.userAgreedAmount.1k">
+            <overwrite>true</overwrite>
+            <userAgreedAmount>1k</userAgreedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.agreementRequirement.2b.userAgreedAmount.1a">
+            <overwrite>true</overwrite>
+            <userAgreedAmount>1a</userAgreedAmount>
+        </exposureEventDetail>
+
+
+        <exposureEventDetail id="im.recall.agreementRequirement.2m.userAgreedAmount.1M">
+            <overwrite>true</overwrite>
+            <userAgreedAmount>1M</userAgreedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.agreementRequirement.2b.userAgreedAmount.1b">
+            <overwrite>true</overwrite>
+            <userAgreedAmount>1b</userAgreedAmount>
+        </exposureEventDetail>
+
+        <exposureManagementMessage id="UserAgreedAmountNotValidVMEvent.enableAmountAbbreviations">
+            <messageDetail>
+                <message variation="failLog">Princ:QTPPrincipal/Cpty:QTPCounterparty/Desc:30205_2/AgrId:2662: User Agreed Amount is not a valid number. </message>
+            </messageDetail>
+        </exposureManagementMessage>
+
+        <exposureManagementMessage id="UserAgreedAmountNotValid.enableAmountAbbreviations">
+            <messageDetail>
+                <message variation="failLog">Princ:QTPPrincipal/Cpty:QTPCounterparty/Desc:30205_2/AgrId:2662: User Agreed Amount is not a valid number. Princ:QTPPrincipal/Cpty:QTPCounterparty/Desc:30205_2/AgrId:2662: User Agreed Amount is not a valid number. </message>
+            </messageDetail>
+        </exposureManagementMessage>
+
+        <bookingDetail id="cash.usd.im.recall.1a">
+            <instrumentSearch>
+                <instrument>
+                    <filter ref="cash.usd1.name"/>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>IM Recall</bookingMovement>
+                    <imAmount>1a</imAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="cash.usd.vm.delivery.k200">
+            <instrumentSearch>
+                <instrument>
+                    <filter ref="cash.usd1.name"/>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>VM Delivery(Excess)</bookingMovement>
+                    <vmAmount>k200</vmAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <exposureManagementMessage id="IMNotionalNotValid.enableAmountAbbreviations">
+            <messageDetail>
+                <type>Error</type>
+                <message>IM Notional is not a valid number.</message>
+            </messageDetail>
+        </exposureManagementMessage>
+
+        <exposureManagementMessage id="VMNotionalNotValid.enableAmountAbbreviations">
+            <messageDetail>
+                <type>Error</type>
+                <message>VM Notional is not a valid number.</message>
+            </messageDetail>
+        </exposureManagementMessage>
+
+        <bookingDetail id="cash.usd.im.recall.200a">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>IM Recall</bookingMovement>
+                    <imAmount>200a</imAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="cash.usd.vm.delivery.200k">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>VM Delivery(Excess)</bookingMovement>
+                    <vmAmount>200k</vmAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="cash.usd.im.recall.1m.enableAmountAbbreviations">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>IM Recall</bookingMovement>
+                    <imAmount>1m</imAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="cash.usd.vm.delivery.1b.enableAmountAbbreviations">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>VM Delivery(Excess)</bookingMovement>
+                    <vmAmount>1b</vmAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <exposureManagementMessage id="NoErrorOrWarning">
+            <messageDetail>
+                <message>No errors or warnings found</message>
+            </messageDetail>
+        </exposureManagementMessage>
+
+        <bookingDetail id="notional.1000000">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>IM Recall</bookingMovement>
+                    <nominalAmount>1,000,000.00</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="notional.1000000000">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>VM Delivery(Excess)</bookingMovement>
+                    <nominalAmount>1,000,000,000.00</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+    </scenarioData>
+</dataBean>

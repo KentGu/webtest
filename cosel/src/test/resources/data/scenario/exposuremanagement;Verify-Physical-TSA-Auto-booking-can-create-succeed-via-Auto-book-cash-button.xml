@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/exposureManagement.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <agreement id="agr24070.fcm">
+            <agreementId id="agrid">2586</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="im.noCall">
+            <action>IM ITM No Calls</action>
+            <agreementRequirement>0.00</agreementRequirement>
+            <callStatus>No Call Required</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.agreementRequirement.1001000">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-1,001,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="tsa.delivery.agreementRequirement.2000">
+            <action>Cashflow Delivery(Excess)</action>
+            <agreementRequirement>-2,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <eventId id="tsa.delivery.event"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="tsa.delivery.agreementRequirement.2000.MarginRequestConfirmed">
+            <action>Cashflow Delivery(Excess)</action>
+            <agreementRequirement>-2,000.00</agreementRequirement>
+            <callStatus>Margin Request Confirmed</callStatus>
+        </exposureEventDetail>
+
+        <exposureManagementMessage id="tsa.autoBookingFailDueToCounterpartyAmountNotSet">
+            <messageSummary>
+                <unsuccessfulAccount>1</unsuccessfulAccount>
+            </messageSummary>
+            <messageDetail>
+                <level>error</level>
+                <source>Auto Book</source>
+                <message>Princ:QTPPrincipal/Cpty:QTPCounterparty/Desc:24070_1/AgrId:2586/Event:Delivery Physical Cashflow Auto booking not created as counterparty amount not set</message>
+            </messageDetail>
+        </exposureManagementMessage>
+
+        <exposureEventDetail id="tsa.delivery.agreementRequirement.2000.MarginRequestConfirmed.counterPartyAmout.-3k">
+            <counterpartyAmount>-3k</counterpartyAmount>
+        </exposureEventDetail>
+
+        <exposureManagementMessage id="tsa.autoBookingSuccess">
+            <messageSummary>
+                <successfulAccount>1</successfulAccount>
+            </messageSummary>
+            <messageDetail>
+                <level>info</level>
+                <source>Auto Book</source>
+                <message>Princ:QTPPrincipal/Cpty:QTPCounterparty/Desc:24070_1/AgrId:2586/Event:Delivery CASH-USD Physical Cashflow Pay -2,000.00 auto booking created.</message>
+            </messageDetail>
+        </exposureManagementMessage>
+
+        <assetBookingSummary id="asset.type.CASH.USD">
+            <assetType ref="cash.usd1.name"/>
+        </assetBookingSummary>
+
+        <cashMovementSummary id="tsa.pay.pending.autobook.2000">
+            <Amount>-2,000.00</Amount>
+            <movement>Pay</movement>
+            <bookingType>Cashflow</bookingType>
+            <status>Pending</status>
+            <bookingSource>Auto Book</bookingSource>
+            <creationDate>t</creationDate>
+            <settlementDate>t</settlementDate>
+        </cashMovementSummary>
+
+        <cashMovementDetail id="tsa.pay.pending.autobook.2000.checkAssetNoteAndlinkedEvent">
+            <bookingType>Cashflow</bookingType>
+            <amount>-2,000.00 </amount>
+            <movementType>Pay</movementType>
+            <settlementDate>t</settlementDate>
+            <bookingSource>Auto Book</bookingSource>
+            <event>Cashflow Delivery(Excess)</event>
+            <eventId ref="tsa.delivery.event"/>
+            <assetNotes1>a</assetNotes1>
+            <assetNotes2>b</assetNotes2>
+            <assetNotes3>c</assetNotes3>
+        </cashMovementDetail>
+
+        <agreement id="agr24070">
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+        <exposureEventDetail id="vm.delivery.agreementRequirement.1001000.MarginRequestConfirmed.counterPartyAmout.-1001000">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-1,001,000.00</agreementRequirement>
+            <callStatus>Margin Request Confirmed</callStatus>
+            <counterpartyAmount>-1001000</counterpartyAmount>
+        </exposureEventDetail>
+
+
+        <exposureManagementMessage id="vm.delivery.autoBookingSuccess">
+            <messageSummary>
+                <successfulAccount>1</successfulAccount>
+            </messageSummary>
+            <messageDetail>
+                <level>info</level>
+                <source>Auto Book</source>
+                <message>Princ:QTPPrincipal/Cpty:QTPCounterparty/Desc:24070_1/AgrId:2586/Event:Delivery CASH-GBP Capitalised Cashflow Capitalise pay 563.70 auto booking created.</message>
+            </messageDetail>
+        </exposureManagementMessage>
+
+        <assetBookingSummary id="asset.type.CASH.GBP">
+            <assetType>CASH-GBP</assetType>
+        </assetBookingSummary>
+
+
+        <cashMovementSummary id="CapitaliseTsa.pay.pending.autobook.563.70">
+            <Amount>563.70</Amount>
+            <movement>Capitalise pay</movement>
+            <bookingType>Cashflow</bookingType>
+            <status>Pending Settlement</status>
+            <bookingSource>Auto Book</bookingSource>
+            <creationDate>t</creationDate>
+            <settlementDate>t</settlementDate>
+        </cashMovementSummary>
+
+        <cashMovementDetail id="CapitaliseTsa.pay.pending.autobook.563.70.checklinkedEventNull">
+            <bookingType>Cashflow</bookingType>
+            <amount>563.70 </amount>
+            <movementType>Capitalise pay</movementType>
+            <settlementDate>t</settlementDate>
+            <bookingSource>Auto Book</bookingSource>
+            <event></event>
+            <eventId></eventId>
+        </cashMovementDetail>
+
+
+    </scenarioData>
+</dataBean>

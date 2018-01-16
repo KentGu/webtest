@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/taskScheduler.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <organisationStaticData id="organisation.udf">
+            <type>User Defined Organisation Fields</type>
+            <dataName id="organisation.udf.name">UDF 30</dataName>
+            <description ref="organisation.udf.name"/>
+        </organisationStaticData>
+
+        <organisationStaticData id="organisation.udf.disable">
+            <status>disabled</status>
+        </organisationStaticData>
+
+        <feedOrganisation id="feed.organisation.udf">
+            <orgHeader>
+                <orgCode id="feed.organisation.udf.code">T16846OrganisationCode</orgCode>
+                <longName id="feed.organisation.udf.lname">T16846OrganisationLongName</longName>
+                <shortName id="feed.organisation.udf.sname">T16846OrganisationShortName</shortName>
+            </orgHeader>
+            <orgRole id="feed.organisation.udf.role">Branch</orgRole>
+            <region id="feed.organisation.udf.region">ALL</region>
+            <udf>
+                <udfName ref="organisation.udf.name"/>
+                <udfValue ref="organisation.udf.name"/>
+            </udf>
+        </feedOrganisation>
+
+        <feedStatus id="feed.organisation.udf.status">
+            <status>Successful</status>
+            <valuationFile ref="feed.organisation.udf.result.file"/>
+            <description>Organisation</description>
+            <successfulFeed apply="true">
+                <total>1</total>
+                <entry>
+                    <content>UDF field [UDF 30] or UDF 30 is not enabled</content>
+                </entry>
+            </successfulFeed>
+        </feedStatus>
+
+        <organisationSearch id="feed.organisation.udf.search">
+            <criteria>Exactly matching</criteria>
+            <type>Short Name</type>
+            <filter ref="feed.organisation.udf.sname"/>
+            <linkText ref="feed.organisation.udf.sname"/>
+        </organisationSearch>
+
+        <organisation id="check.feed.organisation.udf">
+            <shortName ref="feed.organisation.udf.sname"/>
+            <longName ref="feed.organisation.udf.lname"/>
+            <code ref="feed.organisation.udf.code"/>
+            <role ref="feed.organisation.udf.role"/>
+            <region ref="feed.organisation.udf.region"/>
+        </organisation>
+
+        <taskSchedulerDetail id="task.feed.organisation">
+            <type>Task Manager</type>
+            <taskName>Import Organisations 1</taskName>
+            <additionalInfo id="task.feed.agreement.server.path">/home/ec2-user/Feed/FeedOrganisation</additionalInfo>
+        </taskSchedulerDetail>
+
+        <taskSchedulerMessage id="task.feed.organisation.message">
+            <message>(Organisation: Imported 0 Organisations from file:(\S+).xml - Modified 1 entries.|Organisation: Imported 1 Organisations from file:(\S+).xml)</message>
+        </taskSchedulerMessage>
+
+        <variable id="file.path"/>
+    </scenarioData>
+</dataBean>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/agreement.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+
+		<loginCredential id="privilege.user">
+			<username>Mukta</username>
+			<password>Password</password>
+		</loginCredential>
+
+		<privileges id ="all.privilege.available4">
+
+			<privilegeType>Collateral</privilegeType>
+			<rolePrivilege>
+				<roleName>Test_01</roleName>
+				<selectAll>true</selectAll>
+			</rolePrivilege>
+		</privileges>
+
+		<agreementSearch id="agr.no.prv.37713">
+			<description>Testing</description>
+		</agreementSearch>
+
+		<agreement id="agr.no.prv.37713">
+			<agreementId>37713</agreementId>
+		</agreement>
+
+
+
+		<agreementSummary id="agr.partyCounterpartyTab.enable">
+			<partyAndCounterpartyDetails apply="true"></partyAndCounterpartyDetails>
+		</agreementSummary>
+
+		<agreementSummary id="agr.documentationTab.enable">
+			<documentationDetails apply="true"></documentationDetails>
+		</agreementSummary>
+
+		<agreementSummary id="agr.callScheduleTab.enable">
+			<valuationFrequencyAndCallScheduleDetails apply="true"></valuationFrequencyAndCallScheduleDetails>
+		</agreementSummary>
+
+		<agreementSummary id="agr.productsTab.enable">
+			<collateralisedPortfolioDetails apply="true"></collateralisedPortfolioDetails>
+		</agreementSummary>
+
+		<agreementSummary id="agr.CollateralTab.enable">
+			<collateralRules apply="true"></collateralRules>
+		</agreementSummary>
+
+		<agreementSummary id="agr.fixedTriggerTab.enable">
+			<collateralThresholdAndMinimumTransferDetails apply="true"></collateralThresholdAndMinimumTransferDetails>
+		</agreementSummary>
+
+		<agreementSummary id="agr.ruleTriggerTab.enable">
+		</agreementSummary>
+
+		<agreementSummary id="agr.additionalFieldsTab.enable">
+			<userDefinedFieldsDetails apply="true"></userDefinedFieldsDetails>
+		</agreementSummary>
+
+		<agreementSummary id="agr.settlementTab.enable">
+			<settlementInformationConfiguration apply="true"></settlementInformationConfiguration>
+		</agreementSummary>
+
+		<agreementSummary id="agr.reportingTab.disable">
+			<reportingDetails apply="false"></reportingDetails>
+		</agreementSummary>
+
+		<agreementSummary id="agr.messagingTab.disable">
+			<messagingDetails apply="false"></messagingDetails>
+		</agreementSummary>
+
+		<privileges id="collateral.agreement.ops.tab.messaging.edit.unavailable">
+			<privilegeType>Collateral</privilegeType>
+			<rolePrivilege>
+				<privilege>
+					<privilegeName>collateral.agreement.ops.tab.messaging.edit</privilegeName>
+					<selected>false</selected>
+				</privilege>
+				<roleName>Test_01</roleName>
+			</rolePrivilege>
+		</privileges>
+
+		<privileges id="collateral.agreement.ops.tab.reportingcontrol.edit.unavailable">
+			<privilegeType>Collateral</privilegeType>
+			<rolePrivilege>
+				<privilege>
+					<privilegeName>collateral.agreement.ops.tab.reportingcontrol.edit</privilegeName>
+					<selected>false</selected>
+				</privilege>
+			<roleName>Test_01</roleName>
+			</rolePrivilege>
+		</privileges>
+
+
+
+
+	</scenarioData>
+</dataBean>

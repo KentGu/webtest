@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/exposureManagement.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <collateralPreference id="setWorkflowDisbute.WorkflowApplyFourEyes">
+            <collateralRules>
+                <workflowDispute>true</workflowDispute>
+                <workflowFourEyes>true</workflowFourEyes>
+            </collateralRules>
+        </collateralPreference>
+
+        <agreement id="agr27785.multimodel.notnet">
+            <agreementId id="agrid">2609</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="model">
+            <column>Model</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.top">
+            <action>VM Delivery</action>
+            <agreementRequirement>-3,110,759.37</agreementRequirement>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.net.agreementRequirement.3110759.37">
+            <action>VM Delivery</action>
+            <callStatus>Pending Review</callStatus>
+            <agreementRequirement>-3,110,759.37</agreementRequirement>
+            <counterpartyAmount>0.00</counterpartyAmount>
+            <disputeValue>0.00</disputeValue>
+            <model></model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.return.m2.agreementRequirement.0.5m">
+            <action>VM Return</action>
+            <callStatus>Pending Review</callStatus>
+            <agreementRequirement>-500,000.00</agreementRequirement>
+            <counterpartyAmount>0.00</counterpartyAmount>
+            <disputeValue>0.00</disputeValue>
+            <model>m2</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.return.m1.agreementRequirement.1m">
+            <action>VM Return</action>
+            <callStatus>Pending Review</callStatus>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <counterpartyAmount>0.00</counterpartyAmount>
+            <disputeValue>0.00</disputeValue>
+            <model>m1</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.m2.agreementRequirement.0.3m">
+            <action>VM Delivery</action>
+            <callStatus>Pending Review</callStatus>
+            <agreementRequirement>-300,000.00</agreementRequirement>
+            <counterpartyAmount>0.00</counterpartyAmount>
+            <disputeValue>0.00</disputeValue>
+            <model>m2</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.m1.agreementRequirement.1m">
+            <action>VM Delivery</action>
+            <callStatus>Pending Review</callStatus>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <counterpartyAmount>0.00</counterpartyAmount>
+            <disputeValue>0.00</disputeValue>
+            <model>m1</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.return.m2.agreementRequirement.0.5m.counterpartyAmount.-0.55m">
+            <counterpartyAmount>-0.55m</counterpartyAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.return.m1.agreementRequirement.1m.counterpartyAmount.-1m">
+            <counterpartyAmount>-1m</counterpartyAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.m2.agreementRequirement.0.3m.counterpartyAmount.-0.3m">
+            <counterpartyAmount>-0.3m</counterpartyAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.m1.agreementRequirement.1m.counterpartyAmount.-1.1m">
+            <counterpartyAmount>-1.1m</counterpartyAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.return.m2.agreementRequirement.0.5m.afterChangeCounterpartyAmount">
+            <action>VM Return</action>
+            <callStatus>Pending Review</callStatus>
+            <agreementRequirement>-500,000.00</agreementRequirement>
+            <model>m2</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.return.m1.agreementRequirement.1m.afterChangeCounterpartyAmount">
+            <action>VM Return</action>
+            <callStatus>Pending Review</callStatus>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <model>m1</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.m2.agreementRequirement.0.3m.afterChangeCounterpartyAmount">
+            <action>VM Delivery</action>
+            <callStatus>Pending Review</callStatus>
+            <agreementRequirement>-300,000.00</agreementRequirement>
+            <model>m2</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.m1.agreementRequirement.1m.afterChangeCounterpartyAmount">
+            <action>VM Delivery</action>
+            <callStatus>Pending Review</callStatus>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <model>m1</model>
+        </exposureEventDetail>
+
+        <bookingDetail id="vm.return.m2.0.5m">
+            <instrumentSearch>
+                <instrument>
+                    <filter>CASH-EUR</filter>
+                    <!--<linkText>CASH-EUR</linkText>-->
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>VM Return</bookingMovement>
+                    <model>m2</model>
+                    <vmAmount>0.5m</vmAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="vm.return.m1.0.5m">
+            <instrumentSearch>
+                <instrument>
+                    <filter>CASH-USD</filter>
+                    <!--<linkText>CASH-USD</linkText>-->
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>VM Return</bookingMovement>
+                    <model>m1</model>
+                    <vmAmount>1m</vmAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <exposureEventDetail id="vm.delivery.net.disputeValue.169422.46">
+            <action>VM Delivery</action>
+            <callStatus>Pending Review</callStatus>
+            <agreementRequirement>-3,110,759.37</agreementRequirement>
+            <counterpartyAmount>-3,280,181.83</counterpartyAmount>
+            <disputeValue>-169,422.46</disputeValue>
+            <wrkStatus>Approved</wrkStatus>
+            <model></model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.return.m2.disputeValue.50k">
+            <action>VM Return</action>
+            <callStatus>Pending Review</callStatus>
+            <agreementRequirement>-500,000.00</agreementRequirement>
+            <counterpartyAmount>-550,000.00</counterpartyAmount>
+            <disputeValue>-50,000.00</disputeValue>
+            <model>m2</model>
+            <wrkStatus>Amended-Dispute</wrkStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.return.m1.disputeValue.100k">
+            <action>VM Return</action>
+            <callStatus>Pending Review</callStatus>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <counterpartyAmount>-1,000,000.00</counterpartyAmount>
+            <disputeValue>0.00</disputeValue>
+            <model>m1</model>
+            <wrkStatus>Amended-Dispute</wrkStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.m2.disputeValue.50k">
+            <action>VM Delivery</action>
+            <callStatus>Pending Review</callStatus>
+            <agreementRequirement>-300,000.00</agreementRequirement>
+            <counterpartyAmount>-300,000.00</counterpartyAmount>
+            <disputeValue>0.00</disputeValue>
+            <model>m2</model>
+            <wrkStatus>Amended-Dispute</wrkStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.m1.disputeValue.100k">
+            <action>VM Delivery</action>
+            <callStatus>Pending Review</callStatus>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <counterpartyAmount>-1,100,000.00</counterpartyAmount>
+            <disputeValue>-100,000.00</disputeValue>
+            <model>m1</model>
+            <wrkStatus>Amended-Dispute</wrkStatus>
+        </exposureEventDetail>
+
+        <approvalManagerWorkflowSearch id="agr27785">
+            <systemId ref="agrid"/>
+        </approvalManagerWorkflowSearch>
+
+        <approvalManagerWorkflowSearchResult id="searchResult.delivery.0.3m">
+            <action>VM Delivery</action>
+            <userAgreedAmount>300,000.00</userAgreedAmount>
+            <workflowStatus>Amended-Dispute</workflowStatus>
+        </approvalManagerWorkflowSearchResult>
+
+        <approvalManagerWorkflowSearchResult  id="searchResult.return.0.5m">
+            <action>VM Return</action>
+            <userAgreedAmount>500,000.00</userAgreedAmount>
+            <workflowStatus>Amended-Dispute</workflowStatus>
+        </approvalManagerWorkflowSearchResult>
+
+        <approvalManagerWorkflowSearchResult  id="searchResult.delivery.1m">
+            <userAgreedAmount>1,000,000.00</userAgreedAmount>
+            <action>VM Delivery</action>
+            <workflowStatus>Amended-Dispute</workflowStatus>
+        </approvalManagerWorkflowSearchResult>
+
+        <approvalManagerWorkflowSearchResult  id="searchResult.return.1m">
+            <userAgreedAmount>1,000,000.00</userAgreedAmount>
+            <action>VM Return</action>
+            <workflowStatus>Amended-Dispute</workflowStatus>
+        </approvalManagerWorkflowSearchResult>
+
+        <loginCredential id="loginWithAnotherUser">
+            <username>t27785</username>
+            <password>1</password>
+        </loginCredential>
+
+        <bookingDetail id="vm.delivery.m2.1m">
+            <instrumentSearch>
+                <instrument>
+                    <filter>CASH-EUR</filter>
+                    <!--<linkText>CASH-EUR</linkText>-->
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>VM Delivery</bookingMovement>
+                    <model>m2</model>
+                    <vmAmount>1m</vmAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="vm.delivery.m1.0.3m">
+            <instrumentSearch>
+                <instrument>
+                    <filter>CASH-USD</filter>
+                    <!--<linkText>CASH-USD</linkText>-->
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>VM Delivery</bookingMovement>
+                    <model>m1</model>
+                    <vmAmount>0.3m</vmAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <exposureEventDetail id="vm.return.m2.disputeValue.50k.approved.callStatus.PartialDispute">
+            <action>VM Return</action>
+            <callStatus>Partial Dispute</callStatus>
+            <agreementRequirement>-500,000.00</agreementRequirement>
+            <counterpartyAmount>-550,000.00</counterpartyAmount>
+            <disputeValue>-50,000.00</disputeValue>
+            <model>m2</model>
+            <wrkStatus>Approved</wrkStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.return.m1.disputeValue.100k.approved.callStatus.PartialDispute">
+            <action>VM Return</action>
+            <callStatus>Partial Dispute</callStatus>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <counterpartyAmount>-1,000,000.00</counterpartyAmount>
+            <disputeValue>-100,000.00</disputeValue>
+            <model>m1</model>
+            <wrkStatus>Approved</wrkStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.m2.disputeValue.50k.approved.callStatus.PartialDispute">
+            <action>VM Delivery</action>
+            <callStatus>Partial Dispute</callStatus>
+            <agreementRequirement>-300,000.00</agreementRequirement>
+            <counterpartyAmount>-300,000.00</counterpartyAmount>
+            <disputeValue>-50,000.00</disputeValue>
+            <model>m2</model>
+            <wrkStatus>Approved</wrkStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.m1.disputeValue.100k.approved.callStatus.PartialDispute">
+            <action>VM Delivery</action>
+            <callStatus>Partial Dispute</callStatus>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <counterpartyAmount>-1,100,000.00</counterpartyAmount>
+            <disputeValue>-100,000.00</disputeValue>
+            <model>m1</model>
+            <wrkStatus>Approved</wrkStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.net.disputeValue.169422.46.amendedDispute">
+            <action>VM Delivery</action>
+            <callStatus>Pending Review</callStatus>
+            <agreementRequirement>-3,110,759.37</agreementRequirement>
+            <counterpartyAmount>-3,280,181.83</counterpartyAmount>
+            <disputeValue>-169,422.46</disputeValue>
+            <wrkStatus>Amended-Dispute</wrkStatus>
+            <model></model>
+        </exposureEventDetail>
+
+    </scenarioData>
+</dataBean>

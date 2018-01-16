@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns=""
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+
+		<agreementSearch id="filter.agmt.description">
+			<description><filter>24075_agmt</filter></description>
+		</agreementSearch>
+		<agreementSearchResult id="agreement.description">
+			<description>24075_agmt</description>
+		</agreementSearchResult>
+
+		<multiModelAgreementStatement id="model1">
+			<multimodelAssetHoldingSummary>
+				<modelName>mn_1</modelName>
+			</multimodelAssetHoldingSummary>
+		</multiModelAgreementStatement>
+
+		<multiModelAgreementStatement id="model2">
+			<multimodelAssetHoldingSummary>
+				<modelName>mn_2</modelName>
+			</multimodelAssetHoldingSummary>
+		</multiModelAgreementStatement>
+
+		<agreementStatement id="model1.agreement.statement.info">
+			<assetHoldingsSummary>
+				<tsaBookingVM>86.43</tsaBookingVM>
+				<vmCollateralBalance>-72.02</vmCollateralBalance>
+				<vmCashBalance>-72.02</vmCashBalance>
+				<vmMarketValueOfCash>-72.02</vmMarketValueOfCash>
+			</assetHoldingsSummary>
+			<marginCallCalculation>
+				<fcmReq>
+					<totalSettlementAmountPhysical>2311.93</totalSettlementAmountPhysical>
+					<totalResetToPar>727.43</totalResetToPar>
+					<otherCashAdjustmentsPhysical>770.64</otherCashAdjustmentsPhysical>
+					<bankedCoupon>763.44</bankedCoupon>
+					<pai>50.42</pai>
+					<tsaPassthrough>2311.93</tsaPassthrough>
+					<totalSettlementAmount>4566.25</totalSettlementAmount>
+					<totalInitialCoupon>734.63</totalInitialCoupon>
+					<otherCashAdjustments>3637.15</otherCashAdjustments>
+					<imInterest>57.62</imInterest>
+					<ndfCashflow>64.82</ndfCashflow>
+					<upfrontFee>72.02</upfrontFee>
+					<unsettledUpfrontFee>0.00</unsettledUpfrontFee>
+					<vmNetExcessOrDeficit>4638.27</vmNetExcessOrDeficit>
+					<imNetExcessOrDeficit>0.00</imNetExcessOrDeficit>
+				</fcmReq>
+
+			</marginCallCalculation>
+		</agreementStatement>
+
+
+
+		<agreementStatement id="model2.agreement.statement.info">
+			<assetHoldingsSummary>
+				<tsaBookingVM>0</tsaBookingVM>
+			</assetHoldingsSummary>
+			<marginCallCalculation>
+				<fcmReq>
+					<totalSettlementAmountPhysical>1163.21</totalSettlementAmountPhysical>
+					<totalResetToPar>1.04</totalResetToPar>
+					<otherCashAdjustmentsPhysical>111.03</otherCashAdjustmentsPhysical>
+					<bankedCoupon>6.23</bankedCoupon>
+					<pai>1044.91</pai>
+					<tsaPassthrough>1163.21</tsaPassthrough>
+					<totalSettlementAmount>3656.68</totalSettlementAmount>
+					<totalInitialCoupon>2.08</totalInitialCoupon>
+					<otherCashAdjustments>524.01</otherCashAdjustments>
+					<imInterest>1045.95</imInterest>
+					<ndfCashflow>1046.99</ndfCashflow>
+					<upfrontFee>1037.65</upfrontFee>
+					<unsettledUpfrontFee>10.38</unsettledUpfrontFee>
+					<vmNetExcessOrDeficit>3667.06</vmNetExcessOrDeficit>
+					<imNetExcessOrDeficit>0.00</imNetExcessOrDeficit>
+				</fcmReq>
+
+			</marginCallCalculation>
+		</agreementStatement>
+
+		<multiModelAgreementStatement id="multimodel.agreement.statement.summary">
+			<multimodelAssetHoldingSummary>
+				<modelName>mn_1</modelName>
+				<tsaPhysical>2311.93</tsaPhysical>
+				<tsaCapitalise>4566.25</tsaCapitalise>
+				<vmExcessOrDeficit>4638.27</vmExcessOrDeficit>
+
+			</multimodelAssetHoldingSummary>
+			<multimodelAssetHoldingSummary>
+				<modelName>mn_2</modelName>
+				<tsaPhysical>1163.21</tsaPhysical>
+				<tsaCapitalise>3656.68</tsaCapitalise>
+				<vmExcessOrDeficit>3667.06</vmExcessOrDeficit>
+			</multimodelAssetHoldingSummary>
+			<multimodelAssetHoldingSummary>
+				<baseCurrency>USD</baseCurrency>
+				<tsaPhysical>4331.00</tsaPhysical>
+				<tsaCapitalise>9864.00</tsaCapitalise>
+				<vmExcessOrDeficit>9974.01</vmExcessOrDeficit>
+			</multimodelAssetHoldingSummary>
+		</multiModelAgreementStatement>
+
+		<exposureEventDetail id="vm.top.Event">
+			<callStatus>Pending Review</callStatus>
+			<action>IM Delivery</action>
+			<vmNetED>9,974.01</vmNetED>
+			<model></model>
+		</exposureEventDetail>
+		<exposureEventDetail id="tsa.top.event">
+			<callStatus>Pending Review</callStatus>
+			<action>TSA Call(Deficit)</action>
+			<vmNetED>4,331.00</vmNetED>
+			<model></model>
+		</exposureEventDetail>
+		<exposureEventDetail id="vm.model1.event">
+			<callStatus>Pending Review</callStatus>
+			<action>VM Call(Deficit)</action>
+			<vmNetED>4,638.27</vmNetED>
+			<model>mn_1</model>
+		</exposureEventDetail>
+		<exposureEventDetail id="vm.model2.event">
+			<callStatus>Pending Review</callStatus>
+			<action>VM Call(Deficit)</action>
+			<vmNetED>3,667.06</vmNetED>
+			<model>mn_2</model>
+		</exposureEventDetail>
+		<exposureEventDetail id="tsa.model1.event">
+			<callStatus>Pending Review</callStatus>
+			<action>TSA Call(Deficit)</action>
+			<vmNetED>2,311.93</vmNetED>
+			<model>mn_1</model>
+		</exposureEventDetail>
+		<exposureEventDetail id="tsa.model2.event">
+			<callStatus>Pending Review</callStatus>
+			<action>TSA Call(Deficit)</action>
+			<vmNetED>1,163.21</vmNetED>
+			<model>mn_2</model>
+		</exposureEventDetail>
+
+
+	</scenarioData>
+</dataBean>

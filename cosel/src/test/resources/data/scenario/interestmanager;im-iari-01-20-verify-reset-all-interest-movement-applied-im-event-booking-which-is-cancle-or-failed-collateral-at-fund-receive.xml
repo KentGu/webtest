@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/interestManager.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <agreement id="agreement.1.umbrella">
+            <principal>
+                <linkText id="agreement.1.umbrella.principal" ref="org.p1.lname"/>
+            </principal>
+            <counterparty>
+                <linkText id="agreement.1.umbrella.counterparty" ref="org.c1.lname"/>
+            </counterparty>
+            <region>smoke2</region>
+            <group>smoke2</group>
+            <businessLine>Clearing</businessLine>
+            <ccp>ICE</ccp>
+            <umbrellaAgreement>true</umbrellaAgreement>
+            <umbrellaRule ref="umbrella.rule.fund.name"/>
+            <agreementDescription id="agreement.1.umbrella.description">T30215_Agreement1_Umbrella_Description</agreementDescription>
+            <agreementName id="agreement.1.umbrella.name">T30215_Agreement1_Umbrella_Name</agreementName>
+            <externalId id="agreement.1.umbrella.external.id">T30215_Agreement1_Umbrella_External_ID</externalId>
+            <nettingIAandMtM>Not-Net</nettingIAandMtM>
+            <tsa>true</tsa>
+            <tsaRule ref="TSAruleName"/>
+            <vmInterest>true</vmInterest>
+            <imInterest>true</imInterest>
+            <vminterestCalculationsMethod>Simple</vminterestCalculationsMethod>
+            <vmCalculationRule>First of the Month</vmCalculationRule>
+            <vmPayMethod>Capitalise</vmPayMethod>
+            <vmReceiveMethod>Capitalise</vmReceiveMethod>
+            <imInterestCalculationsMethod>Simple</imInterestCalculationsMethod>
+            <imCalculationRule>First of the Month</imCalculationRule>
+            <imPayMethod>Capitalise</imPayMethod>
+            <imReceiveMethod>Capitalise</imReceiveMethod>
+            <principalCollateralAssetClass>
+                <collateralAssetClassName ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName id="agreement.1.umbrella.asset.type" ref="cash.usd.name"/>
+                    <interestRule>
+                        <agreementRate>qtp_Interest_Rate2</agreementRate>
+                    </interestRule>
+                    <whtRule>
+                        <whtRate>qtp_WHT_Rate2</whtRate>
+                        <whtApplied>
+                            <effectiveDate>10/1/2014</effectiveDate>
+                            <applied>true</applied>
+                        </whtApplied>
+                    </whtRule>
+                </collateralAssetType>
+            </principalCollateralAssetClass>
+            <subAgreement>
+                <linkText ref="agreement.1.fund.1.name"/>
+            </subAgreement>
+            <subAgreement>
+                <linkText ref="agreement.1.fund.2.name"/>
+            </subAgreement>
+            <agreementId id="agreement.1.umbrella.id">2503</agreementId>
+        </agreement>
+
+        <agreement id="agreement.1.fund.1">
+            <principal>
+                <linkText id="agreement.1.fund.1.principal">QTPPrincipalSubsidiary1</linkText>
+            </principal>
+            <counterparty>
+                <linkText id="agreement.1.fund.1.counterparty">QTPCounterpartySubsidiary1</linkText>
+            </counterparty>
+            <region>smoke2</region>
+            <group>smoke2</group>
+            <businessLine>Clearing</businessLine>
+            <ccp>ICE</ccp>
+            <agreementDescription id="agreement.1.fund.1.description">T30215_Agreement1_Fund1_Description</agreementDescription>
+            <agreementName id="agreement.1.fund.1.name">T30215_Agreement1_Fund1_Name</agreementName>
+            <externalId id="agreement.1.fund.1.external.id">T30215_Agreement1_Fund1_External_ID</externalId>
+            <nettingIAandMtM>Not-Net</nettingIAandMtM>
+            <tsa>true</tsa>
+            <tsaRule ref="TSAruleName"/>
+            <vmInterest>true</vmInterest>
+            <imInterest>true</imInterest>
+            <vminterestCalculationsMethod>Simple</vminterestCalculationsMethod>
+            <vmCalculationRule>First of the Month</vmCalculationRule>
+            <vmPayMethod>Capitalise</vmPayMethod>
+            <vmReceiveMethod>Capitalise</vmReceiveMethod>
+            <imInterestCalculationsMethod>Simple</imInterestCalculationsMethod>
+            <imCalculationRule>First of the Month</imCalculationRule>
+            <imPayMethod>Capitalise</imPayMethod>
+            <imReceiveMethod>Capitalise</imReceiveMethod>
+            <principalCollateralAssetClass>
+                <collateralAssetClassName ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName id="agreement.1.fund.1.asset.type" ref="cash.usd.name"/>
+                    <interestRule>
+                        <agreementRate>qtp_Interest_Rate2</agreementRate>
+                    </interestRule>
+                    <whtRule>
+                        <whtRate>qtp_WHT_Rate2</whtRate>
+                        <whtApplied>
+                            <effectiveDate>10/1/2014</effectiveDate>
+                            <applied>true</applied>
+                        </whtApplied>
+                    </whtRule>
+                </collateralAssetType>
+            </principalCollateralAssetClass>
+            <agreementId id="agreement.1.fund.1.id">2501</agreementId>
+        </agreement>
+
+        <agreement id="agreement.1.fund.2">
+            <principal>
+                <linkText id="agreement.1.fund.2.principal">QTPPrincipalSubsidiary2</linkText>
+            </principal>
+            <counterparty>
+                <linkText id="agreement.1.fund.2.counterparty">QTPCounterpartySubsidiary2</linkText>
+            </counterparty>
+            <region>smoke2</region>
+            <group>smoke2</group>
+            <businessLine>Clearing</businessLine>
+            <ccp>ICE</ccp>
+            <agreementDescription id="agreement.1.fund.2.description">T30215_Agreement1_Fund2_Description</agreementDescription>
+            <agreementName id="agreement.1.fund.2.name">T30215_Agreement1_Fund2_Name</agreementName>
+            <externalId id="agreement.1.fund.2.external.id">T30215_Agreement1_Fund2_External_ID</externalId>
+            <nettingIAandMtM>Not-Net</nettingIAandMtM>
+            <tsa>true</tsa>
+            <tsaRule ref="TSAruleName"/>
+            <vmInterest>true</vmInterest>
+            <imInterest>true</imInterest>
+            <vminterestCalculationsMethod>Simple</vminterestCalculationsMethod>
+            <vmCalculationRule>First of the Month</vmCalculationRule>
+            <vmPayMethod>Capitalise</vmPayMethod>
+            <vmReceiveMethod>Capitalise</vmReceiveMethod>
+            <imInterestCalculationsMethod>Simple</imInterestCalculationsMethod>
+            <imCalculationRule>First of the Month</imCalculationRule>
+            <imPayMethod>Capitalise</imPayMethod>
+            <imReceiveMethod>Capitalise</imReceiveMethod>
+            <principalCollateralAssetClass>
+                <collateralAssetClassName ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName id="agreement.1.fund.2.asset.type" ref="cash.usd.name"/>
+                    <interestRule>
+                        <agreementRate>qtp_Interest_Rate2</agreementRate>
+                    </interestRule>
+                    <whtRule>
+                        <whtRate>qtp_WHT_Rate2</whtRate>
+                        <whtApplied>
+                            <effectiveDate>10/1/2014</effectiveDate>
+                            <applied>true</applied>
+                        </whtApplied>
+                    </whtRule>
+                </collateralAssetType>
+            </principalCollateralAssetClass>
+            <agreementId id="agreement.1.fund.2.id">2502</agreementId>
+        </agreement>
+
+        <agreement id="agreement.2.umbrella">
+            <principal>
+                <linkText id="agreement.1.umbrella.principal" ref="org.p1.lname"/>
+            </principal>
+            <counterparty>
+                <linkText id="agreement.1.umbrella.counterparty" ref="org.c1.lname"/>
+            </counterparty>
+            <region>smoke2</region>
+            <group>smoke2</group>
+            <businessLine>Clearing</businessLine>
+            <ccp>ICE</ccp>
+            <umbrellaAgreement>true</umbrellaAgreement>
+            <umbrellaRule ref="umbrella.rule.fund.name"/>
+            <agreementDescription id="agreement.1.umbrella.description">T30215_Agreement2_Umbrella_Description</agreementDescription>
+            <agreementName id="agreement.1.umbrella.name">T30215_Agreement2_Umbrella_Name</agreementName>
+            <externalId id="agreement.1.umbrella.external.id">T30215_Agreement2_Umbrella_External_ID</externalId>
+            <nettingIAandMtM>Not-Net</nettingIAandMtM>
+            <tsa>true</tsa>
+            <tsaRule ref="TSAruleName"/>
+            <vmInterest>true</vmInterest>
+            <imInterest>true</imInterest>
+            <vminterestCalculationsMethod>Simple</vminterestCalculationsMethod>
+            <vmCalculationRule>First of the Month</vmCalculationRule>
+            <vmPayMethod>Capitalise</vmPayMethod>
+            <vmReceiveMethod>Capitalise</vmReceiveMethod>
+            <imInterestCalculationsMethod>Simple</imInterestCalculationsMethod>
+            <imCalculationRule>First of the Month</imCalculationRule>
+            <imPayMethod>Capitalise</imPayMethod>
+            <imReceiveMethod>Capitalise</imReceiveMethod>
+            <principalCollateralAssetClass>
+                <collateralAssetClassName ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName id="agreement.2.umbrella.asset.type" ref="cash.usd.name"/>
+                    <interestRule>
+                        <agreementRate>qtp_Interest_Rate2</agreementRate>
+                    </interestRule>
+                    <whtRule>
+                        <whtRate>qtp_WHT_Rate2</whtRate>
+                        <whtApplied>
+                            <effectiveDate>10/1/2014</effectiveDate>
+                            <applied>true</applied>
+                        </whtApplied>
+                    </whtRule>
+                </collateralAssetType>
+            </principalCollateralAssetClass>
+            <subAgreement>
+                <linkText ref="agreement.2.fund.1.name"/>
+            </subAgreement>
+            <subAgreement>
+                <linkText ref="agreement.2.fund.2.name"/>
+            </subAgreement>
+            <agreementId id="agreement.2.umbrella.id">2506</agreementId>
+        </agreement>
+
+        <agreement id="agreement.2.fund.1">
+            <principal>
+                <linkText id="agreement.2.fund.1.principal">QTPPrincipalSubsidiary1</linkText>
+            </principal>
+            <counterparty>
+                <linkText id="agreement.2.fund.1.counterparty">QTPCounterpartySubsidiary1</linkText>
+            </counterparty>
+            <region>smoke2</region>
+            <group>smoke2</group>
+            <businessLine>Clearing</businessLine>
+            <ccp>ICE</ccp>
+            <agreementDescription id="agreement.2.fund.1.description">T30215_Agreement2_Fund1_Description</agreementDescription>
+            <agreementName id="agreement.2.fund.1.name">T30215_Agreement2_Fund1_Name</agreementName>
+            <externalId id="agreement.2.fund.1.external.id">T30215_Agreement2_Fund1_External_ID</externalId>
+            <nettingIAandMtM>Not-Net</nettingIAandMtM>
+            <tsa>true</tsa>
+            <tsaRule ref="TSAruleName"/>
+            <vmInterest>true</vmInterest>
+            <imInterest>true</imInterest>
+            <vminterestCalculationsMethod>Simple</vminterestCalculationsMethod>
+            <vmCalculationRule>First of the Month</vmCalculationRule>
+            <vmPayMethod>Capitalise</vmPayMethod>
+            <vmReceiveMethod>Capitalise</vmReceiveMethod>
+            <imInterestCalculationsMethod>Simple</imInterestCalculationsMethod>
+            <imCalculationRule>First of the Month</imCalculationRule>
+            <imPayMethod>Capitalise</imPayMethod>
+            <imReceiveMethod>Capitalise</imReceiveMethod>
+            <principalCollateralAssetClass>
+                <collateralAssetClassName ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName id="agreement.2.fund.1.asset.type" ref="cash.usd.name"/>
+                    <interestRule>
+                        <agreementRate>qtp_Interest_Rate2</agreementRate>
+                    </interestRule>
+                    <whtRule>
+                        <whtRate>qtp_WHT_Rate2</whtRate>
+                        <whtApplied>
+                            <effectiveDate>10/1/2014</effectiveDate>
+                            <applied>true</applied>
+                        </whtApplied>
+                    </whtRule>
+                </collateralAssetType>
+            </principalCollateralAssetClass>
+            <agreementId id="agreement.2.fund.1.id">2504</agreementId>
+        </agreement>
+
+        <agreement id="agreement.2.fund.2">
+            <principal>
+                <linkText id="agreement.2.fund.2.principal">QTPPrincipalSubsidiary2</linkText>
+            </principal>
+            <counterparty>
+                <linkText id="agreement.2.fund.2.counterparty">QTPCounterpartySubsidiary2</linkText>
+            </counterparty>
+            <region>smoke2</region>
+            <group>smoke2</group>
+            <businessLine>Clearing</businessLine>
+            <ccp>ICE</ccp>
+            <agreementDescription id="agreement.2.fund.2.description">T30215_Agreement1_Fund2_Description</agreementDescription>
+            <agreementName id="agreement.2.fund.2.name">T30215_Agreement1_Fund2_Name</agreementName>
+            <externalId id="agreement.2.fund.2.external.id">T30215_Agreement1_Fund2_External_ID</externalId>
+            <nettingIAandMtM>Not-Net</nettingIAandMtM>
+            <tsa>true</tsa>
+            <tsaRule ref="TSAruleName"/>
+            <vmInterest>true</vmInterest>
+            <imInterest>true</imInterest>
+            <vminterestCalculationsMethod>Simple</vminterestCalculationsMethod>
+            <vmCalculationRule>First of the Month</vmCalculationRule>
+            <vmPayMethod>Capitalise</vmPayMethod>
+            <vmReceiveMethod>Capitalise</vmReceiveMethod>
+            <imInterestCalculationsMethod>Simple</imInterestCalculationsMethod>
+            <imCalculationRule>First of the Month</imCalculationRule>
+            <imPayMethod>Capitalise</imPayMethod>
+            <imReceiveMethod>Capitalise</imReceiveMethod>
+            <principalCollateralAssetClass>
+                <collateralAssetClassName ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName id="agreement.2.fund.2.asset.type" ref="cash.usd.name"/>
+                    <interestRule>
+                        <agreementRate>qtp_Interest_Rate2</agreementRate>
+                    </interestRule>
+                    <whtRule>
+                        <whtRate>qtp_WHT_Rate2</whtRate>
+                        <whtApplied>
+                            <effectiveDate>10/1/2014</effectiveDate>
+                            <applied>true</applied>
+                        </whtApplied>
+                    </whtRule>
+                </collateralAssetType>
+            </principalCollateralAssetClass>
+            <agreementId id="agreement.2.fund.2.id">2505</agreementId>
+        </agreement>
+
+        <interestEventSearch id="search.all.30215.interest.event">
+            <description>
+                <type>Starting with</type>
+                <filter>T30215_</filter>
+            </description>
+            <monthRange>
+                <startMonth>10/2014</startMonth>
+                <endMonth>10/2014</endMonth>
+            </monthRange>
+        </interestEventSearch>
+
+        <interestEventDetail id="agreement.1.umbrella.interest.event">
+            <eventId id="agreement.1.umbrella.interest.event.id">9019</eventId>
+        </interestEventDetail>
+
+        <interestEventDetail id="agreement.1.umbrella.interest.event.before.apply">
+            <eventId ref="agreement.1.umbrella.interest.event.id"/>
+            <principal ref="agreement.1.umbrella.principal"/>
+            <description ref="agreement.1.umbrella.description"/>
+            <businessLine>Clearing</businessLine>
+            <cashAssetType ref="agreement.1.umbrella.asset.type"/>
+            <interestRule>First of the Month</interestRule>
+            <startDate>10/1/2014</startDate>
+            <endDate>11/1/2014</endDate>
+            <calculatedInterestAmount>2666.96</calculatedInterestAmount>
+            <whtAmount>-666.67</whtAmount>
+            <interestSource>IM Interest</interestSource>
+            <agreedInterestAmount>2666.96</agreedInterestAmount>
+            <agreedWHTAmount>-666.67</agreedWHTAmount>
+            <resetDate>11/1/2014</resetDate>
+        </interestEventDetail>
+
+        <interestEventDetail id="agreement.1.fund.1.interest.event">
+            <eventId id="agreement.1.fund.1.interest.event.id">9003</eventId>
+        </interestEventDetail>
+
+        <interestEventDetail id="agreement.1.fund.1.interest.event.before.apply">
+            <eventId ref="agreement.1.fund.1.interest.event.id"/>
+            <principal ref="agreement.1.fund.1.principal"/>
+            <description ref="agreement.1.fund.1.description"/>
+            <businessLine>Clearing</businessLine>
+            <cashAssetType ref="agreement.1.fund.1.asset.type"/>
+            <interestRule>First of the Month</interestRule>
+            <startDate>10/1/2014</startDate>
+            <endDate>11/1/2014</endDate>
+            <calculatedInterestAmount>1777.79</calculatedInterestAmount>
+            <whtAmount>-444.45</whtAmount>
+            <interestSource>IM Interest</interestSource>
+            <agreedInterestAmount>1777.79</agreedInterestAmount>
+            <agreedWHTAmount>-444.45</agreedWHTAmount>
+            <resetDate>11/1/2014</resetDate>
+        </interestEventDetail>
+
+        <interestEventDetail id="agreement.1.fund.1.interest.event.after.apply">
+            <eventId ref="agreement.1.fund.1.interest.event.id"/>
+            <principal ref="agreement.1.fund.1.principal"/>
+            <description ref="agreement.1.fund.1.description"/>
+            <businessLine>Clearing</businessLine>
+            <cashAssetType ref="agreement.1.fund.1.asset.type"/>
+            <interestRule>First of the Month</interestRule>
+            <startDate>10/1/2014</startDate>
+            <endDate>11/1/2014</endDate>
+            <calculatedInterestAmount>1777.79</calculatedInterestAmount>
+            <whtAmount>-444.45</whtAmount>
+            <interestSource>IM Interest</interestSource>
+            <agreedInterestAmount>1777.79</agreedInterestAmount>
+            <agreedWHTAmount>-444.45</agreedWHTAmount>
+            <resetDate>11/1/2014</resetDate>
+            <interestMovementStatus id="agreement.1.fund.1.interest.event.after.apply.interest.movement.status"/>
+        </interestEventDetail>
+
+        <interestEventDetail id="agreement.1.fund.2.interest.event">
+            <eventId id="agreement.1.fund.2.interest.event.id">9009</eventId>
+        </interestEventDetail>
+
+        <interestEventDetail id="agreement.1.fund.2.interest.event.before.apply">
+            <eventId ref="agreement.1.fund.2.interest.event.id"/>
+            <principal ref="agreement.1.fund.2.principal"/>
+            <description ref="agreement.1.fund.2.description"/>
+            <businessLine>Clearing</businessLine>
+            <cashAssetType ref="agreement.1.fund.2.asset.type"/>
+            <interestRule>First of the Month</interestRule>
+            <startDate>10/1/2014</startDate>
+            <endDate>11/1/2014</endDate>
+            <calculatedInterestAmount>888.9</calculatedInterestAmount>
+            <whtAmount>-222.22</whtAmount>
+            <interestSource>IM Interest</interestSource>
+            <agreedInterestAmount>888.9</agreedInterestAmount>
+            <agreedWHTAmount>-222.22</agreedWHTAmount>
+            <resetDate>11/1/2014</resetDate>
+        </interestEventDetail>
+
+        <interestEventDetail id="agreement.1.fund.2.interest.event.after.apply">
+            <eventId ref="agreement.1.fund.2.interest.event.id"/>
+            <principal ref="agreement.1.fund.2.principal"/>
+            <description ref="agreement.1.fund.2.description"/>
+            <businessLine>Clearing</businessLine>
+            <cashAssetType ref="agreement.1.fund.2.asset.type"/>
+            <interestRule>First of the Month</interestRule>
+            <startDate>10/1/2014</startDate>
+            <endDate>11/1/2014</endDate>
+            <calculatedInterestAmount>888.9</calculatedInterestAmount>
+            <whtAmount>-222.22</whtAmount>
+            <interestSource>IM Interest</interestSource>
+            <agreedInterestAmount>888.9</agreedInterestAmount>
+            <agreedWHTAmount>-222.22</agreedWHTAmount>
+            <resetDate>11/1/2014</resetDate>
+            <interestMovementStatus id="agreement.1.fund.2.interest.event.after.apply.interest.movement.status"/>
+        </interestEventDetail>
+
+        <interestEventDetail id="agreement.2.umbrella.interest.event">
+            <eventId id="agreement.2.umbrella.interest.event.id">9072</eventId>
+        </interestEventDetail>
+
+        <interestEventDetail id="agreement.2.umbrella.interest.event.before.apply">
+            <eventId ref="agreement.2.umbrella.interest.event.id"/>
+            <principal ref="agreement.2.umbrella.principal"/>
+            <description ref="agreement.2.umbrella.description"/>
+            <businessLine>Clearing</businessLine>
+            <cashAssetType ref="agreement.2.umbrella.asset.type"/>
+            <interestRule>First of the Month</interestRule>
+            <startDate>10/1/2014</startDate>
+            <endDate>11/1/2014</endDate>
+            <calculatedInterestAmount>2666.96</calculatedInterestAmount>
+            <whtAmount>-666.67</whtAmount>
+            <interestSource>IM Interest</interestSource>
+            <agreedInterestAmount>2666.96</agreedInterestAmount>
+            <agreedWHTAmount>-666.67</agreedWHTAmount>
+            <resetDate>11/1/2014</resetDate>
+        </interestEventDetail>
+
+        <interestEventDetail id="agreement.2.fund.1.interest.event">
+            <eventId id="agreement.2.fund.1.interest.event.id">9056</eventId>
+        </interestEventDetail>
+
+        <interestEventDetail id="agreement.2.fund.1.interest.event.before.apply">
+            <eventId ref="agreement.2.fund.1.interest.event.id"/>
+            <principal ref="agreement.2.fund.1.principal"/>
+            <description ref="agreement.2.fund.1.description"/>
+            <businessLine>Clearing</businessLine>
+            <cashAssetType ref="agreement.2.fund.1.asset.type"/>
+            <interestRule>First of the Month</interestRule>
+            <startDate>10/1/2014</startDate>
+            <endDate>11/1/2014</endDate>
+            <calculatedInterestAmount>1777.79</calculatedInterestAmount>
+            <whtAmount>-444.45</whtAmount>
+            <interestSource>IM Interest</interestSource>
+            <agreedInterestAmount>1777.79</agreedInterestAmount>
+            <agreedWHTAmount>-444.45</agreedWHTAmount>
+            <resetDate>11/1/2014</resetDate>
+        </interestEventDetail>
+
+        <interestEventDetail id="agreement.2.fund.1.interest.event.after.apply">
+            <eventId ref="agreement.2.fund.1.interest.event.id"/>
+            <principal ref="agreement.2.fund.1.principal"/>
+            <description ref="agreement.2.fund.1.description"/>
+            <businessLine>Clearing</businessLine>
+            <cashAssetType ref="agreement.2.fund.1.asset.type"/>
+            <interestRule>First of the Month</interestRule>
+            <startDate>10/1/2014</startDate>
+            <endDate>11/1/2014</endDate>
+            <calculatedInterestAmount>1777.79</calculatedInterestAmount>
+            <whtAmount>-444.45</whtAmount>
+            <interestSource>IM Interest</interestSource>
+            <agreedInterestAmount>1777.79</agreedInterestAmount>
+            <agreedWHTAmount>-444.45</agreedWHTAmount>
+            <resetDate>11/1/2014</resetDate>
+            <interestMovementStatus id="agreement.2.fund.1.interest.event.after.apply.interest.movement.status"/>
+        </interestEventDetail>
+
+        <interestEventDetail id="agreement.2.fund.2.interest.event">
+            <eventId id="agreement.2.fund.2.interest.event">9062</eventId>
+        </interestEventDetail>
+
+        <interestEventDetail id="agreement.2.fund.2.interest.event.before.apply">
+            <eventId ref="agreement.2.fund.2.interest.event.id"/>
+            <principal ref="agreement.2.fund.2.principal"/>
+            <description ref="agreement.2.fund.2.description"/>
+            <businessLine>Clearing</businessLine>
+            <cashAssetType ref="agreement.2.fund.2.asset.type"/>
+            <interestRule>First of the Month</interestRule>
+            <startDate>10/1/2014</startDate>
+            <endDate>11/1/2014</endDate>
+            <calculatedInterestAmount>888.9</calculatedInterestAmount>
+            <whtAmount>-222.22</whtAmount>
+            <interestSource>IM Interest</interestSource>
+            <agreedInterestAmount>888.9</agreedInterestAmount>
+            <agreedWHTAmount>-222.22</agreedWHTAmount>
+            <resetDate>11/1/2014</resetDate>
+        </interestEventDetail>
+
+        <interestEventDetail id="agreement.2.fund.2.interest.event.after.apply">
+            <eventId ref="agreement.2.fund.2.interest.event.id"/>
+            <principal ref="agreement.2.fund.2.principal"/>
+            <description ref="agreement.2.fund.2.description"/>
+            <businessLine>Clearing</businessLine>
+            <cashAssetType ref="agreement.2.fund.2.asset.type"/>
+            <interestRule>First of the Month</interestRule>
+            <startDate>10/1/2014</startDate>
+            <endDate>11/1/2014</endDate>
+            <calculatedInterestAmount>888.9</calculatedInterestAmount>
+            <whtAmount>-222.22</whtAmount>
+            <interestSource>IM Interest</interestSource>
+            <agreedInterestAmount>888.9</agreedInterestAmount>
+            <agreedWHTAmount>-222.22</agreedWHTAmount>
+            <resetDate>11/1/2014</resetDate>
+            <interestMovementStatus id="agreement.2.fund.2.interest.event.after.apply.interest.movement.status"/>
+        </interestEventDetail>
+
+        <interestEventDetail id="reset.interest.manager.completed.2.success.2.failed">
+            <errorMessage>
+                <content>^Reset Interest Manager completed. Successful: 2, Failed: 2.$</content>
+            </errorMessage>
+        </interestEventDetail>
+
+        <interestEventDetail id="cannot.reset.cancelled.or.failed.event">
+            <errorMessage>
+                <content>^The interest event cannot be reset due to existing interest movements not in the status of Cancelled or Failed.$</content>
+            </errorMessage>
+        </interestEventDetail>
+
+        <cashMovementSummary id="pending.cash.movement.event.summary">
+            <status>Pending</status>
+        </cashMovementSummary>
+
+        <cashMovementDetail id="cancel.cash.movement.event.detail">
+            <settlementStatus>Cancelled</settlementStatus>
+        </cashMovementDetail>
+
+        <taskSchedulerDetail id="reset.interest.task">
+            <type>Workflow</type>
+            <taskName>Interest Manager Reset</taskName>
+        </taskSchedulerDetail>
+
+        <taskSchedulerMessage id="reset.successful.2.failed.2">
+            <message>Reset Interest Manager completed. Successful: 2, Failed: 2.</message>
+        </taskSchedulerMessage>
+
+        <taskSchedulerMessage id="reset.success.4.failed.0">
+            <message>Reset Interest Manager completed. Successful: 2, Failed: 0.</message>
+        </taskSchedulerMessage>
+
+    </scenarioData>
+</dataBean>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/feeds.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <collateralPreference id="collateral.preferences.collateral.value">
+            <collateralRules>
+                <concentrationLimitCalc>Collateral Value</concentrationLimitCalc>
+            </collateralRules>
+        </collateralPreference>
+
+        <agreement id="otc.agreeement.has.cl.breach.adjustment">
+            <principal>
+                <filter ref="org.p1.lname"/>
+                <linkText ref="org.p1.lname"/>
+            </principal>
+            <counterparty>
+                <filter ref="org.c1.lname"/>
+                <linkText ref="org.c1.lname"/>
+            </counterparty>
+            <businessLine>OTC</businessLine>
+            <agreementDescription id="otc.agreeement.has.cl.breach.adjustment.desc" random="true" prefix="otc_agr1_"/>
+            <region ref="region.test1.name"/>
+            <externalId id="otc.agreeement.has.cl.breach.adjustment.external.id" random="true"/>
+            <agreementDate>t</agreementDate>
+            <holidayCentre ref="hc.test1.name"/>
+            <product>
+                <productName ref="product.qtp.name"/>
+            </product>
+            <concentrationLimitBreachAdjustment id="otc.agreeement.has.cl.breach.adjustment.con.limit.brea.adj">Asset Adjustment</concentrationLimitBreachAdjustment>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="bond.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="bond.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter>VM Call/Return</filter>
+                    <linkText>VM Call/Return</linkText>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter>VM Recall/Delivery</filter>
+                    <linkText>VM Recall/Delivery</linkText>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter>Pay</filter>
+                    <linkText>Pay</linkText>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter>Receive</filter>
+                    <linkText>Receive</linkText>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementId id="otc.agreeement.has.cl.breach.adjustment.agreement.id"/>
+            <agreementStatus>Pending</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+        <feedAgreement id="feed.otc.agreement.concen.limit.breach.adjust.blank">
+            <legal_id ref="otc.agreeement.has.cl.breach.adjustment.external.id"/>
+            <principal ref="org.p1.lname"/>
+            <counterpartycode ref="org.c1.lname"/>
+            <concentrationLimitBreachAdjustment id="feed.otc.agreement.concen.limit.breach.adjust.blank.con.limit.brea.adj"/>
+            <applyOrgCL>false</applyOrgCL>
+        </feedAgreement>
+
+        <feedResult id="feed.otc.agreement.concen.limit.breach.adjust.blank.result">
+            <fileUploaded id="feed.otc.agreement.concen.limit.breach.adjust.blank.result.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedStatus id="feed.otc.agreement.concen.limit.breach.adjust.blank.status">
+            <systemName>QTP</systemName>
+            <status>Successful</status>
+            <valuationFile ref="feed.otc.agreement.concen.limit.breach.adjust.blank.result.file"/>
+            <description>Agreements</description>
+            <successfulFeed apply="true">
+                <importType>Agreements</importType>
+                <valuationFile ref="feed.otc.agreement.concen.limit.breach.adjust.blank.result.file"/>
+                <total>1</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <agreementSearch id="feed.otc.agreement.concen.limit.breach.adjust.blank.search">
+            <systemId ref="otc.agreeement.has.cl.breach.adjustment.agreement.id"/>
+        </agreementSearch>
+
+        <agreementSearchResult id="feed.otc.agreement.concen.limit.breach.adjust.blank.search.result">
+            <agreementId ref="otc.agreeement.has.cl.breach.adjustment.agreement.id"/>
+        </agreementSearchResult>
+
+        <agreementSummary id="feed.otc.agreement.concen.limit.breach.adjust.blank.summary">
+            <collateralRules>
+                <concentrationLimitBreachAdjustment>Asset Adjustment</concentrationLimitBreachAdjustment>
+            </collateralRules>
+        </agreementSummary>
+
+    </scenarioData>
+</dataBean>

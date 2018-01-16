@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+		<agreement id="agr">
+			<principal id="p1">
+				<criteria>Containing</criteria>
+				<type>Code</type>
+				<filter ref="org.p1.lname"/>
+				<linkText ref="org.p1.lname"/>
+			</principal>
+			<counterparty id="c">
+				<criteria>Containing</criteria>
+				<type>Long Name</type>
+				<filter ref="org.c1.lname"/>
+				<linkText ref="org.c1.lname"/>
+			</counterparty>
+			<agreementDescription id="agr.desc" random="true"/>
+			<agreementDate>T</agreementDate>
+			<nettingIAandMtM>Not-Net</nettingIAandMtM>
+			<vmCallFrequency>
+				<legalReviewFrequency>Daily</legalReviewFrequency>
+			</vmCallFrequency>
+			<imCallFrequency>
+				<legalReviewFrequency>Daily</legalReviewFrequency>
+			</imCallFrequency>
+			<holidayCentre ref="hc.europe.name"/>
+			<product id="p">
+				<productName ref="product.test1.name"/>
+			</product>
+			<collateralAssetClass>
+				<collateralAssetClassName ref="bond.name"/>
+				<collateralAssetType>
+					<collateralAssetTypeName ref="bond.usd.name"/>
+				</collateralAssetType>
+			</collateralAssetClass>
+			<settlementBucket>
+				<bookingType>VM</bookingType>
+				<direction>Call/Return</direction>
+				<bucket>
+					<filter ref="payInstrBucket.vcr.name"/>
+					<linkText ref="payInstrBucket.vcr.name"/>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>VM</bookingType>
+				<direction>Delivery/Recall</direction>
+				<bucket>
+					<filter ref="payInstrBucket.vrd.name"/>
+					<linkText ref="payInstrBucket.vrd.name"/>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>IM</bookingType>
+				<direction>Call/Return</direction>
+				<bucket>
+					<filter ref="payInstrBucket.std.name"/>
+					<linkText ref="payInstrBucket.std.name"/>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>IM</bookingType>
+				<direction>Delivery/Recall</direction>
+				<bucket>
+					<filter ref="payInstrBucket.std.name"/>
+					<linkText ref="payInstrBucket.std.name"/>
+				</bucket>
+			</settlementBucket>
+
+			<settlementBucket>
+				<bookingType>VM Interest</bookingType>
+				<direction>Pay</direction>
+				<bucket>
+					<filter ref="payInstrBucket.std.name"/>
+					<linkText ref="payInstrBucket.std.name"/>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>VM Interest</bookingType>
+				<direction>Receive</direction>
+				<bucket>
+					<filter ref="payInstrBucket.std.name"/>
+					<linkText ref="payInstrBucket.std.name"/>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>IM Interest</bookingType>
+				<direction>Pay</direction>
+				<bucket>
+					<filter ref="payInstrBucket.std.name"/>
+					<linkText ref="payInstrBucket.std.name"/>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>IM Interest</bookingType>
+				<direction>Receive</direction>
+				<bucket>
+					<filter ref="payInstrBucket.std.name"/>
+					<linkText ref="payInstrBucket.std.name"/>
+				</bucket>
+			</settlementBucket>
+			<letterAndDeliveryGroupDetails>
+				<letterDistributionMedium>Email</letterDistributionMedium>
+			</letterAndDeliveryGroupDetails>
+			<agreementStatus>Pending</agreementStatus>
+			<agreementStatus>Approved</agreementStatus>
+			<statementStatus>Pending</statementStatus>
+			<statementStatus>Approved</statementStatus>
+			<agreementId id="agmt.id"/>
+		</agreement>
+
+		<agreementExposureSummary id="ProductQTP">
+			<productList>
+				<productType ref="product.test1.name"/>
+			</productList>
+		</agreementExposureSummary>
+
+		<tradeDetail id = "trade">
+			<tradeInformation>
+				<!--<productType ref="product.test1.name"/>-->
+				<tradeDate>T</tradeDate>
+				<effectiveDate>T</effectiveDate>
+				<maturityDate>T+1000</maturityDate>
+				<tradeIdentifierPartyA random="true"/>
+				<partyABranchName random="true"/>
+				<partyBBranchName random="true"/>
+			</tradeInformation>
+
+			<valuationInformation>
+				<principalValuationAmount>
+					<amount>-10m</amount>
+					<currency>USD</currency>
+				</principalValuationAmount>
+				<valuationDate>T</valuationDate>
+			</valuationInformation>
+		</tradeDetail>
+
+		<exposureEventDetail id = "eventChangeCpty">
+			<agrId ref = "agmt.id" />
+			<action>VM Delivery</action>
+		</exposureEventDetail>
+
+		<exposureEventDetail id = "eventChangeCpty7m">
+			<counterpartyAmount>-7m</counterpartyAmount>
+		</exposureEventDetail>
+
+
+		<bookingDetail id="bulkbooking1Delivery3m">
+			<assetType ref="bond.usd.name"/>
+			<instrumentSearch>
+				<instrument>
+					<filter>qtp_Bond_Instrument</filter>
+					<linkText id="bulkbooking1.instrument">qtp_Bond_Instrument</linkText>
+				</instrument>
+				<market>
+					<filter>qtp_Market</filter>
+					<linkText>qtp_Market</linkText>
+				</market>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<vmAmount>3m</vmAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+		<bookingDetail id="bulkbooking2Delivery4m">
+			<assetType ref="bond.usd.name"/>
+			<instrumentSearch>
+				<instrument>
+					<filter>qtp-Bond-Usd-Instrument</filter>
+					<linkText id="bulkbooking2.instrument">qtp-Bond-Usd-Instrument</linkText>
+				</instrument>
+				<market>
+					<filter>qtp_Market</filter>
+					<linkText>qtp_Market</linkText>
+				</market>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<vmAmount>4m</vmAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+
+		<exposureManagementMessage id="no.warning.message.shown">
+			<messageDetail>
+				<message>No errors or warnings found.</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<agreementSearch id="agrSearch">
+			<systemId ref="agr.id" />
+			<description>
+				<filter ref="agr.desc"/>
+			</description>
+		</agreementSearch>
+		<agreementSearchResult id="agrSearchResult">
+			<description ref="agr.desc" />
+		</agreementSearchResult>
+
+		<assetBookingSummary id="qtp_bond_usd">
+			<assetType ref="bond.usd.name"/>
+		</assetBookingSummary>
+
+
+		<assetBookingSummary id="booking1Pending">
+			<assetType ref="bond.usd.name"/>
+			<instrumentId ref="bulkbooking1.instrument" />
+			<movement>Delivery</movement>
+			<nominalAmount>-3,000,000.00</nominalAmount>
+			<status>Pending</status>
+		</assetBookingSummary>
+
+		<bookingDetail id="booking1ChangeToAuthorised">
+			<bookingInformation>
+				<settlementStatusInfo>
+					<settlementStatus>Authorised</settlementStatus>
+				</settlementStatusInfo>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+		<assetBookingSummary id="booking1ChangedAuthorised">
+			<assetType ref="bond.usd.name"/>
+			<instrumentId ref="bulkbooking1.instrument" />
+			<movement>Delivery</movement>
+			<nominalAmount>-3,000,000.00</nominalAmount>
+			<status>Authorised</status>
+		</assetBookingSummary>
+
+		<bookingDetail id="booking1ChangeToPendingSettlement">
+			<bookingInformation>
+				<settlementStatusInfo>
+					<settlementStatus>Pending Settlement</settlementStatus>
+				</settlementStatusInfo>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+		<assetBookingSummary id="booking1ChangedPendingSettlement">
+			<assetType ref="bond.usd.name"/>
+			<instrumentId ref="bulkbooking1.instrument" />
+			<movement>Delivery</movement>
+			<nominalAmount>-3,000,000.00</nominalAmount>
+			<status>Pending Settlement</status>
+		</assetBookingSummary>
+
+		<bookingDetail id="booking1ChangeToPendingCancelled">
+			<bookingInformation>
+				<settlementStatusInfo>
+					<settlementStatus>Pending Cancelled</settlementStatus>
+					<settlementComment random="true"/>
+				</settlementStatusInfo>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+		<assetBookingSummary id="booking2Pending">
+			<assetType ref="bond.usd.name"/>
+			<instrumentId ref="bulkbooking2.instrument" />
+			<movement>Delivery</movement>
+			<nominalAmount>-4,000,000.00</nominalAmount>
+			<status>Pending</status>
+		</assetBookingSummary>
+
+		<bookingDetail id="booking2ChangeToAuthorised">
+			<bookingInformation>
+				<settlementStatusInfo>
+					<settlementStatus>Authorised</settlementStatus>
+				</settlementStatusInfo>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+		<assetBookingSummary id="booking2ChangedAuthorised">
+			<assetType ref="bond.usd.name"/>
+			<instrumentId ref="bulkbooking2.instrument" />
+			<movement>Delivery</movement>
+			<nominalAmount>-4,000,000.00</nominalAmount>
+			<status>Authorised</status>
+		</assetBookingSummary>
+
+		<bookingDetail id="booking2ChangeToPendingSettlement">
+			<bookingInformation>
+				<settlementStatusInfo>
+					<settlementStatus>Pending Settlement</settlementStatus>
+				</settlementStatusInfo>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+		<assetBookingSummary id="booking2ChangedPendingSettlement">
+			<assetType ref="bond.usd.name"/>
+			<instrumentId ref="bulkbooking2.instrument" />
+			<movement>Delivery</movement>
+			<nominalAmount>-4,000,000.00</nominalAmount>
+			<status>Pending Settlement</status>
+		</assetBookingSummary>
+
+		<bookingDetail id="booking2ChangeToPendingCancelled">
+			<bookingInformation>
+				<settlementStatusInfo>
+					<settlementStatus>Pending Cancelled</settlementStatus>
+					<settlementComment random="true"/>
+				</settlementStatusInfo>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+		<bookingDetail id="bookingThatWillPopUpWarningMessage">
+			<assetType ref="bond.usd.name" />
+			<instrumentSearch>
+				<instrumentId>
+					<type>Exactly matching</type>
+					<filter ref="bulkbooking2.instrument"/>
+				</instrumentId>
+				<linkText ref="bulkbooking2.instrument" />
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<vmAmount id="booking3.vmamount">3m</vmAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<alertHandling>
+				<display>true</display>
+				<content>[\s\S]*</content>
+				<accept>true</accept>
+			</alertHandling>
+			<save>saveAndComplete</save>
+		</bookingDetail>
+
+		<settlementStatusSearch id="settlementStatusSearch">
+			<description>
+				<type>Exactly matching</type>
+				<filter ref="agr.desc"/>
+				<linkText ref="agr.desc"/>
+			</description>
+		</settlementStatusSearch>
+
+		<settlementStatusSummary id="settlementStatusSearchResult">
+			<assetType ref="bond.usd.name" />
+		</settlementStatusSummary>
+
+		<settlementStatusDetail id="settlementStatusDetail" name="lastcheck">
+			<agreementDescription ref="agr.desc" />
+		</settlementStatusDetail>
+
+		<settlementStatusDetail id="settlementStatusDetailCheck" name="lastcheck">
+			<isRed>true</isRed>
+			<assetType ref="bond.usd.name"/>
+			<principal ref="org.p1.lname"/>
+			<counterparty ref="org.c1.lname" />
+			<instrumentId ref="bulkbooking2.instrument"/>
+			<parAmount>-3,000,000.00</parAmount>
+		</settlementStatusDetail>
+
+		<collateralPreference id="preferenceSetPendingCancelledTrue">
+			<collateralRules>
+				<includePendingCancelled>true</includePendingCancelled>
+			</collateralRules>
+		</collateralPreference>
+		<collateralPreference id="preferenceSetPendingCancelledFalse">
+			<collateralRules>
+				<includePendingCancelled>false</includePendingCancelled>
+			</collateralRules>
+		</collateralPreference>
+
+
+
+
+
+
+
+
+	</scenarioData>
+</dataBean>

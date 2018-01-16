@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+
+		<agreementSearch id="search.agreement.by.agreement.description">
+			<description>
+				<filter id="agrDesc1">32123_1</filter>
+			</description>
+		</agreementSearch>
+
+		<agreementSearchResult id="agreement.search.result">
+			<description ref="agrDesc1"/>
+		</agreementSearchResult>
+
+		<assetBookingSummary id="qtp_bond_usd">
+			<assetType>qtp_bond_usd</assetType>
+		</assetBookingSummary>
+
+		<bookingDetail id="callBooking1Bond.usd.nominalAmount.1000.1149.settlementDate.dayBeforeT">
+			<assetType>qtp_bond_usd</assetType>
+			<instrumentSearch>
+				<instrumentId>
+					<filter>bond_usd_32123</filter>
+				</instrumentId>
+				<linkText>bond_usd_32123</linkText>
+			</instrumentSearch>
+			<bookingInformation>
+				<settlementDate>t-1</settlementDate>
+				<bookingInformationDetail>
+					<movement>Call</movement>
+					<nominalAmount>1000.1149</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+		<bookingDetail id="callBooking2Bond.usd.nominalAmount.2000.1250.settlementDate.t">
+			<assetType>qtp_bond_usd</assetType>
+			<instrumentSearch>
+				<instrumentId>
+					<filter>bond_usd_32123</filter>
+				</instrumentId>
+				<linkText>bond_usd_32123</linkText>
+			</instrumentSearch>
+			<bookingInformation>
+				<settlementDate>t</settlementDate>
+				<bookingInformationDetail>
+					<movement>Call</movement>
+					<nominalAmount>2000.1250</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+		<bookingDetail id="callBooking3Bond.usd.nominalAmount.3000.1251.settlementDate.dayAfterT">
+			<assetType>qtp_bond_usd</assetType>
+			<instrumentSearch>
+				<instrumentId>
+					<filter>bond_usd_32123</filter>
+				</instrumentId>
+				<linkText>bond_usd_32123</linkText>
+			</instrumentSearch>
+			<bookingInformation>
+				<settlementDate>t+1</settlementDate>
+				<bookingInformationDetail>
+					<movement>Call</movement>
+					<nominalAmount>3000.1251</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+		<agreement id="bond.usd.noEligibilityRule">
+			<collateralAssetClass name="qtp.bond">
+				<collateralAssetClassName>qtp_bond</collateralAssetClassName>
+				<collateralAssetType name="qtp.bond.usd">
+					<collateralAssetTypeName>qtp_bond_usd</collateralAssetTypeName>
+					<eligibilityRule>
+						<excludeInstrument>
+							<filter></filter>
+							<linkText></linkText>
+						</excludeInstrument>
+					</eligibilityRule>
+				</collateralAssetType>
+			</collateralAssetClass>
+		</agreement>
+		
+
+		<agreement id="bond.usd.withEligibilityRule.excludeInstrumentId">
+			<collateralAssetClass name="qtp.bond">
+				<collateralAssetClassName>qtp_bond</collateralAssetClassName>
+				<collateralAssetType name="qtp.bond.usd">
+					<collateralAssetTypeName>qtp_bond_usd</collateralAssetTypeName>
+					<eligibilityRule>
+						<excludeInstrument>
+							<filter>bond_usd_32123</filter>
+							<linkText>bond_usd_32123</linkText>
+						</excludeInstrument>
+					</eligibilityRule>
+				</collateralAssetType>
+			</collateralAssetClass>
+		</agreement>
+
+		<agreement id="agr32123">
+			<agreementStatus>Pending</agreementStatus>
+			<agreementStatus>Approved</agreementStatus>
+			<statementStatus>Pending</statementStatus>
+			<statementStatus>Approved</statementStatus>
+		</agreement>
+
+		<exposureEventDetail id="substitutionConfirmation.agreementRequirement.-6000.36">
+			<action>Substitution Confirmation</action>
+			<agreementRequirement>-6,000.36</agreementRequirement>
+		</exposureEventDetail>
+
+		<bookingDetail id="subConfirmation.return.assetAvailable.3000.24.returnHolding.6000.36">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>Substitution Confirmation</bookingMovement>
+					<bookingNumber>1.1</bookingNumber>
+					<assetAvailable>3,000.24</assetAvailable>
+					<assetAvailableToolTipInfo>Return Holding : 6,000.36</assetAvailableToolTipInfo>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="subConfirmation.return.notional.3000.2451">
+			<bookingInformation>
+				<settlementDate>t</settlementDate>
+				<bookingInformationDetail>
+					<bookingMovement>Substitution Confirmation</bookingMovement>
+					<bookingNumber>1.1</bookingNumber>
+					<nominalAmount>3000.2451</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<exposureManagementMessage id="error.message.nominalAmountExceedRange.3000.24">
+			<messageDetail>
+				<index>1.1</index>
+				<type>error</type>
+				<message>Notional needs to be in the range of -3,000.24 to 3,000.24.</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<bookingDetail id="subConfirmation.return.settlementDate.oneDayBeforeToday">
+			<bookingInformation>
+				<settlementDate>t-1</settlementDate>
+				<bookingInformationDetail>
+					<bookingMovement>Substitution Confirmation</bookingMovement>
+					<bookingNumber>1.1</bookingNumber>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="subConfirmation.return.assetAvailable.1000.11.returnHolding.6000.36">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>Substitution Confirmation</bookingMovement>
+					<bookingNumber>1.1</bookingNumber>
+					<assetAvailable>1,000.11</assetAvailable>
+					<assetAvailableToolTipInfo>Return Holding : 6,000.36</assetAvailableToolTipInfo>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="subConfirmation.return.notional.1000.1251">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>Substitution Confirmation</bookingMovement>
+					<bookingNumber>1.1</bookingNumber>
+					<nominalAmount>1000.1251</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<exposureManagementMessage id="error.message.nominalAmountExceedRange.1000.115">
+			<messageDetail>
+				<index>1.1</index>
+				<type>error</type>
+				<message>Notional needs to be in the range of -1,000.115 to 1,000.115.</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<bookingDetail id="subConfirmation.return.settlementDate.oneDayAfterToday">
+			<bookingInformation>
+				<settlementDate>t+1</settlementDate>
+				<bookingInformationDetail>
+					<bookingMovement>Substitution Confirmation</bookingMovement>
+					<bookingNumber>1.1</bookingNumber>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="subConfirmation.return.assetAvailable.6000.36.returnHolding.6000.36">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>Substitution Confirmation</bookingMovement>
+					<bookingNumber>1.1</bookingNumber>
+					<assetAvailable>6,000.36</assetAvailable>
+					<assetAvailableToolTipInfo>Return Holding : 6,000.36</assetAvailableToolTipInfo>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="subConfirmation.return.notional.6000.3651">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>Substitution Confirmation</bookingMovement>
+					<bookingNumber>1.1</bookingNumber>
+					<nominalAmount>6000.3651</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<exposureManagementMessage id="error.message.nominalAmountExceedRange.6000.365">
+			<messageDetail>
+				<index>1.1</index>
+				<type>error</type>
+				<message>Notional needs to be in the range of -6,000.365 to 6,000.365.</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<bookingDetail id="subConfirmation.return.notional.6000.36">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>Substitution Confirmation</bookingMovement>
+					<bookingNumber>1.1</bookingNumber>
+					<nominalAmount>6000.36</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<exposureManagementMessage id="warning.message.bookedForDeliveryNotEqualToReceipt">
+			<messageDetail>
+				<type>Warning</type>
+				<message>The collateral booking cannot be completed. The net value of items booked for delivery is not equal to receipt. The difference is 6,000.36.</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<exposureManagementMessage id="overrideWarning">
+			<messageDetail>
+				<overrideWarning>true</overrideWarning>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<exposureEventDetail id="substitutionConfirmation.callStatusBecomePartiallyBooked">
+			<action>Substitution Confirmation</action>
+			<callStatus>Partially Booked</callStatus>
+		</exposureEventDetail>
+
+	</scenarioData>
+</dataBean>

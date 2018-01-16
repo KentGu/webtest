@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/1)"/>-->
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+
+		<instrument id="ins1">
+			<assetClass ref="ac1.name" />
+			<assetType ref="at1.name" />
+			<instrumentId id="ins1.insId">
+				<primary>true</primary>
+				<value id="ins1.insId.value" random="true" />
+			</instrumentId>
+			<description id="ins1.desc" random="true" />
+			<issuer>
+				<filter>QTP_Eligible_Issuer</filter>
+				<linkText>QTP_Eligible_Issuer</linkText>
+			</issuer>
+			<maturityDate>T+100</maturityDate>
+			<priceSource>
+				<priceSourceName ref="ps.default.name" />
+				<dirtyPrice>100</dirtyPrice>
+				<lastPriceChange>T</lastPriceChange>
+				<priceDate>T</priceDate>
+			</priceSource>
+			<couponRate>0</couponRate>
+			<issueDate>T</issueDate>
+		</instrument>
+
+		<instrument id="ins2">
+			<assetClass ref="ac2.name" />
+			<assetType ref="at2.name" />
+			<instrumentId id="ins2.insId">
+				<primary>true</primary>
+				<value id="ins2.insId.value" random="true" />
+			</instrumentId>
+			<description id="ins2.desc" random="true" />
+			<issuer>
+				<filter>QTP_Eligible_Issuer</filter>
+				<linkText>QTP_Eligible_Issuer</linkText>
+			</issuer>
+			<maturityDate>T+100</maturityDate>
+			<priceSource>
+				<priceSourceName ref="ps.default.name" />
+				<dirtyPrice>1</dirtyPrice>
+				<lastPriceChange>T</lastPriceChange>
+				<priceDate>T</priceDate>
+			</priceSource>
+			<issueDate>T</issueDate>
+		</instrument>
+
+		<securitySearch id="ins1Search">
+			<description>
+				<filter ref="ins1.desc"></filter>
+			</description>
+			<linkText ref="ins1.desc" />
+		</securitySearch>
+
+		<securitySearch id="ins2Search">
+			<description>
+				<filter ref="ins2.desc"></filter>
+			</description>
+			<linkText ref="ins2.desc" />
+		</securitySearch>
+
+		<securitySearchResult id="ins1SearchResult1">
+			<instrument ref="ins1.insId.value"/>
+		</securitySearchResult>
+
+		<securitySearchResult id="ins1SearchResult2">
+			<instrument ref="ins2.insId.value"/>
+		</securitySearchResult>
+
+		<assetDefinition id="ac1">
+			<assetName id="ac1.name" random="true" />
+			<status>enabled</status>
+			<category>FI Securities</category>
+			<externalName random="true" />
+			<tolerancePercentage>10</tolerancePercentage>
+			<toleranceAccount>300</toleranceAccount>
+			<toleranceAccountCurrency ref="ccy.usd.name"/>
+		</assetDefinition>
+
+		<assetDefinition id="ac2">
+			<assetName id="ac2.name" random="true" />
+			<status>enabled</status>
+			<category>Equities</category>
+			<externalName random="true" />
+			<tolerancePercentage>20</tolerancePercentage>
+			<toleranceAccount>0.2m</toleranceAccount>
+			<toleranceAccountCurrency ref="ccy.usd.name"/>
+		</assetDefinition>
+
+		<assetDefinition id="at1">
+			<parent>
+				<assetName ref="ac1.name"/>
+			</parent>
+			<assetName id="at1.name" random="true" />
+			<status>enabled</status>
+			<category>FI Securities</category>
+			<holidayCentre ref="hc.hongkong.name" />
+			<currencyOfDenomination ref="ccy.usd.name" />
+		</assetDefinition>
+
+		<assetDefinition id="at2">
+			<parent>
+				<assetName ref="ac2.name"/>
+			</parent>
+			<assetName id="at2.name" random="true" />
+			<status>enabled</status>
+			<category>Equities</category>
+			<holidayCentre ref="hc.hongkong.name" />
+			<currencyOfDenomination ref="ccy.usd.name" />
+		</assetDefinition>
+
+		<agreement id="agr">
+			<principal>
+				<filter ref="org.p1.lname" />
+				<linkText ref="org.p1.lname" />
+			</principal>
+			<counterparty>
+				<filter ref="org.c1.lname" />
+				<linkText ref="org.c1.lname" />
+			</counterparty>
+			<businessLine>Clearing</businessLine>
+			<ccp>ICE</ccp>
+			<agreementDescription id="agr.desc" random="true" />
+			<externalId id="agr.external.id" random="true"/>
+			<agreementDate>T</agreementDate>
+			<rehypothecationRights>true</rehypothecationRights>
+			<rehypothecation>Bilateral</rehypothecation>
+			<priceSource>Default</priceSource>
+			<callFrequency>
+				<legalReviewFrequency>Daily</legalReviewFrequency>
+			</callFrequency>
+			<holidayCentre ref="hc.hongkong.name" />
+			<product>
+				<productName ref="product.test1.name" />
+			</product>
+			<collateralAssetClass>
+				<collateralAssetClassName ref="ac1.name" />
+				<collateralAssetType>
+					<collateralAssetTypeName ref="at1.name" />
+				</collateralAssetType>
+			</collateralAssetClass>
+			<collateralAssetClass>
+				<collateralAssetClassName ref="ac2.name" />
+				<collateralAssetType>
+					<collateralAssetTypeName ref="at2.name" />
+				</collateralAssetType>
+			</collateralAssetClass>
+			<settlementBucket>
+				<bookingType>Net</bookingType>
+				<direction>Call/Return</direction>
+				<bucket>
+					<filter ref="payInstrBucket.vcr.name"/>
+					<linkText ref="payInstrBucket.vcr.name"/>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>Net</bookingType>
+				<direction>Delivery/Recall</direction>
+				<bucket>
+					<filter ref="payInstrBucket.vrd.name"/>
+					<linkText ref="payInstrBucket.vrd.name"/>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>Interest</bookingType>
+				<direction>Pay</direction>
+				<bucket>
+					<filter ref="payInstrBucket.std.name"/>
+					<linkText ref="payInstrBucket.std.name"/>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>Interest</bookingType>
+				<direction>Receive</direction>
+				<bucket>
+					<filter ref="payInstrBucket.std.name"/>
+					<linkText ref="payInstrBucket.std.name"/>
+				</bucket>
+			</settlementBucket>
+			<letterAndDeliveryGroupDetails>
+				<letterDistributionMedium>Email</letterDistributionMedium>
+			</letterAndDeliveryGroupDetails>
+			<agreementStatus>Pending</agreementStatus>
+			<agreementStatus>Approved</agreementStatus>
+			<statementStatus>Pending</statementStatus>
+			<statementStatus>Approved</statementStatus>
+			<agreementId id="ag.id"/>
+		</agreement>
+
+		<agreement id="approveAgreement">
+			<statementStatus>Approved</statementStatus>
+		</agreement>
+
+		<agreementSearch id="searchAgr">
+			<systemId ref="ag.id"/>
+		</agreementSearch>
+
+		<agreementSearchResult id="searchAgrResult">
+			<description ref="agr.desc"/>
+		</agreementSearchResult>
+		
+		<agreementExposureSummary id="agreementSummary1">
+			<productList>
+				<productType ref="product.test1.name"/>
+			</productList>
+		</agreementExposureSummary>
+
+		<tradeDetail id="agrTrade1">
+			<tradeInformation>
+				<tradeDate>T</tradeDate>
+				<effectiveDate>T</effectiveDate>
+				<maturityDate>T+90</maturityDate>
+				<tradeIdentifierPartyA id="agrTrade1.identify" random="true"/>
+				<partyABranchName ref="agrTrade1.identify"/>
+				<partyBBranchName ref="agrTrade1.identify"/>
+			</tradeInformation>
+			<valuationInformation>
+				<principalValuationAmount>
+					<amount>-2m</amount>
+					<currency>USD</currency>
+				</principalValuationAmount>
+				<valuationDate>T</valuationDate>
+			</valuationInformation>
+		</tradeDetail>
+
+
+		<exposureEventDetail id="tickEvent1">
+			<eventId id="event1Id"/>
+			<action>Delivery</action>
+			<agreementRequirement>-2,000,000.00</agreementRequirement>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="tickEvent2">
+			<eventId id="event2Id"/>
+			<action>Delivery</action>
+			<agreementRequirement>-2,000,000.00</agreementRequirement>
+		</exposureEventDetail>
+
+
+
+		<bookingDetail id="makeBulkbooking1">
+			<instrumentSearch>
+				<instrument>
+					<filter ref="ins1.insId.value"/>
+					<linkText ref="ins1.insId.value"/>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>1000300.01</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>save</save>
+			<alertHandling>
+				<accept>true</accept>
+			</alertHandling>
+		</bookingDetail>
+
+		<bookingDetail id="makeBulkbooking2">
+			<instrumentSearch>
+				<instrument>
+					<filter ref="ins2.insId.value"/>
+					<linkText ref="ins2.insId.value"/>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>1000000</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+
+		<bookingDetail id="makeBulkbooking3">
+			<instrumentSearch>
+				<instrument>
+					<filter ref="ins1.insId.value"/>
+					<linkText ref="ins1.insId.value"/>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>1000300</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>save</save>
+			<alertHandling>
+				<accept>true</accept>
+			</alertHandling>
+		</bookingDetail>
+
+		<bookingDetail id="makeBulkbooking4">
+			<instrumentSearch>
+				<instrument>
+					<filter ref="ins2.insId.value"/>
+					<linkText ref="ins2.insId.value"/>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>1000000</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+
+		<bookingDetail id="makeBulkbookingChangeBooking1">
+			<instrumentSearch>
+				<instrument>
+					<filter ref="ins1.insId.value"/>
+					<linkText ref="ins1.insId.value"/>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>1000309</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+		<bookingDetail id="makeBulkbooking4">
+			<instrumentSearch>
+				<instrument>
+					<filter ref="ins2.insId.value"/>
+					<linkText ref="ins2.insId.value"/>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>1000000</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<exposureManagementMessage id="bookingWarning1">
+			<messageDetail>
+				<message>Expected: -2,000,300.00, Actual: -2,000,300.01</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<exposureManagementMessage id="bookingWarning2">
+			<messageDetail>
+				<message>Expected: -2,000,300.00, Actual: -2,000,309.00</message>
+				<overrideWarning>true</overrideWarning>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<assetBookingSummary id="assetBookingSummaryForBooking1">
+			<assetType ref="at1.name"/>
+		</assetBookingSummary>
+
+		<assetBookingSummary id="assetBookingSummaryForBooking2">
+			<nominalAmount>-1,000,309.00</nominalAmount>
+			<movement>Delivery</movement>
+		</assetBookingSummary>
+
+		<assetBookingSummary id="assetBookingSummaryForBooking3">
+			<nominalAmount>-1,000,300.00</nominalAmount>
+			<movement>Delivery</movement>
+		</assetBookingSummary>
+
+		<assetBookingSummary id="assetBookingSummaryForBooking4">
+			<assetType ref="at2.name"/>
+			<nominalAmount>-1,000,000.00</nominalAmount>
+			<movement>Delivery</movement>
+		</assetBookingSummary>
+
+		<bookingDetail id="cancelBooking1">
+			<bookingInformation>
+				<settlementStatusInfo>
+					<settlementStatus>Cancelled</settlementStatus>
+					<settlementComment id="cancelBooking1.settlement.comment" random="true" />
+				</settlementStatusInfo>
+			</bookingInformation>
+			<save>save</save>
+			<alertHandling>
+				<accept>true</accept>
+			</alertHandling>
+		</bookingDetail>
+
+
+		<bookingDetail id="cancelBooking2">
+			<bookingInformation>
+				<settlementStatusInfo>
+					<settlementStatus>Cancelled</settlementStatus>
+					<settlementComment id="cancelBooking2.settlement.comment" random="true" />
+				</settlementStatusInfo>
+			</bookingInformation>
+			<save>save</save>
+			<alertHandling>
+				<accept>true</accept>
+			</alertHandling>
+		</bookingDetail>
+
+		<bookingDetail id="booking3">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>-1,000,300.00</nominalAmount>
+				</bookingInformationDetail>
+				<settlementStatusInfo>
+					<settlementStatus>Query</settlementStatus>
+					<settlementComment id="booking3.settlement.comment" random="true" />
+				</settlementStatusInfo>
+			</bookingInformation>
+			<save>save</save>
+			<alertHandling>
+				<accept>true</accept>
+			</alertHandling>
+		</bookingDetail>
+
+		<feedAssetBooking id="feedBooking">
+			<agreementId ref="ag.id" />
+			<instrumentID ref="ins1.insId.value"/>
+			<parAmount>2030000.00</parAmount>
+			<movement>delivery</movement>
+			<linkToEvent>true</linkToEvent>
+			<Event ref="event1Id"/>
+		</feedAssetBooking>
+
+		<feedResult id="feedBookingResult">
+			<successfullyImported>1</successfullyImported>
+			<unsuccessfulImports>0</unsuccessfulImports>
+		</feedResult>
+	</scenarioData>
+</dataBean>

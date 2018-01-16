@@ -1,0 +1,270 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Colline Report">
+	<parameter name="goldenDir"
+			   value="D:\reprot compare backup\15.1.1.0_aws_new\"/>
+	<parameter name="resultDir"
+			   value="D:\Eclipse Workspace\collina\report-comparison\ReportCompare\ResultData\"/>
+
+	<test name="AHV">
+		<parameter name="folderName" value="AHV" />
+		<parameter name="excludeColumns" value=""/>
+		<parameter name="keyColumns" value="Agreement|Par Amount|Collateral Status|Prc_Payment Instruction Bucket|Asset Type|Instrument ID Type|Instrument ID"/>
+		<classes>
+			<class name="com.lombardrisk.test.SimpleTest" />
+		</classes>
+	</test>
+
+	<test name="AssetManagement">
+		<parameter name="folderName" value="AssetManagement" />
+		<parameter name="excludeColumns" value="" />
+		<parameter name="keyColumns" value="Description|Agreement Id" />
+		<classes>
+			<class name="com.lombardrisk.test.SimpleTest" />
+		</classes>
+	</test>
+
+	<test name="AssetSettlements">
+		<parameter name="folderName" value="AssetSettlements" />
+		<parameter name="excludeColumns" value="" />
+		<parameter name="keyColumns" value="Agreement|Ticket Id" />
+		<classes>
+			<class name="com.lombardrisk.test.SimpleTest" />
+		</classes>
+	</test>
+
+	<test name="ConcentrationLimits">
+		<parameter name="folderName" value="ConcentrationLimits" />
+		<parameter name="excludeColumns" value="" />
+		<parameter name="keyColumns" value="Ticket Id|Agreement Id" />
+		<classes>
+			<class name="com.lombardrisk.test.SimpleTest" />
+		</classes>
+	</test>
+
+	<test name="DailyExposure">
+		<parameter name="folderName" value="DailyExposure" />
+		<parameter name="excludeColumns" value="COB|Event Date" />
+		<parameter name="keyColumns" value="Agreement Id|Event Id" />
+		<classes>
+			<class name="com.lombardrisk.test.SimpleTest" />
+		</classes>
+	</test>
+
+	<test name="DocumentationAgreement">
+		<parameter name="folderName" value="DocumentationAgreement" />
+		<parameter name="excludeColumns" value="" />
+		<parameter name="keyColumns" value="Agreement Id" />
+		<classes>
+			<class name="com.lombardrisk.test.SimpleTest" />
+		</classes>
+	</test>
+
+	<test name="IneligibleAsset">
+		<parameter name="folderName" value="IneligibleAsset" />
+		<parameter name="excludeColumns" value="" />
+		<parameter name="keyColumns" value="Agreement ID|Instrument Id" />
+		<classes>
+			<class name="com.lombardrisk.test.SimpleTest" />
+		</classes>
+	</test>
+
+	<test name="InventoryManager">
+		<parameter name="folderName" value="InventoryManager" />
+		<parameter name="excludeColumns" value="" />
+		<parameter name="keyColumns" value="Instrument Id|Agreement Id" />
+		<classes>
+			<class name="com.lombardrisk.test.SimpleTest" />
+		</classes>
+	</test>
+
+	<test name="ReconciliationTradesOutput">
+		<parameter name="folderName" value="ReconciliationTradesOutput" />
+		<parameter name="excludeColumns" value="" />
+		<parameter name="keyColumns" value="tradeIdentifierPartyA|partyAbranchName|partyBbranchName" />
+		<classes>
+			<class name="com.lombardrisk.test.SimpleTest" />
+		</classes>
+	</test>
+
+	<test name="RehypothecationEligibility">
+		<parameter name="folderName" value="RehypothecationEligibility" />
+		<parameter name="excludeColumns" value="" />
+		<parameter name="keyColumns" value="Instrument ID|Agreement Description" />
+		<classes>
+			<class name="com.lombardrisk.test.SimpleTest" />
+		</classes>
+	</test>
+
+	<test name="RepoTradesOutput">
+		<parameter name="folderName" value="RepoTradesOutput" />
+		<parameter name="excludeColumns" value="Security Accrual Day Count|Cash Accrual Day Count" />
+		<parameter name="keyColumns" value="Trade Identifier Party A|Party A Branch Name|Party B Branch Name" />
+		<classes>
+			<class name="com.lombardrisk.test.SimpleTest" />
+		</classes>
+	</test>
+
+	<test name="SecurityInstruments">
+		<parameter name="folderName" value="SecurityInstruments" />
+		<parameter name="excludeColumns" value="" />
+		<parameter name="keyColumns" value="Instrument ID|Instrument ID Type" />
+		<classes>
+			<class name="com.lombardrisk.test.SimpleTest" />
+		</classes>
+	</test>
+
+	<test name="SettlementInstructions">
+		<parameter name="folderName" value="SettlementInstructions" />
+		<parameter name="excludeColumns" value="" />
+		<parameter name="keyColumns" value="Agreement Id|Asset" />
+		<classes>
+			<class name="com.lombardrisk.test.SimpleTest" />
+		</classes>
+	</test>
+
+	<test name="StpDashboardReport">
+		<parameter name="folderName" value="StpDashboardReport" />
+		<parameter name="excludeColumns" value="" />
+		<parameter name="keyColumns" value="Agreement Id" />
+		<classes>
+			<class name="com.lombardrisk.test.SimpleTest" />
+		</classes>
+	</test>
+
+	<test name="TradesOutput">
+		<parameter name="folderName" value="TradesOutput" />
+		<parameter name="excludeColumns" value="" />
+		<parameter name="keyColumns" value="Trade Identifier Party A|Party A Branch Name|Party B Branch Name" />
+		<classes>
+			<class name="com.lombardrisk.test.SimpleTest" />
+		</classes>
+	</test>
+
+	<test name="Agreements">
+		<parameter name="folderName" value="Agreements" />
+		<parameter name="excludeColumns" value="" />
+		<parameter name="keyColumns" value="Agreement Id" />
+		<classes>
+			<class name="com.lombardrisk.test.SimpleTest" />
+		</classes>
+	</test>
+
+	<test name="HistoricalExposure">
+		<parameter name="folderName" value="HistoricalExposure" />
+		<parameter name="excludeColumns" value="" />
+		<parameter name="keyColumns" value="Agreement ID|History Event Id" />
+		<classes>
+			<class name="com.lombardrisk.test.SimpleTest" />
+		</classes>
+	</test>
+
+	<test name="MIS">
+		<parameter name="folderName" value="MIS" />
+		<parameter name="excludeColumns" value="" />
+		<parameter name="keyColumns" value="Agreements" />
+		<classes>
+			<class name="com.lombardrisk.test.SimpleTest" />
+		</classes>
+	</test>
+
+	<test name="RepoHistoricalExposure">
+		<parameter name="folderName" value="RepoHistoricalExposure" />
+		<parameter name="excludeColumns" value="" />
+		<parameter name="keyColumns" value="Agreement ID|History Event Id" />
+		<classes>
+			<class name="com.lombardrisk.test.SimpleTest" />
+		</classes>
+	</test>
+
+	<test name="RepoDailyExposure">
+		<parameter name="folderName" value="RepoDailyExposure" />
+		<parameter name="excludeColumns" value="Event Date" />
+		<parameter name="keyColumns" value="Agreement Id|Event Id" />
+		<classes>
+			<class name="com.lombardrisk.test.SimpleTest" />
+		</classes>
+	</test>
+
+	<test name="CorporateActions">
+		<parameter name="folderName" value="CorporateActions" />
+		<parameter name="excludeColumns" value="" />
+		<parameter name="keyColumns" value="Instrument Id" />
+		<classes>
+			<class name="com.lombardrisk.test.SimpleTest" />
+		</classes>
+	</test>
+
+	<test name="OrganisationAgreements">
+		<parameter name="folderName" value="OrganisationAgreements" />
+		<parameter name="excludeColumns" value="" />
+		<parameter name="keyColumns" value="PARENT_ID|TYPE" />
+		<classes>
+			<class name="com.lombardrisk.test.SimpleTest" />
+		</classes>
+	</test>
+
+	<test name="EligibilityRulesTemplate">
+		<parameter name="folderName" value="EligibilityRulesTemplate" />
+		<parameter name="excludeColumns" value="" />
+		<parameter name="keyColumns"
+				   value="Applicable Asset Categories|Template|Rule Type|Rule Name|Applicable Party|Applicable Type|Rule From|Rule To|Rating From|Rating To|Method" />
+		<classes>
+			<class name="com.lombardrisk.test.SimpleTest" />
+		</classes>
+	</test>
+
+	<test name="AuditAgreement">
+		<parameter name="folderName" value="AuditAgreement" />
+		<parameter name="excludeColumns" value="" />
+		<parameter name="keyColumns" value="Date|agreementId|Time|Operation|Attribute|Agreement Group" />
+		<classes>
+			<class name="com.lombardrisk.test.SimpleTest" />
+		</classes>
+	</test>
+
+	<test name="AuditAssetDefinition">
+		<parameter name="folderName" value="AuditAssetDefinition" />
+		<parameter name="excludeColumns" value="" />
+		<parameter name="keyColumns" value="Asset Class|Asset|Operation|Attribute|Date|Time" />
+		<classes>
+			<class name="com.lombardrisk.test.SimpleTest" />
+		</classes>
+	</test>
+
+	<test name="AuditAssets">
+		<parameter name="folderName" value="AuditAssets" />
+		<parameter name="excludeColumns" value="" />
+		<parameter name="keyColumns" value="Instrument|Asset Id|Operation|Attribute|Date|Time" />
+		<classes>
+			<class name="com.lombardrisk.test.SimpleTest" />
+		</classes>
+	</test>
+
+	<test name="AuditEligibilityRuleTemplate">
+		<parameter name="folderName" value="AuditEligibilityRuleTemplate" />
+		<parameter name="excludeColumns" value="" />
+		<parameter name="keyColumns" value="Date|Template|Element|Operation|Attribute|Time" />
+		<classes>
+			<class name="com.lombardrisk.test.SimpleTest" />
+		</classes>
+	</test>
+
+	<test name="RepoRejectedTrades">
+		<parameter name="folderName" value="RepoRejectedTrades" />
+		<parameter name="excludeColumns" value="" />
+		<parameter name="keyColumns" value="Product Category|Product|Trade Identifier Party A|" />
+		<classes>
+			<class name="com.lombardrisk.test.SimpleTest" />
+		</classes>
+	</test>
+
+	<test name="OrganisationThreadhold">
+		<parameter name="folderName" value="OrganisationThreadhold" />
+		<parameter name="excludeColumns" value="" />
+		<parameter name="keyColumns" value="Agreement Id|Organisation" />
+		<classes>
+			<class name="com.lombardrisk.test.SimpleTest" />
+		</classes>
+	</test>
+</suite>

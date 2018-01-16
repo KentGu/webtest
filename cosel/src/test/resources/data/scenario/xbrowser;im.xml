@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/xbrowser.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <agreement id="IM.agr1">
+            <principal id="IM.agr1.p1">
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter ref="org.p1.code"/>
+                <linkText ref="org.p1.code"/>
+            </principal>
+            <counterparty id="IM.agr1.c1">
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter ref="org.c1.code"/>
+                <linkText ref="org.c1.code"/>
+            </counterparty>
+            <agreementDescription id="IM.agr1.des" random="true" prefix="IM"/>
+            <agreementDate>T</agreementDate>
+            <!--<sendConfirmationLetterToCounterparty>true</sendConfirmationLetterToCounterparty>-->
+            <callFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </callFrequency>
+            <holidayCentre ref="hc.europe.name"/>
+            <product>
+                <productName ref="product.test1.name"/>
+            </product>
+            <payMethod>Physical Payment</payMethod>
+            <receiveMethod>Physical Payment</receiveMethod>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="cash.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vcr.name"/>
+                    <linkText ref="payInstrBucket.vcr.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vrd.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.pay.name"/>
+                    <linkText ref="payInstrBucket.pay.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.rec.name"/>
+                    <linkText ref="payInstrBucket.rec.name"/>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementStatus>Pending</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <statementStatus>Approved</statementStatus>
+            <agreementId id="IM.agr1.id"/>
+        </agreement>
+
+        <bookingDetail id="IM.cashbooking1">
+            <assetType ref="cash.usd.name" />
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <nominalAmount id="nominal1">1m</nominalAmount>
+                    <movement>Call</movement>
+                </bookingInformationDetail>
+                <settlementDate>T</settlementDate>
+                <settlementDateAlertHandling>
+                    <accept>true</accept>
+                </settlementDateAlertHandling>
+            </bookingInformation>
+            <save>save</save>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </bookingDetail>
+        <assetBookingSummary id="assetType1">
+            <assetType ref="cash.usd.name"/>
+            <!--<nominalAmount>1,000,000.00</nominalAmount>-->
+        </assetBookingSummary>
+
+        <assetBookingSummary id="assetTypeBond">
+            <assetType>qtp_bond_usd</assetType>
+            <!--<nominalAmount>1,000,000.00</nominalAmount>-->
+        </assetBookingSummary>
+        <assetBookingSummary id="bondSummary">
+
+        </assetBookingSummary>
+
+        <assetBookingSummary id="ImBookingSummary1">
+            <!--<assetType ref="cash.usd.name"/>-->
+            <nominalAmount>1,000,000.00</nominalAmount>
+            <status>Pending</status>
+            <!--<status>Authorised</status>-->
+        </assetBookingSummary>
+
+        <bookingDetail id="IM.cashbooking2">
+            <!--<assetType ref="cash.usd.name"/>-->
+            <bookingInformation>
+                <settlementStatusInfo>
+                    <settlementStatus>Authorised</settlementStatus>
+                </settlementStatusInfo>
+                <settlementStatusInfo>
+                    <settlementStatus>Pending Settlement</settlementStatus>
+                </settlementStatusInfo>
+                <settlementStatusInfo>
+                    <settlementStatus>Settled</settlementStatus>
+                </settlementStatusInfo>
+
+            </bookingInformation>
+            <save>save</save>
+            <!--<alertHandling>-->
+                <!--<accept>true</accept>-->
+            <!--</alertHandling>-->
+        </bookingDetail>
+        <bookingDetail id="IM.cashbooking3">
+            <assetType ref="cash.usd.name"/>
+            <bookingInformation>
+                <settlementStatusInfo>
+                    <settlementStatus>Cancelled</settlementStatus>
+                    <settlementComment>cancel</settlementComment>
+                </settlementStatusInfo>
+
+            </bookingInformation>
+            <save>save</save>
+        </bookingDetail>
+
+        <interestEventSearch id="IMsearch">
+            <description>
+                <filter ref="IM.agr1.des"></filter>
+                <linkText ref="IM.agr1.des"/>
+            </description>
+            <month>This Month</month>
+        </interestEventSearch>
+        <interestEventDetail id="IMevent">
+            <description ref="IM.agr1.des"/>
+        </interestEventDetail>
+        <interestEventDetail id="IMevent1">
+            <agreedInterestAmount>-100</agreedInterestAmount>
+        </interestEventDetail>
+        <cashMovementSummary id="cashMovementBookingSummary1">
+            <status>Pending</status>
+        </cashMovementSummary>
+        <cashMovementDetail id="cashMovementBooking1">
+            <settlementStatus>Cancelled</settlementStatus>
+        </cashMovementDetail>
+
+        <agreementSearch id="agmtsearchConditionTEST">
+            <!--<description>-->
+                <!--<filter>IM44531968c85a479db7ffee20cd85a921</filter>-->
+                <!--<linkText>IM44531968c85a479db7ffee20cd85a921</linkText>-->
+            <!--</description>-->
+            <systemId>5503</systemId>
+        </agreementSearch>
+        <agreementSearchResult id="searchresultTEST">
+            <principal>QTPPrincipal</principal>
+            <counterparty>QTPCounterparty</counterparty>
+            <!--<principal ref="org.p1.code" />
+            <counterparty ref="org.c1.code" />
+            <agreementId>504</agreementId> -->
+        </agreementSearchResult>
+        <stpConfigurations id="stpSwitch1">
+            <enableStp>No</enableStp>
+        </stpConfigurations>
+
+    </scenarioData>
+</dataBean>

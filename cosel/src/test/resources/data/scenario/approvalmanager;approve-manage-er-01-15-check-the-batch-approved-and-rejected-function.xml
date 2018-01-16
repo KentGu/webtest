@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/approvalManager.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <approvalManagerEligibilityRulesTemplateSearch id="search.blank.eligibility.rules.template"/>
+
+        <approvalManagerEligibilityRulesTemplateSearch id="search.amended.eligibility.rules.template">
+            <status>Amended</status>
+        </approvalManagerEligibilityRulesTemplateSearch>
+
+        <approvalManagerEligibilityRulesTemplateSearch id="search.rejected.eligibility.rules.template">
+            <status>Rejected</status>
+        </approvalManagerEligibilityRulesTemplateSearch>
+
+        <approvalManagerEligibilityRulesTemplateSearch id="search.deleted.eligibility.rules.template">
+            <status>Deleted</status>
+        </approvalManagerEligibilityRulesTemplateSearch>
+
+        <approvalManagerEligibilityRulesTemplateSearchResult id="search.result.amended.eligibility.rules.template.1">
+            <eligibilityRulesTemplateName id="search.result.amended.eligibility.rules.template.1.name">T24839_Amended_1</eligibilityRulesTemplateName>
+            <status>Amended</status>
+        </approvalManagerEligibilityRulesTemplateSearchResult>
+
+        <approvalManagerEligibilityRulesTemplateSearchResult id="search.result.amended.eligibility.rules.template.2">
+            <eligibilityRulesTemplateName>T24839_Amended_2</eligibilityRulesTemplateName>
+            <status>Amended</status>
+        </approvalManagerEligibilityRulesTemplateSearchResult>
+
+        <approvalManagerEligibilityRulesTemplateSearchResult id="search.result.amended.eligibility.rules.template.3">
+            <eligibilityRulesTemplateName>T24839_Amended_3</eligibilityRulesTemplateName>
+            <status>Amended</status>
+        </approvalManagerEligibilityRulesTemplateSearchResult>
+
+        <approvalManagerEligibilityRulesTemplateSearchResult id="search.result.rejected.eligibility.rules.template.1">
+            <eligibilityRulesTemplateName>T24839_Rejected_1</eligibilityRulesTemplateName>
+            <status>Rejected(Amended)</status>
+        </approvalManagerEligibilityRulesTemplateSearchResult>
+
+        <approvalManagerEligibilityRulesTemplateSearchResult id="search.result.rejected.eligibility.rules.template.2">
+            <eligibilityRulesTemplateName>T24839_Rejected_2</eligibilityRulesTemplateName>
+            <status>Rejected(Amended)</status>
+        </approvalManagerEligibilityRulesTemplateSearchResult>
+
+        <approvalManagerEligibilityRulesTemplateSearchResult id="search.result.deleted.eligibility.rules.template.1">
+            <eligibilityRulesTemplateName id="search.result.deleted.eligibility.rules.template.1.name">T24839_Deleted_1</eligibilityRulesTemplateName>
+            <status>Deleted</status>
+        </approvalManagerEligibilityRulesTemplateSearchResult>
+
+        <approvalManagerEligibilityRulesTemplateSearchResult id="search.result.deleted.eligibility.rules.template.2">
+            <eligibilityRulesTemplateName>T24839_Deleted_2</eligibilityRulesTemplateName>
+            <status>Deleted</status>
+        </approvalManagerEligibilityRulesTemplateSearchResult>
+
+        <approvalManagerEligibilityRulesTemplateSearchResult id="search.result.deleted.eligibility.rules.template.3">
+            <eligibilityRulesTemplateName>T24839_Deleted_3</eligibilityRulesTemplateName>
+            <status>Deleted</status>
+        </approvalManagerEligibilityRulesTemplateSearchResult>
+
+        <approvalManagerEligibilityRulesTemplateSearchResult id="reject.search.amended.eligibility.rules.template.without.reason">
+            <eligibilityRulesTemplateName ref="search.result.amended.eligibility.rules.template.1.name"/>
+            <status>Amended</status>
+            <rejectReason></rejectReason>
+            <alertHandling>
+                <content>^Reject reason is not populated for Template \'T24839_Amended_1\', so not processed$</content>
+                <accept>true</accept>
+            </alertHandling>
+        </approvalManagerEligibilityRulesTemplateSearchResult>
+
+        <approvalManagerEligibilityRulesTemplateSearchResult id="reject.search.deleted.eligibility.rules.template.with.reason">
+            <eligibilityRulesTemplateName ref="search.result.deleted.eligibility.rules.template.1.name"/>
+            <status>Deleted</status>
+            <rejectReason>reject</rejectReason>
+        </approvalManagerEligibilityRulesTemplateSearchResult>
+
+        <approvalManagerEligibilityRulesTemplateSearchResult id="approval.all.search.amended.eligibility.rules.template">
+            <alertHandling>
+                <content>^Do you want to approve all\?$</content>
+                <accept>true</accept>
+            </alertHandling>
+        </approvalManagerEligibilityRulesTemplateSearchResult>
+
+    </scenarioData>
+</dataBean>

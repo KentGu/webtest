@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/exposureManagement.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <loginCredential id="anotherUser">
+            <username>t24083</username>
+            <password>1</password>
+        </loginCredential>
+
+        <agreement id="agr24083.fcm">
+            <agreementId id="agrid">2671</agreementId>
+        </agreement>
+
+        <agreement id="agr24083.LegalReviewStartDate.tPlus5">
+            <nettingIAandMtM>Not-Net</nettingIAandMtM>
+            <vmCallFrequency>
+                <frequencyStart>t+5</frequencyStart>
+            </vmCallFrequency>
+            <imCallFrequency>
+                <frequencyStart>t+5</frequencyStart>
+            </imCallFrequency>
+        </agreement>
+
+        <agreement id="agr24083.approved">
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+        <agreementStatement id="agr24083.statementCheck">
+            <exposureSummary>
+                <itmExposure>1,000,000.00</itmExposure>
+            </exposureSummary>
+            <assetHoldingsSummary>
+                <vmCashBalance>500,000.00</vmCashBalance>
+                <imCashBalance>500,000.00</imCashBalance>
+            </assetHoldingsSummary>
+            <marginCallCalculation>
+                <fcmReq>
+                    <otherCashAdjustmentsPhysical>-2000</otherCashAdjustmentsPhysical>
+                    <totalSettlementAmountPhysical>-5000</totalSettlementAmountPhysical>
+                    <totalInitialCouponPhysical>-2000</totalInitialCouponPhysical>
+                    <upfrontFeePhysical>-1000</upfrontFeePhysical>
+                    <totalSettlementAmount>3000</totalSettlementAmount>
+                    <totalResetToPar>3000</totalResetToPar>
+                    <bankedCoupon>3000</bankedCoupon>
+                    <pai>2000</pai>
+                    <ndfCashflow>1000</ndfCashflow>
+                </fcmReq>
+            </marginCallCalculation>
+        </agreementStatement>
+
+        <exposureEventDetail id="tsa.delivery.5k">
+            <action>Cashflow Delivery(Excess)</action>
+            <callStatus>Pending Review</callStatus>
+            <agreementRequirement>-5,000.00</agreementRequirement>
+            <counterpartyAmount>0.00</counterpartyAmount>
+            <sysCalculatedAmount>5,000.00</sysCalculatedAmount>
+            <userAgreedAmount>5,000.00</userAgreedAmount>
+            <disputeValue>0.00</disputeValue>
+        </exposureEventDetail>
+
+        <internalReviewSearch id="agr24083.searchIR">
+            <agreementId ref="agrid"/>
+        </internalReviewSearch>
+
+        <internalReviewSummary id="vm.call.totalExposureAmount.1m">
+            <action>VM Call(Deficit)</action>
+            <totalExposureAmount>1,000,000.00</totalExposureAmount>
+        </internalReviewSummary>
+
+        <internalReviewSummary apply="false" id="tsa.notDisplay">
+            <action>Cashflow</action>
+        </internalReviewSummary>
+
+        <internalReviewSummary id="im.return.totalExposureAmount.1m">
+            <action>IM Return</action>
+            <totalExposureAmount>1,000,000.00</totalExposureAmount>
+        </internalReviewSummary>
+
+        <externalExposureList id="vm.call.agreementRequirement.503000">
+            <action>VM Call(Deficit)</action>
+            <agreementRequirement>503,000.00</agreementRequirement>
+        </externalExposureList>
+
+        <externalExposureList id="tsa.delivery.agreementRequirement.5k">
+            <tablink>Delivery &amp; Return</tablink>
+            <action>Cashflow Delivery(Excess)</action>
+            <agreementRequirement>-5,000.00</agreementRequirement>
+        </externalExposureList>
+
+        <externalExposureList id="im.return.agreementRequirement.0.5m">
+            <subTablink>Return</subTablink>
+            <action>IM Return</action>
+            <agreementRequirement>-500,000.00</agreementRequirement>
+        </externalExposureList>
+
+        <externalExposureList id="internal.noRecord" variation="noRecord">
+            <tablink>Internal</tablink>
+        </externalExposureList>
+
+        <agreement id="agr24083.LegalReviewStartDate.t">
+            <nettingIAandMtM>Not-Net</nettingIAandMtM>
+            <vmCallFrequency>
+                <frequencyStart>t</frequencyStart>
+            </vmCallFrequency>
+            <imCallFrequency>
+                <frequencyStart>t</frequencyStart>
+            </imCallFrequency>
+        </agreement>
+
+        <agreement id="agr24083.DisabledPending">
+            <agreementStatus>Disabled Pending</agreementStatus>
+        </agreement>
+
+        <agreement id="agr24083.Internal">
+            <agreementStatus>Internal</agreementStatus>
+        </agreement>
+
+        <exposureEventDetail id="tsa.delivery.5k.notDisplay" apply="false">
+            <action>Cashflow Delivery(Excess)</action>
+        </exposureEventDetail>
+
+        <internalReviewSummary id="tsa.delivery.totalExposureAmount.1m">
+            <action>Cashflow Delivery(Excess)</action>
+            <totalExposureAmount>1,000,000.00</totalExposureAmount>
+        </internalReviewSummary>
+
+        <externalExposureList id="internal.vm.call.503000">
+            <tablink>Internal</tablink>
+            <action>VM Call(Deficit)</action>
+            <agreementRequirement>503,000.00</agreementRequirement>
+        </externalExposureList>
+
+        <externalExposureList id="internal.tsa.delivery.5000">
+            <subTablink>DELIVERIES AND RETURNS</subTablink>
+            <action>Cashflow Delivery(Excess)</action>
+            <agreementRequirement>-5,000.00</agreementRequirement>
+        </externalExposureList>
+
+        <externalExposureList id="internal.im.return.0.5m">
+            <action>IM Return</action>
+            <agreementRequirement>-500,000.00</agreementRequirement>
+        </externalExposureList>
+
+        <agreement id="agr24083.fcm.2">
+            <agreementId id="agrid">2672</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="tsa.delivery.5k.check.lrfd.lrfp.notifyBy.resolveBy">
+            <action>Cashflow Delivery(Excess)</action>
+            <agreementRequirement>-5,000.00</agreementRequirement>
+            <lrfd>1st Mon</lrfd>
+            <lrfp>Monthly</lrfp>
+            <notifyBy>10:00 CET</notifyBy>
+            <resolveBy>13:00 CET Next Day</resolveBy>
+        </exposureEventDetail>
+
+    </scenarioData>
+</dataBean>

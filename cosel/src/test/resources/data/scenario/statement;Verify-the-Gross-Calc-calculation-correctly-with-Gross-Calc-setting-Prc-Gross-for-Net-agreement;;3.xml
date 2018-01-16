@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+		<agreement id="agr34554.net.002">
+			<agreementId id="agr34554.1.id">2512</agreementId>
+		</agreement>
+		
+		<agreement id="agr34554.net.prcGross.002">
+			<grossCalc>Prc Gross</grossCalc>
+		</agreement>
+
+		<agreementStatement id="statement.net.prcGross.002">
+			<exposureSummary>
+				<principalPaysIndependentAmount>-1,234,567.00</principalPaysIndependentAmount>
+				<counterpartyPaysIndependentAmount>2,345,678.00</counterpartyPaysIndependentAmount>
+				<itmExposure>5,456,789.00</itmExposure>
+				<otmExposure>-4,567,890.00</otmExposure>
+				<totalExposureAmount>2,000,010.00</totalExposureAmount>
+			</exposureSummary>
+
+			<assetHoldingsSummary>
+				<mktValueOfAssetsHeldByPrincipal>2,512,586.00</mktValueOfAssetsHeldByPrincipal>
+				<adjustedCollateralValuePrincipal>2,512,586.00</adjustedCollateralValuePrincipal>
+				<mktValueOfAssetsHeldByCounterparty>-156,245.00</mktValueOfAssetsHeldByCounterparty>
+				<adjustedCollateralValueCounterparty>-156,245.00</adjustedCollateralValueCounterparty>
+			</assetHoldingsSummary>
+
+			<marginCallSummary>
+				<marginToBeDeliveredToPrincipal>4,290,000.00</marginToBeDeliveredToPrincipal>
+				<marginToBeReturnedByPrincipal>0.00</marginToBeReturnedByPrincipal>
+				<marginToBeDeliveredToCounterparty>0.00</marginToBeDeliveredToCounterparty>
+				<marginToBeReturnedByCounterparty>156,245.00</marginToBeReturnedByCounterparty>
+			</marginCallSummary>
+
+			<marginCallCalculation>
+				<otcOrClearingReq>
+					<principalReq>
+						<!--<mtmExposure>5,456,789.00</mtmExposure>-->
+						<!--<dealLevelIA>2,345,678.00</dealLevelIA>-->
+						<!--<totalExposureAmount>7,802,467.00</totalExposureAmount>-->
+						<!--<principalThreshold>0.00</principalThreshold>-->
+						<!--<counterpartyThreshold>1,000,000.00</counterpartyThreshold>-->
+						<!--<adjustedExposureAmount>6,802,467.00</adjustedExposureAmount>-->
+						<!--<valueofPendingCollateralHeld>2,512,586.00</valueofPendingCollateralHeld>-->
+						<!--<valueofPendingCollateralDelivered>0.00</valueofPendingCollateralDelivered>-->
+						<!--<netMarginRequirement>4,289,881.00</netMarginRequirement>-->
+						<deliveryAmount>4,290,000.00</deliveryAmount>
+						<recallAmount>0.00</recallAmount>
+					</principalReq>
+					<counterpartyReq>
+						<!--<mtmExposure>-4,567,890.00</mtmExposure>-->
+						<!--<dealLevelIA>-1,234,567.00</dealLevelIA>-->
+						<!--<totalExposureAmount>-5,802,457.00</totalExposureAmount>-->
+						<!--<principalThreshold>2,000,000.00</principalThreshold>-->
+						<!--<counterpartyThreshold>0.00</counterpartyThreshold>-->
+						<!--<adjustedExposureAmount>-3,802,457.00</adjustedExposureAmount>-->
+						<!--<valueofPendingCollateralHeld>0.00</valueofPendingCollateralHeld>-->
+						<!--<valueofPendingCollateralDelivered>-156,245.00</valueofPendingCollateralDelivered>-->
+						<!--<netMarginRequirement>-3,646,212.00</netMarginRequirement>-->
+						<deliveryAmount>0.00</deliveryAmount>
+						<recallAmount>156245.00</recallAmount>
+					</counterpartyReq>
+				</otcOrClearingReq>
+			</marginCallCalculation>
+		</agreementStatement>
+
+
+
+
+
+	</scenarioData>
+</dataBean>

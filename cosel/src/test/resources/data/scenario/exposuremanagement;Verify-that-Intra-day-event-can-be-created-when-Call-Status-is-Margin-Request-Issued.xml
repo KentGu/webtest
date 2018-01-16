@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/exposureManagement.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <agreement id="agr11635.otc.net">
+            <agreementId id="agrid">3001</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="call.1m">
+            <action>Call</action>
+            <callStatus>Pending Review</callStatus>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+        </exposureEventDetail>
+
+        <marginLetter id="createCallLetter">
+            <letterType>Margin Call</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <assetHoldingsandValuationReport>true</assetHoldingsandValuationReport>
+                </emailAttachments>
+            </letterSetupDetails>
+        </marginLetter>
+
+        <exposureEventDetail id="call.1m.MarginRequestIssued">
+            <action>Call</action>
+            <callStatus>Margin Request Issued</callStatus>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+        </exposureEventDetail>
+
+         <agreementExposureSummary id="ProductQTP">
+            <productList>
+                <productType>QTP</productType>
+            </productList>
+        </agreementExposureSummary>
+        
+        <tradeDetail id="trade.1m">
+            <tradeInformation>
+                <productType>QTP</productType>
+            </tradeInformation>
+        </tradeDetail>
+
+        <tradeDetail id="trade.2m">
+            <valuationInformation>
+                <principalValuationAmount>2m</principalValuationAmount>
+            </valuationInformation>
+        </tradeDetail>
+
+        <exposureEventDetail id="call.2m.pendingReview">
+            <action>Call</action>
+            <callStatus>Pending Review</callStatus>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+        </exposureEventDetail>
+
+    </scenarioData>
+</dataBean>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <holidayCentre id="audit.holiday.centres.create">
+            <holidayCentreName id="holiday.centre.name" random="true" prefix="holiday_centre_"/>
+            <holidayCentreDescription ref="holiday.centre.name"/>
+            <status>enabled</status>
+            <weekendDay1>Saturday</weekendDay1>
+            <weekendDay2>Wednesday</weekendDay2>
+            <holiday>
+                <date>T</date>
+                <description>holiday1</description>
+                <repeatYears>5</repeatYears>
+            </holiday>
+            <holiday>
+                <date>T+1</date>
+                <description>holiday2</description>
+                <repeatYears>0</repeatYears>
+            </holiday>
+        </holidayCentre>
+
+
+        <auditHolidayCentresReportFilter id="audit.holiday.centre.by.name">
+            <holidayCentre ref="holiday.centre.name"/>
+            <startDate>t-1000</startDate>
+        </auditHolidayCentresReportFilter>
+        <variable id="auditReportPath"/>
+        <reportValidationRules id="audit.holiday.centre.report.rule">
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Holiday Centre</fieldName>
+                    <value ref="holiday.centre.name"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Description</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value ref="holiday.centre.name"/>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Holiday Centre</fieldName>
+                    <value ref="holiday.centre.name"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Name</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value ref="holiday.centre.name"/>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Holiday Centre</fieldName>
+                    <value ref="holiday.centre.name"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Status</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>enabled</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Holiday Centre</fieldName>
+                    <value ref="holiday.centre.name"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>WeekEndDay1</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>Saturday</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Holiday Centre</fieldName>
+                    <value ref="holiday.centre.name"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>WeekEndDay2</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>Wednesday</value>
+                </field>
+            </reportValidationRule>
+
+        </reportValidationRules>
+    </scenarioData>
+</dataBean>

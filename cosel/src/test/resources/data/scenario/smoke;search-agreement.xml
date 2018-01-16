@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xsi:noNamespaceSchemaLocation="http://artifactory.london.lombardrisk.com:8081/artifactory/libs-snapshot-local/com/lombardrisk/cobiz/1.0.0-SNAPSHOT/cobiz-1.0.0-SNAPSHOT.jar!/schemas/dataBean.xsd">
+<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/smoke.xml" xpointer="element(/1/1)"/>
+<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+
+<scenarioData>
+
+    <agreementSearch id = "SmokeAgreementSearch001">
+        <principal>
+            <filter>1224-1</filter>
+            <linkText>1224-1</linkText>
+        </principal>
+        <counterparty>
+            <filter>1224-2</filter>
+            <linkText>1224-2</linkText>
+        </counterparty>
+        <description>
+            <filter>SmokeOTCagr1Desc</filter>
+            <linkText>SmokeOTCagr1Desc</linkText>
+        </description>
+    </agreementSearch>
+
+    <agreementSearchResult id = "SmokeAgreementSearchResult001">
+        <agreementId>64512</agreementId>
+    </agreementSearchResult>
+
+
+    </scenarioData>
+</dataBean>

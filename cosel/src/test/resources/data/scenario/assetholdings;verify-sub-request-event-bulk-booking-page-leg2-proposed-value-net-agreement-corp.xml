@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+
+		<agreementSearch id="search.agreement.by.agreement.description">
+			<description>
+				<filter id="agrDesc1">28053_1</filter>
+			</description>
+		</agreementSearch>
+
+		<agreementSearchResult id="agreement.search.result">
+			<description ref="agrDesc1"/>
+		</agreementSearchResult>
+
+		<substitutionEventSearch id="agr28053_recall">
+			<description>
+				<filter ref="agrDesc1"/>
+				<linkText ref="agrDesc1"/>
+			</description>
+		</substitutionEventSearch>
+
+		<substitutionEventDetail id="bond_usd_delivery_4000000">
+			<instrumentId>bond_usd_28053_1,m1</instrumentId>
+		</substitutionEventDetail>
+
+		<exposureEventDetail id="substitutionRequest.bond.usd.created">
+			<!--<instrumentID>'bond_usd_28053_1,m1',</instrumentID>-->
+			<action>Substitution Request</action>
+			<!--<source>manual</source>-->
+		</exposureEventDetail>
+
+		<bookingDetail id="leg2.delivery.value.0">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>Substitution Request</bookingMovement>
+					<movement>Delivery</movement>
+					<value>0.00</value>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<exposureEventDetail id="substitutionRequest.element.withoutCashGBP">
+			<action>Substitution Request</action>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="substitutionRequest.element.addCashGBP">
+			<action>Substitution Request</action>
+			<instrumentID>CASH-GBP</instrumentID>
+		</exposureEventDetail>
+
+		<bookingDetail id="leg1.Recall.bond.usd.notional.1m">
+			<instrumentSearch>
+				<instrument>
+					<filter>bond_usd_28053_1,m1</filter>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail clickPlusButton="true">
+					<bookingMovement>Substitution Request</bookingMovement>
+					<movement>Recall</movement>
+					<nominalAmount>1m</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="leg2.delivery.value.0.8m">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>Substitution Request</bookingMovement>
+					<movement>Delivery</movement>
+					<value>-800,000.00</value>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="leg1.Recall.cash.usd.value.1m.apply">
+			<instrumentSearch>
+				<instrument>
+					<filter>CASH-GBP</filter>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail clickApplyButton="true">
+					<bookingMovement>Substitution Request</bookingMovement>
+					<bookingNumber>1.3</bookingNumber>
+					<value>1m</value>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="leg2.delivery.value.1.8m">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>Substitution Request</bookingMovement>
+					<movement>Delivery</movement>
+					<value>-1,800,000.00</value>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="leg2.delivery.cash.usd.notional.1m">
+			<instrumentSearch>
+				<instrument>
+					<filter>CASH-USD</filter>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail clickPlusButton="true">
+					<bookingMovement>Substitution Request</bookingMovement>
+					<nominalAmount>1m</nominalAmount>
+					<movement>Delivery</movement>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="leg2.delivery.value.SecondBooking.0.8m">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>Substitution Request</bookingMovement>
+					<bookingNumber>1.4</bookingNumber>
+					<value>-800,000.00</value>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="leg2.recall.bond.usd.nominalAmount.2m.update">
+			<instrumentSearch>
+				<instrument>
+					<filter>bond_usd_28053_1,m1</filter>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>Substitution Request</bookingMovement>
+					<bookingNumber>1.1</bookingNumber>
+					<nominalAmount>2m</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="leg2.delivery.value.SecondBooking.1.6m">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>Substitution Request</bookingMovement>
+					<bookingNumber>1.4</bookingNumber>
+					<!--<movement>Delivery</movement>-->
+					<value>-1,600,000.00</value>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="leg2.delivery.value.SecondBooking.bond.gbp.update">
+			<instrumentSearch>
+				<instrument>
+					<filter>bond_gbp_28053_2,m2</filter>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail clickApplyButton="true">
+					<bookingMovement>Substitution Request</bookingMovement>
+					<bookingNumber>1.4</bookingNumber>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="leg2.delivery.SecondBooking.value.0m.FirstBooking.value.1.8m">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>Substitution Request</bookingMovement>
+					<bookingNumber>1.2</bookingNumber>
+					<!--<movement>Delivery</movement>-->
+					<value>-1,800,000.00</value>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>Substitution Request</bookingMovement>
+					<bookingNumber>1.4</bookingNumber>
+					<!--<movement>Delivery</movement>-->
+					<value>0</value>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="leg1.recall.bond.usd.delete.And.leg2.delivery.addThirdBooking">
+			<bookingInformation>
+				<bookingInformationDetail clickDeleteButton="true">
+					<bookingMovement>Substitution Request</bookingMovement>
+					<bookingNumber>1.1</bookingNumber>
+				</bookingInformationDetail>
+				<bookingInformationDetail clickPlusButton="true">
+					<bookingMovement>Substitution Request</bookingMovement>
+					<bookingNumber>1.4</bookingNumber>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="leg2.delivery.ThirdBooking.value.1.6m.SecondBooking.value.0m">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>Substitution Request</bookingMovement>
+					<bookingNumber>1.4</bookingNumber>
+					<!--<movement>Delivery</movement>-->
+					<value>0</value>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>Substitution Request</bookingMovement>
+					<bookingNumber>1.5</bookingNumber>
+					<!--<movement>Delivery</movement>-->
+					<value>1,600,000.00</value>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="leg2.delivery.cash.usd.nominalValue.2m.update">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>Substitution Request</bookingMovement>
+					<bookingNumber>1.2</bookingNumber>
+					<nominalAmount>2m</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="leg2.delivery.ThirdBooking.value.2.6m">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>Substitution Request</bookingMovement>
+					<bookingNumber>1.5</bookingNumber>
+					<!--<movement>Delivery</movement>-->
+					<value>2,600,000.00</value>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="leg2.delivery.cash.usd.delete">
+			<bookingInformation>
+				<bookingInformationDetail clickDeleteButton="true">
+					<bookingMovement>Substitution Request</bookingMovement>
+					<bookingNumber>1.2</bookingNumber>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="leg2.delivery.ThirdBooking.value.0.6m">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>Substitution Request</bookingMovement>
+					<bookingNumber>1.5</bookingNumber>
+					<!--<movement>Delivery</movement>-->
+					<value>600,000.00</value>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<exposureManagementMessage id="warning.message.leg1Andleg2NotEqual.Difference.0.6m">
+			<messageDetail>
+				<index>1</index>
+				<message>The collateral booking cannot be completed. The net value of items booked for delivery is not equal to receipt. The difference is 600,000.00.</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<exposureManagementMessage id="overrideWarning">
+			<messageDetail>
+				<index>1</index>
+				<overrideWarning>true</overrideWarning>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<exposureEventDetail id="subsitutionRequest.PartiallyBooked.leg1.1m.leg2.1.6m">
+			<action>Substitution Request</action>
+			<callStatus>Partially Booked </callStatus>
+			<bookedAmountFirstLeg>1,000,000.00</bookedAmountFirstLeg>
+			<bookedAmountSecondLeg>-1,600,000.00</bookedAmountSecondLeg>
+		</exposureEventDetail>
+
+		<bookingDetail id="leg2.delivery.firstBooking.value.0m">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>Substitution Request</bookingMovement>
+					<movement>Recall</movement>
+					<value>0.00</value>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="leg2.delivery.value.SecondBooking.bond.gbp.update">
+			<instrumentSearch>
+				<instrument>
+					<filter>bond_usd_28053_1,m1</filter>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>Substitution Request</bookingMovement>
+					<movement>Recall</movement>
+					<requiredAmount>0.00</requiredAmount>
+					<nominalAmount>2m</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="leg1.recall.bond.usd.nominalAmount.2m">
+			<instrumentSearch>
+				<instrument>
+					<filter>bond_usd_28053_1,m1</filter>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>Substitution Request</bookingMovement>
+					<movement>Recall</movement>
+					<requiredAmount>0.00</requiredAmount>
+					<nominalAmount>2m</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="leg2.delivery.cash.usd.nominalAmount.2m">
+			<instrumentSearch>
+				<instrument>
+					<filter>CASH-USD</filter>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>Substitution Request</bookingMovement>
+					<movement>Delivery</movement>
+					<requiredAmount>0.00</requiredAmount>
+					<nominalAmount>2m</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<exposureManagementMessage id="warning.message.leg1Andleg2NotEqual.Difference.1m">
+			<messageDetail>
+				<index>1</index>
+				<message>The collateral booking cannot be completed. The net value of items booked for delivery is not equal to receipt. The difference is 1,000,000.00.</message>
+			</messageDetail>
+		</exposureManagementMessage>
+	</scenarioData>
+</dataBean>

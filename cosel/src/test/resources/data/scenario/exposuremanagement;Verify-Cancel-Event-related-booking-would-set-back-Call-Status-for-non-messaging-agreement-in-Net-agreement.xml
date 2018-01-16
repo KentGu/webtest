@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/exposureManagement.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <agreement id="agr22474.otc.net">
+            <agreementId id="agrid">2585</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="delivery.requirementAmount.4800000.pendingReview">
+            <action>Delivery</action>
+            <agreementRequirement>-4,800,000.00</agreementRequirement>
+            <sysCalculatedAmount>4,800,000.00</sysCalculatedAmount>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+        
+        <bookingDetail id="cash.usd.0.1m">
+            <instrumentSearch>
+                <instrument>
+                    <filter>CASH-USD</filter>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail clickPlusButton="true">
+                    <nominalAmount>0.1m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="cash.usd.0.2m">
+            <instrumentSearch>
+                <instrument>
+                    <filter ref="cash.usd1.name"/>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail clickPlusButton="true">
+                    <nominalAmount>0.2m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="cash.usd.4.5m">
+            <instrumentSearch>
+                <instrument>
+                    <filter>CASH-USD</filter>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <nominalAmount>4.5m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <exposureEventDetail id="delivery.requirementAmount.4800000.completed">
+            <action>Delivery</action>
+            <agreementRequirement>-4,800,000.00</agreementRequirement>
+            <sysCalculatedAmount>4,800,000.00</sysCalculatedAmount>
+            <callStatus>Completed</callStatus>
+        </exposureEventDetail>
+
+        <assetBookingSummary id="asset.type.CASH.USD">
+            <assetType ref="cash.usd1.name"/>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="booking.delivery.0.1m">
+            <assetType ref="cash.usd1.name"/>
+            <movement>Delivery</movement>
+            <nominalAmount>-100,000.00</nominalAmount>
+            <status>Pending</status>
+        </assetBookingSummary>
+
+        <bookingDetail id="booking.delivery.0.1m.ChangeToCancelled">
+            <bookingInformation>
+                <settlementStatusInfo>
+                    <settlementStatus>Cancelled</settlementStatus>
+                    <settlementComment random="true"/>
+                </settlementStatusInfo>
+            </bookingInformation>
+            <save>save</save>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </bookingDetail>
+
+        <assetBookingSummary id="booking.delivery.0.1m.cancelled">
+            <assetType ref="cash.usd1.name"/>
+            <movement>Delivery</movement>
+            <nominalAmount>-100,000.00</nominalAmount>
+            <status>Cancelled</status>
+        </assetBookingSummary>
+
+        <exposureEventDetail id="delivery.requirementAmount.4800000.completed.AdjustedCollateralValue.4700000">
+            <action>Delivery</action>
+            <agreementRequirement>-4,800,000.00</agreementRequirement>
+            <sysCalculatedAmount>4,800,000.00</sysCalculatedAmount>
+            <adjustedCollateralValue>-4,700,000.00</adjustedCollateralValue>
+            <callStatus>Completed</callStatus>
+        </exposureEventDetail>
+
+        <assetBookingSummary id="booking.delivery.0.2m">
+            <assetType ref="cash.usd1.name"/>
+            <movement>Delivery</movement>
+            <nominalAmount>-200,000.00</nominalAmount>
+            <status>Pending</status>
+        </assetBookingSummary>
+
+        <bookingDetail id="booking.delivery.0.2m.ChangeToCancelled">
+            <bookingInformation>
+                <settlementStatusInfo>
+                    <settlementStatus>Cancelled</settlementStatus>
+                    <settlementComment random="true"/>
+                </settlementStatusInfo>
+            </bookingInformation>
+            <save>save</save>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </bookingDetail>
+
+        <assetBookingSummary id="booking.delivery.0.2m.cancelled">
+            <assetType ref="cash.usd1.name"/>
+            <movement>Delivery</movement>
+            <nominalAmount>-200,000.00</nominalAmount>
+            <status>Cancelled</status>
+        </assetBookingSummary>
+
+        <exposureEventDetail id="delivery.requirementAmount.4800000.MarginRequestConfirmed.AdjustedCollateralValue.4500000">
+            <action>Delivery</action>
+            <agreementRequirement>-4,800,000.00</agreementRequirement>
+            <sysCalculatedAmount>4,800,000.00</sysCalculatedAmount>
+            <adjustedCollateralValue>-4,500,000.00</adjustedCollateralValue>
+            <callStatus>Margin Request Confirmed</callStatus>
+        </exposureEventDetail>
+
+    </scenarioData>
+</dataBean>

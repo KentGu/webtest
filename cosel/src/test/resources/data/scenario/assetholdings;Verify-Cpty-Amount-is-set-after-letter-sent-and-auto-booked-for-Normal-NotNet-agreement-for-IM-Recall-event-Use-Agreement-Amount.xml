@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+
+		<agreement id="agr13993.fcm">
+			<agreementId id="agr13993.id">2567</agreementId>
+		</agreement>
+
+		<exposureEventDetail id="vm.delivery.1m">
+			<action>VM Delivery(Excess)</action>
+			<agreementRequirement>-1,000,000.00</agreementRequirement>
+		</exposureEventDetail>
+
+		<marginLetter id="createDeliveryLetter">
+			<letterType>VM Delivery</letterType>
+			<letterSetupDetails>
+				<emailAttachments>
+					<assetHoldingsandValuationReport>true</assetHoldingsandValuationReport>
+				</emailAttachments>
+			</letterSetupDetails>
+		</marginLetter>
+
+		<assetBookingSummary id="asset.type.CASH.USD">
+			<assetType ref="cash.usd1.name"/>
+		</assetBookingSummary>
+
+		<assetBookingSummary id="delivery.vm.autoBook.pending.1m.added">
+			<!--<assetType ref="cash.usd1.name"/>-->
+			<movement>Delivery</movement>
+			<status>Pending</status>
+			<nominalAmount>-1,000,000.00</nominalAmount>
+			<vmMarketValue>-1,000,000.00</vmMarketValue>
+			<bookingSource>Auto Book</bookingSource>
+		</assetBookingSummary>
+
+
+		<exposureEventDetail id="vm.delivery.1m.completed.counterpartyAmount.-1m">
+			<action>VM Delivery(Excess)</action>
+			<counterpartyAmount>-1,000,000.00</counterpartyAmount>
+			<callStatus>Completed</callStatus>
+		</exposureEventDetail>
+
+
+
+	</scenarioData>
+</dataBean>

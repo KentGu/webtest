@@ -1,0 +1,8 @@
+pre#ORG_UPDATED#update orgheader set status=69
+pre#ORG_NEED_APPR_BEFORE#select count(*) from orgheader where status =69
+
+post#ORG_NEED_APPR_AFTER#select count(*) from orgheader where status =69
+
+val#1#${ORG_UPDATED} -ge 0
+val#2#${ORG_NEED_APPR_BEFORE} -ge ${ORG_UPDATED}
+val#3#${ORG_NEED_APPR_AFTER} -eq 0

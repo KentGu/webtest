@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <instrument id="new-USD-Bond-instrument">
+            <assetClass>qtp_bond</assetClass>
+            <assetType>qtp_bond_usd</assetType>
+            <assetClassification>
+            <assetClassificationName>classification_2590</assetClassificationName>
+            <assetcategory>class_A</assetcategory>
+            </assetClassification>
+            <instrumentId>
+            <value id="bondinstrument.id" random="true" prefix="1_"/>
+            </instrumentId>
+            <market>USA</market>
+            <description id="bondinstrument.des" random="false" prefix="bondinstrument.des"/>
+            <issuer>
+            <filter>QTP_Eligible_Issuer4</filter>
+            <linkText>QTP_Eligible_Issuer4</linkText>
+            </issuer>
+            <priceSource>
+            <priceSourceName ref="ps.default.name"/>
+            <cleanPrice>1m</cleanPrice>
+            <priceLevel>Mid</priceLevel>
+            <lastPriceChange>T</lastPriceChange>
+            <priceDate>T</priceDate>
+            </priceSource>
+            <maturityDate>T+100</maturityDate>
+            <couponRate>10</couponRate>
+            <recordDate>T</recordDate>
+            <issueDate>T</issueDate>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <securitySearch id="SecuritySearch">
+            <instrument>
+            <type>Starting with</type>
+            <filter ref="bondinstrument.id"/>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="SearchSecurity">
+            <instrument ref="bondinstrument.id"/>
+        </securitySearchResult>
+
+        <securitySearchResult id="SearchWillBeApproved">
+            <instrument ref="bondinstrument.id"/>
+        </securitySearchResult>
+
+        <instrument id="instrument.Status.Approved">
+            <securityStatus>Approved</securityStatus>
+        </instrument>
+
+        <instrument id="instrument.Status.Amended">
+            <securityStatus>Amended</securityStatus>
+        </instrument>
+
+        <!--Agreements-->
+
+        <agreement id="agreement-1-Search">
+            <agreementId id="agrid-1">3004</agreementId>
+        </agreement>
+
+        <agreementSearchResult id="agreement-1-Search-Result">
+            <agreementId ref="agrid"/>
+        </agreementSearchResult>
+
+        <exposureEventDetail id="bond.delivery.agreementRequirement.1m">
+            <action>VM Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <disputeValue>0.00</disputeValue>
+            <counterpartyAmount>0.00</counterpartyAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="call.completed">
+            <action>VM Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <assetBookingSummary id="qtp_bond">
+            <assetType>qtp_bond_usd</assetType>
+        </assetBookingSummary>
+
+        <bookingDetail id="qtp_bond_Instrument_Search">
+            <instrumentSearch>
+            <instrumentId>
+            <type>Exactly matching</type>
+            <filter ref="bondinstrument.id"/>
+            </instrumentId>
+            <linkText ref="bondinstrument.id"></linkText>
+            </instrumentSearch>
+            <bookingInformation>
+            <bookingInformationDetail>
+            <imAmount>1m</imAmount>
+            <settlementDate>T+100</settlementDate>
+            </bookingInformationDetail>
+            </bookingInformation>
+            <alertHandling>
+            <display>true</display>
+            <context>A corporate action is due in 0 day(s). Do you wish to proceed?</context>
+            <accept>true</accept>
+            </alertHandling>
+            <alertHandling>
+            <display>true</display>
+            <accept>true</accept>
+            </alertHandling>
+            <save>saveAndComplete</save>
+        </bookingDetail>
+
+        <instrument id="bond.edit.Security">
+            <assetType>qtp_bond_gbp</assetType>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <instrument id="dependencies.check.validationError">
+            <validationError>
+            <context>Cannot Change Asset Type, it has the following dependencies on 'Agreement Bookings': Dependent AgreementId: 3004. The agreement is not eligible for Asset qtp_bond_gbp.</context>
+            </validationError>
+        </instrument>
+
+        <instrument id="bond.edit.Security">
+            <assetType>qtp_bond_usd</assetType>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <assetBookingSummary id="qtp_bond_usd">
+            <assetType ref="bondinstrument.id"/>
+        </assetBookingSummary>
+<!--pending to Authorised-->
+        <assetBookingSummary id="booking.Pending">
+            <assetType>qtp_bond_usd</assetType>
+            <instrumentId ref="bondinstrument.id"/>
+            <movement>Call</movement>
+            <nominalAmount>1,000,000.00</nominalAmount>
+            <status>Pending</status>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="booking.Pending.Authorised">
+            <assetType>qtp_bond_usd</assetType>
+            <instrumentId ref="bondinstrument.id"/>
+            <movement>Call</movement>
+            <nominalAmount>1,000,000.00</nominalAmount>
+            <status>Pending</status>
+        </assetBookingSummary>
+
+        <bookingDetail id="booking.status.Pending.to.Authorised">
+            <bookingInformation>
+            <settlementStatusInfo>
+            <settlementStatus>Authorised</settlementStatus>
+            <!--<settlementComment random="false" prefix="Authorised"/>-->
+            </settlementStatusInfo>
+            </bookingInformation>
+            <save>saveAndNext</save>
+            <alertHandling>
+            <accept>true</accept>
+            </alertHandling>
+        </bookingDetail>
+
+<!--Pending Settlement-->
+        <assetBookingSummary id="Status_should_Be_Authorised">
+            <assetType>qtp_bond_usd</assetType>
+            <movement>Call</movement>
+            <nominalAmount>1,000,000.00</nominalAmount>
+            <status>Authorised</status>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="booking.Authorised.to.Settlement">
+            <assetType>qtp_bond_usd</assetType>
+            <instrumentId ref="bondinstrument.id"/>
+            <movement>Call</movement>
+            <nominalAmount>1,000,000.00</nominalAmount>
+            <status>Authorised</status>
+        </assetBookingSummary>
+
+        <bookingDetail id="booking.status.Pending.Settlement">
+            <bookingInformation>
+            <settlementStatusInfo>
+            <settlementStatus>Pending Settlement</settlementStatus>
+            <!--<settlementComment random="false" prefix="Authorised"/>-->
+            </settlementStatusInfo>
+            </bookingInformation>
+            <save>saveAndNext</save>
+            <alertHandling>
+            <accept>true</accept>
+            </alertHandling>
+        </bookingDetail>
+
+        <assetBookingSummary id="Status_should_Be_Pending_Settlement">
+            <assetType>qtp_bond_usd</assetType>
+            <movement>Call</movement>
+            <nominalAmount>1,000,000.00</nominalAmount>
+            <status>Pending Settlement</status>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="booking.call.Authorised">
+            <assetType ref="qtp_bond_usd"/>
+            <instrumentId ref="bondinstrument.id"/>
+            <movement>Call</movement>
+            <nominalAmount>1,000,000.00</nominalAmount>
+            <status>Authorised</status>
+        </assetBookingSummary>
+
+        <exposureEventDetail id="call.completed.Pending">
+            <action>VM Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <sysCalculatedAmount>1,000,000.00</sysCalculatedAmount>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <assetBookingSummary id="booking.Outstanding.to.Settlement">
+        <assetType>qtp_bond_usd</assetType>
+        <instrumentId ref="bondinstrument.id"/>
+        <movement>Call</movement>
+        <nominalAmount>1,000,000.00</nominalAmount>
+        <status>Pending Settlement</status>
+    </assetBookingSummary>
+
+        <bookingDetail id="booking.status.Outstanding.Settlement">
+            <bookingInformation>
+            <settlementStatusInfo>
+            <settlementStatus>Outstanding Settlement</settlementStatus>
+            <!--<settlementComment random="false" prefix="Authorised"/>-->
+            </settlementStatusInfo>
+            </bookingInformation>
+            <save>saveAndNext</save>
+            <alertHandling>
+            <accept>true</accept>
+            </alertHandling>
+        </bookingDetail>
+
+        <assetBookingSummary id="booking.Outstanding.to.Failed">
+            <assetType>qtp_bond_usd</assetType>
+            <instrumentId ref="2-Instrument-test"/>
+            <movement>Call</movement>
+            <nominalAmount>1,000,000.00</nominalAmount>
+            <status>Outstanding Settlement</status>
+        </assetBookingSummary>
+
+        <bookingDetail id="booking.status.Failed">
+            <bookingInformation>
+            <settlementStatusInfo>
+            <settlementStatus>Failed</settlementStatus>
+            <settlementComment>anything</settlementComment>
+            </settlementStatusInfo>
+            </bookingInformation>
+            <save>saveAndNext</save>
+            <alertHandling>
+            <accept>true</accept>
+            </alertHandling>
+        </bookingDetail>
+
+        <!--second Instrument-->
+
+        <instrument id="2-USD-Bond-instrument">
+            <assetClass>qtp_bond</assetClass>
+            <assetType>qtp_bond_usd</assetType>
+            <assetClassification>
+            <assetClassificationName>classification_2590</assetClassificationName>
+            <assetcategory>class_A</assetcategory>
+            </assetClassification>
+            <instrumentId>
+            <value id="2bondinstrument.id" random="true" prefix="2"/>
+            </instrumentId>
+            <market>USA</market>
+            <description id="bondinstrument.des" random="false" prefix="bondinstrument.des"/>
+            <issuer>
+            <filter>QTP_Eligible_Issuer4</filter>
+            <linkText>QTP_Eligible_Issuer4</linkText>
+            </issuer>
+            <priceSource>
+            <priceSourceName ref="ps.default.name"/>
+            <cleanPrice>1m</cleanPrice>
+            <priceLevel>Mid</priceLevel>
+            <lastPriceChange>T</lastPriceChange>
+            <priceDate>T</priceDate>
+            </priceSource>
+            <maturityDate>T+100</maturityDate>
+            <couponRate>10</couponRate>
+            <recordDate>T</recordDate>
+            <issueDate>T</issueDate>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <securitySearch id="SecuritySearch-2">
+            <instrument>
+            <type>Starting with</type>
+            <filter ref="2bondinstrument.id"/>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="SearchSecurity-2">
+            <instrument ref="2bondinstrument.id"/>
+        </securitySearchResult>
+
+        <securitySearchResult id="SearchWillBeApproved-2">
+            <instrument ref="2bondinstrument.id"/>
+        </securitySearchResult>
+
+        <instrument id="instrument.Status.Approved-2">
+            <securityStatus>Approved</securityStatus>
+        </instrument>
+
+        <bookingDetail id="2-qtp_bond_Instrument_Search">
+            <instrumentSearch>
+            <instrumentId>
+            <type>Exactly matching</type>
+            <filter ref="2bondinstrument.id"/>
+            </instrumentId>
+            <linkText ref="2bondinstrument.id"></linkText>
+            </instrumentSearch>
+            <bookingInformation>
+            <bookingInformationDetail>
+            <imAmount>1m</imAmount>
+            <settlementDate>T+100</settlementDate>
+            </bookingInformationDetail>
+            </bookingInformation>
+            <alertHandling>
+            <display>true</display>
+            <context>A corporate action is due in 0 day(s). Do you wish to proceed?</context>
+            <accept>true</accept>
+            </alertHandling>
+            <alertHandling>
+            <display>true</display>
+            <accept>true</accept>
+            </alertHandling>
+            <save>saveAndComplete</save>
+        </bookingDetail>
+
+        <instrument id="bond.edit.Security-2">
+            <assetType>qtp_bond_gbp</assetType>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <assetBookingSummary id="qtp_bond_usd">
+            <assetType ref="2bondinstrument.id"/>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="booking.Cancelled">
+            <assetType>qtp_bond_usd</assetType>
+            <instrumentId ref="2bondinstrument.id"/>
+            <movement>Call</movement>
+            <nominalAmount>1,000,000.00</nominalAmount>
+        </assetBookingSummary>
+
+        <bookingDetail id="booking.status.Cancelled">
+            <bookingInformation>
+            <settlementStatusInfo>
+            <settlementStatus>Cancelled</settlementStatus>
+            <settlementComment>anything</settlementComment>
+            </settlementStatusInfo>
+            </bookingInformation>
+            <save>saveAndNext</save>
+            <alertHandling>
+            <accept>true</accept>
+            </alertHandling>
+        </bookingDetail>
+
+        <!--Cancel and Rebook-->
+
+        <instrument id="3-USD-Bond-instrument">
+            <assetClass>qtp_bond</assetClass>
+            <assetType>qtp_bond_usd</assetType>
+            <assetClassification>
+            <assetClassificationName>classification_2590</assetClassificationName>
+            <assetcategory>class_A</assetcategory>
+            </assetClassification>
+            <instrumentId>
+            <value id="3bondinstrument.id" random="true" prefix="3"/>
+            </instrumentId>
+            <market>USA</market>
+            <description id="bondinstrument.des" random="false" prefix="bondinstrument.des"/>
+            <issuer>
+            <filter>QTP_Eligible_Issuer4</filter>
+            <linkText>QTP_Eligible_Issuer4</linkText>
+            </issuer>
+            <priceSource>
+            <priceSourceName ref="ps.default.name"/>
+            <cleanPrice>1m</cleanPrice>
+            <priceLevel>Mid</priceLevel>
+            <lastPriceChange>T</lastPriceChange>
+            <priceDate>T</priceDate>
+            </priceSource>
+            <maturityDate>T+100</maturityDate>
+            <couponRate>10</couponRate>
+            <recordDate>T</recordDate>
+            <issueDate>T</issueDate>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <securitySearch id="SecuritySearch-3">
+            <instrument>
+            <type>Starting with</type>
+            <filter ref="3bondinstrument.id"/>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="SearchSecurity-3">
+            <instrument ref="3bondinstrument.id"/>
+        </securitySearchResult>
+
+        <securitySearchResult id="SearchWillBeApproved-3">
+            <instrument ref="3bondinstrument.id"/>
+        </securitySearchResult>
+
+        <instrument id="instrument.Status.Approved-3">
+            <securityStatus>Approved</securityStatus>
+        </instrument>
+
+        <bookingDetail id="3-qtp_bond_Instrument_Search">
+            <instrumentSearch>
+            <instrumentId>
+            <type>Exactly matching</type>
+            <filter ref="3bondinstrument.id"/>
+            </instrumentId>
+            <linkText ref="3bondinstrument.id"></linkText>
+            </instrumentSearch>
+            <bookingInformation>
+            <bookingInformationDetail>
+            <imAmount>1m</imAmount>
+            <settlementDate>T+100</settlementDate>
+            </bookingInformationDetail>
+            </bookingInformation>
+            <alertHandling>
+            <display>true</display>
+            <context>A corporate action is due in 0 day(s). Do you wish to proceed?</context>
+            <accept>true</accept>
+            </alertHandling>
+            <alertHandling>
+            <display>true</display>
+            <accept>true</accept>
+            </alertHandling>
+            <save>saveAndComplete</save>
+        </bookingDetail>
+
+        <instrument id="bond.edit.Security-3">
+            <assetType>qtp_bond_gbp</assetType>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <assetBookingSummary id="qtp_bond_usd">
+            <assetType ref="3bondinstrument.id"/>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="booking.Pending.Authorised-3">
+            <assetType>qtp_bond_usd</assetType>
+            <instrumentId ref="3bondinstrument.id"/>
+            <movement>Call</movement>
+            <nominalAmount>1,000,000.00</nominalAmount>
+            <status>Pending</status>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="booking.Authorised.to.Settlement-3">
+            <assetType>qtp_bond_usd</assetType>
+            <instrumentId ref="3bondinstrument.id"/>
+            <movement>Call</movement>
+            <nominalAmount>1,000,000.00</nominalAmount>
+            <status>Authorised</status>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="Authorised-to-Pending-settlement">
+            <assetType>qtp_bond_usd</assetType>
+            <instrumentId ref="3bondinstrument.id"/>
+            <movement>Call</movement>
+            <nominalAmount>1,000,000.00</nominalAmount>
+            <status>Authorised</status>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="Settled">
+            <assetType>qtp_bond_usd</assetType>
+            <instrumentId ref="3bondinstrument.id"/>
+            <movement>Call</movement>
+            <nominalAmount>1,000,000.00</nominalAmount>
+            <status>Pending Settlement</status>
+        </assetBookingSummary>
+
+        <bookingDetail id="booking.status.Settled">
+            <bookingInformation>
+            <settlementStatusInfo>
+            <settlementStatus>Settled</settlementStatus>
+            <!--<settlementComment>anything</settlementComment>-->
+            </settlementStatusInfo>
+            </bookingInformation>
+            <save>saveAndNext</save>
+            <alertHandling>
+            <accept>true</accept>
+            </alertHandling>
+        </bookingDetail>
+
+    </scenarioData>
+</dataBean>

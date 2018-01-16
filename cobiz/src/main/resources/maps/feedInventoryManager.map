@@ -1,0 +1,22 @@
+#format as below
+#xml element name = {xls header name = xls value type, ...}
+InstID={InstID=string}
+Market={Market=string}
+Book={Book=string}
+PartyA={PartyA=string}
+PartyABranch={PartyABranch=string}
+PartyB={PartyB=string}
+SettLoc={SettLoc=string}
+Account={Account=string}
+operation={operation=string}
+isCash={isCash=boolean}
+Rehypo={Rehypo=boolean}
+Rehypothecated={Rehypothecated=string}
+assetOwner={assetOwner=string}
+inventoryDeliveryGroup={inventoryDeliveryGroup=string}
+#PositionNotional
+#RelativeDay={RelativeDay=string}
+#Notional={Notional=string}
+#BookingUDFFields
+#udfName={udfName=string}
+#udfValue={udfValue=string}

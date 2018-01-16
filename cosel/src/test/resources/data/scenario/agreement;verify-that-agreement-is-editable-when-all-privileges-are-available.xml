@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/agreement.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+
+		<loginCredential id="privilege.user">
+			<username>Auto</username>
+			<password>password</password>
+		</loginCredential>
+
+		<privileges id ="all.privileges.available">
+
+			<privilegeType>Collateral</privilegeType>
+			<rolePrivilege>
+				<roleName>Automation</roleName>
+				<selectAll>true</selectAll>
+			</rolePrivilege>
+		</privileges>
+
+		<agreementSearch id="agr.no.prv">
+			<description>Automation Test</description>
+		</agreementSearch>
+
+		<agreement id="agr.no.prv.3001">
+			<agreementId>38228</agreementId>
+		</agreement>
+
+		<agreementSummary id="agr.all.prv.3001">
+			<partyAndCounterpartyDetails apply="true"></partyAndCounterpartyDetails>
+			<documentationDetails apply="true"></documentationDetails>
+			<valuationFrequencyAndCallScheduleDetails apply="true"></valuationFrequencyAndCallScheduleDetails>
+            <collateralisedPortfolioDetails apply="true"></collateralisedPortfolioDetails>
+			<collateralRules apply="true"></collateralRules>
+			<collateralThresholdAndMinimumTransferDetails apply="true"></collateralThresholdAndMinimumTransferDetails>
+		      <userDefinedFieldsDetails apply="true"></userDefinedFieldsDetails>
+			<settlementInformationConfiguration apply="true"></settlementInformationConfiguration>
+			<reportingDetails apply="true"></reportingDetails>
+			<messagingDetails apply="true"></messagingDetails>
+		</agreementSummary>
+
+		<!--<privileges id ="documentation.privilege.unavailable">-->
+		<!--<privilegeType>Collateral</privilegeType>-->
+		<!--<rolePrivilege>-->
+		<!--	<roleName>Automation</roleName>-->
+		<!--<selectAll>false</selectAll>-->
+		<!--	<privilege>collateral.agreement.ops.field.contacts.edit</privilege>-->
+		<!--</rolePrivilege>-->
+		<!--	</privileges>-->
+
+		<!--<agreementSummary id="agr.all.prv.3001">-->
+			<!--<documentationDetails>-->
+				<!--<principalContact apply="false"></principalContact>-->
+				<!--<principalCCEmail apply="false"></principalCCEmail>-->
+				<!--<principalInterestcontact apply="false"></principalInterestcontact>-->
+				<!--<principalInterestCCEmail apply="false"></principalInterestCCEmail>-->
+				<!--<counterpartyContact apply="false"></counterpartyContact>-->
+				<!--<counterpartyCCEmail apply="false"></counterpartyCCEmail>-->
+				<!--<counterpartyInterestcontact apply="false"></counterpartyInterestcontact>-->
+				<!--<counterpartyInterestCCEmail apply="false"></counterpartyInterestCCEmail>-->
+			<!--</documentationDetails>-->
+		<!--</agreementSummary>-->
+
+
+	</scenarioData>
+</dataBean>

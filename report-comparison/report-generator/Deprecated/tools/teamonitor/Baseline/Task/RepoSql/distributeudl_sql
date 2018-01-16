@@ -1,0 +1,6 @@
+pre#UDL_AGMT#select count(*) as num1 from colagreementheader where statusid not in (66,67,122)
+pre#LETTERS_BEFORE#select count(*) as num2 from colletters
+
+post#LETTERS_AFTER#select count(*) as num3 from colletters
+
+val#1#${UDL_AGMT} -eq `expr ${LETTERS_AFTER} - ${LETTERS_BEFORE}`

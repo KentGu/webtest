@@ -1,0 +1,1243 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xsi:noNamespaceSchemaLocation="http://artifactory.london.lombardrisk.com:8081/artifactory/libs-snapshot-local/com/lombardrisk/cobiz/1.0.0-SNAPSHOT/cobiz-1.0.0-SNAPSHOT.jar!/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/smoke.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+
+        <collateralStaticData id="AddSmokePriceSource001">
+            <type>Price Source</type>
+            <dataName id="SmokePS1" random="true" suffix="SmokePS1"/>
+            <description random="true" suffix="SmokePS1"/>
+            <status>enabled</status>
+        </collateralStaticData>
+
+        <assetDefinition id="AddAssetClassSmokeBOND">
+            <assetName id="SmokeBOND001" random="true" suffix="SmokeBOND" />
+            <status>enabled</status>
+            <category>FI Securities</category>
+            <externalName ref="SmokeBOND001"/>
+        </assetDefinition>
+
+        <assetDefinition id="AddAssetTypeSmokeBOND_ABC">
+            <parent>
+                <assetName ref="SmokeBOND001" />
+            </parent>
+            <assetName id="SmokeBOND-ABC" random="true" suffix="SmokeBOND-ABC"/>
+            <status>enabled</status>
+            <category>FI Securities</category>
+            <!--<daysInYear>365</daysInYear>-->
+            <currencyOfDenomination>USD</currencyOfDenomination>
+            <!--<settlementDate>T+2</settlementDate>-->
+            <holidayCentre ref="hc.europe.name"/>
+            <!--<roundingAmount>100</roundingAmount>-->
+            <!--<applyToInterestCalculation>true</applyToInterestCalculation>-->
+            <!--<roundingRule>Up</roundingRule>-->
+            <!--<deliveryBookingPriority>Low</deliveryBookingPriority>-->
+            <!--<recallBookingPriority>Low</recallBookingPriority>-->
+            <externalName ref="SmokeBOND-ABC"/>
+        </assetDefinition>
+
+        <instrument id="AddRepoSecurity001">
+            <assetClass ref="SmokeBOND001"/>
+            <assetType ref="SmokeBOND-ABC"/>
+            <instrumentId>
+                <primary>true</primary>
+                <type>CUSIP</type>
+                <value id="RepoSecurity001Id" random="true" suffix="RepoIns001"/>
+            </instrumentId>
+            <market>market1</market>
+            <description>SmokeTestSecurity</description>
+            <issuer>
+                <filter ref="org.issuer1.sname"/>
+                <linkText ref="org.issuer1.sname"/>
+            </issuer>
+            <maturityDate>1/1/2099</maturityDate>
+            <priceSource>
+                <priceSourceName ref="SmokePS1"/>
+                <dirtyPrice>100</dirtyPrice>
+                <lastPriceChange>1/1/2000</lastPriceChange>
+                <priceLevel>Mid</priceLevel>
+                <priceDate>T-7</priceDate>
+            </priceSource>
+            <couponRate>36</couponRate>
+            <factor>1</factor>
+            <priceFactor>1</priceFactor>
+            <accrualBasis>30/360</accrualBasis>
+            <manuallyOverrideNextCouponDate>true</manuallyOverrideNextCouponDate>
+            <nextCouponDate>T</nextCouponDate>
+            <manuallyOverrideLastCouponDate>true</manuallyOverrideLastCouponDate>
+            <lastCouponDate>T-3</lastCouponDate>
+            <recordDate>T-2</recordDate>
+            <issueDate>1/1/2000</issueDate>
+            <!--<securityStatus>Approved</securityStatus>-->
+        </instrument>
+
+        <securitySearch id="RepoSecurity001Search">
+            <instrument>
+                <type>Starting with</type>
+                <filter ref="RepoSecurity001Id"/>
+                <linkText ref="RepoSecurity001Id"/>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="RepoSecurity001SearchResult">
+            <instrument ref="RepoSecurity001Id"/>
+        </securitySearchResult>
+
+        <collateralStaticData id="AddValue1toAnnexes">
+            <type>Annexes</type>
+            <dataName id="Smoke_AX1" random="true" suffix="Smoke_AX1"/>
+            <description random="true" suffix="Smoke_AX1Desc"/>
+            <status>enabled</status>
+        </collateralStaticData>
+
+        <collateralStaticData id="AddValue2toAnnexes">
+            <type>Annexes</type>
+            <dataName id="Smoke_AX2" random="true" suffix="Smoke_AX2"/>
+            <description random="true" suffix="Smoke_AX2Desc"/>
+            <status>enabled</status>
+        </collateralStaticData>
+
+        <agreement id="SmokeRepoAgreement001">
+            <principal>
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter ref="org.p1.code"/>
+                <linkText ref="org.p1.code"/>
+            </principal>
+            <counterparty>
+                <criteria>Containing</criteria>
+                <type>Long Name</type>
+                <filter ref="org.c1.lname"/>
+                <linkText ref="org.c1.lname"/>
+            </counterparty>
+            <businessLine>Repo</businessLine>
+            <agreementDescription>SmokeRepoAgreement001Desc</agreementDescription>
+            <agreementName random="true" suffix="SmokeRepoAgreement001Name"/>
+            <externalId  random="true" suffix="SmokeRepo001ExtId"/>
+            <annex ref="Smoke_AX1"/>
+            <agreementDate>T</agreementDate>
+            <callFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </callFrequency>
+            <timeZone ref="system.staticData.timeZone.hk.desc"/>
+            <holidayCentre ref="hc.europe.name"/>
+            <defaultTradeValuationRule>Principal Valuation Amount</defaultTradeValuationRule>
+            <exposureProfile>T+2</exposureProfile>
+            <includeFailedOpenLeg>true</includeFailedOpenLeg>
+            <includeFailedCloseLeg>true</includeFailedCloseLeg>
+            <product>
+                <productName ref="product.qtp.pro1.name"/>
+            </product>
+            <product>
+                <productName ref="product.qtp.pro2.name"/>
+            </product>
+            <product>
+                <productName ref="product.qtp.pro3.name"/>
+            </product>
+            <product>
+                <productName ref="product.qtp.pro4.name"/>
+            </product>
+            <!--<principalFixedTrigger>-->
+                <!--<fixedAmount>100000000</fixedAmount>-->
+            <!--</principalFixedTrigger>-->
+            <!--<counterpartyFixedTrigger>-->
+                <!--<ofEXPCOL>90</ofEXPCOL>-->
+            <!--</counterpartyFixedTrigger>-->
+            <interest>true</interest>
+            <interestCalculationsMethod>Simple</interestCalculationsMethod>
+            <calculationRule>First of the Month</calculationRule>
+            <payMethod>Physical Payment</payMethod>
+            <receiveMethod>Capitalise</receiveMethod>
+            <interestSettlementDate>T+2</interestSettlementDate>
+            <collateralAssetClass>
+                <collateralAssetClassName>qtp_cash</collateralAssetClassName>
+                <collateralAssetType>
+                    <collateralAssetTypeName>qtp_cash_usd</collateralAssetTypeName>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName>qtp_bond</collateralAssetClassName>
+                <collateralAssetType>
+                    <collateralAssetTypeName>qtp_bond_usd</collateralAssetTypeName>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName>qtp_equity</collateralAssetClassName>
+                <collateralAssetType>
+                    <collateralAssetTypeName>qtp_equity_usd</collateralAssetTypeName>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vcr.name"/>
+                    <linkText ref="payInstrBucket.vcr.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vrd.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.pay.name"/>
+                    <linkText ref="payInstrBucket.pay.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.rec.name"/>
+                    <linkText ref="payInstrBucket.rec.name"/>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementStatus>Pending</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <statementStatus>Approved</statementStatus>
+            <agreementId id="smoke.repo.agr1id"/>
+        </agreement>
+
+        <agreementExposureSummary id="Productpro2">
+            <productList>
+                <productType ref="product.qtp.pro2.name"/>
+            </productList>
+        </agreementExposureSummary>
+
+        <tradeDetail id="AddSmokeRepoTrade001">
+            <tradeInformation>
+                <productType ref="product.qtp.pro2.name"/>
+                <tradeDate>1/1/2010</tradeDate>
+                <startDate>1/1/2012</startDate>
+                <endDate>1/1/2020</endDate>
+                <tradeIdentifierPartyA id="repo.trade1.identify" random="true" suffix="SmokeTrade001"/>
+                <partyABranchName ref="repo.trade1.identify"/>
+                <partyBBranchName ref="repo.trade1.identify"/>
+            </tradeInformation>
+
+            <securityInformation>
+                <instrumentId>
+                    <filter ref="bond.instrument1.name"/>
+                    <linkText ref="bond.instrument1.name"/>
+                </instrumentId>
+                <couponAccrual>1</couponAccrual>
+                <securityHaircut>100</securityHaircut>
+                <notional>1000</notional>
+                <tradePrice>100</tradePrice>
+                <cleanPrice>100</cleanPrice>
+                <settlementStatusStartLeg>Pending</settlementStatusStartLeg>
+                <settlementStatusCloseLeg>Settled</settlementStatusCloseLeg>
+            </securityInformation>
+
+            <cashInformation>
+                <cashAssetType>
+                    <filter ref="cash.usd.name"/>
+                    <linkText ref="cash.usd.name"/>
+                </cashAssetType>
+                <openCash>-2000</openCash>
+                <repoRate>0</repoRate>
+                <repoInterestAccrued>100</repoInterestAccrued>
+                <closeCash>200</closeCash>
+                <settlementStatusStartLeg>Pending</settlementStatusStartLeg>
+                <settlementStatusCloseLeg>Pending</settlementStatusCloseLeg>
+            </cashInformation>
+
+            <adjustmentInformation>
+                <heldOverCouponAdjustmentSecurityCurrency>
+                    <amount>50</amount>
+                    <currency>USD</currency>
+                </heldOverCouponAdjustmentSecurityCurrency>
+                <couponReinvestmentSecurityCurrency>
+                    <amount>60</amount>
+                    <currency>USD</currency>
+                </couponReinvestmentSecurityCurrency>
+            </adjustmentInformation>
+
+            <exposureInformation>
+                <counterPartyValuationAmount>
+                    <amount>100</amount>
+                    <currency>USD</currency>
+                </counterPartyValuationAmount>
+                <independentValuationAmount>
+                    <amount>60</amount>
+                    <currency>USD</currency>
+                </independentValuationAmount>
+                <valuationAmountType>Principal Valuation Amount</valuationAmountType>
+                <valuationDate>1/1/2012</valuationDate>
+            </exposureInformation>
+            <alertHandling>
+                <!--<content>[/s/S]*</content>-->
+                <accept>true</accept>
+            </alertHandling>
+        </tradeDetail>
+
+        <tradeDetail id="SmokeRepoTrade001">
+            <tradeIdentifierPartyA ref="repo.trade.identify"/>
+        </tradeDetail>
+
+        <agreementExposureSummary id="Productpro4">
+            <productList>
+                <productType ref="product.qtp.pro4.name"/>
+            </productList>
+        </agreementExposureSummary>
+
+        <tradeDetail id="AddSmokeRepoTrade002">
+            <tradeInformation>
+                <productType ref="product.qtp.pro4.name"/>
+                <tradeDate>1/1/2010</tradeDate>
+                <startDate>1/1/2012</startDate>
+                <endDate>1/1/2020</endDate>
+                <tradeIdentifierPartyA id="repo.trade2.identify" random="true" suffix="SmokeTrade002"/>
+                <partyABranchName ref="repo.trade2.identify"/>
+                <partyBBranchName ref="repo.trade2.identify"/>
+            </tradeInformation>
+
+            <securityInformation>
+                <instrumentId>
+                    <filter ref="bond.instrument1.name"/>
+                    <linkText ref="bond.instrument1.name"/>
+                </instrumentId>
+                <couponAccrual>-2</couponAccrual>
+                <securityHaircut>100</securityHaircut>
+                <notional>-1000</notional>
+                <tradePrice>100</tradePrice>
+                <cleanPrice>100</cleanPrice>
+                <settlementStatusStartLeg>Pending</settlementStatusStartLeg>
+                <settlementStatusCloseLeg>Settled</settlementStatusCloseLeg>
+            </securityInformation>
+
+            <cashInformation>
+                <cashAssetType>
+                    <filter ref="cash.usd.name"/>
+                    <linkText ref="cash.usd.name"/>
+                </cashAssetType>
+                <openCash>2000</openCash>
+                <repoRate>100</repoRate>
+                <repoInterestAccrued>100</repoInterestAccrued>
+                <closeCash>200</closeCash>
+                <settlementStatusStartLeg>Pending</settlementStatusStartLeg>
+                <settlementStatusCloseLeg>Pending</settlementStatusCloseLeg>
+            </cashInformation>
+
+            <adjustmentInformation>
+                <heldOverCouponAdjustmentSecurityCurrency>
+                    <amount>50</amount>
+                    <currency>USD</currency>
+                </heldOverCouponAdjustmentSecurityCurrency>
+                <couponReinvestmentSecurityCurrency>
+                    <amount>60</amount>
+                    <currency>USD</currency>
+                </couponReinvestmentSecurityCurrency>
+            </adjustmentInformation>
+
+            <exposureInformation>
+                <counterPartyValuationAmount>
+                    <amount>100</amount>
+                    <currency>USD</currency>
+                </counterPartyValuationAmount>
+                <independentValuationAmount>
+                    <amount>60</amount>
+                    <currency>USD</currency>
+                </independentValuationAmount>
+                <valuationAmountType>Principal Valuation Amount</valuationAmountType>
+                <valuationDate>1/1/2012</valuationDate>
+            </exposureInformation>
+            <alertHandling>
+                <!--<content>[/s/S]*</content>-->
+                <accept>true</accept>
+            </alertHandling>
+        </tradeDetail>
+
+        <agreement id="SmokeRepoAgreement002">
+            <principal>
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter ref="org.p1.code"/>
+                <linkText ref="org.p1.code"/>
+            </principal>
+            <counterparty>
+                <criteria>Containing</criteria>
+                <type>Long Name</type>
+                <filter ref="org.c1.lname"/>
+                <linkText ref="org.c1.lname"/>
+            </counterparty>
+            <businessLine>Repo</businessLine>
+            <agreementDescription>SmokeRepoAgreement001Desc</agreementDescription>
+            <agreementName random="true" suffix="SmokeRepoAgreement002Name"/>
+            <externalId  random="true" suffix="SmokeRepo002ExtId"/>
+            <annex ref="Smoke_AX1"/>
+            <agreementDate>T</agreementDate>
+            <callFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </callFrequency>
+            <timeZone ref="system.staticData.timeZone.hk.desc"/>
+            <holidayCentre ref="hc.europe.name"/>
+            <defaultTradeValuationRule>Principal Valuation Amount</defaultTradeValuationRule>
+            <exposureProfile>T+2</exposureProfile>
+            <includeFailedOpenLeg>true</includeFailedOpenLeg>
+            <includeFailedCloseLeg>true</includeFailedCloseLeg>
+            <product>
+                <productName ref="product.qtp.pro1.name"/>
+            </product>
+            <product>
+                <productName ref="product.qtp.pro2.name"/>
+            </product>
+            <product>
+                <productName ref="product.qtp.pro3.name"/>
+            </product>
+            <product>
+                <productName ref="product.qtp.pro4.name"/>
+            </product>
+            <!--<principalFixedTrigger>-->
+            <!--<fixedAmount>100000000</fixedAmount>-->
+            <!--</principalFixedTrigger>-->
+            <!--<counterpartyFixedTrigger>-->
+            <!--<ofEXPCOL>90</ofEXPCOL>-->
+            <!--</counterpartyFixedTrigger>-->
+            <interest>true</interest>
+            <interestCalculationsMethod>Simple</interestCalculationsMethod>
+            <calculationRule>First of the Month</calculationRule>
+            <payMethod>Physical Payment</payMethod>
+            <receiveMethod>Capitalise</receiveMethod>
+            <interestSettlementDate>T+2</interestSettlementDate>
+            <collateralAssetClass>
+                <collateralAssetClassName>qtp_cash</collateralAssetClassName>
+                <collateralAssetType>
+                    <collateralAssetTypeName>qtp_cash_usd</collateralAssetTypeName>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName>qtp_bond</collateralAssetClassName>
+                <collateralAssetType>
+                    <collateralAssetTypeName>qtp_bond_usd</collateralAssetTypeName>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName>qtp_equity</collateralAssetClassName>
+                <collateralAssetType>
+                    <collateralAssetTypeName>qtp_equity_usd</collateralAssetTypeName>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vcr.name"/>
+                    <linkText ref="payInstrBucket.vcr.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vrd.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.pay.name"/>
+                    <linkText ref="payInstrBucket.pay.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.rec.name"/>
+                    <linkText ref="payInstrBucket.rec.name"/>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementStatus>Pending</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <statementStatus>Approved</statementStatus>
+            <agreementId id="smoke.repo.agr2id"/>
+        </agreement>
+
+        <tradeDetail id="AddSmokeRepoTrade003">
+            <tradeInformation>
+                <productType ref="product.qtp.pro2.name"/>
+                <tradeDate>1/1/2010</tradeDate>
+                <startDate>1/1/2012</startDate>
+                <endDate>1/1/2020</endDate>
+                <tradeIdentifierPartyA id="repo.trade3.identify" random="true" suffix="SmokeTrade003"/>
+                <partyABranchName ref="repo.trade3.identify"/>
+                <partyBBranchName ref="repo.trade3.identify"/>
+            </tradeInformation>
+
+            <securityInformation>
+                <instrumentId>
+                    <filter ref="bond.instrument1.name"/>
+                    <linkText ref="bond.instrument1.name"/>
+                </instrumentId>
+                <couponAccrual>1</couponAccrual>
+                <securityHaircut>100</securityHaircut>
+                <notional>1000</notional>
+                <tradePrice>100</tradePrice>
+                <cleanPrice>100</cleanPrice>
+                <settlementStatusStartLeg>Pending</settlementStatusStartLeg>
+                <settlementStatusCloseLeg>Settled</settlementStatusCloseLeg>
+            </securityInformation>
+
+            <cashInformation>
+                <cashAssetType>
+                    <filter ref="cash.usd.name"/>
+                    <linkText ref="cash.usd.name"/>
+                </cashAssetType>
+                <openCash>-2000</openCash>
+                <repoRate>0</repoRate>
+                <repoInterestAccrued>100</repoInterestAccrued>
+                <closeCash>200</closeCash>
+                <settlementStatusStartLeg>Pending</settlementStatusStartLeg>
+                <settlementStatusCloseLeg>Pending</settlementStatusCloseLeg>
+            </cashInformation>
+
+            <adjustmentInformation>
+                <heldOverCouponAdjustmentSecurityCurrency>
+                    <amount>50</amount>
+                    <currency>USD</currency>
+                </heldOverCouponAdjustmentSecurityCurrency>
+                <couponReinvestmentSecurityCurrency>
+                    <amount>60</amount>
+                    <currency>USD</currency>
+                </couponReinvestmentSecurityCurrency>
+            </adjustmentInformation>
+
+            <exposureInformation>
+                <counterPartyValuationAmount>
+                    <amount>100</amount>
+                    <currency>USD</currency>
+                </counterPartyValuationAmount>
+                <independentValuationAmount>
+                    <amount>60</amount>
+                    <currency>USD</currency>
+                </independentValuationAmount>
+                <valuationAmountType>Principal Valuation Amount</valuationAmountType>
+                <valuationDate>1/1/2012</valuationDate>
+            </exposureInformation>
+            <alertHandling>
+                <!--<content>[/s/S]*</content>-->
+                <accept>true</accept>
+            </alertHandling>
+        </tradeDetail>
+
+        <agreementExposureAdjustment id="AddAgreementExposureAdjustment001">
+            <agreementExposureAdjustment>
+                <amount></amount>
+                <currency></currency>
+            </agreementExposureAdjustment>
+        </agreementExposureAdjustment>
+
+        <agreement id="SmokeRepoAgreement003">
+            <principal>
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter ref="org.p1.code"/>
+                <linkText ref="org.p1.code"/>
+            </principal>
+            <counterparty>
+                <criteria>Containing</criteria>
+                <type>Long Name</type>
+                <filter ref="org.c1.lname"/>
+                <linkText ref="org.c1.lname"/>
+            </counterparty>
+            <businessLine>Repo</businessLine>
+            <agreementDescription>SmokeRepoAgreement004Desc</agreementDescription>
+            <agreementName random="true" suffix="SmokeRepoAgreement003Name"/>
+            <externalId  random="true" suffix="SmokeRepo003ExtId"/>
+            <!--<annex ref="Smoke_AX1"/>-->
+            <agreementDate>T</agreementDate>
+            <callFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </callFrequency>
+            <timeZone ref="system.staticData.timeZone.hk.desc"/>
+            <holidayCentre ref="hc.europe.name"/>
+            <defaultTradeValuationRule>Principal Valuation Amount</defaultTradeValuationRule>
+            <exposureProfile>T+2</exposureProfile>
+            <includeFailedOpenLeg>true</includeFailedOpenLeg>
+            <includeFailedCloseLeg>true</includeFailedCloseLeg>
+            <product>
+                <productName ref="product.qtp.pro1.name"/>
+            </product>
+            <product>
+                <productName ref="product.qtp.pro2.name"/>
+            </product>
+            <product>
+                <productName ref="product.qtp.pro3.name"/>
+            </product>
+            <product>
+                <productName ref="product.qtp.pro4.name"/>
+            </product>
+            <!--<principalFixedTrigger>-->
+            <!--<fixedAmount>100000000</fixedAmount>-->
+            <!--</principalFixedTrigger>-->
+            <!--<counterpartyFixedTrigger>-->
+            <!--<ofEXPCOL>90</ofEXPCOL>-->
+            <!--</counterpartyFixedTrigger>-->
+            <interest>true</interest>
+            <interestCalculationsMethod>Simple</interestCalculationsMethod>
+            <calculationRule>First of the Month</calculationRule>
+            <payMethod>Physical Payment</payMethod>
+            <receiveMethod>Capitalise</receiveMethod>
+            <interestSettlementDate>T+2</interestSettlementDate>
+            <collateralAssetClass>
+                <collateralAssetClassName>qtp_cash</collateralAssetClassName>
+                <collateralAssetType>
+                    <collateralAssetTypeName>qtp_cash_usd</collateralAssetTypeName>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName>qtp_bond</collateralAssetClassName>
+                <collateralAssetType>
+                    <collateralAssetTypeName>qtp_bond_usd</collateralAssetTypeName>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName>qtp_equity</collateralAssetClassName>
+                <collateralAssetType>
+                    <collateralAssetTypeName>qtp_equity_usd</collateralAssetTypeName>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vcr.name"/>
+                    <linkText ref="payInstrBucket.vcr.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vrd.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.pay.name"/>
+                    <linkText ref="payInstrBucket.pay.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.rec.name"/>
+                    <linkText ref="payInstrBucket.rec.name"/>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementStatus>Pending</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <statementStatus>Approved</statementStatus>
+            <agreementId id="smoke.repo.agr3id"/>
+        </agreement>
+
+        <tradeDetail id="AddSmokeRepoTrade004">
+            <tradeInformation>
+                <productType ref="product.qtp.pro2.name"/>
+                <tradeDate>1/1/2010</tradeDate>
+                <startDate>1/1/2012</startDate>
+                <endDate>1/1/2020</endDate>
+                <tradeIdentifierPartyA id="repo.trade4.identify" random="true" suffix="SmokeTrade004"/>
+                <partyABranchName ref="repo.trade4.identify"/>
+                <partyBBranchName ref="repo.trade4.identify"/>
+            </tradeInformation>
+
+            <securityInformation>
+                <instrumentId>
+                    <filter ref="bond.instrument1.name"/>
+                    <linkText ref="bond.instrument1.name"/>
+                </instrumentId>
+                <couponAccrual>1</couponAccrual>
+                <securityHaircut>100</securityHaircut>
+                <notional>1000</notional>
+                <tradePrice>100</tradePrice>
+                <cleanPrice>100</cleanPrice>
+                <settlementStatusStartLeg>Pending</settlementStatusStartLeg>
+                <settlementStatusCloseLeg>Settled</settlementStatusCloseLeg>
+            </securityInformation>
+
+            <cashInformation>
+                <cashAssetType>
+                    <filter ref="cash.usd.name"/>
+                    <linkText ref="cash.usd.name"/>
+                </cashAssetType>
+                <openCash>-2000</openCash>
+                <repoRate>-1.333333333</repoRate>
+                <repoInterestAccrued>100</repoInterestAccrued>
+                <closeCash>200</closeCash>
+                <settlementStatusStartLeg>Pending</settlementStatusStartLeg>
+                <settlementStatusCloseLeg>Pending</settlementStatusCloseLeg>
+            </cashInformation>
+
+            <adjustmentInformation>
+                <heldOverCouponAdjustmentSecurityCurrency>
+                    <amount>50</amount>
+                    <currency>USD</currency>
+                </heldOverCouponAdjustmentSecurityCurrency>
+                <couponReinvestmentSecurityCurrency>
+                    <amount>60</amount>
+                    <currency>USD</currency>
+                </couponReinvestmentSecurityCurrency>
+            </adjustmentInformation>
+
+            <exposureInformation>
+                <counterPartyValuationAmount>
+                    <amount>100</amount>
+                    <currency>USD</currency>
+                </counterPartyValuationAmount>
+                <independentValuationAmount>
+                    <amount>60</amount>
+                    <currency>USD</currency>
+                </independentValuationAmount>
+                <valuationAmountType>Principal Valuation Amount</valuationAmountType>
+                <valuationDate>1/1/2012</valuationDate>
+            </exposureInformation>
+            <alertHandling>
+                <!--<content>[/s/S]*</content>-->
+                <accept>true</accept>
+            </alertHandling>
+        </tradeDetail>
+
+        <exposureEventDetail id = "RepoCallDeficitEvent001">
+            <agrId ref = "smoke.repo.agr3id" />
+            <action>Call(Deficit)</action>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="RepoCallDeficitEvent001CptyAmount">
+            <counterpartyAmount>899</counterpartyAmount>
+        </exposureEventDetail>
+
+        <bookingDetail id="RepoEMgroupbooking001">
+            <assetType>qtp_bond_usd</assetType>
+            <instrumentSearch>
+                <instrumentId>
+                    <type>Starting with</type>
+                    <filter ref="bond.instrument1.name"/>
+                    <linkText ref="bond.instrument1.name"/>
+                </instrumentId>
+                <linkText ref="bond.instrument1.name"/>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <nominalAmount>899</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <save>saveAndComplete</save>
+            <!--<alertHandling>-->
+            <!--<content>[\s\S]*</content>-->
+            <!--<accept>false</accept>-->
+            <!--</alertHandling>-->
+        </bookingDetail>
+
+        <agreement id="SmokeRepoAgreement004">
+            <principal>
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter ref="org.p1.code"/>
+                <linkText ref="org.p1.code"/>
+            </principal>
+            <counterparty>
+                <criteria>Containing</criteria>
+                <type>Long Name</type>
+                <filter ref="org.c1.lname"/>
+                <linkText ref="org.c1.lname"/>
+            </counterparty>
+            <businessLine>Repo</businessLine>
+            <agreementDescription>SmokeRepoAgreement004Desc</agreementDescription>
+            <agreementName random="true" suffix="SmokeRepoAgreement003Name"/>
+            <externalId  random="true" suffix="SmokeRepo003ExtId"/>
+            <!--<annex ref="Smoke_AX1"/>-->
+            <agreementDate>T</agreementDate>
+            <callFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </callFrequency>
+            <timeZone ref="system.staticData.timeZone.hk.desc"/>
+            <holidayCentre ref="hc.europe.name"/>
+            <defaultTradeValuationRule>Principal Valuation Amount</defaultTradeValuationRule>
+            <exposureProfile>T+2</exposureProfile>
+            <includeFailedOpenLeg>true</includeFailedOpenLeg>
+            <includeFailedCloseLeg>true</includeFailedCloseLeg>
+            <product>
+                <productName ref="product.qtp.pro1.name"/>
+            </product>
+            <product>
+                <productName ref="product.qtp.pro2.name"/>
+            </product>
+            <product>
+                <productName ref="product.qtp.pro3.name"/>
+            </product>
+            <product>
+                <productName ref="product.qtp.pro4.name"/>
+            </product>
+            <!--<principalFixedTrigger>-->
+            <!--<fixedAmount>100000000</fixedAmount>-->
+            <!--</principalFixedTrigger>-->
+            <!--<counterpartyFixedTrigger>-->
+            <!--<ofEXPCOL>90</ofEXPCOL>-->
+            <!--</counterpartyFixedTrigger>-->
+            <interest>true</interest>
+            <interestCalculationsMethod>Simple</interestCalculationsMethod>
+            <calculationRule>First of the Month</calculationRule>
+            <payMethod>Physical Payment</payMethod>
+            <receiveMethod>Capitalise</receiveMethod>
+            <interestSettlementDate>T+2</interestSettlementDate>
+            <collateralAssetClass>
+                <collateralAssetClassName>qtp_cash</collateralAssetClassName>
+                <collateralAssetType>
+                    <collateralAssetTypeName>qtp_cash_usd</collateralAssetTypeName>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName>qtp_bond</collateralAssetClassName>
+                <collateralAssetType>
+                    <collateralAssetTypeName>qtp_bond_usd</collateralAssetTypeName>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName>qtp_equity</collateralAssetClassName>
+                <collateralAssetType>
+                    <collateralAssetTypeName>qtp_equity_usd</collateralAssetTypeName>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vcr.name"/>
+                    <linkText ref="payInstrBucket.vcr.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vrd.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.pay.name"/>
+                    <linkText ref="payInstrBucket.pay.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.rec.name"/>
+                    <linkText ref="payInstrBucket.rec.name"/>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementStatus>Pending</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <statementStatus>Approved</statementStatus>
+            <agreementId id="smoke.repo.agr4id"/>
+        </agreement>
+
+        <tradeDetail id="AddSmokeRepoTrade005">
+            <tradeInformation>
+                <productType ref="product.qtp.pro2.name"/>
+                <tradeDate>1/1/2010</tradeDate>
+                <startDate>1/25/2011</startDate>
+                <endDate>1/1/2020</endDate>
+                <tradeIdentifierPartyA id="repo.trade5.identify" random="true" suffix="SmokeTrade005"/>
+                <partyABranchName ref="repo.trade5.identify"/>
+                <partyBBranchName ref="repo.trade5.identify"/>
+            </tradeInformation>
+
+            <securityInformation>
+                <instrumentId>
+                    <filter ref="bond.instrument1.name"/>
+                    <linkText ref="bond.instrument1.name"/>
+                </instrumentId>
+                <couponAccrual>1</couponAccrual>
+                <securityHaircut>100</securityHaircut>
+                <notional>1000</notional>
+                <tradePrice>100</tradePrice>
+                <cleanPrice>100</cleanPrice>
+                <settlementStatusStartLeg>Pending</settlementStatusStartLeg>
+                <settlementStatusCloseLeg>Settled</settlementStatusCloseLeg>
+            </securityInformation>
+
+            <cashInformation>
+                <cashAssetType>
+                    <filter ref="cash.gbp.name"/>
+                    <linkText ref="cash.gbp.name"/>
+                </cashAssetType>
+                <openCash>10000</openCash>
+                <repoRate>36</repoRate>
+                <haircut>100</haircut>
+                <repoInterestAccrued>100</repoInterestAccrued>
+                <closeCash>200</closeCash>
+                <settlementStatusStartLeg>Pending</settlementStatusStartLeg>
+                <settlementStatusCloseLeg>Pending</settlementStatusCloseLeg>
+            </cashInformation>
+
+            <adjustmentInformation>
+                <heldOverCouponAdjustmentSecurityCurrency>
+                    <amount>50</amount>
+                    <currency>USD</currency>
+                </heldOverCouponAdjustmentSecurityCurrency>
+                <couponReinvestmentSecurityCurrency>
+                    <amount>60</amount>
+                    <currency>USD</currency>
+                </couponReinvestmentSecurityCurrency>
+            </adjustmentInformation>
+
+            <exposureInformation>
+                <counterPartyValuationAmount>
+                    <amount>100</amount>
+                    <currency>USD</currency>
+                </counterPartyValuationAmount>
+                <independentValuationAmount>
+                    <amount>60</amount>
+                    <currency>USD</currency>
+                </independentValuationAmount>
+                <valuationAmountType>Principal Valuation Amount</valuationAmountType>
+                <valuationDate>1/1/2012</valuationDate>
+            </exposureInformation>
+            <alertHandling>
+                <!--<content>[/s/S]*</content>-->
+                <accept>true</accept>
+            </alertHandling>
+        </tradeDetail>
+
+        <instrument id="RepoSecurity001UpdateCleanPrice">
+            <priceSource>
+                <priceSourceName ref="SmokePS1"/>
+                <cleanPrice>100</cleanPrice>
+            </priceSource>
+            <couponRate>0</couponRate>
+        </instrument>
+
+        <instrument id="AddRepoSecurity002">
+            <assetClass ref="SmokeBOND001"/>
+            <assetType ref="SmokeBOND-ABC"/>
+            <instrumentId>
+                <primary>true</primary>
+                <type>CUSIP</type>
+                <value id="RepoSecurity002Id" random="true" suffix="RepoIns002"/>
+            </instrumentId>
+            <market>market1</market>
+            <description>SmokeTestSecurity</description>
+            <issuer>
+                <filter ref="org.issuer1.sname"/>
+                <linkText ref="org.issuer1.sname"/>
+            </issuer>
+            <maturityDate>1/1/2099</maturityDate>
+            <priceSource>
+                <priceSourceName ref="SmokePS1"/>
+                <dirtyPrice>100</dirtyPrice>
+                <lastPriceChange>1/1/2000</lastPriceChange>
+                <priceLevel>Mid</priceLevel>
+                <priceDate>T-7</priceDate>
+            </priceSource>
+            <couponRate>36</couponRate>
+            <factor>1</factor>
+            <priceFactor>1</priceFactor>
+            <accrualBasis>30/360</accrualBasis>
+            <manuallyOverrideNextCouponDate>true</manuallyOverrideNextCouponDate>
+            <nextCouponDate>T</nextCouponDate>
+            <manuallyOverrideLastCouponDate>true</manuallyOverrideLastCouponDate>
+            <lastCouponDate>T-3</lastCouponDate>
+            <recordDate>T-2</recordDate>
+            <issueDate>1/1/2000</issueDate>
+            <!--<securityStatus>Approved</securityStatus>-->
+        </instrument>
+
+        <securitySearch id="RepoSecurity002Search">
+            <instrument>
+                <type>Starting with</type>
+                <filter ref="RepoSecurity002Id"/>
+                <linkText ref="RepoSecurity002Id"/>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="RepoSecurity002SearchResult">
+            <instrument ref="RepoSecurity002Id"/>
+        </securitySearchResult>
+
+        <instrument id="RepoSecurity002UpdateCleanPrice">
+            <priceSource>
+                <priceSourceName ref="SmokePS1"/>
+                <cleanPrice>0</cleanPrice>
+            </priceSource>
+        </instrument>
+
+        <agreement id="SmokeRepoAgreement005">
+            <principal>
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter ref="org.p1.code"/>
+                <linkText ref="org.p1.code"/>
+            </principal>
+            <counterparty>
+                <criteria>Containing</criteria>
+                <type>Long Name</type>
+                <filter ref="org.c1.lname"/>
+                <linkText ref="org.c1.lname"/>
+            </counterparty>
+            <businessLine>Repo</businessLine>
+            <agreementDescription>SmokeRepoAgreement005Desc</agreementDescription>
+            <agreementName random="true" suffix="SmokeRepoAgreement005Name"/>
+            <externalId  random="true" suffix="SmokeRepo005ExtId"/>
+            <!--<annex ref="Smoke_AX1"/>-->
+            <agreementDate>T</agreementDate>
+            <callFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </callFrequency>
+            <timeZone ref="system.staticData.timeZone.hk.desc"/>
+            <holidayCentre ref="hc.europe.name"/>
+            <defaultTradeValuationRule>Principal Valuation Amount</defaultTradeValuationRule>
+            <exposureProfile>T+2</exposureProfile>
+            <includeFailedOpenLeg>true</includeFailedOpenLeg>
+            <includeFailedCloseLeg>true</includeFailedCloseLeg>
+            <product>
+                <productName ref="product.qtp.pro1.name"/>
+            </product>
+            <product>
+                <productName ref="product.qtp.pro2.name"/>
+            </product>
+            <product>
+                <productName ref="product.qtp.pro3.name"/>
+            </product>
+            <product>
+                <productName ref="product.qtp.pro4.name"/>
+            </product>
+            <!--<principalFixedTrigger>-->
+            <!--<fixedAmount>100000000</fixedAmount>-->
+            <!--</principalFixedTrigger>-->
+            <!--<counterpartyFixedTrigger>-->
+            <!--<ofEXPCOL>90</ofEXPCOL>-->
+            <!--</counterpartyFixedTrigger>-->
+            <interest>true</interest>
+            <interestCalculationsMethod>Simple</interestCalculationsMethod>
+            <calculationRule>First of the Month</calculationRule>
+            <payMethod>Physical Payment</payMethod>
+            <receiveMethod>Capitalise</receiveMethod>
+            <interestSettlementDate>T+2</interestSettlementDate>
+            <collateralAssetClass>
+                <collateralAssetClassName>qtp_cash</collateralAssetClassName>
+                <collateralAssetType>
+                    <collateralAssetTypeName>qtp_cash_usd</collateralAssetTypeName>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName>qtp_bond</collateralAssetClassName>
+                <collateralAssetType>
+                    <collateralAssetTypeName>qtp_bond_usd</collateralAssetTypeName>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="SmokeBOND001"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="SmokeBOND-ABC"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName>qtp_equity</collateralAssetClassName>
+                <collateralAssetType>
+                    <collateralAssetTypeName>qtp_equity_usd</collateralAssetTypeName>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vcr.name"/>
+                    <linkText ref="payInstrBucket.vcr.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vrd.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.pay.name"/>
+                    <linkText ref="payInstrBucket.pay.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.rec.name"/>
+                    <linkText ref="payInstrBucket.rec.name"/>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementStatus>Pending</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <statementStatus>Approved</statementStatus>
+            <agreementId id="smoke.repo.agr5id"/>
+        </agreement>
+
+        <tradeDetail id="AddSmokeRepoTrade006">
+            <tradeInformation>
+                <productType ref="product.qtp.pro2.name"/>
+                <tradeDate>1/1/2010</tradeDate>
+                <startDate>1/1/2012</startDate>
+                <endDate>1/1/2020</endDate>
+                <tradeIdentifierPartyA id="repo.trade6.identify" random="true" suffix="SmokeTrade006"/>
+                <partyABranchName ref="repo.trade6.identify"/>
+                <partyBBranchName ref="repo.trade6.identify"/>
+            </tradeInformation>
+
+            <securityInformation>
+                <instrumentId>
+                    <filter ref="bond.instrument1.name"/>
+                    <linkText ref="bond.instrument1.name"/>
+                </instrumentId>
+                <couponAccrual>1</couponAccrual>
+                <securityHaircut>100</securityHaircut>
+                <notional>1000</notional>
+                <tradePrice>100</tradePrice>
+                <cleanPrice>100</cleanPrice>
+                <settlementStatusStartLeg>Pending</settlementStatusStartLeg>
+                <settlementStatusCloseLeg>Settled</settlementStatusCloseLeg>
+            </securityInformation>
+
+            <cashInformation>
+                <cashAssetType>
+                    <filter ref="cash.usd.name"/>
+                    <linkText ref="cash.usd.name"/>
+                </cashAssetType>
+                <openCash>-2000</openCash>
+                <repoRate>0</repoRate>
+                <repoInterestAccrued>100</repoInterestAccrued>
+                <closeCash>200</closeCash>
+                <settlementStatusStartLeg>Pending</settlementStatusStartLeg>
+                <settlementStatusCloseLeg>Pending</settlementStatusCloseLeg>
+            </cashInformation>
+
+            <adjustmentInformation>
+                <heldOverCouponAdjustmentSecurityCurrency>
+                    <amount>50</amount>
+                    <currency>USD</currency>
+                </heldOverCouponAdjustmentSecurityCurrency>
+                <couponReinvestmentSecurityCurrency>
+                    <amount>60</amount>
+                    <currency>USD</currency>
+                </couponReinvestmentSecurityCurrency>
+            </adjustmentInformation>
+
+            <exposureInformation>
+                <counterPartyValuationAmount>
+                    <amount>100</amount>
+                    <currency>USD</currency>
+                </counterPartyValuationAmount>
+                <independentValuationAmount>
+                    <amount>60</amount>
+                    <currency>USD</currency>
+                </independentValuationAmount>
+                <valuationAmountType>Principal Valuation Amount</valuationAmountType>
+                <valuationDate>1/1/2012</valuationDate>
+            </exposureInformation>
+            <alertHandling>
+                <!--<content>[/s/S]*</content>-->
+                <accept>true</accept>
+            </alertHandling>
+        </tradeDetail>
+
+        <tradeDetail id="EditTrade006">
+            <tradeIdentifierPartyA ref="repo.trade6.identify"/>
+        </tradeDetail>
+
+        <tradeDetail id="RepoTrade006UpdateCleanPrice">
+            <securityInformation>
+                <cleanPrice>100</cleanPrice>
+            </securityInformation>
+            <!--<alertHandling>-->
+                <!--&lt;!&ndash;<content>[/s/S]*</content>&ndash;&gt;-->
+                <!--<accept>true</accept>-->
+            <!--</alertHandling>-->
+        </tradeDetail>
+
+        <bookingDetail id="RepoStatementBooking001">
+            <assetType ref="SmokeBOND-ABC"/>
+            <instrumentSearch>
+                <instrumentId>
+                    <type>Starting with</type>
+                    <filter ref="RepoSecurity002Id"/>
+                    <linkText ref="RepoSecurity002Id"/>
+                </instrumentId>
+                <linkText ref="RepoSecurity002Id"/>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <nominalAmount>1000000</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <save>save</save>
+            <!--<alertHandling>-->
+            <!--<content>[\s\S]*</content>-->
+            <!--<accept>false</accept>-->
+            <!--</alertHandling>-->
+        </bookingDetail>
+
+        <assetBookingSummary id="RepoBOND_ABC">
+            <assetType ref="SmokeBOND-ABC"/>
+        </assetBookingSummary>
+
+        <priceExceptionsReportFilter id="PriceExceptionsReportTemplate">
+            <!--<principal>-->
+                <!--<filter ref="org.p1.sname"/>-->
+                <!--<linkText ref="org.p1.sname"/>-->
+            <!--</principal>-->
+            <!--<counterparty>-->
+                <!--<filter ref="org.c1.sname"/>-->
+                <!--<linkText ref="org.c1.sname"/>-->
+            <!--</counterparty>-->
+            <!--<assetClass ref="SmokeBOND001"/>-->
+            <!--<assetType ref="SmokeBOND-ABC"/>-->
+            <saveAsTemplate id="PERTemplate" random="true" suffix="PERTemplate"/>
+        </priceExceptionsReportFilter>
+
+    </scenarioData>
+</dataBean>

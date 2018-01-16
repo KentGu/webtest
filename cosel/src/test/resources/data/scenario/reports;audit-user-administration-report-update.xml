@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <user id="audit.user.create">
+            <username id="audit.user.name">audit_user_administration - fullfull</username>
+        </user>
+        <user id="audit.user.update">
+            <username ref="audit.user.name" />
+            <role>Collateral Guest</role>
+            <role>Front Office</role>
+            <approvalProfile>
+                <pay>audit_user_profile</pay>
+                <receive>audit_user_profile</receive>
+            </approvalProfile>
+            <preferences>
+                <collateralRegion>smoke</collateralRegion>
+                <collateralGroup>smoke</collateralGroup>
+                <collateralCategory>ALL</collateralCategory>
+                <businessLine>OTC</businessLine>
+                <principalFilter>
+                    <filter ref="org.p1.lname" />
+                    <linkText ref="org.p1.lname" />
+                </principalFilter>
+                <principalFilter remove="true">
+                    <linkText>QTPPrincipal2</linkText>
+                </principalFilter>
+                <counterpartyFilter>
+                    <filter ref="org.c1.lname"/>
+                    <linkText ref="org.c1.lname" />
+                </counterpartyFilter>
+                <counterpartyFilter remove="true">
+                    <linkText>QTPCounterparty2</linkText>
+                </counterpartyFilter>
+                <email>123456@email.com</email>
+                <telNumber>021-2222</telNumber>
+                <fullName>myFullName</fullName>
+                <notifyFeedStatus>false</notifyFeedStatus>
+            </preferences>
+            <accessStatus>Granted</accessStatus>
+            <changePasswordConstraints>
+                <allowReuseOfPasswords>Yes</allowReuseOfPasswords>
+                <afterWeeks>3</afterWeeks>
+                <maxFailedPasswordAttempts>3</maxFailedPasswordAttempts>
+                <maxPasswordAge>forever</maxPasswordAge>
+            </changePasswordConstraints>
+            <changePassword>
+                <newPassword>2</newPassword>
+                <confirmPassword>2</confirmPassword>
+            </changePassword>
+        </user>
+
+
+
+
+        <auditUserAdministrationReportFilter id="audit.user.administer.by.username">
+            <user>audit_user_administration</user>
+            <startDate>t-1000</startDate>
+        </auditUserAdministrationReportFilter>
+        <variable id="auditReportPath" />
+    </scenarioData>
+</dataBean>

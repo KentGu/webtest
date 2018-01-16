@@ -1,0 +1,5 @@
+pre#TRADES_UPDATED_TO_100D_AD#update coltrades set enddate = to_timestamp(to_char(sysdate,'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')+100
+pre#TRADES_UPDATED_TO_100D_BC#update coltrades set enddate = to_timestamp(to_char(sysdate,'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')-100 where rownum<1001 
+
+val#1#${TRADES_UPDATED_TO_100D_AD} -gt 0 
+val#2#${TRADES_UPDATED_TO_100D_BC} -eq 1000

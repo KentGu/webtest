@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+
+		<instrument id="bondinstrument.MultipleTradableAmount.10.23">
+			<assetClass ref="bond.name"/>
+			<assetType ref="bond.usd.name"/>
+			<instrumentId>
+				<value id="bondinstrument.id" random="true"/>
+			</instrumentId>
+			<description id="bondinstrument.desc" random="true"/>
+			<issuer>
+				<filter>QTP_Eligible_Issuer4</filter>
+				<linkText>QTP_Eligible_Issuer4</linkText>
+			</issuer>
+			<maturityDate>T+100</maturityDate>
+			<priceSource>
+				<priceSourceName>Default</priceSourceName>
+				<dirtyPrice>100</dirtyPrice>
+				<lastPriceChange>T</lastPriceChange>
+				<cleanPrice>100</cleanPrice>
+				<priceDate>T</priceDate>
+			</priceSource>
+			<multipleTradableAmount>10.23</multipleTradableAmount>
+			<couponRate>0</couponRate>
+			<issueDate>T</issueDate>
+			<securityStatus>Approved</securityStatus>
+		</instrument>
+
+		<securitySearch id="bondSecuritySearchAmended">
+			<instrument>
+				<type>Starting with</type>
+				<filter ref="bondinstrument.id"/>
+				<linkText ref="bondinstrument.id"/>
+			</instrument>
+		</securitySearch>
+
+		<securitySearchResult id="bondSecuritySearchWillBeApproved">
+			<instrument ref="bondinstrument.id"/>
+		</securitySearchResult>
+
+		<agreementSearch id="filter.agmt.description">
+			<description>
+				<filter>31297_1</filter>
+			</description>
+		</agreementSearch>
+		<agreementSearchResult id="agreement.description">
+			<description>31297_1</description>
+		</agreementSearchResult>
+
+		<assetBookingSummary id="qtp_bond_usd">
+			<assetType ref="bond.usd.name"/>
+		</assetBookingSummary>
+
+		<bookingDetail id="callBooking1With1000000Amount">
+			<instrumentSearch>
+				<instrumentId>
+					<filter id="bondinstrument.id">bond_usd_31297</filter>
+				</instrumentId>
+				<linkText ref="bondinstrument.id"/>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>1000000</nominalAmount>
+					<movement>Call</movement>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<alertHandling>
+				<content>^(.*)Cannot proceed with booking as the booking does not comply with the Multiple Trading Amount.$</content>
+				<accept>true</accept>
+			</alertHandling>
+			<save>save</save>
+		</bookingDetail>
+
+		<assetBookingSummary id="booking1Pending">
+			<assetType ref="bond.usd.name"/>
+			<instrumentId ref="bondinstrument.id" />
+			<movement>Call</movement>
+			<nominalAmount>1,000,000.00</nominalAmount>
+			<status>Pending</status>
+		</assetBookingSummary>
+
+		<bookingDetail id="booking1ChangeToCancelled">
+			<bookingInformation>
+				<settlementStatusInfo>
+					<settlementStatus>Cancelled</settlementStatus>
+					<settlementComment random="true"/>
+				</settlementStatusInfo>
+			</bookingInformation>
+			<alertHandling>
+				<!--<content>^(.*)Cannot proceed with booking as the booking does not comply with the Multiple Trading Amount.$</content>-->
+				<accept>true</accept>
+			</alertHandling>
+			<save>save</save>
+		</bookingDetail>
+
+		<bookingDetail id="callBooking2With2000Amount">
+			<instrumentSearch>
+				<instrumentId>
+					<filter ref="bondinstrument.id"/>
+				</instrumentId>
+				   <linkText ref="bondinstrument.id"/>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>2000</nominalAmount>
+					<movement>Call</movement>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<alertHandling>
+				<accept>true</accept>
+			</alertHandling>
+			<save>save</save>
+		</bookingDetail>
+
+
+		<agreement id="agr31297">
+			<agreementStatus>Pending</agreementStatus>
+			<agreementStatus>Approved</agreementStatus>
+			<statementStatus>Pending</statementStatus>
+			<statementStatus>Approved</statementStatus>
+		</agreement>
+
+		<exposureEventDetail id="Return">
+			<action>Return</action>
+			<agreementRequirement>-2,000.00</agreementRequirement>
+			<model></model>
+		</exposureEventDetail>
+
+
+		<bookingDetail id="bulk.booking.with.bond.return.2000">
+			<instrumentSearch>
+				<instrument>
+					<filter ref="bondinstrument.id"/>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>2k</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<exposureManagementMessage id="warning.message.with.bond">
+			<messageDetail>
+				<index>1.1</index>
+				<message>Cannot proceed with booking as the booking does not comply with the Multiple Trading Amount.</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<exposureManagementMessage id="override.warning.message.shown.by.previous.bulk.booking">
+			<messageDetail>
+				<index>1.1</index>
+				<message>Cannot proceed with booking as the booking does not comply with the Multiple Trading Amount.</message>
+				<overrideWarning>true</overrideWarning>
+			</messageDetail>
+		</exposureManagementMessage>
+
+
+		<assetBookingSummary id="booking3Pending">
+			<assetType ref="bond.usd.name"/>
+			<instrumentId ref="bondinstrument.id" />
+			<movement>Return</movement>
+			<nominalAmount>-2,000.00</nominalAmount>
+			<status>Pending</status>
+		</assetBookingSummary>
+
+		<bookingDetail id="booking3ChangeToCancelled">
+			<bookingInformation>
+				<settlementStatusInfo>
+					<settlementStatus>Cancelled</settlementStatus>
+					<settlementComment random="true"/>
+				</settlementStatusInfo>
+			</bookingInformation>
+			<save>save</save>
+			<alertHandling>
+				<accept>true</accept>
+			</alertHandling>
+		</bookingDetail>
+
+		<agreement id="agr31297_2">
+			<statementStatus>Approved</statementStatus>
+		</agreement>
+
+		<bookingDetail id="group.booking.with.bond.return.100">
+			<assetType ref="bond.usd.name" />
+			<instrumentSearch>
+				<instrumentId>
+					<filter ref="bondinstrument.id"/>
+				</instrumentId>
+				<linkText ref="bondinstrument.id"/>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>100</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<alertHandling>
+				<display>true</display>
+				<content>^(.*)Cannot proceed with booking as the booking does not comply with the Multiple Trading Amount.$</content>
+				<accept>false</accept>
+			</alertHandling>
+			<save>saveAndComplete</save>
+		</bookingDetail>
+
+		<bookingDetail id="group.booking.with.bond.return.2000">
+			<assetType ref="bond.usd.name" />
+			<instrumentSearch>
+				<instrumentId>
+					<filter ref="bondinstrument.id"/>
+				</instrumentId>
+				<linkText ref="bondinstrument.id"/>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>100</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<alertHandling>
+				<display>true</display>
+				<content>^(.*)Cannot proceed with booking as the booking does not comply with the Multiple Trading Amount.$</content>
+				<accept>true</accept>
+			</alertHandling>
+			<save>saveAndComplete</save>
+		</bookingDetail>
+
+
+
+
+
+
+
+
+
+
+
+	</scenarioData>
+</dataBean>

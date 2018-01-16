@@ -1,0 +1,3084 @@
+I'm FILE_TASKEXECLOG=taskexec.log_RELEASE_2012_3_2_0_20140916001127
+I'm database---------=COLLINE201232_BASE_0819 creditderivative 172.20.20.99:1521 pst4
+Target Version: RELEASE_2012_3_2_0
+Target Path:/home/test/server/colline/cluster/bin
+-------------I am task =Agreements Report 4
+Task is Reports : Agreements Report 4
+2014-09-16 00:11:27
+Waiting 800 second for Task  Agreements Report 4 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Agreements Report 4] at: 2014-09-16 00:11:27,980
+Finished starting task: [Reports:Agreements Report 4] at: 2014-09-16 00:11:28,005
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Agreements. Please wait ...
+Created Report for:Agreements:PSTBaseline_agmt
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Agreements Report 4
+Task is Reports : Agreements Report 4
+2014-09-16 00:24:01
+Waiting 800 second for Task  Agreements Report 4 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Agreements Report 4] at: 2014-09-16 00:24:02,189
+Finished starting task: [Reports:Agreements Report 4] at: 2014-09-16 00:24:02,219
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Agreements. Please wait ...
+Created Report for:Agreements:PSTBaseline_agmt
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Asset Holdings and Valuation Report 30
+Task is Reports : Asset Holdings and Valuation Report 30
+2014-09-16 00:37:33
+Waiting 800 second for Task  Asset Holdings and Valuation Report 30 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Asset Holdings and Valuation Report 30] at: 2014-09-16 00:37:33,377
+Finished starting task: [Reports:Asset Holdings and Valuation Report 30] at: 2014-09-16 00:37:33,401
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Asset Holdings and Valuation. Please wait ...
+Created Report for:Asset Holdings and Valuation:PSTBaseline_AHV
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Asset Holdings and Valuation Report 30
+Task is Reports : Asset Holdings and Valuation Report 30
+2014-09-16 00:37:53
+Waiting 800 second for Task  Asset Holdings and Valuation Report 30 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Asset Holdings and Valuation Report 30] at: 2014-09-16 00:37:53,432
+Finished starting task: [Reports:Asset Holdings and Valuation Report 30] at: 2014-09-16 00:37:53,460
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Asset Holdings and Valuation. Please wait ...
+Created Report for:Asset Holdings and Valuation:PSTBaseline_AHV
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Asset Management Report 1
+Task is Reports : Asset Management Report 1
+2014-09-16 00:38:13
+Waiting 300 second for Task  Asset Management Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Asset Management Report 1] at: 2014-09-16 00:38:13,463
+Correct syntax:
+>coltaskmanager <group name>:<task name>
+could not find job with group,name=Reports,Asset Management Report 1. 
+com.lombardrisk.f3.persistence.exception.LRSFindException: could not find job with group,name=Reports,Asset Management Report 1. 
+	at com.lombardrisk.f3.scheduler.persistence.SchedulerPersistenceManagerBean.findJobsByGroupAndName(SchedulerPersistenceManagerBean.java:149)
+	at sun.reflect.GeneratedMethodAccessor408.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.jboss.invocation.Invocation.performCall(Invocation.java:386)
+	at org.jboss.ejb.StatelessSessionContainer$ContainerInterceptor.invoke(StatelessSessionContainer.java:233)
+	at org.jboss.resource.connectionmanager.CachedConnectionInterceptor.invoke(CachedConnectionInterceptor.java:156)
+	at org.jboss.ejb.plugins.StatelessSessionInstanceInterceptor.invoke(StatelessSessionInstanceInterceptor.java:173)
+	at com.lombardrisk.f3.audit.AuditTrailInterceptor.invoke(AuditTrailInterceptor.java:233)
+	at org.jboss.ejb.plugins.CallValidationInterceptor.invoke(CallValidationInterceptor.java:63)
+	at org.jboss.ejb.plugins.AbstractTxInterceptor.invokeNext(AbstractTxInterceptor.java:121)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.runWithTransactions(TxInterceptorCMT.java:350)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.invoke(TxInterceptorCMT.java:181)
+	at com.lombardrisk.f3.accesscontrol.JBossEJBInterceptor.invoke(JBossEJBInterceptor.java:140)
+	at org.jboss.ejb.plugins.SecurityInterceptor.process(SecurityInterceptor.java:228)
+	at org.jboss.ejb.plugins.SecurityInterceptor.invoke(SecurityInterceptor.java:211)
+	at org.jboss.ejb.plugins.LogInterceptor.invoke(LogInterceptor.java:205)
+	at org.jboss.ejb.plugins.ProxyFactoryFinderInterceptor.invoke(ProxyFactoryFinderInterceptor.java:138)
+	at org.jboss.ejb.SessionContainer.internalInvoke(SessionContainer.java:650)
+	at org.jboss.ejb.Container.invoke(Container.java:1092)
+	at org.jboss.ejb.plugins.local.BaseLocalProxyFactory.invoke(BaseLocalProxyFactory.java:436)
+	at org.jboss.ejb.plugins.local.StatelessSessionProxy.invoke(StatelessSessionProxy.java:103)
+	at com.sun.proxy.$Proxy431.findJobsByGroupAndName(Unknown Source)
+	at com.lombardrisk.f3.scheduler.SchedulerServiceBean.startJobNow(SchedulerServiceBean.java:500)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.jboss.invocation.Invocation.performCall(Invocation.java:386)
+	at org.jboss.ejb.StatelessSessionContainer$ContainerInterceptor.invoke(StatelessSessionContainer.java:233)
+	at org.jboss.resource.connectionmanager.CachedConnectionInterceptor.invoke(CachedConnectionInterceptor.java:156)
+	at org.jboss.ejb.plugins.StatelessSessionInstanceInterceptor.invoke(StatelessSessionInstanceInterceptor.java:173)
+	at com.lombardrisk.f3.audit.AuditTrailInterceptor.invoke(AuditTrailInterceptor.java:233)
+	at org.jboss.ejb.plugins.CallValidationInterceptor.invoke(CallValidationInterceptor.java:63)
+	at org.jboss.ejb.plugins.AbstractTxInterceptor.invokeNext(AbstractTxInterceptor.java:121)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.runWithTransactions(TxInterceptorCMT.java:350)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.invoke(TxInterceptorCMT.java:181)
+	at com.lombardrisk.f3.accesscontrol.JBossEJBInterceptor.invoke(JBossEJBInterceptor.java:140)
+	at org.jboss.ejb.plugins.SecurityInterceptor.process(SecurityInterceptor.java:228)
+	at org.jboss.ejb.plugins.SecurityInterceptor.invoke(SecurityInterceptor.java:211)
+	at org.jboss.ejb.plugins.LogInterceptor.invoke(LogInterceptor.java:205)
+	at org.jboss.ejb.plugins.ProxyFactoryFinderInterceptor.invoke(ProxyFactoryFinderInterceptor.java:138)
+	at org.jboss.ejb.SessionContainer.internalInvoke(SessionContainer.java:650)
+	at org.jboss.ejb.Container.invoke(Container.java:1092)
+	at sun.reflect.GeneratedMethodAccessor398.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.jboss.mx.interceptor.ReflectedDispatcher.invoke(ReflectedDispatcher.java:157)
+	at org.jboss.mx.server.Invocation.dispatch(Invocation.java:96)
+	at org.jboss.mx.server.Invocation.invoke(Invocation.java:88)
+	at org.jboss.mx.server.AbstractMBeanInvoker.invoke(AbstractMBeanInvoker.java:264)
+	at org.jboss.mx.server.MBeanServerImpl.invoke(MBeanServerImpl.java:668)
+	at org.jboss.system.server.jmx.LazyMBeanServer.invoke(LazyMBeanServer.java:283)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker$MBeanServerAction.invoke(JRMPInvoker.java:855)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker.invoke(JRMPInvoker.java:422)
+	at sun.reflect.GeneratedMethodAccessor4038.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:303)
+	at sun.rmi.transport.Transport$1.run(Transport.java:159)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:155)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:535)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:790)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:649)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+	at sun.rmi.transport.StreamRemoteCall.exceptionReceivedFromServer(StreamRemoteCall.java:255)
+	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:233)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:142)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker_Stub.invoke(Unknown Source)
+	at org.jboss.invocation.jrmp.interfaces.JRMPInvokerProxy.invoke(JRMPInvokerProxy.java:133)
+	at org.jboss.invocation.InvokerInterceptor.invokeInvoker(InvokerInterceptor.java:365)
+	at org.jboss.invocation.InvokerInterceptor.invoke(InvokerInterceptor.java:197)
+	at org.jboss.proxy.TransactionInterceptor.invoke(TransactionInterceptor.java:61)
+	at org.jboss.proxy.ejb.SecurityContextInterceptor.invoke(SecurityContextInterceptor.java:64)
+	at org.jboss.proxy.SecurityInterceptor.invoke(SecurityInterceptor.java:68)
+	at org.jboss.proxy.ejb.StatelessSessionInterceptor.invoke(StatelessSessionInterceptor.java:112)
+	at org.jboss.proxy.ClientContainer.invoke(ClientContainer.java:101)
+	at com.sun.proxy.$Proxy2.startJobNow(Unknown Source)
+	at com.lombardrisk.f3.F3TaskManager.main(F3TaskManager.java:236)
+----------break now --------
+-------------I am task =Asset Management Report 1
+Task is Reports : Asset Management Report 1
+2014-09-16 00:38:43
+Waiting 300 second for Task  Asset Management Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Asset Management Report 1] at: 2014-09-16 00:38:43,508
+Correct syntax:
+>coltaskmanager <group name>:<task name>
+could not find job with group,name=Reports,Asset Management Report 1. 
+com.lombardrisk.f3.persistence.exception.LRSFindException: could not find job with group,name=Reports,Asset Management Report 1. 
+	at com.lombardrisk.f3.scheduler.persistence.SchedulerPersistenceManagerBean.findJobsByGroupAndName(SchedulerPersistenceManagerBean.java:149)
+	at sun.reflect.GeneratedMethodAccessor408.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.jboss.invocation.Invocation.performCall(Invocation.java:386)
+	at org.jboss.ejb.StatelessSessionContainer$ContainerInterceptor.invoke(StatelessSessionContainer.java:233)
+	at org.jboss.resource.connectionmanager.CachedConnectionInterceptor.invoke(CachedConnectionInterceptor.java:156)
+	at org.jboss.ejb.plugins.StatelessSessionInstanceInterceptor.invoke(StatelessSessionInstanceInterceptor.java:173)
+	at com.lombardrisk.f3.audit.AuditTrailInterceptor.invoke(AuditTrailInterceptor.java:233)
+	at org.jboss.ejb.plugins.CallValidationInterceptor.invoke(CallValidationInterceptor.java:63)
+	at org.jboss.ejb.plugins.AbstractTxInterceptor.invokeNext(AbstractTxInterceptor.java:121)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.runWithTransactions(TxInterceptorCMT.java:350)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.invoke(TxInterceptorCMT.java:181)
+	at com.lombardrisk.f3.accesscontrol.JBossEJBInterceptor.invoke(JBossEJBInterceptor.java:140)
+	at org.jboss.ejb.plugins.SecurityInterceptor.process(SecurityInterceptor.java:228)
+	at org.jboss.ejb.plugins.SecurityInterceptor.invoke(SecurityInterceptor.java:211)
+	at org.jboss.ejb.plugins.LogInterceptor.invoke(LogInterceptor.java:205)
+	at org.jboss.ejb.plugins.ProxyFactoryFinderInterceptor.invoke(ProxyFactoryFinderInterceptor.java:138)
+	at org.jboss.ejb.SessionContainer.internalInvoke(SessionContainer.java:650)
+	at org.jboss.ejb.Container.invoke(Container.java:1092)
+	at org.jboss.ejb.plugins.local.BaseLocalProxyFactory.invoke(BaseLocalProxyFactory.java:436)
+	at org.jboss.ejb.plugins.local.StatelessSessionProxy.invoke(StatelessSessionProxy.java:103)
+	at com.sun.proxy.$Proxy431.findJobsByGroupAndName(Unknown Source)
+	at com.lombardrisk.f3.scheduler.SchedulerServiceBean.startJobNow(SchedulerServiceBean.java:500)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.jboss.invocation.Invocation.performCall(Invocation.java:386)
+	at org.jboss.ejb.StatelessSessionContainer$ContainerInterceptor.invoke(StatelessSessionContainer.java:233)
+	at org.jboss.resource.connectionmanager.CachedConnectionInterceptor.invoke(CachedConnectionInterceptor.java:156)
+	at org.jboss.ejb.plugins.StatelessSessionInstanceInterceptor.invoke(StatelessSessionInstanceInterceptor.java:173)
+	at com.lombardrisk.f3.audit.AuditTrailInterceptor.invoke(AuditTrailInterceptor.java:233)
+	at org.jboss.ejb.plugins.CallValidationInterceptor.invoke(CallValidationInterceptor.java:63)
+	at org.jboss.ejb.plugins.AbstractTxInterceptor.invokeNext(AbstractTxInterceptor.java:121)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.runWithTransactions(TxInterceptorCMT.java:350)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.invoke(TxInterceptorCMT.java:181)
+	at com.lombardrisk.f3.accesscontrol.JBossEJBInterceptor.invoke(JBossEJBInterceptor.java:140)
+	at org.jboss.ejb.plugins.SecurityInterceptor.process(SecurityInterceptor.java:228)
+	at org.jboss.ejb.plugins.SecurityInterceptor.invoke(SecurityInterceptor.java:211)
+	at org.jboss.ejb.plugins.LogInterceptor.invoke(LogInterceptor.java:205)
+	at org.jboss.ejb.plugins.ProxyFactoryFinderInterceptor.invoke(ProxyFactoryFinderInterceptor.java:138)
+	at org.jboss.ejb.SessionContainer.internalInvoke(SessionContainer.java:650)
+	at org.jboss.ejb.Container.invoke(Container.java:1092)
+	at sun.reflect.GeneratedMethodAccessor398.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.jboss.mx.interceptor.ReflectedDispatcher.invoke(ReflectedDispatcher.java:157)
+	at org.jboss.mx.server.Invocation.dispatch(Invocation.java:96)
+	at org.jboss.mx.server.Invocation.invoke(Invocation.java:88)
+	at org.jboss.mx.server.AbstractMBeanInvoker.invoke(AbstractMBeanInvoker.java:264)
+	at org.jboss.mx.server.MBeanServerImpl.invoke(MBeanServerImpl.java:668)
+	at org.jboss.system.server.jmx.LazyMBeanServer.invoke(LazyMBeanServer.java:283)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker$MBeanServerAction.invoke(JRMPInvoker.java:855)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker.invoke(JRMPInvoker.java:422)
+	at sun.reflect.GeneratedMethodAccessor4038.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:303)
+	at sun.rmi.transport.Transport$1.run(Transport.java:159)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:155)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:535)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:790)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:649)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+	at sun.rmi.transport.StreamRemoteCall.exceptionReceivedFromServer(StreamRemoteCall.java:255)
+	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:233)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:142)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker_Stub.invoke(Unknown Source)
+	at org.jboss.invocation.jrmp.interfaces.JRMPInvokerProxy.invoke(JRMPInvokerProxy.java:133)
+	at org.jboss.invocation.InvokerInterceptor.invokeInvoker(InvokerInterceptor.java:365)
+	at org.jboss.invocation.InvokerInterceptor.invoke(InvokerInterceptor.java:197)
+	at org.jboss.proxy.TransactionInterceptor.invoke(TransactionInterceptor.java:61)
+	at org.jboss.proxy.ejb.SecurityContextInterceptor.invoke(SecurityContextInterceptor.java:64)
+	at org.jboss.proxy.SecurityInterceptor.invoke(SecurityInterceptor.java:68)
+	at org.jboss.proxy.ejb.StatelessSessionInterceptor.invoke(StatelessSessionInterceptor.java:112)
+	at org.jboss.proxy.ClientContainer.invoke(ClientContainer.java:101)
+	at com.sun.proxy.$Proxy2.startJobNow(Unknown Source)
+	at com.lombardrisk.f3.F3TaskManager.main(F3TaskManager.java:236)
+----------break now --------
+-------------I am task =Asset Settlements Report 18
+Task is Reports : Asset Settlements Report 18
+2014-09-16 00:39:13
+Waiting 1000 second for Task  Asset Settlements Report 18 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Asset Settlements Report 18] at: 2014-09-16 00:39:13,565
+Finished starting task: [Reports:Asset Settlements Report 18] at: 2014-09-16 00:39:13,607
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Asset Settlements. Please wait ...
+Created Report for:Asset Settlements:PSTBaseline_AssetSettlements
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Asset Settlements Report 18
+Task is Reports : Asset Settlements Report 18
+2014-09-16 00:39:57
+Waiting 1000 second for Task  Asset Settlements Report 18 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Asset Settlements Report 18] at: 2014-09-16 00:39:58,003
+Finished starting task: [Reports:Asset Settlements Report 18] at: 2014-09-16 00:39:58,026
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Asset Settlements. Please wait ...
+Created Report for:Asset Settlements:PSTBaseline_AssetSettlements
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Audit Agreements Report 2
+Task is Reports : Audit Agreements Report 2
+2014-09-16 00:40:22
+Waiting 500 second for Task  Audit Agreements Report 2 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Audit Agreements Report 2] at: 2014-09-16 00:40:23,125
+Finished starting task: [Reports:Audit Agreements Report 2] at: 2014-09-16 00:40:23,153
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Audit Agreements. Please wait ...
+Created Report for:Audit Agreements:PSTBaseline_AuditAgmt
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Audit Agreements Report 2
+Task is Reports : Audit Agreements Report 2
+2014-09-16 00:41:49
+Waiting 500 second for Task  Audit Agreements Report 2 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Audit Agreements Report 2] at: 2014-09-16 00:41:49,806
+Finished starting task: [Reports:Audit Agreements Report 2] at: 2014-09-16 00:41:49,838
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Audit Agreements. Please wait ...
+Created Report for:Audit Agreements:PSTBaseline_AuditAgmt
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Audit Asset Definition Report 1
+Task is Reports : Audit Asset Definition Report 1
+2014-09-16 00:43:16
+Waiting 180 second for Task  Audit Asset Definition Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Audit Asset Definition Report 1] at: 2014-09-16 00:43:16,482
+Finished starting task: [Reports:Audit Asset Definition Report 1] at: 2014-09-16 00:43:16,506
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Audit Asset Definition. Please wait ...
+Created Report for:Audit Asset Definition:PSTBaseline_AudAssetDef
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Audit Asset Definition Report 1
+Task is Reports : Audit Asset Definition Report 1
+2014-09-16 00:43:36
+Waiting 180 second for Task  Audit Asset Definition Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Audit Asset Definition Report 1] at: 2014-09-16 00:43:36,528
+Finished starting task: [Reports:Audit Asset Definition Report 1] at: 2014-09-16 00:43:36,554
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Audit Asset Definition. Please wait ...
+Created Report for:Audit Asset Definition:PSTBaseline_AudAssetDef
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Audit Assets Report 1
+Task is Reports : Audit Assets Report 1
+2014-09-16 00:43:56
+Waiting 180 second for Task  Audit Assets Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Audit Assets Report 1] at: 2014-09-16 00:43:56,564
+Finished starting task: [Reports:Audit Assets Report 1] at: 2014-09-16 00:43:56,589
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Audit Assets. Please wait ...
+Created Report for:Audit Assets:PSTBaseline_AuditAssets
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Audit Assets Report 1
+Task is Reports : Audit Assets Report 1
+2014-09-16 00:44:16
+Waiting 180 second for Task  Audit Assets Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Audit Assets Report 1] at: 2014-09-16 00:44:16,601
+Finished starting task: [Reports:Audit Assets Report 1] at: 2014-09-16 00:44:16,629
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Audit Assets. Please wait ...
+Created Report for:Audit Assets:PSTBaseline_AuditAssets
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Audit Holiday Centres Report 1
+Task is Reports : Audit Holiday Centres Report 1
+2014-09-16 00:44:36
+Waiting 180 second for Task  Audit Holiday Centres Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Audit Holiday Centres Report 1] at: 2014-09-16 00:44:36,656
+Finished starting task: [Reports:Audit Holiday Centres Report 1] at: 2014-09-16 00:44:36,677
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Audit Holiday Centres. Please wait ...
+Created Report for:Audit Holiday Centres:PSTBaseline_AudHolidayCentres
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Audit Holiday Centres Report 1
+Task is Reports : Audit Holiday Centres Report 1
+2014-09-16 00:44:56
+Waiting 180 second for Task  Audit Holiday Centres Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Audit Holiday Centres Report 1] at: 2014-09-16 00:44:56,707
+Finished starting task: [Reports:Audit Holiday Centres Report 1] at: 2014-09-16 00:44:56,730
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Audit Holiday Centres. Please wait ...
+Created Report for:Audit Holiday Centres:PSTBaseline_AudHolidayCentres
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Audit Interest Rates Report 1
+Task is Reports : Audit Interest Rates Report 1
+2014-09-16 00:45:16
+Waiting 180 second for Task  Audit Interest Rates Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Audit Interest Rates Report 1] at: 2014-09-16 00:45:16,747
+Finished starting task: [Reports:Audit Interest Rates Report 1] at: 2014-09-16 00:45:16,768
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Audit Interest Rates. Please wait ...
+Created Report for:Audit Interest Rates:PSTBaseline_AudInterestRates
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Audit Interest Rates Report 1
+Task is Reports : Audit Interest Rates Report 1
+2014-09-16 00:45:36
+Waiting 180 second for Task  Audit Interest Rates Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Audit Interest Rates Report 1] at: 2014-09-16 00:45:36,791
+Finished starting task: [Reports:Audit Interest Rates Report 1] at: 2014-09-16 00:45:36,815
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Audit Interest Rates. Please wait ...
+Created Report for:Audit Interest Rates:PSTBaseline_AudInterestRates
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Audit Organisations Report 2
+Task is Reports : Audit Organisations Report 2
+2014-09-16 00:45:56
+Waiting 180 second for Task  Audit Organisations Report 2 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Audit Organisations Report 2] at: 2014-09-16 00:45:56,841
+Finished starting task: [Reports:Audit Organisations Report 2] at: 2014-09-16 00:45:56,865
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Audit Organisations. Please wait ...
+Created Report for:Audit Organisations:PSTBaseline_AudOrg
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Audit Organisations Report 2
+Task is Reports : Audit Organisations Report 2
+2014-09-16 00:46:35
+Waiting 180 second for Task  Audit Organisations Report 2 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Audit Organisations Report 2] at: 2014-09-16 00:46:36,123
+Finished starting task: [Reports:Audit Organisations Report 2] at: 2014-09-16 00:46:36,146
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Audit Organisations. Please wait ...
+Created Report for:Audit Organisations:PSTBaseline_AudOrg
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Audit Roles Administration Report 1
+Task is Reports : Audit Roles Administration Report 1
+2014-09-16 00:47:15
+Waiting 180 second for Task  Audit Roles Administration Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Audit Roles Administration Report 1] at: 2014-09-16 00:47:15,401
+Finished starting task: [Reports:Audit Roles Administration Report 1] at: 2014-09-16 00:47:15,422
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Audit Roles Administration. Please wait ...
+Created Report for:Audit Roles Administration:PSTBaseline_audRolesAdmin
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Audit Roles Administration Report 1
+Task is Reports : Audit Roles Administration Report 1
+2014-09-16 00:47:35
+Waiting 180 second for Task  Audit Roles Administration Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Audit Roles Administration Report 1] at: 2014-09-16 00:47:35,444
+Finished starting task: [Reports:Audit Roles Administration Report 1] at: 2014-09-16 00:47:35,475
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Audit Roles Administration. Please wait ...
+Created Report for:Audit Roles Administration:PSTBaseline_audRolesAdmin
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Audit Settlement Details Report 1
+Task is Reports : Audit Settlement Details Report 1
+2014-09-16 00:47:55
+Waiting 180 second for Task  Audit Settlement Details Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Audit Settlement Details Report 1] at: 2014-09-16 00:47:55,487
+Finished starting task: [Reports:Audit Settlement Details Report 1] at: 2014-09-16 00:47:55,507
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Audit Settlement Details. Please wait ...
+Created Report for:Audit Settlement Details:PSTBaseline_AudSettlDetails
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Audit Settlement Details Report 1
+Task is Reports : Audit Settlement Details Report 1
+2014-09-16 00:48:18
+Waiting 180 second for Task  Audit Settlement Details Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Audit Settlement Details Report 1] at: 2014-09-16 00:48:18,555
+Finished starting task: [Reports:Audit Settlement Details Report 1] at: 2014-09-16 00:48:18,579
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Audit Settlement Details. Please wait ...
+Created Report for:Audit Settlement Details:PSTBaseline_AudSettlDetails
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Audit Statements Report 1
+Task is Reports : Audit Statements Report 1
+2014-09-16 00:48:41
+Waiting 500 second for Task  Audit Statements Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Audit Statements Report 1] at: 2014-09-16 00:48:41,628
+Finished starting task: [Reports:Audit Statements Report 1] at: 2014-09-16 00:48:41,645
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Audit Statements. Please wait ...
+Created Report for:Audit Statements:PSTBaseline_AudStmt
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Audit Statements Report 1
+Task is Reports : Audit Statements Report 1
+2014-09-16 00:49:10
+Waiting 500 second for Task  Audit Statements Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Audit Statements Report 1] at: 2014-09-16 00:49:10,759
+Finished starting task: [Reports:Audit Statements Report 1] at: 2014-09-16 00:49:10,788
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Audit Statements. Please wait ...
+Created Report for:Audit Statements:PSTBaseline_AudStmt
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Audit Trades Report 1
+Task is Reports : Audit Trades Report 1
+2014-09-16 00:49:39
+Waiting 180 second for Task  Audit Trades Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Audit Trades Report 1] at: 2014-09-16 00:49:39,902
+Finished starting task: [Reports:Audit Trades Report 1] at: 2014-09-16 00:49:39,924
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Audit Trades. Please wait ...
+Created Report for:Audit Trades:PSTBaseline_AudTrades
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Audit Trades Report 1
+Task is Reports : Audit Trades Report 1
+2014-09-16 00:49:59
+Waiting 180 second for Task  Audit Trades Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Audit Trades Report 1] at: 2014-09-16 00:49:59,937
+Finished starting task: [Reports:Audit Trades Report 1] at: 2014-09-16 00:49:59,965
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Audit Trades. Please wait ...
+Created Report for:Audit Trades:PSTBaseline_AudTrades
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Audit User Administration Report 1
+Task is Reports : Audit User Administration Report 1
+2014-09-16 00:50:19
+Waiting 180 second for Task  Audit User Administration Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Audit User Administration Report 1] at: 2014-09-16 00:50:19,975
+Finished starting task: [Reports:Audit User Administration Report 1] at: 2014-09-16 00:50:19,998
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Audit User Administration. Please wait ...
+Created Report for:Audit User Administration:PSTBaseline_audUserAdmin
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Audit User Administration Report 1
+Task is Reports : Audit User Administration Report 1
+2014-09-16 00:50:39
+Waiting 180 second for Task  Audit User Administration Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Audit User Administration Report 1] at: 2014-09-16 00:50:40,032
+Finished starting task: [Reports:Audit User Administration Report 1] at: 2014-09-16 00:50:40,047
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Audit User Administration. Please wait ...
+Created Report for:Audit User Administration:PSTBaseline_audUserAdmin
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Audit Eligibility Rule Template Report 1
+Task is Reports : Audit Eligibility Rule Template Report 1
+2014-09-16 00:50:59
+Waiting 180 second for Task  Audit Eligibility Rule Template Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Audit Eligibility Rule Template Report 1] at: 2014-09-16 00:51:00,079
+Finished starting task: [Reports:Audit Eligibility Rule Template Report 1] at: 2014-09-16 00:51:00,100
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Audit Eligibility Rule Template. Please wait ...
+Created Report for:Audit Eligibility Rule Template:PSTBaseline_AuditEligibilityRules
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Audit Eligibility Rule Template Report 1
+Task is Reports : Audit Eligibility Rule Template Report 1
+2014-09-16 00:51:19
+Waiting 180 second for Task  Audit Eligibility Rule Template Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Audit Eligibility Rule Template Report 1] at: 2014-09-16 00:51:20,130
+Finished starting task: [Reports:Audit Eligibility Rule Template Report 1] at: 2014-09-16 00:51:20,150
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Audit Eligibility Rule Template. Please wait ...
+Created Report for:Audit Eligibility Rule Template:PSTBaseline_AuditEligibilityRules
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Cash And Accrual Report 1
+Task is Reports : Cash And Accrual Report 1
+2014-09-16 00:51:39
+Waiting 1000 second for Task  Cash And Accrual Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Cash And Accrual Report 1] at: 2014-09-16 00:51:40,163
+Finished starting task: [Reports:Cash And Accrual Report 1] at: 2014-09-16 00:51:40,178
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Cash And Accrual. Please wait ...
+Created Report for:Cash And Accrual:PSTBaseline_CashAndAccrual
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Cash And Accrual Report 1
+Task is Reports : Cash And Accrual Report 1
+2014-09-16 00:55:40
+Waiting 1000 second for Task  Cash And Accrual Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Cash And Accrual Report 1] at: 2014-09-16 00:55:40,437
+Finished starting task: [Reports:Cash And Accrual Report 1] at: 2014-09-16 00:55:40,461
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Cash And Accrual. Please wait ...
+Created Report for:Cash And Accrual:PSTBaseline_CashAndAccrual
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Concentration Limits Report 1
+Task is Reports : Concentration Limits Report 1
+2014-09-16 00:59:40
+Waiting 180 second for Task  Concentration Limits Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Concentration Limits Report 1] at: 2014-09-16 00:59:40,879
+Finished starting task: [Reports:Concentration Limits Report 1] at: 2014-09-16 00:59:40,898
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Concentration Limits. Please wait ...
+Created Report for:Concentration Limits:PSTBaseline_ConLimits
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Concentration Limits Report 1
+Task is Reports : Concentration Limits Report 1
+2014-09-16 01:00:26
+Waiting 180 second for Task  Concentration Limits Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Concentration Limits Report 1] at: 2014-09-16 01:00:27,012
+Finished starting task: [Reports:Concentration Limits Report 1] at: 2014-09-16 01:00:27,040
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Concentration Limits. Please wait ...
+Created Report for:Concentration Limits:PSTBaseline_ConLimits
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Corporate Actions Report 1
+Task is Reports : Corporate Actions Report 1
+2014-09-16 01:01:13
+Waiting 2500 second for Task  Corporate Actions Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Corporate Actions Report 1] at: 2014-09-16 01:01:13,321
+Finished starting task: [Reports:Corporate Actions Report 1] at: 2014-09-16 01:01:13,342
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Corporate Actions. Please wait ...
+Created Report for:Corporate Actions:PSTBaseline_CorActions
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Corporate Actions Report 1
+Task is Reports : Corporate Actions Report 1
+2014-09-16 01:01:33
+Waiting 2500 second for Task  Corporate Actions Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Corporate Actions Report 1] at: 2014-09-16 01:01:33,386
+Finished starting task: [Reports:Corporate Actions Report 1] at: 2014-09-16 01:01:33,414
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Corporate Actions. Please wait ...
+Created Report for:Corporate Actions:PSTBaseline_CorActions
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Daily Exposure Report 18
+Task is Reports : Daily Exposure Report 18
+2014-09-16 01:01:53
+Waiting 1800 second for Task  Daily Exposure Report 18 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Daily Exposure Report 18] at: 2014-09-16 01:01:53,413
+Correct syntax:
+>coltaskmanager <group name>:<task name>
+could not find job with group,name=Reports,Daily Exposure Report 18. 
+com.lombardrisk.f3.persistence.exception.LRSFindException: could not find job with group,name=Reports,Daily Exposure Report 18. 
+	at com.lombardrisk.f3.scheduler.persistence.SchedulerPersistenceManagerBean.findJobsByGroupAndName(SchedulerPersistenceManagerBean.java:149)
+	at sun.reflect.GeneratedMethodAccessor408.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.jboss.invocation.Invocation.performCall(Invocation.java:386)
+	at org.jboss.ejb.StatelessSessionContainer$ContainerInterceptor.invoke(StatelessSessionContainer.java:233)
+	at org.jboss.resource.connectionmanager.CachedConnectionInterceptor.invoke(CachedConnectionInterceptor.java:156)
+	at org.jboss.ejb.plugins.StatelessSessionInstanceInterceptor.invoke(StatelessSessionInstanceInterceptor.java:173)
+	at com.lombardrisk.f3.audit.AuditTrailInterceptor.invoke(AuditTrailInterceptor.java:233)
+	at org.jboss.ejb.plugins.CallValidationInterceptor.invoke(CallValidationInterceptor.java:63)
+	at org.jboss.ejb.plugins.AbstractTxInterceptor.invokeNext(AbstractTxInterceptor.java:121)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.runWithTransactions(TxInterceptorCMT.java:350)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.invoke(TxInterceptorCMT.java:181)
+	at com.lombardrisk.f3.accesscontrol.JBossEJBInterceptor.invoke(JBossEJBInterceptor.java:140)
+	at org.jboss.ejb.plugins.SecurityInterceptor.process(SecurityInterceptor.java:228)
+	at org.jboss.ejb.plugins.SecurityInterceptor.invoke(SecurityInterceptor.java:211)
+	at org.jboss.ejb.plugins.LogInterceptor.invoke(LogInterceptor.java:205)
+	at org.jboss.ejb.plugins.ProxyFactoryFinderInterceptor.invoke(ProxyFactoryFinderInterceptor.java:138)
+	at org.jboss.ejb.SessionContainer.internalInvoke(SessionContainer.java:650)
+	at org.jboss.ejb.Container.invoke(Container.java:1092)
+	at org.jboss.ejb.plugins.local.BaseLocalProxyFactory.invoke(BaseLocalProxyFactory.java:436)
+	at org.jboss.ejb.plugins.local.StatelessSessionProxy.invoke(StatelessSessionProxy.java:103)
+	at com.sun.proxy.$Proxy431.findJobsByGroupAndName(Unknown Source)
+	at com.lombardrisk.f3.scheduler.SchedulerServiceBean.startJobNow(SchedulerServiceBean.java:500)
+	at sun.reflect.GeneratedMethodAccessor4059.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.jboss.invocation.Invocation.performCall(Invocation.java:386)
+	at org.jboss.ejb.StatelessSessionContainer$ContainerInterceptor.invoke(StatelessSessionContainer.java:233)
+	at org.jboss.resource.connectionmanager.CachedConnectionInterceptor.invoke(CachedConnectionInterceptor.java:156)
+	at org.jboss.ejb.plugins.StatelessSessionInstanceInterceptor.invoke(StatelessSessionInstanceInterceptor.java:173)
+	at com.lombardrisk.f3.audit.AuditTrailInterceptor.invoke(AuditTrailInterceptor.java:233)
+	at org.jboss.ejb.plugins.CallValidationInterceptor.invoke(CallValidationInterceptor.java:63)
+	at org.jboss.ejb.plugins.AbstractTxInterceptor.invokeNext(AbstractTxInterceptor.java:121)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.runWithTransactions(TxInterceptorCMT.java:350)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.invoke(TxInterceptorCMT.java:181)
+	at com.lombardrisk.f3.accesscontrol.JBossEJBInterceptor.invoke(JBossEJBInterceptor.java:140)
+	at org.jboss.ejb.plugins.SecurityInterceptor.process(SecurityInterceptor.java:228)
+	at org.jboss.ejb.plugins.SecurityInterceptor.invoke(SecurityInterceptor.java:211)
+	at org.jboss.ejb.plugins.LogInterceptor.invoke(LogInterceptor.java:205)
+	at org.jboss.ejb.plugins.ProxyFactoryFinderInterceptor.invoke(ProxyFactoryFinderInterceptor.java:138)
+	at org.jboss.ejb.SessionContainer.internalInvoke(SessionContainer.java:650)
+	at org.jboss.ejb.Container.invoke(Container.java:1092)
+	at sun.reflect.GeneratedMethodAccessor398.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.jboss.mx.interceptor.ReflectedDispatcher.invoke(ReflectedDispatcher.java:157)
+	at org.jboss.mx.server.Invocation.dispatch(Invocation.java:96)
+	at org.jboss.mx.server.Invocation.invoke(Invocation.java:88)
+	at org.jboss.mx.server.AbstractMBeanInvoker.invoke(AbstractMBeanInvoker.java:264)
+	at org.jboss.mx.server.MBeanServerImpl.invoke(MBeanServerImpl.java:668)
+	at org.jboss.system.server.jmx.LazyMBeanServer.invoke(LazyMBeanServer.java:283)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker$MBeanServerAction.invoke(JRMPInvoker.java:855)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker.invoke(JRMPInvoker.java:422)
+	at sun.reflect.GeneratedMethodAccessor4038.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:303)
+	at sun.rmi.transport.Transport$1.run(Transport.java:159)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:155)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:535)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:790)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:649)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+	at sun.rmi.transport.StreamRemoteCall.exceptionReceivedFromServer(StreamRemoteCall.java:255)
+	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:233)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:142)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker_Stub.invoke(Unknown Source)
+	at org.jboss.invocation.jrmp.interfaces.JRMPInvokerProxy.invoke(JRMPInvokerProxy.java:133)
+	at org.jboss.invocation.InvokerInterceptor.invokeInvoker(InvokerInterceptor.java:365)
+	at org.jboss.invocation.InvokerInterceptor.invoke(InvokerInterceptor.java:197)
+	at org.jboss.proxy.TransactionInterceptor.invoke(TransactionInterceptor.java:61)
+	at org.jboss.proxy.ejb.SecurityContextInterceptor.invoke(SecurityContextInterceptor.java:64)
+	at org.jboss.proxy.SecurityInterceptor.invoke(SecurityInterceptor.java:68)
+	at org.jboss.proxy.ejb.StatelessSessionInterceptor.invoke(StatelessSessionInterceptor.java:112)
+	at org.jboss.proxy.ClientContainer.invoke(ClientContainer.java:101)
+	at com.sun.proxy.$Proxy2.startJobNow(Unknown Source)
+	at com.lombardrisk.f3.F3TaskManager.main(F3TaskManager.java:236)
+----------break now --------
+-------------I am task =Daily Exposure Report 18
+Task is Reports : Daily Exposure Report 18
+2014-09-16 01:02:23
+Waiting 1800 second for Task  Daily Exposure Report 18 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Daily Exposure Report 18] at: 2014-09-16 01:02:23,472
+Correct syntax:
+>coltaskmanager <group name>:<task name>
+could not find job with group,name=Reports,Daily Exposure Report 18. 
+com.lombardrisk.f3.persistence.exception.LRSFindException: could not find job with group,name=Reports,Daily Exposure Report 18. 
+	at com.lombardrisk.f3.scheduler.persistence.SchedulerPersistenceManagerBean.findJobsByGroupAndName(SchedulerPersistenceManagerBean.java:149)
+	at sun.reflect.GeneratedMethodAccessor408.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.jboss.invocation.Invocation.performCall(Invocation.java:386)
+	at org.jboss.ejb.StatelessSessionContainer$ContainerInterceptor.invoke(StatelessSessionContainer.java:233)
+	at org.jboss.resource.connectionmanager.CachedConnectionInterceptor.invoke(CachedConnectionInterceptor.java:156)
+	at org.jboss.ejb.plugins.StatelessSessionInstanceInterceptor.invoke(StatelessSessionInstanceInterceptor.java:173)
+	at com.lombardrisk.f3.audit.AuditTrailInterceptor.invoke(AuditTrailInterceptor.java:233)
+	at org.jboss.ejb.plugins.CallValidationInterceptor.invoke(CallValidationInterceptor.java:63)
+	at org.jboss.ejb.plugins.AbstractTxInterceptor.invokeNext(AbstractTxInterceptor.java:121)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.runWithTransactions(TxInterceptorCMT.java:350)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.invoke(TxInterceptorCMT.java:181)
+	at com.lombardrisk.f3.accesscontrol.JBossEJBInterceptor.invoke(JBossEJBInterceptor.java:140)
+	at org.jboss.ejb.plugins.SecurityInterceptor.process(SecurityInterceptor.java:228)
+	at org.jboss.ejb.plugins.SecurityInterceptor.invoke(SecurityInterceptor.java:211)
+	at org.jboss.ejb.plugins.LogInterceptor.invoke(LogInterceptor.java:205)
+	at org.jboss.ejb.plugins.ProxyFactoryFinderInterceptor.invoke(ProxyFactoryFinderInterceptor.java:138)
+	at org.jboss.ejb.SessionContainer.internalInvoke(SessionContainer.java:650)
+	at org.jboss.ejb.Container.invoke(Container.java:1092)
+	at org.jboss.ejb.plugins.local.BaseLocalProxyFactory.invoke(BaseLocalProxyFactory.java:436)
+	at org.jboss.ejb.plugins.local.StatelessSessionProxy.invoke(StatelessSessionProxy.java:103)
+	at com.sun.proxy.$Proxy431.findJobsByGroupAndName(Unknown Source)
+	at com.lombardrisk.f3.scheduler.SchedulerServiceBean.startJobNow(SchedulerServiceBean.java:500)
+	at sun.reflect.GeneratedMethodAccessor4059.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.jboss.invocation.Invocation.performCall(Invocation.java:386)
+	at org.jboss.ejb.StatelessSessionContainer$ContainerInterceptor.invoke(StatelessSessionContainer.java:233)
+	at org.jboss.resource.connectionmanager.CachedConnectionInterceptor.invoke(CachedConnectionInterceptor.java:156)
+	at org.jboss.ejb.plugins.StatelessSessionInstanceInterceptor.invoke(StatelessSessionInstanceInterceptor.java:173)
+	at com.lombardrisk.f3.audit.AuditTrailInterceptor.invoke(AuditTrailInterceptor.java:233)
+	at org.jboss.ejb.plugins.CallValidationInterceptor.invoke(CallValidationInterceptor.java:63)
+	at org.jboss.ejb.plugins.AbstractTxInterceptor.invokeNext(AbstractTxInterceptor.java:121)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.runWithTransactions(TxInterceptorCMT.java:350)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.invoke(TxInterceptorCMT.java:181)
+	at com.lombardrisk.f3.accesscontrol.JBossEJBInterceptor.invoke(JBossEJBInterceptor.java:140)
+	at org.jboss.ejb.plugins.SecurityInterceptor.process(SecurityInterceptor.java:228)
+	at org.jboss.ejb.plugins.SecurityInterceptor.invoke(SecurityInterceptor.java:211)
+	at org.jboss.ejb.plugins.LogInterceptor.invoke(LogInterceptor.java:205)
+	at org.jboss.ejb.plugins.ProxyFactoryFinderInterceptor.invoke(ProxyFactoryFinderInterceptor.java:138)
+	at org.jboss.ejb.SessionContainer.internalInvoke(SessionContainer.java:650)
+	at org.jboss.ejb.Container.invoke(Container.java:1092)
+	at sun.reflect.GeneratedMethodAccessor398.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.jboss.mx.interceptor.ReflectedDispatcher.invoke(ReflectedDispatcher.java:157)
+	at org.jboss.mx.server.Invocation.dispatch(Invocation.java:96)
+	at org.jboss.mx.server.Invocation.invoke(Invocation.java:88)
+	at org.jboss.mx.server.AbstractMBeanInvoker.invoke(AbstractMBeanInvoker.java:264)
+	at org.jboss.mx.server.MBeanServerImpl.invoke(MBeanServerImpl.java:668)
+	at org.jboss.system.server.jmx.LazyMBeanServer.invoke(LazyMBeanServer.java:283)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker$MBeanServerAction.invoke(JRMPInvoker.java:855)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker.invoke(JRMPInvoker.java:422)
+	at sun.reflect.GeneratedMethodAccessor4038.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:303)
+	at sun.rmi.transport.Transport$1.run(Transport.java:159)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:155)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:535)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:790)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:649)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+	at sun.rmi.transport.StreamRemoteCall.exceptionReceivedFromServer(StreamRemoteCall.java:255)
+	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:233)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:142)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker_Stub.invoke(Unknown Source)
+	at org.jboss.invocation.jrmp.interfaces.JRMPInvokerProxy.invoke(JRMPInvokerProxy.java:133)
+	at org.jboss.invocation.InvokerInterceptor.invokeInvoker(InvokerInterceptor.java:365)
+	at org.jboss.invocation.InvokerInterceptor.invoke(InvokerInterceptor.java:197)
+	at org.jboss.proxy.TransactionInterceptor.invoke(TransactionInterceptor.java:61)
+	at org.jboss.proxy.ejb.SecurityContextInterceptor.invoke(SecurityContextInterceptor.java:64)
+	at org.jboss.proxy.SecurityInterceptor.invoke(SecurityInterceptor.java:68)
+	at org.jboss.proxy.ejb.StatelessSessionInterceptor.invoke(StatelessSessionInterceptor.java:112)
+	at org.jboss.proxy.ClientContainer.invoke(ClientContainer.java:101)
+	at com.sun.proxy.$Proxy2.startJobNow(Unknown Source)
+	at com.lombardrisk.f3.F3TaskManager.main(F3TaskManager.java:236)
+----------break now --------
+-------------I am task =Eligibility Rules Template Report 1
+Task is Reports : Eligibility Rules Template Report 1
+2014-09-16 01:02:53
+Waiting 180 second for Task  Eligibility Rules Template Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Eligibility Rules Template Report 1] at: 2014-09-16 01:02:53,508
+Correct syntax:
+>coltaskmanager <group name>:<task name>
+could not find job with group,name=Reports,Eligibility Rules Template Report 1. 
+com.lombardrisk.f3.persistence.exception.LRSFindException: could not find job with group,name=Reports,Eligibility Rules Template Report 1. 
+	at com.lombardrisk.f3.scheduler.persistence.SchedulerPersistenceManagerBean.findJobsByGroupAndName(SchedulerPersistenceManagerBean.java:149)
+	at sun.reflect.GeneratedMethodAccessor408.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.jboss.invocation.Invocation.performCall(Invocation.java:386)
+	at org.jboss.ejb.StatelessSessionContainer$ContainerInterceptor.invoke(StatelessSessionContainer.java:233)
+	at org.jboss.resource.connectionmanager.CachedConnectionInterceptor.invoke(CachedConnectionInterceptor.java:156)
+	at org.jboss.ejb.plugins.StatelessSessionInstanceInterceptor.invoke(StatelessSessionInstanceInterceptor.java:173)
+	at com.lombardrisk.f3.audit.AuditTrailInterceptor.invoke(AuditTrailInterceptor.java:233)
+	at org.jboss.ejb.plugins.CallValidationInterceptor.invoke(CallValidationInterceptor.java:63)
+	at org.jboss.ejb.plugins.AbstractTxInterceptor.invokeNext(AbstractTxInterceptor.java:121)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.runWithTransactions(TxInterceptorCMT.java:350)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.invoke(TxInterceptorCMT.java:181)
+	at com.lombardrisk.f3.accesscontrol.JBossEJBInterceptor.invoke(JBossEJBInterceptor.java:140)
+	at org.jboss.ejb.plugins.SecurityInterceptor.process(SecurityInterceptor.java:228)
+	at org.jboss.ejb.plugins.SecurityInterceptor.invoke(SecurityInterceptor.java:211)
+	at org.jboss.ejb.plugins.LogInterceptor.invoke(LogInterceptor.java:205)
+	at org.jboss.ejb.plugins.ProxyFactoryFinderInterceptor.invoke(ProxyFactoryFinderInterceptor.java:138)
+	at org.jboss.ejb.SessionContainer.internalInvoke(SessionContainer.java:650)
+	at org.jboss.ejb.Container.invoke(Container.java:1092)
+	at org.jboss.ejb.plugins.local.BaseLocalProxyFactory.invoke(BaseLocalProxyFactory.java:436)
+	at org.jboss.ejb.plugins.local.StatelessSessionProxy.invoke(StatelessSessionProxy.java:103)
+	at com.sun.proxy.$Proxy431.findJobsByGroupAndName(Unknown Source)
+	at com.lombardrisk.f3.scheduler.SchedulerServiceBean.startJobNow(SchedulerServiceBean.java:500)
+	at sun.reflect.GeneratedMethodAccessor4059.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.jboss.invocation.Invocation.performCall(Invocation.java:386)
+	at org.jboss.ejb.StatelessSessionContainer$ContainerInterceptor.invoke(StatelessSessionContainer.java:233)
+	at org.jboss.resource.connectionmanager.CachedConnectionInterceptor.invoke(CachedConnectionInterceptor.java:156)
+	at org.jboss.ejb.plugins.StatelessSessionInstanceInterceptor.invoke(StatelessSessionInstanceInterceptor.java:173)
+	at com.lombardrisk.f3.audit.AuditTrailInterceptor.invoke(AuditTrailInterceptor.java:233)
+	at org.jboss.ejb.plugins.CallValidationInterceptor.invoke(CallValidationInterceptor.java:63)
+	at org.jboss.ejb.plugins.AbstractTxInterceptor.invokeNext(AbstractTxInterceptor.java:121)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.runWithTransactions(TxInterceptorCMT.java:350)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.invoke(TxInterceptorCMT.java:181)
+	at com.lombardrisk.f3.accesscontrol.JBossEJBInterceptor.invoke(JBossEJBInterceptor.java:140)
+	at org.jboss.ejb.plugins.SecurityInterceptor.process(SecurityInterceptor.java:228)
+	at org.jboss.ejb.plugins.SecurityInterceptor.invoke(SecurityInterceptor.java:211)
+	at org.jboss.ejb.plugins.LogInterceptor.invoke(LogInterceptor.java:205)
+	at org.jboss.ejb.plugins.ProxyFactoryFinderInterceptor.invoke(ProxyFactoryFinderInterceptor.java:138)
+	at org.jboss.ejb.SessionContainer.internalInvoke(SessionContainer.java:650)
+	at org.jboss.ejb.Container.invoke(Container.java:1092)
+	at sun.reflect.GeneratedMethodAccessor398.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.jboss.mx.interceptor.ReflectedDispatcher.invoke(ReflectedDispatcher.java:157)
+	at org.jboss.mx.server.Invocation.dispatch(Invocation.java:96)
+	at org.jboss.mx.server.Invocation.invoke(Invocation.java:88)
+	at org.jboss.mx.server.AbstractMBeanInvoker.invoke(AbstractMBeanInvoker.java:264)
+	at org.jboss.mx.server.MBeanServerImpl.invoke(MBeanServerImpl.java:668)
+	at org.jboss.system.server.jmx.LazyMBeanServer.invoke(LazyMBeanServer.java:283)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker$MBeanServerAction.invoke(JRMPInvoker.java:855)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker.invoke(JRMPInvoker.java:422)
+	at sun.reflect.GeneratedMethodAccessor4038.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:303)
+	at sun.rmi.transport.Transport$1.run(Transport.java:159)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:155)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:535)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:790)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:649)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+	at sun.rmi.transport.StreamRemoteCall.exceptionReceivedFromServer(StreamRemoteCall.java:255)
+	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:233)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:142)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker_Stub.invoke(Unknown Source)
+	at org.jboss.invocation.jrmp.interfaces.JRMPInvokerProxy.invoke(JRMPInvokerProxy.java:133)
+	at org.jboss.invocation.InvokerInterceptor.invokeInvoker(InvokerInterceptor.java:365)
+	at org.jboss.invocation.InvokerInterceptor.invoke(InvokerInterceptor.java:197)
+	at org.jboss.proxy.TransactionInterceptor.invoke(TransactionInterceptor.java:61)
+	at org.jboss.proxy.ejb.SecurityContextInterceptor.invoke(SecurityContextInterceptor.java:64)
+	at org.jboss.proxy.SecurityInterceptor.invoke(SecurityInterceptor.java:68)
+	at org.jboss.proxy.ejb.StatelessSessionInterceptor.invoke(StatelessSessionInterceptor.java:112)
+	at org.jboss.proxy.ClientContainer.invoke(ClientContainer.java:101)
+	at com.sun.proxy.$Proxy2.startJobNow(Unknown Source)
+	at com.lombardrisk.f3.F3TaskManager.main(F3TaskManager.java:236)
+----------break now --------
+-------------I am task =Eligibility Rules Template Report 1
+Task is Reports : Eligibility Rules Template Report 1
+2014-09-16 01:03:23
+Waiting 180 second for Task  Eligibility Rules Template Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Eligibility Rules Template Report 1] at: 2014-09-16 01:03:23,568
+Correct syntax:
+>coltaskmanager <group name>:<task name>
+could not find job with group,name=Reports,Eligibility Rules Template Report 1. 
+com.lombardrisk.f3.persistence.exception.LRSFindException: could not find job with group,name=Reports,Eligibility Rules Template Report 1. 
+	at com.lombardrisk.f3.scheduler.persistence.SchedulerPersistenceManagerBean.findJobsByGroupAndName(SchedulerPersistenceManagerBean.java:149)
+	at sun.reflect.GeneratedMethodAccessor408.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.jboss.invocation.Invocation.performCall(Invocation.java:386)
+	at org.jboss.ejb.StatelessSessionContainer$ContainerInterceptor.invoke(StatelessSessionContainer.java:233)
+	at org.jboss.resource.connectionmanager.CachedConnectionInterceptor.invoke(CachedConnectionInterceptor.java:156)
+	at org.jboss.ejb.plugins.StatelessSessionInstanceInterceptor.invoke(StatelessSessionInstanceInterceptor.java:173)
+	at com.lombardrisk.f3.audit.AuditTrailInterceptor.invoke(AuditTrailInterceptor.java:233)
+	at org.jboss.ejb.plugins.CallValidationInterceptor.invoke(CallValidationInterceptor.java:63)
+	at org.jboss.ejb.plugins.AbstractTxInterceptor.invokeNext(AbstractTxInterceptor.java:121)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.runWithTransactions(TxInterceptorCMT.java:350)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.invoke(TxInterceptorCMT.java:181)
+	at com.lombardrisk.f3.accesscontrol.JBossEJBInterceptor.invoke(JBossEJBInterceptor.java:140)
+	at org.jboss.ejb.plugins.SecurityInterceptor.process(SecurityInterceptor.java:228)
+	at org.jboss.ejb.plugins.SecurityInterceptor.invoke(SecurityInterceptor.java:211)
+	at org.jboss.ejb.plugins.LogInterceptor.invoke(LogInterceptor.java:205)
+	at org.jboss.ejb.plugins.ProxyFactoryFinderInterceptor.invoke(ProxyFactoryFinderInterceptor.java:138)
+	at org.jboss.ejb.SessionContainer.internalInvoke(SessionContainer.java:650)
+	at org.jboss.ejb.Container.invoke(Container.java:1092)
+	at org.jboss.ejb.plugins.local.BaseLocalProxyFactory.invoke(BaseLocalProxyFactory.java:436)
+	at org.jboss.ejb.plugins.local.StatelessSessionProxy.invoke(StatelessSessionProxy.java:103)
+	at com.sun.proxy.$Proxy431.findJobsByGroupAndName(Unknown Source)
+	at com.lombardrisk.f3.scheduler.SchedulerServiceBean.startJobNow(SchedulerServiceBean.java:500)
+	at sun.reflect.GeneratedMethodAccessor4059.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.jboss.invocation.Invocation.performCall(Invocation.java:386)
+	at org.jboss.ejb.StatelessSessionContainer$ContainerInterceptor.invoke(StatelessSessionContainer.java:233)
+	at org.jboss.resource.connectionmanager.CachedConnectionInterceptor.invoke(CachedConnectionInterceptor.java:156)
+	at org.jboss.ejb.plugins.StatelessSessionInstanceInterceptor.invoke(StatelessSessionInstanceInterceptor.java:173)
+	at com.lombardrisk.f3.audit.AuditTrailInterceptor.invoke(AuditTrailInterceptor.java:233)
+	at org.jboss.ejb.plugins.CallValidationInterceptor.invoke(CallValidationInterceptor.java:63)
+	at org.jboss.ejb.plugins.AbstractTxInterceptor.invokeNext(AbstractTxInterceptor.java:121)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.runWithTransactions(TxInterceptorCMT.java:350)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.invoke(TxInterceptorCMT.java:181)
+	at com.lombardrisk.f3.accesscontrol.JBossEJBInterceptor.invoke(JBossEJBInterceptor.java:140)
+	at org.jboss.ejb.plugins.SecurityInterceptor.process(SecurityInterceptor.java:228)
+	at org.jboss.ejb.plugins.SecurityInterceptor.invoke(SecurityInterceptor.java:211)
+	at org.jboss.ejb.plugins.LogInterceptor.invoke(LogInterceptor.java:205)
+	at org.jboss.ejb.plugins.ProxyFactoryFinderInterceptor.invoke(ProxyFactoryFinderInterceptor.java:138)
+	at org.jboss.ejb.SessionContainer.internalInvoke(SessionContainer.java:650)
+	at org.jboss.ejb.Container.invoke(Container.java:1092)
+	at sun.reflect.GeneratedMethodAccessor398.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.jboss.mx.interceptor.ReflectedDispatcher.invoke(ReflectedDispatcher.java:157)
+	at org.jboss.mx.server.Invocation.dispatch(Invocation.java:96)
+	at org.jboss.mx.server.Invocation.invoke(Invocation.java:88)
+	at org.jboss.mx.server.AbstractMBeanInvoker.invoke(AbstractMBeanInvoker.java:264)
+	at org.jboss.mx.server.MBeanServerImpl.invoke(MBeanServerImpl.java:668)
+	at org.jboss.system.server.jmx.LazyMBeanServer.invoke(LazyMBeanServer.java:283)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker$MBeanServerAction.invoke(JRMPInvoker.java:855)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker.invoke(JRMPInvoker.java:422)
+	at sun.reflect.GeneratedMethodAccessor4038.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:303)
+	at sun.rmi.transport.Transport$1.run(Transport.java:159)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:155)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:535)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:790)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:649)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+	at sun.rmi.transport.StreamRemoteCall.exceptionReceivedFromServer(StreamRemoteCall.java:255)
+	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:233)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:142)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker_Stub.invoke(Unknown Source)
+	at org.jboss.invocation.jrmp.interfaces.JRMPInvokerProxy.invoke(JRMPInvokerProxy.java:133)
+	at org.jboss.invocation.InvokerInterceptor.invokeInvoker(InvokerInterceptor.java:365)
+	at org.jboss.invocation.InvokerInterceptor.invoke(InvokerInterceptor.java:197)
+	at org.jboss.proxy.TransactionInterceptor.invoke(TransactionInterceptor.java:61)
+	at org.jboss.proxy.ejb.SecurityContextInterceptor.invoke(SecurityContextInterceptor.java:64)
+	at org.jboss.proxy.SecurityInterceptor.invoke(SecurityInterceptor.java:68)
+	at org.jboss.proxy.ejb.StatelessSessionInterceptor.invoke(StatelessSessionInterceptor.java:112)
+	at org.jboss.proxy.ClientContainer.invoke(ClientContainer.java:101)
+	at com.sun.proxy.$Proxy2.startJobNow(Unknown Source)
+	at com.lombardrisk.f3.F3TaskManager.main(F3TaskManager.java:236)
+----------break now --------
+-------------I am task =Frequency Distribution 31
+Task is Reports : Frequency Distribution 31
+2014-09-16 01:03:53
+Waiting 500 second for Task  Frequency Distribution 31 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Frequency Distribution 31] at: 2014-09-16 01:03:53,619
+Finished starting task: [Reports:Frequency Distribution 31] at: 2014-09-16 01:03:53,647
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Sorry, no more waiting. Frequency Distribution 31,  TIME_Execute = 500.000531250, TIME4TASKEXECUTION =500.
+-------------I am task =Frequency Distribution 31
+Task is Reports : Frequency Distribution 31
+2014-09-16 01:12:23
+Waiting 500 second for Task  Frequency Distribution 31 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Frequency Distribution 31] at: 2014-09-16 01:12:23,928
+Correct syntax:
+>coltaskmanager <group name>:<task name>
+Error unmarshaling return; nested exception is: 
+	java.lang.ClassNotFoundException: org.quartz.ObjectAlreadyExistsException (no security manager: RMI class loader disabled)
+java.rmi.UnmarshalException: Error unmarshaling return; nested exception is: 
+	java.lang.ClassNotFoundException: org.quartz.ObjectAlreadyExistsException (no security manager: RMI class loader disabled)
+	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:227)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:142)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker_Stub.invoke(Unknown Source)
+	at org.jboss.invocation.jrmp.interfaces.JRMPInvokerProxy.invoke(JRMPInvokerProxy.java:133)
+	at org.jboss.invocation.InvokerInterceptor.invokeInvoker(InvokerInterceptor.java:365)
+	at org.jboss.invocation.InvokerInterceptor.invoke(InvokerInterceptor.java:197)
+	at org.jboss.proxy.TransactionInterceptor.invoke(TransactionInterceptor.java:61)
+	at org.jboss.proxy.ejb.SecurityContextInterceptor.invoke(SecurityContextInterceptor.java:64)
+	at org.jboss.proxy.SecurityInterceptor.invoke(SecurityInterceptor.java:68)
+	at org.jboss.proxy.ejb.StatelessSessionInterceptor.invoke(StatelessSessionInterceptor.java:112)
+	at org.jboss.proxy.ClientContainer.invoke(ClientContainer.java:101)
+	at com.sun.proxy.$Proxy2.startJobNow(Unknown Source)
+	at com.lombardrisk.f3.F3TaskManager.main(F3TaskManager.java:236)
+Caused by: java.lang.ClassNotFoundException: org.quartz.ObjectAlreadyExistsException (no security manager: RMI class loader disabled)
+	at sun.rmi.server.LoaderHandler.loadClass(LoaderHandler.java:373)
+	at sun.rmi.server.LoaderHandler.loadClass(LoaderHandler.java:163)
+	at java.rmi.server.RMIClassLoader$2.loadClass(RMIClassLoader.java:620)
+	at java.rmi.server.RMIClassLoader.loadClass(RMIClassLoader.java:247)
+	at sun.rmi.server.MarshalInputStream.resolveClass(MarshalInputStream.java:201)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1589)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1494)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1748)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1327)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:1969)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1893)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1775)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1327)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:349)
+	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:225)
+	... 12 more
+----------break now --------
+-------------I am task =Frequency Distribution Log Report 1
+Task is Reports : Frequency Distribution Log Report 1
+2014-09-16 01:12:53
+Waiting 180 second for Task  Frequency Distribution Log Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Frequency Distribution Log Report 1] at: 2014-09-16 01:12:53,977
+Finished starting task: [Reports:Frequency Distribution Log Report 1] at: 2014-09-16 01:12:54,003
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Frequency Distribution Log. Please wait ...
+Created Report for:Frequency Distribution Log:PSTBaseline_FreqDistributionLog
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Frequency Distribution Log Report 1
+Task is Reports : Frequency Distribution Log Report 1
+2014-09-16 01:14:11
+Waiting 180 second for Task  Frequency Distribution Log Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Frequency Distribution Log Report 1] at: 2014-09-16 01:14:11,540
+Finished starting task: [Reports:Frequency Distribution Log Report 1] at: 2014-09-16 01:14:11,565
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Frequency Distribution Log. Please wait ...
+Created Report for:Frequency Distribution Log:PSTBaseline_FreqDistributionLog
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Historical Exposure Report 2
+Task is Reports : Historical Exposure Report 2
+2014-09-16 01:15:34
+Waiting 3000 second for Task  Historical Exposure Report 2 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Historical Exposure Report 2] at: 2014-09-16 01:15:35,121
+Finished starting task: [Reports:Historical Exposure Report 2] at: 2014-09-16 01:15:35,139
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Historical Exposure. Please wait ...
+Created Report for:Historical Exposure:PSTBaseline_HistoricalExposure
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Historical Exposure Report 2
+Task is Reports : Historical Exposure Report 2
+2014-09-16 01:22:37
+Waiting 3000 second for Task  Historical Exposure Report 2 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Historical Exposure Report 2] at: 2014-09-16 01:22:37,656
+Finished starting task: [Reports:Historical Exposure Report 2] at: 2014-09-16 01:22:37,677
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Historical Exposure. Please wait ...
+Created Report for:Historical Exposure:PSTBaseline_HistoricalExposure
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Historical FX Rates Report 1
+Task is Reports : Historical FX Rates Report 1
+2014-09-16 01:29:36
+Waiting 180 second for Task  Historical FX Rates Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Historical FX Rates Report 1] at: 2014-09-16 01:29:37,108
+Finished starting task: [Reports:Historical FX Rates Report 1] at: 2014-09-16 01:29:37,130
+--debug timeout :10.0
+--debug clean up start
+--debug clean up finished
+Failed to trigger task Reports:Historical FX Rates Report 1 within 10.0 seconds. please try again! 
+Error 6001, Unable to trigger task
+----------break now --------
+-------------I am task =Historical FX Rates Report 1
+Task is Reports : Historical FX Rates Report 1
+2014-09-16 01:30:06
+Waiting 180 second for Task  Historical FX Rates Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Historical FX Rates Report 1] at: 2014-09-16 01:30:07,109
+Finished starting task: [Reports:Historical FX Rates Report 1] at: 2014-09-16 01:30:07,122
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Historical FX Rates. Please wait ...
+Created Report for:Historical FX Rates:PSTBaseline_HistoricalFXRates
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Historical Interest Rate Report 1
+Task is Reports : Historical Interest Rate Report 1
+2014-09-16 01:30:26
+Waiting 180 second for Task  Historical Interest Rate Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Historical Interest Rate Report 1] at: 2014-09-16 01:30:27,153
+Finished starting task: [Reports:Historical Interest Rate Report 1] at: 2014-09-16 01:30:27,175
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Historical Interest Rate. Please wait ...
+Created Report for:Historical Interest Rate:PSTBaseline_HistoricalInterestRate
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Historical Interest Rate Report 1
+Task is Reports : Historical Interest Rate Report 1
+2014-09-16 01:30:46
+Waiting 180 second for Task  Historical Interest Rate Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Historical Interest Rate Report 1] at: 2014-09-16 01:30:47,180
+Finished starting task: [Reports:Historical Interest Rate Report 1] at: 2014-09-16 01:30:47,194
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Historical Interest Rate. Please wait ...
+Created Report for:Historical Interest Rate:PSTBaseline_HistoricalInterestRate
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Ineligible Asset Report 1
+Task is Reports : Ineligible Asset Report 1
+2014-09-16 01:31:06
+Waiting 180 second for Task  Ineligible Asset Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Ineligible Asset Report 1] at: 2014-09-16 01:31:07,240
+Finished starting task: [Reports:Ineligible Asset Report 1] at: 2014-09-16 01:31:07,261
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Ineligible Asset. Please wait ...
+Created Report for:Ineligible Asset:PSTBaseline_IneligibleAsset
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Ineligible Asset Report 1
+Task is Reports : Ineligible Asset Report 1
+2014-09-16 01:31:27
+Waiting 180 second for Task  Ineligible Asset Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Ineligible Asset Report 1] at: 2014-09-16 01:31:27,244
+Finished starting task: [Reports:Ineligible Asset Report 1] at: 2014-09-16 01:31:27,260
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Ineligible Asset. Please wait ...
+Created Report for:Ineligible Asset:PSTBaseline_IneligibleAsset
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Interest Applied Report 1
+Task is Reports : Interest Applied Report 1
+2014-09-16 01:31:47
+Waiting 180 second for Task  Interest Applied Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Interest Applied Report 1] at: 2014-09-16 01:31:47,300
+Finished starting task: [Reports:Interest Applied Report 1] at: 2014-09-16 01:31:47,322
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Interest Applied. Please wait ...
+Created Report for:Interest Applied:PSTBaseline_InterestApplied
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Interest Applied Report 1
+Task is Reports : Interest Applied Report 1
+2014-09-16 01:32:07
+Waiting 180 second for Task  Interest Applied Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Interest Applied Report 1] at: 2014-09-16 01:32:07,334
+Finished starting task: [Reports:Interest Applied Report 1] at: 2014-09-16 01:32:07,355
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Interest Applied. Please wait ...
+Created Report for:Interest Applied:PSTBaseline_InterestApplied
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Interest Calculations Scheduled Report 1
+Task is Reports : Interest Calculations Scheduled Report 1
+2014-09-16 01:32:27
+Waiting 800 second for Task  Interest Calculations Scheduled Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Interest Calculations Scheduled Report 1] at: 2014-09-16 01:32:27,351
+Finished starting task: [Reports:Interest Calculations Scheduled Report 1] at: 2014-09-16 01:32:27,365
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Interest Calculations Scheduled. Please wait ...
+Created Report for:Interest Calculations Scheduled:PSTBaseline_InterestCalcSche
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Interest Calculations Scheduled Report 1
+Task is Reports : Interest Calculations Scheduled Report 1
+2014-09-16 01:32:47
+Waiting 800 second for Task  Interest Calculations Scheduled Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Interest Calculations Scheduled Report 1] at: 2014-09-16 01:32:47,377
+Finished starting task: [Reports:Interest Calculations Scheduled Report 1] at: 2014-09-16 01:32:47,394
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Interest Calculations Scheduled. Please wait ...
+Created Report for:Interest Calculations Scheduled:PSTBaseline_InterestCalcSche
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Interest Changes Report 1
+Task is Reports : Interest Changes Report 1
+2014-09-16 01:33:07
+Waiting 1800 second for Task  Interest Changes Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Interest Changes Report 1] at: 2014-09-16 01:33:07,429
+Finished starting task: [Reports:Interest Changes Report 1] at: 2014-09-16 01:33:07,451
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Interest Changes. Please wait ...
+Created Report for:Interest Changes:PSTBaseline_InterestChanges
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Interest Changes Report 1
+Task is Reports : Interest Changes Report 1
+2014-09-16 01:33:27
+Waiting 1800 second for Task  Interest Changes Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Interest Changes Report 1] at: 2014-09-16 01:33:27,466
+Finished starting task: [Reports:Interest Changes Report 1] at: 2014-09-16 01:33:27,520
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Interest Changes. Please wait ...
+Created Report for:Interest Changes:PSTBaseline_InterestChanges
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Internal Review Report 1
+Task is Reports : Internal Review Report 1
+2014-09-16 01:33:47
+Waiting 500 second for Task  Internal Review Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Internal Review Report 1] at: 2014-09-16 01:33:47,477
+Finished starting task: [Reports:Internal Review Report 1] at: 2014-09-16 01:33:47,492
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Internal Review. Please wait ...
+Created Report for:Internal Review:PSTBaseline_InternalReview
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Internal Review Report 1
+Task is Reports : Internal Review Report 1
+2014-09-16 01:35:04
+Waiting 500 second for Task  Internal Review Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Internal Review Report 1] at: 2014-09-16 01:35:05,178
+Finished starting task: [Reports:Internal Review Report 1] at: 2014-09-16 01:35:05,201
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Internal Review. Please wait ...
+Created Report for:Internal Review:PSTBaseline_InternalReview
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Inventory Manager Report 1
+Task is Reports : Inventory Manager Report 1
+2014-09-16 01:36:24
+Waiting 180 second for Task  Inventory Manager Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Inventory Manager Report 1] at: 2014-09-16 01:36:24,851
+Finished starting task: [Reports:Inventory Manager Report 1] at: 2014-09-16 01:36:24,870
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Inventory Manager. Please wait ...
+Created Report for:Inventory Manager:PSTBaseline_InventoryManager
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Inventory Manager Report 1
+Task is Reports : Inventory Manager Report 1
+2014-09-16 01:38:16
+Waiting 180 second for Task  Inventory Manager Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Inventory Manager Report 1] at: 2014-09-16 01:38:16,875
+Finished starting task: [Reports:Inventory Manager Report 1] at: 2014-09-16 01:38:16,899
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Inventory Manager. Please wait ...
+Created Report for:Inventory Manager:PSTBaseline_InventoryManager
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Licensing Report 1
+Task is Reports : Licensing Report 1
+2014-09-16 01:40:12
+Waiting 180 second for Task  Licensing Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Licensing Report 1] at: 2014-09-16 01:40:12,895
+Finished starting task: [Reports:Licensing Report 1] at: 2014-09-16 01:40:12,913
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Licensing. Please wait ...
+Created Report for:Licensing:PSTBaseline_Licensing
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Licensing Report 1
+Task is Reports : Licensing Report 1
+2014-09-16 01:42:42
+Waiting 180 second for Task  Licensing Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Licensing Report 1] at: 2014-09-16 01:42:42,397
+Finished starting task: [Reports:Licensing Report 1] at: 2014-09-16 01:42:42,416
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Licensing. Please wait ...
+Created Report for:Licensing:PSTBaseline_Licensing
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =MIS Report 1
+Task is Reports : MIS Report 1
+2014-09-16 01:45:06
+Waiting 180 second for Task  MIS Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:MIS Report 1] at: 2014-09-16 01:45:07,025
+Finished starting task: [Reports:MIS Report 1] at: 2014-09-16 01:45:07,045
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:MIS. Please wait ...
+Created Report for:MIS:PSTBaseline_MIS1
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =MIS Report 1
+Task is Reports : MIS Report 1
+2014-09-16 01:45:26
+Waiting 180 second for Task  MIS Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:MIS Report 1] at: 2014-09-16 01:45:27,061
+Finished starting task: [Reports:MIS Report 1] at: 2014-09-16 01:45:27,078
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:MIS. Please wait ...
+Created Report for:MIS:PSTBaseline_MIS1
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Manually Overridden Asset Price Report 1
+Task is Reports : Manually Overridden Asset Price Report 1
+2014-09-16 01:45:46
+Waiting 500 second for Task  Manually Overridden Asset Price Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Manually Overridden Asset Price Report 1] at: 2014-09-16 01:45:47,082
+Finished starting task: [Reports:Manually Overridden Asset Price Report 1] at: 2014-09-16 01:45:47,098
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Manually Overridden Asset Price. Please wait ...
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Manually Overridden Asset Price Report 1
+Task is Reports : Manually Overridden Asset Price Report 1
+2014-09-16 01:51:18
+Waiting 500 second for Task  Manually Overridden Asset Price Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Manually Overridden Asset Price Report 1] at: 2014-09-16 01:51:18,322
+Correct syntax:
+>coltaskmanager <group name>:<task name>
+Error unmarshaling return; nested exception is: 
+	java.lang.ClassNotFoundException: org.quartz.ObjectAlreadyExistsException (no security manager: RMI class loader disabled)
+java.rmi.UnmarshalException: Error unmarshaling return; nested exception is: 
+	java.lang.ClassNotFoundException: org.quartz.ObjectAlreadyExistsException (no security manager: RMI class loader disabled)
+	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:227)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:142)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker_Stub.invoke(Unknown Source)
+	at org.jboss.invocation.jrmp.interfaces.JRMPInvokerProxy.invoke(JRMPInvokerProxy.java:133)
+	at org.jboss.invocation.InvokerInterceptor.invokeInvoker(InvokerInterceptor.java:365)
+	at org.jboss.invocation.InvokerInterceptor.invoke(InvokerInterceptor.java:197)
+	at org.jboss.proxy.TransactionInterceptor.invoke(TransactionInterceptor.java:61)
+	at org.jboss.proxy.ejb.SecurityContextInterceptor.invoke(SecurityContextInterceptor.java:64)
+	at org.jboss.proxy.SecurityInterceptor.invoke(SecurityInterceptor.java:68)
+	at org.jboss.proxy.ejb.StatelessSessionInterceptor.invoke(StatelessSessionInterceptor.java:112)
+	at org.jboss.proxy.ClientContainer.invoke(ClientContainer.java:101)
+	at com.sun.proxy.$Proxy2.startJobNow(Unknown Source)
+	at com.lombardrisk.f3.F3TaskManager.main(F3TaskManager.java:236)
+Caused by: java.lang.ClassNotFoundException: org.quartz.ObjectAlreadyExistsException (no security manager: RMI class loader disabled)
+	at sun.rmi.server.LoaderHandler.loadClass(LoaderHandler.java:373)
+	at sun.rmi.server.LoaderHandler.loadClass(LoaderHandler.java:163)
+	at java.rmi.server.RMIClassLoader$2.loadClass(RMIClassLoader.java:620)
+	at java.rmi.server.RMIClassLoader.loadClass(RMIClassLoader.java:247)
+	at sun.rmi.server.MarshalInputStream.resolveClass(MarshalInputStream.java:201)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1589)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1494)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1748)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1327)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:1969)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1893)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1775)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1327)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:349)
+	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:225)
+	... 12 more
+----------break now --------
+-------------I am task =Month End Report 1
+Task is Reports : Month End Report 1
+2014-09-16 01:51:48
+Waiting 180 second for Task  Month End Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Month End Report 1] at: 2014-09-16 01:51:48,352
+Finished starting task: [Reports:Month End Report 1] at: 2014-09-16 01:51:48,368
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Month End. Please wait ...
+Created Report for:Month End:PSTBaseline_MonthEnd
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Month End Report 1
+Task is Reports : Month End Report 1
+2014-09-16 01:52:19
+Waiting 180 second for Task  Month End Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Month End Report 1] at: 2014-09-16 01:52:19,489
+Finished starting task: [Reports:Month End Report 1] at: 2014-09-16 01:52:19,508
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Month End. Please wait ...
+Created Report for:Month End:PSTBaseline_MonthEnd
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =MtM Comparison Report 2
+Task is Reports : MtM Comparison Report 2
+2014-09-16 01:52:50
+Waiting 500 second for Task  MtM Comparison Report 2 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:MtM Comparison Report 2] at: 2014-09-16 01:52:50,620
+Finished starting task: [Reports:MtM Comparison Report 2] at: 2014-09-16 01:52:50,638
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:MtM Comparison. Please wait ...
+Created Report for:Manually Overridden Asset Price:PSTBaseline_ManOverAssetPrice
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =MtM Comparison Report 2
+Task is Reports : MtM Comparison Report 2
+2014-09-16 01:54:50
+Waiting 500 second for Task  MtM Comparison Report 2 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:MtM Comparison Report 2] at: 2014-09-16 01:54:50,766
+Correct syntax:
+>coltaskmanager <group name>:<task name>
+Error unmarshaling return; nested exception is: 
+	java.lang.ClassNotFoundException: org.quartz.ObjectAlreadyExistsException (no security manager: RMI class loader disabled)
+java.rmi.UnmarshalException: Error unmarshaling return; nested exception is: 
+	java.lang.ClassNotFoundException: org.quartz.ObjectAlreadyExistsException (no security manager: RMI class loader disabled)
+	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:227)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:142)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker_Stub.invoke(Unknown Source)
+	at org.jboss.invocation.jrmp.interfaces.JRMPInvokerProxy.invoke(JRMPInvokerProxy.java:133)
+	at org.jboss.invocation.InvokerInterceptor.invokeInvoker(InvokerInterceptor.java:365)
+	at org.jboss.invocation.InvokerInterceptor.invoke(InvokerInterceptor.java:197)
+	at org.jboss.proxy.TransactionInterceptor.invoke(TransactionInterceptor.java:61)
+	at org.jboss.proxy.ejb.SecurityContextInterceptor.invoke(SecurityContextInterceptor.java:64)
+	at org.jboss.proxy.SecurityInterceptor.invoke(SecurityInterceptor.java:68)
+	at org.jboss.proxy.ejb.StatelessSessionInterceptor.invoke(StatelessSessionInterceptor.java:112)
+	at org.jboss.proxy.ClientContainer.invoke(ClientContainer.java:101)
+	at com.sun.proxy.$Proxy2.startJobNow(Unknown Source)
+	at com.lombardrisk.f3.F3TaskManager.main(F3TaskManager.java:236)
+Caused by: java.lang.ClassNotFoundException: org.quartz.ObjectAlreadyExistsException (no security manager: RMI class loader disabled)
+	at sun.rmi.server.LoaderHandler.loadClass(LoaderHandler.java:373)
+	at sun.rmi.server.LoaderHandler.loadClass(LoaderHandler.java:163)
+	at java.rmi.server.RMIClassLoader$2.loadClass(RMIClassLoader.java:620)
+	at java.rmi.server.RMIClassLoader.loadClass(RMIClassLoader.java:247)
+	at sun.rmi.server.MarshalInputStream.resolveClass(MarshalInputStream.java:201)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1589)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1494)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1748)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1327)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:1969)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1893)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1775)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1327)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:349)
+	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:225)
+	... 12 more
+----------break now --------
+-------------I am task =Organisation Agreements Report 1
+Task is Reports : Organisation Agreements Report 1
+2014-09-16 01:55:20
+Waiting 180 second for Task  Organisation Agreements Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Organisation Agreements Report 1] at: 2014-09-16 01:55:20,802
+Finished starting task: [Reports:Organisation Agreements Report 1] at: 2014-09-16 01:55:20,820
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Organisation Agreements. Please wait ...
+Created Report for:Organisation Agreements:PSTBaseline_OrgAgrs
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Organisation Agreements Report 1
+Task is Reports : Organisation Agreements Report 1
+2014-09-16 01:56:20
+Waiting 180 second for Task  Organisation Agreements Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Organisation Agreements Report 1] at: 2014-09-16 01:56:21,213
+Finished starting task: [Reports:Organisation Agreements Report 1] at: 2014-09-16 01:56:21,233
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Organisation Agreements. Please wait ...
+Created Report for:Organisation Agreements:PSTBaseline_OrgAgrs
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Price Age Exceptions Report 1
+Task is Reports : Price Age Exceptions Report 1
+2014-09-16 01:57:20
+Waiting 180 second for Task  Price Age Exceptions Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Price Age Exceptions Report 1] at: 2014-09-16 01:57:20,654
+Finished starting task: [Reports:Price Age Exceptions Report 1] at: 2014-09-16 01:57:20,678
+--debug timeout :10.0
+Created Report for:MtM Comparison:PSTBaseline_MtMComparison
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Price Age Exceptions. Please wait ...
+Created Report for:Price Age Exceptions:PSTBaseline_PriceAgeExceptions
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Price Age Exceptions Report 1
+Task is Reports : Price Age Exceptions Report 1
+2014-09-16 01:59:13
+Waiting 180 second for Task  Price Age Exceptions Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Price Age Exceptions Report 1] at: 2014-09-16 01:59:13,809
+Finished starting task: [Reports:Price Age Exceptions Report 1] at: 2014-09-16 01:59:13,838
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Price Age Exceptions. Please wait ...
+Created Report for:Price Age Exceptions:PSTBaseline_PriceAgeExceptions
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Price Exceptions Report 1
+Task is Reports : Price Exceptions Report 1
+2014-09-16 02:01:06
+Waiting 180 second for Task  Price Exceptions Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Price Exceptions Report 1] at: 2014-09-16 02:01:06,910
+Finished starting task: [Reports:Price Exceptions Report 1] at: 2014-09-16 02:01:06,931
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Price Exceptions. Please wait ...
+Created Report for:Price Exceptions:PSTBaseline_PriceExceptions
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Price Exceptions Report 1
+Task is Reports : Price Exceptions Report 1
+2014-09-16 02:01:26
+Waiting 180 second for Task  Price Exceptions Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Price Exceptions Report 1] at: 2014-09-16 02:01:26,957
+Finished starting task: [Reports:Price Exceptions Report 1] at: 2014-09-16 02:01:26,980
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Price Exceptions. Please wait ...
+Created Report for:Price Exceptions:PSTBaseline_PriceExceptions
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Price Variance Exceptions Report 1
+Task is Reports : Price Variance Exceptions Report 1
+2014-09-16 02:01:46
+Waiting 180 second for Task  Price Variance Exceptions Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Price Variance Exceptions Report 1] at: 2014-09-16 02:01:47,011
+Finished starting task: [Reports:Price Variance Exceptions Report 1] at: 2014-09-16 02:01:47,034
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Price Variance Exceptions. Please wait ...
+Created Report for:Price Variance Exceptions:PSTBaseline_PriceVarianceExcept
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Price Variance Exceptions Report 1
+Task is Reports : Price Variance Exceptions Report 1
+2014-09-16 02:02:55
+Waiting 180 second for Task  Price Variance Exceptions Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Price Variance Exceptions Report 1] at: 2014-09-16 02:02:55,572
+Finished starting task: [Reports:Price Variance Exceptions Report 1] at: 2014-09-16 02:02:55,591
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Price Variance Exceptions. Please wait ...
+Created Report for:Price Variance Exceptions:PSTBaseline_PriceVarianceExcept
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Reconciliation Output Report 1
+Task is Reports : Reconciliation Output Report 1
+2014-09-16 02:04:02
+Waiting 180 second for Task  Reconciliation Output Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Reconciliation Output Report 1] at: 2014-09-16 02:04:03,161
+Finished starting task: [Reports:Reconciliation Output Report 1] at: 2014-09-16 02:04:03,180
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Reconciliation Output. Please wait ...
+Created Report for:Reconciliation Output:PSTBaseline_ReconOutput
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Reconciliation Output Report 1
+Task is Reports : Reconciliation Output Report 1
+2014-09-16 02:04:22
+Waiting 180 second for Task  Reconciliation Output Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Reconciliation Output Report 1] at: 2014-09-16 02:04:23,194
+Finished starting task: [Reports:Reconciliation Output Report 1] at: 2014-09-16 02:04:23,217
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Reconciliation Output. Please wait ...
+Created Report for:Reconciliation Output:PSTBaseline_ReconOutput
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Reconciliation Trades Output Report 2
+Task is Reports : Reconciliation Trades Output Report 2
+2014-09-16 02:04:43
+Waiting 500 second for Task  Reconciliation Trades Output Report 2 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Reconciliation Trades Output Report 2] at: 2014-09-16 02:04:43,248
+Finished starting task: [Reports:Reconciliation Trades Output Report 2] at: 2014-09-16 02:04:43,271
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Reconciliation Trades Output. Please wait ...
+Created Report for:Reconciliation Trades Output:PSTBaseline_ReconTradesOutput
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Reconciliation Trades Output Report 2
+Task is Reports : Reconciliation Trades Output Report 2
+2014-09-16 02:05:17
+Waiting 500 second for Task  Reconciliation Trades Output Report 2 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Reconciliation Trades Output Report 2] at: 2014-09-16 02:05:17,473
+Finished starting task: [Reports:Reconciliation Trades Output Report 2] at: 2014-09-16 02:05:17,498
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Reconciliation Trades Output. Please wait ...
+Created Report for:Reconciliation Trades Output:PSTBaseline_ReconTradesOutput
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Rehypothecation Eligibility Report 1
+Task is Reports : Rehypothecation Eligibility Report 1
+2014-09-16 02:05:51
+Waiting 900 second for Task  Rehypothecation Eligibility Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Rehypothecation Eligibility Report 1] at: 2014-09-16 02:05:51,701
+Finished starting task: [Reports:Rehypothecation Eligibility Report 1] at: 2014-09-16 02:05:51,721
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Rehypothecation Eligibility. Please wait ...
+Created Report for:Rehypothecation Eligibility:PSTBaseline_RehyEligibility
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Rehypothecation Eligibility Report 1
+Task is Reports : Rehypothecation Eligibility Report 1
+2014-09-16 02:15:43
+Waiting 900 second for Task  Rehypothecation Eligibility Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Rehypothecation Eligibility Report 1] at: 2014-09-16 02:15:43,330
+Finished starting task: [Reports:Rehypothecation Eligibility Report 1] at: 2014-09-16 02:15:43,357
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Rehypothecation Eligibility. Please wait ...
+Created Report for:Rehypothecation Eligibility:PSTBaseline_RehyEligibility
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Rejected Trades Report 1
+Task is Reports : Rejected Trades Report 1
+2014-09-16 02:25:31
+Waiting 180 second for Task  Rejected Trades Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Rejected Trades Report 1] at: 2014-09-16 02:25:31,933
+Finished starting task: [Reports:Rejected Trades Report 1] at: 2014-09-16 02:25:31,964
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Rejected Trades. Please wait ...
+Created Report for:Rejected Trades:PSTBaseline_RejectedTrades
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Rejected Trades Report 1
+Task is Reports : Rejected Trades Report 1
+2014-09-16 02:25:51
+Waiting 180 second for Task  Rejected Trades Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Rejected Trades Report 1] at: 2014-09-16 02:25:51,980
+Finished starting task: [Reports:Rejected Trades Report 1] at: 2014-09-16 02:25:52,005
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Rejected Trades. Please wait ...
+Created Report for:Rejected Trades:PSTBaseline_RejectedTrades
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Repo Daily Exposure Report 1
+Task is Reports : Repo Daily Exposure Report 1
+2014-09-16 02:26:11
+Waiting 180 second for Task  Repo Daily Exposure Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Repo Daily Exposure Report 1] at: 2014-09-16 02:26:12,019
+Finished starting task: [Reports:Repo Daily Exposure Report 1] at: 2014-09-16 02:26:12,042
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Repo Daily Exposure. Please wait ...
+Created Report for:Repo Daily Exposure:PSTBaseline_RepoDailyExp
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Repo Daily Exposure Report 1
+Task is Reports : Repo Daily Exposure Report 1
+2014-09-16 02:26:43
+Waiting 180 second for Task  Repo Daily Exposure Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Repo Daily Exposure Report 1] at: 2014-09-16 02:26:44,228
+Finished starting task: [Reports:Repo Daily Exposure Report 1] at: 2014-09-16 02:26:44,252
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Repo Daily Exposure. Please wait ...
+Created Report for:Repo Daily Exposure:PSTBaseline_RepoDailyExp
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Repo Historical Exposure Report 1
+Task is Reports : Repo Historical Exposure Report 1
+2014-09-16 02:27:15
+Waiting 180 second for Task  Repo Historical Exposure Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Repo Historical Exposure Report 1] at: 2014-09-16 02:27:15,411
+Finished starting task: [Reports:Repo Historical Exposure Report 1] at: 2014-09-16 02:27:15,434
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Repo Historical Exposure. Please wait ...
+Created Report for:Repo Historical Exposure:PSTBaseline_RepoHistoricalExp
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Repo Historical Exposure Report 1
+Task is Reports : Repo Historical Exposure Report 1
+2014-09-16 02:28:06
+Waiting 180 second for Task  Repo Historical Exposure Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Repo Historical Exposure Report 1] at: 2014-09-16 02:28:07,031
+Finished starting task: [Reports:Repo Historical Exposure Report 1] at: 2014-09-16 02:28:07,057
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Repo Historical Exposure. Please wait ...
+Created Report for:Repo Historical Exposure:PSTBaseline_RepoHistoricalExp
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Repo Rejected Trades Report 1
+Task is Reports : Repo Rejected Trades Report 1
+2014-09-16 02:28:58
+Waiting 180 second for Task  Repo Rejected Trades Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Repo Rejected Trades Report 1] at: 2014-09-16 02:28:58,623
+Finished starting task: [Reports:Repo Rejected Trades Report 1] at: 2014-09-16 02:28:58,648
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Repo Rejected Trades. Please wait ...
+Created Report for:Repo Rejected Trades:PSTBaseline_RepoRejectedTrades
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Repo Rejected Trades Report 1
+Task is Reports : Repo Rejected Trades Report 1
+2014-09-16 02:29:18
+Waiting 180 second for Task  Repo Rejected Trades Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Repo Rejected Trades Report 1] at: 2014-09-16 02:29:18,680
+Finished starting task: [Reports:Repo Rejected Trades Report 1] at: 2014-09-16 02:29:18,704
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Repo Rejected Trades. Please wait ...
+Created Report for:Repo Rejected Trades:PSTBaseline_RepoRejectedTrades
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Repo Trades Output Report 1
+Task is Reports : Repo Trades Output Report 1
+2014-09-16 02:29:38
+Waiting 180 second for Task  Repo Trades Output Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Repo Trades Output Report 1] at: 2014-09-16 02:29:38,714
+Finished starting task: [Reports:Repo Trades Output Report 1] at: 2014-09-16 02:29:38,737
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Repo Trades Output. Please wait ...
+Created Report for:Repo Trades Output:PSTBaseline_RepoTradesOutput
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Repo Trades Output Report 1
+Task is Reports : Repo Trades Output Report 1
+2014-09-16 02:30:00
+Waiting 180 second for Task  Repo Trades Output Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Repo Trades Output Report 1] at: 2014-09-16 02:30:00,785
+Finished starting task: [Reports:Repo Trades Output Report 1] at: 2014-09-16 02:30:00,807
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Repo Trades Output. Please wait ...
+Created Report for:Repo Trades Output:PSTBaseline_RepoTradesOutput
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Security Instruments Report 9
+Task is Reports : Security Instruments Report 9
+2014-09-16 02:30:20
+Waiting 180 second for Task  Security Instruments Report 9 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Security Instruments Report 9] at: 2014-09-16 02:30:20,832
+Finished starting task: [Reports:Security Instruments Report 9] at: 2014-09-16 02:30:20,852
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Security Instruments. Please wait ...
+Created Report for:Security Instruments:PSTBaseline_securityInstruments
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Security Instruments Report 9
+Task is Reports : Security Instruments Report 9
+2014-09-16 02:32:55
+Waiting 180 second for Task  Security Instruments Report 9 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Security Instruments Report 9] at: 2014-09-16 02:32:55,449
+Finished starting task: [Reports:Security Instruments Report 9] at: 2014-09-16 02:32:55,480
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Security Instruments. Please wait ...
+Created Report for:Security Instruments:PSTBaseline_securityInstruments
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Settlement Instructions Report 1
+Task is Reports : Settlement Instructions Report 1
+2014-09-16 02:35:24
+Waiting 500 second for Task  Settlement Instructions Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Settlement Instructions Report 1] at: 2014-09-16 02:35:24,981
+Finished starting task: [Reports:Settlement Instructions Report 1] at: 2014-09-16 02:35:25,003
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Settlement Instructions. Please wait ...
+Created Report for:Settlement Instructions:PSTBaseline_SettIntrs
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Settlement Instructions Report 1
+Task is Reports : Settlement Instructions Report 1
+2014-09-16 02:39:02
+Waiting 500 second for Task  Settlement Instructions Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Settlement Instructions Report 1] at: 2014-09-16 02:39:03,129
+Finished starting task: [Reports:Settlement Instructions Report 1] at: 2014-09-16 02:39:03,153
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Settlement Instructions. Please wait ...
+Created Report for:Settlement Instructions:PSTBaseline_SettIntrs
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Stp Dashboard Report 10
+Task is Reports : Stp Dashboard Report 10
+2014-09-16 02:42:42
+Waiting 180 second for Task  Stp Dashboard Report 10 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Stp Dashboard Report 10] at: 2014-09-16 02:42:42,341
+Finished starting task: [Reports:Stp Dashboard Report 10] at: 2014-09-16 02:42:42,362
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Stp Dashboard. Please wait ...
+Created Report for:Stp Dashboard:PSTBaseline_StpDashboard
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Stp Dashboard Report 10
+Task is Reports : Stp Dashboard Report 10
+2014-09-16 02:43:37
+Waiting 180 second for Task  Stp Dashboard Report 10 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Stp Dashboard Report 10] at: 2014-09-16 02:43:37,928
+Finished starting task: [Reports:Stp Dashboard Report 10] at: 2014-09-16 02:43:37,953
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Stp Dashboard. Please wait ...
+Created Report for:Stp Dashboard:PSTBaseline_StpDashboard
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =TSA Report 1
+Task is Reports : TSA Report 1
+2014-09-16 02:44:28
+Waiting 180 second for Task  TSA Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:TSA Report 1] at: 2014-09-16 02:44:28,456
+Finished starting task: [Reports:TSA Report 1] at: 2014-09-16 02:44:28,477
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:TSA. Please wait ...
+Created Report for:TSA:PSTBaseline_TSA
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =TSA Report 1
+Task is Reports : TSA Report 1
+2014-09-16 02:44:48
+Waiting 180 second for Task  TSA Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:TSA Report 1] at: 2014-09-16 02:44:48,489
+Finished starting task: [Reports:TSA Report 1] at: 2014-09-16 02:44:48,512
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:TSA. Please wait ...
+Created Report for:TSA:PSTBaseline_TSA
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Trades Output Report 12
+Task is Reports : Trades Output Report 12
+2014-09-16 02:45:08
+Waiting 1000 second for Task  Trades Output Report 12 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Trades Output Report 12] at: 2014-09-16 02:45:08,551
+Finished starting task: [Reports:Trades Output Report 12] at: 2014-09-16 02:45:08,575
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Trades Output. Please wait ...
+Created Report for:Trades Output:PSTBaseline_TradesOutput
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Trades Output Report 12
+Task is Reports : Trades Output Report 12
+2014-09-16 02:45:37
+Waiting 1000 second for Task  Trades Output Report 12 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:Trades Output Report 12] at: 2014-09-16 02:45:37,736
+Finished starting task: [Reports:Trades Output Report 12] at: 2014-09-16 02:45:37,757
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:Trades Output. Please wait ...
+Created Report for:Trades Output:PSTBaseline_TradesOutput
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =User Profile Report 1
+Task is Reports : User Profile Report 1
+2014-09-16 02:45:57
+Waiting 180 second for Task  User Profile Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:User Profile Report 1] at: 2014-09-16 02:45:57,795
+Finished starting task: [Reports:User Profile Report 1] at: 2014-09-16 02:45:57,820
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:User Profile. Please wait ...
+Created Report for:User Profile:PSTBaseline_UserProfile
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =User Profile Report 1
+Task is Reports : User Profile Report 1
+2014-09-16 02:46:17
+Waiting 180 second for Task  User Profile Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:User Profile Report 1] at: 2014-09-16 02:46:17,857
+Finished starting task: [Reports:User Profile Report 1] at: 2014-09-16 02:46:17,883
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:User Profile. Please wait ...
+Created Report for:User Profile:PSTBaseline_UserProfile
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =What If Scenario Report 1
+Task is Reports : What If Scenario Report 1
+2014-09-16 02:46:37
+Waiting 800 second for Task  What If Scenario Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:What If Scenario Report 1] at: 2014-09-16 02:46:37,889
+Finished starting task: [Reports:What If Scenario Report 1] at: 2014-09-16 02:46:37,916
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:What If Scenario. Please wait ...
+Created Report for:What If Scenario:PSTBaseline_WhatIfScenario
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =What If Scenario Report 1
+Task is Reports : What If Scenario Report 1
+2014-09-16 02:53:44
+Waiting 800 second for Task  What If Scenario Report 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Reports:What If Scenario Report 1] at: 2014-09-16 02:53:44,472
+Finished starting task: [Reports:What If Scenario Report 1] at: 2014-09-16 02:53:44,497
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Created Report for:What If Scenario. Please wait ...
+Created Report for:What If Scenario:PSTBaseline_WhatIfScenario
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+I'm FILE_TASKEXECLOG=taskexec.log_RELEASE_2012_3_2_0_20140916134857
+I'm database---------=COLLINE201232_BASE_0819 creditderivative 172.20.20.99:1521 pst4
+Target Version: RELEASE_2012_3_2_0
+Target Path:/home/test/server/colline/cluster/bin
+-------------I am task =Approve All Organisations 1
+Task is Workflow : Approve All Organisations 1
+2014-09-16 13:48:57
+Waiting 500 second for Task  Approve All Organisations 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Approve All Organisations 1] at: 2014-09-16 13:48:58,149
+Finished starting task: [Workflow:Approve All Organisations 1] at: 2014-09-16 13:48:58,249
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Approve All Organisations. Please wait ...
+Workflow:Approve All Organisations: 1  Organisations are approved.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Approve All Agreements 1
+Task is Workflow : Approve All Agreements 1
+2014-09-16 13:49:17
+Waiting 180 second for Task  Approve All Agreements 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Approve All Agreements 1] at: 2014-09-16 13:49:18,176
+Finished starting task: [Workflow:Approve All Agreements 1] at: 2014-09-16 13:49:18,201
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Approve All Agreements. Please wait ...
+Workflow:Approve All Agreements: 2  agreements are approved.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Approve All Statements 5
+Task is Workflow : Approve All Statements 5
+2014-09-16 13:49:37
+Waiting 180 second for Task  Approve All Statements 5 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Approve All Statements 5] at: 2014-09-16 13:49:38,208
+Finished starting task: [Workflow:Approve All Statements 5] at: 2014-09-16 13:49:38,230
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Approve All Statements. Please wait ...
+Workflow:Approve All Statements: 84  statements are triggered to approve.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-----------It's Approve All Statements task, sleep 900 seconds for msg calc. ------
+-------------I am task =External Exposures Reset 4
+Task is Workflow : External Exposures Reset 4
+2014-09-16 14:04:57
+Waiting 1000 second for Task  External Exposures Reset 4 execute
+Started F3 Task Manager ...
+Logged in as user:pvtna
+Starting task: [Workflow:External Exposures Reset 4] at: 2014-09-16 14:04:58,245
+Finished starting task: [Workflow:External Exposures Reset 4] at: 2014-09-16 14:04:58,275
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Workflow:Ext Exp Reset: Ext Exp Reset Task Initiated. 
+Workflow:Ext Exp Reset: All exposures have been reset. 
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Cut-Off 15
+Task is 'Workflow : Cut-Off 15'
+2014-09-16 14:14:39
+Waiting 180 second for Task  Cut-Off 15 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Cut-Off 15] at: 2014-09-16 14:14:39,261
+Finished starting task: [Workflow:Cut-Off 15] at: 2014-09-16 14:14:39,370
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Cut-Off: STP must be enabled!
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Recalculate Workflow 1
+Task is Workflow : Recalculate Workflow 1
+2014-09-16 14:14:59
+Waiting 1000 second for Task  Recalculate Workflow 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Recalculate Workflow 1] at: 2014-09-16 14:14:59,300
+Finished starting task: [Workflow:Recalculate Workflow 1] at: 2014-09-16 14:14:59,443
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Start to recalculate workflow.
+Recalculate workflow has been triggered.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Recalculate based on Day change 1
+Task is Workflow : Recalculate based on Day change 1
+2014-09-16 14:19:30
+Waiting 500 second for Task  Recalculate based on Day change 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Recalculate based on Day change 1] at: 2014-09-16 14:19:31,197
+Finished starting task: [Workflow:Recalculate based on Day change 1] at: 2014-09-16 14:19:31,231
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Workflow:Recalculate based on Day change Task Initiated. 
+Workflow:Recalculate based on Day change Task complete. 
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Recalculate Interest Manager 4
+Task is Workflow : Recalculate Interest Manager 4
+2014-09-16 14:19:51
+Waiting 200 second for Task  Recalculate Interest Manager 4 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Recalculate Interest Manager 4] at: 2014-09-16 14:19:51,251
+Finished starting task: [Workflow:Recalculate Interest Manager 4] at: 2014-09-16 14:19:51,274
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Recalculate Interest manage. Please wait ...
+Workflow:Recalculate Interest Manager: Data is recalculated.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Auto Book Cash 1
+Task is Workflow : Auto Book Cash 1
+2014-09-16 14:20:11
+Waiting 180 second for Task  Auto Book Cash 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Auto Book Cash 1] at: 2014-09-16 14:20:11,299
+Finished starting task: [Workflow:Auto Book Cash 1] at: 2014-09-16 14:20:11,341
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Workflow:Auto Book Cash: Auto Book Cash Task Initiated. 
+Workflow:Auto Book Cash: Auto Book Cash Task Finished with 0 successful and 0 failed. 
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Auto Email Call/Recall 1
+-----------SQL Select before task execute ------
+Number of Auto Email Call/Recall 1 is: 
+  COUNT(1)
+----------
+	 8
+Task is Workflow : Auto Email Call/Recall 1
+2014-09-16 14:20:31
+Waiting 5000 second for Task  Auto Email Call/Recall 1 execute
+Started F3 Task Manager ...
+Logged in as user:pvtna
+Starting task: [Workflow:Auto Email Call/Recall 1] at: 2014-09-16 14:20:32,014
+Finished starting task: [Workflow:Auto Email Call/Recall 1] at: 2014-09-16 14:20:32,043
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Auto Email Call/Recall. Please wait ...
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Auto Email Interest Statement 1
+Task is Workflow : Auto Email Interest Statement 1
+2014-09-16 15:29:56
+Waiting 2000 second for Task  Auto Email Interest Statement 1 execute
+Started F3 Task Manager ...
+Logged in as user:pvtna
+Starting task: [Workflow:Auto Email Interest Statement 1] at: 2014-09-16 15:29:56,505
+Finished starting task: [Workflow:Auto Email Interest Statement 1] at: 2014-09-16 15:29:56,527
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Auto Email Interest Statement. Please wait ...
+Sorry, no more waiting. Auto Email Interest Statement 1,  TIME_Execute = 2000.334960588, TIME4TASKEXECUTION =2000.
+-------------I am task =Auto Email Statement Notification 1
+Task is Workflow : Auto Email Statement Notification 1
+2014-09-16 16:03:26
+Waiting 500 second for Task  Auto Email Statement Notification 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Auto Email Statement Notification 1] at: 2014-09-16 16:03:27,186
+Finished starting task: [Workflow:Auto Email Statement Notification 1] at: 2014-09-16 16:03:27,218
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Auto Email Statement Notification. Please wait ...
+Auto Email Statement Notification: 256 Statement Notification letters have been triggered.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Distribute UDL 1
+Task is Workflow : Distribute UDL 1
+2014-09-16 16:05:10
+Waiting 7000 second for Task  Distribute UDL 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Distribute UDL 1] at: 2014-09-16 16:05:11,016
+Finished starting task: [Workflow:Distribute UDL 1] at: 2014-09-16 16:05:11,053
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started User Define Letter. Please wait ...
+Auto Email Interest Statement: 2978 Interest letters have been sent successfully.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Recalculate Securities 1
+Task is Workflow : Recalculate Securities 1
+2014-09-16 16:16:43
+Waiting 2000 second for Task  Recalculate Securities 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Recalculate Securities 1] at: 2014-09-16 16:16:43,825
+Finished starting task: [Workflow:Recalculate Securities 1] at: 2014-09-16 16:16:43,855
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Recalculate Securities. Please wait ...
+-----------It's Recalculate Securities 1 task, sleep 1800 seconds for msg calc. ------
+Workflow:Securities recalculated: 13506.
+Workflow:SecurityTemplates recalculated: 26848.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Recalculate Statements 1
+-----------SQL Select before task execute ------
+Number of Agreement statementstatus approved in New York is: 
+  COUNT(1)
+----------
+      5835
+Task is Workflow : Recalculate Statements 1
+2014-09-16 17:04:37
+Waiting 4000 second for Task  Recalculate Statements 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Recalculate Statements 1] at: 2014-09-16 17:04:38,018
+Finished starting task: [Workflow:Recalculate Statements 1] at: 2014-09-16 17:04:38,042
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Start to recalculate statements.
+All statements have been recalculated.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Process Approve Settlements 4
+Task is Workflow : Process Approve Settlements 4
+2014-09-16 17:51:59
+Waiting 180 second for Task  Process Approve Settlements 4 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Process Approve Settlements 4] at: 2014-09-16 17:51:59,340
+Finished starting task: [Workflow:Process Approve Settlements 4] at: 2014-09-16 17:51:59,369
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Approve Settlements. Please wait ...
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Process Approve Trade Settlements 1
+Task is Workflow : Process Approve Trade Settlements 1
+2014-09-16 17:52:19
+Waiting 180 second for Task  Process Approve Trade Settlements 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Process Approve Trade Settlements 1] at: 2014-09-16 17:52:19,368
+Finished starting task: [Workflow:Process Approve Trade Settlements 1] at: 2014-09-16 17:52:19,386
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Processing Repo Trade Settlement Status. Please wait ...
+Workflow:Process all repo trade settlement status: 10012  repo trades are processed.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Process Outstanding 1
+Task is Workflow : Process Outstanding 1
+2014-09-16 17:52:39
+Waiting 180 second for Task  Process Outstanding 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Process Outstanding 1] at: 2014-09-16 17:52:39,410
+Finished starting task: [Workflow:Process Outstanding 1] at: 2014-09-16 17:52:39,440
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Process Outstanding Settlements. Please wait ...
+Workflow:Process Outstanding Settlements: 0 outstanding settlements have been processed.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Net Older Collateral Bookings 1
+Task is Workflow : Net Older Collateral Bookings 1
+2014-09-16 17:52:59
+Waiting 200 second for Task  Net Older Collateral Bookings 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Net Older Collateral Bookings 1] at: 2014-09-16 17:52:59,425
+Finished starting task: [Workflow:Net Older Collateral Bookings 1] at: 2014-09-16 17:52:59,446
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Netted Security Booking entries older than 35 days:1790 entries netted.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Settlement Risk 1
+Task is Workflow : Settlement Risk 1
+2014-09-16 17:53:26
+Waiting 180 second for Task  Settlement Risk 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Settlement Risk 1] at: 2014-09-16 17:53:26,562
+Finished starting task: [Workflow:Settlement Risk 1] at: 2014-09-16 17:53:26,580
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Settlement Risk. Please wait ...
+Trades: Settlement Risk: Total of 0 trades are settled.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Apply Effective and Maturity dates 1
+Task is Workflow : Apply Effective and Maturity dates 1
+2014-09-16 17:53:46
+Waiting 300 second for Task  Apply Effective and Maturity dates 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Apply Effective and Maturity dates 1] at: 2014-09-16 17:53:46,582
+Finished starting task: [Workflow:Apply Effective and Maturity dates 1] at: 2014-09-16 17:53:46,606
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started settling trades. Please wait ...
+Trades: Settle Trades: Total of 171140 trades are settled.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Dashboard Refresh 1
+Task is Workflow : Dashboard Refresh 1
+2014-09-16 17:56:31
+Waiting 180 second for Task  Dashboard Refresh 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Dashboard Refresh 1] at: 2014-09-16 17:56:31,500
+Finished starting task: [Workflow:Dashboard Refresh 1] at: 2014-09-16 17:56:31,522
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Workflow:Dashboard refresh: Dashboard is recalculated.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Reset Total Settlement Amount 4
+Task is Workflow : Reset Total Settlement Amount 4
+2014-09-16 17:58:53
+Waiting 180 second for Task  Reset Total Settlement Amount 4 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Reset Total Settlement Amount 4] at: 2014-09-16 17:58:53,937
+Finished starting task: [Workflow:Reset Total Settlement Amount 4] at: 2014-09-16 17:58:53,965
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Total Settlement Amount Reset: Total Settlement Amount Task Initiated. 
+Total Settlement Amount Reset: Total Settlement Amount has been reset. 
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Todays Events Reset 1
+Task is Workflow : Todays Events Reset 1
+2014-09-16 17:59:13
+Waiting 200 second for Task  Todays Events Reset 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Todays Events Reset 1] at: 2014-09-16 17:59:14,008
+Finished starting task: [Workflow:Todays Events Reset 1] at: 2014-09-16 17:59:14,036
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Todays Events Reset. Please wait ...
+Workflow:Todays Events Reset: All todays ticked events have been reset
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Start-Up Dashboard Reset 1
+Task is 'Workflow : Start-Up Dashboard Reset 1'
+2014-09-16 17:59:33
+Waiting 600 second for Task  Start-Up Dashboard Reset 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Start-Up Dashboard Reset 1] at: 2014-09-16 17:59:34,020
+Finished starting task: [Workflow:Start-Up Dashboard Reset 1] at: 2014-09-16 17:59:34,040
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Workflow:Start-Up Dashboard Reset: All start-up actions have been reset
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Counterparty Amount 1
+Task is Task Manager : Import Counterparty Amount 1
+2014-09-16 17:59:53
+Waiting 7200 second for Task  Import Counterparty Amount 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Counterparty Amount 1] at: 2014-09-16 17:59:54,065
+Finished starting task: [Task Manager:Import Counterparty Amount 1] at: 2014-09-16 17:59:54,099
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import Counterparty Amount. Please wait ...
+Workflow:User Define Letter: Processed (33364) agreement.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+I'm FILE_TASKEXECLOG=taskexec.log_RELEASE_2012_3_2_0_20140917123740
+I'm database---------=COLLINE201232_BASE_0819 creditderivative 172.20.20.99:1521 pst4
+Target Version: RELEASE_2012_3_2_0
+Target Path:/home/test/server/colline/cluster/bin
+-------------I am task =Import Organisations 3
+Task is Task Manager : Import Organisations 3
+2014-09-17 12:37:40
+Waiting 800 second for Task  Import Organisations 3 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Organisations 3] at: 2014-09-17 12:37:40,773
+Finished starting task: [Task Manager:Import Organisations 3] at: 2014-09-17 12:37:40,806
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import Organisation. Please wait ...
+Organisation: Imported 0 Organisations from file:OrgnazationRatings.xls - Modified 10000 entries.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Organisations 4
+Task is Task Manager : Import Organisations 4
+2014-09-17 12:45:13
+Waiting 500 second for Task  Import Organisations 4 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Organisations 4] at: 2014-09-17 12:45:13,864
+Finished starting task: [Task Manager:Import Organisations 4] at: 2014-09-17 12:45:13,888
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import Organisation. Please wait ...
+Organisation: Imported 0 Organisations from file:OrganisationContacts.xls - Modified 10000 entries.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Agreements 2
+Task is Task Manager : Import Agreements 2
+2014-09-17 12:50:56
+Waiting 2500 second for Task  Import Agreements 2 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Agreements 2] at: 2014-09-17 12:50:56,384
+Finished starting task: [Task Manager:Import Agreements 2] at: 2014-09-17 12:50:56,409
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import agreements. Please wait ...
+Sorry, no more waiting. Import Agreements 2,  TIME_Execute = 2500.293933003, TIME4TASKEXECUTION =2500.
+-------------I am task =Import Agreement Ratings 1
+Task is Task Manager : Import Agreement Ratings 1
+2014-09-17 13:32:46
+Waiting 500 second for Task  Import Agreement Ratings 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Agreement Ratings 1] at: 2014-09-17 13:32:47,019
+Finished starting task: [Task Manager:Import Agreement Ratings 1] at: 2014-09-17 13:32:47,051
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import ratings. Please wait ...
+Sorry, no more waiting. Import Agreement Ratings 1,  TIME_Execute = 500.245705594, TIME4TASKEXECUTION =500.
+-------------I am task =Import Agreement UDF 1
+Task is Task Manager : Import Agreement UDF 1
+2014-09-17 13:41:17
+Waiting 1500 second for Task  Import Agreement UDF 1 execute
+Started F3 Task Manager ...
+AgreementRatings: Import ratings: Imported 974 agreement ratings from :AgreementRatings.xls
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+Logged in as user:sa
+Starting task: [Task Manager:Import Agreement UDF 1] at: 2014-09-17 13:41:17,611
+Finished starting task: [Task Manager:Import Agreement UDF 1] at: 2014-09-17 13:41:17,636
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import Agreement UDF. Please wait ...
+-----------It's Import Agreement UDF task, sleep 3600 seconds for avoid database lock. ------
+Import Agreement UDF: Imported 10000 agreement UDFs.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+Agreements: Import agreements: Imported 2000 agreements from :Agreement_xml_feed_2000.xml
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Collateral Booking 3
+Task is Task Manager : Import Collateral Booking 3
+2014-09-17 14:57:32
+Waiting 3000 second for Task  Import Collateral Booking 3 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Collateral Booking 3] at: 2014-09-17 14:57:32,855
+Finished starting task: [Task Manager:Import Collateral Booking 3] at: 2014-09-17 14:57:32,883
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import Asset Bookings. Please wait ...
+Import Asset Bookings: Imported 0 Asset Bookings
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Assets 1
+Task is Task Manager : Import Assets 1
+2014-09-17 15:00:07
+Waiting 400 second for Task  Import Assets 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Assets 1] at: 2014-09-17 15:00:07,723
+Finished starting task: [Task Manager:Import Assets 1] at: 2014-09-17 15:00:07,763
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import Security Template. Please wait ...
+Market Data: Import Security Template: Imported 5000 assets from :Security.xls
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Asset Pricing 10
+Task is Task Manager : Import Asset Pricing 10
+2014-09-17 15:04:08
+Waiting 300 second for Task  Import Asset Pricing 10 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Asset Pricing 10] at: 2014-09-17 15:04:09,070
+Finished starting task: [Task Manager:Import Asset Pricing 10] at: 2014-09-17 15:04:09,132
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import Asset Pricing. Please wait ...
+Market Data: Import Asset Pricing: Imported 5000 assets from :AssetPricing.xls
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Asset Ratings 1
+Task is Task Manager : Import Asset Ratings 1
+2014-09-17 15:08:42
+Waiting 300 second for Task  Import Asset Ratings 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Asset Ratings 1] at: 2014-09-17 15:08:42,544
+Finished starting task: [Task Manager:Import Asset Ratings 1] at: 2014-09-17 15:08:42,567
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import Asset Ratings. Please wait ...
+Market Data: Import Asset Ratings: Imported 5000 Asset Ratings from :AssetRating.xls
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Inventory Manager 1
+Task is Task Manager : Import Inventory Manager 1
+2014-09-17 15:13:03
+Waiting 400 second for Task  Import Inventory Manager 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Inventory Manager 1] at: 2014-09-17 15:13:03,474
+Finished starting task: [Task Manager:Import Inventory Manager 1] at: 2014-09-17 15:13:03,520
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import Inventory Manager. Please wait ...
+Inventory Manager: Import Inventory Manager: Imported 9937 Inventory Manager from :PST_InventoryManager.xls
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Repo Trades 1
+Task is Task Manager : Import Repo Trades 1
+2014-09-17 15:16:53
+Waiting 800 second for Task  Import Repo Trades 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Repo Trades 1] at: 2014-09-17 15:16:53,693
+Finished starting task: [Task Manager:Import Repo Trades 1] at: 2014-09-17 15:16:53,726
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Flush Import Repo trades. Please wait ...
+Repo trades: Flush Import Repo trades: Imported 4999 trades from :CMDW_Repo_trade_feed_Final_4999.xls
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Repo Trades 2
+Task is Task Manager : Import Repo Trades 2
+2014-09-17 15:21:44
+Waiting 2000 second for Task  Import Repo Trades 2 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Repo Trades 2] at: 2014-09-17 15:21:44,976
+Finished starting task: [Task Manager:Import Repo Trades 2] at: 2014-09-17 15:21:45,001
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Flush Import Repo trades. Please wait ...
+Repo trades: Flush Import Repo trades: Imported 10000 trades from :CMDW_Repo_trade_feed_Final_10k.xls
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Repo MtM 1
+Task is Task Manager : Import Repo MtM 1
+2014-09-17 15:34:00
+Waiting 180 second for Task  Import Repo MtM 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Repo MtM 1] at: 2014-09-17 15:34:00,861
+Finished starting task: [Task Manager:Import Repo MtM 1] at: 2014-09-17 15:34:00,890
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import Repo MtM. Please wait ...
+Import Repo MtM: Total Repo MtMs: 10000; Successfull Imports 10000 Repo MtMs.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Repo Settlement 1
+Task is Task Manager : Import Repo Settlement 1
+2014-09-17 15:34:25
+Waiting 1000 second for Task  Import Repo Settlement 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Repo Settlement 1] at: 2014-09-17 15:34:25,947
+Finished starting task: [Task Manager:Import Repo Settlement 1] at: 2014-09-17 15:34:25,967
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import Repo Settlement. Please wait ...
+Import Repo Settlement: Imported 1Repo Settlements.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Trades 1
+Task is Task Manager : Import Trades 1
+2014-09-17 15:35:26
+Waiting 300 second for Task  Import Trades 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Trades 1] at: 2014-09-17 15:35:26,473
+Finished starting task: [Task Manager:Import Trades 1] at: 2014-09-17 15:35:26,499
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Flush Import Trades. Please wait ...
+Trades: Flush Import Trades: Imported 4999 trades from :CMDW_FlushTrade_4999.xlsx
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Trades 2
+Task is Task Manager : Import Trades 2
+2014-09-17 15:37:23
+Waiting 500 second for Task  Import Trades 2 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Trades 2] at: 2014-09-17 15:37:23,671
+Finished starting task: [Task Manager:Import Trades 2] at: 2014-09-17 15:37:23,701
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Flush Import Trades. Please wait ...
+Trades: Flush Import Trades: Imported 10000 trades from :CMDW_FlushTrade_10k.xlsx
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Trades 3
+Task is Task Manager : Import Trades 3
+2014-09-17 15:40:48
+Waiting 1000 second for Task  Import Trades 3 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Trades 3] at: 2014-09-17 15:40:48,776
+Finished starting task: [Task Manager:Import Trades 3] at: 2014-09-17 15:40:48,800
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Flush Import Trades. Please wait ...
+Sorry, no more waiting. Import Trades 3,  TIME_Execute = 1000.813410122, TIME4TASKEXECUTION =1000.
+-------------I am task =Import Trades 4
+Task is Task Manager : Import Trades 4
+2014-09-17 15:57:39
+Waiting 1000 second for Task  Import Trades 4 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Trades 4] at: 2014-09-17 15:57:39,927
+Finished starting task: [Task Manager:Import Trades 4] at: 2014-09-17 15:57:39,955
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Flush Import Trades. Please wait ...
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import MtM 1
+Task is Task Manager : Import MtM 1
+2014-09-17 16:14:02
+Waiting 180 second for Task  Import MtM 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import MtM 1] at: 2014-09-17 16:14:02,602
+Finished starting task: [Task Manager:Import MtM 1] at: 2014-09-17 16:14:02,623
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import MtM. Please wait ...
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Delta Inventory Manager 1
+Task is Task Manager : Import Delta Inventory Manager 1
+2014-09-17 16:15:02
+Waiting 500 second for Task  Import Delta Inventory Manager 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Delta Inventory Manager 1] at: 2014-09-17 16:15:03,074
+Finished starting task: [Task Manager:Import Delta Inventory Manager 1] at: 2014-09-17 16:15:03,102
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import Delta Inventory Manager. Please wait ...
+Import MtM: Total MtMs: 10000; Successfull Imports 10000 MtMs.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Delta Repo Trades 1
+Task is Task Manager : Import Delta Repo Trades 1
+2014-09-17 16:15:24
+Waiting 180 second for Task  Import Delta Repo Trades 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Delta Repo Trades 1] at: 2014-09-17 16:15:25,141
+Finished starting task: [Task Manager:Import Delta Repo Trades 1] at: 2014-09-17 16:15:25,171
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Delta Import Repo trades. Please wait ...
+Repo trades: Delta Import Repo trades: Total Imported 1001 and insert :1001 ,modified : 0 , delete : 0 trades from :Repo_Deltatrade_feed_Final_4999.xls
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Delta Repo Trades 2
+Task is Task Manager : Import Delta Repo Trades 2
+2014-09-17 16:16:54
+Waiting 1500 second for Task  Import Delta Repo Trades 2 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Delta Repo Trades 2] at: 2014-09-17 16:16:54,931
+Finished starting task: [Task Manager:Import Delta Repo Trades 2] at: 2014-09-17 16:16:54,951
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Delta Import Repo trades. Please wait ...
+Repo trades: Delta Import Repo trades: Total Imported 10000 and insert :1000 ,modified : 8000 , delete : 1000 trades from :Delta_Repo_trade_feed_Final_10k.xls
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Delta Trade 2
+Task is Task Manager : Import Delta Trade 2
+2014-09-17 16:28:10
+Waiting 180 second for Task  Import Delta Trade 2 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Delta Trade 2] at: 2014-09-17 16:28:11,179
+Finished starting task: [Task Manager:Import Delta Trade 2] at: 2014-09-17 16:28:11,204
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Delta Import Trades. Please wait ...
+Trades: Delta Import Trades: Total Imported 4999 and insert :500 ,modified : 4000 , delete : 499 trades from :DeltaTrade_4999.xlsx
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Delta Trade 3
+Task is Task Manager : Import Delta Trade 3
+2014-09-17 16:29:20
+Waiting 300 second for Task  Import Delta Trade 3 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Delta Trade 3] at: 2014-09-17 16:29:20,722
+Finished starting task: [Task Manager:Import Delta Trade 3] at: 2014-09-17 16:29:20,738
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Delta Import Trades. Please wait ...
+Trades: Delta Import Trades: Total Imported 9501 and insert :1000 ,modified : 8501 , delete : 0 trades from :DeltaTrade_10k.xlsx
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import External Independent Amounts 5
+Task is Task Manager : Import External Independent Amounts 5
+2014-09-17 16:32:05
+Waiting 500 second for Task  Import External Independent Amounts 5 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import External Independent Amounts 5] at: 2014-09-17 16:32:05,382
+Finished starting task: [Task Manager:Import External Independent Amounts 5] at: 2014-09-17 16:32:05,424
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import External IA. Please wait ...
+Import External IA: Imported 5000 external IAs.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import NAV 1
+Task is Task Manager : Import NAV 1
+2014-09-17 16:33:13
+Waiting 1000 second for Task  Import NAV 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import NAV 1] at: 2014-09-17 16:33:14,139
+Finished starting task: [Task Manager:Import NAV 1] at: 2014-09-17 16:33:14,170
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import NAV. Please wait ...
+NAV: Import NAV: Imported 5000 NAV from :NAV.xls
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Portfolio TSA 1
+Task is Task Manager : Import Portfolio TSA 1
+2014-09-17 16:35:51
+Waiting 500 second for Task  Import Portfolio TSA 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Portfolio TSA 1] at: 2014-09-17 16:35:52,019
+Finished starting task: [Task Manager:Import Portfolio TSA 1] at: 2014-09-17 16:35:52,056
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import Portfolio TSA. Please wait ...
+Portfolio TSA: Import Portfolio TSA: Import Portfolio TSA, Imported: 0, Failed :5000  from :TSA.xls
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Settlement Instructions 1
+Task is Task Manager : Import Settlement Instructions 1
+2014-09-17 16:36:42
+Waiting 300 second for Task  Import Settlement Instructions 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Settlement Instructions 1] at: 2014-09-17 16:36:42,369
+Finished starting task: [Task Manager:Import Settlement Instructions 1] at: 2014-09-17 16:36:42,398
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import Settlement Instruction. Please wait ...
+Settlement Instruction: Import Settlement Instruction: Imported 5000 settlement instructions from :SettlementInstruction.xls
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Remove Mature Assets
+Task is Workflow : Remove Mature Assets
+2014-09-17 16:37:33
+Waiting 2000 second for Task  Remove Mature Assets execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Remove Mature Assets] at: 2014-09-17 16:37:33,716
+Finished starting task: [Workflow:Remove Mature Assets] at: 2014-09-17 16:37:33,760
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Remove Mature Assets. Please wait ...
+Collateral:Remove Mature Assets: Total of 5121 assets are removed.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Remove Mature Trades
+Task is Workflow : Remove Mature Trades
+2014-09-17 16:42:36
+Waiting 3000 second for Task  Remove Mature Trades execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Remove Mature Trades] at: 2014-09-17 16:42:36,381
+Finished starting task: [Workflow:Remove Mature Trades] at: 2014-09-17 16:42:36,410
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Remove Mature Trades. Please wait ...
+Sorry, no more waiting. Remove Mature Trades,  TIME_Execute = 3000.208293183, TIME4TASKEXECUTION =3000.
+-------------I am task =Reset Trading Inactive
+Task is Workflow : Reset Trading Inactive
+2014-09-17 17:32:46
+Waiting 180 second for Task  Reset Trading Inactive execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Reset Trading Inactive] at: 2014-09-17 17:32:47,041
+Finished starting task: [Workflow:Reset Trading Inactive] at: 2014-09-17 17:32:47,078
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Reset Trading Inactive Task. Please wait ...
+Trading Inactive Task finished.0 agreements have been updated.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-----------It's Reset Trading Inactive task, sleep 1800 seconds for msg calc. ------
+-------------I am task =Import FX Rates 3
+Task is Task Manager : Import FX Rates 3
+2014-09-17 18:03:06
+Waiting 500 second for Task  Import FX Rates 3 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import FX Rates 3] at: 2014-09-17 18:03:07,058
+Finished starting task: [Task Manager:Import FX Rates 3] at: 2014-09-17 18:03:07,093
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import FX Rates. Please wait ...
+Market Data: Import FX Rates: Imported 270 FX Rates from: FxRate.xls
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Interest Rates 3
+Task is Task Manager : Import Interest Rates 3
+2014-09-17 18:05:14
+Waiting 180 second for Task  Import Interest Rates 3 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Interest Rates 3] at: 2014-09-17 18:05:15,060
+Finished starting task: [Task Manager:Import Interest Rates 3] at: 2014-09-17 18:05:15,131
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import Interest Rates. Please wait ...
+Market Data: Import Interest Rates: Imported 78 Interest Rates from :InterestRate.xls
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Holiday Centre 1
+Task is Task Manager : Import Holiday Centre 1
+2014-09-17 18:08:24
+Waiting 180 second for Task  Import Holiday Centre 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Holiday Centre 1] at: 2014-09-17 18:08:24,867
+Correct syntax:
+>coltaskmanager <group name>:<task name>
+could not find job with group,name=Task Manager,Import Holiday Centre 1. 
+com.lombardrisk.f3.persistence.exception.LRSFindException: could not find job with group,name=Task Manager,Import Holiday Centre 1. 
+	at com.lombardrisk.f3.scheduler.persistence.SchedulerPersistenceManagerBean.findJobsByGroupAndName(SchedulerPersistenceManagerBean.java:149)
+	at sun.reflect.GeneratedMethodAccessor408.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.jboss.invocation.Invocation.performCall(Invocation.java:386)
+	at org.jboss.ejb.StatelessSessionContainer$ContainerInterceptor.invoke(StatelessSessionContainer.java:233)
+	at org.jboss.resource.connectionmanager.CachedConnectionInterceptor.invoke(CachedConnectionInterceptor.java:156)
+	at org.jboss.ejb.plugins.StatelessSessionInstanceInterceptor.invoke(StatelessSessionInstanceInterceptor.java:173)
+	at com.lombardrisk.f3.audit.AuditTrailInterceptor.invoke(AuditTrailInterceptor.java:233)
+	at org.jboss.ejb.plugins.CallValidationInterceptor.invoke(CallValidationInterceptor.java:63)
+	at org.jboss.ejb.plugins.AbstractTxInterceptor.invokeNext(AbstractTxInterceptor.java:121)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.runWithTransactions(TxInterceptorCMT.java:350)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.invoke(TxInterceptorCMT.java:181)
+	at com.lombardrisk.f3.accesscontrol.JBossEJBInterceptor.invoke(JBossEJBInterceptor.java:140)
+	at org.jboss.ejb.plugins.SecurityInterceptor.process(SecurityInterceptor.java:228)
+	at org.jboss.ejb.plugins.SecurityInterceptor.invoke(SecurityInterceptor.java:211)
+	at org.jboss.ejb.plugins.LogInterceptor.invoke(LogInterceptor.java:205)
+	at org.jboss.ejb.plugins.ProxyFactoryFinderInterceptor.invoke(ProxyFactoryFinderInterceptor.java:138)
+	at org.jboss.ejb.SessionContainer.internalInvoke(SessionContainer.java:650)
+	at org.jboss.ejb.Container.invoke(Container.java:1092)
+	at org.jboss.ejb.plugins.local.BaseLocalProxyFactory.invoke(BaseLocalProxyFactory.java:436)
+	at org.jboss.ejb.plugins.local.StatelessSessionProxy.invoke(StatelessSessionProxy.java:103)
+	at com.sun.proxy.$Proxy431.findJobsByGroupAndName(Unknown Source)
+	at com.lombardrisk.f3.scheduler.SchedulerServiceBean.startJobNow(SchedulerServiceBean.java:500)
+	at sun.reflect.GeneratedMethodAccessor4059.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.jboss.invocation.Invocation.performCall(Invocation.java:386)
+	at org.jboss.ejb.StatelessSessionContainer$ContainerInterceptor.invoke(StatelessSessionContainer.java:233)
+	at org.jboss.resource.connectionmanager.CachedConnectionInterceptor.invoke(CachedConnectionInterceptor.java:156)
+	at org.jboss.ejb.plugins.StatelessSessionInstanceInterceptor.invoke(StatelessSessionInstanceInterceptor.java:173)
+	at com.lombardrisk.f3.audit.AuditTrailInterceptor.invoke(AuditTrailInterceptor.java:233)
+	at org.jboss.ejb.plugins.CallValidationInterceptor.invoke(CallValidationInterceptor.java:63)
+	at org.jboss.ejb.plugins.AbstractTxInterceptor.invokeNext(AbstractTxInterceptor.java:121)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.runWithTransactions(TxInterceptorCMT.java:350)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.invoke(TxInterceptorCMT.java:181)
+	at com.lombardrisk.f3.accesscontrol.JBossEJBInterceptor.invoke(JBossEJBInterceptor.java:140)
+	at org.jboss.ejb.plugins.SecurityInterceptor.process(SecurityInterceptor.java:228)
+	at org.jboss.ejb.plugins.SecurityInterceptor.invoke(SecurityInterceptor.java:211)
+	at org.jboss.ejb.plugins.LogInterceptor.invoke(LogInterceptor.java:205)
+	at org.jboss.ejb.plugins.ProxyFactoryFinderInterceptor.invoke(ProxyFactoryFinderInterceptor.java:138)
+	at org.jboss.ejb.SessionContainer.internalInvoke(SessionContainer.java:650)
+	at org.jboss.ejb.Container.invoke(Container.java:1092)
+	at sun.reflect.GeneratedMethodAccessor398.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.jboss.mx.interceptor.ReflectedDispatcher.invoke(ReflectedDispatcher.java:157)
+	at org.jboss.mx.server.Invocation.dispatch(Invocation.java:96)
+	at org.jboss.mx.server.Invocation.invoke(Invocation.java:88)
+	at org.jboss.mx.server.AbstractMBeanInvoker.invoke(AbstractMBeanInvoker.java:264)
+	at org.jboss.mx.server.MBeanServerImpl.invoke(MBeanServerImpl.java:668)
+	at org.jboss.system.server.jmx.LazyMBeanServer.invoke(LazyMBeanServer.java:283)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker$MBeanServerAction.invoke(JRMPInvoker.java:855)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker.invoke(JRMPInvoker.java:422)
+	at sun.reflect.GeneratedMethodAccessor4038.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:303)
+	at sun.rmi.transport.Transport$1.run(Transport.java:159)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:155)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:535)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:790)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:649)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+	at sun.rmi.transport.StreamRemoteCall.exceptionReceivedFromServer(StreamRemoteCall.java:255)
+	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:233)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:142)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker_Stub.invoke(Unknown Source)
+	at org.jboss.invocation.jrmp.interfaces.JRMPInvokerProxy.invoke(JRMPInvokerProxy.java:133)
+	at org.jboss.invocation.InvokerInterceptor.invokeInvoker(InvokerInterceptor.java:365)
+	at org.jboss.invocation.InvokerInterceptor.invoke(InvokerInterceptor.java:197)
+	at org.jboss.proxy.TransactionInterceptor.invoke(TransactionInterceptor.java:61)
+	at org.jboss.proxy.ejb.SecurityContextInterceptor.invoke(SecurityContextInterceptor.java:64)
+	at org.jboss.proxy.SecurityInterceptor.invoke(SecurityInterceptor.java:68)
+	at org.jboss.proxy.ejb.StatelessSessionInterceptor.invoke(StatelessSessionInterceptor.java:112)
+	at org.jboss.proxy.ClientContainer.invoke(ClientContainer.java:101)
+	at com.sun.proxy.$Proxy2.startJobNow(Unknown Source)
+	at com.lombardrisk.f3.F3TaskManager.main(F3TaskManager.java:236)
+----------break now --------
+-------------I am task =Empty Task
+Task is Admin : Empty Task
+2014-09-17 18:08:54
+Waiting 180 second for Task  Empty Task execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Admin:Empty Task] at: 2014-09-17 18:08:54,903
+Finished starting task: [Admin:Empty Task] at: 2014-09-17 18:08:54,964
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+Trades:Remove Mature Trades: Total of 168111 trades have been removed.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh

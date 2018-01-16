@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+
+		<agreement id="agr12414.fcm">
+			<agreementId id="agr12414.id">2566</agreementId>
+		</agreement>
+
+		<exposureEventDetail id="imRecall.50000">
+			<action>IM Recall</action>
+			<agreementRequirement>50,000.00</agreementRequirement>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="vmCall.51000">
+			<action>VM Call(Deficit)</action>
+			<agreementRequirement>51,000.00</agreementRequirement>
+		</exposureEventDetail>
+
+		<exposureManagementMessage id="vm.im.autoBookingSuccess">
+			<messageSummary>
+				<successfulAccount>2</successfulAccount>
+				<unsuccessfulAccount>0</unsuccessfulAccount>
+			</messageSummary>
+			<messageDetail>
+				<source>Auto Send (Letter)</source>
+				<message>Margin Recall letter sent via Email for Princ:QTPPrincipal/Cpty:QTPCounterparty/Desc:12414_1/AgrId:2566</message>
+			</messageDetail>
+			<messageDetail>
+				<source>Auto Send (Letter)</source>
+				<message>Margin Recall letter sent via Email for Princ:QTPPrincipal/Cpty:QTPCounterparty/Desc:12414_1/AgrId:2566</message>
+			</messageDetail>
+			<messageDetail>
+				<source>Auto Book</source>
+				<message>Princ:QTPPrincipal/Cpty:QTPCounterparty/Desc:12414_1/AgrId:2566/Event:Recall CASH-USD VM Recall 51,000.00 auto booking created.</message>
+			</messageDetail>
+			<messageDetail>
+				<source>Auto Book</source>
+				<message>Princ:QTPPrincipal/Cpty:QTPCounterparty/Desc:12414_1/AgrId:2566/Event:Recall CASH-USD Capitalised Cashflow Capitalise receive -1,000.00 auto booking created.</message>
+			</messageDetail>
+			<messageDetail>
+				<source>Auto Book</source>
+				<message>Princ:QTPPrincipal/Cpty:QTPCounterparty/Desc:12414_1/AgrId:2566/Event:Recall CASH-USD IM Recall 50,000.00 auto booking created.</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<assetBookingSummary id="asset.type.CASH.USD">
+			<assetType ref="cash.usd1.name"/>
+		</assetBookingSummary>
+
+		<assetBookingSummary id="recall.vm.autoBook.systemDraft.51000.added">
+			<!--<assetType ref="cash.usd1.name"/>-->
+			<movement>Recall</movement>
+			<status>System Draft</status>
+			<nominalAmount>51,000.00</nominalAmount>
+			<vmMarketValue>51,000.00</vmMarketValue>
+			<bookingSource>Auto Book</bookingSource>
+		</assetBookingSummary>
+
+		<assetBookingSummary id="recall.im.autoBook.pending.50000.added">
+			<!--<assetType ref="cash.usd1.name"/>-->
+			<movement>Recall</movement>
+			<status>Pending</status>
+			<bookingSource>Auto Book</bookingSource>
+			<nominalAmount>50,000.00</nominalAmount>
+			<imMarketValue>50,000.00</imMarketValue>
+		</assetBookingSummary>
+
+		<cashMovementSummary id="cash.usd.capitaliseReceive.tsa.autobook.pending.1000">
+			<Amount>-1,000.00</Amount>
+			<status>Pending</status>
+			<bookingType>Cashflow</bookingType>
+			<bookingSource>Auto Book</bookingSource>
+			<movement>Capitalise receive</movement>
+		</cashMovementSummary>
+
+
+
+
+
+	</scenarioData>
+</dataBean>

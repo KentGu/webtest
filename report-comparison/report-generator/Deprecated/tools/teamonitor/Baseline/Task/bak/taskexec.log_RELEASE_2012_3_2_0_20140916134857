@@ -1,0 +1,374 @@
+I'm FILE_TASKEXECLOG=taskexec.log_RELEASE_2012_3_2_0_20140916134857
+I'm database---------=COLLINE201232_BASE_0819 creditderivative 172.20.20.99:1521 pst4
+Target Version: RELEASE_2012_3_2_0
+Target Path:/home/test/server/colline/cluster/bin
+-------------I am task =Approve All Organisations 1
+Task is Workflow : Approve All Organisations 1
+2014-09-16 13:48:57
+Waiting 500 second for Task  Approve All Organisations 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Approve All Organisations 1] at: 2014-09-16 13:48:58,149
+Finished starting task: [Workflow:Approve All Organisations 1] at: 2014-09-16 13:48:58,249
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Approve All Organisations. Please wait ...
+Workflow:Approve All Organisations: 1  Organisations are approved.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Approve All Agreements 1
+Task is Workflow : Approve All Agreements 1
+2014-09-16 13:49:17
+Waiting 180 second for Task  Approve All Agreements 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Approve All Agreements 1] at: 2014-09-16 13:49:18,176
+Finished starting task: [Workflow:Approve All Agreements 1] at: 2014-09-16 13:49:18,201
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Approve All Agreements. Please wait ...
+Workflow:Approve All Agreements: 2  agreements are approved.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Approve All Statements 5
+Task is Workflow : Approve All Statements 5
+2014-09-16 13:49:37
+Waiting 180 second for Task  Approve All Statements 5 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Approve All Statements 5] at: 2014-09-16 13:49:38,208
+Finished starting task: [Workflow:Approve All Statements 5] at: 2014-09-16 13:49:38,230
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Approve All Statements. Please wait ...
+Workflow:Approve All Statements: 84  statements are triggered to approve.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-----------It's Approve All Statements task, sleep 900 seconds for msg calc. ------
+-------------I am task =External Exposures Reset 4
+Task is Workflow : External Exposures Reset 4
+2014-09-16 14:04:57
+Waiting 1000 second for Task  External Exposures Reset 4 execute
+Started F3 Task Manager ...
+Logged in as user:pvtna
+Starting task: [Workflow:External Exposures Reset 4] at: 2014-09-16 14:04:58,245
+Finished starting task: [Workflow:External Exposures Reset 4] at: 2014-09-16 14:04:58,275
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Workflow:Ext Exp Reset: Ext Exp Reset Task Initiated. 
+Workflow:Ext Exp Reset: All exposures have been reset. 
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Cut-Off 15
+Task is 'Workflow : Cut-Off 15'
+2014-09-16 14:14:39
+Waiting 180 second for Task  Cut-Off 15 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Cut-Off 15] at: 2014-09-16 14:14:39,261
+Finished starting task: [Workflow:Cut-Off 15] at: 2014-09-16 14:14:39,370
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Cut-Off: STP must be enabled!
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Recalculate Workflow 1
+Task is Workflow : Recalculate Workflow 1
+2014-09-16 14:14:59
+Waiting 1000 second for Task  Recalculate Workflow 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Recalculate Workflow 1] at: 2014-09-16 14:14:59,300
+Finished starting task: [Workflow:Recalculate Workflow 1] at: 2014-09-16 14:14:59,443
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Start to recalculate workflow.
+Recalculate workflow has been triggered.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Recalculate based on Day change 1
+Task is Workflow : Recalculate based on Day change 1
+2014-09-16 14:19:30
+Waiting 500 second for Task  Recalculate based on Day change 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Recalculate based on Day change 1] at: 2014-09-16 14:19:31,197
+Finished starting task: [Workflow:Recalculate based on Day change 1] at: 2014-09-16 14:19:31,231
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Workflow:Recalculate based on Day change Task Initiated. 
+Workflow:Recalculate based on Day change Task complete. 
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Recalculate Interest Manager 4
+Task is Workflow : Recalculate Interest Manager 4
+2014-09-16 14:19:51
+Waiting 200 second for Task  Recalculate Interest Manager 4 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Recalculate Interest Manager 4] at: 2014-09-16 14:19:51,251
+Finished starting task: [Workflow:Recalculate Interest Manager 4] at: 2014-09-16 14:19:51,274
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Recalculate Interest manage. Please wait ...
+Workflow:Recalculate Interest Manager: Data is recalculated.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Auto Book Cash 1
+Task is Workflow : Auto Book Cash 1
+2014-09-16 14:20:11
+Waiting 180 second for Task  Auto Book Cash 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Auto Book Cash 1] at: 2014-09-16 14:20:11,299
+Finished starting task: [Workflow:Auto Book Cash 1] at: 2014-09-16 14:20:11,341
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Workflow:Auto Book Cash: Auto Book Cash Task Initiated. 
+Workflow:Auto Book Cash: Auto Book Cash Task Finished with 0 successful and 0 failed. 
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Auto Email Call/Recall 1
+-----------SQL Select before task execute ------
+Number of Auto Email Call/Recall 1 is: 
+  COUNT(1)
+----------
+	 8
+Task is Workflow : Auto Email Call/Recall 1
+2014-09-16 14:20:31
+Waiting 5000 second for Task  Auto Email Call/Recall 1 execute
+Started F3 Task Manager ...
+Logged in as user:pvtna
+Starting task: [Workflow:Auto Email Call/Recall 1] at: 2014-09-16 14:20:32,014
+Finished starting task: [Workflow:Auto Email Call/Recall 1] at: 2014-09-16 14:20:32,043
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Auto Email Call/Recall. Please wait ...
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Auto Email Interest Statement 1
+Task is Workflow : Auto Email Interest Statement 1
+2014-09-16 15:29:56
+Waiting 2000 second for Task  Auto Email Interest Statement 1 execute
+Started F3 Task Manager ...
+Logged in as user:pvtna
+Starting task: [Workflow:Auto Email Interest Statement 1] at: 2014-09-16 15:29:56,505
+Finished starting task: [Workflow:Auto Email Interest Statement 1] at: 2014-09-16 15:29:56,527
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Auto Email Interest Statement. Please wait ...
+Sorry, no more waiting. Auto Email Interest Statement 1,  TIME_Execute = 2000.334960588, TIME4TASKEXECUTION =2000.
+-------------I am task =Auto Email Statement Notification 1
+Task is Workflow : Auto Email Statement Notification 1
+2014-09-16 16:03:26
+Waiting 500 second for Task  Auto Email Statement Notification 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Auto Email Statement Notification 1] at: 2014-09-16 16:03:27,186
+Finished starting task: [Workflow:Auto Email Statement Notification 1] at: 2014-09-16 16:03:27,218
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Auto Email Statement Notification. Please wait ...
+Auto Email Statement Notification: 256 Statement Notification letters have been triggered.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Distribute UDL 1
+Task is Workflow : Distribute UDL 1
+2014-09-16 16:05:10
+Waiting 7000 second for Task  Distribute UDL 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Distribute UDL 1] at: 2014-09-16 16:05:11,016
+Finished starting task: [Workflow:Distribute UDL 1] at: 2014-09-16 16:05:11,053
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started User Define Letter. Please wait ...
+Auto Email Interest Statement: 2978 Interest letters have been sent successfully.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Recalculate Securities 1
+Task is Workflow : Recalculate Securities 1
+2014-09-16 16:16:43
+Waiting 2000 second for Task  Recalculate Securities 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Recalculate Securities 1] at: 2014-09-16 16:16:43,825
+Finished starting task: [Workflow:Recalculate Securities 1] at: 2014-09-16 16:16:43,855
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Recalculate Securities. Please wait ...
+-----------It's Recalculate Securities 1 task, sleep 1800 seconds for msg calc. ------
+Workflow:Securities recalculated: 13506.
+Workflow:SecurityTemplates recalculated: 26848.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Recalculate Statements 1
+-----------SQL Select before task execute ------
+Number of Agreement statementstatus approved in New York is: 
+  COUNT(1)
+----------
+      5835
+Task is Workflow : Recalculate Statements 1
+2014-09-16 17:04:37
+Waiting 4000 second for Task  Recalculate Statements 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Recalculate Statements 1] at: 2014-09-16 17:04:38,018
+Finished starting task: [Workflow:Recalculate Statements 1] at: 2014-09-16 17:04:38,042
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Start to recalculate statements.
+All statements have been recalculated.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Process Approve Settlements 4
+Task is Workflow : Process Approve Settlements 4
+2014-09-16 17:51:59
+Waiting 180 second for Task  Process Approve Settlements 4 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Process Approve Settlements 4] at: 2014-09-16 17:51:59,340
+Finished starting task: [Workflow:Process Approve Settlements 4] at: 2014-09-16 17:51:59,369
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Approve Settlements. Please wait ...
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Process Approve Trade Settlements 1
+Task is Workflow : Process Approve Trade Settlements 1
+2014-09-16 17:52:19
+Waiting 180 second for Task  Process Approve Trade Settlements 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Process Approve Trade Settlements 1] at: 2014-09-16 17:52:19,368
+Finished starting task: [Workflow:Process Approve Trade Settlements 1] at: 2014-09-16 17:52:19,386
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Processing Repo Trade Settlement Status. Please wait ...
+Workflow:Process all repo trade settlement status: 10012  repo trades are processed.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Process Outstanding 1
+Task is Workflow : Process Outstanding 1
+2014-09-16 17:52:39
+Waiting 180 second for Task  Process Outstanding 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Process Outstanding 1] at: 2014-09-16 17:52:39,410
+Finished starting task: [Workflow:Process Outstanding 1] at: 2014-09-16 17:52:39,440
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Process Outstanding Settlements. Please wait ...
+Workflow:Process Outstanding Settlements: 0 outstanding settlements have been processed.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Net Older Collateral Bookings 1
+Task is Workflow : Net Older Collateral Bookings 1
+2014-09-16 17:52:59
+Waiting 200 second for Task  Net Older Collateral Bookings 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Net Older Collateral Bookings 1] at: 2014-09-16 17:52:59,425
+Finished starting task: [Workflow:Net Older Collateral Bookings 1] at: 2014-09-16 17:52:59,446
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Netted Security Booking entries older than 35 days:1790 entries netted.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Settlement Risk 1
+Task is Workflow : Settlement Risk 1
+2014-09-16 17:53:26
+Waiting 180 second for Task  Settlement Risk 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Settlement Risk 1] at: 2014-09-16 17:53:26,562
+Finished starting task: [Workflow:Settlement Risk 1] at: 2014-09-16 17:53:26,580
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Settlement Risk. Please wait ...
+Trades: Settlement Risk: Total of 0 trades are settled.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Apply Effective and Maturity dates 1
+Task is Workflow : Apply Effective and Maturity dates 1
+2014-09-16 17:53:46
+Waiting 300 second for Task  Apply Effective and Maturity dates 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Apply Effective and Maturity dates 1] at: 2014-09-16 17:53:46,582
+Finished starting task: [Workflow:Apply Effective and Maturity dates 1] at: 2014-09-16 17:53:46,606
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started settling trades. Please wait ...
+Trades: Settle Trades: Total of 171140 trades are settled.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Dashboard Refresh 1
+Task is Workflow : Dashboard Refresh 1
+2014-09-16 17:56:31
+Waiting 180 second for Task  Dashboard Refresh 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Dashboard Refresh 1] at: 2014-09-16 17:56:31,500
+Finished starting task: [Workflow:Dashboard Refresh 1] at: 2014-09-16 17:56:31,522
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Workflow:Dashboard refresh: Dashboard is recalculated.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Reset Total Settlement Amount 4
+Task is Workflow : Reset Total Settlement Amount 4
+2014-09-16 17:58:53
+Waiting 180 second for Task  Reset Total Settlement Amount 4 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Reset Total Settlement Amount 4] at: 2014-09-16 17:58:53,937
+Finished starting task: [Workflow:Reset Total Settlement Amount 4] at: 2014-09-16 17:58:53,965
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Total Settlement Amount Reset: Total Settlement Amount Task Initiated. 
+Total Settlement Amount Reset: Total Settlement Amount has been reset. 
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Todays Events Reset 1
+Task is Workflow : Todays Events Reset 1
+2014-09-16 17:59:13
+Waiting 200 second for Task  Todays Events Reset 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Todays Events Reset 1] at: 2014-09-16 17:59:14,008
+Finished starting task: [Workflow:Todays Events Reset 1] at: 2014-09-16 17:59:14,036
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Todays Events Reset. Please wait ...
+Workflow:Todays Events Reset: All todays ticked events have been reset
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Start-Up Dashboard Reset 1
+Task is 'Workflow : Start-Up Dashboard Reset 1'
+2014-09-16 17:59:33
+Waiting 600 second for Task  Start-Up Dashboard Reset 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Start-Up Dashboard Reset 1] at: 2014-09-16 17:59:34,020
+Finished starting task: [Workflow:Start-Up Dashboard Reset 1] at: 2014-09-16 17:59:34,040
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Workflow:Start-Up Dashboard Reset: All start-up actions have been reset
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Counterparty Amount 1
+Task is Task Manager : Import Counterparty Amount 1
+2014-09-16 17:59:53
+Waiting 7200 second for Task  Import Counterparty Amount 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Counterparty Amount 1] at: 2014-09-16 17:59:54,065
+Finished starting task: [Task Manager:Import Counterparty Amount 1] at: 2014-09-16 17:59:54,099
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import Counterparty Amount. Please wait ...
+Workflow:User Define Letter: Processed (33364) agreement.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh

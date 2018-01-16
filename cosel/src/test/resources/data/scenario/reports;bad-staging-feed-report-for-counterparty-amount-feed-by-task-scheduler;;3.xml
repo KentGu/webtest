@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+
+        <taskSchedulerDetail id="task.scheduler.import.cpty.amount">
+            <type>Task Manager</type>
+            <taskName>Import Counterparty Amount</taskName>
+            <additionalInfo id="task.scheduler.import.cpty.amount.server.path">/home/ec2-user/TaskScheduler/ImportCptyAmount</additionalInfo>
+        </taskSchedulerDetail>
+
+        <feedCounterpartyAmount id="task.feed.cpty.amount">
+            <agreement_id>abc</agreement_id>
+            <legal_id></legal_id>
+            <action></action>
+            <eventType></eventType>
+            <counterpartyAmount>def</counterpartyAmount>
+            <counterpartyExposureAmount>ghi</counterpartyExposureAmount>
+            <currency></currency>
+            <model></model>
+        </feedCounterpartyAmount>
+
+        <feedCounterpartyAmount id="task.feed.modified.incorrect.staging.report">
+            <rowNumber>2</rowNumber>
+            <failureReason ref="failure.reason1"/>
+            <agreement_id></agreement_id>
+            <legal_id>F13658AgrForCptyAmountExtId</legal_id>
+            <action></action>
+            <eventType></eventType>
+            <counterpartyAmount></counterpartyAmount>
+            <counterpartyExposureAmount></counterpartyExposureAmount>
+            <currency></currency>
+            <model></model>feedCounterpartyAmount>
+        </feedCounterpartyAmount>
+
+        <feedCounterpartyAmount id="task.feed.modified.correct.staging.report">
+            <rowNumber>2</rowNumber>
+            <failureReason ref="failure.reason2"/>
+            <agreement_id></agreement_id>
+            <legal_id>F13658AgrForCptyAmountExtId</legal_id>
+            <action>Call</action>
+            <eventType></eventType>
+            <counterpartyAmount>887</counterpartyAmount>
+            <counterpartyExposureAmount>777</counterpartyExposureAmount>
+            <currency></currency>
+            <model></model>
+        </feedCounterpartyAmount>
+
+        <variable id="file.name"/>
+
+        <badStagingFeedReportFilter id="search.by.feed.cpty.amount">
+            <feedTask>Feed Counterparty Amount</feedTask>
+        </badStagingFeedReportFilter>
+
+        <reportValidationRules id="reportRule1">
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field><fieldName>Row number</fieldName><value>2</value></field>
+                <field><fieldName>Failure reason</fieldName><value id="failure.reason1">[Column: 1] agreement_id - Unable to parse 'abc' as number | [Column: 3] action - Field is compulsory but no value was found | [Column: 5] counterpartyAmount - Unable to parse 'def' as number | [Column: 6] counterpartyExposureAmount - Unable to parse 'ghi' as number</value></field>
+                <field><fieldName>agreement_id</fieldName><value>abc</value></field>
+                <field><fieldName>legal_id</fieldName><value></value></field>
+                <field><fieldName>action</fieldName><value></value></field>
+                <field><fieldName>eventType</fieldName><value></value></field>
+                <field><fieldName>counterpartyAmount</fieldName><value>def</value></field>
+                <field><fieldName>counterpartyExposureAmount</fieldName><value>ghi</value></field>
+                <field><fieldName>currency</fieldName><value></value></field>
+                <field><fieldName>model</fieldName><value></value></field>
+            </reportValidationRule>
+        </reportValidationRules>
+
+        <reportValidationRules id="reportRule2">
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field><fieldName>Row number</fieldName><value>2</value></field>
+                <field><fieldName>Failure reason</fieldName><value id="failure.reason2">[Column: 3] action - Field is compulsory but no value was found</value></field>
+                <field><fieldName>agreement_id</fieldName><value></value></field>
+                <field><fieldName>legal_id</fieldName><value>F13658AgrForCptyAmountExtId</value></field>
+                <field><fieldName>action</fieldName><value></value></field>
+                <field><fieldName>eventType</fieldName><value></value></field>
+                <field><fieldName>counterpartyAmount</fieldName><value></value></field>
+                <field><fieldName>counterpartyExposureAmount</fieldName><value></value></field>
+                <field><fieldName>currency</fieldName><value></value></field>
+                <field><fieldName>model</fieldName><value></value></field>
+            </reportValidationRule>
+        </reportValidationRules>
+
+        <variable id="badStagingFeedReportPath"/>
+
+        <taskSchedulerMessage id="task.scheduler.import.successful">
+            <message>Import Counterparty Amount: Imported 1 Counterparty Amount from :(\S+).csv</message>
+        </taskSchedulerMessage>
+
+        <agreementSearch id = "search.agr.for.cpty.amount.feed">
+            <description>
+                <filter>F13658AgrForCptyAmountDesc</filter>
+                <linkText>F13658AgrForCptyAmountDesc</linkText>
+            </description>
+        </agreementSearch>
+
+        <agreementSearchResult id = "search.agr.for.cpty.amount.feed.result">
+            <externalId>F13658AgrForCptyAmountExtId</externalId>
+        </agreementSearchResult>
+
+        <exposureEventDetail id="call.event.cpty.amount.887">
+            <action>Call</action>
+            <counterpartyAmount>887</counterpartyAmount>
+        </exposureEventDetail>
+
+    </scenarioData>
+</dataBean>

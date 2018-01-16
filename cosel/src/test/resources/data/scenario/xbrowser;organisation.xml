@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/xbrowser.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <organisation id="prinOrg1">
+            <longName id="cp.lname" random="true"/>
+            <shortName ref="cp.lname"/>
+            <code ref="cp.lname"/>
+            <role ref="org.role.cr.name"/>
+            <role ref="org.role.cp.name"/>
+            <role ref="org.role.bh.name"/>
+            <address>
+                <contact>someone</contact>
+                <email>test@test.com</email>
+                <enable>true</enable>
+            </address>
+            <externalCode>
+                <systemName ref="org.feed.system.qtp.name"/>
+                <externalCode random="true" prefix="EX" />
+            </externalCode>
+            <relationship>
+                <parent>true</parent>
+                <type>Subsidiary</type>
+                <organisationSearch>
+                    <filter ref="org.main.sname" />
+                    <linkText ref="org.main.sname" />
+                </organisationSearch>
+            </relationship>
+            <!--<debtClassification>-->
+                <!--<debtName>SEC</debtName>-->
+                <!--<creditRating>-->
+                    <!--<agency>SandP</agency>-->
+                    <!--<rating>AAA</rating>-->
+                <!--</creditRating>-->
+            <!--</debtClassification>-->
+            <status>Approved</status>
+        </organisation>
+        <organisation id="org1">
+            <longName id="org1.lname" random="true"/>
+            <shortName ref="org1.lname"/>
+            <code ref="org1.lname"/>
+            <role ref="org.role.cr.name"/>
+            <role ref="org.role.cp.name"/>
+            <role ref="org.role.bh.name"/>
+            <address>
+                <contact>someone</contact>
+                <email>test@test.com</email>
+                <enable>true</enable>
+            </address>
+            <!--<finra4210Exempt>true</finra4210Exempt>-->
+            <status>Approved</status>
+        </organisation>
+        <organisation id="org2">
+            <longName id="org2.lname" random="true"/>
+            <shortName ref="org2.lname"/>
+            <code ref="org2.lname"/>
+            <role ref="org.role.cr.name"/>
+            <role ref="org.role.cp.name"/>
+            <role ref="org.role.bh.name"/>
+            <address>
+                <contact>someone</contact>
+                <email>test@test.com</email>
+                <enable>true</enable>
+            </address>
+            <status>Approved</status>
+        </organisation>
+        <organisation id="org3">
+            <longName id="org3.lname" random="true"/>
+            <shortName ref="org3.lname"/>
+            <code ref="org3.lname"/>
+            <role ref="org.role.cr.name"/>
+            <role ref="org.role.cp.name"/>
+            <role ref="org.role.bh.name"/>
+            <address>
+                <contact>someone</contact>
+                <email>test@test.com</email>
+                <enable>true</enable>
+            </address>
+            <status>Approved</status>
+        </organisation>
+        <organisationSearch id="orgSearch1">
+            <!--<type>Long Name</type>-->
+            <!--<filter>5b429d1a58c040909481105bd9bb23a1</filter>-->
+            <!--<linkText>5b429d1a58c040909481105bd9bb23a1</linkText>-->
+            <filter>a09195d270834cf0b3bf2b3a1328cbe3</filter>
+            <linkText>a09195d270834cf0b3bf2b3a1328cbe3</linkText>
+        </organisationSearch>
+
+        <organisationSearch id="orgSearch2">
+            <filter ref="org2.lname"/>
+            <linkText ref="org2.lname"/>
+        </organisationSearch>
+        <organisationSearch id="orgSearch3">
+            <filter ref="org3.lname"/>
+            <linkText ref="org3.lname"/>
+        </organisationSearch>
+        <organisation id="editOrg1">
+            <externalCode>
+                <systemName ref="org.feed.system.qtp.name"/>
+                <externalCode random="true" />
+            </externalCode>
+            <relationship>
+                <parent>false</parent>
+                <type>Branch</type>
+                <organisationSearch>
+                    <filter ref="org1.lname" />
+                    <linkText ref="org1.lname" />
+                </organisationSearch>
+            </relationship>
+            <status>Approved</status>
+        </organisation>
+
+        <organisationSearchResult id="orgSearchResult1">
+            <shortName ref="org.main.sname"/>
+        </organisationSearchResult>
+        <organisationSearchResult id="orgSearchResult2">
+            <shortName>QTPPrincipal</shortName>
+        </organisationSearchResult>
+
+        <organisationBook id="book1">
+            <organisationBookName random="true" prefix="book1_" id="book1Name"/>
+            <status>Amended</status>
+        </organisationBook>
+        <organisationBook id="book2">
+            <parent>
+                <organisationBookName ref="book1Name" />
+            </parent>
+            <organisationBookName random="true" prefix="book2_" id="book2Name" />
+            <status>Amended</status>
+        </organisationBook>
+        <organisationBook id="book3">
+            <parent>
+                <parent>
+                    <organisationBookName ref="book2Name" />
+                </parent>
+                <organisationBookName ref="book1Name" />
+            </parent>
+            <organisationBookName random="true" prefix="book3_" />
+            <status>Amended</status>
+        </organisationBook>
+        <organisationBook id="book4">
+            <parent>
+                <parent>
+                    <organisationBookName>book2_485c1947f92d4799a4e2c22659d22c87</organisationBookName>
+                </parent>
+                <organisationBookName>book1_08e77225549f4dcda89ed34d0b5ccdd1</organisationBookName>
+            </parent>
+            <organisationBookName random="true" prefix="book3_" />
+            <status>Amended</status>
+        </organisationBook>
+    </scenarioData>
+</dataBean>

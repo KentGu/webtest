@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/exposureManagement.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <agreement id="agr20446.multiModel.fcm">
+            <agreementId id="agrid">2578</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="model">
+            <column>Model</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.top">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-1,825,000.00</agreementRequirement>
+            <sysCalculatedAmount>1,825,000.00</sysCalculatedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.delivery.top">
+            <action>IM Delivery</action>
+            <agreementRequirement>-1,850,500.00</agreementRequirement>
+            <sysCalculatedAmount>1,850,500.00</sysCalculatedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.top.agreementRequirement.1825000">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-1,825,000.00</agreementRequirement>
+            <sysCalculatedAmount>1,825,000.00</sysCalculatedAmount>
+            <callStatus>Pending Review</callStatus>
+            <model></model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.m1.agreementRequirement.175000">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-175,000.00</agreementRequirement>
+            <sysCalculatedAmount>175,000.00</sysCalculatedAmount>
+            <callStatus>Pending Review</callStatus>
+            <model>m1</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.m2.agreementRequirement.800000">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-800,000.00</agreementRequirement>
+            <sysCalculatedAmount>800,000.00</sysCalculatedAmount>
+            <callStatus>Pending Review</callStatus>
+            <model>m2</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.m3.agreementRequirement.100000">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-100,000.00</agreementRequirement>
+            <sysCalculatedAmount>100,000.00</sysCalculatedAmount>
+            <callStatus>Pending Review</callStatus>
+            <model>m3</model>
+        </exposureEventDetail>
+
+
+        <exposureEventDetail id="im.delivery.top.agreementRequirement.1850500">
+            <action>IM Delivery</action>
+            <agreementRequirement>-1,850,500.00</agreementRequirement>
+            <sysCalculatedAmount>1,850,500.00</sysCalculatedAmount>
+            <callStatus>Pending Review</callStatus>
+            <model></model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.delivery.m1.agreementRequirement.175500">
+            <action>IM Delivery</action>
+            <agreementRequirement>-175,500.00</agreementRequirement>
+            <sysCalculatedAmount>175,500.00</sysCalculatedAmount>
+            <callStatus>Pending Review</callStatus>
+            <model>m1</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.delivery.m2.agreementRequirement.810000">
+            <action>IM Return</action>
+            <agreementRequirement>-810,000.00</agreementRequirement>
+            <sysCalculatedAmount>810,000.00</sysCalculatedAmount>
+            <callStatus>Pending Review</callStatus>
+            <model>m2</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.delivery.m3.agreementRequirement.110000">
+            <action>IM Delivery</action>
+            <agreementRequirement>-110,000.00</agreementRequirement>
+            <sysCalculatedAmount>110,000.00</sysCalculatedAmount>
+            <callStatus>Pending Review</callStatus>
+            <model>m3</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.m3.agreementRequirement.100000.waived">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-100,000.00</agreementRequirement>
+            <sysCalculatedAmount>100,000.00</sysCalculatedAmount>
+            <callStatus>Waived</callStatus>
+            <comments>t</comments>
+            <model>m3</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.delivery.m3.agreementRequirement.110000.waived">
+            <action>IM Delivery</action>
+            <agreementRequirement>-110,000.00</agreementRequirement>
+            <sysCalculatedAmount>110,000.00</sysCalculatedAmount>
+            <callStatus>Waived</callStatus>
+            <comments>t</comments>
+            <model>m3</model>
+        </exposureEventDetail>
+
+
+        <exposureEventDetail id="vm.delivery.m2.counterpartyAmount.900000">
+            <counterpartyAmount>-900000</counterpartyAmount>
+        </exposureEventDetail>
+
+        <assetBookingSummary id="asset.type.Cash.GBP">
+            <assetType>CASH-GBP</assetType>
+        </assetBookingSummary>
+        
+        <bookingDetail id="deliveryBooking.vmAmount.800000">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <vmAmount apply="true"></vmAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <save>saveAndComplete</save>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </bookingDetail>
+
+        <exposureEventDetail id="vm.delivery.top.disputeValue.1825000.pendingReview">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-1,825,000.00</agreementRequirement>
+            <sysCalculatedAmount>1,825,000.00</sysCalculatedAmount>
+            <disputeValue>25,000.00</disputeValue>
+            <callStatus>Pending Review</callStatus>
+            <model></model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.m1.disputeValue.175000.pendingReview">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-175,000.00</agreementRequirement>
+            <sysCalculatedAmount>175,000.00</sysCalculatedAmount>
+            <disputeValue>175,000.00</disputeValue>
+            <callStatus>Pending Review</callStatus>
+            <model>m1</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.m2.disputeValue.800000.partialDispute">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-800,000.00</agreementRequirement>
+            <sysCalculatedAmount>800,000.00</sysCalculatedAmount>
+            <disputeValue>-100,000.00</disputeValue>
+            <callStatus>Partial Dispute</callStatus>
+            <model>m2</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.m3.disputeValue.100000.waived">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-100,000.00</agreementRequirement>
+            <sysCalculatedAmount>100,000.00</sysCalculatedAmount>
+            <disputeValue>100,000.00</disputeValue>
+            <callStatus>Waived</callStatus>
+            <model>m3</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.m1.counterpartyAmount.176000">
+            <counterpartyAmount>-176000</counterpartyAmount>
+        </exposureEventDetail>
+
+        <assetBookingSummary id="asset.type.bond.USD">
+            <assetType ref="bond.usd.name"/>
+        </assetBookingSummary>
+
+        <bookingDetail id="returnBooking.vmAmount.175000">
+            <instrumentSearch>
+                <instrumentId>
+                    <filter>qtp_Bond_Instrument</filter>
+                </instrumentId>
+                <linkText>qtp_Bond_Instrument</linkText>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <vmAmount apply="true"></vmAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <save>saveAndComplete</save>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </bookingDetail>
+
+        <exposureEventDetail id="vm.delivery.top.disputeValue.151000.partialDispute">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-1,825,000.00</agreementRequirement>
+            <sysCalculatedAmount>1,825,000.00</sysCalculatedAmount>
+            <disputeValue>-151,000.00</disputeValue>
+            <callStatus>Partial Dispute</callStatus>
+            <model></model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vm.delivery.m1.disputeValue.1000.partialDispute">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-175,000.00</agreementRequirement>
+            <sysCalculatedAmount>175,000.00</sysCalculatedAmount>
+            <disputeValue>-1,000.00</disputeValue>
+            <callStatus>Partial Dispute</callStatus>
+            <model>m1</model>
+        </exposureEventDetail>
+
+    </scenarioData>
+</dataBean>

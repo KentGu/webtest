@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+
+        <taskSchedulerDetail id="task.scheduler.import.agreement.rating">
+            <type>Task Manager</type>
+            <taskName>Import Agreement Ratings</taskName>
+            <additionalInfo id="task.scheduler.import.agreement.rating.server.path">/home/ec2-user/TaskScheduler/ImportAgreementRating</additionalInfo>
+        </taskSchedulerDetail>
+
+        <feedAgreementRating id="task.feed.agreement.rating">
+            <legal_id></legal_id>
+            <principal></principal>
+            <counterpartycode></counterpartycode>
+            <cpty_principal_ind></cpty_principal_ind>
+            <vmim></vmim>
+            <rating_level></rating_level>
+            <rater></rater>
+            <rating_num></rating_num>
+            <amount></amount>
+            <min_transfer_amt></min_transfer_amt>
+            <rounding_amt></rounding_amt>
+        </feedAgreementRating>
+
+        <feedAgreementRating id="task.feed.modified.incorrect.staging.report">
+            <rowNumber>2</rowNumber>
+            <failureReason ref="failure.reason1"/>
+            <legal_id>F13658AgrForAgrRatingExtId</legal_id>
+            <principal>QTPPrincipal</principal>
+            <counterpartycode></counterpartycode>
+            <cpty_principal_ind></cpty_principal_ind>
+            <vmim></vmim>
+            <rating_level></rating_level>
+            <rater></rater>
+            <rating_num></rating_num>
+            <amount></amount>
+            <min_transfer_amt></min_transfer_amt>
+            <rounding_amt></rounding_amt>
+        </feedAgreementRating>
+
+        <feedAgreementRating id="task.feed.modified.correct.staging.report">
+            <rowNumber>2</rowNumber>
+            <failureReason ref="failure.reason2"/>
+            <legal_id>F13658AgrForAgrRatingExtId</legal_id>
+            <principal>QTPPrincipal</principal>
+            <counterpartycode>QTPCounterparty</counterpartycode>
+            <cpty_principal_ind>P</cpty_principal_ind>
+            <vmim></vmim>
+            <rating_level></rating_level>
+            <rater>Moodys</rater>
+            <rating_num>Aaa</rating_num>
+            <amount>255.56</amount>
+            <min_transfer_amt>55.56</min_transfer_amt>
+            <rounding_amt>100</rounding_amt>
+        </feedAgreementRating>
+
+        <badStagingFeedReportFilter id="search.by.feed.agr.ratings">
+            <feedTask>Feed Agreement Ratings</feedTask>
+        </badStagingFeedReportFilter>
+
+        <variable id="badStagingFeedReportPath"/>
+
+        <variable id="file.name"/>
+
+        <taskSchedulerMessage id="feed.xls.successful">
+            <message>Market Data: Import Agreement Ratings: Imported 1 Agreement Ratings from :(\S+).xls</message>
+        </taskSchedulerMessage>
+
+        <reportValidationRules id="reportRule1">
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field><fieldName>Row number</fieldName><value>2</value></field>
+                <field><fieldName>Failure reason</fieldName><value id="failure.reason1">[Column: 1] legalId - Field is compulsory but no value was found | [Column: 2] principal - Field is compulsory but no value was found | [Column: 3] counterpartyCode - Field is compulsory but no value was found | [Column: 4] cptyPrincipalInd - Field is compulsory but no value was found | [Column: 7] agency - Field is compulsory but no value was found | [Column: 8] rating - Field is compulsory but no value was found | [Column: 9] thresholdAmount - Field is compulsory but no value was found | [Column: 10] minTransferAmount - Field is compulsory but no value was found | [Column: 11] roundingAmount - Field is compulsory but no value was found</value></field>
+                <field><fieldName>legal_id</fieldName><value></value></field>
+                <field><fieldName>principal</fieldName><value></value></field>
+                <field><fieldName>counterpartycode</fieldName><value></value></field>
+                <field><fieldName>cpty_principal_ind</fieldName><value></value></field>
+                <field><fieldName>vmim</fieldName><value></value></field>
+                <field><fieldName>rating_level</fieldName><value></value></field>
+                <field><fieldName>rater</fieldName><value></value></field>
+                <field><fieldName>rating_num</fieldName><value></value></field>
+                <field><fieldName>amount</fieldName><value></value></field>
+                <field><fieldName>min_transfer_amt</fieldName><value></value></field>
+                <field><fieldName>rounding_amt</fieldName><value></value></field>
+            </reportValidationRule>
+        </reportValidationRules>
+
+        <reportValidationRules id="reportRule2">
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field><fieldName>Row number</fieldName><value>2</value></field>
+                <field><fieldName>Failure reason</fieldName><value id="failure.reason2">[Column: 3] counterpartyCode - Field is compulsory but no value was found | [Column: 4] cptyPrincipalInd - Field is compulsory but no value was found | [Column: 7] agency - Field is compulsory but no value was found | [Column: 8] rating - Field is compulsory but no value was found | [Column: 9] thresholdAmount - Field is compulsory but no value was found | [Column: 10] minTransferAmount - Field is compulsory but no value was found | [Column: 11] roundingAmount - Field is compulsory but no value was found</value></field>
+                <field><fieldName>legal_id</fieldName><value>F13658AgrForAgrRatingExtId</value></field>
+                <field><fieldName>principal</fieldName><value>QTPPrincipal</value></field>
+                <field><fieldName>counterpartycode</fieldName><value></value></field>
+                <field><fieldName>cpty_principal_ind</fieldName><value></value></field>
+                <field><fieldName>vmim</fieldName><value></value></field>
+                <field><fieldName>rating_level</fieldName><value></value></field>
+                <field><fieldName>rater</fieldName><value></value></field>
+                <field><fieldName>rating_num</fieldName><value></value></field>
+                <field><fieldName>amount</fieldName><value></value></field>
+                <field><fieldName>min_transfer_amt</fieldName><value></value></field>
+                <field><fieldName>rounding_amt</fieldName><value></value></field>
+            </reportValidationRule>
+        </reportValidationRules>
+
+        <agreementSearch id = "search.agr.for.agr.rating.feed">
+            <description>
+                <filter>F13658AgrForAgrRatingDesc</filter>
+                <linkText>F13658AgrForAgrRatingDesc</linkText>
+            </description>
+        </agreementSearch>
+
+        <agreementSearchResult id = "search.agr.for.agr.rating.feed.result">
+            <externalId>F13658AgrForAgrRatingExtId</externalId>
+        </agreementSearchResult>
+
+        <agreementSummary id="threshold.255.56.mintransfer.55.56.rounding.100">
+            <collateralThresholdAndMinimumTransferDetails>
+                <principalFixedValue>
+                    <threshold>Fixed - 255.56 USD</threshold>
+                    <mininumTransfer>Fixed - 55.56 USD</mininumTransfer>
+                    <roundingAmount>100.00 USD</roundingAmount>
+                </principalFixedValue>
+            </collateralThresholdAndMinimumTransferDetails>
+        </agreementSummary>
+
+    </scenarioData>
+</dataBean>

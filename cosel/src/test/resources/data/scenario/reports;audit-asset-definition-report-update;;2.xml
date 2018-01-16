@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <collateralStaticData id="asset.classification">
+            <type ref="scheme.assetClassification.name"/>
+            <dataName id="classificationName">auditAssetDefinitionClassification</dataName>
+        </collateralStaticData>
+
+        <collateralStaticData id="asset.classification.update">
+            <type ref="scheme.assetClassification.name"/>
+            <!--<dataName ref="classificationName"/>-->
+            <description random="true"/>
+            <status>enabled</status>
+        </collateralStaticData>
+
+        <assetDefinition id="class.FI.Security">
+            <assetName id="bond.asset.class.name">auditAssetDefinitionClassBond</assetName>
+        </assetDefinition>
+
+        <assetDefinition id="class.FI.Security.update">
+            <assetName ref="bond.asset.class.name"/>
+            <status>enabled</status>
+            <category>Equities</category>
+            <externalName random="true"/>
+            <tolerancePercentage>100</tolerancePercentage>
+            <toleranceAccount>90m</toleranceAccount>
+            <toleranceAccountCurrency>GBP</toleranceAccountCurrency>
+        </assetDefinition>
+
+        <assetDefinition id="type.FI.Security">
+            <parent>
+                <assetName ref="bond.asset.class.name"/>
+            </parent>
+            <assetName id="bondType">auditAssetDefinitionTypeBond</assetName>
+        </assetDefinition>
+
+        <assetDefinition id="type.FI.Security.update">
+            <parent>
+                <assetName ref="bond.asset.class.name"/>
+            </parent>
+            <assetName ref="bondType"/>
+            <status>enabled</status>
+            <category>Equities</category>
+            <currencyOfDenomination>GBP</currencyOfDenomination>
+            <settlementDate>T</settlementDate>
+            <holidayCentre>EUROPE</holidayCentre>
+            <roundingAmount>2000</roundingAmount>
+            <!--<applyToInterestCalculation>true</applyToInterestCalculation>-->
+            <roundingRule>Up</roundingRule>
+            <deliveryBookingPriority>High</deliveryBookingPriority>
+            <recallBookingPriority>Low</recallBookingPriority>
+            <externalName id="extname" random="true"/>
+        </assetDefinition>
+
+        <assetDefinition id="category.with.FI.Security.type">
+            <assetClassification ref="classificationName"/>
+            <assetName id="category.name">auditAssetDefinitionCategory</assetName>
+        </assetDefinition>
+
+        <assetDefinition id="category.with.FI.Security.type.update">
+            <assetClassification ref="classificationName"/>
+            <assetName ref="category.name"/>
+            <status>enabled</status>
+            <description id="categoryDes" random="true"/>
+            <assetType>
+                <filter ref="bondType"/>
+                <linkText ref="bondType"/>
+            </assetType>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </assetDefinition>
+
+        <auditAssetDefinitionReportFilter id="audit.asset.definition.by.class.type">
+            <assetClass ref="bond.asset.class.name"/>
+            <assetType ref="bondType"/>
+            <assetClassification>
+                <assetClassificationName ref="classificationName"/>
+                <assetcategory ref="category.name"/>
+            </assetClassification>
+            <startDate>t-1000</startDate>
+        </auditAssetDefinitionReportFilter>
+        <variable id="auditReportPath"/>
+        <reportValidationRules id="audit.asset.report.bond.rule">
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value>auditAssetDefinitionClassBond</value>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value>auditAssetDefinitionTypeBond</value>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Modify</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Category</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value>FI Securities</value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>Equities</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value>auditAssetDefinitionClassBond</value>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value>auditAssetDefinitionTypeBond</value>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Modify</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>DelBookingPriority</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value>Medium</value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>High</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value>auditAssetDefinitionClassBond</value>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value>auditAssetDefinitionTypeBond</value>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Modify</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>DenomCurrency</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value>ADP</value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>GBP</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value>auditAssetDefinitionClassBond</value>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value>auditAssetDefinitionTypeBond</value>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Modify</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>ExtName</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value>auditAssetDefinitionTypeBond</value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value ref="extname" />
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value>auditAssetDefinitionClassBond</value>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value>auditAssetDefinitionTypeBond</value>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Modify</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>HolidayCenters</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value>HONG KONG</value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>EUROPE</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value>auditAssetDefinitionClassBond</value>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value>auditAssetDefinitionTypeBond</value>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Modify</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>RecBookingPriority</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value>Medium</value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>Low</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value>auditAssetDefinitionClassBond</value>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value>auditAssetDefinitionTypeBond</value>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Modify</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>RoundingRule</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value>Nearest</value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>Up</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value>auditAssetDefinitionClassBond</value>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value>auditAssetDefinitionTypeBond</value>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Modify</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>SettlementRounding</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value>0.0</value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>2000.0</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value>auditAssetDefinitionClassification</value>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value>auditAssetDefinitionCategory</value>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Category</value>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Modify</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value>auditAssetDefinitionTypeBond,auditAssetDefinitionTypeCash,auditAssetDefinitionTypeCommodity,auditAssetDefinitionTypeEquity,auditAssetDefinitionTypeOther</value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>auditAssetDefinitionTypeBond</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value>auditAssetDefinitionClassification</value>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value>auditAssetDefinitionCategory</value>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Category</value>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Modify</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Description</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value>auditAssetDefinitionCategory</value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value ref="categoryDes" />
+                </field>
+            </reportValidationRule>
+
+        </reportValidationRules>
+    </scenarioData>
+</dataBean>

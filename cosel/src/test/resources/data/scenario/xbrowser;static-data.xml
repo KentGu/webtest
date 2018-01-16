@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/xbrowser.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <assetDefinition id="assetClass1">
+            <assetName random="true" id="assetClassName1" />
+            <status>enabled</status>
+            <category>Cash</category>
+            <externalName ref="assetClassName1"/>
+        </assetDefinition>
+        <assetDefinition id="editAssetClass1">
+            <!--<assetName ref="assetClassName1" />-->
+            <category>Equities</category>
+        </assetDefinition>
+        <assetDefinition id="assetType1">
+            <parent>
+                <assetName ref="assetClassName1" />
+            </parent>
+            <assetName random="true" id="assetTypeName1"/>
+            <status>enabled</status>
+            <category>Cash</category>
+            <daysInYear>365</daysInYear>
+            <currencyOfDenomination>USD</currencyOfDenomination>
+            <settlementDate>T+2</settlementDate>
+            <holidayCentre ref="hc.europe.name"/>
+            <roundingAmount>100</roundingAmount>
+            <applyToInterestCalculation>true</applyToInterestCalculation>
+            <roundingRule>Up</roundingRule>
+            <deliveryBookingPriority>Low</deliveryBookingPriority>
+            <recallBookingPriority>Low</recallBookingPriority>
+            <externalName ref="assetTypeName1"/>
+        </assetDefinition>
+        <assetDefinition id="editAssetType1">
+            <parent>
+                <assetName ref="assetClassName1" />
+            </parent>
+            <!--<assetName ref="assetTypeName1"/>-->
+            <category>Equities</category>
+            <daysInYear>360</daysInYear>
+            <currencyOfDenomination>EUR</currencyOfDenomination>
+            <settlementDate>T+3</settlementDate>
+            <holidayCentre ref="hc.europe.name"/>
+            <roundingAmount>1000</roundingAmount>
+            <!--<applyToInterestCalculation>false</applyToInterestCalculation>-->
+            <roundingRule>Down</roundingRule>
+            <deliveryBookingPriority>Medium</deliveryBookingPriority>
+            <recallBookingPriority>High</recallBookingPriority>
+        </assetDefinition>
+        <interestRate id="interestRate1">
+            <interestRateName random="true" id="interestName1" />
+            <description ref="interestName1"/>
+            <refixFrequency>Weekly</refixFrequency>
+            <status>enabled</status>
+            <type>WHT</type>
+            <dailyInterestRate>
+                <date>1/1/2012</date>
+                <rate>4.5</rate>
+            </dailyInterestRate>
+            <dailyInterestRate>
+                <date>5/1/2012</date>
+                <rate>5</rate>
+            </dailyInterestRate>
+        </interestRate>
+        <interestRate id="editInterestRate1">
+            <type>Interest</type>
+            <dailyInterestRate>
+                <date>1/1/2013</date>
+                <rate>7</rate>
+            </dailyInterestRate>
+            <dailyInterestRate>
+                <date>5/1/2014</date>
+                <rate>8</rate>
+            </dailyInterestRate>
+            <dailyInterestRate remove="true">
+                <date>1/01/2012</date>
+                <rate>4.5%</rate>
+            </dailyInterestRate>
+            <dailyInterestRate remove="true">
+                <date>5/01/2012</date>
+                <rate>5%</rate>
+            </dailyInterestRate>
+        </interestRate>
+        <collateralStaticData id="sheme1">
+            <type>Scheme</type>
+            <dataName random="true" id="schemeName1" />
+            <description ref="schemeName1" />
+            <status>enabled</status>
+        </collateralStaticData>
+        <collateralStaticData id="sheme2">
+            <type>Scheme</type>
+            <dataName random="true" id="schemeName2" />
+            <description ref="schemeName2" />
+            <status>enabled</status>
+        </collateralStaticData>
+        <collateralStaticData id="shemeTest">
+            <type>Scheme</type>
+            <dataName ref="schemeName1" />
+            <description ref="schemeName1" />
+            <!--<status>enabled</status>-->
+        </collateralStaticData>
+        <collateralStaticData id="editSheme1">
+            <type>Scheme</type>
+            <description>testScheme</description>
+            <status>enabled</status>
+        </collateralStaticData>
+        <collateralStaticData id="schemeData1">
+            <type ref="schemeName1" />
+            <dataName random="true" id="schemeDataName1" />
+            <description ref="schemeDataName1" />
+            <status>enabled</status>
+        </collateralStaticData>
+        <collateralStaticData id="schemeData2">
+            <type ref="schemeName1" />
+            <dataName random="true" id="schemeDataName2" />
+            <description ref="schemeDataName2" />
+            <status>enabled</status>
+        </collateralStaticData>
+        <collateralStaticData id="editSchemeData1">
+            <type ref="schemeName1" />
+            <description>schemeDateTest</description>
+            <status>disabled</status>
+        </collateralStaticData>
+        <umbrellaRule id="umbrellaRule1">
+            <umbrellaRuleName random="true" id="umbrellaRuleName1" />
+            <requirementCalculation>Sub-Agreement</requirementCalculation>
+            <collateral>Sub-Agreement</collateral>
+            <notificationLetter>Umbrella</notificationLetter>
+            <marginLetterIncludeFund>true</marginLetterIncludeFund>
+            <interestLetter>Umbrella</interestLetter>
+            <interestLetterIncludeFund>true</interestLetterIncludeFund>
+        </umbrellaRule>
+        <tsaRule id="tsaRule1">
+            <tsaRuleName random="true" id="tsaRuleName1" />
+            <tsaField>
+                <tsaFieldName>Upfront Fee</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>PAI</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>Transfer Value</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>Banked Coupon</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>Initial Coupon</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>Credit Event Cash Amount</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>Succession Event Cash Amount</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>Reset to Par</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>IM Interest</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>NDF Cashflow</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>TSAMisc1</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>TSAMisc2</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>TSAMisc3</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>Unsettled Upfront Fee</tsaFieldName>
+                <enabled>true</enabled>
+            </tsaField>
+        </tsaRule>
+        <tsaRule id="tsaRule2">
+            <tsaField>
+                <tsaFieldName>Upfront Fee</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>PAI</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>Transfer Value</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>Banked Coupon</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>Initial Coupon</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>Credit Event Cash Amount</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>Succession Event Cash Amount</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>Reset to Par</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>IM Interest</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>NDF Cashflow</tsaFieldName>
+                <enabled>false</enabled>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>TSAMisc1</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>TSAMisc2</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>TSAMisc3</tsaFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </tsaField>
+            <tsaField>
+                <tsaFieldName>Unsettled Upfront Fee</tsaFieldName>
+                <enabled>false</enabled>
+            </tsaField>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </tsaRule>
+    </scenarioData>
+</dataBean>

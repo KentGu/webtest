@@ -1,0 +1,47 @@
+package mypackage;
+
+import com.lombardrisk.colline.stp.dto.ruledata.ETDStatementModelRuleData;
+import com.lombardrisk.colline.stp.dto.ruledata.ETDStatementRuleData;
+import com.lombardrisk.colline.statement.logic.external.api.statementsummary.ETDStandardCalculations;
+import com.lombardrisk.colline.collateralquerycommon.client.CollateralConstants.DefaultFund;
+
+rule "EtdStatement"
+    dialect "java"
+    no-loop true
+
+    	when
+    	    $statement : ETDStatementRuleData()
+    	then
+			for(ETDStatementModelRuleData model : $statement.getModelRuleData()) {
+
+				model.setCashflowPhysical(ETDStandardCalculations.calcStandardCashflowPhysical(model));
+	    		model.setTotalNetPL(ETDStandardCalculations.calcStandardTotalNetPL(model));
+				model.setNetPLCleared(ETDStandardCalculations.calcStandardNetPLCleared(model));
+
+				model.setEndingBalance(ETDStandardCalculations.calcStandardEndingBalance(model));
+				model.setTotalEquity(ETDStandardCalculations.calcStandardTotalEquity(model));
+				model.setNov(ETDStandardCalculations.calcStandardNov(model));
+				model.setNlv(ETDStandardCalculations.calcStandardNlv(model));
+
+				model.setAccountCashBalance(ETDStandardCalculations.calcStandardAccountCashBalance(model));
+				model.setImCashDeposit(ETDStandardCalculations.calcStandardImCashDeposit(model));
+				model.setImSecuritiesDeposit(ETDStandardCalculations.calcStandardImSecuritiesDeposit(model));
+
+				model.setImCollateral(ETDStandardCalculations.calcStandardImCollateral(model));
+
+				model.setImCashED(ETDStandardCalculations.calcStandardImCashED(model));
+				model.setImSecuritiesED(ETDStandardCalculations.calcStandardImSecuritiesED(model));
+
+				model.setImED(ETDStandardCalculations.calcStandardImED(model));
+
+				model.setNetED(ETDStandardCalculations.calcStandardNetED(model));
+
+				model.setPendingED(1000);
+
+				if (model.getDefaultFund() != null && model.getDefaultFund() == DefaultFund.STANDALONE_DF) {
+					model.setDfCollateral(ETDStandardCalculations.calcStandardDfCollateral(model));
+					model.setDfED(ETDStandardCalculations.calcStandardDfED(model));
+					model.setDfPendingED(1000);
+				}
+			}
+    end

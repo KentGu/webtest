@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/feeds.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <collateralPreference id="collateral.preferences.collateral.value">
+            <collateralRules>
+                <concentrationLimitCalc>Collateral Value</concentrationLimitCalc>
+            </collateralRules>
+        </collateralPreference>
+
+        <agreement id="multi.model.agreement">
+            <principal>
+                <filter ref="org.p1.lname"/>
+                <linkText ref="org.p1.lname"/>
+            </principal>
+            <counterparty>
+                <filter ref="org.c1.lname"/>
+                <linkText ref="org.c1.lname"/>
+            </counterparty>
+            <businessLine>OTC</businessLine>
+            <multiModel>true</multiModel>
+            <agreementDescription id="multi.model.agreement.desc" random="true" prefix="multimodel_agr1_"/>
+            <region ref="region.test1.name"/>
+            <externalId id="multi.model.agreement.external.id" random="true"/>
+            <agreementDate>t</agreementDate>
+            <holidayCentre ref="hc.test1.name"/>
+            <product>
+                <productName ref="product.test1.name"/>
+            </product>
+            <model>
+                <modelEligibilityRule>
+                    <modelName random="true"/>
+                </modelEligibilityRule>
+                <settlementLevel>Model</settlementLevel>
+            </model>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="bond.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="bond.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter>VM Call/Return</filter>
+                    <linkText>VM Call/Return</linkText>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter>VM Recall/Delivery</filter>
+                    <linkText>VM Recall/Delivery</linkText>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter>Pay</filter>
+                    <linkText>Pay</linkText>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter>Receive</filter>
+                    <linkText>Receive</linkText>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementId id="multi.model.agreement.agreement.id"/>
+            <agreementStatus>Pending</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+        <feedAgreement id="feed.multi.model.agreement.concen.limit.breach.adjust.asset.adjustment">
+            <legal_id ref="multi.model.agreement.external.id"/>
+            <principal ref="org.p1.lname"/>
+            <counterpartycode ref="org.c1.lname"/>
+            <concentrationLimitBreachAdjustment>Asset Adjustment</concentrationLimitBreachAdjustment>
+            <applyOrgCL>false</applyOrgCL>
+        </feedAgreement>
+
+        <feedResult id="feed.multi.model.agreement.concen.limit.breach.adjust.asset.adjustment.result">
+            <fileUploaded id="feed.multi.model.agreement.concen.limit.breach.adjust.asset.adjustment.result.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedStatus id="feed.multi.model.agreement.concen.limit.breach.adjust.asset.adjustment.status">
+            <systemName>QTP</systemName>
+            <status>Successful</status>
+            <valuationFile ref="feed.multi.model.agreement.concen.limit.breach.adjust.asset.adjustment.result.file"/>
+            <description>Agreements</description>
+            <successfulFeed apply="true">
+                <importType>Agreements</importType>
+                <valuationFile ref="feed.multi.model.agreement.concen.limit.breach.adjust.asset.adjustment.result.file"/>
+                <total>1</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <agreementSearch id="feed.multi.model.agreement.concen.limit.breach.adjust.asset.adjustment.search">
+            <systemId ref="multi.model.agreement.agreement.id"/>
+        </agreementSearch>
+
+        <agreementSearchResult id="feed.multi.model.agreement.concen.limit.breach.adjust.asset.adjustment.search.result">
+            <agreementId ref="multi.model.agreement.agreement.id"/>
+        </agreementSearchResult>
+
+        <agreementSummary id="feed.multi.model.agreement.concen.limit.breach.adjust.asset.adjustment.summary">
+            <collateralRules>
+                <concentrationLimitBreachAdjustment apply="false"/>
+            </collateralRules>
+        </agreementSummary>
+
+    </scenarioData>
+</dataBean>

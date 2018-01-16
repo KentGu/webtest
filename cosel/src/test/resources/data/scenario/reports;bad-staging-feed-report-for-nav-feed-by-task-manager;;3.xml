@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+
+        <feedNAV id="feed.NAV">
+            <agreementId></agreementId>
+            <legal_id></legal_id>
+            <principalNAV>a</principalNAV>
+            <principalCCy></principalCCy>
+            <cptyNAV>b</cptyNAV>
+            <cptyCCy></cptyCCy>
+        </feedNAV>
+
+        <feedNAV id="feed.modified.incorrect.staging.report">
+            <rowNumber>2</rowNumber>
+            <failureReason ref="failure.reason1"/>
+            <agreementId></agreementId>
+            <legal_id>F13658AgrForNAVExtId</legal_id>
+            <principalNAV>1000</principalNAV>
+            <principalCCy></principalCCy>
+            <cptyNAV>ttt</cptyNAV>
+            <cptyCCy></cptyCCy>
+        </feedNAV>
+
+        <feedNAV id="feed.modified.correct.staging.report">
+            <rowNumber>2</rowNumber>
+            <failureReason ref="failure.reason2"/>
+            <agreementId></agreementId>
+            <legal_id>F13658AgrForNAVExtId</legal_id>
+            <principalNAV>3000</principalNAV>
+            <principalCCy></principalCCy>
+            <cptyNAV>4000</cptyNAV>
+            <cptyCCy></cptyCCy>
+        </feedNAV>
+
+        <badStagingFeedReportFilter id="search.by.feed.nav">
+            <feedTask>Feed NAV</feedTask>
+        </badStagingFeedReportFilter>
+
+        <variable id="badStagingFeedReportPath"/>
+
+        <feedResult id="feed.result.parsing.error1">
+            <parsingFailures>1</parsingFailures>
+        </feedResult>
+
+        <feedResult id="feed.result.parsing.error2">
+            <parsingFailures>1</parsingFailures>
+        </feedResult>
+
+        <feedResult id="feed.result.successful">
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <reportValidationRules id="reportRule1">
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Failure reason</fieldName>
+                    <value id="failure.reason1">[Column: 3] principalNAV - Unable to parse 'a' as number | [Column: 5] cptyNAV - Unable to parse 'b' as number</value>
+                </field>
+                <field><fieldName>agreementId</fieldName><value></value></field>
+                <field><fieldName>legal_id</fieldName><value></value></field>
+                <field><fieldName>principalNAV</fieldName><value>a</value></field>
+                <field><fieldName>principalCCy</fieldName><value></value></field>
+                <field><fieldName>cptyNAV</fieldName><value>b</value></field>
+                <field><fieldName>cptyCCy</fieldName><value></value></field>
+            </reportValidationRule>
+        </reportValidationRules>
+
+        <variable id="file.name"/>
+
+        <reportValidationRules id="reportRule2">
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Failure reason</fieldName>
+                    <value id="failure.reason2">[Column: 5] cptyNAV - Unable to parse 'ttt' as number</value>
+                </field>
+                <field><fieldName>agreementId</fieldName><value></value></field>
+                <field><fieldName>legal_id</fieldName><value>F13658AgrForNAVExtId</value></field>
+                <field><fieldName>principalNAV</fieldName><value>1000</value></field>
+                <field><fieldName>principalCCy</fieldName><value></value></field>
+                <field><fieldName>cptyNAV</fieldName><value>ttt</value></field>
+                <field><fieldName>cptyCCy</fieldName><value></value></field>
+            </reportValidationRule>
+        </reportValidationRules>
+
+        <agreementSearch id = "search.agr.for.nav.feed">
+            <description>
+                <filter>F13658AgrForNAVDesc</filter>
+                <linkText>F13658AgrForNAVDesc</linkText>
+            </description>
+        </agreementSearch>
+
+        <agreementSearchResult id = "search.agr.for.nav.feed.result">
+            <externalId>F13658AgrForNAVExtId</externalId>
+        </agreementSearchResult>
+
+        <agreementSummary id="nav.principal.3000.cpty.4000">
+            <documentationDetails>
+                <principalNAV>
+                    <amount>3000</amount>
+                </principalNAV>
+                <counterpartyNAV>
+                    <amount>4000</amount>
+                </counterpartyNAV>
+            </documentationDetails>
+        </agreementSummary>
+
+    </scenarioData>
+</dataBean>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/feeds.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <feedOrganisation id="feed.organisation.external.code.multiple.code">
+            <orgHeader>
+                <orgCode id="feed.organisation.external.code.multiple.code.code">T30258Organisation1Code</orgCode>
+                <longName id="feed.organisation.external.code.multiple.code.lname">T30258Organisation1LongName</longName>
+                <shortName id="feed.organisation.external.code.multiple.code.sname">T30258Organisation1ShortName</shortName>
+            </orgHeader>
+            <orgRole id="feed.organisation.external.code.multiple.code.role">Branch</orgRole>
+            <region id="feed.organisation.external.code.multiple.code.region">ALL</region>
+            <externalCodes>
+                <externalCode>
+                    <system id="feed.organisation.external.code.external.system.1">MANUAL</system>
+                    <extCode id="feed.organisation.external.code.ext.code.1.1">MANUAL1</extCode>
+                    <operation>a</operation>
+                </externalCode>
+                <externalCode>
+                    <system ref="feed.organisation.external.code.external.system.1"/>
+                    <extCode id="feed.organisation.external.code.ext.code.1.2">MANUAL2</extCode>
+                    <operation>a</operation>
+                </externalCode>
+                <externalCode>
+                    <system id="feed.organisation.external.code.external.system.2">QTP</system>
+                    <extCode id="feed.organisation.external.code.ext.code.2.1">QTP1</extCode>
+                    <operation>a</operation>
+                </externalCode>
+                <externalCode>
+                    <system ref="feed.organisation.external.code.external.system.2"/>
+                    <extCode id="feed.organisation.external.code.ext.code.2.2">QTP2</extCode>
+                    <operation>a</operation>
+                </externalCode>
+            </externalCodes>
+        </feedOrganisation>
+
+        <feedResult id="feed.organisation.external.code.multiple.code.result">
+            <fileUploaded id="feed.organisation.external.code.multiple.code.result.file"/>
+            <unsuccessfulImports>0</unsuccessfulImports>
+            <unchangedOrIgnoredImports>0</unchangedOrIgnoredImports>
+        </feedResult>
+
+        <feedStatus id="feed.organisation.external.code.multiple.code.status">
+            <status>Successful</status>
+            <valuationFile ref="feed.organisation.external.code.multiple.code.result.file"/>
+            <description>Organisation</description>
+            <successfulFeed>
+                <total>1</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <organisationSearch id="feed.organisation.external.code.multiple.code.search">
+            <criteria>Exactly matching</criteria>
+            <type>Short Name</type>
+            <filter ref="feed.organisation.external.code.multiple.code.sname"/>
+            <linkText ref="feed.organisation.external.code.multiple.code.sname"/>
+        </organisationSearch>
+
+        <organisation id="check.feed.organisation.external.code.multiple.code">
+            <shortName ref="feed.organisation.external.code.multiple.code.sname"/>
+            <longName ref="feed.organisation.external.code.multiple.code.lname"/>
+            <code ref="feed.organisation.external.code.multiple.code.code"/>
+            <role ref="feed.organisation.external.code.multiple.code.role"/>
+            <region ref="feed.organisation.external.code.multiple.code.region"/>
+            <externalCode>
+                <systemName ref="feed.organisation.external.code.external.system.1"/>
+                <externalCode ref="feed.organisation.external.code.ext.code.1.1"/>
+            </externalCode>
+            <externalCode>
+                <systemName ref="feed.organisation.external.code.external.system.1"/>
+                <externalCode ref="feed.organisation.external.code.ext.code.1.2"/>
+            </externalCode>
+            <externalCode>
+                <systemName ref="feed.organisation.external.code.external.system.2"/>
+                <externalCode ref="feed.organisation.external.code.ext.code.2.1"/>
+            </externalCode>
+            <externalCode>
+                <systemName ref="feed.organisation.external.code.external.system.2"/>
+                <externalCode ref="feed.organisation.external.code.ext.code.2.2"/>
+            </externalCode>
+        </organisation>
+    </scenarioData>
+</dataBean>

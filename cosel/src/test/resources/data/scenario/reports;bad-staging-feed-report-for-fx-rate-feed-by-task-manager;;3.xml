@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+
+        <feedFxRate id="feed.fx.rate">
+            <fxRate></fxRate>
+            <fxRateOffer>a</fxRateOffer>
+            <currency></currency>
+            <rateType></rateType>
+            <description></description>
+            <fxRateSet></fxRateSet>
+            <rateDate>abc</rateDate>
+        </feedFxRate>
+
+        <feedFxRate id="feed.modified.incorrect.staging.report">
+            <rowNumber>2</rowNumber>
+            <failureReason ref="failure.reason1"/>
+            <fxRate></fxRate>
+            <fxRateOffer>0.833333</fxRateOffer>
+            <currency></currency>
+            <rateType></rateType>
+            <description></description>
+            <fxRateSet>F13658FxRate</fxRateSet>
+            <rateDate></rateDate>
+        </feedFxRate>
+
+        <feedFxRate id="feed.modified.correct.staging.report">
+            <rowNumber>2</rowNumber>
+            <failureReason ref="failure.reason2"/>
+            <fxRate>0.833334</fxRate>
+            <fxRateOffer>0.833334</fxRateOffer>
+            <currency>GBP</currency>
+            <rateType></rateType>
+            <description></description>
+            <fxRateSet>F13658FxRate</fxRateSet>
+            <rateDate></rateDate>
+        </feedFxRate>
+
+        <badStagingFeedReportFilter id="search.by.feed.fx.rate">
+            <feedTask>Feed Fx Rate</feedTask>
+        </badStagingFeedReportFilter>
+
+        <variable id="badStagingFeedReportPath"/>
+
+        <reportValidationRules id="reportRule1">
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field><fieldName>Row number</fieldName><value>2</value></field>
+                <field><fieldName>Failure reason</fieldName><value id="failure.reason1">[Column: 1] fxRate - Field is compulsory but no value was found | [Column: 2] fxRateOffer - Unable to parse 'a' as number | [Column: 3] currency - Field is compulsory but no value was found | [Column: 7] rateDate - Unable to parse 'abc' as date (using format yyyy-MM-dd)</value></field>
+                <field><fieldName>fxRate</fieldName><value></value></field>
+                <field><fieldName>fxRateOffer</fieldName><value>a</value></field>
+                <field><fieldName>currency</fieldName><value></value></field>
+                <field><fieldName>rateType</fieldName><value></value></field>
+                <field><fieldName>description</fieldName><value></value></field>
+                <field><fieldName>fxRateSet</fieldName><value></value></field>
+                <field><fieldName>rateDate</fieldName><value>abc</value></field>
+            </reportValidationRule>
+        </reportValidationRules>
+
+        <reportValidationRules id="reportRule2">
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field><fieldName>Row number</fieldName><value>2</value></field>
+                <field><fieldName>Failure reason</fieldName><value id="failure.reason2">[Column: 1] fxRate - Field is compulsory but no value was found | [Column: 3] currency - Field is compulsory but no value was found</value></field>
+                <field><fieldName>fxRate</fieldName><value></value></field>
+                <field><fieldName>fxRateOffer</fieldName><value>0.833333</value></field>
+                <field><fieldName>currency</fieldName><value></value></field>
+                <field><fieldName>rateType</fieldName><value></value></field>
+                <field><fieldName>description</fieldName><value></value></field>
+                <field><fieldName>fxRateSet</fieldName><value>F13658FxRate</value></field>
+                <field><fieldName>rateDate</fieldName><value></value></field>
+            </reportValidationRule>
+        </reportValidationRules>
+
+        <fxRateSet id="fx.rate.gbp.0.833334">
+            <fxRateSetName>F13658FxRate</fxRateSetName>
+            <fxRate>0.833334</fxRate>
+        </fxRateSet>
+
+        <variable id="file.name"/>
+
+        <feedResult id="feed.result.parsing.error1">
+            <parsingFailures>1</parsingFailures>
+        </feedResult>
+
+        <feedResult id="feed.result.parsing.error2">
+            <parsingFailures>1</parsingFailures>
+        </feedResult>
+
+        <feedResult id="feed.result.successful">
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+    </scenarioData>
+</dataBean>

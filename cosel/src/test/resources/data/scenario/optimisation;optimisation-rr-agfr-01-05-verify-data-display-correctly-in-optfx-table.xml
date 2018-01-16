@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/optimisation.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <agreement>
+            <agreementDescription id="agreement.description">T27396_Agreement_Description</agreementDescription>
+            <agreementId>2584</agreementId>
+        </agreement>
+
+        <optimisationRule id="opt.agreement.rule">
+            <ruleName id="opt.agreement.rule.name">T27396_Agreement_Rule</ruleName>
+            <optimisationFilterRuleAttribute>
+                <attributeName>Agreement Description</attributeName>
+                <attributeDetail>
+                    <operator>Equal</operator>
+                    <inputValue ref="agreement.description"/>
+                </attributeDetail>
+                <groupAndOr>End</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </optimisationRule>
+
+        <optimisationRule id="optimisation.rule.before.delete.fx.rate.set">
+            <ruleName id="optimisation.rule.before.delete.fx.rate.set.name">T27396_OPT_Rule_before</ruleName>
+            <dataParameters>
+                <agreementFilterRule>
+                    <filter ref="opt.agreement.rule.name"/>
+                    <linkText ref="opt.agreement.rule.name"/>
+                </agreementFilterRule>
+            </dataParameters>
+            <optimisationParameters>
+                <assumeSweepOfExistingBooking>false</assumeSweepOfExistingBooking>
+                <outgoingAssetsRule>true</outgoingAssetsRule>
+            </optimisationParameters>
+            <runParameters>
+                <algorithm>Rank Allocation</algorithm>
+                <reportingCurrency>
+                    <filter ref="ccy.usd.name"/>
+                    <linkText ref="ccy.usd.name"/>
+                </reportingCurrency>
+            </runParameters>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </optimisationRule>
+
+        <optimisationRuleDetail id="run.optimisation.rule.before.delete.fx.rate.set.name">
+            <ruleName ref="optimisation.rule.before.delete.fx.rate.set.name"/>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </optimisationRuleDetail>
+
+        <databaseQuery id="check.opt.fx.table">
+            <sqlQuery>
+                <content>SELECT FXSET,BASECCY,CCY,BIDRATE,OFFERRATE FROM OptFX WHERE INVOCATIONRUNID = (SELECT max(INVOCATIONRUNID) FROM OptFX) AND FXSET = 'T27396_FxRate'</content>
+            </sqlQuery>
+            <resultId id="check.opt.fx.table.result"/>
+        </databaseQuery>
+
+        <databaseQueryResult id="fx.set.record.in.opt.fx.table.before.delete.fx.rate.set">
+            <resultId ref="check.opt.fx.table.result"/>
+            <databaseQueryResultRow>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>FXSET</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="fx.rate.set.name"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>BASECCY</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="ccy.usd.name"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>CCY</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="ccy.gbp.name"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>BIDRATE</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>0.75</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>OFFERRATE</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>0.75</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+            </databaseQueryResultRow>
+        </databaseQueryResult>
+
+        <fxRateSet id="fx.rate.set">
+            <fxRateSetName id="fx.rate.set.name">T27396_FxRate</fxRateSetName>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </fxRateSet>
+
+        <optimisationRule id="optimisation.rule.after.delete.fx.rate.set">
+            <ruleName id="optimisation.rule.after.delete.fx.rate.set.name">T27396_OPT_Rule_after</ruleName>
+            <dataParameters>
+                <agreementFilterRule>
+                    <filter ref="opt.agreement.rule.name"/>
+                    <linkText ref="opt.agreement.rule.name"/>
+                </agreementFilterRule>
+            </dataParameters>
+            <optimisationParameters>
+                <assumeSweepOfExistingBooking>false</assumeSweepOfExistingBooking>
+                <outgoingAssetsRule>true</outgoingAssetsRule>
+            </optimisationParameters>
+            <runParameters>
+                <algorithm>Rank Allocation</algorithm>
+                <reportingCurrency>
+                    <filter ref="ccy.usd.name"/>
+                    <linkText ref="ccy.usd.name"/>
+                </reportingCurrency>
+            </runParameters>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </optimisationRule>
+
+        <optimisationRuleDetail id="run.optimisation.rule.after.delete.fx.rate.set">
+            <ruleName ref="optimisation.rule.after.delete.fx.rate.set.name"/>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </optimisationRuleDetail>
+
+        <databaseQueryResult id="fx.set.record.in.opt.fx.table.after.delete.fx.rate.set">
+            <resultId ref="check.opt.fx.table.result"/>
+            <databaseQueryResultRow apply="false">
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>FXSET</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="fx.rate.set.name"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>BASECCY</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="ccy.usd.name"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>CCY</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="ccy.gbp.name"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>BIDRATE</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>0.75</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>OFFERRATE</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>0.75</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+            </databaseQueryResultRow>
+        </databaseQueryResult>
+    </scenarioData>
+</dataBean>

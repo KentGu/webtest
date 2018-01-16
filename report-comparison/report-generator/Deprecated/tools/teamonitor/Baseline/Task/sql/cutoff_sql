@@ -1,0 +1,6 @@
+pre#INPROSTMT_BEFORE#select count(*) from colstatementstatus where statusid = 500
+
+post#INPROSTMT_AFTER#select count(*) from colstatementstatus where statusid = 500
+
+val#1#${INPROSTMT_AFTER} -eq 0
+val#2#${INPROSTMT_BEFORE} -ne 0

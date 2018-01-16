@@ -1,0 +1,5 @@
+pre#ExternalIA_Before#select count(1) from ColAgreementProducts where  valuationdate = to_date('2012-03-14','YYYY-MM-DD')
+
+post#ExternalIA_After#select count(1) from ColAgreementProducts where  valuationdate = to_date('2012-03-14','YYYY-MM-DD')
+
+val#1#`expr ${ExternalIA_After} - ${ExternalIA_Before}`

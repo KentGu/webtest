@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+
+        <agreement id="agr31628.notnet.grossIM">
+            <agreementId id="agrid">2649</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="VMItmNoCalls">
+            <action>VM ITM No Calls</action>
+            <callStatus>No Call Required</callStatus>
+            <agreementRequirement>0.00</agreementRequirement>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="IMOtmNoCalls">
+            <action>IM OTM No Calls</action>
+            <callStatus>No Call Required</callStatus>
+            <agreementRequirement>0.00</agreementRequirement>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="IMItmNoCalls">
+            <action>IM ITM No Calls</action>
+            <callStatus>No Call Required</callStatus>
+            <agreementRequirement>0.00</agreementRequirement>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="VMOtmNoCalls">
+            <action>VM OTM No Calls</action>
+            <callStatus>No Call Required</callStatus>
+            <agreementRequirement>0.00</agreementRequirement>
+        </exposureEventDetail>
+
+        <agreementExposureSummary id="ProductQTP">
+            <productList>
+                <productType ref="product.test1.name"/>
+            </productList>
+        </agreementExposureSummary>
+
+        <tradeDetail id = "trade.ExposureAmount.-2m">
+            <tradeInformation>
+                <!--<productType ref="product.test1.name"/>-->
+                <tradeDate>T</tradeDate>
+                <effectiveDate>T</effectiveDate>
+                <maturityDate>T+1000</maturityDate>
+                <tradeIdentifierPartyA random="true"/>
+                <partyABranchName random="true"/>
+                <partyBBranchName random="true"/>
+            </tradeInformation>
+            <valuationInformation>
+                <principalValuationAmount>
+                    <amount>-2m</amount>
+                    <currency>USD</currency>
+                </principalValuationAmount>
+                <valuationDate>T</valuationDate>
+            </valuationInformation>
+        </tradeDetail>
+
+
+        <bookingDetail id="deliveryBooking.IM.3m">
+            <assetType ref="cash.usd.name"/>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <imAmount>3m</imAmount>
+                    <movement>Delivery</movement>
+                </bookingInformationDetail>
+                <settlementDate>T</settlementDate>
+            </bookingInformation>
+            <save>save</save>
+        </bookingDetail>
+
+        <exposureEventDetail id="VM.delivery.2m">
+            <action>VM Delivery</action>
+            <callStatus>Pending Review</callStatus>
+            <agreementRequirement>-2,000,000.00</agreementRequirement>
+        </exposureEventDetail>
+
+        <agreement id="agr31628">
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+        <exposureEventDetail id="IM.recall.3m">
+            <action>IM Recall</action>
+            <callStatus>Pending Review</callStatus>
+            <agreementRequirement>3,000,000.00</agreementRequirement>
+        </exposureEventDetail>
+
+
+        <tradeDetail id = "trade.independentAmount.4m">
+            <tradeInformation>
+                <!--<productType ref="product.test1.name"/>-->
+                <tradeDate>T</tradeDate>
+                <effectiveDate>T</effectiveDate>
+                <maturityDate>T+1000</maturityDate>
+                <tradeIdentifierPartyA random="true"/>
+                <partyABranchName random="true"/>
+                <partyBBranchName random="true"/>
+            </tradeInformation>
+            <valuationInformation>
+                <principalValuationAmount>
+                    <amount>0m</amount>
+                    <currency>USD</currency>
+                </principalValuationAmount>
+                <valuationDate>T</valuationDate>
+            </valuationInformation>
+            <collateralInformation>
+                <dealLevelAmount>4m</dealLevelAmount>
+                <dealLevelType>Independent Amount</dealLevelType>
+                <dealLevelUpfront>true</dealLevelUpfront>
+            </collateralInformation>
+        </tradeDetail>
+
+        <assetBookingSummary id="asset.type.CASH.USD">
+            <assetType ref="cash.usd1.name"/>
+        </assetBookingSummary>
+
+        <exposureEventDetail id="IM.call.4m">
+            <action>IM Call</action>
+            <callStatus>Pending Review</callStatus>
+            <agreementRequirement>4,000,000.00</agreementRequirement>
+        </exposureEventDetail>
+
+        <bookingDetail id="callBooking.IM.4m">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <imAmount>4m</imAmount>
+                    <movement>Call</movement>
+                </bookingInformationDetail>
+                <settlementDate>T</settlementDate>
+            </bookingInformation>
+            <save>save</save>
+        </bookingDetail>
+
+        <agreement id="agr31628.vmPrincipalThreshold.2m">
+            <nettingIAandMtM>Not-Net</nettingIAandMtM>
+            <principalFixedTrigger>
+                <fixedValues>
+                    <threshold>
+                        <fixedAmount>
+                            <amount>2m</amount>
+                        </fixedAmount>
+                    </threshold>
+                </fixedValues>
+            </principalFixedTrigger>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+        <!--<agreement id="agr31626.letterDistributionMedium.message">-->
+            <!--<letterAndDeliveryGroupDetails>-->
+                <!--<letterDistributionMedium>Message</letterDistributionMedium>-->
+            <!--</letterAndDeliveryGroupDetails>-->
+        <!--</agreement>-->
+
+
+
+        <agreement id="agr31628.vmPrincipalThreshold.1.9m.MTA.0.2m">
+            <nettingIAandMtM>Not-Net</nettingIAandMtM>
+            <principalFixedTrigger>
+                <fixedValues>
+                    <threshold>
+                        <fixedAmount>
+                            <amount>1.9m</amount>
+                        </fixedAmount>
+                    </threshold>
+                    <minimumTransfer>
+                        <fixedAmount>
+                            <amount>0.2m</amount>
+                        </fixedAmount>
+                    </minimumTransfer>
+                </fixedValues>
+            </principalFixedTrigger>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+        <bookingDetail id="recallBooking.IM.1.5m">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <imAmount>1.5m</imAmount>
+                    <movement>Recall</movement>
+                </bookingInformationDetail>
+                <settlementDate>T</settlementDate>
+            </bookingInformation>
+            <save>save</save>
+        </bookingDetail>
+
+        <exposureEventDetail id="IM.recall.1.5m">
+            <action>IM Recall</action>
+            <callStatus>Pending Review</callStatus>
+            <agreementRequirement>1,500,000.00</agreementRequirement>
+        </exposureEventDetail>
+
+
+        <agreement id="agr31628.imCounterpartyMTA.1.6m">
+            <nettingIAandMtM>Not-Net</nettingIAandMtM>
+            <applyThresholdMTARounding>separate</applyThresholdMTARounding>
+            <vmPrincipalFixedTrigger>
+            </vmPrincipalFixedTrigger>
+            <vmCounterpartyFixedTrigger>
+            </vmCounterpartyFixedTrigger>
+            <imPrincipalFixedTrigger>
+            </imPrincipalFixedTrigger>
+            <imCounterpartyFixedTrigger>
+                <fixedValues>
+                    <minimumTransfer>
+                        <fixedAmount>
+                            <amount>1.6m</amount>
+                        </fixedAmount>
+                    </minimumTransfer>
+                </fixedValues>
+            </imCounterpartyFixedTrigger>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+     </scenarioData>
+</dataBean>

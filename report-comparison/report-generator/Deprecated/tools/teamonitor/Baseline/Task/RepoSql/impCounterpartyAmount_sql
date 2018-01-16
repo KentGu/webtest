@@ -1,0 +1,5 @@
+pre#CptyAmount_Before#select count(1) from colworkflow where margindelvctpy =12345 and cptyexposure =67890
+
+post#CptyAmount_After#select count(1) from colworkflow where margindelvctpy =12345 and cptyexposure =67890
+
+val#1#`expr ${CptyAmount_After} - ${CptyAmount_Before}` 

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <instrument id="bondinstrument">
+            <assetClass ref="bond.name"/>
+            <assetType ref="bond.usd.name"/>
+            <instrumentId>
+                <value id="bondinstrument.id" random="true"/>
+            </instrumentId>
+            <description id="bondinstrument.desc" random="true"/>
+            <issuer>
+                <filter>QTP_Eligible_Issuer4</filter>
+                <linkText>QTP_Eligible_Issuer4</linkText>
+            </issuer>
+            <maturityDate>T+28</maturityDate>
+            <priceSource>
+                <priceSourceName>Default</priceSourceName>
+                <dirtyPrice>100</dirtyPrice>
+                <lastPriceChange>T</lastPriceChange>
+                <cleanPrice>100</cleanPrice>
+                <priceDate>T</priceDate>
+            </priceSource>
+            <couponRate>36</couponRate>
+            <issueDate>T</issueDate>
+            <manuallyOverrideLastCouponDate>true</manuallyOverrideLastCouponDate>
+            <manuallyOverrideNextCouponDate>true</manuallyOverrideNextCouponDate>
+            <lastCouponDate>t-24</lastCouponDate>
+            <nextCouponDate>t+7</nextCouponDate>
+            <recordDate>t+1</recordDate>
+        </instrument>
+
+        <securitySearch id="bondSecuritySearchAmended">
+            <instrument>
+                <type>Starting with</type>
+                <filter ref="bondinstrument.id"/>
+                <linkText ref="bondinstrument.id"/>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="bondSecuritySearchWillBeApproved">
+            <instrument ref="bondinstrument.id"/>
+        </securitySearchResult>
+
+        <agreement id="agr19442.repo">
+            <agreementId>3007</agreementId>
+        </agreement>
+
+        <agreementExposureSummary id="ProductRepo">
+            <productList>
+                <productType>Repo</productType>
+            </productList>
+        </agreementExposureSummary>
+        
+        <tradeDetail id="trade.notional.-1k">
+            <tradeInformation>
+                <tradeDate>t</tradeDate>
+                <startDate>t-365</startDate>
+                <endDate>t+16</endDate>
+                <tradeIdentifierPartyA id="tradeId" random="true"/>
+                <partyABranchName>a</partyABranchName>
+                <partyBBranchName>a</partyBBranchName>
+            </tradeInformation>
+            <securityInformation>
+                <instrumentId>
+                    <filter ref="bondinstrument.id"/>
+                    <linkText ref="bondinstrument.id"/>
+                </instrumentId>
+                <notional>1k</notional>
+                <cleanPrice>1</cleanPrice>
+            </securityInformation>
+            <cashInformation>
+                <cashAssetType ref="cash.usd1.name"/>
+                <cashAssetType>
+                    <filter ref="cash.usd1.name"/>
+                    <linkText ref="cash.usd1.name"/>
+                </cashAssetType>
+                <repoRate>36</repoRate>
+                <openCash>10000</openCash>
+            </cashInformation>
+            <exposureInformation>
+                <valuationDate>t</valuationDate>
+            </exposureInformation>
+        </tradeDetail>
+        
+        <tradeSummary id="trade.principalValuationAmount.13566">
+            <tradeDetailList>
+                <tradeInformation>
+                    <tradeIdentifierPartyA ref="tradeId"/>
+                    <valuationBaseCurrencyAmount>13,566.00</valuationBaseCurrencyAmount>
+                </tradeInformation>
+            </tradeDetailList>
+        </tradeSummary>
+
+        <assetBookingSummary id="asset.type.CASH.USD">
+            <assetType ref="cash.usd1.name"/>
+        </assetBookingSummary>
+
+        <bookingDetail id="booking.cash.usd.call.10k">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Call</bookingMovement>
+                    <nominalAmount>10k</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <save>save</save>
+        </bookingDetail>
+
+        <agreement id="agr19442">
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Approved</statementStatus>
+         </agreement>
+
+        <exposureEventDetail id="delivery.agreementRequirement.23566">
+            <action>Delivery(Excess)</action>
+            <agreementRequirement>-23,566.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <marginLetter id="createDeliveryLetter">
+            <letterType>Margin Delivery</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <assetHoldingsandValuationReport>true</assetHoldingsandValuationReport>
+                </emailAttachments>
+            </letterSetupDetails>
+        </marginLetter>
+
+        <exposureEventDetail id="delivery.agreementRequirement.23566.MarginRequestConfirmed">
+            <action>Delivery(Excess)</action>
+            <agreementRequirement>-23,566.00</agreementRequirement>
+            <callStatus>Margin Request Confirmed</callStatus>
+        </exposureEventDetail>
+
+        <bookingDetail id="bulkBooking.value.23566">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Delivery(Excess)</bookingMovement>
+                    <movement>Return</movement>
+                    <value>23,566.00</value>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="cash.usd.return.10000">
+            <instrumentSearch>
+                <instrument>
+                    <filter ref="cash.usd1.name"/>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail clickPlusButton="true">
+                    <bookingMovement>Delivery(Excess)</bookingMovement>
+                    <movement>Return</movement>
+                    <nominalAmount>10000</nominalAmount>
+                    <value>23,566.00</value>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="bulkBooking.value.13566">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Delivery(Excess)</bookingMovement>
+                    <movement>Delivery</movement>
+                    <value>13,566.00</value>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="cash.usd.delivery.13566">
+            <instrumentSearch>
+                <instrument>
+                    <filter ref="cash.usd1.name"/>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail clickPlusButton="true">
+                    <bookingMovement>Delivery(Excess)</bookingMovement>
+                    <movement>Delivery</movement>
+                    <nominalAmount>13566</nominalAmount>
+                    <value>13,566.00</value>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <exposureEventDetail id="delivery.agreementRequirement.23566.completed">
+            <action>Delivery(Excess)</action>
+            <agreementRequirement>-23,566.00</agreementRequirement>
+            <callStatus>Completed</callStatus>
+        </exposureEventDetail>
+    </scenarioData>
+</dataBean>

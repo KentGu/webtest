@@ -1,0 +1,2788 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/optimisation.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <assetDefinition>
+            <assetName id="cash.class">T31583_Cash_Class</assetName>
+        </assetDefinition>
+
+        <assetDefinition>
+            <assetName id="cash.type.1">T31583_Cash_Type1</assetName>
+        </assetDefinition>
+
+        <assetDefinition>
+            <assetName id="cash.type.2">T31583_Cash_Type2</assetName>
+        </assetDefinition>
+
+        <assetDefinition>
+            <assetName id="cash.type.3">T31583_Cash_Type3</assetName>
+        </assetDefinition>
+
+        <assetDefinition>
+            <assetName id="bond.class">T31583_Bond_Class</assetName>
+        </assetDefinition>
+
+        <assetDefinition>
+            <assetName id="bond.type">T31583_Bond_Type</assetName>
+        </assetDefinition>
+
+        <assetDefinition>
+            <assetName id="equity.class">T31583_Equity_Class</assetName>
+        </assetDefinition>
+
+        <assetDefinition>
+            <assetName id="equity.type">T31583_Equity_Type</assetName>
+        </assetDefinition>
+
+        <instrument>
+            <instrumentId>
+                <value ref="cash.type.1"/>
+            </instrumentId>
+            <additionalInfo1 id="cash.instrument.1.additional.info.1">1000</additionalInfo1>
+            <additionalInfo2 id="cash.instrument.1.additional.info.2">add21</additionalInfo2>
+            <additionalInfo3 id="cash.instrument.1.additional.info.3">string31</additionalInfo3>
+            <additionalInfo4 id="cash.instrument.1.additional.info.4">500</additionalInfo4>
+            <additionalField>
+                <fieldName>UDF 1</fieldName>
+                <value id="cash.instrument.1.udf.1">good</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 2</fieldName>
+                <value id="cash.instrument.1.udf.2">u21</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 3</fieldName>
+                <value id="cash.instrument.1.udf.3">u31</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 4</fieldName>
+                <value id="cash.instrument.1.udf.4">u41</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 5</fieldName>
+                <value id="cash.instrument.1.udf.5">u51</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 6</fieldName>
+                <value id="cash.instrument.1.udf.6">u61</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 7</fieldName>
+                <value id="cash.instrument.1.udf.7">u71</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 8</fieldName>
+                <value id="cash.instrument.1.udf.8">u81</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 9</fieldName>
+                <value id="cash.instrument.1.udf.9">u91</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 10</fieldName>
+                <value id="cash.instrument.1.udf.10">B</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 11</fieldName>
+                <value id="cash.instrument.1.udf.11">u111</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 12</fieldName>
+                <value id="cash.instrument.1.udf.12">u121</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 13</fieldName>
+                <value id="cash.instrument.1.udf.13">u131</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 14</fieldName>
+                <value id="cash.instrument.1.udf.14">u141</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 15</fieldName>
+                <value id="cash.instrument.1.udf.15">china</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 16</fieldName>
+                <value id="cash.instrument.1.udf.16">1000</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 17</fieldName>
+                <value id="cash.instrument.1.udf.17">17</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 18</fieldName>
+                <value id="cash.instrument.1.udf.18">18</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 19</fieldName>
+                <value id="cash.instrument.1.udf.19">19</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 20</fieldName>
+                <value id="cash.instrument.1.udf.20">20</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 21</fieldName>
+                <value id="cash.instrument.1.udf.21">21</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 22</fieldName>
+                <value id="cash.instrument.1.udf.22">1200</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 23</fieldName>
+                <value id="cash.instrument.1.udf.23">23</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 24</fieldName>
+                <value id="cash.instrument.1.udf.24">24</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 25</fieldName>
+                <value id="cash.instrument.1.udf.25">25</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 26</fieldName>
+                <value id="cash.instrument.1.udf.26">26</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 27</fieldName>
+                <value id="cash.instrument.1.udf.27">27</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 28</fieldName>
+                <value id="cash.instrument.1.udf.28">28</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 29</fieldName>
+                <value id="cash.instrument.1.udf.29">29</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 30</fieldName>
+                <value id="cash.instrument.1.udf.30">500</value>
+            </additionalField>
+        </instrument>
+
+        <instrument>
+            <instrumentId>
+                <value ref="cash.type.2"/>
+            </instrumentId>
+            <additionalInfo1 id="cash.instrument.2.additional.info.1">1000</additionalInfo1>
+            <additionalInfo2 id="cash.instrument.2.additional.info.2">add24</additionalInfo2>
+            <additionalInfo3 id="cash.instrument.2.additional.info.3">string34</additionalInfo3>
+            <additionalInfo4 id="cash.instrument.2.additional.info.4">800</additionalInfo4>
+            <additionalField>
+                <fieldName>UDF 1</fieldName>
+                <value id="cash.instrument.2.udf.1">bad</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 10</fieldName>
+                <value id="cash.instrument.2.udf.10">D</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 15</fieldName>
+                <value id="cash.instrument.2.udf.15">100M</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 16</fieldName>
+                <value id="cash.instrument.2.udf.16">1000</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 22</fieldName>
+                <value id="cash.instrument.2.udf.22">1000</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 30</fieldName>
+                <value id="cash.instrument.2.udf.30">1500</value>
+            </additionalField>
+        </instrument>
+
+        <instrument>
+            <instrumentId>
+                <value ref="cash.type.3"/>
+            </instrumentId>
+            <additionalInfo1 id="cash.instrument.3.additional.info.1">2000</additionalInfo1>
+            <additionalInfo2 id="cash.instrument.3.additional.info.2">add25</additionalInfo2>
+            <additionalInfo3 id="cash.instrument.3.additional.info.3">string35</additionalInfo3>
+            <additionalInfo4 id="cash.instrument.3.additional.info.4">900</additionalInfo4>
+            <additionalField>
+                <fieldName>UDF 1</fieldName>
+                <value id="cash.instrument.3.udf.1">normal</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 10</fieldName>
+                <value id="cash.instrument.3.udf.10">A</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 15</fieldName>
+                <value id="cash.instrument.3.udf.15">M001</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 16</fieldName>
+                <value id="cash.instrument.3.udf.16">2000</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 22</fieldName>
+                <value id="cash.instrument.3.udf.22">800</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 30</fieldName>
+                <value id="cash.instrument.3.udf.30">500</value>
+            </additionalField>
+        </instrument>
+
+        <instrument>
+            <instrumentId>
+                <type>CUSIP</type>
+                <value id="bond.instrument">T31583_Bond_Instrument</value>
+            </instrumentId>
+            <additionalInfo1 id="bond.instrument.additional.info.1">1000</additionalInfo1>
+            <additionalInfo2 id="bond.instrument.additional.info.2">add22</additionalInfo2>
+            <additionalInfo3 id="bond.instrument.additional.info.3">string32</additionalInfo3>
+            <additionalInfo4 id="bond.instrument.additional.info.4">600</additionalInfo4>
+            <additionalField>
+                <fieldName>UDF 1</fieldName>
+                <value id="bond.instrument.udf.1">normal</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 2</fieldName>
+                <value id="bond.instrument.udf.2">b21</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 3</fieldName>
+                <value id="bond.instrument.udf.3">b31</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 4</fieldName>
+                <value id="bond.instrument.udf.4">b41</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 5</fieldName>
+                <value id="bond.instrument.udf.5">b51</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 6</fieldName>
+                <value id="bond.instrument.udf.6">b61</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 7</fieldName>
+                <value id="bond.instrument.udf.7">b71</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 8</fieldName>
+                <value id="bond.instrument.udf.8">b81</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 9</fieldName>
+                <value id="bond.instrument.udf.9">b91</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 10</fieldName>
+                <value id="bond.instrument.udf.10">C</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 11</fieldName>
+                <value id="bond.instrument.udf.11">b111</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 12</fieldName>
+                <value id="bond.instrument.udf.12">b121</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 13</fieldName>
+                <value id="bond.instrument.udf.13">b131</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 14</fieldName>
+                <value id="bond.instrument.udf.14">b141</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 15</fieldName>
+                <value id="bond.instrument.udf.15">USA01</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 16</fieldName>
+                <value id="bond.instrument.udf.16">1000</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 17</fieldName>
+                <value id="bond.instrument.udf.17">17</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 18</fieldName>
+                <value id="bond.instrument.udf.18">18</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 19</fieldName>
+                <value id="bond.instrument.udf.19">19</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 20</fieldName>
+                <value id="bond.instrument.udf.20">20</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 21</fieldName>
+                <value id="bond.instrument.udf.21">21</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 22</fieldName>
+                <value id="bond.instrument.udf.22">800</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 23</fieldName>
+                <value id="bond.instrument.udf.23">23</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 24</fieldName>
+                <value id="bond.instrument.udf.24">24</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 25</fieldName>
+                <value id="bond.instrument.udf.25">25</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 26</fieldName>
+                <value id="bond.instrument.udf.26">26</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 27</fieldName>
+                <value id="bond.instrument.udf.27">27</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 28</fieldName>
+                <value id="bond.instrument.udf.28">28</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 29</fieldName>
+                <value id="bond.instrument.udf.29">29</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 30</fieldName>
+                <value id="bond.instrument.udf.30">1500</value>
+            </additionalField>
+        </instrument>
+
+        <instrument>
+            <instrumentId>
+                <type>CUSIP</type>
+                <value id="equity.instrument">T31583_Equity_Instrument</value>
+            </instrumentId>
+            <additionalInfo1 id="equity.instrument.additional.info.1">1000</additionalInfo1>
+            <additionalInfo2 id="equity.instrument.additional.info.2">add23</additionalInfo2>
+            <additionalInfo3 id="equity.instrument.additional.info.3">string33</additionalInfo3>
+            <additionalInfo4 id="equity.instrument.additional.info.4">700</additionalInfo4>
+            <additionalField>
+                <fieldName>UDF 1</fieldName>
+                <value id="equity.instrument.udf.1">good</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 2</fieldName>
+                <value id="equity.instrument.udf.2">e21</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 3</fieldName>
+                <value id="equity.instrument.udf.3">e31</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 4</fieldName>
+                <value id="equity.instrument.udf.4">e41</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 5</fieldName>
+                <value id="equity.instrument.udf.5">e51</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 6</fieldName>
+                <value id="equity.instrument.udf.6">e61</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 7</fieldName>
+                <value id="equity.instrument.udf.7">e71</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 8</fieldName>
+                <value id="equity.instrument.udf.8">e81</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 9</fieldName>
+                <value id="equity.instrument.udf.9">e91</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 10</fieldName>
+                <value id="equity.instrument.udf.10">A</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 11</fieldName>
+                <value id="equity.instrument.udf.11">e111</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 12</fieldName>
+                <value id="equity.instrument.udf.12">e121</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 13</fieldName>
+                <value id="equity.instrument.udf.13">e131</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 14</fieldName>
+                <value id="equity.instrument.udf.14">e141</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 15</fieldName>
+                <value id="equity.instrument.udf.15">1000</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 16</fieldName>
+                <value id="equity.instrument.udf.16">1000</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 17</fieldName>
+                <value id="equity.instrument.udf.17">17</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 18</fieldName>
+                <value id="equity.instrument.udf.18">18</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 19</fieldName>
+                <value id="equity.instrument.udf.19">19</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 20</fieldName>
+                <value id="equity.instrument.udf.20">20</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 21</fieldName>
+                <value id="equity.instrument.udf.21">21</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 22</fieldName>
+                <value id="equity.instrument.udf.22">1300</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 23</fieldName>
+                <value id="equity.instrument.udf.23">23</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 24</fieldName>
+                <value id="equity.instrument.udf.24">24</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 25</fieldName>
+                <value id="equity.instrument.udf.25">25</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 26</fieldName>
+                <value id="equity.instrument.udf.26">26</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 27</fieldName>
+                <value id="equity.instrument.udf.27">27</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 28</fieldName>
+                <value id="equity.instrument.udf.28">28</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 29</fieldName>
+                <value id="equity.instrument.udf.29">29</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 30</fieldName>
+                <value id="equity.instrument.udf.30">1000</value>
+            </additionalField>
+        </instrument>
+
+        <agreement>
+            <agreementDescription id="agreement.description">T31583_Agreement_Description</agreementDescription>
+            <agreementId id="agreement.id">2610</agreementId>
+        </agreement>
+
+        <optimisationRule id="opt.asset.udf.filter.rule">
+            <ruleName id="opt.asset.udf.filter.rule.name">T31583_Asset_UDF_Rule</ruleName>
+            <optimisationFilterRuleAttribute>
+                <attributeName>Asset Class</attributeName>
+                <attributeDetail>
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption ref="cash.class"/>
+                        <selectOption ref="bond.class"/>
+                        <selectOption ref="equity.class"/>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+                <groupAndOr>And</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute>
+                <attributeName>UDF 1</attributeName>
+                <attributeDetail>
+                    <operator>Equal</operator>
+                    <inputValue>good</inputValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail>
+                    <operator>Equal</operator>
+                    <inputValue>normal</inputValue>
+                </attributeDetail>
+                <groupAndOr>And</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute>
+                <attributeName>UDF 10</attributeName>
+                <attributeDetail>
+                    <operator>Equal</operator>
+                    <inputValue>A</inputValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail>
+                    <operator>Equal</operator>
+                    <inputValue>B</inputValue>
+                    <andOr>Or</andOr>
+                </attributeDetail>
+                <attributeDetail>
+                    <operator>Equal</operator>
+                    <inputValue>C</inputValue>
+                </attributeDetail>
+                <groupAndOr>And</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute>
+                <attributeName>UDF 15</attributeName>
+                <attributeDetail>
+                    <operator>Not Equal</operator>
+                    <inputValue>ABC123</inputValue>
+                </attributeDetail>
+                <groupAndOr>And</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute>
+                <attributeName>UDF 16</attributeName>
+                <attributeDetail>
+                    <operator>Equal</operator>
+                    <inputValue>1000</inputValue>
+                </attributeDetail>
+                <groupAndOr>And</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute>
+                <attributeName>UDF 22</attributeName>
+                <attributeDetail>
+                    <operator>Not Equal</operator>
+                    <inputValue>1000</inputValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail>
+                    <operator>Greater Than</operator>
+                    <inputValue>500</inputValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail>
+                    <operator>Less Than</operator>
+                    <inputValue>1500</inputValue>
+                </attributeDetail>
+                <groupAndOr>And</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <optimisationFilterRuleAttribute>
+                <attributeName>UDF 30</attributeName>
+                <attributeDetail>
+                    <operator>Greater Than Equal</operator>
+                    <inputValue>500</inputValue>
+                    <andOr>And</andOr>
+                </attributeDetail>
+                <attributeDetail>
+                    <operator>Less Than</operator>
+                    <inputValue>1500</inputValue>
+                </attributeDetail>
+                <groupAndOr>End</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </optimisationRule>
+
+        <optimisationRule id="opt.asset.class.filter.rule">
+            <ruleName id="opt.asset.class.filter.rule.name">T31583_Asset_Class_Rule</ruleName>
+            <optimisationFilterRuleAttribute>
+                <attributeName>Asset Class</attributeName>
+                <attributeDetail>
+                    <operator>Equal</operator>
+                    <filterRuleAttributeValue>
+                        <selectOption ref="cash.class"/>
+                        <selectOption ref="bond.class"/>
+                        <selectOption ref="equity.class"/>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+                <groupAndOr>End</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </optimisationRule>
+
+        <optimisationRule id="opt.agreement.filter.rule">
+            <ruleName id="opt.agreement.filter.rule.name">T31583_Agreement_Rule</ruleName>
+            <optimisationFilterRuleAttribute>
+                <attributeName>Agreement ID</attributeName>
+                <attributeDetail>
+                    <operator>Equal</operator>
+                    <inputValue ref="agreement.id"/>
+                </attributeDetail>
+                <groupAndOr>End</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </optimisationRule>
+
+        <optimisationRule id="opt.asset.ranking.rule">
+            <ruleName id="opt.asset.ranking.rule.name">T31583_Asset_Ranking</ruleName>
+            <optimisationRankingRuleAttribute>
+                <attributeName>UDF 1</attributeName>
+                <attributeDetail>
+                    <inputValue>A</inputValue>
+                    <rankValue>1</rankValue>
+                </attributeDetail>
+                <attributeDetail>
+                    <inputValue>B</inputValue>
+                    <rankValue>2</rankValue>
+                </attributeDetail>
+                <attributeDetail>
+                    <inputValue>C</inputValue>
+                    <rankValue>3</rankValue>
+                </attributeDetail>
+                <groupRank>1</groupRank>
+            </optimisationRankingRuleAttribute>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </optimisationRule>
+
+        <optimisationRule id="optimisation.rule.before.disable.udf">
+            <ruleName id="optimisation.rule.before.disable.udf.name">T31583_OPT_enable_udf</ruleName>
+            <dataParameters>
+                <assetFilterRule>
+                    <filter ref="opt.asset.class.filter.rule.name"/>
+                    <linkText ref="opt.asset.class.filter.rule.name"/>
+                </assetFilterRule>
+                <agreementFilterRule>
+                    <filter ref="opt.agreement.filter.rule.name"/>
+                    <linkText ref="opt.agreement.filter.rule.name"/>
+                </agreementFilterRule>
+            </dataParameters>
+            <runParameters>
+                <algorithm>Rank Allocation</algorithm>
+            </runParameters>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </optimisationRule>
+
+        <optimisationRule id="optimisation.rule.after.disable.udf">
+            <ruleName id="optimisation.rule.after.udf.name">T31583_OPT_disable_udf</ruleName>
+            <dataParameters>
+                <assetFilterRule>
+                    <filter ref="opt.asset.class.filter.rule.name"/>
+                    <linkText ref="opt.asset.class.filter.rule.name"/>
+                </assetFilterRule>
+                <agreementFilterRule>
+                    <filter ref="opt.agreement.filter.rule.name"/>
+                    <linkText ref="opt.agreement.filter.rule.name"/>
+                </agreementFilterRule>
+            </dataParameters>
+            <runParameters>
+                <algorithm>Rank Allocation</algorithm>
+            </runParameters>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </optimisationRule>
+
+        <optimisationRule id="optimisation.rule.with.ranking.rule">
+            <ruleName id="optimisation.rule.with.ranking.rule.name">T31583_OPT_with_ranking</ruleName>
+            <dataParameters>
+                <assetFilterRule>
+                    <filter ref="opt.asset.udf.filter.rule.name"/>
+                    <linkText ref="opt.asset.udf.filter.rule.name"/>
+                </assetFilterRule>
+                <agreementFilterRule>
+                    <filter ref="opt.agreement.filter.rule.name"/>
+                    <linkText ref="opt.agreement.filter.rule.name"/>
+                </agreementFilterRule>
+                <assetRankingRule>
+                    <filter ref="opt.asset.ranking.rule.name"/>
+                    <linkText ref="opt.asset.ranking.rule.name"/>
+                </assetRankingRule>
+            </dataParameters>
+            <runParameters>
+                <algorithm>Rank Allocation</algorithm>
+            </runParameters>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </optimisationRule>
+
+        <optimisationRuleDetail id="run.optimisation.rule.before.disable.udf">
+            <ruleName ref="optimisation.rule.before.disable.udf.name"/>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </optimisationRuleDetail>
+
+        <optimisationRuleDetail id="run.optimisation.rule.after.disable.udf">
+            <ruleName ref="optimisation.rule.after.udf.name"/>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </optimisationRuleDetail>
+
+        <optimisationRuleDetail id="run.optimisation.rule.with.ranking.rule">
+            <ruleName ref="optimisation.rule.with.ranking.rule.name"/>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </optimisationRuleDetail>
+
+        <collateralStaticData id="udf.2">
+            <type>User Defined Security Fields</type>
+            <dataName>UDF 2</dataName>
+        </collateralStaticData>
+
+        <collateralStaticData id="udf.3">
+            <type>User Defined Security Fields</type>
+            <dataName>UDF 3</dataName>
+        </collateralStaticData>
+
+        <collateralStaticData id="udf.4">
+            <type>User Defined Security Fields</type>
+            <dataName>UDF 4</dataName>
+        </collateralStaticData>
+
+        <collateralStaticData id="udf.5">
+            <type>User Defined Security Fields</type>
+            <dataName>UDF 5</dataName>
+        </collateralStaticData>
+
+        <collateralStaticData id="udf.6">
+            <type>User Defined Security Fields</type>
+            <dataName>UDF 6</dataName>
+        </collateralStaticData>
+
+        <collateralStaticData id="udf.7">
+            <type>User Defined Security Fields</type>
+            <dataName>UDF 7</dataName>
+        </collateralStaticData>
+
+        <collateralStaticData id="udf.8">
+            <type>User Defined Security Fields</type>
+            <dataName>UDF 8</dataName>
+        </collateralStaticData>
+
+        <collateralStaticData id="udf.9">
+            <type>User Defined Security Fields</type>
+            <dataName>UDF 9</dataName>
+        </collateralStaticData>
+
+        <collateralStaticData id="udf.11">
+            <type>User Defined Security Fields</type>
+            <dataName>UDF 11</dataName>
+        </collateralStaticData>
+
+        <collateralStaticData id="udf.12">
+            <type>User Defined Security Fields</type>
+            <dataName>UDF 12</dataName>
+        </collateralStaticData>
+
+        <collateralStaticData id="udf.13">
+            <type>User Defined Security Fields</type>
+            <dataName>UDF 13</dataName>
+        </collateralStaticData>
+
+        <collateralStaticData id="udf.14">
+            <type>User Defined Security Fields</type>
+            <dataName>UDF 14</dataName>
+        </collateralStaticData>
+
+        <collateralStaticData id="udf.17">
+            <type>User Defined Security Fields</type>
+            <dataName>UDF 17</dataName>
+        </collateralStaticData>
+
+        <collateralStaticData id="udf.18">
+            <type>User Defined Security Fields</type>
+            <dataName>UDF 18</dataName>
+        </collateralStaticData>
+
+        <collateralStaticData id="udf.19">
+            <type>User Defined Security Fields</type>
+            <dataName>UDF 19</dataName>
+        </collateralStaticData>
+
+        <collateralStaticData id="udf.20">
+            <type>User Defined Security Fields</type>
+            <dataName>UDF 20</dataName>
+        </collateralStaticData>
+
+        <collateralStaticData id="udf.21">
+            <type>User Defined Security Fields</type>
+            <dataName>UDF 21</dataName>
+        </collateralStaticData>
+
+        <collateralStaticData id="udf.22">
+            <type>User Defined Security Fields</type>
+            <dataName>UDF 22</dataName>
+        </collateralStaticData>
+
+        <collateralStaticData id="udf.23">
+            <type>User Defined Security Fields</type>
+            <dataName>UDF 23</dataName>
+        </collateralStaticData>
+
+        <collateralStaticData id="udf.24">
+            <type>User Defined Security Fields</type>
+            <dataName>UDF 24</dataName>
+        </collateralStaticData>
+
+        <collateralStaticData id="udf.25">
+            <type>User Defined Security Fields</type>
+            <dataName>UDF 25</dataName>
+        </collateralStaticData>
+
+        <collateralStaticData id="udf.26">
+            <type>User Defined Security Fields</type>
+            <dataName>UDF 26</dataName>
+        </collateralStaticData>
+
+        <collateralStaticData id="udf.27">
+            <type>User Defined Security Fields</type>
+            <dataName>UDF 27</dataName>
+        </collateralStaticData>
+
+        <collateralStaticData id="udf.28">
+            <type>User Defined Security Fields</type>
+            <dataName>UDF 28</dataName>
+        </collateralStaticData>
+
+        <collateralStaticData id="udf.29">
+            <type>User Defined Security Fields</type>
+            <dataName>UDF 29</dataName>
+        </collateralStaticData>
+
+        <databaseQuery id="check.opt.asset.definition">
+            <resultId id="check.opt.asset.definition.result.id"/>
+            <sqlQuery>
+                <content>SELECT INSTRUMENTID,ASSETTYPE,SECUDF1,SECUDF2,SECUDF3,SECUDF4,SECUDF5,SECUDF6,SECUDF7,SECUDF8,SECUDF9,SECUDF10,SECUDF11,SECUDF12,SECUDF13,SECUDF14,SECUDF15,SECUDF16,SECUDF17,SECUDF18,SECUDF19,SECUDF20,SECUDF21,SECUDF22,SECUDF23,SECUDF24,SECUDF25,SECUDF26,SECUDF27,SECUDF28,SECUDF29,SECUDF30,ADDITIONALINFO1,ADDITIONALINFO2,ADDITIONALINFO3,ADDITIONALINFO4 FROM OptAssetDefinition WHERE INVOCATIONRUNID = (SELECT max(INVOCATIONRUNID) FROM OPTAGREEMENTPOOL)</content>
+            </sqlQuery>
+        </databaseQuery>
+
+        <databaseQueryResult id="opt.asset.definition.result.before.disable.static.data">
+            <resultId ref="check.opt.asset.definition.result.id"/>
+            <databaseQueryResultRow>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>INSTRUMENTID</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.type.1"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ASSETTYPE</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.type.1"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF1</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.1"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF2</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.2"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF3</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.3"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF4</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.4"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF5</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.5"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF6</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.6"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF7</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.7"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF8</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.8"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF9</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.9"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF10</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.10"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF11</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.11"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF12</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.12"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF13</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.13"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF14</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.14"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF15</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.15"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF16</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.16"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF17</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.17"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF18</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.18"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF19</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.19"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF20</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.20"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF21</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.21"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF22</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.22"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF23</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.23"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF24</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.24"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF25</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.25"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF26</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.26"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF27</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.27"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF28</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.28"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF29</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.29"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF30</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.30"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO1</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.additional.info.1"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO2</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.additional.info.2"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO3</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.additional.info.3"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO4</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.additional.info.4"/>
+                </databaseQueryResultCell>
+            </databaseQueryResultRow>
+            <databaseQueryResultRow>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>INSTRUMENTID</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.type.2"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ASSETTYPE</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.type.2"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF1</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.2.udf.1"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF2</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF3</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF4</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF5</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF6</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF7</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF8</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF9</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF10</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.2.udf.10"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF11</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF12</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF13</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF14</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF15</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.2.udf.15"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF16</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.2.udf.16"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF17</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF18</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF19</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF20</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF21</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF22</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.2.udf.22"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF23</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF24</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF25</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF26</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF27</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF28</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF29</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF30</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.2.udf.30"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO1</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.2.additional.info.1"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO2</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.2.additional.info.2"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO3</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.2.additional.info.3"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO4</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.2.additional.info.4"/>
+                </databaseQueryResultCell>
+            </databaseQueryResultRow>
+            <databaseQueryResultRow>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>INSTRUMENTID</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.type.3"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ASSETTYPE</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.type.3"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF1</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.3.udf.1"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF2</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF3</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF4</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF5</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF6</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF7</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF8</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF9</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF10</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.3.udf.10"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF11</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF12</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF13</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF14</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF15</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.3.udf.15"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF16</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.3.udf.16"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF17</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF18</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF19</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF20</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF21</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF22</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.3.udf.22"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF23</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF24</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF25</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF26</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF27</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF28</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF29</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF30</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.3.udf.30"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO1</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.3.additional.info.1"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO2</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.3.additional.info.2"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO3</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.3.additional.info.3"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO4</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.3.additional.info.4"/>
+                </databaseQueryResultCell>
+            </databaseQueryResultRow>
+            <databaseQueryResultRow>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>INSTRUMENTID</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ASSETTYPE</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.type"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF1</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.1"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF2</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.2"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF3</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.3"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF4</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.4"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF5</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.5"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF6</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.6"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF7</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.7"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF8</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.8"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF9</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.9"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF10</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.10"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF11</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.11"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF12</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.12"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF13</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.13"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF14</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.14"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF15</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.15"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF16</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.16"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF17</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.17"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF18</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.18"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF19</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.19"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF20</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.20"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF21</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.21"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF22</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.22"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF23</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.23"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF24</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.24"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF25</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.25"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF26</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.26"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF27</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.27"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF28</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.28"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF29</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.29"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF30</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.30"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO1</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.additional.info.1"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO2</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.additional.info.2"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO3</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.additional.info.3"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO4</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.additional.info.4"/>
+                </databaseQueryResultCell>
+            </databaseQueryResultRow>
+            <databaseQueryResultRow>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>INSTRUMENTID</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ASSETTYPE</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.type"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF1</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.1"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF2</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.2"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF3</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.3"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF4</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.4"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF5</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.5"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF6</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.6"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF7</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.7"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF8</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.8"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF9</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.9"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF10</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.10"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF11</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.11"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF12</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.12"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF13</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.13"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF14</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.14"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF15</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.15"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF16</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.16"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF17</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.17"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF18</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.18"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF19</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.19"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF20</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.20"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF21</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.21"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF22</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.22"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF23</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.23"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF24</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.24"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF25</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.25"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF26</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.26"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF27</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.27"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF28</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.28"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF29</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.29"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF30</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.30"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO1</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.additional.info.1"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO2</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.additional.info.2"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO3</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.additional.info.3"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO4</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.additional.info.4"/>
+                </databaseQueryResultCell>
+            </databaseQueryResultRow>
+        </databaseQueryResult>
+
+        <databaseQueryResult id="opt.asset.definition.result.after.disable.static.data">
+            <resultId ref="check.opt.asset.definition.result.id"/>
+            <databaseQueryResultRow>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>INSTRUMENTID</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.type.1"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ASSETTYPE</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.type.1"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF1</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.1"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF2</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.2"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF3</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.3"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF4</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.4"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF5</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.5"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF6</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.6"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF7</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.7"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF8</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.8"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF9</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.9"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF10</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.10"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF11</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.11"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF12</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.12"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF13</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.13"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF14</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.14"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF15</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.15"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF16</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.16"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF17</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.17"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF18</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.18"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF19</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.19"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF20</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.20"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF21</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.21"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF22</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.22"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF23</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.23"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF24</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.24"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF25</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.25"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF26</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.26"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF27</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.27"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF28</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.28"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF29</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.29"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF30</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.30"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO1</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.additional.info.1"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO2</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.additional.info.2"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO3</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.additional.info.3"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO4</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.additional.info.4"/>
+                </databaseQueryResultCell>
+            </databaseQueryResultRow>
+            <databaseQueryResultRow>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>INSTRUMENTID</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.type.2"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ASSETTYPE</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.type.2"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF1</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.2.udf.1"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF2</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF3</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF4</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF5</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF6</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF7</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF8</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF9</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF10</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.2.udf.10"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF11</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF12</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF13</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF14</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF15</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.2.udf.15"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF16</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.2.udf.16"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF17</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF18</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF19</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF20</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF21</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF22</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.2.udf.22"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF23</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF24</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF25</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF26</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF27</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF28</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF29</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF30</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.2.udf.30"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO1</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.2.additional.info.1"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO2</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.2.additional.info.2"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO3</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.2.additional.info.3"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO4</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.2.additional.info.4"/>
+                </databaseQueryResultCell>
+            </databaseQueryResultRow>
+            <databaseQueryResultRow>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>INSTRUMENTID</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.type.3"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ASSETTYPE</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.type.3"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF1</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.3.udf.1"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF2</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF3</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF4</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF5</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF6</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF7</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF8</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF9</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF10</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.3.udf.10"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF11</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF12</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF13</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF14</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF15</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.3.udf.15"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF16</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.3.udf.16"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF17</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF18</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF19</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF20</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF21</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF22</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.3.udf.22"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF23</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF24</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF25</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF26</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF27</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF28</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF29</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>(null)</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF30</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.3.udf.30"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO1</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.3.additional.info.1"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO2</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.3.additional.info.2"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO3</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.3.additional.info.3"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO4</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.3.additional.info.4"/>
+                </databaseQueryResultCell>
+            </databaseQueryResultRow>
+            <databaseQueryResultRow>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>INSTRUMENTID</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ASSETTYPE</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.type"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF1</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.1"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF2</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.2"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF3</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.3"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF4</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.4"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF5</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.5"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF6</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.6"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF7</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.7"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF8</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.8"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF9</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.9"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF10</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.10"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF11</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.11"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF12</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.12"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF13</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.13"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF14</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.14"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF15</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.15"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF16</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.16"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF17</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.17"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF18</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.18"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF19</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.19"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF20</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.20"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF21</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.21"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF22</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.22"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF23</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.23"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF24</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.24"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF25</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.25"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF26</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.26"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF27</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.27"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF28</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.28"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF29</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.29"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF30</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.30"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO1</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.additional.info.1"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO2</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.additional.info.2"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO3</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.additional.info.3"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO4</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.additional.info.4"/>
+                </databaseQueryResultCell>
+            </databaseQueryResultRow>
+            <databaseQueryResultRow>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>INSTRUMENTID</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ASSETTYPE</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.type"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF1</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.1"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF2</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.2"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF3</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.3"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF4</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.4"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF5</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.5"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF6</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.6"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF7</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.7"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF8</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.8"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF9</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.9"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF10</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.10"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF11</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.11"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF12</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.12"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF13</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.13"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF14</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.14"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF15</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.15"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF16</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.16"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF17</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.17"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF18</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.18"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF19</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.19"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF20</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.20"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF21</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.21"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF22</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.22"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF23</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.23"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF24</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.24"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF25</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.25"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF26</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.26"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF27</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.27"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF28</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.28"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF29</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.29"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF30</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.30"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO1</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.additional.info.1"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO2</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.additional.info.2"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO3</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.additional.info.3"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO4</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.additional.info.4"/>
+                </databaseQueryResultCell>
+            </databaseQueryResultRow>
+        </databaseQueryResult>
+
+        <databaseQueryResult id="opt.asset.definition.result.with.ranking">
+            <resultId ref="check.opt.asset.definition.result.id"/>
+            <databaseQueryResultRow>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>INSTRUMENTID</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.type.1"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ASSETTYPE</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.type.1"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF1</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.1"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF2</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.2"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF3</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.3"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF4</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.4"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF5</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.5"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF6</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.6"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF7</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.7"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF8</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.8"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF9</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.9"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF10</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.10"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF11</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.11"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF12</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.12"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF13</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.13"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF14</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.14"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF15</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.15"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF16</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.16"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF17</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.17"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF18</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.18"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF19</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.19"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF20</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.20"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF21</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.21"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF22</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.22"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF23</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.23"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF24</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.24"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF25</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.25"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF26</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.26"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF27</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.27"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF28</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.28"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF29</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.29"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF30</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.udf.30"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO1</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.additional.info.1"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO2</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.additional.info.2"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO3</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.additional.info.3"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO4</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="cash.instrument.1.additional.info.4"/>
+                </databaseQueryResultCell>
+            </databaseQueryResultRow>
+            <databaseQueryResultRow>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>INSTRUMENTID</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ASSETTYPE</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.type"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF1</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.1"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF2</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.2"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF3</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.3"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF4</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.4"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF5</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.5"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF6</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.6"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF7</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.7"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF8</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.8"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF9</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.9"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF10</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.10"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF11</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.11"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF12</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.12"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF13</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.13"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF14</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.14"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF15</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.15"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF16</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.16"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF17</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.17"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF18</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.18"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF19</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.19"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF20</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.20"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF21</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.21"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF22</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.22"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF23</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.23"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF24</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.24"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF25</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.25"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF26</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.26"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF27</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.27"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF28</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.28"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF29</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.29"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF30</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.udf.30"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO1</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.additional.info.1"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO2</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.additional.info.2"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO3</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.additional.info.3"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO4</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="bond.instrument.additional.info.4"/>
+                </databaseQueryResultCell>
+            </databaseQueryResultRow>
+            <databaseQueryResultRow>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>INSTRUMENTID</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ASSETTYPE</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.type"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF1</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.1"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF2</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.2"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF3</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.3"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF4</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.4"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF5</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.5"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF6</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.6"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF7</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.7"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF8</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.8"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF9</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.9"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF10</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.10"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF11</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.11"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF12</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.12"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF13</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.13"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF14</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.14"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF15</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.15"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF16</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.16"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF17</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.17"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF18</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.18"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF19</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.19"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF20</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.20"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF21</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.21"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF22</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.22"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF23</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.23"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF24</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.24"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF25</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.25"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF26</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.26"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF27</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.27"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF28</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.28"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF29</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.29"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>SECUDF30</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.udf.30"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO1</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.additional.info.1"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO2</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.additional.info.2"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO3</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.additional.info.3"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ADDITIONALINFO4</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="equity.instrument.additional.info.4"/>
+                </databaseQueryResultCell>
+            </databaseQueryResultRow>
+        </databaseQueryResult>
+
+    </scenarioData>
+</dataBean>

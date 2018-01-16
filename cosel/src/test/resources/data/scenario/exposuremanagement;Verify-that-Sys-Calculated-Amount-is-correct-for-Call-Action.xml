@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/exposureManagement.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <agreement id="agr10879.net">
+            <agreementId id="agrid">2606</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="call.requirementAmount.1236000">
+            <action>Call</action>
+            <agreementRequirement>1,236,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+         <exposureEventDetail id="call.requirementAmount.1236000.counterpartyAmount.3m">
+            <counterpartyAmount>3m</counterpartyAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="call.SysCalculatedAmount.3m">
+            <action>Call</action>
+            <agreementRequirement>1,236,000.00</agreementRequirement>
+            <sysCalculatedAmount>3,000,000.00</sysCalculatedAmount>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="call.requirementAmount.1236000.counterpartyAmount.0.5m">
+            <counterpartyAmount>0.5m</counterpartyAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="call.SysCalculatedAmount.1236000">
+            <action>Call</action>
+            <agreementRequirement>1,236,000.00</agreementRequirement>
+            <sysCalculatedAmount>1,236,000.00</sysCalculatedAmount>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="call.requirementAmount.1236000.counterpartyAmount.1236500">
+            <counterpartyAmount>1236500</counterpartyAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="call.SysCalculatedAmount.1236500">
+            <action>Call</action>
+            <agreementRequirement>1,236,000.00</agreementRequirement>
+            <sysCalculatedAmount>1,236,500.00</sysCalculatedAmount>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="call.requirementAmount.1236000.counterpartyAmount.1235500">
+            <counterpartyAmount>1235500</counterpartyAmount>
+        </exposureEventDetail>
+
+
+    </scenarioData>
+</dataBean>

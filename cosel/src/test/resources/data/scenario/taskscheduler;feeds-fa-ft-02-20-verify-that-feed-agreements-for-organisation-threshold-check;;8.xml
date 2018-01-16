@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/feeds.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <organisation id="organisation.principal.im.threshold.3000">
+            <shortName id="organisation.principal.im.threshold.3000.sname" random="true"/>
+            <longName id="organisation.principal.im.threshold.3000.lname" ref="organisation.principal.im.threshold.3000.sname"/>
+            <code id="organisation.principal.im.threshold.3000.code" ref="organisation.principal.im.threshold.3000.sname"/>
+            <role>Collateral relationship</role>
+            <relationship>
+                <parent>true</parent>
+                <type>Subsidiary</type>
+                <organisationSearch>
+                    <type>Short Name</type>
+                    <filter ref="org.main.lname"/>
+                    <linkText ref="org.main.lname"/>
+                </organisationSearch>
+            </relationship>
+            <address>
+                <contact>contact</contact>
+                <address1>address</address1>
+                <title>title</title>
+                <label>label</label>
+                <tel>888888</tel>
+                <fax>888888</fax>
+                <email>test@test.com</email>
+                <ftp>ftp://test.com</ftp>
+                <notes>note</notes>
+                <enable>true</enable>
+            </address>
+            <imThreshold>3000</imThreshold>
+            <imThresholdCurrency>USD</imThresholdCurrency>
+            <imIncludeSubsidiaries>true</imIncludeSubsidiaries>
+            <status>Approved</status>
+        </organisation>
+
+        <organisation id="organisation.principal.im.threshold.2000">
+            <shortName id="organisation.principal.im.threshold.2000.sname" random="true"/>
+            <longName id="organisation.principal.im.threshold.2000.lname" ref="organisation.principal.im.threshold.2000.sname"/>
+            <code id="organisation.principal.im.threshold.2000.code" ref="organisation.principal.im.threshold.2000.sname"/>
+            <role>Collateral relationship</role>
+            <relationship>
+                <parent>true</parent>
+                <type>Subsidiary</type>
+                <organisationSearch>
+                    <type>Short Name</type>
+                    <filter ref="organisation.principal.im.threshold.3000.sname"/>
+                    <linkText ref="organisation.principal.im.threshold.3000.sname"/>
+                </organisationSearch>
+            </relationship>
+            <address>
+                <contact>contact</contact>
+                <address1>address</address1>
+                <title>title</title>
+                <label>label</label>
+                <tel>888888</tel>
+                <fax>888888</fax>
+                <email>test@test.com</email>
+                <ftp>ftp://test.com</ftp>
+                <notes>note</notes>
+                <enable>true</enable>
+            </address>
+            <imThreshold>2000</imThreshold>
+            <imThresholdCurrency>USD</imThresholdCurrency>
+            <imIncludeSubsidiaries>false</imIncludeSubsidiaries>
+            <status>Approved</status>
+        </organisation>
+
+        <organisation id="organisation.principal.im.threshold.1000">
+            <shortName id="organisation.principal.im.threshold.1000.sname" random="true"/>
+            <longName id="organisation.principal.im.threshold.1000.lname" ref="organisation.principal.im.threshold.1000.sname"/>
+            <code id="organisation.principal.im.threshold.1000.code" ref="organisation.principal.im.threshold.1000.sname"/>
+            <role>Collateral relationship</role>
+            <relationship>
+                <parent>true</parent>
+                <type>Subsidiary</type>
+                <organisationSearch>
+                    <type>Short Name</type>
+                    <filter ref="organisation.principal.im.threshold.2000.sname"/>
+                    <linkText ref="organisation.principal.im.threshold.2000.sname"/>
+                </organisationSearch>
+            </relationship>
+            <address>
+                <contact>contact</contact>
+                <address1>address</address1>
+                <title>title</title>
+                <label>label</label>
+                <tel>888888</tel>
+                <fax>888888</fax>
+                <email>test@test.com</email>
+                <ftp>ftp://test.com</ftp>
+                <notes>note</notes>
+                <enable>true</enable>
+            </address>
+            <imThreshold>1000</imThreshold>
+            <imThresholdCurrency>USD</imThresholdCurrency>
+            <imIncludeSubsidiaries>true</imIncludeSubsidiaries>
+            <status>Approved</status>
+        </organisation>
+
+        <organisation id="organisation.counterparty.1">
+            <shortName id="organisation.counterparty.1.sname" random="true"/>
+            <longName id="organisation.counterparty.1.lname" ref="organisation.counterparty.1.sname"/>
+            <code id="organisation.counterparty.1.code" ref="organisation.counterparty.1.sname"/>
+            <role>Collateral relationship</role>
+            <address>
+                <contact>contact</contact>
+                <address1>address</address1>
+                <title>title</title>
+                <label>label</label>
+                <tel>888888</tel>
+                <fax>888888</fax>
+                <email>test@test.com</email>
+                <ftp>ftp://test.com</ftp>
+                <notes>note</notes>
+                <enable>true</enable>
+            </address>
+            <status>Approved</status>
+        </organisation>
+
+        <organisation id="organisation.counterparty.2">
+            <shortName id="organisation.counterparty.2.sname" random="true"/>
+            <longName id="organisation.counterparty.2.lname" ref="organisation.counterparty.2.sname"/>
+            <code id="organisation.counterparty.2.code" ref="organisation.counterparty.2.sname"/>
+            <role>Collateral relationship</role>
+            <address>
+                <contact>contact</contact>
+                <address1>address</address1>
+                <title>title</title>
+                <label>label</label>
+                <tel>888888</tel>
+                <fax>888888</fax>
+                <email>test@test.com</email>
+                <ftp>ftp://test.com</ftp>
+                <notes>note</notes>
+                <enable>true</enable>
+            </address>
+            <status>Approved</status>
+        </organisation>
+
+        <feedAgreement id="feed.otc.not.net.agreement.fix.trigger.counterparty.2">
+            <principal ref="organisation.principal.im.threshold.3000.lname"/>
+            <counterpartycode ref="organisation.counterparty.2.code"/>
+            <businessLine>OTC</businessLine>
+            <agreement_description id="feed.otc.not.net.agreement.fix.trigger.counterparty.2.desc" random="true" prefix="feed_agr1_"/>
+            <region ref="region.test1.name"/>
+            <legal_id id="feed.otc.not.net.agreement.fix.trigger.counterparty.2.external.id">T32804_Agreement7</legal_id>
+            <master_documentation ref="master.documentation.1987.isda.master.name"/>
+            <credit_support_documentation ref="credit.documentation.margin.provisions.name"/>
+            <netting_MTM_And_IA>Not-Net</netting_MTM_And_IA>
+            <base_currency ref="ccy.usd.name"/>
+            <original_date random="true" variation="t"/>
+            <im_frequency>Daily</im_frequency>
+            <frequency>Daily</frequency>
+            <im_frequency_start random="true" variation="t"/>
+            <frequency_start random="true" variation="t"/>
+            <im_notification_time>13.00</im_notification_time>
+            <notification_time>13.00</notification_time>
+            <im_resolution_time>10.00</im_resolution_time>
+            <resolution_time>10.00</resolution_time>
+            <im_resolution_day>same</im_resolution_day>
+            <resolution_day>same</resolution_day>
+            <time_zone ref="system.staticData.timeZone.cet.name"/>
+            <holiday_centre ref="hc.test1.name"/>
+            <im_non_workingday_adjusttype>None</im_non_workingday_adjusttype>
+            <non_workingday_adjusttype>None</non_workingday_adjusttype>
+            <product>
+                <productName>QTP</productName>
+                <settlementPeriod>T</settlementPeriod>
+            </product>
+            <asset>
+                <assetName ref="bond.usd.name"/>
+                <applicableType></applicableType>
+                <applicableParty></applicableParty>
+                <settlementDateAbbriviated>T</settlementDateAbbriviated>
+            </asset>
+            <roundingIM_delivery>Up</roundingIM_delivery>
+            <roundingIM_recall>Down</roundingIM_recall>
+            <rounding_delivery>Up</rounding_delivery>
+            <rounding_recall>Down</rounding_recall>
+            <applyOrganisationThreshold>true</applyOrganisationThreshold>
+            <principalIMFixedThresholdType>Fixed</principalIMFixedThresholdType>
+            <principalIMFixedThresholdValue>1000</principalIMFixedThresholdValue>
+            <principalIMFixedThresholdCcy>USD</principalIMFixedThresholdCcy>
+            <settlementInstructions>
+                <settlementInstruction>
+                    <bookingType>VM</bookingType>
+                    <direction>Call/Return</direction>
+                    <bucket>VM Call/Return</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>VM</bookingType>
+                    <direction>Delivery/Recall</direction>
+                    <bucket>VM Recall/Delivery</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>IM</bookingType>
+                    <direction>Call/Return</direction>
+                    <bucket>IM Call/Return</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>IM</bookingType>
+                    <direction>Delivery/Recall</direction>
+                    <bucket>IM Recall/Delivery</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>VM Interest</bookingType>
+                    <direction>Pay</direction>
+                    <bucket>Pay</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>VM Interest</bookingType>
+                    <direction>Receive</direction>
+                    <bucket>Receive</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>IM Interest</bookingType>
+                    <direction>Pay</direction>
+                    <bucket>Pay</bucket>
+                </settlementInstruction>
+                <settlementInstruction>
+                    <bookingType>IM Interest</bookingType>
+                    <direction>Receive</direction>
+                    <bucket>Receive</bucket>
+                </settlementInstruction>
+            </settlementInstructions>
+            <distMedium>Email</distMedium>
+            <applyOrgCL>false</applyOrgCL>
+        </feedAgreement>
+
+        <agreementSearch id="feed.otc.not.net.agreement.fix.trigger.counterparty.2.search">
+            <description>
+                <filter ref="feed.otc.not.net.agreement.fix.trigger.counterparty.2.desc"/>
+                <linkText ref="feed.otc.not.net.agreement.fix.trigger.counterparty.2.desc"/>
+            </description>
+            <externalId>
+                <filter ref="feed.otc.not.net.agreement.fix.trigger.counterparty.2.external.id"/>
+                <linkText ref="feed.otc.not.net.agreement.fix.trigger.counterparty.2.external.id"/>
+            </externalId>
+        </agreementSearch>
+
+        <agreementSearchResult id="feed.otc.not.net.agreement.fix.trigger.counterparty.2.search.result">
+            <description ref="feed.otc.not.net.agreement.fix.trigger.counterparty.2.desc"/>
+            <externalId ref="feed.otc.not.net.agreement.fix.trigger.counterparty.2.external.id"/>
+        </agreementSearchResult>
+
+        <agreementSummary id="feed.otc.not.net.agreement.fix.trigger.counterparty.2.summary">
+            <collateralThresholdAndMinimumTransferDetails>
+                <applyOrganisationThreshold>true</applyOrganisationThreshold>
+                <imPrincipalFixedValue>
+                    <threshold>Fixed - 1,000.00 USD</threshold>
+                </imPrincipalFixedValue>
+            </collateralThresholdAndMinimumTransferDetails>
+        </agreementSummary>
+
+        <feedStatus id="feed.otc.not.net.agreement.fix.trigger.counterparty.2.status">
+            <systemName>QTP</systemName>
+            <status>Successful</status>
+            <valuationFile ref="feed.otc.not.net.agreement.fix.trigger.counterparty.2.result.file"/>
+            <description>Agreements</description>
+            <successfulFeed>
+                <importType>Agreements</importType>
+                <valuationFile ref="feed.otc.not.net.agreement.fix.trigger.counterparty.2.result.file"/>
+                <total>1</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <agreement id="agreement.complete">
+            <nettingIAandMtM>Not-Net</nettingIAandMtM>
+            <applyThresholdMTARounding>separate</applyThresholdMTARounding>
+            <!--<vmFixedTriggerWarning>-->
+                <!--<content>Expected: 3,000.00(USD)</content>-->
+                <!--<accept>true</accept>-->
+            <!--</vmFixedTriggerWarning>-->
+            <!--<imFixedTriggerWarning>-->
+                <!--<content>Expected: 3,000.00(USD)</content>-->
+                <!--<accept>true</accept>-->
+            <!--</imFixedTriggerWarning>-->
+        </agreement>
+
+        <taskSchedulerDetail id="task.feed.agreement">
+            <type>Task Manager</type>
+            <taskName>Import Agreements</taskName>
+            <additionalInfo id="task.feed.agreement.server.path">/home/ec2-user/Feed/FeedAgreement</additionalInfo>
+        </taskSchedulerDetail>
+
+        <variable id="file"/>
+
+        <taskSchedulerMessage id="task.feed.agreement.message">
+            <message>Agreements: Import agreements: Imported 1 agreements from :(\S+).xml( \(Warning message appeared, please look up feed status for details\))?</message>
+        </taskSchedulerMessage>
+
+    </scenarioData>
+</dataBean>

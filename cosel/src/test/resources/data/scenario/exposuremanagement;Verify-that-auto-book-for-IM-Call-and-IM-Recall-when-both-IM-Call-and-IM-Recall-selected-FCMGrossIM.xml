@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/exposureManagement.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <agreement id="agr31367.notnet">
+            <agreementId id="agrid">2587</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="vm.noCall">
+            <action>VM ITM No Calls</action>
+            <agreementRequirement>0.00</agreementRequirement>
+            <callStatus>No Call Required</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.call.agreementRequirement.1000000.pendingReview">
+            <action>IM Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.recall.agreementRequirement.2000000.pendingReview">
+            <action>IM Recall</action>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <marginLetter id="createImCallLetter">
+            <letterType>IM Call</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <assetHoldingsandValuationReport>true</assetHoldingsandValuationReport>
+                </emailAttachments>
+            </letterSetupDetails>
+        </marginLetter>
+
+        <marginLetter id="createImRecallLetter">
+            <letterType>IM Recall</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                    <assetHoldingsandValuationReport>true</assetHoldingsandValuationReport>
+                </emailAttachments>
+            </letterSetupDetails>
+        </marginLetter>
+
+        <exposureEventDetail id="im.call.agreementRequirement.1000000.MarginRequestIssued">
+            <action>IM Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Margin Request Issued</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.recall.agreementRequirement.2000000.MarginRequestIssued">
+            <action>IM Recall</action>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <callStatus>Margin Request Issued</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.call.agreementRequirement.1000000.MarginRequestIssued.counterpartyAmount.1000000">
+            <action>IM Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <counterpartyAmount>1m</counterpartyAmount>
+            <callStatus>Margin Request Issued</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.recall.agreementRequirement.2000000.MarginRequestIssued.counterpartyAmount.2000000">
+            <action>IM Recall</action>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <counterpartyAmount>2m</counterpartyAmount>
+            <callStatus>Margin Request Issued</callStatus>
+        </exposureEventDetail>
+
+        <exposureManagementMessage id="im.call.im.recall.autoBookingSuccess">
+            <messageSummary>
+                <unsuccessfulAccount>1</unsuccessfulAccount>
+                <successfulAccount>2</successfulAccount>
+            </messageSummary>
+            <messageDetail>
+                <level>error</level>
+                <source>Auto Book</source>
+                <message>Princ:QTPPrincipal/Cpty:QTPCounterparty/Desc:31367_1/AgrId:2587/Event:Call &amp; Recall VM auto booking not created as event must be in Issued/Confirmed tab.</message>
+            </messageDetail>
+            <messageDetail>
+                <level>info</level>
+                <source>Auto Book</source>
+                <message>Princ:QTPPrincipal/Cpty:QTPCounterparty/Desc:31367_1/AgrId:2587/Event:Call &amp; Recall CASH-USD IM Call 1,000,000.00 auto booking created.</message>
+            </messageDetail>
+            <messageDetail>
+                <level>info</level>
+                <source>Auto Book</source>
+                <message>Princ:QTPPrincipal/Cpty:QTPCounterparty/Desc:31367_1/AgrId:2587/Event:Call &amp; Recall CASH-USD IM Recall 2,000,000.00 auto booking created.</message>
+            </messageDetail>
+        </exposureManagementMessage>
+
+        <exposureEventDetail id="im.call.agreementRequirement.1000000.completed">
+            <action>IM Call</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Completed</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="im.recall.agreementRequirement.2000000.completed">
+            <action>IM Recall</action>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <callStatus>Completed</callStatus>
+        </exposureEventDetail>
+
+        <assetBookingSummary id="asset.type.CASH.USD">
+            <assetType ref="cash.usd1.name"/>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="im.call.pending.autobook.1m">
+            <imCollateralValue>1,000,000.00</imCollateralValue>
+            <nominalAmount>1,000,000.00</nominalAmount>
+            <movement>Call</movement>
+            <status>Pending</status>
+            <bookingSource>Auto Book</bookingSource>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="im.recall.pending.autobook.2m">
+            <imCollateralValue>2,000,000.00</imCollateralValue>
+            <nominalAmount>2,000,000.00</nominalAmount>
+            <movement>Recall</movement>
+            <status>Pending</status>
+            <bookingSource>Auto Book</bookingSource>
+        </assetBookingSummary>
+
+    </scenarioData>
+</dataBean>

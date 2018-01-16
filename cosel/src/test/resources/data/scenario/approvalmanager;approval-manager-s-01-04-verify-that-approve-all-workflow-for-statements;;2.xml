@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/approvalManager.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+
+        <agreement id="agreement.statement.status.pending">
+            <principal>
+                <linkText id="agreement.statement.status.pending.principal" ref="org.p1.lname"/>
+            </principal>
+            <counterparty>
+                <linkText id="agreement.statement.status.pending.counterparty" ref="org.c1.lname"/>
+            </counterparty>
+            <agreementDescription id="agreement.statement.status.pending.description">T14409_Pending_Agreement</agreementDescription>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <agreementId id="agreement.statement.status.pending.id">1013</agreementId>
+        </agreement>
+
+        <agreement id="agreement.statement.status.amended">
+            <principal>
+                <linkText id="agreement.statement.status.amended.principal" ref="org.p1.lname"/>
+            </principal>
+            <counterparty>
+                <linkText id="agreement.statement.status.amended.counterparty" ref="org.c1.lname"/>
+            </counterparty>
+            <agreementDescription id="agreement.statement.status.amended.description">T14409_Amended_Agreement</agreementDescription>
+            <agreementStatus>Amended</agreementStatus>
+            <statementStatus>Amended</statementStatus>
+            <agreementId id="agreement.statement.status.amended.id">1014</agreementId>
+        </agreement>
+
+        <agreement id="agreement.statement.status.draft">
+            <principal>
+                <linkText id="agreement.statement.status.draft.1.principal" ref="org.p1.lname"/>
+            </principal>
+            <counterparty>
+                <linkText id="agreement.statement.status.draft.1.counterparty" ref="org.c1.lname"/>
+            </counterparty>
+            <agreementDescription id="agreement.statement.status.draft.1.description">T14409_Draft_Agreement</agreementDescription>
+            <agreementStatus>Draft</agreementStatus>
+            <statementStatus>Draft</statementStatus>
+            <agreementId id="agreement.statement.status.draft.1.id">1015</agreementId>
+        </agreement>
+
+        <agreement id="agreement.statement.status.in.progress">
+            <principal>
+                <linkText id="agreement.statement.status.in.progress.principal" ref="org.p1.lname"/>
+            </principal>
+            <counterparty>
+                <linkText id="agreement.statement.status.in.progress.counterparty" ref="org.c1.lname"/>
+            </counterparty>
+            <agreementDescription id="agreement.statement.status.in.progress.description">T14409_In_Progress_Agreement</agreementDescription>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>In Progress</statementStatus>
+            <agreementId id="agreement.statement.status.in.progress.id">1016</agreementId>
+        </agreement>
+
+        <agreement id="agreement.statement.status.stale.approval">
+            <principal>
+                <linkText id="agreement.statement.status.stale.approval.1.principal" ref="org.p1.lname"/>
+            </principal>
+            <counterparty>
+                <linkText id="agreement.statement.status.stale.approval.1.counterparty" ref="org.c1.lname"/>
+            </counterparty>
+            <agreementDescription id="agreement.statement.status.stale.approval.1.description">T14409_Stale.Approval_Agreement</agreementDescription>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Stale Approval</statementStatus>
+            <agreementId id="agreement.statement.status.stale.approval.1.id">1017</agreementId>
+        </agreement>
+
+        <approvalManagerStatementSearch id="approval.manager.statement.pending.search">
+            <principal>
+                <criteria>Exactly matching</criteria>
+                <filter ref="agreement.statement.status.pending.principal"/>
+                <linkText ref="agreement.statement.status.pending.principal"/>
+            </principal>
+            <counterparty>
+                <criteria>Exactly matching</criteria>
+                <filter ref="agreement.statement.status.pending.counterparty"/>
+                <linkText ref="agreement.statement.status.pending.counterparty"/>
+            </counterparty>
+            <description>
+                <type>Exactly matching</type>
+                <filter ref="agreement.statement.status.pending.description"/>
+                <linkText ref="agreement.statement.status.pending.description"/>
+            </description>
+            <status>Pending</status>
+            <systemId ref="agreement.statement.status.pending.id"/>
+        </approvalManagerStatementSearch>
+
+        <approvalManagerStatementSearch id="approval.manager.statement.amended.search">
+            <principal>
+                <criteria>Exactly matching</criteria>
+                <filter ref="agreement.statement.status.amended.principal"/>
+                <linkText ref="agreement.statement.status.amended.principal"/>
+            </principal>
+            <counterparty>
+                <criteria>Exactly matching</criteria>
+                <filter ref="agreement.statement.status.amended.counterparty"/>
+                <linkText ref="agreement.statement.status.amended.counterparty"/>
+            </counterparty>
+            <description>
+                <type>Exactly matching</type>
+                <filter ref="agreement.statement.status.amended.description"/>
+                <linkText ref="agreement.statement.status.amended.description"/>
+            </description>
+            <status>Amended</status>
+            <systemId ref="agreement.statement.status.amended.id"/>
+        </approvalManagerStatementSearch>
+
+        <approvalManagerStatementSearch id="approval.manager.statement.draft.search">
+            <principal>
+                <criteria>Exactly matching</criteria>
+                <filter ref="agreement.statement.status.draft.1.principal"/>
+                <linkText ref="agreement.statement.status.draft.1.principal"/>
+            </principal>
+            <counterparty>
+                <criteria>Exactly matching</criteria>
+                <filter ref="agreement.statement.status.draft.1.counterparty"/>
+                <linkText ref="agreement.statement.status.draft.1.counterparty"/>
+            </counterparty>
+            <description>
+                <type>Exactly matching</type>
+                <filter ref="agreement.statement.status.draft.1.description"/>
+                <linkText ref="agreement.statement.status.draft.1.description"/>
+            </description>
+            <status>Draft</status>
+            <systemId ref="agreement.statement.status.draft.1.id"/>
+        </approvalManagerStatementSearch>
+
+        <approvalManagerStatementSearch id="approval.manager.statement.in.progress.search">
+            <principal>
+                <criteria>Exactly matching</criteria>
+                <filter ref="agreement.statement.status.in.progress.principal"/>
+                <linkText ref="agreement.statement.status.in.progress.principal"/>
+            </principal>
+            <counterparty>
+                <criteria>Exactly matching</criteria>
+                <filter ref="agreement.statement.status.in.progress.counterparty"/>
+                <linkText ref="agreement.statement.status.in.progress.counterparty"/>
+            </counterparty>
+            <description>
+                <type>Exactly matching</type>
+                <filter ref="agreement.statement.status.in.progress.description"/>
+                <linkText ref="agreement.statement.status.in.progress.description"/>
+            </description>
+            <status>In Progress</status>
+            <systemId ref="agreement.statement.status.in.progress.id"/>
+        </approvalManagerStatementSearch>
+
+        <approvalManagerStatementSearch id="approval.manager.statement.stale.approval.search">
+            <principal>
+                <criteria>Exactly matching</criteria>
+                <filter ref="agreement.statement.status.stale.approval.1.principal"/>
+                <linkText ref="agreement.statement.status.stale.approval.1.principal"/>
+            </principal>
+            <counterparty>
+                <criteria>Exactly matching</criteria>
+                <filter ref="agreement.statement.status.stale.approval.1.counterparty"/>
+                <linkText ref="agreement.statement.status.stale.approval.1.counterparty"/>
+            </counterparty>
+            <description>
+                <type>Exactly matching</type>
+                <filter ref="agreement.statement.status.stale.approval.1.description"/>
+                <linkText ref="agreement.statement.status.stale.approval.1.description"/>
+            </description>
+            <status>Stale Approval</status>
+            <systemId ref="agreement.statement.status.stale.approval.1.id"/>
+        </approvalManagerStatementSearch>
+
+        <approvalManagerStatementSearchResult id="approval.manager.statement.approve.all">
+            <alertHandling>
+                <accept>true</accept>
+                <content>^Do you want to approve all\?$</content>
+            </alertHandling>
+        </approvalManagerStatementSearchResult>
+
+        <approvalManagerStatementSearchResult id="tick.search.result.approval.manager.statement.pending">
+            <principal ref="agreement.statement.status.pending.principal"/>
+            <counterparty ref="agreement.statement.status.pending.counterparty"/>
+            <description ref="agreement.statement.status.pending.description"/>
+            <agreementId ref="agreement.statement.status.pending.id"/>
+        </approvalManagerStatementSearchResult>
+
+        <approvalManagerStatementSearchResult id="tick.search.result.approval.manager.statement.amended">
+            <principal ref="agreement.statement.status.amended.principal"/>
+            <counterparty ref="agreement.statement.status.amended.counterparty"/>
+            <description ref="agreement.statement.status.amended.description"/>
+            <agreementId ref="agreement.statement.status.amended.id"/>
+        </approvalManagerStatementSearchResult>
+
+        <approvalManagerStatementSearchResult id="tick.search.result.approval.manager.statement.draft">
+            <principal ref="agreement.statement.status.draft.1.description"/>
+            <counterparty ref="agreement.statement.status.draft.1.counterparty"/>
+            <description ref="agreement.statement.status.draft.1.description"/>
+            <agreementId ref="agreement.statement.status.draft.1.id"/>
+        </approvalManagerStatementSearchResult>
+
+        <approvalManagerStatementSearchResult id="tick.search.result.approval.manager.statement.in.progress">
+            <principal ref="agreement.statement.status.in.progress.description"/>
+            <counterparty ref="agreement.statement.status.in.progress.counterparty"/>
+            <description ref="agreement.statement.status.in.progress.description"/>
+            <agreementId ref="agreement.statement.status.in.progress.id"/>
+        </approvalManagerStatementSearchResult>
+
+        <approvalManagerStatementSearchResult id="tick.search.result.approval.manager.statement.stale.approval">
+            <principal ref="agreement.statement.status.stale.approval.1.principal"/>
+            <counterparty ref="agreement.statement.status.stale.approval.1.counterparty"/>
+            <description ref="agreement.statement.status.stale.approval.1.description"/>
+            <agreementId ref="agreement.statement.status.stale.approval.1.id"/>
+        </approvalManagerStatementSearchResult>
+
+        <agreementSearch id="search.pending.agreement">
+            <principal>
+                <criteria>Exactly matching</criteria>
+                <filter ref="agreement.statement.status.pending.principal"/>
+                <linkText ref="agreement.statement.status.pending.principal"/>
+            </principal>
+            <counterparty>
+                <criteria>Exactly matching</criteria>
+                <filter ref="agreement.statement.status.pending.counterparty"/>
+                <linkText ref="agreement.statement.status.pending.counterparty"/>
+            </counterparty>
+            <description>
+                <type>Exactly matching</type>
+                <filter ref="agreement.statement.status.pending.description"/>
+                <linkText ref="agreement.statement.status.pending.description"/>
+            </description>
+            <systemId ref="agreement.statement.status.pending.id"/>
+        </agreementSearch>
+
+        <agreementSearch id="search.amended.agreement">
+            <principal>
+                <criteria>Exactly matching</criteria>
+                <filter ref="agreement.statement.status.amended.principal"/>
+                <linkText ref="agreement.statement.status.amended.principal"/>
+            </principal>
+            <counterparty>
+                <criteria>Exactly matching</criteria>
+                <filter ref="agreement.statement.status.amended.counterparty"/>
+                <linkText ref="agreement.statement.status.amended.counterparty"/>
+            </counterparty>
+            <description>
+                <type>Exactly matching</type>
+                <filter ref="agreement.statement.status.amended.description"/>
+                <linkText ref="agreement.statement.status.amended.description"/>
+            </description>
+            <systemId ref="agreement.statement.status.amended.id"/>
+        </agreementSearch>
+
+        <agreementSearch id="search.draft.agreement">
+            <principal>
+                <criteria>Exactly matching</criteria>
+                <filter ref="agreement.statement.status.draft.1.principal"/>
+                <linkText ref="agreement.statement.status.draft.1.principal"/>
+            </principal>
+            <counterparty>
+                <criteria>Exactly matching</criteria>
+                <filter ref="agreement.statement.status.draft.1.counterparty"/>
+                <linkText ref="agreement.statement.status.draft.1.counterparty"/>
+            </counterparty>
+            <description>
+                <type>Exactly matching</type>
+                <filter ref="agreement.statement.status.draft.1.description"/>
+                <linkText ref="agreement.statement.status.draft.1.description"/>
+            </description>
+            <systemId ref="agreement.statement.status.draft.1.id"/>
+        </agreementSearch>
+
+        <agreementSearch id="search.in.progress.agreement">
+            <principal>
+                <criteria>Exactly matching</criteria>
+                <filter ref="agreement.statement.status.in.progress.principal"/>
+                <linkText ref="agreement.statement.status.in.progress.principal"/>
+            </principal>
+            <counterparty>
+                <criteria>Exactly matching</criteria>
+                <filter ref="agreement.statement.status.in.progress.counterparty"/>
+                <linkText ref="agreement.statement.status.in.progress.counterparty"/>
+            </counterparty>
+            <description>
+                <type>Exactly matching</type>
+                <filter ref="agreement.statement.status.in.progress.description"/>
+                <linkText ref="agreement.statement.status.in.progress.description"/>
+            </description>
+            <systemId ref="agreement.statement.status.in.progress.id"/>
+        </agreementSearch>
+
+        <agreementSearch id="search.stale.approval.agreement">
+            <principal>
+                <criteria>Exactly matching</criteria>
+                <filter ref="agreement.statement.status.stale.approval.1.principal"/>
+                <linkText ref="agreement.statement.status.stale.approval.1.principal"/>
+            </principal>
+            <counterparty>
+                <criteria>Exactly matching</criteria>
+                <filter ref="agreement.statement.status.stale.approval.1.counterparty"/>
+                <linkText ref="agreement.statement.status.stale.approval.1.counterparty"/>
+            </counterparty>
+            <description>
+                <type>Exactly matching</type>
+                <filter ref="agreement.statement.status.stale.approval.1.description"/>
+                <linkText ref="agreement.statement.status.stale.approval.1.description"/>
+            </description>
+            <systemId ref="agreement.statement.status.stale.approval.1.id"/>
+        </agreementSearch>
+
+        <agreementSearchResult id="search.result.pending.agreement">
+            <principal ref="agreement.statement.status.pending.principal"/>
+            <counterparty ref="agreement.statement.status.pending.counterparty"/>
+            <description ref="agreement.statement.status.pending.description"/>
+            <agreementId ref="agreement.statement.status.pending.id"/>
+        </agreementSearchResult>
+
+        <agreementSearchResult id="search.result.amended.agreement">
+            <principal ref="agreement.statement.status.amended.principal"/>
+            <counterparty ref="agreement.statement.status.amended.counterparty"/>
+            <description ref="agreement.statement.status.amended.description"/>
+            <agreementId ref="agreement.statement.status.amended.id"/>
+        </agreementSearchResult>
+
+        <agreementSearchResult id="search.result.draft.agreement">
+            <principal ref="agreement.statement.status.draft.1.principal"/>
+            <counterparty ref="agreement.statement.status.draft.1.counterparty"/>
+            <description ref="agreement.statement.status.draft.1.description"/>
+            <agreementId ref="agreement.statement.status.draft.1.id"/>
+        </agreementSearchResult>
+
+        <agreementSearchResult id="search.result.in.progress.agreement">
+            <principal ref="agreement.statement.status.in.progress.principal"/>
+            <counterparty ref="agreement.statement.status.in.progress.counterparty"/>
+            <description ref="agreement.statement.status.in.progress.description"/>
+            <agreementId ref="agreement.statement.status.in.progress.id"/>
+        </agreementSearchResult>
+
+        <agreementSearchResult id="search.result.stale.approval.agreement">
+            <principal ref="agreement.statement.status.stale.approval.1.principal"/>
+            <counterparty ref="agreement.statement.status.stale.approval.1.counterparty"/>
+            <description ref="agreement.statement.status.stale.approval.1.description"/>
+            <agreementId ref="agreement.statement.status.stale.approval.1.id"/>
+        </agreementSearchResult>
+
+        <agreementSearchResult id="search.result.stale.approval.agreement.2">
+            <principal ref="agreement.statement.status.stale.approval.2.principal"/>
+            <counterparty ref="agreement.statement.status.stale.approval.2.counterparty"/>
+            <description ref="agreement.statement.status.stale.approval.2.description"/>
+            <agreementId ref="agreement.statement.status.stale.approval.2.id"/>
+        </agreementSearchResult>
+
+        <agreementStatement id="agreement.statement.status.is.approved">
+            <agreementAdmin>
+                <statementStatus>Approved</statementStatus>
+            </agreementAdmin>
+        </agreementStatement>
+
+        <agreementStatement id="agreement.statement.status.is.amended">
+            <agreementAdmin>
+                <statementStatus>Amended</statementStatus>
+            </agreementAdmin>
+        </agreementStatement>
+
+        <agreementStatement id="agreement.statement.status.is.pending">
+            <agreementAdmin>
+                <statementStatus>Pending</statementStatus>
+            </agreementAdmin>
+        </agreementStatement>
+
+        <agreementStatement id="agreement.statement.status.is.draft">
+            <agreementAdmin>
+                <statementStatus>Draft</statementStatus>
+            </agreementAdmin>
+        </agreementStatement>
+
+        <agreementStatement id="agreement.statement.status.is.in.progress">
+            <agreementAdmin>
+                <statementStatus>In Progress</statementStatus>
+            </agreementAdmin>
+        </agreementStatement>
+
+    </scenarioData>
+</dataBean>

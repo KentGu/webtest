@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+		<eligibilityRulesTemplate id="eligibility.rule.template.with.cl.trigger.5000.bond.cl.rule.instrument.holding.max.value.100.cash.no.cl.rule">
+			<templateName id="eligibility.template.name" random="true"/>
+			<concentrationLimitTrigger>5000</concentrationLimitTrigger>
+			<collateralAssetClass>
+				<collateralAssetClassName>qtp_bond</collateralAssetClassName>
+				<collateralAssetType>
+					<collateralAssetTypeName>qtp_bond_usd</collateralAssetTypeName>
+					<concentrationLimitRule>
+						<rule>Instrument Holding</rule>
+						<method>Max Value</method>
+						<value>100</value>
+					</concentrationLimitRule>
+				</collateralAssetType>
+			</collateralAssetClass>
+			<collateralAssetClass>
+				<collateralAssetClassName>qtp_cash</collateralAssetClassName>
+				<collateralAssetType>
+					<collateralAssetTypeName>qtp_cash_usd</collateralAssetTypeName>
+				</collateralAssetType>
+			</collateralAssetClass>
+		</eligibilityRulesTemplate>
+
+
+		<instrument id="bond.instrument.with.bond.usd.issuerance.10.dirty.price.100">
+			<assetClass>qtp_bond</assetClass>
+			<assetType>qtp_bond_usd</assetType>
+			<instrumentId>
+				<value id="bondinstrument.id" random="true"/>
+			</instrumentId>
+			<description id="bondinstrument.desc" random="true"/>
+			<issuer>
+				<filter>QTP_Eligible_Issuer4</filter>
+				<linkText>QTP_Eligible_Issuer4</linkText>
+			</issuer>
+			<maturityDate>T+100</maturityDate>
+			<priceSource>
+				<priceSourceName>Default</priceSourceName>
+				<dirtyPrice>100</dirtyPrice>
+				<lastPriceChange>T</lastPriceChange>
+				<priceDate>T</priceDate>
+			</priceSource>
+			<couponRate>0</couponRate>
+			<issueDate>T</issueDate>
+			<outstandingIssuance>10</outstandingIssuance>
+			<securityStatus>Approved</securityStatus>
+		</instrument>
+
+		<instrument id="equity.instrument.with.equity.usd.price.1">
+			<assetClass>qtp_equity</assetClass>
+			<assetType>qtp_equity_usd</assetType>
+			<instrumentId>
+				<value id="equityinstrument.id" random="true"/>
+			</instrumentId>
+			<description id="equityinstrument.desc" random="true"/>
+			<issuer>
+				<filter>QTP_Eligible_Issuer4</filter>
+				<linkText>QTP_Eligible_Issuer4</linkText>
+			</issuer>
+			<maturityDate>T+100</maturityDate>
+			<priceSource>
+				<priceSourceName>Default</priceSourceName>
+				<dirtyPrice>1</dirtyPrice>
+				<lastPriceChange>T</lastPriceChange>
+				<priceDate>T</priceDate>
+			</priceSource>
+			<issueDate>T</issueDate>
+			<securityStatus>Approved</securityStatus>
+		</instrument>
+
+
+		<agreement id="otc.net.agreement.with.cl.trigger.2000.rule.template.above.bond.usd.cl.rule.issurance.holding.min.issuance.100.equity.usd.cl.rule.type.holding.max.value.1000">
+			<principal id="p1">
+				<criteria>Containing</criteria>
+				<type>Code</type>
+				<filter ref="org.p1.lname"/>
+				<linkText ref="org.p1.lname"/>
+			</principal>
+			<counterparty id="c">
+				<criteria>Containing</criteria>
+				<type>Long Name</type>
+				<filter ref="org.c1.lname"/>
+				<linkText ref="org.c1.lname"/>
+			</counterparty>
+			<agreementDescription id="agr.desc" random="true"/>
+			<agreementDate>T</agreementDate>
+			<baseCurrency>USD</baseCurrency>
+			<callFrequency>
+				<legalReviewFrequency>Daily</legalReviewFrequency>
+			</callFrequency>
+			<holidayCentre ref="hc.europe.name"/>
+			<product id="p">
+				<productName ref="product.test1.name"/>
+			</product>
+			<concentrationLimitTrigger>2000</concentrationLimitTrigger>
+			<eligibilityRulesTemplate ref="eligibility.template.name"/>
+			<collateralAssetClass>
+				<collateralAssetClassName>qtp_bond</collateralAssetClassName>
+				<collateralAssetType>
+					<collateralAssetTypeName>qtp_bond_usd</collateralAssetTypeName>
+					<templateVsAgreementEligibilityRules>Template + Agreement</templateVsAgreementEligibilityRules>
+					<concentrationLimitRule>
+						<rule>Issuance Holding</rule>
+						<method>Min Issuance</method>
+						<value>100</value>
+					</concentrationLimitRule>
+				</collateralAssetType>
+			</collateralAssetClass>
+
+			<collateralAssetClass>
+				<collateralAssetClassName>qtp_equity</collateralAssetClassName>
+				<collateralAssetType>
+					<collateralAssetTypeName>qtp_equity_usd</collateralAssetTypeName>
+					<templateVsAgreementEligibilityRules>Template + Agreement</templateVsAgreementEligibilityRules>
+					<concentrationLimitRule>
+						<rule>Type Holding</rule>
+						<method>Max Value</method>
+						<value>1000</value>
+					</concentrationLimitRule>
+				</collateralAssetType>
+			</collateralAssetClass>
+
+
+			<settlementBucket>
+				<bookingType>Net</bookingType>
+				<direction>Call/Return</direction>
+				<bucket>
+					<filter ref="payInstrBucket.vcr.name"/>
+					<linkText ref="payInstrBucket.vcr.name"/>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>Net</bookingType>
+				<direction>Delivery/Recall</direction>
+				<bucket>
+					<filter ref="payInstrBucket.vrd.name"/>
+					<linkText ref="payInstrBucket.vrd.name"/>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>Interest</bookingType>
+				<direction>Pay</direction>
+				<bucket>
+					<filter ref="payInstrBucket.pay.name"/>
+					<linkText ref="payInstrBucket.pay.name"/>
+				</bucket>
+			</settlementBucket>
+			<settlementBucket>
+				<bookingType>Interest</bookingType>
+				<direction>Receive</direction>
+				<bucket>
+					<filter ref="payInstrBucket.rec.name"/>
+					<linkText ref="payInstrBucket.rec.name"/>
+				</bucket>
+			</settlementBucket>
+			<letterAndDeliveryGroupDetails>
+				<letterDistributionMedium>Email</letterDistributionMedium>
+			</letterAndDeliveryGroupDetails>
+			<agreementStatus>Pending</agreementStatus>
+			<agreementStatus>Approved</agreementStatus>
+			<statementStatus>Pending</statementStatus>
+			<statementStatus>Approved</statementStatus>
+			<agreementId id="agmt.id"/>
+		</agreement>
+
+		<agreementSearch id="search.agreement.by.agreement.description">
+			<description>
+				<filter ref="agr.desc"/>
+			</description>
+		</agreementSearch>
+
+		<agreementSearchResult id="agreement.search.result">
+			<description ref="agr.desc"/>
+		</agreementSearchResult>
+
+		<assetBookingSummary id="bond.type">
+			<assetType>qtp_bond_usd</assetType>
+		</assetBookingSummary>
+
+		<assetBookingSummary id="equity.type">
+			<assetType>qtp_equity_usd</assetType>
+		</assetBookingSummary>
+
+		<assetBookingSummary id="cash.type">
+			<assetType>qtp_cash_usd</assetType>
+		</assetBookingSummary>
+
+		<bookingDetail id="booking.with.bond.intrument.amount.2000.call">
+			<instrumentSearch>
+				<instrumentId>
+					<filter ref="bondinstrument.id"/>
+				</instrumentId>
+				<linkText ref="bondinstrument.id"/>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>2000</nominalAmount>
+					<movement>Call</movement>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+		<bookingDetail id="booking.with.equity.intrument.amount.2000.call">
+			<instrumentSearch>
+				<instrumentId>
+					<filter ref="equityinstrument.id"/>
+				</instrumentId>
+				<linkText ref="equityinstrument.id"/>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>2000</nominalAmount>
+					<movement>Call</movement>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+		<bookingDetail id="booking.with.cash.usd.amount.1000.call">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>1000</nominalAmount>
+					<movement>Call</movement>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+
+
+		<agreement id="agreement.new.created.above.will.be.approved.from.amended.status">
+			<statementStatus>Approved</statementStatus>
+		</agreement>
+
+		<concentrationLimitBreached id="breached.rule.with.rule.issuance.holding.method.min.issuance.rule.value.100.actual.10.source.agreement">
+			<isDisplayed>true</isDisplayed>
+			<rule>Issuance Holding</rule>
+			<method>Min Issuance</method>
+			<ruleValue>100.00</ruleValue>
+			<actualValue>10.00</actualValue>
+			<source>Agreement</source>
+		</concentrationLimitBreached>
+
+		<concentrationLimitBreached id="breached.rule.with.rule.issuance.holding.method.min.issuance.rule.value.1000.actual.2000.source.agreement">
+			<isDisplayed>true</isDisplayed>
+			<rule>Type Holding</rule>
+			<method>Max Value</method>
+			<ruleValue>1,000.00</ruleValue>
+			<actualValue>2,000.00</actualValue>
+			<source>Agreement</source>
+		</concentrationLimitBreached>
+
+
+		<concentrationLimitBreached id="no.breached.rule">
+			<isDisplayed>false</isDisplayed>
+			<element>qtp_cash_usd</element>
+		</concentrationLimitBreached>
+
+
+		<concentrationLimitBreached id="breached.rule.with.rule.issuance.holding.method.min.issuance.rule.value.1000.actual.4000.source.agreement">
+			<isDisplayed>true</isDisplayed>
+			<rule>Type Holding</rule>
+			<method>Max Value</method>
+			<ruleValue>1,000.00</ruleValue>
+			<actualValue>4,000.00</actualValue>
+			<source>Agreement</source>
+		</concentrationLimitBreached>
+
+
+		<bookingDetail id="booking.with.bond.intrument.amount.4000.call">
+			<instrumentSearch>
+				<instrumentId>
+					<filter ref="bondinstrument.id"/>
+				</instrumentId>
+				<linkText ref="bondinstrument.id"/>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>4000</nominalAmount>
+					<movement>Call</movement>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+		<concentrationLimitBreached id="breached.rule.with.rule.instrument.holding.method.max.value.rule.value.100.actual.6000.source.t1">
+			<isDisplayed>true</isDisplayed>
+			<rule>Instrument Holding</rule>
+			<method>Max Value</method>
+			<ruleValue>100.00</ruleValue>
+			<actualValue>6,000.00</actualValue>
+			<source ref="eligibility.template.name"/>
+		</concentrationLimitBreached>
+
+		<concentrationLimitBreached id="breached.rule.with.rule.issuance.holding.method.min.issuance.rule.value.100.actual.0.source.agreement">
+			<isDisplayed>true</isDisplayed>
+			<rule>Issuance Holding</rule>
+			<method>Min Issuance</method>
+			<ruleValue>100.00</ruleValue>
+			<actualValue>0.00</actualValue>
+			<source>Agreement</source>
+		</concentrationLimitBreached>
+
+		<concentrationLimitBreached id="breached.rule.with.rule.type.holding.method.max.value.rule.value.1000.actual.4000.source.agreement">
+			<isDisplayed>true</isDisplayed>
+			<rule>Type Holding</rule>
+			<method>Max Value</method>
+			<ruleValue>1,000.00</ruleValue>
+			<actualValue>4,000.00</actualValue>
+			<source>Agreement</source>
+		</concentrationLimitBreached>
+
+
+
+
+
+
+
+	</scenarioData>
+</dataBean>

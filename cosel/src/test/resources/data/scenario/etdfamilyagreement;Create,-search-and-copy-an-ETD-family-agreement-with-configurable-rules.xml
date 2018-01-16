@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/ETDFamilyAgreement.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <agreementSearch id="etd.familyAgrmt.search">
+            <description>
+                <filter ref="agr.desc.family"/>
+            </description>
+            <familyAgreement>Yes</familyAgreement>
+            <configurableRule>Yes</configurableRule>
+        </agreementSearch>
+
+        <agreementSearchResult id="etd.familyAgrmt.search.result">
+            <description ref="agr.desc.family"/>
+        </agreementSearchResult>
+
+        <agreementSearchResult id="etd.familyAgrmt.search.draft.result">
+            <description ref="agr.desc.family"/>
+            <status>Draft</status>
+        </agreementSearchResult>
+
+        <agreement id="family.configurableRule.etd.agreement">
+            <agreementId id="agreement.id.configRule" random="true"/>
+            <principal>
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter>QTPPrincipal</filter>
+                <linkText>QTPPrincipal</linkText>
+            </principal>
+            <counterparty>
+                <criteria>Containing</criteria>
+                <type>Long Name</type>
+                <filter>QTPCounterparty</filter>
+                <linkText>QTPCounterparty</linkText>
+            </counterparty>
+            <businessLine>ETD</businessLine>
+            <principalRole>Member</principalRole>
+            <familyAgreement>true</familyAgreement>
+            <configurableRule>true</configurableRule>
+            <agreedJurisdiction>
+                <filter>EMIR</filter>
+                <linkText>EMIR</linkText>
+            </agreedJurisdiction>
+            <ccp ref="ccp.lch.name"/>
+            <agreementDescription id="agr.desc.family" random="true"/>
+            <agreementName random="true"/>
+            <externalId id="agr.desc.family.ext" random="true"/>
+            <baseCurrency>GBP</baseCurrency>
+            <agreementDate>T</agreementDate>
+            <callFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </callFrequency>
+            <holidayCentre ref="hc.europe.name"/>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+        </agreement>
+    </scenarioData>
+</dataBean>

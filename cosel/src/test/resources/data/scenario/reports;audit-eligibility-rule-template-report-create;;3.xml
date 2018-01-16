@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <eligibilityRulesTemplate id="audit.eligibility.rule.template.with.assetclassifacation.create">
+            <templateName id="audit.eligibility.rule.template.name" random="true" prefix="temp_" />
+            <nettingIAandMtM>Not-Net</nettingIAandMtM>
+            <gracePeriod>0</gracePeriod>
+            <assetClassification>
+                <value>auditEligibilityRuleCreateClassification</value>
+                <assetClassificationAlertHandling>
+                    <accept>true</accept>
+                </assetClassificationAlertHandling>
+            </assetClassification>
+            <concentrationLimitTrigger>1000</concentrationLimitTrigger>
+            <concentrationLimitBreachAdjustment>Asset Adjustment</concentrationLimitBreachAdjustment>
+            <useIssueRating>true</useIssueRating>
+            <useIssuerRating>true</useIssuerRating>
+            <applicableAgencies>true</applicableAgencies>
+            <referenceRatingAgencies>Fitch</referenceRatingAgencies>
+            <referenceRatingAgencies>MOODYS</referenceRatingAgencies>
+            <debtClassification>SUB</debtClassification>
+            <selectionOfAgenciesUse>3</selectionOfAgenciesUse>
+            <selectionofAgenciesUseDirection>Lower</selectionofAgenciesUseDirection>
+            <applicationOfRatings>Higher</applicationOfRatings>
+            <collateralAssetClassification>
+                <assetCategoryName>category1</assetCategoryName>
+                <applicableParty>P</applicableParty>
+                <applicableParty>C</applicableParty>
+                <applicableType>VM</applicableType>
+                <applicableType>IM</applicableType>
+                <haircutRule>
+                    <haircutSchedule>
+                        <haircutRule>fixed</haircutRule>
+                        <fixedValuation>89</fixedValuation>
+                    </haircutSchedule>
+                    <haircutAdjustment>
+                        <type>Adjust</type>
+                        <instrumentField>Currency</instrumentField>
+                        <rule>Equal</rule>
+                        <value>
+                            <filter>Principal Transfer Currency</filter>
+                            <linkText>Principal Transfer Currency</linkText>
+                        </value>
+                        <operation>Add</operation>
+                        <valuationPercentage>10</valuationPercentage>
+                    </haircutAdjustment>
+                    <!--<haircutAdjustment>-->
+                        <!--<type>Override</type>-->
+                        <!--<instrumentField>InstrumentId</instrumentField>-->
+                        <!--<rule>NotEqual</rule>-->
+                        <!--<value>-->
+                            <!--<filter>qtp_Bond_Instrument</filter>-->
+                            <!--<linkText>qtp_Bond_Instrument(qtp_Market)</linkText>-->
+                        <!--</value>-->
+                        <!--<valuationPercentage>80</valuationPercentage>-->
+                    <!--</haircutAdjustment>-->
+                </haircutRule>
+                <eligibilityRule>
+                    <minimumEligibilityRating>
+                        <agency>SandP</agency>
+                        <rating>A-</rating>
+                    </minimumEligibilityRating>
+                    <minimumEligibilityRating>
+                        <agency>MOODYS</agency>
+                        <rating>B1</rating>
+                    </minimumEligibilityRating>
+                    <minimumEligibilityRating>
+                        <agency>Fitch</agency>
+                        <rating>C</rating>
+                    </minimumEligibilityRating>
+                    <ratingEligibilityMethod>OR</ratingEligibilityMethod>
+                    <minEligibilityCqs>3</minEligibilityCqs>
+                    <issueDate>01/11/2016</issueDate>
+                    <maturityBasis>Residual</maturityBasis>
+                    <maturityTimeType>Days</maturityTimeType>
+                    <maturityTimeValue>3</maturityTimeValue>
+                    <roleCorrelation>Branch</roleCorrelation>
+                    <ultimateParentCorrelation>true</ultimateParentCorrelation>
+                    <closeLinkCorrelation>true</closeLinkCorrelation>
+                    <industryCorrelation>true</industryCorrelation>
+                    <!--<udfRule>-->
+                    <!--<securityUdf></securityUdf>-->
+                    <!--<eligibilityRule></eligibilityRule>-->
+                    <!--<value></value>-->
+                    <!--</udfRule>-->
+                    <eligibleCurrency>USD</eligibleCurrency>
+                    <eligibleCountry>CANADA</eligibleCountry>
+                    <eligibleIssuer>
+                        <filter>QTP_Eligible_Issuer</filter>
+                        <linkText>QTP_Eligible_Issuer</linkText>
+                    </eligibleIssuer>
+                    <excludeInstrument>
+                        <filter>qtp_Bond_Instrument</filter>
+                        <linkText>qtp_Bond_Instrument,qtp_Market</linkText>
+                    </excludeInstrument>
+                </eligibilityRule>
+                <concentrationLimitRule>
+                    <trigger>1k</trigger>
+                    <currency>GBP</currency>
+                    <rule>Instrument Holding</rule>
+                    <to>A3/A-</to>
+                    <method>Max %</method>
+                    <value>78</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule>
+                    <trigger>2k</trigger>
+                    <currency>EUR</currency>
+                    <rule>Category Holding</rule>
+                    <to>B2/B</to>
+                    <method>Max Value</method>
+                    <value>78999</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule>
+                    <trigger>3k</trigger>
+                    <currency>USD</currency>
+                    <rule>Issuance Holding</rule>
+                    <to>B3/B-</to>
+                    <method>Min Issuance</method>
+                    <value>2m</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule>
+                    <trigger>4k</trigger>
+                    <currency>TND</currency>
+                    <rule>Issuer Holding</rule>
+                    <to>Ca/CC</to>
+                    <method>Max Value</method>
+                    <value>9m</value>
+                </concentrationLimitRule>
+            </collateralAssetClassification>
+            <templateLevelConcentrationLimitRules>
+                <assetCategories>
+                    <filter>category1</filter>
+                    <linkText>category1</linkText>
+                </assetCategories>
+                <trigger>2222</trigger>
+                <currency>GBP</currency>
+                <rule>Category Holding</rule>
+                <method>Max %</method>
+                <value>100</value>
+            </templateLevelConcentrationLimitRules>
+            <templateLevelConcentrationLimitRules>
+                <trigger>1111</trigger>
+                <currency>USD</currency>
+                <rule>Instrument Holding</rule>
+                <to>A2/A</to>
+                <method>Max Value</method>
+                <value>1M</value>
+            </templateLevelConcentrationLimitRules>
+            <templateLevelConcentrationLimitRules>
+                <trigger>3333</trigger>
+                <currency>JPY</currency>
+                <rule>Industry Holding</rule>
+                <to>A3/A-</to>
+                <method>Max Value</method>
+                <value>2M</value>
+            </templateLevelConcentrationLimitRules>
+        </eligibilityRulesTemplate>
+
+        <auditEligibilityRuleTemplateReportFilter id="audit.eligibility.rule.by.tempalte">
+            <template ref="audit.eligibility.rule.template.name"/>
+            <startDate>t-1000</startDate>
+        </auditEligibilityRuleTemplateReportFilter>
+        <variable id="auditReportPath" />
+        <reportValidationRules id="reportRule">
+        </reportValidationRules>
+    </scenarioData>
+</dataBean>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+
+
+        <taskSchedulerDetail id="task.scheduler.import.flush.etd.balances">
+            <type>Task Manager</type>
+            <taskName>Import ETD Balances</taskName>
+            <additionalInfo id="task.import.delta.etd.balances.server.path">/home/ec2-user/TaskScheduler/ImportETDBalances</additionalInfo>
+        </taskSchedulerDetail>
+
+        <feedEtdBalances id="task.feed.etd.balances">
+            <agreement_id>a</agreement_id>
+            <legal_id></legal_id>
+            <principal></principal>
+            <counterparty></counterparty>
+            <system></system>
+            <prin_branch></prin_branch>
+            <cpty_branch></cpty_branch>
+            <model></model>
+            <modelCategory></modelCategory>
+            <coupon>b</coupon>
+            <pai>c</pai>
+            <upfrontFee>d</upfrontFee>
+            <unrealisedPandLCleared>e</unrealisedPandLCleared>
+            <realisedPandLCleared>f</realisedPandLCleared>
+            <totalFeesCleared>g</totalFeesCleared>
+            <realisedPandLETD>h</realisedPandLETD>
+            <commissionAndFees>i</commissionAndFees>
+            <openingBalance>j</openingBalance>
+            <optionPremium>k</optionPremium>
+            <cashAmounts>l</cashAmounts>
+            <OTE>m</OTE>
+            <LOV>n</LOV>
+            <SOV>o</SOV>
+            <IMR>p</IMR>
+            <MMR>q</MMR>
+            <IM_SecuritiesBalance>r</IM_SecuritiesBalance>
+            <IM_CashBalance>s</IM_CashBalance>
+            <IM_DCVM>t</IM_DCVM>
+            <DFR>u</DFR>
+            <DF_Securities_Balance>v</DF_Securities_Balance>
+            <DF_Cash_Balance>w</DF_Cash_Balance>
+        </feedEtdBalances>
+
+        <feedEtdBalances id="feed.modified.incorrect.staging.report">
+            <rowNumber>2</rowNumber>
+            <failureReason ref="failure.reason1"/>
+            <agreement_id></agreement_id>
+            <legal_id>F13658AgrForETDBalanceExtId</legal_id>
+            <principal></principal>
+            <counterparty></counterparty>
+            <system></system>
+            <prin_branch></prin_branch>
+            <cpty_branch></cpty_branch>
+            <model>model1</model>
+            <modelCategory></modelCategory>
+            <coupon>100</coupon>
+            <pai>200</pai>
+            <upfrontFee>300</upfrontFee>
+            <unrealisedPandLCleared>400</unrealisedPandLCleared>
+            <realisedPandLCleared>500</realisedPandLCleared>
+            <totalFeesCleared>600</totalFeesCleared>
+            <realisedPandLETD>700</realisedPandLETD>
+            <commissionAndFees>800</commissionAndFees>
+            <openingBalance>900</openingBalance>
+            <optionPremium>1000</optionPremium>
+            <cashAmounts>1100</cashAmounts>
+            <OTE>1200</OTE>
+            <LOV>1300</LOV>
+            <SOV>1400</SOV>
+            <IMR>1500</IMR>
+            <MMR>1600</MMR>
+            <IM_SecuritiesBalance>1700</IM_SecuritiesBalance>
+            <IM_CashBalance>1800</IM_CashBalance>
+            <IM_DCVM>1900</IM_DCVM>
+            <DFR>2000</DFR>
+            <DF_Securities_Balance>2100</DF_Securities_Balance>
+            <DF_Cash_Balance>2200</DF_Cash_Balance>
+        </feedEtdBalances>
+
+        <feedEtdBalances id="feed.modified.correct.staging.report">
+            <rowNumber>2</rowNumber>
+            <failureReason ref="failure.reason2"/>
+            <agreement_id></agreement_id>
+            <legal_id>F13658AgrForETDBalanceExtId</legal_id>
+            <principal></principal>
+            <counterparty></counterparty>
+            <system></system>
+            <prin_branch></prin_branch>
+            <cpty_branch></cpty_branch>
+            <model>model1</model>
+            <modelCategory>sec</modelCategory>
+            <coupon>100</coupon>
+            <pai>200</pai>
+            <upfrontFee>300</upfrontFee>
+            <unrealisedPandLCleared>400</unrealisedPandLCleared>
+            <realisedPandLCleared>500</realisedPandLCleared>
+            <totalFeesCleared>600</totalFeesCleared>
+            <realisedPandLETD>700</realisedPandLETD>
+            <commissionAndFees>800</commissionAndFees>
+            <openingBalance>900</openingBalance>
+            <optionPremium>1000</optionPremium>
+            <cashAmounts>1100</cashAmounts>
+            <OTE>1200</OTE>
+            <LOV>1300</LOV>
+            <SOV>1400</SOV>
+            <IMR>1500</IMR>
+            <MMR>1600</MMR>
+            <IM_SecuritiesBalance>1700</IM_SecuritiesBalance>
+            <IM_CashBalance>1800</IM_CashBalance>
+            <IM_DCVM>1900</IM_DCVM>
+            <DFR></DFR>
+            <DF_Securities_Balance></DF_Securities_Balance>
+            <DF_Cash_Balance></DF_Cash_Balance>
+        </feedEtdBalances>
+
+        <variable id="file.name"/>
+
+        <variable id="badStagingFeedReportPath"/>
+
+        <reportValidationRules id="reportRule1">
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field><fieldName>Row number</fieldName><value>2</value></field>
+                <field><fieldName>Failure reason</fieldName><value id="failure.reason1">[Column: 1] agreementId - Unable to parse 'a' as number | [Column: 8] model - Field is compulsory but no value was found | [Column: 9] modelCategory - Field is compulsory but no value was found | [Column: 10] coupon - Unable to parse 'b' as number | [Column: 11] pai - Unable to parse 'c' as number | [Column: 12] upfrontFee - Unable to parse 'd' as number | [Column: 13] unrealisedPandLCleared - Unable to parse 'e' as number | [Column: 14] realisedPandLCleared - Unable to parse 'f' as number | [Column: 15] totalFeesCleared - Unable to parse 'g' as number | [Column: 16] realisedPandLETD - Unable to parse 'h' as number | [Column: 17] commissionAndFees - Unable to parse 'i' as number | [Column: 18] openingBalance - Unable to parse 'j' as number | [Column: 19] optionPremium - Unable to parse 'k' as number | [Column: 20] cashAmounts - Unable to parse 'l' as number | [Column: 21] ote - Unable to parse 'm' as number | [Column: 22] lov - Unable to parse 'n' as number | [Column: 23] sov - Unable to parse 'o' as number | [Column: 24] imr - Unable to parse 'p' as number | [Column: 25] mmr - Unable to parse 'q' as number | [Column: 26] imSecuritiesBalance - Unable to parse 'r' as number | [Column: 27] imCashBalance - Unable to parse 's' as number | [Column: 28] imDcvm - Unable to parse 't' as number | [Column: 29] dfr - Unable to parse 'u' as number | [Column: 30] dfSecuritiesBalance - Unable to parse 'v' as number | [Column: 31] dfCashBalance - Unable to parse 'w' as number</value></field>
+                <field><fieldName>agreement_id</fieldName><value>a</value></field>
+                <field><fieldName>legal_id</fieldName><value></value></field>
+                <field><fieldName>principal</fieldName><value></value></field>
+                <field><fieldName>counterparty</fieldName><value></value></field>
+                <field><fieldName>system</fieldName><value></value></field>
+                <field><fieldName>prin_branch</fieldName><value></value></field>
+                <field><fieldName>cpty_branch</fieldName><value></value></field>
+                <field><fieldName>model</fieldName><value></value></field>
+                <field><fieldName>modelCategory</fieldName><value></value></field>
+                <field><fieldName>coupon</fieldName><value>b</value></field>
+                <field><fieldName>pai</fieldName><value>c</value></field>
+                <field><fieldName>upfrontFee</fieldName><value>d</value></field>
+                <field><fieldName>unrealisedPandLCleared</fieldName><value>e</value></field>
+                <field><fieldName>realisedPandLCleared</fieldName><value>f</value></field>
+                <field><fieldName>totalFeesCleared</fieldName><value>g</value></field>
+                <field><fieldName>realisedPandLETD</fieldName><value>h</value></field>
+                <field><fieldName>commissionAndFees</fieldName><value>i</value></field>
+                <field><fieldName>openingBalance</fieldName><value>j</value></field>
+                <field><fieldName>optionPremium</fieldName><value>k</value></field>
+                <field><fieldName>cashAmounts</fieldName><value>l</value></field>
+                <field><fieldName>OTE</fieldName><value>m</value></field>
+                <field><fieldName>LOV</fieldName><value>n</value></field>
+                <field><fieldName>SOV</fieldName><value>o</value></field>
+                <field><fieldName>IMR</fieldName><value>p</value></field>
+                <field><fieldName>MMR</fieldName><value>q</value></field>
+                <field><fieldName>IM_SecuritiesBalance</fieldName><value>r</value></field>
+                <field><fieldName>IM_CashBalance</fieldName><value>s</value></field>
+                <field><fieldName>IM_DCVM</fieldName><value>t</value></field>
+                <field><fieldName>DFR</fieldName><value>u</value></field>
+                <field><fieldName>DF_Securities_Balance</fieldName><value>v</value></field>
+                <field><fieldName>DF_Cash_Balance</fieldName><value>w</value></field>
+            </reportValidationRule>
+        </reportValidationRules>
+
+        <reportValidationRules id="reportRule2">
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field><fieldName>Row number</fieldName><value>2</value></field>
+                <field><fieldName>Failure reason</fieldName><value id="failure.reason2">[Column: 9] modelCategory - Field is compulsory but no value was found</value></field>
+                <field><fieldName>agreement_id</fieldName><value></value></field>
+                <field><fieldName>legal_id</fieldName><value>F13658AgrForETDBalanceExtId</value></field>
+                <field><fieldName>principal</fieldName><value></value></field>
+                <field><fieldName>counterparty</fieldName><value></value></field>
+                <field><fieldName>system</fieldName><value></value></field>
+                <field><fieldName>prin_branch</fieldName><value></value></field>
+                <field><fieldName>cpty_branch</fieldName><value></value></field>
+                <field><fieldName>model</fieldName><value>model1</value></field>
+                <field><fieldName>modelCategory</fieldName><value></value></field>
+                <field><fieldName>coupon</fieldName><value>100</value></field>
+                <field><fieldName>pai</fieldName><value>200</value></field>
+                <field><fieldName>upfrontFee</fieldName><value>300</value></field>
+                <field><fieldName>unrealisedPandLCleared</fieldName><value>400</value></field>
+                <field><fieldName>realisedPandLCleared</fieldName><value>500</value></field>
+                <field><fieldName>totalFeesCleared</fieldName><value>600</value></field>
+                <field><fieldName>realisedPandLETD</fieldName><value>700</value></field>
+                <field><fieldName>commissionAndFees</fieldName><value>800</value></field>
+                <field><fieldName>openingBalance</fieldName><value>900</value></field>
+                <field><fieldName>optionPremium</fieldName><value>1000</value></field>
+                <field><fieldName>cashAmounts</fieldName><value>1100</value></field>
+                <field><fieldName>OTE</fieldName><value>1200</value></field>
+                <field><fieldName>LOV</fieldName><value>1300</value></field>
+                <field><fieldName>SOV</fieldName><value>1400</value></field>
+                <field><fieldName>IMR</fieldName><value>1500</value></field>
+                <field><fieldName>MMR</fieldName><value>1600</value></field>
+                <field><fieldName>IM_SecuritiesBalance</fieldName><value>1700</value></field>
+                <field><fieldName>IM_CashBalance</fieldName><value>1800</value></field>
+                <field><fieldName>IM_DCVM</fieldName><value>1900</value></field>
+                <field><fieldName>DFR</fieldName><value>2000</value></field>
+                <field><fieldName>DF_Securities_Balance</fieldName><value>2100</value></field>
+                <field><fieldName>DF_Cash_Balance</fieldName><value>2200</value></field>
+            </reportValidationRule>
+        </reportValidationRules>
+
+        <badStagingFeedReportFilter id="search.by.feed.etd.balances">
+            <feedTask>Feed ETD Balances</feedTask>
+        </badStagingFeedReportFilter>
+
+        <taskSchedulerMessage id="feed.csv.successful">
+            <message>Market Data: Import ETD Balances: Imported 1 ETD Balances from :(\S+).csv</message>
+        </taskSchedulerMessage>
+
+        <agreementSearch id = "search.agr.for.etd.balances.feed">
+            <description>
+                <filter>F13658AgrForETDBalanceDesc</filter>
+                <linkText>F13658AgrForETDBalanceDesc</linkText>
+            </description>
+        </agreementSearch>
+
+        <agreementSearchResult id = "search.agr.for.etd.balances.feed.result">
+            <externalId>F13658AgrForETDBalanceExtId</externalId>
+        </agreementSearchResult>
+
+        <!--<multiModelAgreementStatement>-->
+        <!--<multimodelAssetHoldingSummary>-->
+        <!--<modelName-->
+        <!--<-->
+        <!--</multimodelAssetHoldingSummary>-->
+        <!--</multiModelAgreementStatement>-->
+
+    </scenarioData>
+</dataBean>

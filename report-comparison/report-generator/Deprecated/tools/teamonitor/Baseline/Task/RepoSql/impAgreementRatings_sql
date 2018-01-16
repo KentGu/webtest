@@ -1,0 +1,5 @@
+pre#AgmtRating_Before#select count(1) from ColRatingContingentParameters where mintransfer ='1234500' and roundingamount = '12300'
+
+post#AgmtRating_After#select count(1) from ColRatingContingentParameters where mintransfer ='1234500' and roundingamount = '12300'
+
+val#1#`expr ${AgmtRating_After} - ${AgmtRating_Before}`

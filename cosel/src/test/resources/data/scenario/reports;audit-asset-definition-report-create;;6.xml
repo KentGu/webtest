@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <collateralStaticData id="asset.classification">
+            <type ref="scheme.assetClassification.name"/>
+            <dataName id="classificationName" random="true" prefix="classification"/>
+            <description ref="classificationName"/>
+            <status>enabled</status>
+        </collateralStaticData>
+
+        <assetDefinition id="class.other">
+            <assetName id="other.asset.class.name" random="true" prefix="other_class"/>
+            <status>enabled</status>
+            <category>Other</category>
+            <externalName ref="other.asset.class.name"/>
+            <tolerancePercentage>80</tolerancePercentage>
+            <toleranceAccount>100m</toleranceAccount>
+            <toleranceAccountCurrency>USD</toleranceAccountCurrency>
+        </assetDefinition>
+
+        <assetDefinition id="type.other">
+            <parent>
+                <assetName ref="other.asset.class.name"/>
+            </parent>
+            <assetName id="otherType" random="true" prefix="other_type"/>
+            <status>enabled</status>
+            <category>Other</category>
+            <!--<agreementRate>qtp_Interest_Rate1</agreementRate>-->
+            <!--<reinvestRate>qtp_Interest_Rate1</reinvestRate>-->
+            <!--<withholdingTaxRate>qtp_WHT_Rate1</withholdingTaxRate>-->
+            <!--<daysInYear>365</daysInYear>-->
+            <currencyOfDenomination>USD</currencyOfDenomination>
+            <settlementDate>T+1</settlementDate>
+            <holidayCentre>HONG KONG</holidayCentre>
+            <roundingAmount>1000</roundingAmount>
+            <!--<applyToInterestCalculation>true</applyToInterestCalculation>-->
+            <roundingRule>Down</roundingRule>
+            <deliveryBookingPriority>Low</deliveryBookingPriority>
+            <recallBookingPriority>High</recallBookingPriority>
+            <externalName ref="otherType"/>
+        </assetDefinition>
+
+        <assetDefinition id="category.with.other.type">
+            <assetClassification ref="classificationName"/>
+            <assetName id="category.name" random="true" prefix="other_category"/>
+            <status>enabled</status>
+            <description ref="category.name"/>
+            <assetType>
+                <filter ref="otherType"/>
+                <linkText ref="otherType"/>
+            </assetType>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </assetDefinition>
+
+        <auditAssetDefinitionReportFilter id="audit.asset.definition.by.class.type">
+            <assetClass ref="other.asset.class.name"/>
+            <assetType ref="otherType"/>
+            <assetClassification>
+                <assetClassificationName ref="classificationName"/>
+                <assetcategory ref="category.name"/>
+            </assetClassification>
+            <startDate>t-1000</startDate>
+        </auditAssetDefinitionReportFilter>
+        <variable id="auditReportPath"/>
+        <reportValidationRules id="audit.asset.report.other.rule">
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value ref="classificationName"/>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value ref="category.name"/>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Category</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value>N/A</value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value ref="otherType"/>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value ref="classificationName"/>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value ref="category.name"/>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Category</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Description</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value ref="category.name"/>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value ref="classificationName"/>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value ref="category.name"/>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Category</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Name</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value ref="category.name"/>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value ref="classificationName"/>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value ref="category.name"/>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Category</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Status</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>enabled</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value ref="other.asset.class.name"/>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value ref="otherType"/>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Category</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>Other</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value ref="other.asset.class.name"/>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value ref="otherType"/>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>DaysInYear</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>0</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value ref="other.asset.class.name"/>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value ref="otherType"/>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>DelBookingPriority</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>Low</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value ref="other.asset.class.name"/>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value ref="otherType"/>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>DenomCurrency</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>USD</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value ref="other.asset.class.name"/>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value ref="otherType"/>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>ExtName</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value ref="otherType"/>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value ref="other.asset.class.name"/>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value ref="otherType"/>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>HolidayCenters</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>HONG KONG</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value ref="other.asset.class.name"/>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value ref="otherType"/>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Name</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value ref="otherType"/>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value ref="other.asset.class.name"/>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value ref="otherType"/>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>RecBookingPriority</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>High</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value ref="other.asset.class.name"/>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value ref="otherType"/>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>RefRate</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value>N/A</value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>N/A</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value ref="other.asset.class.name"/>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value ref="otherType"/>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>ReinvestRefRate</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value>N/A</value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>N/A</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value ref="other.asset.class.name"/>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value ref="otherType"/>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>RoundAmtApplyToInterestCal</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>NO</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value ref="other.asset.class.name"/>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value ref="otherType"/>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>RoundingRule</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>Down</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value ref="other.asset.class.name"/>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value ref="otherType"/>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>SettlementDate</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>T1</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value ref="other.asset.class.name"/>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value ref="otherType"/>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>SettlementRounding</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>1000.0</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value ref="other.asset.class.name"/>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value ref="otherType"/>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Status</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>enabled</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value ref="other.asset.class.name"/>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value ref="otherType"/>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>ToleranceCcy</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value></value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>&gt;=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Asset Class</fieldName>
+                    <value ref="other.asset.class.name"/>
+                </field>
+                <field>
+                    <fieldName>Asset</fieldName>
+                    <value ref="otherType"/>
+                </field>
+                <field>
+                    <fieldName>Classification</fieldName>
+                    <value>Asset Type</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>WHTRate</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value>N/A</value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>N/A</value>
+                </field>
+            </reportValidationRule>
+
+        </reportValidationRules>
+    </scenarioData>
+</dataBean>

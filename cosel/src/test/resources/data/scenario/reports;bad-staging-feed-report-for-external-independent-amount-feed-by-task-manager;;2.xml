@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+
+        <feedExternalIA id="feed.external.IA">
+            <AGREEMENTID></AGREEMENTID>
+            <legal_id></legal_id>
+            <PRODUCT></PRODUCT>
+            <AMOUNT></AMOUNT>
+            <CURRENCY></CURRENCY>
+            <ValuationDate></ValuationDate>
+            <externalSystem></externalSystem>
+            <scaleUp></scaleUp>
+            <Model></Model>
+            <payParty></payParty>
+        </feedExternalIA>
+
+        <feedExternalIA id="feed.modified.incorrect.staging.report">
+            <rowNumber>2</rowNumber>
+            <failureReason ref="failure.reason1"/>
+            <AGREEMENTID></AGREEMENTID>
+            <legal_id>F13658AgrForExtIAExtId</legal_id>
+            <PRODUCT>QTP</PRODUCT>
+            <AMOUNT></AMOUNT>
+            <CURRENCY></CURRENCY>
+            <ValuationDate></ValuationDate>
+            <externalSystem></externalSystem>
+            <scaleUp></scaleUp>
+            <Model></Model>
+            <payParty></payParty>
+        </feedExternalIA>
+
+        <feedExternalIA id="feed.modified.correct.staging.report">
+            <rowNumber>2</rowNumber>
+            <failureReason ref="failure.reason2"/>
+            <AGREEMENTID></AGREEMENTID>
+            <legal_id>F13658AgrForExtIAExtId</legal_id>
+            <PRODUCT>QTP</PRODUCT>
+            <AMOUNT>100.36</AMOUNT>
+            <CURRENCY></CURRENCY>
+            <ValuationDate></ValuationDate>
+            <externalSystem></externalSystem>
+            <scaleUp></scaleUp>
+            <Model></Model>
+            <payParty></payParty>
+        </feedExternalIA>
+
+        <badStagingFeedReportFilter id="search.by.feed.external.ia">
+            <feedTask>Feed External IA</feedTask>
+        </badStagingFeedReportFilter>
+
+        <variable id="badStagingFeedReportPath"/>
+
+        <reportValidationRules id="reportRule1">
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field><fieldName>Row number</fieldName><value>2</value></field>
+                <field><fieldName>Failure reason</fieldName><value id="failure.reason1">[Column: 4] amount - Field is compulsory but no value was found</value></field>
+                <field><fieldName>AGREEMENTID</fieldName><value></value></field>
+                <field><fieldName>legal_id</fieldName><value></value></field>
+                <field><fieldName>PRODUCT</fieldName><value></value></field>
+                <field><fieldName>AMOUNT</fieldName><value></value></field>
+                <field><fieldName>CURRENCY</fieldName><value></value></field>
+                <field><fieldName>ValuationDate</fieldName><value></value></field>
+                <field><fieldName>externalSystem</fieldName><value></value></field>
+                <field><fieldName>scaleUp</fieldName><value></value></field>
+                <field><fieldName>Model</fieldName><value></value></field>
+                <field><fieldName>payParty</fieldName><value></value></field>
+            </reportValidationRule>
+        </reportValidationRules>
+
+        <reportValidationRules id="reportRule2">
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field><fieldName>Row number</fieldName><value>2</value></field>
+                <field><fieldName>Failure reason</fieldName><value id="failure.reason2">[Column: 4] amount - Field is compulsory but no value was found</value></field>
+                <field><fieldName>AGREEMENTID</fieldName><value></value></field>
+                <field><fieldName>legal_id</fieldName><value>F13658AgrForExtIAExtId</value></field>
+                <field><fieldName>PRODUCT</fieldName><value>QTP</value></field>
+                <field><fieldName>AMOUNT</fieldName><value></value></field>
+                <field><fieldName>CURRENCY</fieldName><value></value></field>
+                <field><fieldName>ValuationDate</fieldName><value></value></field>
+                <field><fieldName>externalSystem</fieldName><value></value></field>
+                <field><fieldName>scaleUp</fieldName><value></value></field>
+                <field><fieldName>Model</fieldName><value></value></field>
+                <field><fieldName>payParty</fieldName><value></value></field>
+            </reportValidationRule>
+        </reportValidationRules>
+
+        <agreementSearch id = "search.agr.for.external.ia.feed">
+            <description>
+                <filter>F13658AgrForExtIADesc</filter>
+                <linkText>F13658AgrForExtIADesc</linkText>
+            </description>
+        </agreementSearch>
+
+        <agreementSearchResult id = "search.agr.for.external.ia.feed.result">
+            <externalId>F13658AgrForExtIAExtId</externalId>
+        </agreementSearchResult>
+
+        <variable id="file.name"/>
+
+        <feedResult id="feed.result.parsing.error1">
+            <parsingFailures>1</parsingFailures>
+        </feedResult>
+
+        <feedResult id="feed.result.parsing.error2">
+            <parsingFailures>1</parsingFailures>
+        </feedResult>
+
+        <feedResult id="feed.result.successful">
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <agreementSummary id="external.ia.amount.100.36">
+            <collateralisedPortfolioDetails>
+                <product>
+                    <productName>QTP</productName>
+                    <upfrontCalculationMethodology>External IA</upfrontCalculationMethodology>
+                    <externalIADetail>
+                        <fixedValue>100.36</fixedValue>
+                    </externalIADetail>
+                </product>
+            </collateralisedPortfolioDetails>
+        </agreementSummary>
+
+    </scenarioData>
+</dataBean>

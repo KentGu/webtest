@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/exposureManagement.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <securitySearch id="29481.bond.usd">
+            <matured>All</matured>
+            <instrument>
+                <filter id="29481.bond.usd.id">29481_bond_usd</filter>
+                <!--<linkText ref="26527.bond.usd"/>-->
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="29481.bond.usd.approve">
+            <instrument ref="29481.bond.usd.id"/>
+        </securitySearchResult>
+
+        <instrument id="29481.bond.usd.changeRecordDate.tPlus8">
+            <maturityDate>t+1000</maturityDate>
+            <recordDate>t+8</recordDate>
+        </instrument>
+
+        <securitySearch id="29481.equity.usd">
+            <matured>All</matured>
+            <instrument>
+                <filter id="29481.equity.usd.id">29481_equity_usd</filter>
+                <!--<linkText ref="29481.equity.usd.id"/>-->
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="29481.equity.usd.approve">
+            <instrument ref="29481.equity.usd.id"/>
+        </securitySearchResult>
+
+        <instrument id="29481.equity.usd.changeRecordDate.tMinus8">
+            <maturityDate>t+1000</maturityDate>
+            <recordDate>t-8</recordDate>
+        </instrument>
+
+        <agreement id="agr29481">
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+        <agreement id="agr29481.etf">
+            <agreementId id="agrid">2599</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="reasonForSub">
+            <column>Reason for Sub</column>
+        </exposureEventDetail>
+
+        <substitutionEventSearch id="agr29481.return">
+            <substitution>Return</substitution>
+            <externalId>
+                <filter id="agrDes">29481_1</filter>
+                <linkText>29481_1</linkText>
+            </externalId>
+            <!--<description>-->
+                <!--<filter id="agrDes">29481_1</>-->
+                <!--<linkText>29481_1</linkText>-->
+            <!--</description>-->
+        </substitutionEventSearch>
+
+        <substitutionEventDetail id="agr29481.expand">
+            <description ref="agrDes"/>
+        </substitutionEventDetail>
+
+        <substitutionEventDetail id="o1.bond.usd.vm.1m">
+            <assetHoldingsCashVMNotional>1,000,000.00</assetHoldingsCashVMNotional>
+            <assetHoldingsNotional>1,000,000.00</assetHoldingsNotional>
+            <instrumentId id="26513.bond.usd.id.withmarket">29481_bond_usd,m1</instrumentId>
+            <agrId ref="agrid"/>
+            <externalId ref="agrDes"/>
+            <model>o1</model>
+        </substitutionEventDetail>
+
+        <substitutionEventDetail id="o1.equity.usd.vm.2m">
+            <assetHoldingsCashVMNotional>2,000,000.00</assetHoldingsCashVMNotional>
+            <assetHoldingsNotional>2,000,000.00</assetHoldingsNotional>
+            <instrumentId id="26513.equity.usd.id.withmarket">29481_equity_usd,m2</instrumentId>
+            <agrId ref="agrid"/>
+            <externalId ref="agrDes"/>
+            <model>o1</model>
+        </substitutionEventDetail>
+
+        <substitutionEventDetail id="o1.cash.usd.vm.3m">
+            <assetHoldingsCashVMNotional>3,000,000.00</assetHoldingsCashVMNotional>
+            <assetHoldingsNotional>3,000,000.00</assetHoldingsNotional>
+            <instrumentId ref="cash.usd1.name"/>
+            <agrId ref="agrid"/>
+            <externalId ref="agrDes"/>
+            <model>o1</model>
+        </substitutionEventDetail>
+
+        <substitutionEventDetail id="o2.bond.usd.vm.1m">
+            <assetHoldingsCashVMNotional>1,000,000.00</assetHoldingsCashVMNotional>
+            <assetHoldingsNotional>1,000,000.00</assetHoldingsNotional>
+            <instrumentId ref="26513.bond.usd.id.withmarket"/>
+            <agrId ref="agrid"/>
+            <externalId ref="agrDes"/>
+            <model>o2</model>
+        </substitutionEventDetail>
+
+        <substitutionEventDetail id="o2.equity.usd.vm.2m">
+            <assetHoldingsCashVMNotional>2,000,000.00</assetHoldingsCashVMNotional>
+            <assetHoldingsNotional>2,000,000.00</assetHoldingsNotional>
+            <instrumentId ref="26513.equity.usd.id.withmarket"/>
+            <agrId ref="agrid"/>
+            <externalId ref="agrDes"/>
+            <model>o2</model>
+        </substitutionEventDetail>
+
+        <substitutionEventDetail id="o2.cash.usd.vm.3m">
+            <assetHoldingsCashVMNotional>3,000,000.00</assetHoldingsCashVMNotional>
+            <assetHoldingsNotional>3,000,000.00</assetHoldingsNotional>
+            <instrumentId ref="cash.usd1.name"/>
+            <agrId ref="agrid"/>
+            <externalId ref="agrDes"/>
+            <model>o2</model>
+        </substitutionEventDetail>
+
+        <exposureEventDetail id="subConfirmation.top.requirementAmount.0">
+            <action>Substitution Confirmation</action>
+            <agreementRequirement>0.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model></model>
+            <reasonForSub></reasonForSub>
+            <element></element>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subConfirmation.o1.bond.usd.requirementAmount.0">
+            <action>Substitution Confirmation</action>
+            <agreementRequirement>0.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model>o1</model>
+            <reasonForSub></reasonForSub>
+            <element ref="26513.bond.usd.id.withmarket"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subConfirmation.o2.cash.usd.requirementAmount.0">
+            <action>Substitution Confirmation</action>
+            <agreementRequirement>0.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model>o2</model>
+            <element variation="multiple">CASH-USD</element>
+            <reasonForSub></reasonForSub>
+            <eventId id="sub.eventId"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subConfirmation.o2.equity.usd.requirementAmount.0">
+            <eventId ref="sub.eventId"/>
+            <element variation="multiple" ref="26513.equity.usd.id.withmarket"/>
+        </exposureEventDetail>
+
+        <!--<exposureEventDetail id="subConfirmation.m2.cash.usd.requirementAmount.0">-->
+            <!--<action>IM Substitution Confirmation</action>-->
+            <!--<agreementRequirement>0.00</agreementRequirement>-->
+            <!--<callStatus>Pending Review</callStatus>-->
+            <!--<model>m2</model>-->
+            <!--<element>CASH-USD</element>-->
+            <!--<reasonForSub></reasonForSub>-->
+        <!--</exposureEventDetail>-->
+
+    </scenarioData>
+</dataBean>

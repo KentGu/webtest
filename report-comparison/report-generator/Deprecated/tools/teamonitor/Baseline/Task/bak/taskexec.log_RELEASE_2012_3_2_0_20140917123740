@@ -1,0 +1,573 @@
+I'm FILE_TASKEXECLOG=taskexec.log_RELEASE_2012_3_2_0_20140917123740
+I'm database---------=COLLINE201232_BASE_0819 creditderivative 172.20.20.99:1521 pst4
+Target Version: RELEASE_2012_3_2_0
+Target Path:/home/test/server/colline/cluster/bin
+-------------I am task =Import Organisations 3
+Task is Task Manager : Import Organisations 3
+2014-09-17 12:37:40
+Waiting 800 second for Task  Import Organisations 3 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Organisations 3] at: 2014-09-17 12:37:40,773
+Finished starting task: [Task Manager:Import Organisations 3] at: 2014-09-17 12:37:40,806
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import Organisation. Please wait ...
+Organisation: Imported 0 Organisations from file:OrgnazationRatings.xls - Modified 10000 entries.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Organisations 4
+Task is Task Manager : Import Organisations 4
+2014-09-17 12:45:13
+Waiting 500 second for Task  Import Organisations 4 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Organisations 4] at: 2014-09-17 12:45:13,864
+Finished starting task: [Task Manager:Import Organisations 4] at: 2014-09-17 12:45:13,888
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import Organisation. Please wait ...
+Organisation: Imported 0 Organisations from file:OrganisationContacts.xls - Modified 10000 entries.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Agreements 2
+Task is Task Manager : Import Agreements 2
+2014-09-17 12:50:56
+Waiting 2500 second for Task  Import Agreements 2 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Agreements 2] at: 2014-09-17 12:50:56,384
+Finished starting task: [Task Manager:Import Agreements 2] at: 2014-09-17 12:50:56,409
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import agreements. Please wait ...
+Sorry, no more waiting. Import Agreements 2,  TIME_Execute = 2500.293933003, TIME4TASKEXECUTION =2500.
+-------------I am task =Import Agreement Ratings 1
+Task is Task Manager : Import Agreement Ratings 1
+2014-09-17 13:32:46
+Waiting 500 second for Task  Import Agreement Ratings 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Agreement Ratings 1] at: 2014-09-17 13:32:47,019
+Finished starting task: [Task Manager:Import Agreement Ratings 1] at: 2014-09-17 13:32:47,051
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import ratings. Please wait ...
+Sorry, no more waiting. Import Agreement Ratings 1,  TIME_Execute = 500.245705594, TIME4TASKEXECUTION =500.
+-------------I am task =Import Agreement UDF 1
+Task is Task Manager : Import Agreement UDF 1
+2014-09-17 13:41:17
+Waiting 1500 second for Task  Import Agreement UDF 1 execute
+Started F3 Task Manager ...
+AgreementRatings: Import ratings: Imported 974 agreement ratings from :AgreementRatings.xls
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+Logged in as user:sa
+Starting task: [Task Manager:Import Agreement UDF 1] at: 2014-09-17 13:41:17,611
+Finished starting task: [Task Manager:Import Agreement UDF 1] at: 2014-09-17 13:41:17,636
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import Agreement UDF. Please wait ...
+-----------It's Import Agreement UDF task, sleep 3600 seconds for avoid database lock. ------
+Import Agreement UDF: Imported 10000 agreement UDFs.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+Agreements: Import agreements: Imported 2000 agreements from :Agreement_xml_feed_2000.xml
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Collateral Booking 3
+Task is Task Manager : Import Collateral Booking 3
+2014-09-17 14:57:32
+Waiting 3000 second for Task  Import Collateral Booking 3 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Collateral Booking 3] at: 2014-09-17 14:57:32,855
+Finished starting task: [Task Manager:Import Collateral Booking 3] at: 2014-09-17 14:57:32,883
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import Asset Bookings. Please wait ...
+Import Asset Bookings: Imported 0 Asset Bookings
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Assets 1
+Task is Task Manager : Import Assets 1
+2014-09-17 15:00:07
+Waiting 400 second for Task  Import Assets 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Assets 1] at: 2014-09-17 15:00:07,723
+Finished starting task: [Task Manager:Import Assets 1] at: 2014-09-17 15:00:07,763
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import Security Template. Please wait ...
+Market Data: Import Security Template: Imported 5000 assets from :Security.xls
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Asset Pricing 10
+Task is Task Manager : Import Asset Pricing 10
+2014-09-17 15:04:08
+Waiting 300 second for Task  Import Asset Pricing 10 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Asset Pricing 10] at: 2014-09-17 15:04:09,070
+Finished starting task: [Task Manager:Import Asset Pricing 10] at: 2014-09-17 15:04:09,132
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import Asset Pricing. Please wait ...
+Market Data: Import Asset Pricing: Imported 5000 assets from :AssetPricing.xls
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Asset Ratings 1
+Task is Task Manager : Import Asset Ratings 1
+2014-09-17 15:08:42
+Waiting 300 second for Task  Import Asset Ratings 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Asset Ratings 1] at: 2014-09-17 15:08:42,544
+Finished starting task: [Task Manager:Import Asset Ratings 1] at: 2014-09-17 15:08:42,567
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import Asset Ratings. Please wait ...
+Market Data: Import Asset Ratings: Imported 5000 Asset Ratings from :AssetRating.xls
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Inventory Manager 1
+Task is Task Manager : Import Inventory Manager 1
+2014-09-17 15:13:03
+Waiting 400 second for Task  Import Inventory Manager 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Inventory Manager 1] at: 2014-09-17 15:13:03,474
+Finished starting task: [Task Manager:Import Inventory Manager 1] at: 2014-09-17 15:13:03,520
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import Inventory Manager. Please wait ...
+Inventory Manager: Import Inventory Manager: Imported 9937 Inventory Manager from :PST_InventoryManager.xls
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Repo Trades 1
+Task is Task Manager : Import Repo Trades 1
+2014-09-17 15:16:53
+Waiting 800 second for Task  Import Repo Trades 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Repo Trades 1] at: 2014-09-17 15:16:53,693
+Finished starting task: [Task Manager:Import Repo Trades 1] at: 2014-09-17 15:16:53,726
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Flush Import Repo trades. Please wait ...
+Repo trades: Flush Import Repo trades: Imported 4999 trades from :CMDW_Repo_trade_feed_Final_4999.xls
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Repo Trades 2
+Task is Task Manager : Import Repo Trades 2
+2014-09-17 15:21:44
+Waiting 2000 second for Task  Import Repo Trades 2 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Repo Trades 2] at: 2014-09-17 15:21:44,976
+Finished starting task: [Task Manager:Import Repo Trades 2] at: 2014-09-17 15:21:45,001
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Flush Import Repo trades. Please wait ...
+Repo trades: Flush Import Repo trades: Imported 10000 trades from :CMDW_Repo_trade_feed_Final_10k.xls
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Repo MtM 1
+Task is Task Manager : Import Repo MtM 1
+2014-09-17 15:34:00
+Waiting 180 second for Task  Import Repo MtM 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Repo MtM 1] at: 2014-09-17 15:34:00,861
+Finished starting task: [Task Manager:Import Repo MtM 1] at: 2014-09-17 15:34:00,890
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import Repo MtM. Please wait ...
+Import Repo MtM: Total Repo MtMs: 10000; Successfull Imports 10000 Repo MtMs.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Repo Settlement 1
+Task is Task Manager : Import Repo Settlement 1
+2014-09-17 15:34:25
+Waiting 1000 second for Task  Import Repo Settlement 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Repo Settlement 1] at: 2014-09-17 15:34:25,947
+Finished starting task: [Task Manager:Import Repo Settlement 1] at: 2014-09-17 15:34:25,967
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import Repo Settlement. Please wait ...
+Import Repo Settlement: Imported 1Repo Settlements.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Trades 1
+Task is Task Manager : Import Trades 1
+2014-09-17 15:35:26
+Waiting 300 second for Task  Import Trades 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Trades 1] at: 2014-09-17 15:35:26,473
+Finished starting task: [Task Manager:Import Trades 1] at: 2014-09-17 15:35:26,499
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Flush Import Trades. Please wait ...
+Trades: Flush Import Trades: Imported 4999 trades from :CMDW_FlushTrade_4999.xlsx
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Trades 2
+Task is Task Manager : Import Trades 2
+2014-09-17 15:37:23
+Waiting 500 second for Task  Import Trades 2 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Trades 2] at: 2014-09-17 15:37:23,671
+Finished starting task: [Task Manager:Import Trades 2] at: 2014-09-17 15:37:23,701
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Flush Import Trades. Please wait ...
+Trades: Flush Import Trades: Imported 10000 trades from :CMDW_FlushTrade_10k.xlsx
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Trades 3
+Task is Task Manager : Import Trades 3
+2014-09-17 15:40:48
+Waiting 1000 second for Task  Import Trades 3 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Trades 3] at: 2014-09-17 15:40:48,776
+Finished starting task: [Task Manager:Import Trades 3] at: 2014-09-17 15:40:48,800
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Flush Import Trades. Please wait ...
+Sorry, no more waiting. Import Trades 3,  TIME_Execute = 1000.813410122, TIME4TASKEXECUTION =1000.
+-------------I am task =Import Trades 4
+Task is Task Manager : Import Trades 4
+2014-09-17 15:57:39
+Waiting 1000 second for Task  Import Trades 4 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Trades 4] at: 2014-09-17 15:57:39,927
+Finished starting task: [Task Manager:Import Trades 4] at: 2014-09-17 15:57:39,955
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Flush Import Trades. Please wait ...
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import MtM 1
+Task is Task Manager : Import MtM 1
+2014-09-17 16:14:02
+Waiting 180 second for Task  Import MtM 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import MtM 1] at: 2014-09-17 16:14:02,602
+Finished starting task: [Task Manager:Import MtM 1] at: 2014-09-17 16:14:02,623
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import MtM. Please wait ...
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Delta Inventory Manager 1
+Task is Task Manager : Import Delta Inventory Manager 1
+2014-09-17 16:15:02
+Waiting 500 second for Task  Import Delta Inventory Manager 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Delta Inventory Manager 1] at: 2014-09-17 16:15:03,074
+Finished starting task: [Task Manager:Import Delta Inventory Manager 1] at: 2014-09-17 16:15:03,102
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import Delta Inventory Manager. Please wait ...
+Import MtM: Total MtMs: 10000; Successfull Imports 10000 MtMs.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Delta Repo Trades 1
+Task is Task Manager : Import Delta Repo Trades 1
+2014-09-17 16:15:24
+Waiting 180 second for Task  Import Delta Repo Trades 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Delta Repo Trades 1] at: 2014-09-17 16:15:25,141
+Finished starting task: [Task Manager:Import Delta Repo Trades 1] at: 2014-09-17 16:15:25,171
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Delta Import Repo trades. Please wait ...
+Repo trades: Delta Import Repo trades: Total Imported 1001 and insert :1001 ,modified : 0 , delete : 0 trades from :Repo_Deltatrade_feed_Final_4999.xls
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Delta Repo Trades 2
+Task is Task Manager : Import Delta Repo Trades 2
+2014-09-17 16:16:54
+Waiting 1500 second for Task  Import Delta Repo Trades 2 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Delta Repo Trades 2] at: 2014-09-17 16:16:54,931
+Finished starting task: [Task Manager:Import Delta Repo Trades 2] at: 2014-09-17 16:16:54,951
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Delta Import Repo trades. Please wait ...
+Repo trades: Delta Import Repo trades: Total Imported 10000 and insert :1000 ,modified : 8000 , delete : 1000 trades from :Delta_Repo_trade_feed_Final_10k.xls
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Delta Trade 2
+Task is Task Manager : Import Delta Trade 2
+2014-09-17 16:28:10
+Waiting 180 second for Task  Import Delta Trade 2 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Delta Trade 2] at: 2014-09-17 16:28:11,179
+Finished starting task: [Task Manager:Import Delta Trade 2] at: 2014-09-17 16:28:11,204
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Delta Import Trades. Please wait ...
+Trades: Delta Import Trades: Total Imported 4999 and insert :500 ,modified : 4000 , delete : 499 trades from :DeltaTrade_4999.xlsx
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Delta Trade 3
+Task is Task Manager : Import Delta Trade 3
+2014-09-17 16:29:20
+Waiting 300 second for Task  Import Delta Trade 3 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Delta Trade 3] at: 2014-09-17 16:29:20,722
+Finished starting task: [Task Manager:Import Delta Trade 3] at: 2014-09-17 16:29:20,738
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Delta Import Trades. Please wait ...
+Trades: Delta Import Trades: Total Imported 9501 and insert :1000 ,modified : 8501 , delete : 0 trades from :DeltaTrade_10k.xlsx
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import External Independent Amounts 5
+Task is Task Manager : Import External Independent Amounts 5
+2014-09-17 16:32:05
+Waiting 500 second for Task  Import External Independent Amounts 5 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import External Independent Amounts 5] at: 2014-09-17 16:32:05,382
+Finished starting task: [Task Manager:Import External Independent Amounts 5] at: 2014-09-17 16:32:05,424
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import External IA. Please wait ...
+Import External IA: Imported 5000 external IAs.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import NAV 1
+Task is Task Manager : Import NAV 1
+2014-09-17 16:33:13
+Waiting 1000 second for Task  Import NAV 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import NAV 1] at: 2014-09-17 16:33:14,139
+Finished starting task: [Task Manager:Import NAV 1] at: 2014-09-17 16:33:14,170
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import NAV. Please wait ...
+NAV: Import NAV: Imported 5000 NAV from :NAV.xls
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Portfolio TSA 1
+Task is Task Manager : Import Portfolio TSA 1
+2014-09-17 16:35:51
+Waiting 500 second for Task  Import Portfolio TSA 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Portfolio TSA 1] at: 2014-09-17 16:35:52,019
+Finished starting task: [Task Manager:Import Portfolio TSA 1] at: 2014-09-17 16:35:52,056
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import Portfolio TSA. Please wait ...
+Portfolio TSA: Import Portfolio TSA: Import Portfolio TSA, Imported: 0, Failed :5000  from :TSA.xls
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Settlement Instructions 1
+Task is Task Manager : Import Settlement Instructions 1
+2014-09-17 16:36:42
+Waiting 300 second for Task  Import Settlement Instructions 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Settlement Instructions 1] at: 2014-09-17 16:36:42,369
+Finished starting task: [Task Manager:Import Settlement Instructions 1] at: 2014-09-17 16:36:42,398
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import Settlement Instruction. Please wait ...
+Settlement Instruction: Import Settlement Instruction: Imported 5000 settlement instructions from :SettlementInstruction.xls
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Remove Mature Assets
+Task is Workflow : Remove Mature Assets
+2014-09-17 16:37:33
+Waiting 2000 second for Task  Remove Mature Assets execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Remove Mature Assets] at: 2014-09-17 16:37:33,716
+Finished starting task: [Workflow:Remove Mature Assets] at: 2014-09-17 16:37:33,760
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Remove Mature Assets. Please wait ...
+Collateral:Remove Mature Assets: Total of 5121 assets are removed.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Remove Mature Trades
+Task is Workflow : Remove Mature Trades
+2014-09-17 16:42:36
+Waiting 3000 second for Task  Remove Mature Trades execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Remove Mature Trades] at: 2014-09-17 16:42:36,381
+Finished starting task: [Workflow:Remove Mature Trades] at: 2014-09-17 16:42:36,410
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Remove Mature Trades. Please wait ...
+Sorry, no more waiting. Remove Mature Trades,  TIME_Execute = 3000.208293183, TIME4TASKEXECUTION =3000.
+-------------I am task =Reset Trading Inactive
+Task is Workflow : Reset Trading Inactive
+2014-09-17 17:32:46
+Waiting 180 second for Task  Reset Trading Inactive execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Workflow:Reset Trading Inactive] at: 2014-09-17 17:32:47,041
+Finished starting task: [Workflow:Reset Trading Inactive] at: 2014-09-17 17:32:47,078
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Reset Trading Inactive Task. Please wait ...
+Trading Inactive Task finished.0 agreements have been updated.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-----------It's Reset Trading Inactive task, sleep 1800 seconds for msg calc. ------
+-------------I am task =Import FX Rates 3
+Task is Task Manager : Import FX Rates 3
+2014-09-17 18:03:06
+Waiting 500 second for Task  Import FX Rates 3 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import FX Rates 3] at: 2014-09-17 18:03:07,058
+Finished starting task: [Task Manager:Import FX Rates 3] at: 2014-09-17 18:03:07,093
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import FX Rates. Please wait ...
+Market Data: Import FX Rates: Imported 270 FX Rates from: FxRate.xls
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Interest Rates 3
+Task is Task Manager : Import Interest Rates 3
+2014-09-17 18:05:14
+Waiting 180 second for Task  Import Interest Rates 3 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Interest Rates 3] at: 2014-09-17 18:05:15,060
+Finished starting task: [Task Manager:Import Interest Rates 3] at: 2014-09-17 18:05:15,131
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Import Interest Rates. Please wait ...
+Market Data: Import Interest Rates: Imported 78 Interest Rates from :InterestRate.xls
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Import Holiday Centre 1
+Task is Task Manager : Import Holiday Centre 1
+2014-09-17 18:08:24
+Waiting 180 second for Task  Import Holiday Centre 1 execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Task Manager:Import Holiday Centre 1] at: 2014-09-17 18:08:24,867
+Correct syntax:
+>coltaskmanager <group name>:<task name>
+could not find job with group,name=Task Manager,Import Holiday Centre 1. 
+com.lombardrisk.f3.persistence.exception.LRSFindException: could not find job with group,name=Task Manager,Import Holiday Centre 1. 
+	at com.lombardrisk.f3.scheduler.persistence.SchedulerPersistenceManagerBean.findJobsByGroupAndName(SchedulerPersistenceManagerBean.java:149)
+	at sun.reflect.GeneratedMethodAccessor408.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.jboss.invocation.Invocation.performCall(Invocation.java:386)
+	at org.jboss.ejb.StatelessSessionContainer$ContainerInterceptor.invoke(StatelessSessionContainer.java:233)
+	at org.jboss.resource.connectionmanager.CachedConnectionInterceptor.invoke(CachedConnectionInterceptor.java:156)
+	at org.jboss.ejb.plugins.StatelessSessionInstanceInterceptor.invoke(StatelessSessionInstanceInterceptor.java:173)
+	at com.lombardrisk.f3.audit.AuditTrailInterceptor.invoke(AuditTrailInterceptor.java:233)
+	at org.jboss.ejb.plugins.CallValidationInterceptor.invoke(CallValidationInterceptor.java:63)
+	at org.jboss.ejb.plugins.AbstractTxInterceptor.invokeNext(AbstractTxInterceptor.java:121)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.runWithTransactions(TxInterceptorCMT.java:350)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.invoke(TxInterceptorCMT.java:181)
+	at com.lombardrisk.f3.accesscontrol.JBossEJBInterceptor.invoke(JBossEJBInterceptor.java:140)
+	at org.jboss.ejb.plugins.SecurityInterceptor.process(SecurityInterceptor.java:228)
+	at org.jboss.ejb.plugins.SecurityInterceptor.invoke(SecurityInterceptor.java:211)
+	at org.jboss.ejb.plugins.LogInterceptor.invoke(LogInterceptor.java:205)
+	at org.jboss.ejb.plugins.ProxyFactoryFinderInterceptor.invoke(ProxyFactoryFinderInterceptor.java:138)
+	at org.jboss.ejb.SessionContainer.internalInvoke(SessionContainer.java:650)
+	at org.jboss.ejb.Container.invoke(Container.java:1092)
+	at org.jboss.ejb.plugins.local.BaseLocalProxyFactory.invoke(BaseLocalProxyFactory.java:436)
+	at org.jboss.ejb.plugins.local.StatelessSessionProxy.invoke(StatelessSessionProxy.java:103)
+	at com.sun.proxy.$Proxy431.findJobsByGroupAndName(Unknown Source)
+	at com.lombardrisk.f3.scheduler.SchedulerServiceBean.startJobNow(SchedulerServiceBean.java:500)
+	at sun.reflect.GeneratedMethodAccessor4059.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.jboss.invocation.Invocation.performCall(Invocation.java:386)
+	at org.jboss.ejb.StatelessSessionContainer$ContainerInterceptor.invoke(StatelessSessionContainer.java:233)
+	at org.jboss.resource.connectionmanager.CachedConnectionInterceptor.invoke(CachedConnectionInterceptor.java:156)
+	at org.jboss.ejb.plugins.StatelessSessionInstanceInterceptor.invoke(StatelessSessionInstanceInterceptor.java:173)
+	at com.lombardrisk.f3.audit.AuditTrailInterceptor.invoke(AuditTrailInterceptor.java:233)
+	at org.jboss.ejb.plugins.CallValidationInterceptor.invoke(CallValidationInterceptor.java:63)
+	at org.jboss.ejb.plugins.AbstractTxInterceptor.invokeNext(AbstractTxInterceptor.java:121)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.runWithTransactions(TxInterceptorCMT.java:350)
+	at org.jboss.ejb.plugins.TxInterceptorCMT.invoke(TxInterceptorCMT.java:181)
+	at com.lombardrisk.f3.accesscontrol.JBossEJBInterceptor.invoke(JBossEJBInterceptor.java:140)
+	at org.jboss.ejb.plugins.SecurityInterceptor.process(SecurityInterceptor.java:228)
+	at org.jboss.ejb.plugins.SecurityInterceptor.invoke(SecurityInterceptor.java:211)
+	at org.jboss.ejb.plugins.LogInterceptor.invoke(LogInterceptor.java:205)
+	at org.jboss.ejb.plugins.ProxyFactoryFinderInterceptor.invoke(ProxyFactoryFinderInterceptor.java:138)
+	at org.jboss.ejb.SessionContainer.internalInvoke(SessionContainer.java:650)
+	at org.jboss.ejb.Container.invoke(Container.java:1092)
+	at sun.reflect.GeneratedMethodAccessor398.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.jboss.mx.interceptor.ReflectedDispatcher.invoke(ReflectedDispatcher.java:157)
+	at org.jboss.mx.server.Invocation.dispatch(Invocation.java:96)
+	at org.jboss.mx.server.Invocation.invoke(Invocation.java:88)
+	at org.jboss.mx.server.AbstractMBeanInvoker.invoke(AbstractMBeanInvoker.java:264)
+	at org.jboss.mx.server.MBeanServerImpl.invoke(MBeanServerImpl.java:668)
+	at org.jboss.system.server.jmx.LazyMBeanServer.invoke(LazyMBeanServer.java:283)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker$MBeanServerAction.invoke(JRMPInvoker.java:855)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker.invoke(JRMPInvoker.java:422)
+	at sun.reflect.GeneratedMethodAccessor4038.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:303)
+	at sun.rmi.transport.Transport$1.run(Transport.java:159)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:155)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:535)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:790)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:649)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+	at sun.rmi.transport.StreamRemoteCall.exceptionReceivedFromServer(StreamRemoteCall.java:255)
+	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:233)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:142)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker_Stub.invoke(Unknown Source)
+	at org.jboss.invocation.jrmp.interfaces.JRMPInvokerProxy.invoke(JRMPInvokerProxy.java:133)
+	at org.jboss.invocation.InvokerInterceptor.invokeInvoker(InvokerInterceptor.java:365)
+	at org.jboss.invocation.InvokerInterceptor.invoke(InvokerInterceptor.java:197)
+	at org.jboss.proxy.TransactionInterceptor.invoke(TransactionInterceptor.java:61)
+	at org.jboss.proxy.ejb.SecurityContextInterceptor.invoke(SecurityContextInterceptor.java:64)
+	at org.jboss.proxy.SecurityInterceptor.invoke(SecurityInterceptor.java:68)
+	at org.jboss.proxy.ejb.StatelessSessionInterceptor.invoke(StatelessSessionInterceptor.java:112)
+	at org.jboss.proxy.ClientContainer.invoke(ClientContainer.java:101)
+	at com.sun.proxy.$Proxy2.startJobNow(Unknown Source)
+	at com.lombardrisk.f3.F3TaskManager.main(F3TaskManager.java:236)
+----------break now --------
+-------------I am task =Empty Task
+Task is Admin : Empty Task
+2014-09-17 18:08:54
+Waiting 180 second for Task  Empty Task execute
+Started F3 Task Manager ...
+Logged in as user:sa
+Starting task: [Admin:Empty Task] at: 2014-09-17 18:08:54,903
+Finished starting task: [Admin:Empty Task] at: 2014-09-17 18:08:54,964
+--debug timeout :10.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+Trades:Remove Mature Trades: Total of 168111 trades have been removed.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh

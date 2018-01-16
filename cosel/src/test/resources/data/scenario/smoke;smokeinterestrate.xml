@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/smoke.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+
+        <collateralPreference id="SmokeCollateralPreferences">
+            <collateralRules>
+                <noAuthorisedStatus>true</noAuthorisedStatus>
+            </collateralRules>
+        </collateralPreference>
+
+        <interestRate id="SmokeInterestRate">
+            <interestRateName id="interest.rate.name" random="true"/>
+            <description random="true"/>
+            <status>enabled</status>
+            <dailyInterestRate>
+                <date>12/6/2016</date>
+                <rate>5</rate>
+            </dailyInterestRate>
+        </interestRate>
+
+        <agreement id="SmokeOTCAgreement004">
+            <principal>
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter id="agreement.principal">AlexPrcPrimaryC</filter>
+                <linkText>AlexPrcPrimaryC</linkText>
+            </principal>
+            <counterparty>
+                <criteria>Containing</criteria>
+                <type>Long Name</type>
+                <filter id="agreement.counterparty">QTPCounterparty</filter>
+                <linkText>QTPCounterparty</linkText>
+            </counterparty>
+            <agreementDescription id="SmokeOTCagr4Desc" random="true" suffix="SmokeOTCagr4Desc"/>
+            <agreementName random="true"/>
+            <externalId random="true"/>
+            <agreementDate>12/6/2016</agreementDate>
+            <nettingIAandMtM>Net</nettingIAandMtM>
+            <!--<grossCalc>Net</grossCalc>-->
+            <interestCalc>Net</interestCalc>
+            <callFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </callFrequency>
+            <holidayCentre ref="hc.europe.name"/>
+            <product id="pro1">
+                <productName ref="product.test1.name"/>
+            </product>
+            <!--<interest>true</interest>-->
+            <!--<interestCalculationsMethod>Simple</interestCalculationsMethod>-->
+            <!--<calculationRule>First of the Month</calculationRule>-->
+            <!--<payMethod>Physical Payment</payMethod>-->
+            <!--<receiveMethod>Capitalise</receiveMethod>-->
+            <!--<interestSettlementDate>T+2</interestSettlementDate>-->
+            <collateralAssetClass>
+                <collateralAssetClassName ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="cash.usd.name"/>
+                    <interestRule>
+                        <agreementRate ref="interest.rate.name"/>
+                    </interestRule>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="bond.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="bond.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="equity.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="equity.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vcr.name"/>
+                    <linkText ref="payInstrBucket.vcr.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vrd.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.pay.name"/>
+                    <linkText ref="payInstrBucket.pay.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.rec.name"/>
+                    <linkText ref="payInstrBucket.rec.name"/>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementStatus>Pending</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <statementStatus>Approved</statementStatus>
+            <agreementId id="smoke.otc.agr4id"/>
+        </agreement>
+
+        <assetBookingSummary id="CashUSDType">
+            <assetType ref="cash.usd.name"/>
+        </assetBookingSummary>
+
+        <bookingDetail id="Smokebooking6">
+            <assetType ref="cash.usd.name"/>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <nominalAmount>1000000</nominalAmount>
+                    <movement>Call</movement>
+                </bookingInformationDetail>
+                <settlementDate>12/6/2016</settlementDate>
+            </bookingInformation>
+            <alertHandling>
+                <!--<content>[/s/S]*</content>-->
+                <accept>true</accept>
+            </alertHandling>
+            <save>save</save>
+            <bookingId id="Smokebooking6Id"/>
+        </bookingDetail>
+
+        <assetBookingSummary id="EditSmokebooking6P">
+            <!--<bookingId ref ="Smokebooking6Id"/>-->
+            <nominalAmount>1,000,000.00</nominalAmount>
+            <status>Pending</status>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="EditSmokebooking6A">
+            <!--<bookingId ref ="Smokebooking6Id"/>-->
+            <nominalAmount>1,000,000.00</nominalAmount>
+            <status>Authorised</status>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="EditSmokebooking6PS">
+            <!--<bookingId ref ="Smokebooking6Id"/>-->
+            <nominalAmount>1,000,000.00</nominalAmount>
+            <status>Pending Settlement</status>
+        </assetBookingSummary>
+
+        <bookingDetail id="Smokebooking6Authorised">
+            <bookingInformation>
+                <settlementStatusInfo>
+                    <settlementStatus>Authorised</settlementStatus>
+                </settlementStatusInfo>
+            </bookingInformation>
+            <save>save</save>
+            <!--<alertHandling>-->
+                <!--<accept>true</accept>-->
+            <!--</alertHandling>-->
+        </bookingDetail>
+
+        <bookingDetail id="Smokebooking6PendingSettlement">
+            <bookingInformation>
+                <settlementStatusInfo>
+                    <settlementStatus>Pending Settlement</settlementStatus>
+                </settlementStatusInfo>
+            </bookingInformation>
+            <save>save</save>
+            <!--<alertHandling>-->
+                <!--<accept>true</accept>-->
+            <!--</alertHandling>-->
+        </bookingDetail>
+
+        <bookingDetail id="Smokebooking6Settled">
+            <bookingInformation>
+                <settlementStatusInfo>
+                    <settlementStatus>Settled</settlementStatus>
+                </settlementStatusInfo>
+            </bookingInformation>
+            <save>save</save>
+            <!--<alertHandling>-->
+            <!--<accept>true</accept>-->
+            <!--</alertHandling>-->
+        </bookingDetail>
+
+        <interestEventSearch id="InterestSearch001">
+            <description>
+                <type>Exactly matching</type>
+                <filter ref="SmokeOTCagr4Desc"/>
+            </description>
+            <monthRange>
+                <startMonth>12/2016</startMonth>
+                <endMonth>1/2017</endMonth>
+            </monthRange>
+        </interestEventSearch>
+
+        <agreement id="SmokeAgreement005">
+            <agreementStatus>Pending</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+        <interestEventDetail id="InterestEvent001" name="interest.event">
+            <description ref="SmokeOTCagr4Desc"/>
+            <businessLine>OTC</businessLine>
+            <cashAssetType ref="cash.usd.name"/>
+            <interestSource>Net Interest</interestSource>
+        </interestEventDetail>
+
+        <interestEventDetail id="InterestResult001" name="interest.event">
+            <description ref="SmokeOTCagr4Desc"/>
+            <businessLine>OTC</businessLine>
+            <cashAssetType ref="cash.usd.name"/>
+            <interestSource>Net Interest</interestSource>
+            <calculatedInterestAmount>-7,916.73</calculatedInterestAmount>
+            <agreedInterestAmount>-7,916.73</agreedInterestAmount>
+        </interestEventDetail>
+
+        <interestReportDetails id="InterestDetail001">
+            <description ref="SmokeOTCagr4Desc"/>
+            <cashAssetType ref="cash.usd.name"/>
+            <interestSource>Net Interest</interestSource>
+            <principalRate ref="interest.rate.name"/>
+            <counterpartyRate ref="interest.rate.name"/>
+            <periodAmount>-7,916.73</periodAmount>
+            <netInterestAmount>-7,916.73</netInterestAmount>
+            <agreedNetInterestAmount>-7,916.73</agreedNetInterestAmount>
+            <dailyInterestDetails>
+                <settlementDate>12/6/2016</settlementDate>
+                <interestAction>Call</interestAction>
+                <openBalance>0.00</openBalance>
+                <callRecall>1,000,000.00</callRecall>
+                <closeBalance>1,000,000.00</closeBalance>
+                <agreementRate>5.0000</agreementRate>
+                <interestAmount>-138.89</interestAmount>
+                <accumulatedOverPeriod>-138.89</accumulatedOverPeriod>
+            </dailyInterestDetails>
+            <dailyInterestDetails>
+                <settlementDate>1/31/2017</settlementDate>
+                <openBalance>1,000,000.00</openBalance>
+                <closeBalance>1,000,000.00</closeBalance>
+                <agreementRate>5.0000</agreementRate>
+                <interestAmount>-138.89</interestAmount>
+                <accumulatedOverPeriod>-7,916.73</accumulatedOverPeriod>
+            </dailyInterestDetails>
+        </interestReportDetails>
+
+        <marginLetter id="smoke.interest.letter"/>
+
+        <interestEventDetail id="InterestResult002" name="interest.event">
+            <description ref="SmokeOTCagr4Desc"/>
+            <businessLine>OTC</businessLine>
+            <cashAssetType ref="cash.usd.name"/>
+            <interestSource>Net Interest</interestSource>
+            <calculatedInterestAmount>-7,916.73</calculatedInterestAmount>
+            <agreedInterestAmount>-7,916.73</agreedInterestAmount>
+            <letterEmailStatus>Emailed</letterEmailStatus>
+        </interestEventDetail>
+
+        <interestEventDetail id="InterestEvent002">
+            <description ref="SmokeOTCagr4Desc"/>
+            <businessLine>OTC</businessLine>
+            <cashAssetType ref="cash.usd.name"/>
+            <interestSource>Net Interest</interestSource>
+            <interestMovementStatus id="interest.event.2.status"/>
+        </interestEventDetail>
+
+        <interestEventDetail id="InterestResult003" name="interest.event">
+            <description ref="SmokeOTCagr4Desc"/>
+            <businessLine>OTC</businessLine>
+            <cashAssetType ref="cash.usd.name"/>
+            <interestSource>Net Interest</interestSource>
+            <calculatedInterestAmount>-7,916.73</calculatedInterestAmount>
+            <agreedInterestAmount>-7,916.73</agreedInterestAmount>
+            <interestMovementStatus ref="interest.event.2.status"/>
+            <letterEmailStatus>Emailed</letterEmailStatus>
+        </interestEventDetail>
+
+        <cashMovementSummary id="CashMovementSummary001">
+            <assetType ref="cash.usd.name"/>
+            <calculationRule>First Business Day</calculationRule>
+            <Amount>-7,916.73</Amount>
+            <movement>Pay</movement>
+            <bookingType>Net</bookingType>
+            <bookingSource>Interest Apply</bookingSource>
+        </cashMovementSummary>
+    </scenarioData>
+</dataBean>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <optimisationRule id="opt.rule.ori">
+            <ruleName>opt_rule_update</ruleName>
+        </optimisationRule>
+        <optimisationRule id="opt.rule.update">
+            <ruleName id="rule.name">opt_rule_update</ruleName>
+            <dataParameters>
+                <assetFilterRule>
+                    <filter>filter_asset_for_opt_update2</filter>
+                    <linkText>filter_asset_for_opt_update2</linkText>
+                </assetFilterRule>
+                <agreementFilterRule>
+                    <filter>filter_agr_for_opt_update2</filter>
+                    <linkText>filter_agr_for_opt_update2</linkText>
+                </agreementFilterRule>
+                <assetRankingRule>
+                    <filter>ranking_asset_for_opt_update2</filter>
+                    <linkText>ranking_asset_for_opt_update2</linkText>
+                </assetRankingRule>
+                <agreementRankingRule>
+                    <filter>ranking_agr_for_opt_update2</filter>
+                    <linkText>ranking_agr_for_opt_update2</linkText>
+                </agreementRankingRule>
+                <agreementStatus>Approved</agreementStatus>
+                <eventStatus>Return</eventStatus>
+                <eventStatus>Recall</eventStatus>
+                <internalReview>false</internalReview>
+            </dataParameters>
+            <optimisationParameters>
+                <assumeSweepOfExistingBooking>false</assumeSweepOfExistingBooking>
+                <outgoingAssetsRule>false</outgoingAssetsRule>
+                <requirementMatchTolerance>1000</requirementMatchTolerance>
+                <unlimitedAssets>false</unlimitedAssets>
+                <shortfallCostCosfficient>3</shortfallCostCosfficient>
+            </optimisationParameters>
+            <runParameters>
+                <algorithm>Rank Allocation</algorithm>
+                <reportingCurrency>
+                    <filter>USD</filter>
+                    <linkText>USD</linkText>
+                </reportingCurrency>
+                <randomisation>false</randomisation>
+                <timeOut>
+                    <isTick>true</isTick>
+                    <value>600</value>
+                </timeOut>
+            </runParameters>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </optimisationRule>
+
+
+
+
+        <auditOptimisationRuleReportFilter id="audit.optimisation.report.filter">
+            <operation>Modify</operation>
+            <ruleName>
+                <filter ref="rule.name"/>
+            </ruleName>
+        </auditOptimisationRuleReportFilter>
+        <variable id="auditReportPath"/>
+
+        <reportValidationRules id="reportRule">
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>opt_rule_update</value></field><field><fieldName>Rule Type</fieldName><value>Optimisation</value></field><field><fieldName>Attribute</fieldName><value>Data parameter</value></field><field><fieldName>Element</fieldName><value>Agreement Filter Rule</value></field><field><fieldName>Value Before</fieldName><value>filter_agr_for_opt_update1</value></field><field><fieldName>Value After</fieldName><value>filter_agr_for_opt_update2</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>opt_rule_update</value></field><field><fieldName>Rule Type</fieldName><value>Optimisation</value></field><field><fieldName>Attribute</fieldName><value>Data parameter</value></field><field><fieldName>Element</fieldName><value>Agreement Ranking Rule</value></field><field><fieldName>Value Before</fieldName><value>ranking_agr_for_opt_update1</value></field><field><fieldName>Value After</fieldName><value>ranking_agr_for_opt_update2</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>opt_rule_update</value></field><field><fieldName>Rule Type</fieldName><value>Optimisation</value></field><field><fieldName>Attribute</fieldName><value>Data parameter</value></field><field><fieldName>Element</fieldName><value>Agreement Status</value></field><field><fieldName>Value Before</fieldName><value>Amended</value></field><field><fieldName>Value After</fieldName><value>Approved</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>opt_rule_update</value></field><field><fieldName>Rule Type</fieldName><value>Optimisation</value></field><field><fieldName>Attribute</fieldName><value>Run parameter</value></field><field><fieldName>Element</fieldName><value>Algorithm</value></field><field><fieldName>Value Before</fieldName><value>RANK_OPTIMISATION</value></field><field><fieldName>Value After</fieldName><value>ALLOCATION</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>opt_rule_update</value></field><field><fieldName>Rule Type</fieldName><value>Optimisation</value></field><field><fieldName>Attribute</fieldName><value>Data parameter</value></field><field><fieldName>Element</fieldName><value>Asset Filter Rule</value></field><field><fieldName>Value Before</fieldName><value>filter_asset_for_opt_update1</value></field><field><fieldName>Value After</fieldName><value>filter_asset_for_opt_update2</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>opt_rule_update</value></field><field><fieldName>Rule Type</fieldName><value>Optimisation</value></field><field><fieldName>Attribute</fieldName><value>Data parameter</value></field><field><fieldName>Element</fieldName><value>Asset Ranking Rule</value></field><field><fieldName>Value Before</fieldName><value>ranking_asset_for_opt_update1</value></field><field><fieldName>Value After</fieldName><value>ranking_asset_for_opt_update2</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>opt_rule_update</value></field><field><fieldName>Rule Type</fieldName><value>Optimisation</value></field><field><fieldName>Attribute</fieldName><value>Run parameter</value></field><field><fieldName>Element</fieldName><value>Timeout</value></field><field><fieldName>Value Before</fieldName><value>2.0</value></field><field><fieldName>Value After</fieldName><value>600.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>opt_rule_update</value></field><field><fieldName>Rule Type</fieldName><value>Optimisation</value></field><field><fieldName>Attribute</fieldName><value>Data parameter</value></field><field><fieldName>Element</fieldName><value>Event Status</value></field><field><fieldName>Value Before</fieldName><value>Delivery</value></field><field><fieldName>Value After</fieldName><value>Recall,Return</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>opt_rule_update</value></field><field><fieldName>Rule Type</fieldName><value>Optimisation</value></field><field><fieldName>Attribute</fieldName><value>Opt parameter</value></field><field><fieldName>Element</fieldName><value>Assume Sweep of Existing Bookings</value></field><field><fieldName>Value Before</fieldName><value>Yes</value></field><field><fieldName>Value After</fieldName><value>No</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>opt_rule_update</value></field><field><fieldName>Rule Type</fieldName><value>Optimisation</value></field><field><fieldName>Attribute</fieldName><value>Data parameter</value></field><field><fieldName>Element</fieldName><value>Include Internal Review</value></field><field><fieldName>Value Before</fieldName><value>Yes</value></field><field><fieldName>Value After</fieldName><value>No</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>opt_rule_update</value></field><field><fieldName>Rule Type</fieldName><value>Optimisation</value></field><field><fieldName>Attribute</fieldName><value>Opt parameter</value></field><field><fieldName>Element</fieldName><value>Outgoing Assets Rule</value></field><field><fieldName>Value Before</fieldName><value>Yes</value></field><field><fieldName>Value After</fieldName><value>No</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>opt_rule_update</value></field><field><fieldName>Rule Type</fieldName><value>Optimisation</value></field><field><fieldName>Attribute</fieldName><value>Opt parameter</value></field><field><fieldName>Element</fieldName><value>Unlimited Assets</value></field><field><fieldName>Value Before</fieldName><value>true</value></field><field><fieldName>Value After</fieldName><value>false</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>opt_rule_update</value></field><field><fieldName>Rule Type</fieldName><value>Optimisation</value></field><field><fieldName>Attribute</fieldName><value>Opt parameter</value></field><field><fieldName>Element</fieldName><value>Requirement Match Tolerance</value></field><field><fieldName>Value Before</fieldName><value>2000000.0</value></field><field><fieldName>Value After</fieldName><value>1000.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>&gt;=</operator><count>1</count><field><fieldName>Operation</fieldName><value>Modify</value></field><field><fieldName>Rule Name</fieldName><value>opt_rule_update</value></field><field><fieldName>Rule Type</fieldName><value>Optimisation</value></field><field><fieldName>Attribute</fieldName><value>Run parameter</value></field><field><fieldName>Element</fieldName><value>Reporting Currency</value></field><field><fieldName>Value Before</fieldName><value>EUR</value></field><field><fieldName>Value After</fieldName><value>USD</value></field></reportValidationRule>
+
+        </reportValidationRules>
+
+    </scenarioData>
+</dataBean>

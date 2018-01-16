@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#DB_USER="COLLINE_DFA"
+#DB_USER="colline20122"
+#DB_PASSWD=creditderivative
+#DB_SERVER=172.20.30.13:1521
+#S_ID=shb11202
+
+DB_USER="COLLINE2013_1112"
+
+
+DB_PASSWD=creditderivative
+DB_SERVER=172.20.20.66:1521
+S_ID=pst2
+
+
+
+export DB_USER DB_PASSWD DB_SERVER S_ID

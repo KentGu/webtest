@@ -1,0 +1,751 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<collection xmlns="http://www.lombardrisk.com/colline/agreement/extractAPI/metadata/agreement">
+    <agreement xmlns="http://www.lombardrisk.com/colline/agreement/extractAPI/metadata/agreement">
+        <legal_id>extract_agr_multimodel</legal_id>
+        <principal>QTPPrincipal</principal>
+        <cptyOrgRegion>ALL</cptyOrgRegion>
+        <custodian>QTPCustodian</custodian>
+        <umbrellaAgreement>false</umbrellaAgreement>
+        <counterpartycode>QTPCounterparty</counterpartycode>
+        <principalContact>QTPPrincipal</principalContact>
+        <cptyContact>QTPCounterparty</cptyContact>
+        <principalinterestcontact>QTPPrincipal</principalinterestcontact>
+        <cptyinterestcontact>QTPCounterparty</cptyinterestcontact>
+        <group>ALL</group>
+        <agreement_description>extract_agr_multimodel</agreement_description>
+        <region>ALL</region>
+        <status>67</status>
+        <category>Dollar Repo</category>
+        <colManager>QTPPrincipal - qtp_Label_120141015192348</colManager>
+        <notes>note</notes>
+        <valuation_agent>B</valuation_agent>
+        <principalNAV>2000000.0</principalNAV>
+        <principalCCy>USD</principalCCy>
+        <cptyNAV>4000000.0</cptyNAV>
+        <cptyCCy>USD</cptyCCy>
+        <master_documentation>GMRA 2000</master_documentation>
+        <credit_support_documentation>95 ISDA CSA NY Law</credit_support_documentation>
+        <createDate>2017-02-08</createDate>
+        <signOffDate>2017-02-08</signOffDate>
+        <original_date>2017-02-08</original_date>
+        <reviewDate>2017-02-08</reviewDate>
+        <reciprocity>Bilateral</reciprocity>
+        <prcTransferCcy>GBP</prcTransferCcy>
+        <cptyTransferCcy>EUR</cptyTransferCcy>
+        <base_currency>USD</base_currency>
+        <colType>Pledge Agreement</colType>
+        <signOffBy>test</signOffBy>
+        <creditContReuseRights>Credit Contingent Re-use Rights</creditContReuseRights>
+        <signOffNotes>Signoff Notes</signOffNotes>
+        <rehypothecation_flag>Y</rehypothecation_flag>
+        <rehypothecation>Unilateral in favour of Counterparty</rehypothecation>
+        <im_rehypothecation_flag>N</im_rehypothecation_flag>
+        <imRehypothecation>Bilateral</imRehypothecation>
+        <netting_MTM_And_IA>Net</netting_MTM_And_IA>
+        <netting_Calc>Net</netting_Calc>
+        <netting_Interest>Net</netting_Interest>
+        <calcMTM>false</calcMTM>
+        <TSA>false</TSA>
+        <principalBranches>
+            <branch>QTPPrincipalBranch2</branch>
+            <branch>QTPPrincipalBranch1</branch>
+        </principalBranches>
+        <cptyBranches>
+            <branch>QTPCounterpartyBranch2</branch>
+            <branch>QTPCounterpartyBranch1</branch>
+        </cptyBranches>
+        <udfs>
+            <udf>
+                <udfName>Author</udfName>
+                <udfValue>Author</udfValue>
+            </udf>
+            <udf>
+                <udfName>Date</udfName>
+                <udfValue>Date</udfValue>
+            </udf>
+            <udf>
+                <udfName>Version</udfName>
+                <udfValue>Version</udfValue>
+            </udf>
+        </udfs>
+        <frequency>Daily</frequency>
+        <non_workingday_adjusttype>None</non_workingday_adjusttype>
+        <frequency_start>2017-02-08</frequency_start>
+        <notification_time>13.00</notification_time>
+        <resolution_time>13.00</resolution_time>
+        <resolution_day>Next Day</resolution_day>
+        <time_zone>ADT</time_zone>
+        <holiday_centre>LONDON</holiday_centre>
+        <clientRelease>true</clientRelease>
+        <tradeValuationRule>P</tradeValuationRule>
+        <fxRateRule>Standard FX Rates</fxRateRule>
+        <tradeMappingRule>
+            <tmrField>Trade Identifier Party A</tmrField>
+            <tmrRule>Equal</tmrRule>
+            <tmrValue>a</tmrValue>
+            <tmrOperator>OR</tmrOperator>
+        </tradeMappingRule>
+        <tradeMappingRule>
+            <tmrField>Trade Identifier Party B</tmrField>
+            <tmrRule>Equal</tmrRule>
+            <tmrValue>b</tmrValue>
+            <tmrOperator>END</tmrOperator>
+        </tradeMappingRule>
+        <product>
+            <productName>QTP</productName>
+            <exposurePerc>100.0</exposurePerc>
+            <settlementPeriod>T-3</settlementPeriod>
+            <upfrontCalculMethod>Percentage of Exposure</upfrontCalculMethod>
+            <principleUpfronts>false</principleUpfronts>
+            <principleFixedPerc>90.0</principleFixedPerc>
+            <principleFixedValue>0.0</principleFixedValue>
+            <perOfNotionalCcy>Default base CCY</perOfNotionalCcy>
+            <haircutCalcMethod>No Haircut</haircutCalcMethod>
+            <includeValuation>false</includeValuation>
+            <externalIaSettings>
+                <externalIaSetting>
+                    <currencySet>Default</currencySet>
+                    <confidenceLevel>0.0</confidenceLevel>
+                    <days>0</days>
+                    <multiplier>1.0</multiplier>
+                    <minimumCollateral>0</minimumCollateral>
+                </externalIaSetting>
+            </externalIaSettings>
+        </product>
+        <product>
+            <productName>LR</productName>
+            <exposurePerc>100.0</exposurePerc>
+            <settlementPeriod>T</settlementPeriod>
+            <upfrontCalculMethod>Netting Rule</upfrontCalculMethod>
+            <principleUpfronts>true</principleUpfronts>
+            <principleFixedPerc>0.0</principleFixedPerc>
+            <principleFixedValue>0.0</principleFixedValue>
+            <perOfNotionalCcy>Default base CCY</perOfNotionalCcy>
+            <haircutCalcMethod>No Haircut</haircutCalcMethod>
+            <includeValuation>false</includeValuation>
+            <iaCalNettingRules>
+                <tradeRule>Notional Legs</tradeRule>
+                <nettingRule>Currency</nettingRule>
+                <nettingCalculation>Single Buy/Sell position</nettingCalculation>
+                <rateDefinitions>
+                    <rateDefinition>
+                        <rate>1.0</rate>
+                        <currency>ALL</currency>
+                    </rateDefinition>
+                </rateDefinitions>
+            </iaCalNettingRules>
+            <externalIaSettings>
+                <externalIaSetting>
+                    <currencySet>Default</currencySet>
+                    <confidenceLevel>0.0</confidenceLevel>
+                    <days>0</days>
+                    <multiplier>1.0</multiplier>
+                    <minimumCollateral>0</minimumCollateral>
+                </externalIaSetting>
+            </externalIaSettings>
+        </product>
+        <product>
+            <productName>Pro9</productName>
+            <exposurePerc>100.0</exposurePerc>
+            <settlementPeriod>T-2</settlementPeriod>
+            <upfrontCalculMethod>Percentage of Buy Notional</upfrontCalculMethod>
+            <principleUpfronts>true</principleUpfronts>
+            <principleFixedPerc>90.0</principleFixedPerc>
+            <principleFixedValue>0.0</principleFixedValue>
+            <perOfNotionalCcy>Default base CCY</perOfNotionalCcy>
+            <haircutCalcMethod>No Haircut</haircutCalcMethod>
+            <includeValuation>false</includeValuation>
+            <externalIaSettings>
+                <externalIaSetting>
+                    <currencySet>Default</currencySet>
+                    <confidenceLevel>0.0</confidenceLevel>
+                    <days>0</days>
+                    <multiplier>1.0</multiplier>
+                    <minimumCollateral>0</minimumCollateral>
+                </externalIaSetting>
+            </externalIaSettings>
+        </product>
+        <product>
+            <productName>qtp_Pro9</productName>
+            <exposurePerc>100.0</exposurePerc>
+            <settlementPeriod>T-4</settlementPeriod>
+            <upfrontCalculMethod>Percentage of ITM Exposure</upfrontCalculMethod>
+            <principleUpfronts>true</principleUpfronts>
+            <principleFixedPerc>60.0</principleFixedPerc>
+            <principleFixedValue>0.0</principleFixedValue>
+            <perOfNotionalCcy>Default base CCY</perOfNotionalCcy>
+            <haircutCalcMethod>No Haircut</haircutCalcMethod>
+            <includeValuation>false</includeValuation>
+            <externalIaSettings>
+                <externalIaSetting>
+                    <currencySet>Default</currencySet>
+                    <confidenceLevel>0.0</confidenceLevel>
+                    <days>0</days>
+                    <multiplier>1.0</multiplier>
+                    <minimumCollateral>0</minimumCollateral>
+                </externalIaSetting>
+            </externalIaSettings>
+        </product>
+        <product>
+            <productName>otc_pro1</productName>
+            <exposurePerc>100.0</exposurePerc>
+            <settlementPeriod>T+1</settlementPeriod>
+            <upfrontCalculMethod>Fixed Value</upfrontCalculMethod>
+            <principleUpfronts>true</principleUpfronts>
+            <principleFixedPerc>0.0</principleFixedPerc>
+            <principleFixedValue>1000000.0</principleFixedValue>
+            <perOfNotionalCcy>Default base CCY</perOfNotionalCcy>
+            <haircutCalcMethod>No Haircut</haircutCalcMethod>
+            <includeValuation>false</includeValuation>
+            <externalIaSettings>
+                <externalIaSetting>
+                    <currencySet>Default</currencySet>
+                    <confidenceLevel>0.0</confidenceLevel>
+                    <days>0</days>
+                    <multiplier>1.0</multiplier>
+                    <minimumCollateral>0</minimumCollateral>
+                </externalIaSetting>
+            </externalIaSettings>
+        </product>
+        <product>
+            <productName>otc_pro2</productName>
+            <exposurePerc>100.0</exposurePerc>
+            <settlementPeriod>T+2</settlementPeriod>
+            <upfrontCalculMethod>Fixed per Notional</upfrontCalculMethod>
+            <principleUpfronts>false</principleUpfronts>
+            <principleFixedPerc>0.0</principleFixedPerc>
+            <principleFixedValue>10000.0</principleFixedValue>
+            <perOfNotionalCcy>GBP</perOfNotionalCcy>
+            <haircutCalcMethod>No Haircut</haircutCalcMethod>
+            <includeValuation>false</includeValuation>
+            <externalIaSettings>
+                <externalIaSetting>
+                    <currencySet>Default</currencySet>
+                    <confidenceLevel>0.0</confidenceLevel>
+                    <days>0</days>
+                    <multiplier>1.0</multiplier>
+                    <minimumCollateral>0</minimumCollateral>
+                </externalIaSetting>
+            </externalIaSettings>
+        </product>
+        <product>
+            <productName>otc_pro3</productName>
+            <exposurePerc>90.0</exposurePerc>
+            <settlementPeriod>T+3</settlementPeriod>
+            <upfrontCalculMethod>External IA</upfrontCalculMethod>
+            <principleUpfronts>true</principleUpfronts>
+            <principleFixedPerc>0.0</principleFixedPerc>
+            <principleFixedValue>2000000.0</principleFixedValue>
+            <perOfNotionalCcy>Default base CCY</perOfNotionalCcy>
+            <haircutCalcMethod>No Haircut</haircutCalcMethod>
+            <includeValuation>false</includeValuation>
+            <externalIaSettings>
+                <externalIaSetting>
+                    <currencySet>Default</currencySet>
+                    <calcMethod>VaR With X-Ccy Netting</calcMethod>
+                    <confidenceLevel>0.0</confidenceLevel>
+                    <days>0</days>
+                    <multiplier>1.0</multiplier>
+                    <minimumCollateral>0</minimumCollateral>
+                    <riskModelCalPeriod>Daily</riskModelCalPeriod>
+                    <assetsClassToHedge>None</assetsClassToHedge>
+                </externalIaSetting>
+            </externalIaSettings>
+        </product>
+        <product>
+            <productName>otc_pro4</productName>
+            <exposurePerc>100.0</exposurePerc>
+            <settlementPeriod>T+4</settlementPeriod>
+            <upfrontCalculMethod>No Upfronts</upfrontCalculMethod>
+            <principleUpfronts>false</principleUpfronts>
+            <principleFixedPerc>0.0</principleFixedPerc>
+            <principleFixedValue>0.0</principleFixedValue>
+            <perOfNotionalCcy>Default base CCY</perOfNotionalCcy>
+            <haircutCalcMethod>No Haircut</haircutCalcMethod>
+            <includeValuation>false</includeValuation>
+            <externalIaSettings>
+                <externalIaSetting>
+                    <currencySet>Default</currencySet>
+                    <confidenceLevel>0.0</confidenceLevel>
+                    <days>0</days>
+                    <multiplier>1.0</multiplier>
+                    <minimumCollateral>0</minimumCollateral>
+                </externalIaSetting>
+            </externalIaSettings>
+        </product>
+        <product>
+            <productName>otc_pro5</productName>
+            <exposurePerc>100.0</exposurePerc>
+            <settlementPeriod>T+5</settlementPeriod>
+            <upfrontCalculMethod>Percentage of Alternative Exposure</upfrontCalculMethod>
+            <principleUpfronts>true</principleUpfronts>
+            <principleFixedPerc>70.0</principleFixedPerc>
+            <principleFixedValue>0.0</principleFixedValue>
+            <perOfNotionalCcy>Default base CCY</perOfNotionalCcy>
+            <haircutCalcMethod>No Haircut</haircutCalcMethod>
+            <includeValuation>false</includeValuation>
+            <externalIaSettings>
+                <externalIaSetting>
+                    <currencySet>Default</currencySet>
+                    <confidenceLevel>0.0</confidenceLevel>
+                    <days>0</days>
+                    <multiplier>1.0</multiplier>
+                    <minimumCollateral>0</minimumCollateral>
+                </externalIaSetting>
+            </externalIaSettings>
+        </product>
+        <product>
+            <productName>otc_pro6</productName>
+            <exposurePerc>100.0</exposurePerc>
+            <settlementPeriod>T-1</settlementPeriod>
+            <upfrontCalculMethod>Percentage of Notional</upfrontCalculMethod>
+            <principleUpfronts>false</principleUpfronts>
+            <principleFixedPerc>80.0</principleFixedPerc>
+            <principleFixedValue>0.0</principleFixedValue>
+            <perOfNotionalCcy>Default base CCY</perOfNotionalCcy>
+            <haircutCalcMethod>No Haircut</haircutCalcMethod>
+            <includeValuation>false</includeValuation>
+            <externalIaSettings>
+                <externalIaSetting>
+                    <currencySet>Default</currencySet>
+                    <confidenceLevel>0.0</confidenceLevel>
+                    <days>0</days>
+                    <multiplier>1.0</multiplier>
+                    <minimumCollateral>0</minimumCollateral>
+                </externalIaSetting>
+            </externalIaSettings>
+        </product>
+        <interestCalcMethod>Simple</interestCalcMethod>
+        <calcRule>First Business Day</calcRule>
+        <interest_pay_method>Physical Payment</interest_pay_method>
+        <interest_receive_method>Physical Payment</interest_receive_method>
+        <calcDate>T+1</calcDate>
+        <gracePeriod>0</gracePeriod>
+        <rating_method>Both</rating_method>
+        <applicableToBoth>true</applicableToBoth>
+        <applicableToVI>true</applicableToVI>
+        <allowNegativeEffRate>false</allowNegativeEffRate>
+        <asset>
+            <assetName>qtp_bond_usd</assetName>
+            <settlementDateAbbriviated>T</settlementDateAbbriviated>
+            <fixedVal>true</fixedVal>
+            <valuePercent>99.0</valuePercent>
+            <applicableParty>PC</applicableParty>
+            <applicableType>VI</applicableType>
+            <elig_method>or</elig_method>
+            <internal_Reuse_Policy>true</internal_Reuse_Policy>
+            <cashAsset>false</cashAsset>
+            <haircutAdjustments>
+                <haircutAdjustment>
+                    <adjustmentType>Adjust</adjustmentType>
+                    <instrumentField>Currency</instrumentField>
+                    <rule>Equal</rule>
+                    <value>EUR</value>
+                    <operation>Subtract</operation>
+                    <valuePercentage>5.0</valuePercentage>
+                </haircutAdjustment>
+                <haircutAdjustment>
+                    <adjustmentType>Override</adjustmentType>
+                    <instrumentField>Currency</instrumentField>
+                    <rule>NotEqual</rule>
+                    <value>Principal Transfer Currency</value>
+                    <valuePercentage>90.0</valuePercentage>
+                </haircutAdjustment>
+            </haircutAdjustments>
+            <rating>
+                <min_agency>SandP</min_agency>
+                <min_rating>A-</min_rating>
+            </rating>
+            <rating>
+                <min_agency>MOODYS</min_agency>
+                <min_rating>A1</min_rating>
+            </rating>
+            <rating>
+                <min_agency>Fitch</min_agency>
+                <min_rating>B+</min_rating>
+            </rating>
+            <eligibility>
+                <elig_ccy>ADP</elig_ccy>
+                <elig_country>BR</elig_country>
+                <elig_issue_date>2017-02-07</elig_issue_date>
+                <elig_issue_maturity_type>Residual</elig_issue_maturity_type>
+                <elig_issue_maturity_less_than>4</elig_issue_maturity_less_than>
+                <elig_issue_maturity_period_type>Days</elig_issue_maturity_period_type>
+                <elig_role_correlation>Calculation Agent</elig_role_correlation>
+                <elig_industry_correlation>true</elig_industry_correlation>
+                <miniEligiblityCQS>5</miniEligiblityCQS>
+                <udfRule>
+                    <field>UDF 8</field>
+                    <rule>Not Equal</rule>
+                    <value>TERR</value>
+                </udfRule>
+            </eligibility>
+            <concentration_rules>
+                <concentration_rule>
+                    <concentration_rule>Country Holding</concentration_rule>
+                    <rating_from>AAA/Aaa/AAA</rating_from>
+                    <rating_to>C/C/C</rating_to>
+                    <method>MaxPercent</method>
+                    <value>80.0</value>
+                    <element>CANADA</element>
+                    <trigger>55.0</trigger>
+                    <triggerCCY>USD</triggerCCY>
+                    <group></group>
+                </concentration_rule>
+                <concentration_rule>
+                    <concentration_rule>Industry Holding</concentration_rule>
+                    <rating_from>AAA/Aaa/AAA</rating_from>
+                    <rating_to>C/NR/C</rating_to>
+                    <method>MaxValue</method>
+                    <value>90.0</value>
+                    <element>15104010-Aluminum</element>
+                    <trigger>66.0</trigger>
+                    <triggerCCY>GBP</triggerCCY>
+                    <group></group>
+                </concentration_rule>
+                <concentration_rule>
+                    <concentration_rule>Instrument Holding</concentration_rule>
+                    <rating_from>AAA/Aaa/AAA</rating_from>
+                    <rating_to>A/A2/A</rating_to>
+                    <method>MaxValue</method>
+                    <value>1000000.0</value>
+                    <trigger>11.0</trigger>
+                    <triggerCCY>USD</triggerCCY>
+                    <group></group>
+                </concentration_rule>
+                <concentration_rule>
+                    <concentration_rule>Issuance Holding</concentration_rule>
+                    <rating_from>AAA/Aaa/AAA</rating_from>
+                    <rating_to>CCC+/Caa1/CCC+</rating_to>
+                    <method>MaxPercentIssuance</method>
+                    <value>70.0</value>
+                    <trigger>33.0</trigger>
+                    <triggerCCY>EUR</triggerCCY>
+                    <group></group>
+                </concentration_rule>
+                <concentration_rule>
+                    <concentration_rule>Issuer Holding</concentration_rule>
+                    <rating_from>AAA/Aaa/AAA</rating_from>
+                    <rating_to>BB+/Ba1/BB+</rating_to>
+                    <method>MaxValue</method>
+                    <value>2000000.0</value>
+                    <trigger>44.0</trigger>
+                    <triggerCCY>EUR</triggerCCY>
+                    <group></group>
+                </concentration_rule>
+                <concentration_rule>
+                    <concentration_rule>Type Holding</concentration_rule>
+                    <rating_from>AAA/Aaa/AAA</rating_from>
+                    <rating_to>BBB-/Baa3/BBB-</rating_to>
+                    <method>MaxPercent</method>
+                    <value>70.0</value>
+                    <trigger>22.0</trigger>
+                    <triggerCCY>GBP</triggerCCY>
+                    <group></group>
+                </concentration_rule>
+                <concentration_rule>
+                    <concentration_rule>Ultimate Parent Holding</concentration_rule>
+                    <rating_from>AAA/Aaa/AAA</rating_from>
+                    <rating_to>NR/NR/NR</rating_to>
+                    <method>MaxValue</method>
+                    <value>5000000.0</value>
+                    <trigger>77.0</trigger>
+                    <triggerCCY>GBP</triggerCCY>
+                    <group></group>
+                </concentration_rule>
+            </concentration_rules>
+            <deliveryPriority>High</deliveryPriority>
+            <recallPriority>High</recallPriority>
+            <templateVsAgreementEligibilityRule>Template Only</templateVsAgreementEligibilityRule>
+        </asset>
+        <asset>
+            <assetName>CASH-USD</assetName>
+            <settlementDateAbbriviated>T</settlementDateAbbriviated>
+            <fixedVal>true</fixedVal>
+            <valuePercent>100.0</valuePercent>
+            <cash_rate>qtp_Interest_Rate1</cash_rate>
+            <applicableParty>PC</applicableParty>
+            <applicableType>VI</applicableType>
+            <elig_method>and</elig_method>
+            <internal_Reuse_Policy>true</internal_Reuse_Policy>
+            <cashAsset>true</cashAsset>
+            <deliveryPriority>High</deliveryPriority>
+            <recallPriority>High</recallPriority>
+            <templateVsAgreementEligibilityRule>Template Only</templateVsAgreementEligibilityRule>
+        </asset>
+        <cptytriggertype>NAV</cptytriggertype>
+        <cptyRatingBasedData>
+            <threshold>1000000.0</threshold>
+            <thresholdType>Fixed</thresholdType>
+            <mta>10.0</mta>
+            <mtaType>Percentage of NAV</mtaType>
+            <roundingAmount>100</roundingAmount>
+            <thresholdccy>USD</thresholdccy>
+            <ia>5000.0</ia>
+            <iaccy>USD</iaccy>
+            <navAmount>0.0</navAmount>
+        </cptyRatingBasedData>
+        <rounding_delivery>Up</rounding_delivery>
+        <rounding_recall>Down</rounding_recall>
+        <std_value>0.0</std_value>
+        <principaltriggertype>Fixed</principaltriggertype>
+        <principalFixedThresholdType>Fixed</principalFixedThresholdType>
+        <principalFixedThresholdValue>1000000.0</principalFixedThresholdValue>
+        <principalFixedThresholdCcy>USD</principalFixedThresholdCcy>
+        <principalFixedMTAType>Percentage of NAV</principalFixedMTAType>
+        <principalFixedMTAValue>10.0</principalFixedMTAValue>
+        <principalFixedRoundingAmount>100</principalFixedRoundingAmount>
+        <stdIM_value>0.0</stdIM_value>
+        <std_type>Agreement Requirement</std_type>
+        <FINRA4210Adjustment>false</FINRA4210Adjustment>
+        <principalNotRatedAssumeNR>false</principalNotRatedAssumeNR>
+        <distMedium>Email</distMedium>
+        <report_freq>
+            <external_frequency_name>ext_freq_2</external_frequency_name>
+            <frequency>Quarterly</frequency>
+            <business_adjust_type>1</business_adjust_type>
+            <frequency_start>2017-02-07</frequency_start>
+            <medium>Email</medium>
+            <principal_contact>QTPPrincipal</principal_contact>
+            <cpty_contact>QTPCounterparty</cpty_contact>
+            <report>
+                <report_type>Reconciliation Trades Output</report_type>
+            </report>
+        </report_freq>
+        <lettersAttachments>
+            <letter>
+                <letterType>Call Include Report</letterType>
+                <reportType>Asset Holdings and Valuation</reportType>
+            </letter>
+            <letter>
+                <letterType>Recall Include Report</letterType>
+                <reportType>Exposures</reportType>
+            </letter>
+            <letter>
+                <letterType>Call &amp; Recall Include Report</letterType>
+                <reportType>Asset Holdings and Valuation</reportType>
+            </letter>
+            <letter>
+                <letterType>Delivery Include Report</letterType>
+                <reportType>Daily Exposure</reportType>
+            </letter>
+            <letter>
+                <letterType>Return Include Report</letterType>
+                <reportType>Reconciliation Trades Output</reportType>
+            </letter>
+            <letter>
+                <letterType>Delivery &amp; Return Include Report</letterType>
+                <reportType>Asset Holdings and Valuation</reportType>
+            </letter>
+            <letter>
+                <letterType>Dispute Include Report</letterType>
+                <reportType>Reconciliation Trades Output</reportType>
+            </letter>
+            <letter>
+                <letterType>Statement Include Report</letterType>
+                <reportType>Exposures</reportType>
+            </letter>
+            <letter>
+                <letterType>Statement Include Report</letterType>
+                <reportType>Reconciliation Trades Output</reportType>
+            </letter>
+            <letter>
+                <letterType>Statement Include Report</letterType>
+                <reportType>Asset Holdings and Valuation</reportType>
+            </letter>
+        </lettersAttachments>
+        <conditionRule>Min</conditionRule>
+        <conditionFixedAmount>3000000.0</conditionFixedAmount>
+        <conditionFixedCcy>USD</conditionFixedCcy>
+        <conditionPercentageOfTotalExposure>20.0</conditionPercentageOfTotalExposure>
+        <conditionRuleReceive>Max</conditionRuleReceive>
+        <conditionFixedAmountReceive>4000000.0</conditionFixedAmountReceive>
+        <conditionFixedCcyReceive>EUR</conditionFixedCcyReceive>
+        <conditionPercentageOfTotalExposureReceive>30.0</conditionPercentageOfTotalExposureReceive>
+        <agreementName>extract_agr_multimodel</agreementName>
+        <cptyFixedMTAType></cptyFixedMTAType>
+        <principalFixedMtaCcy>USD</principalFixedMtaCcy>
+        <principalFixedRoundingAmountCcy>USD</principalFixedRoundingAmountCcy>
+        <enableInterestCalc>true</enableInterestCalc>
+        <enableApplicableAgencies>false</enableApplicableAgencies>
+        <cptyNotRatedAssumeNR>false</cptyNotRatedAssumeNR>
+        <interfaceSystem></interfaceSystem>
+        <tsa_level>Net</tsa_level>
+        <settlement>Item</settlement>
+        <elig_rule_template>net_eligibility_rule</elig_rule_template>
+        <exposureCushion>false</exposureCushion>
+        <ecPercentage>0.0</ecPercentage>
+        <ecFixedValue>0.0</ecFixedValue>
+        <ecCalculationMethodoloty></ecCalculationMethodoloty>
+        <ecAssetclassApplicability></ecAssetclassApplicability>
+        <ecDirection></ecDirection>
+        <ecBookingType></ecBookingType>
+        <concentrationLimitBreachAdjustment></concentrationLimitBreachAdjustment>
+        <messageResponseToleranceAmount>0.0</messageResponseToleranceAmount>
+        <messageWorkflow>Margin,Substitution</messageWorkflow>
+        <price_source>PS1</price_source>
+        <regulatoryAgreement>true</regulatoryAgreement>
+        <agreedJurisdiction>Dodd Frank</agreedJurisdiction>
+        <prinSegType>Not Segregated</prinSegType>
+        <cptySegType>Not Segregated</cptySegType>
+        <prinIMSegType>Not Segregated</prinIMSegType>
+        <cptyIMSegType>Not Segregated</cptyIMSegType>
+        <other_Jurisdiction>IOSCO</other_Jurisdiction>
+        <rank>2</rank>
+        <businessLine>OTC</businessLine>
+        <multi_model>true</multi_model>
+        <segregation>true</segregation>
+        <sendConfirmationLetter>
+            <counterparty>true</counterparty>
+            <custodian>true</custodian>
+            <custodianContact>QTPCustodian</custodianContact>
+        </sendConfirmationLetter>
+        <applicableAgencies>
+            <referenceRatingAgencies>All</referenceRatingAgencies>
+            <applicableOfRating>Lower</applicableOfRating>
+            <selectionOfAgency>
+                <direction>Higher</direction>
+            </selectionOfAgency>
+        </applicableAgencies>
+        <principalInternalOnly>
+            <mtaInternalOnly>false</mtaInternalOnly>
+            <roundingInternalOnly>false</roundingInternalOnly>
+        </principalInternalOnly>
+        <cptyInternalOnly>
+            <mtaInternalOnly>false</mtaInternalOnly>
+            <roundingInternalOnly>false</roundingInternalOnly>
+        </cptyInternalOnly>
+        <netVmImEventInSameDirection>false</netVmImEventInSameDirection>
+        <netVmImInterest>false</netVmImInterest>
+        <im_interestCalcMethod>Simple</im_interestCalcMethod>
+        <im_enableInterestCalc>true</im_enableInterestCalc>
+        <settlement_level>Model</settlement_level>
+        <notifLetterType>Statement</notifLetterType>
+        <letterTemplateType>Standard-English</letterTemplateType>
+        <exposureTemplateType>Standard-English</exposureTemplateType>
+        <modelDetByFeed>true</modelDetByFeed>
+        <tradeCalcRule>
+            <includeFailedOpenLeg>false</includeFailedOpenLeg>
+            <includeFailedCloseLeg>false</includeFailedCloseLeg>
+        </tradeCalcRule>
+        <modelEligRules>
+            <modelEligRule>
+                <modelName>model1</modelName>
+                <eligCurrency>USD</eligCurrency>
+            </modelEligRule>
+            <modelEligRule>
+                <modelName>model2</modelName>
+                <eligCurrency>GBP</eligCurrency>
+            </modelEligRule>
+        </modelEligRules>
+        <asset_classes>
+            <asset_class>
+                <asset_class_name>qtp_cash</asset_class_name>
+                <applicableParty>PC</applicableParty>
+                <applicableType>VI</applicableType>
+            </asset_class>
+            <asset_class>
+                <asset_class_name>qtp_bond</asset_class_name>
+                <applicableParty>PC</applicableParty>
+                <applicableType>VI</applicableType>
+                <concentration_rules>
+                    <concentration_rule>
+                        <concentration_rule>Class Holding</concentration_rule>
+                        <rating_from>AAA/Aaa/AAA</rating_from>
+                        <rating_to>NR/NR/NR</rating_to>
+                        <method>MaxPercent</method>
+                        <value>100.0</value>
+                        <trigger>111.0</trigger>
+                        <triggerCCY>USD</triggerCCY>
+                        <group></group>
+                    </concentration_rule>
+                    <concentration_rule>
+                        <concentration_rule>Country Holding</concentration_rule>
+                        <rating_from>AAA/Aaa/AAA</rating_from>
+                        <rating_to>CCC/Caa2/CCC</rating_to>
+                        <method>MaxPercent</method>
+                        <value>70.0</value>
+                        <element>ECUADOR</element>
+                        <trigger>333.0</trigger>
+                        <triggerCCY>EUR</triggerCCY>
+                        <group></group>
+                    </concentration_rule>
+                    <concentration_rule>
+                        <concentration_rule>Industry Holding</concentration_rule>
+                        <rating_from>AAA/Aaa/AAA</rating_from>
+                        <rating_to>C/C/C</rating_to>
+                        <method>MaxValue</method>
+                        <value>2000000.0</value>
+                        <element>15104010-Aluminum</element>
+                        <trigger>444.0</trigger>
+                        <triggerCCY>USD</triggerCCY>
+                        <group></group>
+                    </concentration_rule>
+                    <concentration_rule>
+                        <concentration_rule>Issuer Holding</concentration_rule>
+                        <rating_from>AAA/Aaa/AAA</rating_from>
+                        <rating_to>B-/B3/B-</rating_to>
+                        <method>MaxValue</method>
+                        <value>1000000.0</value>
+                        <element>QTP_Eligible_Issuer3</element>
+                        <trigger>222.0</trigger>
+                        <triggerCCY>GBP</triggerCCY>
+                        <group></group>
+                    </concentration_rule>
+                    <concentration_rule>
+                        <concentration_rule>Ultimate Parent Holding</concentration_rule>
+                        <rating_from>AAA/Aaa/AAA</rating_from>
+                        <rating_to>NR/NR/NR</rating_to>
+                        <method>MaxValue</method>
+                        <value>2000000.0</value>
+                        <trigger>555.0</trigger>
+                        <triggerCCY>USD</triggerCCY>
+                        <group></group>
+                    </concentration_rule>
+                </concentration_rules>
+            </asset_class>
+        </asset_classes>
+        <settlementInstructions>
+            <settlementInstruction>
+                <bookingType>VM</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>Pay</bucket>
+            </settlementInstruction>
+            <settlementInstruction>
+                <bookingType>VM</bookingType>
+                <direction>Recall/Delivery</direction>
+                <bucket>IM Recall/Delivery</bucket>
+            </settlementInstruction>
+            <settlementInstruction>
+                <bookingType>VM Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>Receive</bucket>
+            </settlementInstruction>
+            <settlementInstruction>
+                <bookingType>VM Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>VM Recall/Delivery</bucket>
+            </settlementInstruction>
+        </settlementInstructions>
+        <concentrationLimitTrigger>0.0</concentrationLimitTrigger>
+        <eventAggregation></eventAggregation>
+        <enableSTP>Default</enableSTP>
+        <stpIntraDayEvent>false</stpIntraDayEvent>
+        <flush>true</flush>
+        <interestLetter>Aggregate</interestLetter>
+        <template>
+            <name>net_eligibility_rule</name>
+            <assets/>
+            <netting_MTM_And_IA>Net</netting_MTM_And_IA>
+            <concentrationLimit>
+                <rating_method></rating_method>
+                <concentrationLimitBreachAdjustment></concentrationLimitBreachAdjustment>
+                <concentrationLimitTrigger>0.0</concentrationLimitTrigger>
+            </concentrationLimit>
+            <enableApplicableAgencies>false</enableApplicableAgencies>
+        </template>
+        <applyOrganisationThreshold>No</applyOrganisationThreshold>
+        <applyOrgCL>false</applyOrgCL>
+        <applySTDtoNoCall>false</applySTDtoNoCall>
+    </agreement>
+</collection>

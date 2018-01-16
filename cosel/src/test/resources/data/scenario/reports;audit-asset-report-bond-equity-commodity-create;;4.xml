@@ -1,0 +1,1088 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <assetDefinition id="audit.commodity.assetType">
+            <parent>
+                <assetName ref="commodity.name" />
+            </parent>
+            <assetName id="commodityType">qtp-commodity-usd</assetName>
+        </assetDefinition>
+        <instrument id="audit.commodity.instrument.create">
+            <assetClass ref="commodity.name"/>
+            <assetType ref="commodityType"/>
+            <instrumentId>
+                <primary>true</primary>
+                <type>CUSIP</type>
+                <value id="audit.commodity.instrument.id" prefix="audit_commodity" random="true"/>
+            </instrumentId>
+            <market>m1</market>
+            <description ref="audit.commodity.instrument.id"/>
+            <issuer>
+                <!--<type>Short Name</type>-->
+                <filter ref="org.issuer1.sname" />
+                <linkText ref="org.issuer1.sname" />
+            </issuer>
+            <maturityDate>T+1000</maturityDate>
+            <currencyOfDenomination>USD</currencyOfDenomination>
+            <countryOfIssue>CHINA</countryOfIssue>
+            <priceSource>
+                <priceSourceName ref="ps.default.name"/>
+                <dirtyPrice>100</dirtyPrice>
+                <lastPriceChange>T</lastPriceChange>
+                <priceDate>T</priceDate>
+            </priceSource>
+            <issueDate>T</issueDate>
+            <recordDate>t-20</recordDate>
+            <exDivDate>T</exDivDate>
+            <adtv>89</adtv>
+            <finra4210MinHaircut>23</finra4210MinHaircut>
+            <probabilityofDefault>30</probabilityofDefault>
+            <priceFactor>23</priceFactor>
+            <additionalInfo1 id="add1" random="true" prefix="add1"/>
+            <additionalInfo2 id="add2" random="true" prefix="add2"/>
+            <additionalInfo3 id="add3" random="true" prefix="add3"/>
+            <additionalInfo4 id="add4" random="true" prefix="add4"/>
+            <notation>26</notation>
+            <tradedInterest>36</tradedInterest>
+            <additionalField>
+                <fieldName>UDF 1</fieldName>
+                <value>UDF1</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 2</fieldName>
+                <value>UDF2</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 3</fieldName>
+                <value>UDF3</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 4</fieldName>
+                <value>UDF4</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 5</fieldName>
+                <value>UDF5</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 6</fieldName>
+                <value>UDF6</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 7</fieldName>
+                <value>UDF7</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 8</fieldName>
+                <value>UDF8</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 9</fieldName>
+                <value>UDF9</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 10</fieldName>
+                <value>UDF10</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 11</fieldName>
+                <value>UDF11</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 12</fieldName>
+                <value>UDF12</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 13</fieldName>
+                <value>UDF13</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 14</fieldName>
+                <value>UDF14</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 15</fieldName>
+                <value>UDF15</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 16</fieldName>
+                <value>16</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 17</fieldName>
+                <value>17</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 18</fieldName>
+                <value>18</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 19</fieldName>
+                <value>19</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 20</fieldName>
+                <value>20</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 21</fieldName>
+                <value>21</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 22</fieldName>
+                <value>22</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 23</fieldName>
+                <value>23</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 24</fieldName>
+                <value>24</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 25</fieldName>
+                <value>25</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 26</fieldName>
+                <value>26</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 27</fieldName>
+                <value>27</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 28</fieldName>
+                <value>28</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 29</fieldName>
+                <value>29</value>
+            </additionalField>
+            <additionalField>
+                <fieldName>UDF 30</fieldName>
+                <value>30</value>
+            </additionalField>
+        </instrument>
+        <securitySearch id="search.commodity.instrument">
+            <instrument>
+                <type>Starting with</type>
+                <filter ref="audit.commodity.instrument.id" />
+            </instrument>
+        </securitySearch>
+        <securitySearchResult id="audit.commodity.instrument">
+            <instrument ref="audit.commodity.instrument.id" />
+        </securitySearchResult>
+        <auditAssetsReportFilter id="audit.asset.by.commodityassettype">
+            <assetType ref="commodityType" />
+        </auditAssetsReportFilter>
+        <variable id="auditReportPath" />
+
+        <reportValidationRules id="audit.asset.report.commodity.rule">
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Instrument</fieldName>
+                    <value ref="audit.commodity.instrument.id" />
+                </field>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="commodityType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Description</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value ref="audit.commodity.instrument.id" />
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Instrument</fieldName>
+                    <value ref="audit.commodity.instrument.id" />
+                </field>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="commodityType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Trade Interest</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>36.0</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Instrument</fieldName>
+                    <value ref="audit.commodity.instrument.id" />
+                </field>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="commodityType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Currency of Denomination</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>USD</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Instrument</fieldName>
+                    <value ref="audit.commodity.instrument.id" />
+                </field>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="commodityType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Coupon Rate</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>0.000</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Instrument</fieldName>
+                    <value ref="audit.commodity.instrument.id" />
+                </field>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="commodityType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Coupon Day Count</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>0.0</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Instrument</fieldName>
+                    <value ref="audit.commodity.instrument.id" />
+                </field>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="commodityType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>ASSET CLASS</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value ref="commodity.name" />
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Instrument</fieldName>
+                    <value ref="audit.commodity.instrument.id" />
+                </field>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="commodityType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Issuer</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>QTP_Eligible_Issuer</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Instrument</fieldName>
+                    <value ref="audit.commodity.instrument.id" />
+                </field>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="commodityType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Coupon Frequency</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value></value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Instrument</fieldName>
+                    <value ref="audit.commodity.instrument.id" />
+                </field>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="commodityType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Price Factor</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>23.0</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Instrument</fieldName>
+                    <value ref="audit.commodity.instrument.id" />
+                </field>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="commodityType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Accrual Basis</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value></value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Instrument</fieldName>
+                    <value ref="audit.commodity.instrument.id" />
+                </field>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="commodityType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Market</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>m1</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Instrument</fieldName>
+                    <value ref="audit.commodity.instrument.id" />
+                </field>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="commodityType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Additional Info 1</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value ref="add1" />
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Instrument</fieldName>
+                    <value ref="audit.commodity.instrument.id" />
+                </field>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="commodityType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Additional Info 2</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value ref="add2" />
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Instrument</fieldName>
+                    <value ref="audit.commodity.instrument.id" />
+                </field>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="commodityType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Additional Info 3</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value ref="add3" />
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Instrument</fieldName>
+                    <value ref="audit.commodity.instrument.id" />
+                </field>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="commodityType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Additional Info 4</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value ref="add4"/>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Instrument</fieldName>
+                    <value ref="audit.commodity.instrument.id" />
+                </field>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="commodityType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Outstanding Issuance</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>0</value>
+                </field>
+            </reportValidationRule>
+
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Instrument</fieldName>
+                    <value ref="audit.commodity.instrument.id" />
+                </field>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="commodityType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>UseDefaultRatings</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>No</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Instrument</fieldName>
+                    <value ref="audit.commodity.instrument.id" />
+                </field>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="commodityType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Lock</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>No</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Instrument</fieldName>
+                    <value ref="audit.commodity.instrument.id" />
+                </field>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="commodityType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>MinimTradeAmnt</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>0.00</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Instrument</fieldName>
+                    <value ref="audit.commodity.instrument.id" />
+                </field>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="commodityType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>MultiTradeAmnt</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>0.00</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Instrument</fieldName>
+                    <value ref="audit.commodity.instrument.id" />
+                </field>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="commodityType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Probability of Default</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>30.0</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Instrument</fieldName>
+                    <value ref="audit.commodity.instrument.id" />
+                </field>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="commodityType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Manually Override</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>No</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Instrument</fieldName>
+                    <value ref="audit.commodity.instrument.id" />
+                </field>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="commodityType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Type</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value ref="commodityType" />
+                </field>
+            </reportValidationRule>
+
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Instrument</fieldName>
+                    <value ref="audit.commodity.instrument.id" />
+                </field>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="commodityType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Sec Mapping:Primary</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value>N/A</value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>Yes</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Instrument</fieldName>
+                    <value ref="audit.commodity.instrument.id" />
+                </field>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="commodityType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Sec Mapping:Instrument ID Type</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>CUSIP</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Instrument</fieldName>
+                    <value ref="audit.commodity.instrument.id" />
+                </field>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="commodityType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Sec Mapping:Ticker</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value ref="audit.commodity.instrument.id" />
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Instrument</fieldName>
+                    <value ref="audit.commodity.instrument.id" />
+                </field>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="commodityType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Sec Mapping:Instrument ID</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value ref="audit.commodity.instrument.id" />
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Instrument</fieldName>
+                    <value ref="audit.commodity.instrument.id" />
+                </field>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="commodityType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Sec Source Price:Price</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>100.0000000</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Instrument</fieldName>
+                    <value ref="audit.commodity.instrument.id" />
+                </field>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="commodityType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Sec Source:Price Source</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>Default</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count><field><fieldName>Instrument</fieldName><value ref="audit.commodity.instrument.id" /></field>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="commodityType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Create</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Sec Source:Price Level</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value></value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value></value>
+                </field>
+            </reportValidationRule>
+
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Instrument</fieldName>
+                    <value ref="audit.commodity.instrument.id" />
+                </field>
+                <field>
+                    <fieldName>Asset Type</fieldName>
+                    <value ref="commodityType"/>
+                </field>
+                <field>
+                    <fieldName>Operation</fieldName>
+                    <value>Modify</value>
+                </field>
+                <field>
+                    <fieldName>Attribute</fieldName>
+                    <value>Status</value>
+                </field>
+                <field>
+                    <fieldName>Value Before</fieldName>
+                    <value>Amended</value>
+                </field>
+                <field>
+                    <fieldName>Value After</fieldName>
+                    <value>Approved</value>
+                </field>
+            </reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Instrument</fieldName><value ref="audit.commodity.instrument.id" /></field><field><fieldName>Asset Type</fieldName><value ref="commodityType"/></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>UDF 6</value></field><field><fieldName>Value Before</fieldName><value></value></field><field><fieldName>Value After</fieldName><value>UDF6</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Instrument</fieldName><value ref="audit.commodity.instrument.id" /></field><field><fieldName>Asset Type</fieldName><value ref="commodityType"/></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>UDF 5</value></field><field><fieldName>Value Before</fieldName><value></value></field><field><fieldName>Value After</fieldName><value>UDF5</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Instrument</fieldName><value ref="audit.commodity.instrument.id" /></field><field><fieldName>Asset Type</fieldName><value ref="commodityType"/></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>UDF 2</value></field><field><fieldName>Value Before</fieldName><value></value></field><field><fieldName>Value After</fieldName><value>UDF2</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Instrument</fieldName><value ref="audit.commodity.instrument.id" /></field><field><fieldName>Asset Type</fieldName><value ref="commodityType"/></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>UDF 11</value></field><field><fieldName>Value Before</fieldName><value></value></field><field><fieldName>Value After</fieldName><value>UDF11</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Instrument</fieldName><value ref="audit.commodity.instrument.id" /></field><field><fieldName>Asset Type</fieldName><value ref="commodityType"/></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>UDF 12</value></field><field><fieldName>Value Before</fieldName><value></value></field><field><fieldName>Value After</fieldName><value>UDF12</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Instrument</fieldName><value ref="audit.commodity.instrument.id" /></field><field><fieldName>Asset Type</fieldName><value ref="commodityType"/></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>UDF 13</value></field><field><fieldName>Value Before</fieldName><value></value></field><field><fieldName>Value After</fieldName><value>UDF13</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Instrument</fieldName><value ref="audit.commodity.instrument.id" /></field><field><fieldName>Asset Type</fieldName><value ref="commodityType"/></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>UDF 14</value></field><field><fieldName>Value Before</fieldName><value></value></field><field><fieldName>Value After</fieldName><value>UDF14</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Instrument</fieldName><value ref="audit.commodity.instrument.id" /></field><field><fieldName>Asset Type</fieldName><value ref="commodityType"/></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>UDF 15</value></field><field><fieldName>Value Before</fieldName><value></value></field><field><fieldName>Value After</fieldName><value>UDF15</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Instrument</fieldName><value ref="audit.commodity.instrument.id" /></field><field><fieldName>Asset Type</fieldName><value ref="commodityType"/></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>UDF 16</value></field><field><fieldName>Value Before</fieldName><value></value></field><field><fieldName>Value After</fieldName><value>16.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Instrument</fieldName><value ref="audit.commodity.instrument.id" /></field><field><fieldName>Asset Type</fieldName><value ref="commodityType"/></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>UDF 17</value></field><field><fieldName>Value Before</fieldName><value></value></field><field><fieldName>Value After</fieldName><value>17.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Instrument</fieldName><value ref="audit.commodity.instrument.id" /></field><field><fieldName>Asset Type</fieldName><value ref="commodityType"/></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>UDF 18</value></field><field><fieldName>Value Before</fieldName><value></value></field><field><fieldName>Value After</fieldName><value>18.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Instrument</fieldName><value ref="audit.commodity.instrument.id" /></field><field><fieldName>Asset Type</fieldName><value ref="commodityType"/></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>UDF 19</value></field><field><fieldName>Value Before</fieldName><value></value></field><field><fieldName>Value After</fieldName><value>19.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Instrument</fieldName><value ref="audit.commodity.instrument.id" /></field><field><fieldName>Asset Type</fieldName><value ref="commodityType"/></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>UDF 20</value></field><field><fieldName>Value Before</fieldName><value></value></field><field><fieldName>Value After</fieldName><value>20.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Instrument</fieldName><value ref="audit.commodity.instrument.id" /></field><field><fieldName>Asset Type</fieldName><value ref="commodityType"/></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>UDF 21</value></field><field><fieldName>Value Before</fieldName><value></value></field><field><fieldName>Value After</fieldName><value>21.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Instrument</fieldName><value ref="audit.commodity.instrument.id" /></field><field><fieldName>Asset Type</fieldName><value ref="commodityType"/></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>UDF 22</value></field><field><fieldName>Value Before</fieldName><value></value></field><field><fieldName>Value After</fieldName><value>22.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Instrument</fieldName><value ref="audit.commodity.instrument.id" /></field><field><fieldName>Asset Type</fieldName><value ref="commodityType"/></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>UDF 23</value></field><field><fieldName>Value Before</fieldName><value></value></field><field><fieldName>Value After</fieldName><value>23.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Instrument</fieldName><value ref="audit.commodity.instrument.id" /></field><field><fieldName>Asset Type</fieldName><value ref="commodityType"/></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>UDF 24</value></field><field><fieldName>Value Before</fieldName><value></value></field><field><fieldName>Value After</fieldName><value>24.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Instrument</fieldName><value ref="audit.commodity.instrument.id" /></field><field><fieldName>Asset Type</fieldName><value ref="commodityType"/></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>UDF 25</value></field><field><fieldName>Value Before</fieldName><value></value></field><field><fieldName>Value After</fieldName><value>25.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Instrument</fieldName><value ref="audit.commodity.instrument.id" /></field><field><fieldName>Asset Type</fieldName><value ref="commodityType"/></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>UDF 26</value></field><field><fieldName>Value Before</fieldName><value></value></field><field><fieldName>Value After</fieldName><value>26.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Instrument</fieldName><value ref="audit.commodity.instrument.id" /></field><field><fieldName>Asset Type</fieldName><value ref="commodityType"/></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>UDF 27</value></field><field><fieldName>Value Before</fieldName><value></value></field><field><fieldName>Value After</fieldName><value>27.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Instrument</fieldName><value ref="audit.commodity.instrument.id" /></field><field><fieldName>Asset Type</fieldName><value ref="commodityType"/></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>UDF 28</value></field><field><fieldName>Value Before</fieldName><value></value></field><field><fieldName>Value After</fieldName><value>28.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Instrument</fieldName><value ref="audit.commodity.instrument.id" /></field><field><fieldName>Asset Type</fieldName><value ref="commodityType"/></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>UDF 29</value></field><field><fieldName>Value Before</fieldName><value></value></field><field><fieldName>Value After</fieldName><value>29.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Instrument</fieldName><value ref="audit.commodity.instrument.id" /></field><field><fieldName>Asset Type</fieldName><value ref="commodityType"/></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>UDF 30</value></field><field><fieldName>Value Before</fieldName><value></value></field><field><fieldName>Value After</fieldName><value>30.0</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Instrument</fieldName><value ref="audit.commodity.instrument.id" /></field><field><fieldName>Asset Type</fieldName><value ref="commodityType"/></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>UDF 7</value></field><field><fieldName>Value Before</fieldName><value></value></field><field><fieldName>Value After</fieldName><value>UDF7</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Instrument</fieldName><value ref="audit.commodity.instrument.id" /></field><field><fieldName>Asset Type</fieldName><value ref="commodityType"/></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>UDF 8</value></field><field><fieldName>Value Before</fieldName><value></value></field><field><fieldName>Value After</fieldName><value>UDF8</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Instrument</fieldName><value ref="audit.commodity.instrument.id" /></field><field><fieldName>Asset Type</fieldName><value ref="commodityType"/></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>UDF 9</value></field><field><fieldName>Value Before</fieldName><value></value></field><field><fieldName>Value After</fieldName><value>UDF9</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Instrument</fieldName><value ref="audit.commodity.instrument.id" /></field><field><fieldName>Asset Type</fieldName><value ref="commodityType"/></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>UDF 10</value></field><field><fieldName>Value Before</fieldName><value></value></field><field><fieldName>Value After</fieldName><value>UDF10</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Instrument</fieldName><value ref="audit.commodity.instrument.id" /></field><field><fieldName>Asset Type</fieldName><value ref="commodityType"/></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>UDF 3</value></field><field><fieldName>Value Before</fieldName><value></value></field><field><fieldName>Value After</fieldName><value>UDF3</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Instrument</fieldName><value ref="audit.commodity.instrument.id" /></field><field><fieldName>Asset Type</fieldName><value ref="commodityType"/></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>UDF 4</value></field><field><fieldName>Value Before</fieldName><value></value></field><field><fieldName>Value After</fieldName><value>UDF4</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Instrument</fieldName><value ref="audit.commodity.instrument.id" /></field><field><fieldName>Asset Type</fieldName><value ref="commodityType"/></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>UDF 1</value></field><field><fieldName>Value Before</fieldName><value></value></field><field><fieldName>Value After</fieldName><value>UDF1</value></field></reportValidationRule>
+            <reportValidationRule><operator>=</operator><count>1</count><field><fieldName>Instrument</fieldName><value ref="audit.commodity.instrument.id" /></field><field><fieldName>Asset Type</fieldName><value ref="commodityType"/></field><field><fieldName>Operation</fieldName><value>Create</value></field><field><fieldName>Attribute</fieldName><value>ADTV</value></field><field><fieldName>Value Before</fieldName><value></value></field><field><fieldName>Value After</fieldName><value>89.0</value></field></reportValidationRule>
+
+        </reportValidationRules>
+    </scenarioData>
+</dataBean>

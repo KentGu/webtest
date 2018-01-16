@@ -1,0 +1,6 @@
+pre#STTLMT_NEED_OS#select count(*) as num1 from colsecurityparamount where settlementdate < to_timestamp(to_char(sysdate,'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')-1 and settlementstatus =129
+pre#STTLMT_OS_BEFORE#select count(*) as num2 from colsecurityparamount where settlementstatus=203
+
+post#STTLMT_OS_AFTER#select count(*) as num3 from colsecurityparamount where settlementstatus=203
+
+val#1#${STTLMT_OS_AFTER} -eq `expr ${STTLMT_OS_BEFORE} + ${STTLMT_NEED_OS}` 

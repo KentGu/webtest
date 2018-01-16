@@ -1,0 +1,5 @@
+pre#AgmtUDF_Before#select count(1) from ColagreementUserDefinedFields where udfvalue = 'Baseline_UDF1'
+
+post#AgmtUDF_After#select count(1) from ColagreementUserDefinedFields where udfvalue = 'Baseline_UDF1'
+
+val#1#`expr ${AgmtUDF_After} - ${AgmtUDF_Before}`

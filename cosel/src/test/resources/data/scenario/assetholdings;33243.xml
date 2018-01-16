@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+
+		<agreementSearch id="agreement.search.by.description">
+			<description>
+				<filter>33243agreement</filter>
+			</description>
+		</agreementSearch>
+
+		<agreementSearchResult id="agreement.search.result">
+			<description>33243agreement</description>
+		</agreementSearchResult>
+
+
+		<assetBookingSummary id="bondusd.type">
+			<assetType>qtp_bond_usd</assetType>
+		</assetBookingSummary>
+
+
+		<!--<bookingDetail id="booking.with.instrument2.call.1m">-->
+			<!--<instrumentSearch>-->
+				<!--<instrumentId>-->
+					<!--<filter>33243bondinstrument2</filter>-->
+				<!--</instrumentId>-->
+				<!--<linkText>33243bondinstrument2</linkText>-->
+			<!--</instrumentSearch>-->
+			<!--<bookingInformation>-->
+				<!--<bookingInformationDetail>-->
+					<!--<nominalAmount>1m</nominalAmount>-->
+					<!--<movement>Call</movement>-->
+				<!--</bookingInformationDetail>-->
+			<!--</bookingInformation>-->
+			<!--<save>save</save>-->
+		<!--</bookingDetail>-->
+
+		<!--<concentrationLimitBreached id="beached.rule.with.instrument2.method.max%.rule.value.85.actual.value.100.source.agreement">-->
+			<!--<element>33243bondinstrument2</element>-->
+			<!--<method>Max %</method>-->
+			<!--<rating>AAA/Aaa/AAA - NR/NR/NR</rating>-->
+			<!--<ruleValue>85.00</ruleValue>-->
+			<!--<actualValue>100.00</actualValue>-->
+			<!--<currency>USD</currency>-->
+			<!--<source>Agreement</source>-->
+		<!--</concentrationLimitBreached>-->
+
+		<eligibilityRuleBreached id="breached.eligibility.rule.with.instrument2.rule.security.currency.not.eligible.source.agreement.currency.cad">
+			<instrumentId>33243bondinstrument2</instrumentId>
+			<rule>Security currency not eligible</rule>
+			<source>Agreement</source>
+			<currency>CAD</currency>
+		</eligibilityRuleBreached>
+
+		<agreement id="original.agreement">
+			<collateralAssetClass name="qtp.bond">
+				<collateralAssetClassName>qtp_bond</collateralAssetClassName>
+				<collateralAssetType name="qtp.bond.usd">
+					<collateralAssetTypeName>qtp_bond_usd</collateralAssetTypeName>
+				</collateralAssetType>
+			</collateralAssetClass>
+		</agreement>
+
+		<agreement id="verify.agreement.eligible.currency.usd">
+			<collateralAssetClass name="qtp.bond">
+				<collateralAssetClassName>qtp_bond</collateralAssetClassName>
+				<collateralAssetType name="qtp.bond.usd">
+					<collateralAssetTypeName>qtp_bond_usd</collateralAssetTypeName>
+					<eligibilityRule>
+						<eligibleCurrency>USD</eligibleCurrency>
+					</eligibilityRule>
+				</collateralAssetType>
+			</collateralAssetClass>
+		</agreement>
+
+
+		<bookingDetail id="booking.with.instrument1.call.4m">
+			<instrumentSearch>
+				<instrumentId>
+					<filter>33243bondinstrument1</filter>
+				</instrumentId>
+				<linkText>33243bondinstrument1</linkText>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>4m</nominalAmount>
+					<movement>Call</movement>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+		<concentrationLimitBreached id="beached.rule.with.instrument1.method.max%.rule.value.75.actual.value.100.source.agreement">
+			<element>33243bondinstrument1</element>
+			<method>Max %</method>
+			<rating>AAA/Aaa/AAA - NR/NR/NR</rating>
+			<ruleValue>75.00</ruleValue>
+			<actualValue>100.00</actualValue>
+			<currency>USD</currency>
+			<source>Agreement</source>
+		</concentrationLimitBreached>
+
+
+
+
+	</scenarioData>
+
+
+
+
+</dataBean>

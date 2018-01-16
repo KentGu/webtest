@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+		<agreement id="agr16065">
+			<agreementId id="agr16065.id">2506</agreementId>
+		</agreement>
+
+		<settlementDataSearch id="agr16065.searchAgrID">
+			<agreementId ref="agr16065.id"/>
+		</settlementDataSearch>
+
+		<settlementData id="agr16065.addSettlementData">
+			<assetClass ref="cash.name"/>
+			<assetType ref="cash.usd1.name"/>
+			<bucket>Call/Return</bucket>
+			<counterParty>
+				<account>
+					<accountName>ACCTNAME</accountName>
+					<value>CptyName1</value>
+					<overwrite>true</overwrite>
+				</account>
+				<account>
+					<accountName>ACCTNUM</accountName>
+					<value>CptyNum1</value>
+					<overwrite>true</overwrite>
+				</account>
+				<account>
+					<accountName>CUSTODIAN</accountName>
+					<value>CptyDian1</value>
+					<overwrite>true</overwrite>
+
+				</account>
+				<account>
+					<accountName>CUSTODIANID</accountName>
+					<value>Cptydianid2</value>
+					<overwrite>true</overwrite>
+				</account>
+			</counterParty>
+			<principal>
+				<account>
+					<accountName>ACCTNAME</accountName>
+					<value>PrinName1</value>
+					<overwrite>true</overwrite>
+				</account>
+				<account>
+					<accountName>ACCTNUM</accountName>
+					<value>PrinNum1</value>
+					<overwrite>true</overwrite>
+				</account>
+				<account>
+					<accountName>CUSTODIAN</accountName>
+					<value>PrinDian1</value>
+					<overwrite>true</overwrite>
+				</account>
+				<account>
+					<accountName>CUSTODIANID</accountName>
+					<value>Prindianid2</value>
+					<overwrite>true</overwrite>
+				</account>
+			</principal>
+		</settlementData>
+
+		<settlementDataSearchResult id="agr16065.approveSettlementData">
+		</settlementDataSearchResult>
+
+		<agreement id="agr16065.couterparty2">
+			<counterparty>
+				<filter>TestShortCpty2</filter>
+				<linkText>TestShortCpty2</linkText>
+			</counterparty>
+			<alertHandling>
+				<accept>true</accept>
+			</alertHandling>
+		</agreement>
+
+		<assetBookingSummary id="asset.type.CASH.USD">
+			<assetType ref="cash.usd1.name"/>
+		</assetBookingSummary>
+
+		<bookingDetail id="cash.usd.selectNewAddedPaymentInstructions">
+			<principalPaymentInstructions>
+				<capitalPayInstr>Call/Return</capitalPayInstr>
+			</principalPaymentInstructions>
+			<counterpartyPaymentInstructions>
+				<capitalPayInstr>Call/Return</capitalPayInstr>
+			</counterpartyPaymentInstructions>
+			<save>notSaveOrCancel</save>
+		</bookingDetail>
+		
+		<bookingDetail id="cash.usd.selectNewAddedPaymentInstructionsInfo">
+			<counterParty>
+				<account>
+					<accountName>ACCTNAME</accountName>
+					<value>CptyName1</value>
+				</account>
+				<account>
+					<accountName>ACCTNUM</accountName>
+					<value>CptyNum1</value>
+				</account>
+				<account>
+					<accountName>CUSTODIAN</accountName>
+					<value>CptyDian1</value>
+				</account>
+				<account>
+					<accountName>CUSTODIANID</accountName>
+					<value>Cptydianid2</value>
+				</account>
+			</counterParty>
+			<principal>
+				<account>
+					<accountName>ACCTNAME</accountName>
+					<value>PrinName1</value>
+				</account>
+				<account>
+					<accountName>ACCTNUM</accountName>
+					<value>PrinNum1</value>
+				</account>
+				<account>
+					<accountName>CUSTODIAN</accountName>
+					<value>PrinDian1</value>
+				</account>
+				<account>
+					<accountName>CUSTODIANID</accountName>
+					<value>Prindianid2</value>
+				</account>
+			</principal>
+		</bookingDetail>
+
+
+
+
+
+
+	</scenarioData>
+</dataBean>

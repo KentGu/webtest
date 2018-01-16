@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/xbrowser.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <agreement id="fcm.agr1">
+            <principal id="fcm_agr1_p1">
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter ref="org.p1.code"/>
+                <linkText ref="org.p1.code"/>
+            </principal>
+            <counterparty id="fcm_agr1_c">
+                <criteria>Containing</criteria>
+                <type>Long Name</type>
+                <filter ref="org.c1.code"/>
+                <linkText ref="org.c1.code"/>
+            </counterparty>
+            <businessLine>Clearing</businessLine>
+            <ccp ref="ccp.lch.name" />
+            <agreementDescription random="true"  prefix="fcmqtp_"/>
+            <agreementDate>T</agreementDate>
+            <tsa>true</tsa>
+            <tsaRule ref="TSAruleName" />
+            <nettingIAandMtM>Not-Net</nettingIAandMtM>
+            <vmCallFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </vmCallFrequency>
+            <imCallFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </imCallFrequency>
+            <holidayCentre ref="hc.europe.name"/>
+            <product>
+                <productName ref="product.test1.name"/>
+            </product>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="cash.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="bond.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="bond.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="equity.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="equity.usd.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <bookingType>VM</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vcr.name"/>
+                    <linkText ref="payInstrBucket.vcr.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>VM</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vrd.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>IM</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.ird.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>IM</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.vrd.name"/>
+                    <linkText ref="payInstrBucket.vrd.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>VM Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.pay.name"/>
+                    <linkText ref="payInstrBucket.pay.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>VM Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.rec.name"/>
+                    <linkText ref="payInstrBucket.rec.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>IM Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.pay.name"/>
+                    <linkText ref="payInstrBucket.pay.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>IM Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.rec.name"/>
+                    <linkText ref="payInstrBucket.rec.name"/>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementStatus>Pending</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <statementStatus>Approved</statementStatus>
+            <agreementId id="fcm.agmt.id1"/>
+        </agreement>
+        <assetBookingSummary id="cashbookingtype1">
+            <assetType ref="cash.usd.name"/>
+        </assetBookingSummary>
+        <assetBookingSummary id="bondbookingtype1">
+            <assetType ref="bond.usd.name" />
+        </assetBookingSummary>
+        <assetBookingSummary id="equitybookingtype1">
+            <assetType ref="equity.usd.name" />
+        </assetBookingSummary>
+        <agreementExposureSummary id="product2">
+            <productList>
+                <productType ref="product.test1.name" />
+            </productList>
+        </agreementExposureSummary>
+        <tradeDetail id="fcm.trade1">
+            <tradeInformation>
+                <productType ref="product.test1.name"/>
+                <tradeDate>T</tradeDate>
+                <effectiveDate>T</effectiveDate>
+                <maturityDate>T+90</maturityDate>
+                <tradeIdentifierPartyA id="fcm.trade.identify" random="true"/>
+                <partyABranchName ref="fcm.trade.identify"/>
+                <partyBBranchName ref="fcm.trade.identify"/>
+            </tradeInformation>
+            <valuationInformation>
+                <principalValuationAmount>
+                    <amount>1m</amount>
+                    <currency>USD</currency>
+                </principalValuationAmount>
+                <valuationDate>T</valuationDate>
+            </valuationInformation>
+            <ccpTradeInformation>
+                <ndfCashflow>1k</ndfCashflow>
+                <initialCoupon>1k</initialCoupon>
+                <pai>1k</pai>
+                <paiRate>1k</paiRate>
+                <upfrontFee>1k</upfrontFee>
+                <tsaCurrency>EUR</tsaCurrency>
+            </ccpTradeInformation>
+            <collateralInformation>
+                <dealLevelUpfront>true</dealLevelUpfront>
+                <dealLevelType>Independent Amount</dealLevelType>
+                <dealLevelAmount>0.5m</dealLevelAmount>
+                <currency>USD</currency>
+                <!--<collateralComment random="true" />-->
+            </collateralInformation>
+        </tradeDetail>
+        <bookingDetail id="fcm.cashbooking1">
+            <assetType ref="cash.usd.name" />
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <movement>Delivery</movement>
+                    <vmAmount>1m</vmAmount>
+                </bookingInformationDetail>
+                <settlementDate>T</settlementDate>
+                <settlementDateAlertHandling>
+                    <accept>true</accept>
+                </settlementDateAlertHandling>
+            </bookingInformation>
+            <save>save</save>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </bookingDetail>
+        <bookingDetail id="fcm.bondbooking1">
+            <assetType ref="bond.usd.name" />
+            <instrumentSearch>
+                <assetClass ref="bond.name" />
+                <assetType ref="bond.usd.name" />
+                <instrumentId>
+                    <filter ref="bond.instrument1.name"/>
+                </instrumentId>
+                <linkText ref="bond.instrument1.name"/>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <movement>Call</movement>
+                    <imAmount>1m</imAmount>
+                </bookingInformationDetail>
+                <settlementDate>T</settlementDate>
+                <settlementDateAlertHandling>
+                    <accept>true</accept>
+                </settlementDateAlertHandling>
+            </bookingInformation>
+            <save>save</save>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </bookingDetail>
+        <bookingDetail id="fcm.equitybooking1">
+            <assetType ref="equity.usd.name" />
+            <instrumentSearch>
+                <assetClass ref="equity.name" />
+                <assetType ref="equity.usd.name" />
+                <instrumentId>
+                    <filter ref="equity.instrument1.name"/>
+                </instrumentId>
+                <linkText ref="equity.instrument1.name"/>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <movement>Delivery</movement>
+                    <vmAmount>1m</vmAmount>
+                </bookingInformationDetail>
+                <settlementDate>T</settlementDate>
+            </bookingInformation>
+            <save>save</save>
+        </bookingDetail>
+        <cashMovementDetail id="fcm.interest1">
+            <assetClass ref="cash.name"/>
+            <assetType ref="cash.usd.name"/>
+            <bookingType>TSA</bookingType>
+            <amount>2000</amount>
+            <movementType>Capitalise pay</movementType>
+            <settlementDate>T</settlementDate>
+        </cashMovementDetail>
+    </scenarioData>
+</dataBean>

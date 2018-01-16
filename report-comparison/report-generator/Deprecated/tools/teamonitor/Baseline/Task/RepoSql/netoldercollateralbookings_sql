@@ -1,0 +1,11 @@
+pre#NETTED_BEFORE#select count(*) as num1 from colnettedsecurityparamount
+pre#NEEDED_NET#select count(t.id) from colsecurityparamount t,Colagreementheader t3  where t.settlementdate < to_timestamp(to_char(sysdate,'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')-35 and t.settlementstatus=130 and t.movement<>206 and t.agreementid = t3.id and t.ValuationPerc=100 and  t3.basecurrency != 100 and  t3.basecurrency != 86 and  t3.basecurrency != 101 and  t3.basecurrency != 96 and  t3.basecurrency != 89 
+pre#SCRTY_AT19000101_BEFORE#select count(*) as num3 from colsecurityparamount where settlementdate =to_timestamp('1900-12-31 00:00:00','YYYY-MM-DD HH24:MI:SS')
+
+post#NETTED_AFTER#select count(*) as num4 from colnettedsecurityparamount
+post#SCRTY_BEFORETODAY#select count(*) as num5 from colsecurityparamount where settlementdate < to_timestamp(to_char(sysdate,'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')-35
+post#SCRTY_AT19000101_AFTER#select count(*) as num6 from colsecurityparamount where settlementdate =to_timestamp('1900-12-31 00:00:00','YYYY-MM-DD HH24:MI:SS')
+
+val#1#${NEEDED_NET} -eq `expr ${NETTED_AFTER} - ${NETTED_BEFORE}`
+val#2#${SCRTY_BEFORETODAY} -eq ${SCRTY_AT19000101_AFTER}
+val#3#`expr ${SCRTY_AT19000101_AFTER} - ${SCRTY_AT19000101_BEFORE}` -gt 0

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+		<instrument id="bondinstrument.maturityDate.lessThanTplus5Years.SandPRating.AAA.MOODYSRating.Baa1">
+			<assetClass ref="bond.name"/>
+			<assetType ref="bond.usd.name"/>
+			<instrumentId>
+				<value id="bondinstrument.id" random="true"/>
+			</instrumentId>
+			<description id="bondinstrument.desc" random="true"/>
+			<issuer>
+				<filter>QTP_Eligible_Issuer4</filter>
+				<linkText>QTP_Eligible_Issuer4</linkText>
+			</issuer>
+			<maturityDate>T+100</maturityDate>
+			<priceSource>
+				<priceSourceName>Default</priceSourceName>
+				<dirtyPrice>100</dirtyPrice>
+				<lastPriceChange>T</lastPriceChange>
+				<cleanPrice>100</cleanPrice>
+				<priceDate>T</priceDate>
+			</priceSource>
+			<couponRate>0</couponRate>
+			<issueDate>T</issueDate>
+			<issueRating>
+				<agency>SandP</agency>
+				<rating>AAA</rating>
+			</issueRating>
+			<issueRating>
+				<agency>MOODYS</agency>
+				<rating>Baa1</rating>
+			</issueRating>
+		</instrument>
+
+		<securitySearch id="bondSecuritySearchAmended">
+			<instrument>
+				<type>Starting with</type>
+				<filter ref="bondinstrument.id"/>
+				<linkText ref="bondinstrument.id"/>
+			</instrument>
+		</securitySearch>
+
+		<securitySearchResult id="bondSecuritySearchWillBeApproved">
+			<instrument ref="bondinstrument.id"/>
+		</securitySearchResult>
+
+		<agreement id="agr13974.net">
+			<agreementId id="agr13974.id">2509</agreementId>
+		</agreement>
+
+		<assetBookingSummary id="asset.type.bond.USD">
+			<assetType>qtp_bond_usd</assetType>
+		</assetBookingSummary>
+
+		<bookingDetail id="callBooking1.Bond.usd.maturityDate.lessThanTplus5Years.SandPRating.AAA.MOODYSRating.Baa1">
+			<assetType>qtp_bond_usd</assetType>
+			<instrumentSearch>
+				<instrumentId>
+					<filter ref="bondinstrument.id"/>
+				</instrumentId>
+				<linkText ref="bondinstrument.id"/>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>1m</nominalAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+		<assetBookingSummary id="callBooking1.Bond.usd.haircut.50">
+			<instrumentId ref="bondinstrument.id"/>
+			<valuationPercentage>50.00</valuationPercentage>
+			<collateralValue>500,000.00</collateralValue>
+			<collateralValueBaseCCy>500,000.00</collateralValueBaseCCy>
+		</assetBookingSummary>
+
+
+	</scenarioData>
+</dataBean>

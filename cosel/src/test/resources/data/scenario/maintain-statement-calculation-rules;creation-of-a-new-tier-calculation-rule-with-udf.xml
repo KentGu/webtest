@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    
+    <scenarioData>
+        <collateralStaticData id="col.static.data.statement.udfa">
+            <type>User Defined Statement Fields</type>
+            <dataName id="statement.udfa">UDF_A</dataName>
+            <description ref="statement.udfa"/>
+            <status>enabled</status>
+        </collateralStaticData>
+
+        <collateralStaticData id="col.static.data.statement.udfb">
+            <type>User Defined Statement Fields</type>
+            <dataName id="statement.udfb">UDF_B</dataName>
+            <description ref="statement.udfb"/>
+            <status>enabled</status>
+        </collateralStaticData>
+        
+        <statementCalcRule id="new.calc.rule">
+            <businessLine>ETD</businessLine>
+            <ruleName random="true"></ruleName>
+            <ruleType>Tier</ruleType>
+            <ruleFileName>EtdStatement.drl</ruleFileName>
+            <userDefinedFields>
+                <fieldName ref="statement.udfa"/>
+                <valueFed>true</valueFed>
+                <statementSection>Margin Call Calculation</statementSection>
+            </userDefinedFields>
+            <userDefinedFields>
+                <fieldName ref="statement.udfb"/>
+                <valueFed>false</valueFed>
+                <statementSection>Additional Info</statementSection>
+            </userDefinedFields>
+        </statementCalcRule>
+    </scenarioData>
+
+</dataBean>
+

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/feeds.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <agreement>
+            <externalId id="T25621.agreement.external.id">T25621AgreementExternalID</externalId>
+            <agreementId id="T25621.agreement.id">519</agreementId>
+            <baseCurrency id="T25621.base.ccy" ref="ccy.usd.name"/>
+            <model>
+                <modelEligibilityRule>
+                    <modelName id="T25621.model.name">T25621Model</modelName>
+                </modelEligibilityRule>
+            </model>
+        </agreement>
+
+        <feedPortfolioTSA id="feed.tsa.upfront.fee">
+            <agreement_id ref="T25621.agreement.id"/>
+            <legal_id ref="T25621.agreement.external.id"/>
+            <component>Upfront Fee</component>
+            <amount id="upfront.fee.amnt">100</amount>
+            <currency ref="T25621.base.ccy"/>
+            <model random="true"/>
+        </feedPortfolioTSA>
+
+        <feedResult id="feed.portfolio.tsa.result">
+            <fileUploaded id="feed.portfolio.tsa.result.file"/>
+            <unsuccessfulImports>1</unsuccessfulImports>
+        </feedResult>
+
+        <feedStatus id="feed.portfolio.tsa.status">
+            <status>Failed</status>
+            <valuationFile ref="feed.portfolio.tsa.result.file"/>
+            <description>Portfolio Cashflow</description>
+            <failedFeed apply="true">
+                <total>1</total>
+                <entry>
+                    <content>Unknown Model</content>
+                </entry>
+            </failedFeed>
+        </feedStatus>
+
+        <agreementSearch id="feed.portfolio.tsa.agreement.search"/>
+
+        <agreementSearchResult id="feed.portfolio.tsa.agreement.search.result"/>
+
+        <multiModelAgreementStatement id="feed.protfolio.tsa.agreement.statement"/>
+
+        <agreementStatement id="check.feed.protfolio.tsa.agreement.statement"/>
+    </scenarioData>
+</dataBean>

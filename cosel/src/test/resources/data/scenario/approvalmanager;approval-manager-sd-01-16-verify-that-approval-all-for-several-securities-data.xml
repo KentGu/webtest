@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/approvalManager.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <approvalManagerSecuritiesDataSearch id="approval.search.security">
+            <assetClass id="approval.search.security.asset.class" ref="bond.name"/>
+            <assetType id="approval.search.security.asset.type" ref="bond.usd.name"/>
+            <market>
+                <type>Exactly matching</type>
+                <filter id="approval.search.security.market">automation</filter>
+                <linkText ref="approval.search.security.market"/>
+            </market>
+            <description>
+                <type>Exactly matching</type>
+                <filter id="approval.search.security.description">T14270Description</filter>
+                <linkText ref="approval.search.security.description"/>
+            </description>
+            <instrument>
+                <type>Exactly matching</type>
+                <filter id="approval.search.security.instrument.id">T14270Instrument</filter>
+                <linkText ref="approval.search.security.instrument.id"/>
+            </instrument>
+            <instrumentIdType>CUSIP</instrumentIdType>
+        </approvalManagerSecuritiesDataSearch>
+
+        <approvalManagerSecuritiesDataSearchResult id="approval.search.result.security.cancel">
+            <alertHandling>
+                <accept>false</accept>
+                <content>^Do you want to approve all\?$</content>
+            </alertHandling>
+        </approvalManagerSecuritiesDataSearchResult>
+
+        <approvalManagerSecuritiesDataSearchResult id="approval.search.result.security.ok">
+            <alertHandling>
+                <accept>true</accept>
+                <content>^Do you want to approve all\?$</content>
+            </alertHandling>
+        </approvalManagerSecuritiesDataSearchResult>
+
+        <securitySearch id="search.security">
+            <assetClass ref="approval.search.security.asset.class"/>
+            <assetType ref="approval.search.security.asset.type"/>
+            <market>
+                <type>Exactly matching</type>
+                <filter ref="approval.search.security.market"/>
+                <linkText ref="approval.search.security.market"/>
+            </market>
+            <instrument>
+                <type>Exactly matching</type>
+                <filter ref="approval.search.security.instrument.id"/>
+                <linkText ref="approval.search.security.instrument.id"/>
+            </instrument>
+            <instrumentIdType>CUSIP</instrumentIdType>
+            <description>
+                <type>Exactly matching</type>
+                <filter ref="approval.search.security.description"/>
+                <linkText ref="approval.search.security.description"/>
+            </description>
+        </securitySearch>
+
+        <securitySearchResult id="check.security.amended">
+            <assetClass ref="approval.search.security.asset.class"/>
+            <assetType ref="approval.search.security.asset.type"/>
+            <market ref="approval.search.security.market"/>
+            <instrument ref="approval.search.security.instrument.id"/>
+            <description ref="approval.search.security.description"/>
+            <status>Amended</status>
+        </securitySearchResult>
+
+        <securitySearchResult id="check.security.approved">
+            <assetClass ref="approval.search.security.asset.class"/>
+            <assetType ref="approval.search.security.asset.type"/>
+            <market ref="approval.search.security.market"/>
+            <instrument ref="approval.search.security.instrument.id"/>
+            <description ref="approval.search.security.description"/>
+            <status>Approved</status>
+        </securitySearchResult>
+    </scenarioData>
+</dataBean>

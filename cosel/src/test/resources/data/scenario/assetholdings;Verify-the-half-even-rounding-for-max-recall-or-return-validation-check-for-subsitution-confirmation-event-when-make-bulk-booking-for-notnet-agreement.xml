@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+
+		<agreementSearch id="search.agreement.by.agreement.description">
+			<description>
+				<filter id="agrDesc1">32121_1</filter>
+			</description>
+		</agreementSearch>
+
+		<agreementSearchResult id="agreement.search.result">
+			<description ref="agrDesc1"/>
+		</agreementSearchResult>
+
+		<assetBookingSummary id="asset.type.CASH.USD">
+			<assetType id="CASH.USD">CASH-USD</assetType>
+		</assetBookingSummary>
+
+
+
+		<bookingDetail id="booking1.cash.usd.delivery.vm.1000.1150.im.1000.1251.settlementDate.dayBeforeT">
+			<assetType ref="CASH.USD"/>
+			<bookingInformation>
+				<settlementDate>t-1</settlementDate>
+				<bookingInformationDetail>
+					<vmAmount>1000.1150</vmAmount>
+					<imAmount>1000.1251</imAmount>
+					<movement>Delivery</movement>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+		<bookingDetail id="booking2.cash.usd.delivery.vm.2000.1250.im.2000.1150.settlementDate.t">
+			<assetType ref="CASH.USD"/>
+			<bookingInformation>
+				<settlementDate>t</settlementDate>
+				<bookingInformationDetail>
+					<vmAmount>2000.1250</vmAmount>
+					<imAmount>2000.1150</imAmount>
+					<movement>Delivery</movement>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+		<bookingDetail id="booking3.cash.usd.delivery.vm.3000.1250.im.3000.1250.settlementDate.dayAfterT">
+			<assetType ref="CASH.USD"/>
+			<bookingInformation>
+				<settlementDate>t+1</settlementDate>
+				<bookingInformationDetail>
+					<vmAmount>3000.1250</vmAmount>
+					<imAmount>3000.1250</imAmount>
+					<movement>Delivery</movement>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+		<cashMovementDetail id="Booking1.CapRec.VMInterest.500.1150.dayBeforeT">
+			<assetType>CASH-USD</assetType>
+			<bookingType>VM Interest</bookingType>
+			<movementType>Capitalise receive</movementType>
+			<settlementDate>t-1</settlementDate>
+			<amount>500.1150</amount>
+		</cashMovementDetail>
+
+		<cashMovementDetail id="Booking2.CapRec.VMInterest.500.1250.dayAfterT">
+			<assetType>CASH-USD</assetType>
+			<bookingType>VM Interest</bookingType>
+			<movementType>Capitalise receive</movementType>
+			<settlementDate>t+1</settlementDate>
+			<amount>500.1250</amount>
+		</cashMovementDetail>
+
+		<cashMovementDetail id="Booking3.CapRec.IMInterest.500.1251.T">
+			<assetType>CASH-USD</assetType>
+			<bookingType>IM Interest</bookingType>
+			<movementType>Capitalise receive</movementType>
+			<settlementDate>t</settlementDate>
+			<amount>500.1251</amount>
+		</cashMovementDetail>
+
+		<cashMovementDetail id="Booking4.CapRec.TSA.500.1209.dayBeforeT">
+			<assetType>CASH-USD</assetType>
+			<bookingType>TSA</bookingType>
+			<movementType>Capitalise receive</movementType>
+			<settlementDate>t-1</settlementDate>
+			<amount>500.1209</amount>
+		</cashMovementDetail>
+
+		<agreement id="agr32121">
+			<agreementStatus>Pending</agreementStatus>
+			<agreementStatus>Approved</agreementStatus>
+			<statementStatus>Pending</statementStatus>
+			<statementStatus>Approved</statementStatus>
+		</agreement>
+
+		<exposureEventDetail id="IMRecall.agreementRequirement.6500.49">
+			<action>IM Recall</action>
+			<agreementRequirement>6,500.49</agreementRequirement>
+		</exposureEventDetail>
+
+
+		<exposureEventDetail id="VMCall.agreementRequirement.7500.73">
+			<action>VM Call(Deficit)</action>
+			<agreementRequirement>7,500.73</agreementRequirement>
+		</exposureEventDetail>
+
+		<bookingDetail id ="imRecallEvent.Recall.imNotional.3500.375.vmCallEvent.Recall.vmNotional.4000.4851">
+			<instrumentSearch>
+				<instrument>
+					<filter>CASH-USD</filter>
+				</instrument>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>IM Recall</bookingMovement>
+					<!--<bookingNumber>1.1</bookingNumber>-->
+					<imAmount>3500.375</imAmount>
+				</bookingInformationDetail>
+				<bookingInformationDetail>
+					<bookingMovement>VM Call(Deficit)</bookingMovement>
+					<!--<bookingNumber>2.1</bookingNumber>-->
+					<vmAmount>4000.4851</vmAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="imRecallEvent.Recall.imAssetAvailable.3500.37.recallHolding.6500.49">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>IM Recall</bookingMovement>
+					<bookingNumber>1.1</bookingNumber>
+					<imAssetAvailable>-3,500.37</imAssetAvailable>
+					<imAssetAvailableToolTipInfo>Recall Holding : -6,500.49</imAssetAvailableToolTipInfo>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="imRecallEvent.Recall.AssetAvailable.7500.84.recallHolding.14001.22">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>IM Recall</bookingMovement>
+					<bookingNumber>1.1</bookingNumber>
+					<assetAvailable>-7,500.84</assetAvailable>
+					<assetAvailableToolTipInfo>Recall Holding : -14,001.22</assetAvailableToolTipInfo>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="vmCallEvent.Recall.vmAssetAvailable.4000.48.recallHolding.7500.73">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>VM Call(Deficit)</bookingMovement>
+					<bookingNumber>2.1</bookingNumber>
+					<vmAssetAvailable>-4,000.48</vmAssetAvailable>
+					<vmAssetAvailableToolTipInfo>Recall Holding : -7,500.73</vmAssetAvailableToolTipInfo>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="vmCallEvent.Recall.AssetAvailable.7500.84.recallHolding.14001.22">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>VM Call(Deficit)</bookingMovement>
+					<bookingNumber>2.1</bookingNumber>
+					<assetAvailable>-7,500.84</assetAvailable>
+					<assetAvailableToolTipInfo>Recall Holding : -14,001.22</assetAvailableToolTipInfo>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<exposureManagementMessage id="error.message.IMAmountExceedRange.3500.365">
+			<messageDetail>
+				<index>1.1</index>
+				<type>error</type>
+				<message>IM Notional needs to be in the range of -3,500.365 to 3,500.365.</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<exposureManagementMessage id="error.message.VMAmountExceedRange.4000.476">
+			<messageDetail>
+				<index>2.1</index>
+				<type>error</type>
+				<message>VM Notional needs to be in the range of -4,000.476 to 4,000.476.</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<bookingDetail id="IMRecallEventAndVMCallEvent.settlementDate.oneDayBeforeToday">
+			<bookingInformation>
+				<settlementDate>t-1</settlementDate>
+				<bookingInformationDetail>
+					<bookingMovement>IM Recall</bookingMovement>
+					<bookingNumber>1.1</bookingNumber>
+				</bookingInformationDetail>
+				<bookingInformationDetail>
+					<bookingMovement>VM Call(Deficit)</bookingMovement>
+					<bookingNumber>2.1</bookingNumber>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="IMRecallEvent.imAssetAvailable.1000.13.VMCallEvent.vmAssetAvailable.2000.35">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>IM Recall</bookingMovement>
+					<bookingNumber>1.1</bookingNumber>
+					<imAssetAvailable>-1,000.13</imAssetAvailable>
+				</bookingInformationDetail>
+				<bookingInformationDetail>
+					<bookingMovement>VM Call(Deficit)</bookingMovement>
+					<bookingNumber>2.1</bookingNumber>
+					<imAssetAvailable>-2,000.35</imAssetAvailable>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="imRecallEvent.Recall.imNotional.1000.1251.vmCallEvent.Recall.vmNotional.4000.4851">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>IM Recall</bookingMovement>
+					<bookingNumber>1.1</bookingNumber>
+					<imAmount>1000.1251</imAmount>
+				</bookingInformationDetail>
+				<bookingInformationDetail>
+					<bookingMovement>VM Call(Deficit)</bookingMovement>
+					<bookingNumber>2.1</bookingNumber>
+					<vmAmount>4000.4851</vmAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<exposureManagementMessage id="error.message.vmNominalAmountExceedRange.2000.351">
+			<messageDetail>
+				<index>2.1</index>
+				<type>error</type>
+				<message>VM Notional needs to be in the range of -2,000.351 to 2,000.351.</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<exposureManagementMessage id="warning.message.bookingNotMeetRequiredAmount.Expected.6500.49.Actual.1000.13">
+			<messageDetail>
+				<index>1</index>
+				<type>Warning</type>
+				<message>Attempting to make a booking that does not meet the Required Amount. (Expected: 6,500.49, Actual: 1,000.13) Continue?</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<bookingDetail id="IMRecallEventAndVMCallEvent.settlementDate.oneDayAfterToday">
+			<bookingInformation>
+				<settlementDate>t+1</settlementDate>
+				<bookingInformationDetail>
+					<bookingMovement>IM Recall</bookingMovement>
+					<bookingNumber>1.1</bookingNumber>
+				</bookingInformationDetail>
+				<bookingInformationDetail>
+					<bookingMovement>VM Call(Deficit)</bookingMovement>
+					<bookingNumber>2.1</bookingNumber>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="IMRecallEvent.imAssetAvailable.6500.49.VMCallEvent.vmAssetAvailable.7500.73">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>IM Recall</bookingMovement>
+					<bookingNumber>1.1</bookingNumber>
+					<imAssetAvailable>-6,500.49</imAssetAvailable>
+				</bookingInformationDetail>
+				<bookingInformationDetail>
+					<bookingMovement>VM Call(Deficit)</bookingMovement>
+					<bookingNumber>2.1</bookingNumber>
+					<imAssetAvailable>-7,500.73</imAssetAvailable>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="imRecallEvent.Recall.imNotional.6500.4951.vmCallEvent.Recall.vmNotional.7500.735">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>IM Recall</bookingMovement>
+					<bookingNumber>1.1</bookingNumber>
+					<imAmount>6500.4951</imAmount>
+				</bookingInformationDetail>
+				<bookingInformationDetail>
+					<bookingMovement>VM Call(Deficit)</bookingMovement>
+					<bookingNumber>2.1</bookingNumber>
+					<vmAmount>7500.735</vmAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<exposureManagementMessage id="error.message.vmNominalAmountExceedRange.7500.726">
+			<messageDetail>
+				<index>2.1</index>
+				<type>error</type>
+				<message>VM Notional needs to be in the range of -7,500.726 to 7,500.726.</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<exposureManagementMessage id="error.message.imNominalAmountExceedRange.6500.49">
+			<messageDetail>
+				<index>1.1</index>
+				<type>error</type>
+				<message>IM Notional needs to be in the range of -6,500.49 to 6,500.49.</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<bookingDetail id="imRecallEvent.Recall.imNotional.6500.49.vmCallEvent.Recall.vmNotional.7500.73">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<bookingMovement>IM Recall</bookingMovement>
+					<bookingNumber>1.1</bookingNumber>
+					<imAmount>6500.49</imAmount>
+				</bookingInformationDetail>
+				<bookingInformationDetail>
+					<bookingMovement>VM Call(Deficit)</bookingMovement>
+					<bookingNumber>2.1</bookingNumber>
+					<vmAmount>7500.73</vmAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+		</bookingDetail>
+
+		<exposureEventDetail id="IMRecall.agreementRequirement.6500.49.CallStatusBecomeCompleted">
+			<action>IM Recall</action>
+			<agreementRequirement>6,500.49</agreementRequirement>
+			<callStatus>Completed</callStatus>
+		</exposureEventDetail>
+
+
+		<exposureEventDetail id="VMCall.agreementRequirement.7500.73.CallStatusBecomeCompleted">
+			<action>VM Call(Deficit)</action>
+			<agreementRequirement>7,500.73</agreementRequirement>
+			<callStatus>Completed</callStatus>
+		</exposureEventDetail>
+	</scenarioData>
+</dataBean>

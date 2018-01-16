@@ -1,0 +1,5 @@
+pre#STMT_BEFORE#select count(*) as num1 from colstatementstatus where statusid not in (67,66) and agreementid in (select agreementid from coltrades having count(*)>0 group by agreementid)
+
+post#STMT_AFTER#select count(*) as num2 from colstatementstatus where statusid = 500
+
+val#1#${STMT_BEFORE} -eq ${STMT_AFTER}

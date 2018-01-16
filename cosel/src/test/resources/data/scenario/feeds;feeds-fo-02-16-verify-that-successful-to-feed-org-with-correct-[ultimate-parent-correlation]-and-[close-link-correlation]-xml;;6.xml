@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/feeds.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <feedOrganisation id="feed.organisation.empty.ultimate.parenets.empty.close.links">
+            <orgHeader>
+                <orgCode id="feed.organisation.empty.ultimate.parenets.empty.close.links.code">T32500Organisation2Code</orgCode>
+                <longName id="feed.organisation.empty.ultimate.parenets.empty.close.links.lname">T32500Organisation2LongName</longName>
+                <shortName id="feed.organisation.empty.ultimate.parenets.empty.close.links.sname">T32500Organisation2ShortName</shortName>
+            </orgHeader>
+            <orgRole id="feed.organisation.empty.ultimate.parenets.empty.close.links.role">Branch</orgRole>
+            <region id="feed.organisation.empty.ultimate.parenets.empty.close.links.region">ALL</region>
+            <ultimateParents>
+                <ultimateParent id="feed.organisation.empty.ultimate.parenets.empty.close.links.ultimate.parent"></ultimateParent>
+            </ultimateParents>
+            <closeLinks>
+                <closeLink id="feed.organisation.empty.ultimate.parenets.empty.close.links.close.link"></closeLink>
+            </closeLinks>
+        </feedOrganisation>
+
+        <feedResult id="feed.organisation.empty.ultimate.parenets.empty.close.links.result">
+            <fileUploaded id="feed.organisation.empty.ultimate.parenets.empty.close.links.result.file"/>
+            <unsuccessfulImports>0</unsuccessfulImports>
+            <unchangedOrIgnoredImports>0</unchangedOrIgnoredImports>
+        </feedResult>
+
+        <feedStatus id="feed.organisation.empty.ultimate.parenets.empty.close.links.status">
+            <status>Successful</status>
+            <valuationFile ref="feed.organisation.empty.ultimate.parenets.empty.close.links.result.file"/>
+            <description>Organisation</description>
+            <successfulFeed>
+                <total>1</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <organisationSearch id="feed.organisation.empty.ultimate.parenets.empty.close.links.search">
+            <criteria>Exactly matching</criteria>
+            <type>Short Name</type>
+            <filter ref="feed.organisation.empty.ultimate.parenets.empty.close.links.sname"/>
+            <linkText ref="feed.organisation.empty.ultimate.parenets.empty.close.links.sname"/>
+        </organisationSearch>
+
+        <organisation id="check.feed.organisation.empty.ultimate.parenets.empty.close.links">
+            <shortName ref="feed.organisation.empty.ultimate.parenets.empty.close.links.sname"/>
+            <longName ref="feed.organisation.empty.ultimate.parenets.empty.close.links.lname"/>
+            <code ref="feed.organisation.empty.ultimate.parenets.empty.close.links.code"/>
+            <role ref="feed.organisation.empty.ultimate.parenets.empty.close.links.role"/>
+            <region ref="feed.organisation.empty.ultimate.parenets.empty.close.links.region"/>
+            <ultimateParent>
+                <linkText ref="feed.organisation.empty.ultimate.parenets.empty.close.links.ultimate.parent"/>
+            </ultimateParent>
+            <closeLink>
+                <linkText ref="feed.organisation.empty.ultimate.parenets.empty.close.links.close.link"/>
+            </closeLink>
+        </organisation>
+    </scenarioData>
+</dataBean>

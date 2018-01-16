@@ -1,0 +1,5 @@
+pre#MtM_Before#select count(1) from coltrades where mtmvaluation = 123456 and prcdate = to_date('2011-12-09','yyyy-MM-DD')
+
+post#MtM_After#select count(1) from coltrades where mtmvaluation = 123456 and prcdate = to_date('2011-12-09','yyyy-MM-DD')
+
+val#1#`expr ${MtM_After} - ${MtM_Before}`

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/feeds.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <agreement>
+            <counterparty>
+                <linkText id="agreement.counterparty">QTPCounterparty</linkText>
+            </counterparty>
+            <agreementId id="agreement.id">580</agreementId>
+            <agreementDescription id="agreement.description">T28696Agreement</agreementDescription>
+            <externalId id="agreement.external.id">T28696AgreementExternalID</externalId>
+        </agreement>
+
+        <feedAssetBooking id="feed.asset.booking.cash">
+            <agreementId ref="agreement.id"/>
+            <external_ID ref="agreement.external.id"/>
+            <counterparty ref="agreement.counterparty"/>
+            <assetClass ref="cash.name"/>
+            <assetType ref="cash.usd.name"/>
+            <!--<instrumentID></instrumentID>-->
+            <parAmount id="feed.asset.booking.par.amnt">1000</parAmount>
+            <!--<imParAmount></imParAmount>-->
+            <movement id="feed.asset.booking.movement">Call</movement>
+            <settlementDate>2099-09-09</settlementDate>
+            <!--<valuationPerc></valuationPerc>-->
+            <settlementStatus>PENDING SETTLEMENT</settlementStatus>
+            <!--<description></description-->
+            <!--<description2></description2>-->
+            <!--<description3></description3>-->
+            <!--<settlementComment></settlementComment>-->
+            <!--<settlementDateAbbriviated></settlementDateAbbriviated>-->
+            <!--<creationDate></creationDate>-->
+            <!--<previousTicketId></previousTicketId>-->
+            <!--<moveDescription></moveDescription>-->
+            <placeOfSettlement>place</placeOfSettlement>
+            <!--<linkToEvent>true</linkToEvent>-->
+            <!--<Event></Event>-->
+            <!--<Model></Model>-->
+            <!--<resetDate></resetDate>-->
+            <!--<market></market>-->
+            <!--<WHT></WHT>-->
+            <!--<cashMovementType></cashMovementType>-->
+            <!--<component></component>-->
+            <rehypothecated>true</rehypothecated>
+            <assetOwner id="feed.asset.booking.asset.owner" ref="org.issuer1.lname"/>
+            <!--<BookingUDFFields>-->
+                <!--<udfName></udfName>-->
+                <!--<udfValue></udfValue>-->
+            <!--</BookingUDFFields>-->
+            <!--<postApprovalStatus></postApprovalStatus>-->
+        </feedAssetBooking>
+
+        <feedResult id="feed.asset.booking.result">
+            <fileUploaded id="feed.asset.booking.result.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedStatus id="feed.asset.booking.status">
+            <status>Successful</status>
+            <valuationFile ref="feed.asset.booking.result.file"/>
+            <description>Asset Booking</description>
+            <successfulFeed>
+                <total>1</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <agreementSearch id="search.feed.asset.booking.agreement">
+            <systemId ref="agreement.id"/>
+        </agreementSearch>
+
+        <agreementSearchResult id="search.result.feed.asset.booking.agreement">
+            <agreementId ref="agreement.id"/>
+        </agreementSearchResult>
+
+        <agreementStatement id="check.feed.asset.booking.agreement.statement">
+            <assetHoldingsSummary>
+                <mktValueOfAssetsHeldByPrincipal>1000</mktValueOfAssetsHeldByPrincipal>
+            </assetHoldingsSummary>
+            <agreementAdmin>
+                <statementStatus>Amended</statementStatus>
+            </agreementAdmin>
+        </agreementStatement>
+
+        <collateralAssetHoldingSummary id="check.collateral.feed.asset.booking.holding.summary">
+            <collateralAssetHoldingSummaryList>
+                <assetClass ref="cash.name"/>
+                <assetTypeHoldingSummaryList>
+                    <assetType ref="cash.usd.name"/>
+                    <marketValue ref="feed.asset.booking.par.amnt"/>
+                </assetTypeHoldingSummaryList>
+            </collateralAssetHoldingSummaryList>
+        </collateralAssetHoldingSummary>
+
+        <assetBookingSummary id="feed.asset.booking.holding.summary">
+            <assetType ref="cash.usd.name"/>
+            <movement ref="feed.asset.booking.movement"/>
+            <status>Pending Settlement</status>
+            <bookingSource>Fed</bookingSource>
+            <vmMarketValue ref="feed.asset.booking.par.amnt"/>
+            <imMarketValue>0</imMarketValue>
+            <vmCollateralValue ref="feed.asset.booking.par.amnt"/>
+            <imCollateralValue>0</imCollateralValue>
+        </assetBookingSummary>
+
+        <bookingDetail id="check.feed.asset.booking.detail">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <nominalAmount ref="feed.asset.booking.par.amnt"/>
+                    <vmAmount ref="feed.asset.booking.par.amnt"/>
+                    <movement>Call</movement>
+                </bookingInformationDetail>
+                <settlementDate>9/9/2099</settlementDate>
+                <bookingSource>Fed</bookingSource>
+                <rehypothecated>true</rehypothecated>
+                <assetOwner>
+                    <linkText ref="feed.asset.booking.asset.owner"/>
+                </assetOwner>
+                <settlementStatusInfo>
+                    <settlementStatus>Pending Settlement</settlementStatus>
+                </settlementStatusInfo>
+            </bookingInformation>
+        </bookingDetail>
+    </scenarioData>
+</dataBean>

@@ -1,0 +1,9 @@
+
+pre#LETTERS_IN_IM#select count(*) as num1 from colinterestmanagergroup where monthrange = '20107' and toMonth='20107'and interestmovementstatus is NULL and letteremailstatus is NULL
+pre#LETTERS_BEFORE#select count(*) as num2 from colletters
+
+post#LETTERS_AFTER#select count(*) as num3 from colletters
+post#IM_MARKED_EMAILED#select count(*) as num4 from colinterestmanagergroup where monthrange = '20107' and toMonth='20107' and letteremailstatus = 'EMAIL'
+
+val#1#${LETTERS_IN_IM} -eq ${IM_MARKED_EMAILED}
+val#2#${LETTERS_IN_IM} -eq `expr ${LETTERS_AFTER} - ${LETTERS_BEFORE}`

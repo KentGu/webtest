@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/feeds.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <agreement id="otc.agr.rating.trigger">
+            <principal>
+                <filter id="otc.agr.principal">QTPPrincipal</filter>
+                <linkText ref="otc.agr.principal"/>
+            </principal>
+            <counterparty>
+                <filter id="otc.agr.counterparty">QTPCounterparty</filter>
+                <linkText ref="otc.agr.counterparty"/>
+            </counterparty>
+            <agreementDescription id="otc.agr.desc" prefix="feed_agrRating_" random="true"/>
+            <externalId id="otc.agr.externalid" random="true"/>
+            <agreementDate>t</agreementDate>
+            <holidayCentre>qtp_holiday_centre</holidayCentre>
+            <product>
+                <productName>QTP</productName>
+            </product>
+            <collateralAssetClass>
+                <collateralAssetClassName id="otc.agr.assetclass">qtp_cash</collateralAssetClassName>
+                <collateralAssetType>
+                    <collateralAssetTypeName id="otc.agr.assettype">qtp_cash_usd</collateralAssetTypeName>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <principalFixedTrigger>
+                <ratingContingentValues>
+                    <referenceRatingAgencies>Fitch</referenceRatingAgencies>
+                    <applicationOfRatings>Higher</applicationOfRatings>
+                    <row>
+                        <ratingLevel>AAA</ratingLevel>
+                        <threshold>1</threshold>
+                        <thresholdType>Fixed</thresholdType>
+                        <minimumTransfer>1</minimumTransfer>
+                        <minimumTransferType>Fixed</minimumTransferType>
+                        <roundingAmount>1</roundingAmount>
+                        <ratingBasedIAType>Fixed</ratingBasedIAType>
+                    </row>
+                </ratingContingentValues>
+            </principalFixedTrigger>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter>VM Call/Return</filter>
+                    <linkText>VM Call/Return</linkText>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter>VM Recall/Delivery</filter>
+                    <linkText>VM Recall/Delivery</linkText>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter>Pay</filter>
+                    <linkText>Pay</linkText>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter>Receive</filter>
+                    <linkText>Receive</linkText>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementId id="otc.agr.id"/>
+        </agreement>
+
+        <agreementSearch id="otc.agr.rating.trigger.search">
+            <systemId ref="otc.agr.id"/>
+        </agreementSearch>
+
+        <agreementSearchResult id="otc.agr.rating.trigger.search.result">
+            <agreementId ref="otc.agr.id"/>
+        </agreementSearchResult>
+
+        <agreement id="otc.agr.non.rating.trigger">
+            <principal>
+                <filter id="otc.agr1.principal">QTPPrincipal</filter>
+                <linkText ref="otc.agr1.principal"/>
+            </principal>
+            <counterparty>
+                <filter id="otc.agr1.counterparty">QTPCounterparty</filter>
+                <linkText ref="otc.agr1.counterparty"/>
+            </counterparty>
+            <agreementDescription id="otc.agr1.desc" prefix="feed_agrRating_" random="true"/>
+            <externalId id="otc.agr1.externalid" random="true"/>
+            <agreementDate>t</agreementDate>
+            <holidayCentre>qtp_holiday_centre</holidayCentre>
+            <product>
+                <productName>QTP</productName>
+            </product>
+            <collateralAssetClass>
+                <collateralAssetClassName id="otc.agr1.assetclass">qtp_cash</collateralAssetClassName>
+                <collateralAssetType>
+                    <collateralAssetTypeName id="otc.agr1.assettype">qtp_cash_usd</collateralAssetTypeName>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter>VM Call/Return</filter>
+                    <linkText>VM Call/Return</linkText>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter>VM Recall/Delivery</filter>
+                    <linkText>VM Recall/Delivery</linkText>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter>Pay</filter>
+                    <linkText>Pay</linkText>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter>Receive</filter>
+                    <linkText>Receive</linkText>
+                </bucket>
+            </settlementBucket>
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementId id="otc.agr1.id"/>
+        </agreement>
+
+        <agreementSearch id="otc.agr.non.rating.trigger.search">
+            <systemId ref="otc.agr1.id"/>
+        </agreementSearch>
+
+        <agreementSearchResult id="otc.agr.non.rating.trigger.search.result">
+            <agreementId ref="otc.agr1.id"/>
+        </agreementSearchResult>
+
+        <agreement id="edit.to.principal.rating.trigger">
+            <principalFixedTrigger>
+                <ratingContingentValues>
+                    <referenceRatingAgencies>Fitch</referenceRatingAgencies>
+                    <applicationOfRatings>Higher</applicationOfRatings>
+                </ratingContingentValues>
+            </principalFixedTrigger>
+            <agreementId ref="otc.agr1.id"/>
+        </agreement>
+
+        <agreement id="edit.to.counterparty.rating.trigger">
+            <counterpartyFixedTrigger>
+                <ratingContingentValues>
+                    <referenceRatingAgencies>Fitch</referenceRatingAgencies>
+                    <applicationOfRatings>Higher</applicationOfRatings>
+                </ratingContingentValues>
+            </counterpartyFixedTrigger>
+            <agreementId ref="otc.agr1.id"/>
+        </agreement>
+
+        <feedAgreementRating id="feed.otc.agr.rating.trigger.p.fitch">
+            <legal_id ref="otc.agr.externalid"/>
+            <principal ref="otc.agr.principal"/>
+            <counterpartycode ref="otc.agr.counterparty"/>
+            <cpty_principal_ind>P</cpty_principal_ind>
+            <rater id="feed.agr.rating1.rater">Fitch</rater>
+            <rating_num id="feed.agr.rating1.ratingmun">AAA</rating_num>
+            <amount id="feed.agr.rating1.amount">50000000</amount>
+            <min_transfer_amt id="feed.agr.rating1.mintrasamt">1000000</min_transfer_amt>
+            <rounding_amt id="feed.agr.rating1.roundamt">10000</rounding_amt>
+        </feedAgreementRating>
+
+        <feedAgreementRating id="feed.otc.agr.non.rating.trigger.p.fitch">
+            <legal_id ref="otc.agr1.externalid"/>
+            <principal ref="otc.agr1.principal"/>
+            <counterpartycode ref="otc.agr1.counterparty"/>
+            <cpty_principal_ind>P</cpty_principal_ind>
+            <rater id="feed.agr1.rating1.rater">Fitch</rater>
+            <rating_num id="feed.agr1.rating1.ratingmun">AAA</rating_num>
+            <amount id="feed.agr1.rating1.amount">50000000</amount>
+            <min_transfer_amt id="feed.agr1.rating1.mintrasamt">1000000</min_transfer_amt>
+            <rounding_amt id="feed.agr1.rating1.roundamt">10000</rounding_amt>
+        </feedAgreementRating>
+
+        <feedAgreementRating id="feed.otc.agr.rating.trigger.p.fitch.invalid.counterparty">
+            <legal_id ref="otc.agr.externalid"/>
+            <principal ref="otc.agr.principal"/>
+            <counterpartycode random="true"/>
+            <cpty_principal_ind>P</cpty_principal_ind>
+            <rater id="feed.agr.rating2.rater">Fitch</rater>
+            <rating_num id="feed.agr.rating2.ratingmun">AAA</rating_num>
+            <amount id="feed.agr.rating2.amount">50000000</amount>
+            <min_transfer_amt id="feed.agr.rating2.mintrasamt">1000000</min_transfer_amt>
+            <rounding_amt id="feed.agr.rating2.roundamt">10000</rounding_amt>
+        </feedAgreementRating>
+
+        <feedResult id="feed.otc.agr.rating.trigger.p.fitch.invalid.counterparty.result.successfully.1">
+            <fileUploaded apply="true"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedAgreementRating id="feed.otc.agr.non.rating.trigger.fitch.invalid.cpty.principal.ind">
+            <legal_id ref="otc.agr1.externalid"/>
+            <principal ref="otc.agr1.principal"/>
+            <counterpartycode ref="otc.agr1.counterparty"/>
+            <cpty_principal_ind>A</cpty_principal_ind>
+            <rater id="feed.agr1.rating2.rater">Fitch</rater>
+            <rating_num id="feed.agr1.rating2.ratingmun">AAA</rating_num>
+            <amount id="feed.agr1.rating2.amount">20000000</amount>
+            <min_transfer_amt id="feed.agr1.rating2.mintrasamt">2000000</min_transfer_amt>
+            <rounding_amt id="feed.agr1.rating2.roundamt">20000</rounding_amt>
+        </feedAgreementRating>
+
+        <feedAgreementRating id="feed.otc.agr.non.rating.trigger.p.sandp">
+            <legal_id ref="otc.agr1.externalid"/>
+            <principal ref="otc.agr1.principal"/>
+            <counterpartycode ref="otc.agr1.counterparty"/>
+            <cpty_principal_ind>P</cpty_principal_ind>
+            <rater id="feed.agr1.rating3.rater">SandP</rater>
+            <rating_num id="feed.agr1.rating3.ratingmun">AAA</rating_num>
+            <amount id="feed.agr1.rating3.amount">50000000</amount>
+            <min_transfer_amt id="feed.agr1.rating3.mintrasamt">1000000</min_transfer_amt>
+            <rounding_amt id="feed.agr1.rating3.roundamt">10000</rounding_amt>
+        </feedAgreementRating>
+
+        <agreementSummary id="otc.agr.rating.trigger.summary.p.fitch">
+            <principalRatingBasedContingentValue>
+                <referenceRatingAgencies ref="feed.agr.rating1.rater"/>
+                <ratingContingentValueDetail>
+                    <ratingLevel ref="feed.agr.rating1.ratingmun"/>
+                    <threshold ref="feed.agr.rating1.amount"/>
+                    <minimumTransfer ref="feed.agr.rating1.mintrasamt"/>
+                    <roundingAmounts ref="feed.agr.rating1.roundamt"/>
+                </ratingContingentValueDetail>
+            </principalRatingBasedContingentValue>
+        </agreementSummary>
+
+        <agreementSummary id="otc.agr.non.rating.trigger.summary.c.fitch">
+            <counterpartyRatingBasedContingentValue>
+                <referenceRatingAgencies ref="feed.agr.rating1.rater"/>
+                <ratingContingentValueDetail>
+                    <ratingLevel ref="feed.agr1.rating2.ratingmun"/>
+                    <threshold ref="feed.agr1.rating2.amount"/>
+                    <minimumTransfer ref="feed.agr1.rating2.mintrasamt"/>
+                    <roundingAmounts ref="feed.agr1.rating2.roundamt"/>
+                </ratingContingentValueDetail>
+            </counterpartyRatingBasedContingentValue>
+        </agreementSummary>
+
+        <agreementSummary id="otc.agr.non.rating.trigger.summary.p.ratinglvel">
+            <principalRatingBasedContingentValue>
+                <referenceRatingAgencies ref="feed.agr1.rating1.rater"/>
+                <referenceRatingAgencies ref="feed.agr1.rating3.rater"/>
+                <ratingContingentValueDetail>
+                    <ratingLevel>AAA/AAA</ratingLevel>
+                    <threshold ref="feed.agr1.rating3.amount"/>
+                    <minimumTransfer ref="feed.agr1.rating3.mintrasamt"/>
+                    <roundingAmounts ref="feed.agr1.rating3.roundamt"/>
+                </ratingContingentValueDetail>
+            </principalRatingBasedContingentValue>
+        </agreementSummary>
+
+    </scenarioData>
+</dataBean>

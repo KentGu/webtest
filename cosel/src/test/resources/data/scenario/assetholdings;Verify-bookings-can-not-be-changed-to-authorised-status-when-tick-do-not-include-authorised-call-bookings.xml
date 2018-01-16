@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+		<collateralPreference id="CollateralPreferences26988.DoNotIncludeAuthorised">
+			<collateralRules>
+				<noAuthorisedStatus>true</noAuthorisedStatus>
+			</collateralRules>
+		</collateralPreference>
+
+		<agreementSearch id="filter.agmt.description">
+			<description>
+				<filter id="agrDesc1">26988_1</filter>
+			</description>
+		</agreementSearch>
+
+		<agreementSearchResult id="agreement.description">
+			<description ref="agrDesc1"/>
+			<!--<agreementId id="agmt26988.id"/>-->
+		</agreementSearchResult>
+
+		<assetBookingSummary id="asset.type.CASH.USD">
+			<assetType>CASH-USD</assetType>
+		</assetBookingSummary>
+
+		<bookingDetail id="callBooking1Cash.nominalAmount.1m">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>1000000</nominalAmount>
+					<movement>Call</movement>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+		<bookingDetail id="callBooking2Cash.nominalAmount.2m">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>2000000</nominalAmount>
+					<movement>Call</movement>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+
+		<assetBookingSummary id="callBooking1Edit">
+			<nominalAmount>1,000,000.00</nominalAmount>
+			<status>Pending</status>
+		</assetBookingSummary>
+
+		<bookingDetail id="callBooking1EditExpected.settlementStatusNotIncludeAuthorised">
+			<bookingInformation>
+				<settlementStatusInfo apply="false">
+					<settlementStatus>Authorised</settlementStatus>
+				</settlementStatusInfo>
+			</bookingInformation>
+		</bookingDetail>
+
+
+		<assetBookingSummary id="callBooking1Pending">
+			<assetType>CASH-USD</assetType>
+			<movement>Call</movement>
+			<nominalAmount>1,000,000.00</nominalAmount>
+			<status>Pending</status>
+		</assetBookingSummary>
+
+		<bookingDetail id="callBooking1PendingSettlement">
+			<bookingInformation>
+				<settlementStatusInfo>
+					<settlementStatus>Pending Settlement</settlementStatus>
+				</settlementStatusInfo>
+			</bookingInformation>
+			<save>save</save>
+			<alertHandling>
+				<accept>true</accept>
+			</alertHandling>
+		</bookingDetail>
+
+		<bookingDetail id="callBooking1EditExpected2.AuditInfoNotIncludeAuthorised">
+			<externalBookingInformation>
+				<auditInfo>
+					<bookingStatusRow1>Pending</bookingStatusRow1>
+					<bookingStatusRow2>Pending</bookingStatusRow2>
+					<bookingStatusRow3>Pending Settlement</bookingStatusRow3>
+				</auditInfo>
+			</externalBookingInformation>
+		</bookingDetail>
+
+		<assetBookingSummary id="qtp_bond_usd">
+			<assetType ref="bond.usd.name"/>
+		</assetBookingSummary>
+
+
+		<bookingDetail id="callBooking3Bond.nominalAmount.1m">
+			<instrumentSearch>
+				<instrumentId>
+					<filter id="bondinstrument.id">qtp-Bond-Usd-Instrument</filter>
+				</instrumentId>
+				<linkText ref="bondinstrument.id"/>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>1000000</nominalAmount>
+					<movement>Call</movement>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<alertHandling>
+				<accept>true</accept>
+			</alertHandling>
+			<save>save</save>
+		</bookingDetail>
+
+
+		<assetBookingSummary id="callBooking3Edit">
+			<assetType ref="bond.usd.name"/>
+			<instrumentId ref="bondinstrument.id"/>
+			<nominalAmount>1,000,000.00</nominalAmount>
+			<status>Pending</status>
+		</assetBookingSummary>
+
+		<bookingDetail id="callBooking3EditExpected.settlementStatusNotIncludeAuthorised">
+			<bookingInformation>
+				<settlementStatusInfo apply="false">
+					<settlementStatus>Authorised</settlementStatus>
+				</settlementStatusInfo>
+			</bookingInformation>
+		</bookingDetail>
+
+		<assetBookingSummary id="callBooking3Pending">
+			<assetType ref="bond.usd.name"/>
+			<instrumentId ref="bondinstrument.id" />
+			<movement>Call</movement>
+			<nominalAmount>1,000,000.00</nominalAmount>
+			<status>Pending</status>
+		</assetBookingSummary>
+
+		<bookingDetail id="callBooking3PendingSettlement">
+			<bookingInformation>
+				<settlementStatusInfo>
+					<settlementStatus>Pending Settlement</settlementStatus>
+				</settlementStatusInfo>
+			</bookingInformation>
+			<save>save</save>
+			<alertHandling>
+				<accept>true</accept>
+			</alertHandling>
+		</bookingDetail>
+
+		<bookingDetail id="callBooking3EditExpected2.AuditInfoNotIncludeAuthorised">
+			<externalBookingInformation>
+				<auditInfo>
+					<bookingStatusRow1>Pending</bookingStatusRow1>
+					<bookingStatusRow2>Pending</bookingStatusRow2>
+					<bookingStatusRow3>Pending Settlement</bookingStatusRow3>
+				</auditInfo>
+			</externalBookingInformation>
+		</bookingDetail>
+
+
+		<assetBookingSummary id="qtp_equity_usd">
+			<assetType ref="equity.usd.name"/>
+		</assetBookingSummary>
+
+
+		<bookingDetail id="callBooking4Equlity.nominalAmount.1m">
+			<instrumentSearch>
+				<instrumentId>
+					<filter ref="equity.instrument1.name"/>
+				</instrumentId>
+				<linkText ref="equity.instrument1.name"/>
+			</instrumentSearch>
+			<bookingInformation>
+				<bookingInformationDetail>
+					<nominalAmount>1000000</nominalAmount>
+					<movement>Call</movement>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<alertHandling>
+				<accept>true</accept>
+			</alertHandling>
+			<save>save</save>
+		</bookingDetail>
+
+
+		<assetBookingSummary id="callBooking4Edit">
+			<assetType ref="equity.usd.name"/>
+			<instrumentId ref="equity.instrument1.name"/>
+			<nominalAmount>1,000,000.00</nominalAmount>
+			<status>Pending</status>
+		</assetBookingSummary>
+
+		<bookingDetail id="callBooking4EditExpected.settlementStatusNotIncludeAuthorised">
+			<bookingInformation>
+				<settlementStatusInfo apply="false">
+					<settlementStatus>Authorised</settlementStatus>
+				</settlementStatusInfo>
+			</bookingInformation>
+		</bookingDetail>
+
+		<assetBookingSummary id="callBooking4Pending">
+			<assetType ref="equity.usd.name"/>
+			<instrumentId ref="equity.instrument1.name"/>
+			<movement>Call</movement>
+			<nominalAmount>1,000,000.00</nominalAmount>
+			<status>Pending</status>
+		</assetBookingSummary>
+
+		<bookingDetail id="callBooking4PendingSettlement">
+			<bookingInformation>
+				<settlementStatusInfo>
+					<settlementStatus>Pending Settlement</settlementStatus>
+				</settlementStatusInfo>
+			</bookingInformation>
+			<save>save</save>
+			<alertHandling>
+				<accept>true</accept>
+			</alertHandling>
+		</bookingDetail>
+
+		<bookingDetail id="callBooking4EditExpected2.AuditInfoNotIncludeAuthorised">
+			<externalBookingInformation>
+				<auditInfo>
+					<bookingStatusRow1>Pending</bookingStatusRow1>
+					<bookingStatusRow2>Pending</bookingStatusRow2>
+					<bookingStatusRow3>Pending Settlement</bookingStatusRow3>
+				</auditInfo>
+			</externalBookingInformation>
+		</bookingDetail>
+
+
+		<!--<feedAssetBooking id="callBooking3">-->
+			<!--<agreementId ref="agmt26988.id"/>-->
+			<!--<assetClass ref="cash.name"/>-->
+			<!--<assetType ref="cash.usd1.name"/>-->
+			<!--&lt;!&ndash;<instrumentID></instrumentID>&ndash;&gt;-->
+			<!--<parAmount id="feed.asset.booking.par.amnt">3000000</parAmount>-->
+			<!--&lt;!&ndash;<imParAmount></imParAmount>&ndash;&gt;-->
+			<!--<movement id="feed.asset.booking.movement">Call</movement>-->
+			<!--<settlementDate>2099-09-09</settlementDate>-->
+			<!--&lt;!&ndash;<valuationPerc></valuationPerc>&ndash;&gt;-->
+			<!--<settlementStatus>Authorised</settlementStatus>-->
+			<!--&lt;!&ndash;<description></description&ndash;&gt;-->
+			<!--&lt;!&ndash;<description2></description2>&ndash;&gt;-->
+			<!--&lt;!&ndash;<description3></description3>&ndash;&gt;-->
+			<!--&lt;!&ndash;<settlementComment></settlementComment>&ndash;&gt;-->
+			<!--&lt;!&ndash;<settlementDateAbbriviated></settlementDateAbbriviated>&ndash;&gt;-->
+			<!--&lt;!&ndash;<creationDate></creationDate>&ndash;&gt;-->
+			<!--&lt;!&ndash;<previousTicketId></previousTicketId>&ndash;&gt;-->
+			<!--&lt;!&ndash;<moveDescription></moveDescription>&ndash;&gt;-->
+			<!--&lt;!&ndash;<placeOfSettlement>place</placeOfSettlement>&ndash;&gt;-->
+			<!--&lt;!&ndash;<linkToEvent>true</linkToEvent>&ndash;&gt;-->
+			<!--&lt;!&ndash;<Event></Event>&ndash;&gt;-->
+			<!--&lt;!&ndash;<Model></Model>&ndash;&gt;-->
+			<!--&lt;!&ndash;<resetDate></resetDate>&ndash;&gt;-->
+			<!--&lt;!&ndash;<market></market>&ndash;&gt;-->
+			<!--&lt;!&ndash;<WHT></WHT>&ndash;&gt;-->
+			<!--&lt;!&ndash;<cashMovementType></cashMovementType>&ndash;&gt;-->
+			<!--&lt;!&ndash;<component></component>&ndash;&gt;-->
+			<!--&lt;!&ndash;<rehypothecated>true</rehypothecated>&ndash;&gt;-->
+			<!--&lt;!&ndash;<assetOwner id="feed.asset.booking.asset.owner" ref="org.issuer1.lname"/>&ndash;&gt;-->
+			<!--&lt;!&ndash;<BookingUDFFields>&ndash;&gt;-->
+			<!--&lt;!&ndash;<udfName></udfName>&ndash;&gt;-->
+			<!--&lt;!&ndash;<udfValue></udfValue>&ndash;&gt;-->
+			<!--&lt;!&ndash;</BookingUDFFields>&ndash;&gt;-->
+			<!--&lt;!&ndash;<postApprovalStatus></postApprovalStatus>&ndash;&gt;-->
+		<!--</feedAssetBooking>-->
+
+		<!--<feedResult id="feed.callBooking3.result">-->
+			<!--<fileUploaded id="feed.result.1.file"/>-->
+			<!--<unsuccessfulImports>1</unsuccessfulImports>-->
+		<!--</feedResult>-->
+
+		<!--<feedStatus id="feed.callBooking3.status">-->
+			<!--<systemName>QTP</systemName>-->
+			<!--<status>Failed</status>-->
+			<!--<valuationFile ref="feed.result.1.file"/>-->
+			<!--<description>Asset Booking</description>-->
+			<!--<failedFeed apply="true">-->
+				<!--<importType>Asset Booking</importType>-->
+				<!--<valuationFile ref="feed.result.1.file"/>-->
+				<!--<total>1</total>-->
+				<!--<entry>-->
+					<!--<content>Agreement Description:[!agrDesc!] : settlementStatus is invalid for authorised booking only can be fed into system when 'Do not include Authorised' is unchecked.</content>-->
+					<!--<parameter>-->
+						<!--<parameterName>!agrDesc!</parameterName>-->
+						<!--<parameterValue ref="otc.agr3.desc"/>-->
+					<!--</parameter>-->
+				<!--</entry>-->
+			<!--</failedFeed>-->
+		<!--</feedStatus>-->
+
+		<dashboard id="dashboard1">
+			<collateralSettlementSummary apply="false">
+				<status>Authorised</status>
+			</collateralSettlementSummary>
+		</dashboard>
+
+		<dashboard id="asset.type.cash">
+			<collateralSettlementSummary>
+				<assetName>qtp_cash (Capital)</assetName>
+			</collateralSettlementSummary>
+		</dashboard>
+
+
+		<settlementStatusSearch id="settlementStatusSearch1">
+			<description>
+				<filter ref="agrDesc1"/>
+			</description>
+			<assetClass>qtp_cash</assetClass>
+			<settlementDateTo>12/12/2099</settlementDateTo>
+		</settlementStatusSearch>
+
+
+		<settlementStatusSummary id="cash.usd1">
+			<!--<assetClass ref="cash.name"/>-->
+			<assetType ref="cash.usd1.name"/>
+		</settlementStatusSummary>
+
+		<settlementStatusDetail id="approveAllTicked">
+			<tickAll>true</tickAll>
+			<alertHandling>
+				<accept>true</accept>
+			</alertHandling>
+
+		</settlementStatusDetail>
+
+		<assetBookingSummary id="callBooking2Edit">
+			<nominalAmount>2,000,000.00</nominalAmount>
+			<status>Pending Settlement</status>
+		</assetBookingSummary>
+
+		<bookingDetail id="callBooking2EditExpected1.AuditInfoNotIncludeAuthorised">
+			<externalBookingInformation>
+				<auditInfo>
+					<bookingStatusRow1>Pending</bookingStatusRow1>
+					<bookingStatusRow2>Pending Settlement</bookingStatusRow2>
+				</auditInfo>
+			</externalBookingInformation>
+		</bookingDetail>
+
+
+
+
+
+
+
+	</scenarioData>
+</dataBean>

@@ -1,0 +1,1033 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/etdagreement.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <fxRateSet id="fx.rate.usd.eur.0.5">
+            <fxRateSetName id="fx.rate.usd.eur.0.5.id" random="true" prefix="fx_rate_for_1596_"/>
+            <fxRate>
+                <baseCurrency>USD</baseCurrency>
+                <riskCurrency>EUR</riskCurrency>
+                <bid>0.5</bid>
+                <offer>0.5</offer>
+                <rateType>Standard</rateType>
+            </fxRate>
+            <fxRate>
+                <baseCurrency>USD</baseCurrency>
+                <riskCurrency>GBP</riskCurrency>
+                <bid>0.6</bid>
+                <offer>0.6</offer>
+                <rateType>Standard</rateType>
+            </fxRate>
+        </fxRateSet>
+        <cashflowRule id="cashflow.rule.partial.physical">
+            <cashflowRuleName id="cashflow.rule" random="true"/>
+            <cashflowField>
+                <cashflowFieldName>Upfront Fee</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>PAI</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Banked Coupon</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Initial Coupon</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Physical Payment</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Realised P&amp;L</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Unrealised P&amp;L</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+            <cashflowField>
+                <cashflowFieldName>Total Fees Cleared</cashflowFieldName>
+                <enabled>true</enabled>
+                <paymentMethod>Capitalise</paymentMethod>
+            </cashflowField>
+        </cashflowRule>
+
+        <agreement id="add.etd.agreement.allow.adj.and.no.calc">
+            <principal>
+                <criteria>Containing</criteria>
+                <type>Code</type>
+                <filter>QTPPrincipal</filter>
+                <linkText>QTPPrincipal</linkText>
+            </principal>
+            <counterparty>
+                <criteria>Containing</criteria>
+                <type>Long Name</type>
+                <filter>QTPCounterparty</filter>
+                <linkText>QTPCounterparty</linkText>
+            </counterparty>
+            <businessLine>ETD</businessLine>
+            <ccp ref="ccp.lch.name"/>
+            <principalRole>Member</principalRole>
+            <agreementDescription id="agr.desc.id" random="true" prefix="EtdAdjAgrDesc"/>
+            <agreementName random="true" prefix="EtdAdjAgrName"/>
+            <externalId id="agr.ext.id" random="true" prefix="EtdAdjAgrExtId"/>
+            <agreementDate>T</agreementDate>
+            <nettingIAandMtM>Not-Net</nettingIAandMtM>
+            <cashflowRule ref="cashflow.rule"/>
+            <fxRate ref="fx.rate.usd.eur.0.5.id"/>
+            <marginType>Hedge</marginType>
+            <statementCalc>No Calc</statementCalc>
+            <allowAdj>true</allowAdj>
+            <callFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+            </callFrequency>
+            <holidayCentre ref="hc.europe.name"/>
+            <model>
+                <modelCategory>
+                    <modelName>model1</modelName>
+                    <modelDecription>m1desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                    <modelBaseCurrency>USD</modelBaseCurrency>
+                    <masterModel>false</masterModel>
+                </modelCategory>
+                <modelCategory>
+                    <modelName>model2</modelName>
+                    <modelDecription>m2desc</modelDecription>
+                    <modelCategory>SEG</modelCategory>
+                    <modelBaseCurrency>GBP</modelBaseCurrency>
+                    <masterModel>false</masterModel>
+                </modelCategory>
+                <modelCategory>
+                    <modelName>model3</modelName>
+                    <modelDecription>m3desc</modelDecription>
+                    <modelCategory>abc</modelCategory>
+                    <modelBaseCurrency>EUR</modelBaseCurrency>
+                    <masterModel>false</masterModel>
+                </modelCategory>
+            </model>
+            <applicableBalanceInterestCalculation>Ending Balance</applicableBalanceInterestCalculation>
+            <collateralAssetClass>
+                <collateralAssetClassName ref="cash.name"/>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="cash.usd.name"/>
+                </collateralAssetType>
+                <collateralAssetType>
+                    <collateralAssetTypeName ref="cash.eur1.name"/>
+                </collateralAssetType>
+            </collateralAssetClass>
+            <settlementBucket>
+                <!--<model>model1 sec</model>-->
+                <model>
+                    <modelName>model1</modelName>
+                    <modelDecription>m1desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>Cash</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter>Standard</filter>
+                    <linkText>Standard</linkText>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model1</modelName>
+                    <modelDecription>m1desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>IM</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model1</modelName>
+                    <modelDecription>m1desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>IM</bookingType>
+                <direction>Pledge In/Pledge Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model1</modelName>
+                    <modelDecription>m1desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>Cash Interest</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model1</modelName>
+                    <modelDecription>m1desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>IM Interest</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model1</modelName>
+                    <modelDecription>m1desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>Capital Charge</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model1</modelName>
+                    <modelDecription>m1desc</modelDecription>
+                    <modelCategory>SEC</modelCategory>
+                </model>
+                <bookingType>Physical Cashflow</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model2</modelName>
+                    <modelDecription>m2desc</modelDecription>
+                    <modelCategory>SEG</modelCategory>
+                </model>
+                <bookingType>Cash</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model2</modelName>
+                    <modelDecription>m2desc</modelDecription>
+                    <modelCategory>SEG</modelCategory>
+                </model>
+                <bookingType>IM</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model2</modelName>
+                    <modelDecription>m2desc</modelDecription>
+                    <modelCategory>SEG</modelCategory>
+                </model>
+                <bookingType>IM</bookingType>
+                <direction>Pledge In/Pledge Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model2</modelName>
+                    <modelDecription>m2desc</modelDecription>
+                    <modelCategory>SEG</modelCategory>
+                </model>
+                <bookingType>Cash Interest</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model2</modelName>
+                    <modelDecription>m2desc</modelDecription>
+                    <modelCategory>SEG</modelCategory>
+                </model>
+                <bookingType>IM Interest</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model2</modelName>
+                    <modelDecription>m2desc</modelDecription>
+                    <modelCategory>SEG</modelCategory>
+                </model>
+                <bookingType>Capital Charge</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model2</modelName>
+                    <modelDecription>m2desc</modelDecription>
+                    <modelCategory>SEG</modelCategory>
+                </model>
+                <bookingType>Physical Cashflow</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model3</modelName>
+                    <modelDecription>m3desc</modelDecription>
+                    <modelCategory>abc</modelCategory>
+                </model>
+                <bookingType>Cash</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model3</modelName>
+                    <modelDecription>m3desc</modelDecription>
+                    <modelCategory>abc</modelCategory>
+                </model>
+                <bookingType>IM</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model3</modelName>
+                    <modelDecription>m3desc</modelDecription>
+                    <modelCategory>abc</modelCategory>
+                </model>
+                <bookingType>IM</bookingType>
+                <direction>Pledge In/Pledge Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model3</modelName>
+                    <modelDecription>m3desc</modelDecription>
+                    <modelCategory>abc</modelCategory>
+                </model>
+                <bookingType>Cash Interest</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model3</modelName>
+                    <modelDecription>m3desc</modelDecription>
+                    <modelCategory>abc</modelCategory>
+                </model>
+                <bookingType>IM Interest</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model3</modelName>
+                    <modelDecription>m3desc</modelDecription>
+                    <modelCategory>abc</modelCategory>
+                </model>
+                <bookingType>Capital Charge</bookingType>
+                <direction>Pay/Receive</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <model>
+                    <modelName>model3</modelName>
+                    <modelDecription>m3desc</modelDecription>
+                    <modelCategory>abc</modelCategory>
+                </model>
+                <bookingType>Physical Cashflow</bookingType>
+                <direction>Wire In/Wire Out</direction>
+                <bucket>
+                    <filter ref="payInstrBucket.std.name"/>
+                    <linkText ref="payInstrBucket.std.name"/>
+                </bucket>
+            </settlementBucket>
+
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <agreementStatus>Pending</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <statementStatus>Approved</statementStatus>
+            <!--<agreementId id="etd.allow.adj.no.calc.agreement.id"/>-->
+            <agreementId>51503</agreementId>
+        </agreement>
+
+        <feedEtdBalances id="feed.etd.balance.for.model1">
+            <agreement_id></agreement_id>
+            <legal_id ref="agr.ext.id"/>
+            <principal></principal>
+            <counterparty></counterparty>
+            <system></system>
+            <prin_branch></prin_branch>
+            <cpty_branch></cpty_branch>
+            <model>model1</model>
+            <modelDescription>m1desc</modelDescription>
+            <modelCategory>SEC</modelCategory>
+            <cashflowPhysical>124563</cashflowPhysical>
+            <initialCoupon>-9000</initialCoupon>
+            <bankedCoupon>-8000</bankedCoupon>
+            <pai>1400</pai>
+            <upfrontFee>1401</upfrontFee>
+            <unrealisedPandLCleared>200</unrealisedPandLCleared>
+            <realisedPandLCleared>200</realisedPandLCleared>
+            <totalFeesCleared>200</totalFeesCleared>
+            <netPandLCleared></netPandLCleared>
+            <totalNetPandL></totalNetPandL>
+            <realisedPandLETD>400</realisedPandLETD>
+            <commissionAndFees>400</commissionAndFees>
+            <openingBalance>400</openingBalance>
+            <optionPremium>400</optionPremium>
+            <cashAmounts>400</cashAmounts>
+            <endingBalance></endingBalance>
+            <OTE>400</OTE>
+            <TE></TE>
+            <LOV>400</LOV>
+            <SOV>400</SOV>
+            <NOV></NOV>
+            <NLV></NLV>
+            <IMR>400</IMR>
+            <MMR>400</MMR>
+            <IM_SecuritiesBalance>400</IM_SecuritiesBalance>
+            <IM_CashBalance>400</IM_CashBalance>
+            <IM_DCVM>400</IM_DCVM>
+            <ED></ED>
+            <DFR>12300.49</DFR>
+            <DF_Securities_Balance>20000.24</DF_Securities_Balance>
+            <DF_Cash_Balance>66000.67</DF_Cash_Balance>
+            <DF_ED>8000</DF_ED>
+        </feedEtdBalances>
+
+        <feedEtdBalances id="feed.etd.balance.for.model3">
+            <agreement_id></agreement_id>
+            <legal_id ref="agr.ext.id"/>
+            <principal></principal>
+            <counterparty></counterparty>
+            <system></system>
+            <prin_branch></prin_branch>
+            <cpty_branch></cpty_branch>
+            <model>model3</model>
+            <modelDescription>m3desc</modelDescription>
+            <modelCategory>abc</modelCategory>
+            <cashflowPhysical>-10001</cashflowPhysical>
+            <initialCoupon>900</initialCoupon>
+            <bankedCoupon>5800</bankedCoupon>
+            <pai>-200</pai>
+            <upfrontFee>-200</upfrontFee>
+            <unrealisedPandLCleared>300</unrealisedPandLCleared>
+            <realisedPandLCleared>300</realisedPandLCleared>
+            <totalFeesCleared>300</totalFeesCleared>
+            <netPandLCleared></netPandLCleared>
+            <totalNetPandL></totalNetPandL>
+            <realisedPandLETD>400</realisedPandLETD>
+            <commissionAndFees>400</commissionAndFees>
+            <openingBalance>400</openingBalance>
+            <optionPremium>400</optionPremium>
+            <cashAmounts>400</cashAmounts>
+            <endingBalance></endingBalance>
+            <OTE>400</OTE>
+            <TE></TE>
+            <LOV>400</LOV>
+            <SOV>400</SOV>
+            <NOV></NOV>
+            <NLV></NLV>
+            <IMR>400</IMR>
+            <MMR>400</MMR>
+            <IM_SecuritiesBalance>400</IM_SecuritiesBalance>
+            <IM_CashBalance>400</IM_CashBalance>
+            <IM_DCVM>400</IM_DCVM>
+            <ED></ED>
+            <DFR>12300.49</DFR>
+            <DF_Securities_Balance>20000.24</DF_Securities_Balance>
+            <DF_Cash_Balance>66000.67</DF_Cash_Balance>
+            <DF_ED>8000</DF_ED>
+        </feedEtdBalances>
+
+        <feedResult id="feed.successful.1.unsuccessful.0.1st">
+            <successfullyImported>1</successfullyImported>
+            <unsuccessfulImports>0</unsuccessfulImports>
+        </feedResult>
+
+        <feedResult id="feed.successful.1.unsuccessful.0.2nd">
+            <successfullyImported>1</successfullyImported>
+            <unsuccessfulImports>0</unsuccessfulImports>
+        </feedResult>
+
+        <agreement id="change.cashflow.rule.from.rule1.to.rule2">
+            <cashflowRule ref="cashflow.rule2"/>
+        </agreement>
+
+        <etdAgreementStatement id="cashflow.SEC.-1m.abc.4.4m">
+            <etdAssetHoldingSummary>
+                <agreementBaseCurrency>USD</agreementBaseCurrency>
+                <etdModelAndModelCategoryAssetHoldingSummary>
+                    <modelCategory>SEC</modelCategory>
+                    <etdAssetHoldingSummaryDetail>
+                        <cashflow>-1000000.00</cashflow>
+                    </etdAssetHoldingSummaryDetail>
+                </etdModelAndModelCategoryAssetHoldingSummary>
+                <etdModelAndModelCategoryAssetHoldingSummary>
+                    <modelCategory>abc</modelCategory>
+                    <etdAssetHoldingSummaryDetail>
+                        <cashflow>4400000.00</cashflow>
+                    </etdAssetHoldingSummaryDetail>
+                </etdModelAndModelCategoryAssetHoldingSummary>
+            </etdAssetHoldingSummary>
+        </etdAgreementStatement>
+
+        <exposureEventDetail id="expand.cashflow.agreement.level.call.excess">
+            <action>Cashflow Call(Excess)</action>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="expand.cashflow.category.level.SEC.delivery.deficit">
+            <action>Cashflow Delivery(Deficit)</action>
+            <modelCategory>SEC</modelCategory>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="expand.cashflow.category.level.abc.call.excess">
+            <action>Cashflow Call(Excess)</action>
+            <modelCategory>abc</modelCategory>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="agreement.level.cashflow.event.call.excess.pending.review.3.4m" apply="true">
+            <modelCategory></modelCategory>
+            <model></model>
+            <action>Cashflow Call(Excess)</action>
+            <callStatus>Pending Review</callStatus>
+            <sysCalculatedAmount>3,400,000.00</sysCalculatedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="category.SEC.cashflow.event.delivery.deficit.pending.review.-1m" apply="true">
+            <modelCategory>SEC</modelCategory>
+            <model></model>
+            <action>Cashflow Delivery(Deficit)</action>
+            <callStatus>Pending Review</callStatus>
+            <sysCalculatedAmount>-1,000,000.00</sysCalculatedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="category.abc.cashflow.event.call.excess.pending.review.4.4m" apply="true">
+            <modelCategory>abc</modelCategory>
+            <model></model>
+            <action>Cashflow Call(Excess)</action>
+            <callStatus>Pending Review</callStatus>
+            <sysCalculatedAmount>4,400,000.00</sysCalculatedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="model1.cashflow.event.delivery.deficit.pending.review.-1m" apply="true">
+            <modelCategory>SEC</modelCategory>
+            <model>model1</model>
+            <!--<model>model1 m1desc</model>-->
+            <action>Cashflow Delivery(Deficit)</action>
+            <callStatus>Pending Review</callStatus>
+            <sysCalculatedAmount>-1,000,000.00</sysCalculatedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="model3.cashflow.event.call.excess.pending.review.2.2m" apply="true">
+            <modelCategory>abc</modelCategory>
+            <!--<model>model2 m2desc</model>-->
+            <model>model3</model>
+            <action>Cashflow Call(Excess)</action>
+            <callStatus>Pending Review</callStatus>
+            <sysCalculatedAmount>2,200,000.00</sysCalculatedAmount>
+        </exposureEventDetail>
+
+        <etdAgreementStatement id="select.model1">
+            <etdAssetHoldingSummary>
+                <agreementBaseCurrency>USD</agreementBaseCurrency>
+                <etdModelAndModelCategoryAssetHoldingSummary>
+                    <modelCategory>SEC</modelCategory>
+                    <model>model1</model>
+                    <desc>m1desc</desc>
+                </etdModelAndModelCategoryAssetHoldingSummary>
+            </etdAssetHoldingSummary>
+        </etdAgreementStatement>
+
+        <etdAgreementStatement id="select.model3">
+            <etdAssetHoldingSummary>
+                <agreementBaseCurrency>USD</agreementBaseCurrency>
+                <etdModelAndModelCategoryAssetHoldingSummary>
+                    <modelCategory>abc</modelCategory>
+                    <model>model3</model>
+                    <desc>m3desc</desc>
+                </etdModelAndModelCategoryAssetHoldingSummary>
+            </etdAssetHoldingSummary>
+        </etdAgreementStatement>
+
+        <assetBookingSummary id="Cash-USD">
+            <assetType ref="cash.usd.name"/>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="Cash-EUR">
+            <assetType ref="cash.eur1.name"/>
+        </assetBookingSummary>
+
+        <cashMovementDetail id="add.linked.event.cashflow.booking.for.model1.wire.out.0.5m">
+            <movementType>Wire Out</movementType>
+            <bookingType>Cashflow</bookingType>
+            <amount>-500000</amount>
+            <event>Cashflow Delivery(Deficit)</event>
+        </cashMovementDetail>
+
+        <cashMovementDetail id="add.linked.event.cashflow.booking.for.model3.wire.in.2.2m">
+            <movementType>Wire In</movementType>
+            <bookingType>Cashflow</bookingType>
+            <amount>2200000</amount>
+            <event>Cashflow Call(Excess)</event>
+        </cashMovementDetail>
+
+        <cashMovementDetail id="add.linked.event.cashflow.booking.for.model3.wire.in.1k">
+            <movementType>Wire In</movementType>
+            <bookingType>Cashflow</bookingType>
+            <amount>1000</amount>
+            <event>Cashflow Call(Excess)</event>
+        </cashMovementDetail>
+
+        <exposureEventDetail id="agreement.level.cashflow.event.partially.booked" apply="true">
+            <modelCategory></modelCategory>
+            <model></model>
+            <action>Cashflow Call(Excess)</action>
+            <callStatus>Partially Booked</callStatus>
+            <sysCalculatedAmount>3,400,000.00</sysCalculatedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="category.SEC.cashflow.event.partially.booked" apply="true">
+            <modelCategory>SEC</modelCategory>
+            <model></model>
+            <action>Cashflow Delivery(Deficit)</action>
+            <callStatus>Partially Booked</callStatus>
+            <sysCalculatedAmount>-1,000,000.00</sysCalculatedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="category.abc.cashflow.event.completed" apply="true">
+            <modelCategory>abc</modelCategory>
+            <model></model>
+            <action>Cashflow Call(Excess)</action>
+            <callStatus>Completed</callStatus>
+            <sysCalculatedAmount>4,400,000.00</sysCalculatedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="model1.cashflow.event.partially.booked" apply="true">
+            <modelCategory>SEC</modelCategory>
+            <model>model1</model>
+            <!--<model>model1 m1desc</model>-->
+            <action>Cashflow Delivery(Deficit)</action>
+            <callStatus>Partially Booked</callStatus>
+            <sysCalculatedAmount>-1,000,000.00</sysCalculatedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="model3.cashflow.event.completed" apply="true">
+            <modelCategory>abc</modelCategory>
+            <!--<model>model2 m2desc</model>-->
+            <model>model3</model>
+            <action>Cashflow Call(Excess)</action>
+            <callStatus>Completed</callStatus>
+            <sysCalculatedAmount>2,200,000.00</sysCalculatedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="category.SEC.cashflow.event.completed" apply="true">
+            <modelCategory>SEC</modelCategory>
+            <model></model>
+            <action>Cashflow Delivery(Deficit)</action>
+            <callStatus>Completed</callStatus>
+            <sysCalculatedAmount>-1,000,000.00</sysCalculatedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="category.abc.cashflow.event.partially.booked" apply="true">
+            <modelCategory>abc</modelCategory>
+            <model></model>
+            <action>Cashflow Call(Excess)</action>
+            <callStatus>Partially Booked</callStatus>
+            <sysCalculatedAmount>4,400,000.00</sysCalculatedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="model1.cashflow.event.completed" apply="true">
+            <modelCategory>SEC</modelCategory>
+            <model>model1</model>
+            <!--<model>model1 m1desc</model>-->
+            <action>Cashflow Delivery(Deficit)</action>
+            <callStatus>Completed</callStatus>
+            <sysCalculatedAmount>-1,000,000.00</sysCalculatedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="model3.cashflow.event.partially.booked" apply="true">
+            <modelCategory>abc</modelCategory>
+            <!--<model>model2 m2desc</model>-->
+            <model>model3</model>
+            <action>Cashflow Call(Excess)</action>
+            <callStatus>Partially Booked</callStatus>
+            <sysCalculatedAmount>2,200,000.00</sysCalculatedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="category.abc.cashflow.event.pending.review" apply="true">
+            <modelCategory>abc</modelCategory>
+            <model></model>
+            <action>Cashflow Call(Excess)</action>
+            <callStatus>Pending Review</callStatus>
+            <sysCalculatedAmount>4,400,000.00</sysCalculatedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="model3.cashflow.event.pending.review" apply="true">
+            <modelCategory>abc</modelCategory>
+            <!--<model>model2 m2desc</model>-->
+            <model>model3</model>
+            <action>Cashflow Call(Excess)</action>
+            <callStatus>Pending Review</callStatus>
+            <sysCalculatedAmount>2,200,000.00</sysCalculatedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="agreement.level.cashflow.event.completed" apply="true">
+            <modelCategory></modelCategory>
+            <model></model>
+            <action>Cashflow Call(Excess)</action>
+            <callStatus>Completed</callStatus>
+            <sysCalculatedAmount>3,400,000.00</sysCalculatedAmount>
+        </exposureEventDetail>
+
+        <etdAgreementStatement id="expand.category.SEC.USD">
+            <etdAssetHoldingSummary>
+                <agreementBaseCurrency>USD</agreementBaseCurrency>
+                <etdModelAndModelCategoryAssetHoldingSummary>
+                    <modelCategory>SEC</modelCategory>
+                </etdModelAndModelCategoryAssetHoldingSummary>
+            </etdAssetHoldingSummary>
+        </etdAgreementStatement>
+
+        <etdAgreementStatement id="expand.category.abc.USD">
+            <etdAssetHoldingSummary>
+                <agreementBaseCurrency>USD</agreementBaseCurrency>
+                <etdModelAndModelCategoryAssetHoldingSummary>
+                    <modelCategory>abc</modelCategory>
+                </etdModelAndModelCategoryAssetHoldingSummary>
+            </etdAssetHoldingSummary>
+        </etdAgreementStatement>
+
+        <agreementStatement id="modify.model1.cashflow.value.to.-1m">
+            <marginCallCalculation>
+                <etdReq>
+                    <adj>
+                        <cashflow>
+                            <adjustmentAmount>-1000000</adjustmentAmount>
+                            <comment>updateto-1000000</comment>
+                        </cashflow>
+                    </adj>
+                </etdReq>
+            </marginCallCalculation>
+        </agreementStatement>
+
+        <agreementStatement id="cashflow.physical.40000">
+            <marginCallCalculation>
+                <etdReq>
+                    <adj>
+                        <cashflow>40000</cashflow>
+                    </adj>
+                </etdReq>
+            </marginCallCalculation>
+        </agreementStatement>
+
+        <agreementStatement id="modify.model3.cashflow.value.to.2.2m">
+            <marginCallCalculation>
+                <etdReq>
+                    <adj>
+                        <cashflow>
+                            <adjustmentAmount>2200000</adjustmentAmount>
+                            <comment>updateto2200000</comment>
+                        </cashflow>
+                    </adj>
+                </etdReq>
+            </marginCallCalculation>
+        </agreementStatement>
+
+        <agreementStatement id="cashflow.physical.-10000">
+            <marginCallCalculation>
+                <etdReq>
+                    <adj>
+                        <cashflow>-10000</cashflow>
+                    </adj>
+                </etdReq>
+            </marginCallCalculation>
+        </agreementStatement>
+
+        <agreement id="untick.allow.adj.checkbox">
+            <allowAdj>false</allowAdj>
+        </agreement>
+
+        <etdAgreementStatement id="cashflow.SEC.-14199.model1.-14199.abc.12600.model3.6300.totals.-1599">
+            <etdAssetHoldingSummary>
+                <agreementBaseCurrency>USD</agreementBaseCurrency>
+                <etdModelAndModelCategoryAssetHoldingSummary>
+                    <modelCategory>SEC</modelCategory>
+                    <etdAssetHoldingSummaryDetail>
+                        <cashflow>-14199.00</cashflow>
+                    </etdAssetHoldingSummaryDetail>
+                </etdModelAndModelCategoryAssetHoldingSummary>
+                <etdModelAndModelCategoryAssetHoldingSummary>
+                    <modelCategory>SEC</modelCategory>
+                    <model>model1</model>
+                    <desc>m1desc</desc>
+                    <etdAssetHoldingSummaryDetail>
+                        <cashflow>-14199.00</cashflow>
+                    </etdAssetHoldingSummaryDetail>
+                </etdModelAndModelCategoryAssetHoldingSummary>
+                <etdModelAndModelCategoryAssetHoldingSummary>
+                    <modelCategory>abc</modelCategory>
+                    <etdAssetHoldingSummaryDetail>
+                        <cashflow>12600.00</cashflow>
+                    </etdAssetHoldingSummaryDetail>
+                </etdModelAndModelCategoryAssetHoldingSummary>
+                <etdModelAndModelCategoryAssetHoldingSummary>
+                    <modelCategory>abc</modelCategory>
+                    <model>model3</model>
+                    <desc>m3desc</desc>
+                    <etdAssetHoldingSummaryDetail>
+                        <cashflow>6300.00</cashflow>
+                    </etdAssetHoldingSummaryDetail>
+                </etdModelAndModelCategoryAssetHoldingSummary>
+                <etdTotalsAssetHoldingSummary>
+                    <etdAssetHoldingSummaryDetail>
+                        <cashflow>-1599.00</cashflow>
+                    </etdAssetHoldingSummaryDetail>
+                </etdTotalsAssetHoldingSummary>
+            </etdAssetHoldingSummary>
+        </etdAgreementStatement>
+
+        <exposureEventDetail id="expand.cashflow.agreement.level.call.deficit">
+            <action>Cashflow Call(Deficit)</action>
+            <callStatus>Pending Review</callStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="expand.cashflow.category.level.SEC.call.deficit">
+            <action>Cashflow Call(Deficit)</action>
+            <modelCategory>SEC</modelCategory>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="expand.cashflow.category.level.abc.delivery.excess">
+            <action>Cashflow Delivery(Excess)</action>
+            <modelCategory>abc</modelCategory>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="agreement.level.cashflow.event.call.deficit.-1599" apply="true">
+            <modelCategory></modelCategory>
+            <model></model>
+            <action>Cashflow Call(Deficit)</action>
+            <sysCalculatedAmount>-1,599.00</sysCalculatedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="category.SEC.cashflow.event.call.deficit.-14199" apply="true">
+            <modelCategory>SEC</modelCategory>
+            <model></model>
+            <action>Cashflow Call(Deficit)</action>
+            <sysCalculatedAmount>-14,199.00</sysCalculatedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="category.abc.cashflow.event.delivery.excess.12600" apply="true">
+            <modelCategory>abc</modelCategory>
+            <model></model>
+            <action>Cashflow Delivery(Excess)</action>
+            <sysCalculatedAmount>12,600.00</sysCalculatedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="model1.cashflow.event.call.deficit.-14199" apply="true">
+            <modelCategory>SEC</modelCategory>
+            <model>model1</model>
+            <!--<model>model1 m1desc</model>-->
+            <action>Cashflow Call(Deficit)</action>
+            <sysCalculatedAmount>-14,199.00</sysCalculatedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="model3.cashflow.event.delivery.excess.6300" apply="true">
+            <modelCategory>abc</modelCategory>
+            <!--<model>model2 m2desc</model>-->
+            <model>model3</model>
+            <action>Cashflow Delivery(Excess)</action>
+            <sysCalculatedAmount>6,300.00</sysCalculatedAmount>
+        </exposureEventDetail>
+
+        <agreement id="apporve.agreement.to.approved.status">
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+        <exposureEventDetail id="no.cashflow.events.exist.in.em" apply="false">
+            <action>Cashflow Call(Excess)</action>
+            <action>Cashflow Delivery(Deficit)</action>
+        </exposureEventDetail>
+
+        <cashMovementSummary id="edit.model1.booking1.-0.5m">
+            <Amount>-500,000.00</Amount>
+        </cashMovementSummary>
+
+        <cashMovementSummary id="edit.model1.booking1.-0.6m">
+            <Amount>-600,000.00</Amount>
+        </cashMovementSummary>
+
+        <cashMovementSummary id="edit.model1.booking1.2.2m">
+            <Amount>2,200,000.00</Amount>
+        </cashMovementSummary>
+
+        <cashMovementSummary id="edit.model1.booking2.1k">
+            <Amount>1,000.00</Amount>
+        </cashMovementSummary>
+
+        <cashMovementDetail id="set.status.to.cancelled">
+            <settlementStatus>Cancelled</settlementStatus>
+        </cashMovementDetail>
+
+        <agreement id="set.review.frequency.to.never">
+            <callFrequency>
+                <legalReviewFrequency>Never</legalReviewFrequency>
+            </callFrequency>
+        </agreement>
+
+        <exposureEventDetail id="tick.model1.cashflow.event">
+            <modelCategory>SEC</modelCategory>
+            <model>model1</model>
+            <!--<model>model1 m1desc</model>-->
+            <action>Cashflow Delivery(Deficit)</action>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="tick.model3.cashflow.event">
+            <modelCategory>abc</modelCategory>
+            <model>model3</model>
+            <!--<model>model1 m1desc</model>-->
+            <action>Cashflow Call(Excess)</action>
+        </exposureEventDetail>
+
+        <bookingDetail id="bulk.booking.model1.wire.out.-0.6m">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Cashflow Delivery(Deficit)</bookingMovement>
+                    <movement>Wire Out</movement>
+                    <nominalAmount>600000</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <instrumentSearch>
+                <instrument>
+                    <filter>qtp_cash_usd</filter>
+                </instrument>
+            </instrumentSearch>
+        </bookingDetail>
+
+        <bookingDetail id="bulk.booking.model3.wire.in.2m">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Cashflow Call(Excess)</bookingMovement>
+                    <movement>Wire In</movement>
+                    <nominalAmount>2000000</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <instrumentSearch>
+                <instrument>
+                    <filter>qtp_cash_eur1</filter>
+                </instrument>
+            </instrumentSearch>
+        </bookingDetail>
+
+        <bookingDetail id="bulk.booking.model1.wire.out.-0.5m">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Cashflow Delivery(Deficit)</bookingMovement>
+                    <movement>Wire Out</movement>
+                    <nominalAmount>500000</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <instrumentSearch>
+                <instrument>
+                    <filter>qtp_cash_usd</filter>
+                </instrument>
+            </instrumentSearch>
+        </bookingDetail>
+
+        <bookingDetail id="bulk.booking.model3.wire.in.0.2m">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Cashflow Call(Excess)</bookingMovement>
+                    <movement>Wire In</movement>
+                    <nominalAmount>200000</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <instrumentSearch>
+                <instrument>
+                    <filter>qtp_cash_eur1</filter>
+                </instrument>
+            </instrumentSearch>
+        </bookingDetail>
+
+
+        <exposureManagementMessage id="override.warning.message.1st">
+            <messageDetail>
+                <overrideWarning>true</overrideWarning>
+                <message>Attempting to make a booking that does not meet the Required Amount. (Expected: -1,000,000.00, Actual: -600,000.00) Continue?</message>
+            </messageDetail>
+            <messageDetail>
+                <overrideWarning>true</overrideWarning>
+                <message>Attempting to make a booking that does not meet the Required Amount. (Expected: 2,200,000.00, Actual: 2,000,000.00) Continue?</message>
+            </messageDetail>
+        </exposureManagementMessage>
+
+        <exposureManagementMessage id="override.warning.message.2nd">
+            <messageDetail>
+                <overrideWarning>true</overrideWarning>
+                <message>Attempting to make a booking that does not meet the Required Amount. (Expected: 2,200,000.00, Actual: 2,000,000.00) Continue?</message>
+            </messageDetail>
+        </exposureManagementMessage>
+
+    </scenarioData>
+</dataBean>

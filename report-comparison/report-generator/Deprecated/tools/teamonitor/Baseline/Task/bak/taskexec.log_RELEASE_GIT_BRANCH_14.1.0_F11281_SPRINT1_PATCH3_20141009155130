@@ -1,0 +1,155 @@
+I'm FILE_TASKEXECLOG=taskexec.log_RELEASE_GIT_BRANCH_14.1.0_F11281_SPRINT1_PATCH3_20141009155130
+I'm database---------=COLLINE2014_1_0_BASE_NOI_0122 creditderivative 172.20.20.66:1521 ora11g
+Target Version: RELEASE_GIT_BRANCH_14.1.0_F11281_SPRINT1_PATCH3
+Target Path:/home/test/server/colline/cluster5_2/bin
+-------------I am task =Approve All Organisations 1
+Task is Workflow : Approve All Organisations 1
+2014-10-09 15:51:30
+Waiting 1000 second for Task  Approve All Organisations 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Approve All Organisations 1] at: 2014-10-09 15:51:31,536
+java.lang.IllegalStateException: Failed to find method for hash:-1378808213862163359 available={8594593460157411074=public abstract javax.ejb.EJBObject javax.ejb.Handle.getEJBObject() throws java.rmi.RemoteException, 7415355246179212884=public abstract boolean javax.ejb.EJBObject.isIdentical(javax.ejb.EJBObject) throws java.rmi.RemoteException, 7057241836994128171=public abstract java.util.Collection com.lombardrisk.f3.scheduler.SchedulerServiceRemote.getScheduledTasks() throws java.rmi.RemoteException, 1610588944897424560=public abstract int com.lombardrisk.f3.scheduler.SchedulerServiceRemote.resetJobPasswordByPrincipalID(java.lang.String,java.lang.String) throws java.rmi.RemoteException, 7359498946834843075=public abstract void com.lombardrisk.f3.scheduler.SchedulerServiceRemote.startJobNow(java.lang.String,java.lang.String) throws java.lang.ClassNotFoundException,java.lang.Exception,java.rmi.RemoteException, -1225864925247205563=public abstract void javax.ejb.EJBObject.remove() throws java.rmi.RemoteException,javax.ejb.RemoveException, 3136282612873214795=public abstract com.lombardrisk.f3.scheduler.persistence.F3JobData com.lombardrisk.f3.scheduler.SchedulerServiceRemote.getScheduledTasksById(long) throws com.lombardrisk.f3.persistence.exception.LRSFindException,java.rmi.RemoteException, 8981122088959051067=public abstract javax.ejb.HomeHandle javax.ejb.EJBHome.getHomeHandle() throws java.rmi.RemoteException, -883843542736932254=public abstract java.lang.Object javax.ejb.EJBObject.getPrimaryKey() throws java.rmi.RemoteException, -1883052460027635821=public abstract void com.lombardrisk.f3.scheduler.SchedulerServiceRemote.duplicateScheduledTask(com.lombardrisk.f3.scheduler.persistence.F3JobData) throws com.lombardrisk.f3.persistence.exception.LRSFindException,com.lombardrisk.f3.persistence.exception.LRSCreateException,java.rmi.RemoteException, -6366134337070524433=public abstract void com.lombardrisk.f3.scheduler.SchedulerServiceRemote.runScheduledTasks() throws java.lang.ClassNotFoundException,java.lang.Exception,java.rmi.RemoteException, 4121927297169232143=public abstract void javax.ejb.EJBHome.remove(javax.ejb.Handle) throws java.rmi.RemoteException,javax.ejb.RemoveException, -3260590760910195779=public abstract javax.ejb.Handle javax.ejb.EJBObject.getHandle() throws java.rmi.RemoteException, 6478317516181892583=public abstract java.util.Collection com.lombardrisk.f3.scheduler.SchedulerServiceRemote.getScheduledTasksByGroup(java.lang.String) throws java.rmi.RemoteException, 3280856254093542622=public abstract long com.lombardrisk.f3.scheduler.SchedulerServiceRemote.setScheduledTask(com.lombardrisk.f3.scheduler.persistence.F3JobData) throws com.lombardrisk.f3.persistence.exception.LRSCreateException,java.rmi.RemoteException, -467108448024665985=public abstract java.util.Collection com.lombardrisk.f3.scheduler.SchedulerServiceRemote.getScheduledTasksByUser(java.lang.String) throws java.rmi.RemoteException, -1246599276291065066=public abstract void com.lombardrisk.f3.scheduler.SchedulerServiceRemote.saveScheduledTasksByGroup(java.lang.String) throws java.lang.ClassNotFoundException,java.lang.Exception,java.rmi.RemoteException, 2370549941939202668=public abstract void com.lombardrisk.f3.scheduler.SchedulerServiceRemote.saveScheduledTasksByUser(java.lang.String) throws java.lang.ClassNotFoundException,java.lang.Exception,java.rmi.RemoteException, -7423251857241384719=public abstract void javax.ejb.EJBHome.remove(java.lang.Object) throws java.rmi.RemoteException,javax.ejb.RemoveException, 2398617808508950492=public abstract void com.lombardrisk.f3.scheduler.SchedulerServiceRemote.cleanUpQuartzTriggerAndJobMultiTime(java.lang.String,java.lang.String,int) throws java.lang.Exception,java.rmi.RemoteException, 4512095171315154818=public abstract javax.ejb.EJBHome javax.ejb.EJBObject.getEJBHome() throws java.rmi.RemoteException, -7772792010211326738=public abstract java.util.Collection com.lombardrisk.f3.scheduler.SchedulerServiceRemote.getOtherActiveScheduledTasksByStartTimeAndTimeZone(long,int,long) throws java.rmi.RemoteException, -2687216421749361988=public abstract void com.lombardrisk.f3.scheduler.SchedulerServiceRemote.startJobNow(java.util.Map,boolean) throws java.lang.Exception,java.rmi.RemoteException, 4466567481102706455=public abstract void com.lombardrisk.f3.scheduler.SchedulerServiceRemote.saveOneScheduledTask(com.lombardrisk.f3.scheduler.persistence.F3JobData) throws java.lang.ClassNotFoundException,java.lang.Exception,java.rmi.RemoteException, 5516943963116971448=public abstract com.lombardrisk.f3.scheduler.persistence.F3JobData com.lombardrisk.f3.scheduler.SchedulerServiceRemote.getScheduledTaskByGroupAndName(java.lang.String,java.lang.String) throws com.lombardrisk.f3.persistence.exception.LRSFindException,java.rmi.RemoteException, -3527502489989702788=public abstract com.lombardrisk.f3.scheduler.SchedulerServiceRemote com.lombardrisk.f3.scheduler.SchedulerServiceHome.create() throws javax.ejb.CreateException,java.rmi.RemoteException, 3781219857755091396=public abstract javax.ejb.EJBMetaData javax.ejb.EJBHome.getEJBMetaData() throws java.rmi.RemoteException, 875289463932674428=public abstract void com.lombardrisk.f3.scheduler.SchedulerServiceRemote.removeScheduledTask(long) throws com.lombardrisk.f3.persistence.exception.LRSFindException,com.lombardrisk.f3.persistence.exception.LRSRemoveException,java.rmi.RemoteException, -9148280343613600893=public abstract void com.lombardrisk.f3.scheduler.SchedulerServiceRemote.updateTaskRecovery(boolean) throws java.rmi.RemoteException, -3486382611922658009=public abstract void com.lombardrisk.f3.scheduler.SchedulerServiceRemote.createBlankScheduledTask(java.lang.String,java.lang.String,java.lang.String) throws com.lombardrisk.f3.persistence.exception.LRSCreateException,java.rmi.RemoteException}
+	at org.jboss.invocation.MarshalledInvocation.getMethod(MarshalledInvocation.java:407)
+	at org.jboss.ejb.Container.invoke(Container.java:1090)
+	at sun.reflect.GeneratedMethodAccessor421.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.jboss.mx.interceptor.ReflectedDispatcher.invoke(ReflectedDispatcher.java:157)
+	at org.jboss.mx.server.Invocation.dispatch(Invocation.java:96)
+	at org.jboss.mx.server.Invocation.invoke(Invocation.java:88)
+	at org.jboss.mx.server.AbstractMBeanInvoker.invoke(AbstractMBeanInvoker.java:264)
+	at org.jboss.mx.server.MBeanServerImpl.invoke(MBeanServerImpl.java:668)
+	at org.jboss.system.server.jmx.LazyMBeanServer.invoke(LazyMBeanServer.java:283)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker$MBeanServerAction.invoke(JRMPInvoker.java:855)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker.invoke(JRMPInvoker.java:422)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:322)
+	at sun.rmi.transport.Transport$1.run(Transport.java:177)
+	at sun.rmi.transport.Transport$1.run(Transport.java:174)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:173)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:556)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:811)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:670)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+	at sun.rmi.transport.StreamRemoteCall.exceptionReceivedFromServer(StreamRemoteCall.java:275)
+	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:252)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:161)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker_Stub.invoke(Unknown Source)
+	at org.jboss.invocation.jrmp.interfaces.JRMPInvokerProxy.invoke(JRMPInvokerProxy.java:133)
+	at org.jboss.invocation.InvokerInterceptor.invokeInvoker(InvokerInterceptor.java:365)
+	at org.jboss.invocation.InvokerInterceptor.invoke(InvokerInterceptor.java:197)
+	at org.jboss.proxy.TransactionInterceptor.invoke(TransactionInterceptor.java:61)
+	at org.jboss.proxy.SecurityInterceptor.invoke(SecurityInterceptor.java:68)
+	at org.jboss.proxy.ejb.StatelessSessionInterceptor.invoke(StatelessSessionInterceptor.java:112)
+	at org.jboss.proxy.ClientContainer.invoke(ClientContainer.java:101)
+	at com.sun.proxy.$Proxy2.startJobNow(Unknown Source)
+	at com.lombardrisk.f3.F3TaskManager.main(F3TaskManager.java:486)
+----------break now --------
+-------------I am task =Approve All Agreements 1
+Task is Workflow : Approve All Agreements 1
+2014-10-09 15:51:55
+Waiting 1000 second for Task  Approve All Agreements 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Approve All Agreements 1] at: 2014-10-09 15:51:56,452
+java.lang.IllegalStateException: Failed to find method for hash:-1378808213862163359 available={8594593460157411074=public abstract javax.ejb.EJBObject javax.ejb.Handle.getEJBObject() throws java.rmi.RemoteException, 7415355246179212884=public abstract boolean javax.ejb.EJBObject.isIdentical(javax.ejb.EJBObject) throws java.rmi.RemoteException, 7057241836994128171=public abstract java.util.Collection com.lombardrisk.f3.scheduler.SchedulerServiceRemote.getScheduledTasks() throws java.rmi.RemoteException, 1610588944897424560=public abstract int com.lombardrisk.f3.scheduler.SchedulerServiceRemote.resetJobPasswordByPrincipalID(java.lang.String,java.lang.String) throws java.rmi.RemoteException, 7359498946834843075=public abstract void com.lombardrisk.f3.scheduler.SchedulerServiceRemote.startJobNow(java.lang.String,java.lang.String) throws java.lang.ClassNotFoundException,java.lang.Exception,java.rmi.RemoteException, -1225864925247205563=public abstract void javax.ejb.EJBObject.remove() throws java.rmi.RemoteException,javax.ejb.RemoveException, 3136282612873214795=public abstract com.lombardrisk.f3.scheduler.persistence.F3JobData com.lombardrisk.f3.scheduler.SchedulerServiceRemote.getScheduledTasksById(long) throws com.lombardrisk.f3.persistence.exception.LRSFindException,java.rmi.RemoteException, 8981122088959051067=public abstract javax.ejb.HomeHandle javax.ejb.EJBHome.getHomeHandle() throws java.rmi.RemoteException, -883843542736932254=public abstract java.lang.Object javax.ejb.EJBObject.getPrimaryKey() throws java.rmi.RemoteException, -1883052460027635821=public abstract void com.lombardrisk.f3.scheduler.SchedulerServiceRemote.duplicateScheduledTask(com.lombardrisk.f3.scheduler.persistence.F3JobData) throws com.lombardrisk.f3.persistence.exception.LRSFindException,com.lombardrisk.f3.persistence.exception.LRSCreateException,java.rmi.RemoteException, -6366134337070524433=public abstract void com.lombardrisk.f3.scheduler.SchedulerServiceRemote.runScheduledTasks() throws java.lang.ClassNotFoundException,java.lang.Exception,java.rmi.RemoteException, 4121927297169232143=public abstract void javax.ejb.EJBHome.remove(javax.ejb.Handle) throws java.rmi.RemoteException,javax.ejb.RemoveException, -3260590760910195779=public abstract javax.ejb.Handle javax.ejb.EJBObject.getHandle() throws java.rmi.RemoteException, 6478317516181892583=public abstract java.util.Collection com.lombardrisk.f3.scheduler.SchedulerServiceRemote.getScheduledTasksByGroup(java.lang.String) throws java.rmi.RemoteException, 3280856254093542622=public abstract long com.lombardrisk.f3.scheduler.SchedulerServiceRemote.setScheduledTask(com.lombardrisk.f3.scheduler.persistence.F3JobData) throws com.lombardrisk.f3.persistence.exception.LRSCreateException,java.rmi.RemoteException, -467108448024665985=public abstract java.util.Collection com.lombardrisk.f3.scheduler.SchedulerServiceRemote.getScheduledTasksByUser(java.lang.String) throws java.rmi.RemoteException, -1246599276291065066=public abstract void com.lombardrisk.f3.scheduler.SchedulerServiceRemote.saveScheduledTasksByGroup(java.lang.String) throws java.lang.ClassNotFoundException,java.lang.Exception,java.rmi.RemoteException, 2370549941939202668=public abstract void com.lombardrisk.f3.scheduler.SchedulerServiceRemote.saveScheduledTasksByUser(java.lang.String) throws java.lang.ClassNotFoundException,java.lang.Exception,java.rmi.RemoteException, -7423251857241384719=public abstract void javax.ejb.EJBHome.remove(java.lang.Object) throws java.rmi.RemoteException,javax.ejb.RemoveException, 2398617808508950492=public abstract void com.lombardrisk.f3.scheduler.SchedulerServiceRemote.cleanUpQuartzTriggerAndJobMultiTime(java.lang.String,java.lang.String,int) throws java.lang.Exception,java.rmi.RemoteException, 4512095171315154818=public abstract javax.ejb.EJBHome javax.ejb.EJBObject.getEJBHome() throws java.rmi.RemoteException, -7772792010211326738=public abstract java.util.Collection com.lombardrisk.f3.scheduler.SchedulerServiceRemote.getOtherActiveScheduledTasksByStartTimeAndTimeZone(long,int,long) throws java.rmi.RemoteException, -2687216421749361988=public abstract void com.lombardrisk.f3.scheduler.SchedulerServiceRemote.startJobNow(java.util.Map,boolean) throws java.lang.Exception,java.rmi.RemoteException, 4466567481102706455=public abstract void com.lombardrisk.f3.scheduler.SchedulerServiceRemote.saveOneScheduledTask(com.lombardrisk.f3.scheduler.persistence.F3JobData) throws java.lang.ClassNotFoundException,java.lang.Exception,java.rmi.RemoteException, 5516943963116971448=public abstract com.lombardrisk.f3.scheduler.persistence.F3JobData com.lombardrisk.f3.scheduler.SchedulerServiceRemote.getScheduledTaskByGroupAndName(java.lang.String,java.lang.String) throws com.lombardrisk.f3.persistence.exception.LRSFindException,java.rmi.RemoteException, -3527502489989702788=public abstract com.lombardrisk.f3.scheduler.SchedulerServiceRemote com.lombardrisk.f3.scheduler.SchedulerServiceHome.create() throws javax.ejb.CreateException,java.rmi.RemoteException, 3781219857755091396=public abstract javax.ejb.EJBMetaData javax.ejb.EJBHome.getEJBMetaData() throws java.rmi.RemoteException, 875289463932674428=public abstract void com.lombardrisk.f3.scheduler.SchedulerServiceRemote.removeScheduledTask(long) throws com.lombardrisk.f3.persistence.exception.LRSFindException,com.lombardrisk.f3.persistence.exception.LRSRemoveException,java.rmi.RemoteException, -9148280343613600893=public abstract void com.lombardrisk.f3.scheduler.SchedulerServiceRemote.updateTaskRecovery(boolean) throws java.rmi.RemoteException, -3486382611922658009=public abstract void com.lombardrisk.f3.scheduler.SchedulerServiceRemote.createBlankScheduledTask(java.lang.String,java.lang.String,java.lang.String) throws com.lombardrisk.f3.persistence.exception.LRSCreateException,java.rmi.RemoteException}
+	at org.jboss.invocation.MarshalledInvocation.getMethod(MarshalledInvocation.java:407)
+	at org.jboss.ejb.Container.invoke(Container.java:1090)
+	at sun.reflect.GeneratedMethodAccessor421.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.jboss.mx.interceptor.ReflectedDispatcher.invoke(ReflectedDispatcher.java:157)
+	at org.jboss.mx.server.Invocation.dispatch(Invocation.java:96)
+	at org.jboss.mx.server.Invocation.invoke(Invocation.java:88)
+	at org.jboss.mx.server.AbstractMBeanInvoker.invoke(AbstractMBeanInvoker.java:264)
+	at org.jboss.mx.server.MBeanServerImpl.invoke(MBeanServerImpl.java:668)
+	at org.jboss.system.server.jmx.LazyMBeanServer.invoke(LazyMBeanServer.java:283)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker$MBeanServerAction.invoke(JRMPInvoker.java:855)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker.invoke(JRMPInvoker.java:422)
+	at sun.reflect.GeneratedMethodAccessor666.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:322)
+	at sun.rmi.transport.Transport$1.run(Transport.java:177)
+	at sun.rmi.transport.Transport$1.run(Transport.java:174)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:173)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:556)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:811)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:670)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+	at sun.rmi.transport.StreamRemoteCall.exceptionReceivedFromServer(StreamRemoteCall.java:275)
+	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:252)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:161)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker_Stub.invoke(Unknown Source)
+	at org.jboss.invocation.jrmp.interfaces.JRMPInvokerProxy.invoke(JRMPInvokerProxy.java:133)
+	at org.jboss.invocation.InvokerInterceptor.invokeInvoker(InvokerInterceptor.java:365)
+	at org.jboss.invocation.InvokerInterceptor.invoke(InvokerInterceptor.java:197)
+	at org.jboss.proxy.TransactionInterceptor.invoke(TransactionInterceptor.java:61)
+	at org.jboss.proxy.SecurityInterceptor.invoke(SecurityInterceptor.java:68)
+	at org.jboss.proxy.ejb.StatelessSessionInterceptor.invoke(StatelessSessionInterceptor.java:112)
+	at org.jboss.proxy.ClientContainer.invoke(ClientContainer.java:101)
+	at com.sun.proxy.$Proxy2.startJobNow(Unknown Source)
+	at com.lombardrisk.f3.F3TaskManager.main(F3TaskManager.java:486)
+----------break now --------
+-------------I am task =Approve All Statements 5
+Task is Workflow : Approve All Statements 5
+2014-10-09 15:52:21
+Waiting 1000 second for Task  Approve All Statements 5 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Approve All Statements 5] at: 2014-10-09 15:52:21,473
+java.lang.IllegalStateException: Failed to find method for hash:-1378808213862163359 available={8594593460157411074=public abstract javax.ejb.EJBObject javax.ejb.Handle.getEJBObject() throws java.rmi.RemoteException, 7415355246179212884=public abstract boolean javax.ejb.EJBObject.isIdentical(javax.ejb.EJBObject) throws java.rmi.RemoteException, 7057241836994128171=public abstract java.util.Collection com.lombardrisk.f3.scheduler.SchedulerServiceRemote.getScheduledTasks() throws java.rmi.RemoteException, 1610588944897424560=public abstract int com.lombardrisk.f3.scheduler.SchedulerServiceRemote.resetJobPasswordByPrincipalID(java.lang.String,java.lang.String) throws java.rmi.RemoteException, 7359498946834843075=public abstract void com.lombardrisk.f3.scheduler.SchedulerServiceRemote.startJobNow(java.lang.String,java.lang.String) throws java.lang.ClassNotFoundException,java.lang.Exception,java.rmi.RemoteException, -1225864925247205563=public abstract void javax.ejb.EJBObject.remove() throws java.rmi.RemoteException,javax.ejb.RemoveException, 3136282612873214795=public abstract com.lombardrisk.f3.scheduler.persistence.F3JobData com.lombardrisk.f3.scheduler.SchedulerServiceRemote.getScheduledTasksById(long) throws com.lombardrisk.f3.persistence.exception.LRSFindException,java.rmi.RemoteException, 8981122088959051067=public abstract javax.ejb.HomeHandle javax.ejb.EJBHome.getHomeHandle() throws java.rmi.RemoteException, -883843542736932254=public abstract java.lang.Object javax.ejb.EJBObject.getPrimaryKey() throws java.rmi.RemoteException, -1883052460027635821=public abstract void com.lombardrisk.f3.scheduler.SchedulerServiceRemote.duplicateScheduledTask(com.lombardrisk.f3.scheduler.persistence.F3JobData) throws com.lombardrisk.f3.persistence.exception.LRSFindException,com.lombardrisk.f3.persistence.exception.LRSCreateException,java.rmi.RemoteException, -6366134337070524433=public abstract void com.lombardrisk.f3.scheduler.SchedulerServiceRemote.runScheduledTasks() throws java.lang.ClassNotFoundException,java.lang.Exception,java.rmi.RemoteException, 4121927297169232143=public abstract void javax.ejb.EJBHome.remove(javax.ejb.Handle) throws java.rmi.RemoteException,javax.ejb.RemoveException, -3260590760910195779=public abstract javax.ejb.Handle javax.ejb.EJBObject.getHandle() throws java.rmi.RemoteException, 6478317516181892583=public abstract java.util.Collection com.lombardrisk.f3.scheduler.SchedulerServiceRemote.getScheduledTasksByGroup(java.lang.String) throws java.rmi.RemoteException, 3280856254093542622=public abstract long com.lombardrisk.f3.scheduler.SchedulerServiceRemote.setScheduledTask(com.lombardrisk.f3.scheduler.persistence.F3JobData) throws com.lombardrisk.f3.persistence.exception.LRSCreateException,java.rmi.RemoteException, -467108448024665985=public abstract java.util.Collection com.lombardrisk.f3.scheduler.SchedulerServiceRemote.getScheduledTasksByUser(java.lang.String) throws java.rmi.RemoteException, -1246599276291065066=public abstract void com.lombardrisk.f3.scheduler.SchedulerServiceRemote.saveScheduledTasksByGroup(java.lang.String) throws java.lang.ClassNotFoundException,java.lang.Exception,java.rmi.RemoteException, 2370549941939202668=public abstract void com.lombardrisk.f3.scheduler.SchedulerServiceRemote.saveScheduledTasksByUser(java.lang.String) throws java.lang.ClassNotFoundException,java.lang.Exception,java.rmi.RemoteException, -7423251857241384719=public abstract void javax.ejb.EJBHome.remove(java.lang.Object) throws java.rmi.RemoteException,javax.ejb.RemoveException, 2398617808508950492=public abstract void com.lombardrisk.f3.scheduler.SchedulerServiceRemote.cleanUpQuartzTriggerAndJobMultiTime(java.lang.String,java.lang.String,int) throws java.lang.Exception,java.rmi.RemoteException, 4512095171315154818=public abstract javax.ejb.EJBHome javax.ejb.EJBObject.getEJBHome() throws java.rmi.RemoteException, -7772792010211326738=public abstract java.util.Collection com.lombardrisk.f3.scheduler.SchedulerServiceRemote.getOtherActiveScheduledTasksByStartTimeAndTimeZone(long,int,long) throws java.rmi.RemoteException, -2687216421749361988=public abstract void com.lombardrisk.f3.scheduler.SchedulerServiceRemote.startJobNow(java.util.Map,boolean) throws java.lang.Exception,java.rmi.RemoteException, 4466567481102706455=public abstract void com.lombardrisk.f3.scheduler.SchedulerServiceRemote.saveOneScheduledTask(com.lombardrisk.f3.scheduler.persistence.F3JobData) throws java.lang.ClassNotFoundException,java.lang.Exception,java.rmi.RemoteException, 5516943963116971448=public abstract com.lombardrisk.f3.scheduler.persistence.F3JobData com.lombardrisk.f3.scheduler.SchedulerServiceRemote.getScheduledTaskByGroupAndName(java.lang.String,java.lang.String) throws com.lombardrisk.f3.persistence.exception.LRSFindException,java.rmi.RemoteException, -3527502489989702788=public abstract com.lombardrisk.f3.scheduler.SchedulerServiceRemote com.lombardrisk.f3.scheduler.SchedulerServiceHome.create() throws javax.ejb.CreateException,java.rmi.RemoteException, 3781219857755091396=public abstract javax.ejb.EJBMetaData javax.ejb.EJBHome.getEJBMetaData() throws java.rmi.RemoteException, 875289463932674428=public abstract void com.lombardrisk.f3.scheduler.SchedulerServiceRemote.removeScheduledTask(long) throws com.lombardrisk.f3.persistence.exception.LRSFindException,com.lombardrisk.f3.persistence.exception.LRSRemoveException,java.rmi.RemoteException, -9148280343613600893=public abstract void com.lombardrisk.f3.scheduler.SchedulerServiceRemote.updateTaskRecovery(boolean) throws java.rmi.RemoteException, -3486382611922658009=public abstract void com.lombardrisk.f3.scheduler.SchedulerServiceRemote.createBlankScheduledTask(java.lang.String,java.lang.String,java.lang.String) throws com.lombardrisk.f3.persistence.exception.LRSCreateException,java.rmi.RemoteException}
+	at org.jboss.invocation.MarshalledInvocation.getMethod(MarshalledInvocation.java:407)
+	at org.jboss.ejb.Container.invoke(Container.java:1090)
+	at sun.reflect.GeneratedMethodAccessor421.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.jboss.mx.interceptor.ReflectedDispatcher.invoke(ReflectedDispatcher.java:157)
+	at org.jboss.mx.server.Invocation.dispatch(Invocation.java:96)
+	at org.jboss.mx.server.Invocation.invoke(Invocation.java:88)
+	at org.jboss.mx.server.AbstractMBeanInvoker.invoke(AbstractMBeanInvoker.java:264)
+	at org.jboss.mx.server.MBeanServerImpl.invoke(MBeanServerImpl.java:668)
+	at org.jboss.system.server.jmx.LazyMBeanServer.invoke(LazyMBeanServer.java:283)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker$MBeanServerAction.invoke(JRMPInvoker.java:855)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker.invoke(JRMPInvoker.java:422)
+	at sun.reflect.GeneratedMethodAccessor666.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:322)
+	at sun.rmi.transport.Transport$1.run(Transport.java:177)
+	at sun.rmi.transport.Transport$1.run(Transport.java:174)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:173)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:556)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:811)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:670)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+	at sun.rmi.transport.StreamRemoteCall.exceptionReceivedFromServer(StreamRemoteCall.java:275)
+	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:252)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:161)
+	at org.jboss.invocation.jrmp.server.JRMPInvoker_Stub.invoke(Unknown Source)
+	at org.jboss.invocation.jrmp.interfaces.JRMPInvokerProxy.invoke(JRMPInvokerProxy.java:133)
+	at org.jboss.invocation.InvokerInterceptor.invokeInvoker(InvokerInterceptor.java:365)
+	at org.jboss.invocation.InvokerInterceptor.invoke(InvokerInterceptor.java:197)
+	at org.jboss.proxy.TransactionInterceptor.invoke(TransactionInterceptor.java:61)
+	at org.jboss.proxy.SecurityInterceptor.invoke(SecurityInterceptor.java:68)
+	at org.jboss.proxy.ejb.StatelessSessionInterceptor.invoke(StatelessSessionInterceptor.java:112)
+	at org.jboss.proxy.ClientContainer.invoke(ClientContainer.java:101)
+	at com.sun.proxy.$Proxy2.startJobNow(Unknown Source)
+	at com.lombardrisk.f3.F3TaskManager.main(F3TaskManager.java:486)
+----------break now --------

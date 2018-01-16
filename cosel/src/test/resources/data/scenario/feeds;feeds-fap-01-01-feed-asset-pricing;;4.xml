@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/feeds.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <feedAssetPricing id="feed.asset.bond.pricing">
+            <DRIF>2014-11-05</DRIF>
+            <ASSET_CLASS id="feed.asset.bond.pricing.asset.class">qtp_bond</ASSET_CLASS>
+            <ASSET_TYPE id="feed.asset.bond.pricing.asset.type">qtp_bond_usd</ASSET_TYPE>
+            <EXTISIN id="feed.asset.bond.pricing.intrument.id">T6107_QTP_BOND_USD_Instrument</EXTISIN>
+            <MARKET id="feed.asset.bond.pricing.market">automation</MARKET>
+            <EV_PRICE id="feed.asset.bond.pricing.clean.price">40000000000000</EV_PRICE>
+            <ACC_DDAT id="feed.asset.bond.pricing.coupon.accrual">100000</ACC_DDAT>
+            <INFLAT_RATIO id="feed.asset.bond.pricing.factor">2</INFLAT_RATIO>
+            <PRICE_SOURCE id="feed.asset.bond.pricing.price.source.name">Default</PRICE_SOURCE>
+            <PRICE_LEVEL >Bid</PRICE_LEVEL>
+            <PRICE_FACTOR id="feed.asset.bond.pricing.price.factor">1</PRICE_FACTOR>
+        </feedAssetPricing>
+
+        <feedResult id="feed.asset.bond.pricing.result">
+            <fileUploaded id="feed.asset.bond.pricing.result.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedStatus id="feed.asset.bond.pricing.status">
+            <valuationFile ref="feed.asset.bond.pricing.result.file"/>
+            <status>Successful</status>
+            <description>Asset Pricing</description>
+            <successfulFeed>
+                <total>1</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <securitySearch id="feed.asset.bond.pricing.search">
+            <assetClass ref="feed.asset.bond.pricing.asset.class"/>
+            <assetType ref="feed.asset.bond.pricing.asset.type"/>
+            <instrumentId>
+                <type>Exactly matching</type>
+                <filter ref="feed.asset.bond.pricing.intrument.id"/>
+                <linkText ref="feed.asset.bond.pricing.intrument.id"/>
+            </instrumentId>
+            <market>
+                <filter ref="feed.asset.bond.pricing.market"/>
+                <linkText ref="feed.asset.bond.pricing.market"/>
+            </market>
+        </securitySearch>
+
+        <securitySearchResult id="feed.asset.bond.pricing.search.result">
+            <instrument ref="feed.asset.bond.pricing.intrument.id"/>
+            <assetClass ref="feed.asset.bond.pricing.asset.class"/>
+            <assetType ref="feed.asset.bond.pricing.asset.type"/>
+            <market ref="feed.asset.bond.pricing.market"/>
+        </securitySearchResult>
+
+        <instrument id="check.feed.asset.bond.pricing">
+            <assetClass ref="feed.asset.bond.pricing.asset.class"/>
+            <assetType ref="feed.asset.bond.pricing.asset.type"/>
+            <instrumentId>
+                <value ref="feed.asset.bond.pricing.intrument.id"/>
+            </instrumentId>
+            <market ref="feed.asset.bond.pricing.market"/>
+            <priceSource>
+                <priceSourceName ref="feed.asset.bond.pricing.price.source.name"/>
+                <cleanPrice ref="feed.asset.bond.pricing.clean.price"/>
+                <dirtyPrice>80000000200000</dirtyPrice>
+                <priceLevel>Bid</priceLevel>
+            </priceSource>
+            <couponAccrual ref="feed.asset.bond.pricing.coupon.accrual"/>
+            <factor ref="feed.asset.bond.pricing.factor"/>
+            <priceFactor ref="feed.asset.bond.pricing.price.factor"/>
+        </instrument>
+    </scenarioData>
+</dataBean>

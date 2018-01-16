@@ -1,0 +1,5 @@
+pre#Agreement_Before#select count(1) from colagreementheader where description like 'BaselineFeed_%'
+
+post#Agreement_After#select count(1) from colagreementheader where description like 'BaselineFeed_%'
+
+val#1#`expr ${Agreement_After} - ${Agreement_Before}`

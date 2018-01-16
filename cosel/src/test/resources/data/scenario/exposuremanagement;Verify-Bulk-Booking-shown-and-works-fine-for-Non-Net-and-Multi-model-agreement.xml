@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/exposureManagement.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <agreement id="agr20602.multiModel">
+            <agreementId id="agrid">2597</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="model">
+            <column>Model</column>
+        </exposureEventDetail>
+
+        <substitutionEventSearch id="agr26522_recall">
+            <description>
+                <filter>26522_1</filter>
+                <linkText>26522_1</linkText>
+            </description>
+        </substitutionEventSearch>
+
+        <exposureEventDetail id="vmCall.top.2410000">
+            <action>VM Call(Deficit)</action>
+            <model></model>
+            <callStatus>Pending Review</callStatus>
+            <agreementRequirement>2,410,000.00</agreementRequirement>
+            <sysCalculatedAmount>2,410,000.00</sysCalculatedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vmCall.m1.1000000">
+            <action>VM Call(Deficit)</action>
+            <model>m1</model>
+            <callStatus>Pending Review</callStatus>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <sysCalculatedAmount>1,000,000.00</sysCalculatedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vmCall.m2.1200000">
+            <action>VM Call(Deficit)</action>
+            <model>m2</model>
+            <callStatus>Pending Review</callStatus>
+            <agreementRequirement>1,200,000.00</agreementRequirement>
+            <sysCalculatedAmount>1,200,000.00</sysCalculatedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="bulkBooking">
+            <action>Bulk Booking</action>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="bulkBooking.notdisplay">
+            <action apply="false">Bulk Booking</action>
+        </exposureEventDetail>
+
+        <bookingDetail id="bond.jpy.requirementAmount.apply">
+            <instrumentSearch>
+                <instrument>
+                    <filter>20602_bond_jpy</filter>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail clickApplyButton="true">
+                    <bookingMovement>VM Call(Deficit)</bookingMovement>
+                    <movement>Call</movement>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="cash.eur.requirementAmount.apply">
+            <instrumentSearch>
+                <instrument>
+                    <filter>CASH-EUR</filter>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail clickApplyButton="true">
+                    <bookingMovement>VM Call(Deficit)</bookingMovement>
+                    <movement>Recall</movement>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <exposureEventDetail id="vmCall.top.2410000.completed">
+            <action>VM Call(Deficit)</action>
+            <model></model>
+            <callStatus>Completed</callStatus>
+            <agreementRequirement>2,410,000.00</agreementRequirement>
+            <sysCalculatedAmount>2,410,000.00</sysCalculatedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vmCall.m1.1000000.completed">
+            <action>VM Call(Deficit)</action>
+            <model>m1</model>
+            <callStatus>Completed</callStatus>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <sysCalculatedAmount>1,000,000.00</sysCalculatedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="vmCall.m2.1200000.completed">
+            <action>VM Call(Deficit)</action>
+            <model>m2</model>
+            <callStatus>Completed</callStatus>
+            <agreementRequirement>1,200,000.00</agreementRequirement>
+            <sysCalculatedAmount>1,200,000.00</sysCalculatedAmount>
+        </exposureEventDetail>
+
+        <assetBookingSummary id="asset.type.CASH.EUR">
+            <assetType>CASH-EUR</assetType>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="CASH.EUR.vm.call.pending.1.2m">
+            <status>Pending</status>
+            <assetType>CASH-EUR</assetType>
+            <movement>Recall</movement>
+            <nominalAmount>1,200,000.00</nominalAmount>
+            <vmCollateralValueBaseCCy>2,400,000.00</vmCollateralValueBaseCCy>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="asset.type.bond.jpy">
+            <assetType>qtp_bond_jpy</assetType>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="bond.jpy.vm.recall.pending.1m">
+            <status>Pending</status>
+            <assetType>qtp_bond_jpy</assetType>
+            <movement>Call</movement>
+            <nominalAmount>1,000,000.00</nominalAmount>
+            <vmCollateralValueBaseCCy>10,000.00</vmCollateralValueBaseCCy>
+        </assetBookingSummary>
+
+
+
+
+
+    </scenarioData>
+</dataBean>

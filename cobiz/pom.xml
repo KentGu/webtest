@@ -1,0 +1,279 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.lombardrisk</groupId>
+        <artifactId>collina</artifactId>
+        <version>15.2.2-SNAPSHOT</version>
+    </parent>
+    <artifactId>cobiz</artifactId>
+    <version>15.2.2-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>Colline Business Wrapper</name>
+    <url>http://maven.apache.org</url>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.jboss.as</groupId>
+                <artifactId>jboss-as-ejb-client-bom</artifactId>
+                <version>7.2.0.Final</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.yiwan</groupId>
+            <artifactId>webcore</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-java</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-testng</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.jcraft</groupId>
+            <artifactId>jsch</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-picocontainer</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.picocontainer</groupId>
+            <artifactId>picocontainer</artifactId>
+        </dependency>
+        <!-- reportng dependencies -->
+        <dependency>
+            <groupId>org.uncommons</groupId>
+            <artifactId>reportng</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.testng</groupId>
+                    <artifactId>testng</artifactId>
+                </exclusion>
+            </exclusions>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.inject</groupId>
+            <artifactId>guice</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>xmlunit</groupId>
+            <artifactId>xmlunit</artifactId>
+            <version>1.4</version>
+        </dependency>
+
+        <!-- Colline RemoteEJB dependencies -->
+        <dependency>
+            <groupId>com.lombardrisk</groupId>
+            <artifactId>colline-api-metadata</artifactId>
+            <version>15.3.0.0-b98</version>
+        </dependency>
+        <dependency>
+            <groupId>com.lombardrisk</groupId>
+            <artifactId>colline-lrs-client</artifactId>
+            <version>15.3.0.0-b98</version>
+        </dependency>
+        <dependency>
+            <groupId>com.lombardrisk</groupId>
+            <artifactId>colline-lrs-3rd-party-client</artifactId>
+            <version>15.3.0.0-b98</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.as</groupId>
+            <artifactId>jboss-as-ejb-client-bom</artifactId>
+            <type>pom</type>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>default-unit-test</id>
+                        <goals>
+                            <goal>test</goal>
+                        </goals>
+                        <configuration>
+                            <!--<forkMode>once</forkMode>-->
+                            <!--<forkCount>0</forkCount>-->
+                            <!--<argLine>-Dfile.encoding=UTF-8</argLine>-->
+                            <!--<testFailureIgnore>true</testFailureIgnore>-->
+                            <!--<encoding>UTF-8</encoding>-->
+                            <includes>
+                                <include>com/lombardrisk/test/**.java</include>
+                            </includes>
+                            <!--<systemProperties>-->
+                            <!--<surefire.rerunFailingTestsCount>${surefire.rerunFailingTestsCount}</surefire.rerunFailingTestsCount>-->
+                            <!--</systemProperties>-->
+                            <properties>
+                                <!-- <xmlFileName>suites/default.xml</xmlFileName> -->
+                                <property>
+                                    <name>usedefaultlisteners</name>
+                                    <value>false</value>
+                                </property>
+                                <property>
+                                    <name>listener</name>
+                                    <!--experimental optional reports org.yiwan.webcore.testng.ResultListener,org.yiwan.webcore.testng.RetryListener,org.yiwan.webcore.testng.Hook,org.yiwan.webcore.testng.HTMLReporter,org.yiwan.webcore.testng.XLSReporter -->
+                                    <value>org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter
+                                    </value>
+                                </property>
+                            </properties>
+                            <systemPropertyVariables>
+                                <org.uncommons.reportng.title>Unit Test Report</org.uncommons.reportng.title>
+                                <org.uncommons.reportng.escape-output>false</org.uncommons.reportng.escape-output>
+                            </systemPropertyVariables>
+                            <reportsDirectory>${project.build.directory}/result/unit-test-reports</reportsDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- generate a javasource -->
+            <!--<plugin>-->
+            <!--<groupId>org.apache.maven.plugins</groupId>-->
+            <!--<artifactId>maven-source-plugin</artifactId>-->
+            <!--<executions>-->
+            <!--<execution>-->
+            <!--<id>attach-sources</id>-->
+            <!--<goals>-->
+            <!--<goal>jar</goal>-->
+            <!--</goals>-->
+            <!--</execution>-->
+            <!--</executions>-->
+            <!--</plugin>-->
+
+            <plugin>
+                <groupId>org.jvnet.jaxb2.maven2</groupId>
+                <artifactId>maven-jaxb21-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>generate</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <!--<strict>false</strict>-->
+                            <extension>true</extension>
+                            <args>
+                                <arg>-Xinject-code</arg>
+                                <arg>-Xsimplify</arg>
+                            </args>
+                            <plugins>
+                                <plugin>
+                                    <groupId>org.jvnet.jaxb2_commons</groupId>
+                                    <artifactId>jaxb2-basics</artifactId>
+                                    <version>${jaxb2.basics.version}</version>
+                                </plugin>
+                            </plugins>
+                            <!--<schemaDirectory>src/main/resources</schemaDirectory>-->
+                            <schemaIncludes>
+                                <include>schemas/dataBean.xsd</include>
+                            </schemaIncludes>
+                            <!--<bindingDirectory>src/main/resources</bindingDirectory>-->
+                            <bindingIncludes>
+                                <include>schemas/dataBeanBindings.xjb</include>
+                            </bindingIncludes>
+                            <generatePackage>com.lombardrisk.pojo</generatePackage>
+                            <generateDirectory>${generatedSourcesDirectory}</generateDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>test</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>add-source</goal>
+                        </goals>
+                        <configuration>
+                            <sources>
+                                <source>${generatedSourcesDirectory}</source>
+                            </sources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>default-prepare-agent</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                        <configuration>
+                            <!-- passing property which will contains settings for JaCoCo agent.
+                            If not specified, then "argLine" would be used for "jar" packaging -->
+                            <!--<propertyName>failsafeArgLine</propertyName>-->
+                            <destFile>${project.build.directory}/result/jacoco.exec</destFile>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>default-prepare-agent-integration</id>
+                        <goals>
+                            <goal>prepare-agent-integration</goal>
+                        </goals>
+                        <configuration>
+                            <!-- passing property which will contains settings for JaCoCo agent.
+                            If not specified, then "argLine" would be used for "jar" packaging -->
+                            <!--<propertyName>failsafeArgLine</propertyName>-->
+                            <destFile>${project.build.directory}/result/jacoco-it.exec</destFile>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>post-install</id>
+            <build>
+                <plugins>
+                    <!-- generate a javadoc -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>attach-javadocs</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <excludePackageNames>*.glue.hooks;*.pages.*;*.test;*.util</excludePackageNames>
+                            <!--<reportOutputDirectory>//sha-nas-a/Users/Kenny Wang/doc/${project.artifactId}</reportOutputDirectory>-->
+                            <destDir>//sha-nas-a/Users/Kenny Wang/doc/${project.artifactId}/${project.version}</destDir>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+</project>

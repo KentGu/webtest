@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+		<agreement id="agr14591.fcm">
+			<agreementId id="agr14591.id">2508</agreementId>
+		</agreement>
+
+		<exposureEventDetail id="VMDelivery.event">
+			<action>VM Delivery(Excess)</action>
+		</exposureEventDetail>
+
+		<!--Add Equlity-->
+		<bookingDetail id="equity.usd.booking1">
+			<assetType ref="equity.usd.name"/>
+			<instrumentSearch>
+				<linkText>qtp_Equity_Instrument</linkText>
+				<instrumentId>
+					<filter>qtp_Equity_Instrument</filter>
+				</instrumentId>
+			</instrumentSearch>
+			<!--<enterBookingEditor>true</enterBookingEditor>-->
+			<save>notSaveOrCancel</save>
+		</bookingDetail>
+
+		<bookingDetail id="equity.usd.booking1.bookingType.net">
+			<bookingInformation>
+				<bookingType>Net</bookingType>
+			</bookingInformation>
+		</bookingDetail>
+
+
+		<bookingDetail id="equity.usd.booking1.vm.100">
+			<bookingInformation>
+				<bookingInformationDetail>
+					<vmAmount>100</vmAmount>
+				</bookingInformationDetail>
+			</bookingInformation>
+			<save>saveAndNext</save>
+			<alertHandling>
+				<accept>true</accept>
+			</alertHandling>
+		</bookingDetail>
+
+		<!--<bookingDetail id="clickAssetTypeLinkToGoToAssetHoldingDetailPage.equity.usd">-->
+			<!--<assetType ref="equity.usd.name"/>-->
+			<!--<enterBookingEditor>false</enterBookingEditor>-->
+			<!--<save>notSaveOrCancel</save>-->
+		<!--</bookingDetail>-->
+
+		<assetBookingSummary id="asset.type.equity.USD">
+			<assetType ref="equity.usd.name"/>
+		</assetBookingSummary>
+
+		<bookingDetail id="equity.usd.booking1.bookingType.vm">
+			<bookingInformation>
+				<bookingType>VM</bookingType>
+			</bookingInformation>
+		</bookingDetail>
+
+		<assetBookingSummary id="equity.usd.booking1.vm.100.open">
+			<assetType ref="equity.usd.name"/>
+			<movement>Return</movement>
+		</assetBookingSummary>
+
+		<bookingDetail id="equity.usd.booking1.bookingType.vm">
+			<bookingInformation>
+				<bookingType>VM</bookingType>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="equity.usd.booking1.vm.100.Authorised">
+			<bookingInformation>
+				<settlementStatusInfo>
+					<settlementStatus>Authorised</settlementStatus>
+				</settlementStatusInfo>
+			</bookingInformation>
+			<save>saveAndNext</save>
+			<alertHandling>
+				<accept>true</accept>
+			</alertHandling>
+		</bookingDetail>
+
+	</scenarioData>
+</dataBean>

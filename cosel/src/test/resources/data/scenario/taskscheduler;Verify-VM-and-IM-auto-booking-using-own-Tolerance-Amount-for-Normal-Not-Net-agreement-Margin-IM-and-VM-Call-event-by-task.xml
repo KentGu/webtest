@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+
+		<agreement id="agr15394.notnet">
+			<agreementId id="agr15394.id">2568</agreementId>
+		</agreement>
+
+		<exposureEventDetail id="call.3000000">
+			<action>Call</action>
+			<agreementRequirement>3,000,000.00</agreementRequirement>
+		</exposureEventDetail>
+
+		<exposureManagementMessage id="call.autoEmailSuccess">
+			<messageSummary>
+				<successfulAccount>1</successfulAccount>
+				<unsuccessfulAccount>0</unsuccessfulAccount>
+			</messageSummary>
+			<messageDetail>
+				<source>Auto Send (Letter)</source>
+				<message>Margin Call letter sent via Email for Princ:QTPPrincipal/Cpty:QTPCounterparty/Desc:15394_2/AgrId:2567</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<exposureEventSearch id="agr15394.issued">
+			<agrId ref="agr15394.id"/>
+		</exposureEventSearch>
+
+		<exposureEventDetail id="Call.CpyAmount">
+			<action>Call</action>
+			<counterpartyAmount>0.00</counterpartyAmount>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="Call.CpyAmount.3500000">
+			<action>Call</action>
+			<counterpartyAmount>3500000</counterpartyAmount>
+		</exposureEventDetail>
+
+		<exposureManagementMessage id="vm.call.autoBookingUnsuccess.im.call.autoBookingSuccess">
+			<messageSummary>
+				<unsuccessfulAccount>1</unsuccessfulAccount>
+				<successfulAccount>1</successfulAccount>
+			</messageSummary>
+			<messageDetail>
+				<source>Auto Book</source>
+				<message>Princ:QTPPrincipal/Cpty:QTPCounterparty/Desc:15394_2/AgrId:2567/Event:Call CASH-USD IM Call 1,000,000.00 auto booking created.</message>
+			</messageDetail>
+			<messageDetail>
+				<source>Auto Book</source>
+				<message>Princ:QTPPrincipal/Cpty:QTPCounterparty/Desc:15394_2/AgrId:2567/Event:Call VM auto booking not created as tolerance not met.</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<assetBookingSummary id="asset.type.cash.USD">
+			<assetType ref="cash.usd1.name"/>
+		</assetBookingSummary>
+
+		<assetBookingSummary id="vm.call.autoBook.pending.notadded" apply="false">
+			<assetType ref="cash.usd1.name"/>
+			<movement>Call</movement>
+			<status>Pending</status>
+			<vmMarketValue>2,500,000.00</vmMarketValue>
+			<bookingSource>Auto Book</bookingSource>
+		</assetBookingSummary>
+
+		<assetBookingSummary id="im.recall.autoBook.pending.1000000.added">
+			<assetType ref="cash.usd1.name"/>
+			<movement>Call</movement>
+			<status>Pending</status>
+			<bookingSource>Auto Book</bookingSource>
+			<imMarketValue>1,000,000.00</imMarketValue>
+		</assetBookingSummary>
+
+		<taskSchedulerDetail id="autoBookCashforAgr15394">
+			<taskName>Auto Book Cash</taskName>
+			<misc1 ref="agr15394.id"/>
+		</taskSchedulerDetail>
+
+		<taskSchedulerMessage id="autoBookCashforAgr15394.imCallSuccess.vmCallUnsuccess">
+			<message>Auto Book Cash: Auto Book Cash Task Finished with 1 successful [^,]*</message>
+		</taskSchedulerMessage>
+		
+
+
+	</scenarioData>
+</dataBean>

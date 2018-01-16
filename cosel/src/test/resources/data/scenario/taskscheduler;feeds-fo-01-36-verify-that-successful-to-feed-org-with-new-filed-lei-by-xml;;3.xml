@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/taskScheduler.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <feedOrganisation id="feed.organisation.long.lei">
+            <orgHeader>
+                <orgCode id="feed.organisation.long.lei.code">T26091Organisation4Code</orgCode>
+                <longName id="feed.organisation.long.lei.lname">T26091Organisation4LongName</longName>
+                <shortName id="feed.organisation.long.lei.sname">T26091Organisation4ShortName</shortName>
+                <LEI id="feed.organisation.long.lei.lei">A123456789B123456789C123456789D123456789E123456789F123456789G123456789H123456789I123456789J123456789K123456789L123456789M123456789N123456789O123456789P123456789Q123456789R123456789S123456789T123456789U123456789V123456789W123456789X123456789Y123456789Z123456789</LEI>
+            </orgHeader>
+            <orgRole id="feed.organisation.long.lei.role">Branch</orgRole>
+            <region id="feed.organisation.long.lei.region">ALL</region>
+        </feedOrganisation>
+
+        <feedStatus id="feed.organisation.long.lei.status">
+            <status>Failed</status>
+            <valuationFile ref="file.path"/>
+            <description>Organisation</description>
+            <failedFeed>
+                <total>1</total>
+            </failedFeed>
+        </feedStatus>
+
+        <organisationSearch id="feed.organisation.long.lei.search">
+            <criteria>Exactly matching</criteria>
+            <type>Short Name</type>
+            <!--<filter ref="feed.organisation.long.lei.sname"/>-->
+            <!--<linkText ref="feed.organisation.long.lei.sname"/>-->
+        </organisationSearch>
+
+        <organisation id="check.feed.organisation.long.lei">
+            <!--<shortName ref="feed.organisation.long.lei.sname"/>-->
+            <!--<longName ref="feed.organisation.long.lei.lname"/>-->
+            <!--<code ref="feed.organisation.long.lei.code"/>-->
+            <!--<lei>T26091Organisation1LEI</lei>-->
+            <!--<role ref="feed.organisation.long.lei.role"/>-->
+            <!--<region ref="feed.organisation.long.lei.region"/>-->
+        </organisation>
+
+        <taskSchedulerDetail id="task.feed.organisation">
+            <type>Task Manager</type>
+            <taskName>Import Organisations 1</taskName>
+            <additionalInfo id="task.feed.agreement.server.path">/home/ec2-user/Feed/FeedOrganisation</additionalInfo>
+        </taskSchedulerDetail>
+
+        <taskSchedulerMessage id="task.feed.organisation.message">
+            <message>Organisation: Imported 0 Organisations from file:(\S+).xml</message>
+        </taskSchedulerMessage>
+
+        <variable id="file.path"/>
+
+    </scenarioData>
+</dataBean>

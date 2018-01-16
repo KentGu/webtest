@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <eligibilityRulesTemplateSearch id="eligibility.rule.template.search">
+            <eligibilityRulesTemplateName>
+                <filter id="eligibility.template.name">auditERTemplateWithAssetClassification</filter>
+                <linkText ref="eligibility.template.name" />
+            </eligibilityRulesTemplateName>
+        </eligibilityRulesTemplateSearch>
+        <eligibilityRulesTemplate  id="eligibility.rule.template.assetclassification.source">
+            <templateName ref="eligibility.template.name"/>
+            <collateralAssetClassification name="classification">
+                <assetCategoryName name="category">auditEligibilityAssetCategory</assetCategoryName>
+                <haircutRule>
+                    <haircutAdjustment name="haircut">
+                        <valuationPercentage>7</valuationPercentage>
+                    </haircutAdjustment>
+                </haircutRule>
+                <concentrationLimitRule name="categotyC1">
+                    <trigger>999</trigger>
+                    <value>88</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule name="categotyC2">
+                    <trigger>555</trigger>
+                    <value>677777</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule name="categotyC3">
+                    <trigger>666</trigger>
+                    <value>555</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule name="categotyC4">
+                    <trigger>777</trigger>
+                    <value>97</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule name="categotyC5">
+                    <trigger>888</trigger>
+                    <value>434343</value>
+                </concentrationLimitRule>
+            </collateralAssetClassification>
+            <templateLevelConcentrationLimitRules name="tempC1">
+                <trigger>3555</trigger>
+                <value>80</value>
+            </templateLevelConcentrationLimitRules>
+            <templateLevelConcentrationLimitRules name="tempC2">
+                <trigger>555</trigger>
+                <value>78888</value>
+            </templateLevelConcentrationLimitRules>
+            <templateLevelConcentrationLimitRules name="tempC3">
+                <trigger>6666</trigger>
+                <value>100</value>
+            </templateLevelConcentrationLimitRules>
+            <!--<templateLevelConcentrationLimitRules name="tempC4">-->
+                <!--<trigger>7888</trigger>-->
+                <!--<value>53454353</value>-->
+            <!--</templateLevelConcentrationLimitRules>-->
+        </eligibilityRulesTemplate>
+        <eligibilityRulesTemplate id="eligibility.rule.template.assetclassification.update">
+            <templateName id="eligibility.template.name.update">auditERTWithAssetClassifacationUpdate</templateName>
+            <gracePeriod>Infinity</gracePeriod>
+            <concentrationLimitTrigger>2000</concentrationLimitTrigger>
+            <concentrationLimitBreachAdjustment>No Adjustment</concentrationLimitBreachAdjustment>
+            <useIssueRating>true</useIssueRating>
+            <useIssuerRating>true</useIssuerRating>
+            <applicableAgencies>true</applicableAgencies>
+            <referenceRatingAgencies>Fitch</referenceRatingAgencies>
+            <referenceRatingAgencies>MOODYS</referenceRatingAgencies>
+            <debtClassification>SEN</debtClassification>
+            <selectionOfAgenciesUse>2</selectionOfAgenciesUse>
+            <selectionofAgenciesUseDirection>Higher</selectionofAgenciesUseDirection>
+            <applicationOfRatings>Lower</applicationOfRatings>
+            <collateralAssetClassification name="classification">
+                <assetCategoryName name="category">auditEligibilityAssetCategory</assetCategoryName>
+                <applicableParty>P</applicableParty>
+                <haircutRule>
+                    <haircutSchedule>
+                        <haircutRule>fixed</haircutRule>
+                        <fixedValuation>70</fixedValuation>
+                    </haircutSchedule>
+                    <haircutAdjustment name="haircut">
+                        <type>Override</type>
+                        <rule>Equal</rule>
+                        <value>
+                            <filter>EUR</filter>
+                            <linkText>EUR</linkText>
+                        </value>
+                        <value>
+                            <filter>GBP</filter>
+                            <linkText>GBP</linkText>
+                        </value>
+                        <valuationPercentage>90</valuationPercentage>
+                    </haircutAdjustment>
+                </haircutRule>
+                <eligibilityRule>
+                    <minimumEligibilityRating>
+                        <agency>SandP</agency>
+                        <rating>A-</rating>
+                    </minimumEligibilityRating>
+                    <minimumEligibilityRating>
+                        <agency>MOODYS</agency>
+                        <rating>B1</rating>
+                    </minimumEligibilityRating>
+                    <minimumEligibilityRating>
+                        <agency>Fitch</agency>
+                        <rating>C</rating>
+                    </minimumEligibilityRating>
+                    <ratingEligibilityMethod>AND</ratingEligibilityMethod>
+                    <minEligibilityCqs>7</minEligibilityCqs>
+                    <issueDate>01/11/2016</issueDate>
+                    <maturityBasis>Residual</maturityBasis>
+                    <maturityTimeType>Years</maturityTimeType>
+                    <maturityTimeValue>5</maturityTimeValue>
+                    <roleCorrelation>Branch</roleCorrelation>
+                    <ultimateParentCorrelation>false</ultimateParentCorrelation>
+                    <closeLinkCorrelation>false</closeLinkCorrelation>
+                    <industryCorrelation>false</industryCorrelation>
+                    <!--<udfRule>-->
+                    <!--<securityUdf></securityUdf>-->
+                    <!--<eligibilityRule></eligibilityRule>-->
+                    <!--<value></value>-->
+                    <!--</udfRule>-->
+                    <eligibleCurrency>USD</eligibleCurrency>
+                    <eligibleCountry>CANADA</eligibleCountry>
+                    <eligibleIssuer>
+                        <filter>QTP_Eligible_Issuer3</filter>
+                        <linkText>QTP_Eligible_Issuer3</linkText>
+                    </eligibleIssuer>
+                    <excludeInstrument>
+                        <filter>qtp-Bond-Usd-Instrument1</filter>
+                        <linkText>qtp-Bond-Usd-Instrument1,qtp_Market</linkText>
+                    </excludeInstrument>
+                </eligibilityRule>
+                <concentrationLimitRule remove="true">
+                    <trigger>455</trigger>
+                    <value>89</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule name="categotyC1">
+                    <trigger>1k</trigger>
+                    <currency>JPY</currency>
+                    <to>B2/B</to>
+                    <value>100</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule name="categotyC2">
+                    <trigger>2k</trigger>
+                    <currency>JPY</currency>
+                    <to>B2/B</to>
+                    <value>10m</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule name="categotyC3">
+                    <trigger>3k</trigger>
+                    <currency>JPY</currency>
+                    <to>B2/B</to>
+                    <value>2m</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule name="categotyC4">
+                    <trigger>4k</trigger>
+                    <currency>JPY</currency>
+                    <to>B2/B</to>
+                    <value>100</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule name="categotyC5">
+                    <trigger>5k</trigger>
+                    <currency>JPY</currency>
+                    <to>B2/B</to>
+                    <value>5m</value>
+                </concentrationLimitRule>
+            </collateralAssetClassification>
+            <templateLevelConcentrationLimitRules remove="true">
+                <trigger>7777</trigger>
+                <value>56</value>
+            </templateLevelConcentrationLimitRules>
+            <templateLevelConcentrationLimitRules remove="true">
+                <trigger>5555</trigger>
+                <value>79</value>
+            </templateLevelConcentrationLimitRules>
+            <templateLevelConcentrationLimitRules name="tempC1">
+                <trigger>1k</trigger>
+                <currency>USD</currency>
+                <to>A2/A</to>
+                <value>90</value>
+            </templateLevelConcentrationLimitRules>
+            <templateLevelConcentrationLimitRules name="tempC2">
+                <trigger>2k</trigger>
+                <currency>USD</currency>
+                <to>A2/A</to>
+                <value>100</value>
+            </templateLevelConcentrationLimitRules>
+            <templateLevelConcentrationLimitRules name="tempC3">
+                <trigger>3k</trigger>
+                <currency>USD</currency>
+                <value>100</value>
+            </templateLevelConcentrationLimitRules>
+            <!--<templateLevelConcentrationLimitRules name="tempC4">-->
+                <!--<trigger>4k</trigger>-->
+                <!--<currency>USD</currency>-->
+                <!--<to>A2/A</to>-->
+                <!--<value>90</value>-->
+            <!--</templateLevelConcentrationLimitRules>-->
+            <templateLevelConcentrationLimitRules>
+                <trigger>9999</trigger>
+                <currency>USD</currency>
+                <rule>Ultimate Parent Holding</rule>
+                <method>Max Value</method>
+                <value>1m</value>
+            </templateLevelConcentrationLimitRules>
+
+        </eligibilityRulesTemplate>
+
+        <auditEligibilityRuleTemplateReportFilter id="audit.eligibility.rule.template.report.by.template">
+            <template ref="eligibility.template.name.update"/>
+            <startDate>t-1000</startDate>
+        </auditEligibilityRuleTemplateReportFilter>
+        <variable id="auditReportPath" />
+        <reportValidationRules id="reportRule">
+        </reportValidationRules>
+    </scenarioData>
+</dataBean>

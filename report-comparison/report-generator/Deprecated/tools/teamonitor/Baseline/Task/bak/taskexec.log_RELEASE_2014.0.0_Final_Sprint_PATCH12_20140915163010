@@ -1,0 +1,43 @@
+I'm FILE_TASKEXECLOG=taskexec.log_RELEASE_2014.0.0_Final_Sprint_PATCH12_20140915163010
+I'm database---------=COLLINE2014_0_0_BASELINE_0611 creditderivative 172.20.20.99:1521 pst4
+Target Version: RELEASE_2014.0.0_Final_Sprint_PATCH12
+Target Path:/home/test/server/colline/cluster5_2/bin
+-------------I am task =Approve All Organisations 1
+Task is Workflow : 'Approve All Organisations 1'
+2014-09-15 16:30:10
+Waiting 1000 second for Task  Approve All Organisations 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+TaskScheduler: The task could not be run. The task category Workflow or task name  is invalid.----------break now --------
+-------------I am task =Approve All Agreements 1
+Task is Workflow : Approve All Agreements 1
+2014-09-15 16:30:32
+Waiting 1000 second for Task  Approve All Agreements 1 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Approve All Agreements 1] at: 2014-09-15 16:30:33,074
+Finished starting task: [Workflow:Approve All Agreements 1] at: 2014-09-15 16:30:33,695
+--debug timeout :20.0
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Approve All Agreements. Please wait ...
+Workflow:Approve All Agreements: 0  agreements are approved.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh
+-------------I am task =Approve All Statements 5
+Task is Workflow : Approve All Statements 5
+2014-09-15 16:33:15
+Waiting 1000 second for Task  Approve All Statements 5 execute
+Started F3 Task Manager ...
+[RuntimeEnvInfo] ERORR: can't get system property 'jboss.version.string', please check ...
+TaskScheduler: Logged in as user: sa.
+Starting task: [Workflow:Approve All Statements 5] at: 2014-09-15 16:33:16,168
+Finished starting task: [Workflow:Approve All Statements 5] at: 2014-09-15 16:33:16,191
+--debug timeout :20.0
+-----------It's Approve All Statements task, sleep 900 seconds for msg calc. ------
+--debug job have been inited
+Running Pre-task script:/home/test/tools/teamonitor/TaskScript/PreScript/TaskStatusNotification.sh
+Started Approve All Statements. Please wait ...
+Workflow:Approve All Statements: 0  statements are triggered to approve.
+Running Post-task script:/home/test/tools/teamonitor/TaskScript/PostScript/TaskStatusNotification.sh

@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <securitySearch id="26612.bond.usd">
+            <matured>All</matured>
+            <instrument>
+                <filter id="26612.bond.usd.id">26612_bond_usd_1</filter>
+                <!--<linkText ref="26527.bond.usd"/>-->
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="26612.bond.usd.approve">
+            <instrument ref="26612.bond.usd.id"/>
+        </securitySearchResult>
+
+        <instrument id="26612.bond.usd.changeRecordDate.tMinus10.changeMaturityDate.tPlus10">
+            <recordDate>t-10</recordDate>
+            <maturityDate>t+10</maturityDate>
+        </instrument>
+
+        <securitySearch id="26612.equity.usd">
+            <matured>All</matured>
+            <instrument>
+                <filter id="26612.equity.usd.id">26612_equity_usd_1</filter>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="26612.equity.usd.approve">
+            <instrument ref="26612.equity.usd.id"/>
+        </securitySearchResult>
+
+        <instrument id="26612.equity.usd.changeRecordDate.tMinus5">
+            <recordDate>t-5</recordDate>
+        </instrument>
+
+        <securitySearch id="26612.bond.usd.2">
+            <matured>All</matured>
+            <instrument>
+                <filter id="26612.bond.usd.id.2">26612_bond_usd_2</filter>
+                <!--<linkText ref="26527.bond.usd"/>-->
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="26612.bond.usd.approve.2">
+            <instrument ref="26612.bond.usd.id.2"/>
+        </securitySearchResult>
+
+        <instrument id="26612.bond.usd.2.changeRecordDate.tPlus10">
+            <recordDate>t+10</recordDate>
+        </instrument>
+
+        <securitySearch id="26612.equity.usd.2">
+            <matured>All</matured>
+            <instrument>
+                <filter id="26612.equity.usd.id.2">26612_equity_usd_2</filter>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="26612.equity.usd.approve.2">
+            <instrument ref="26612.equity.usd.id.2"/>
+        </securitySearchResult>
+
+        <instrument id="26612.equity.usd.2.changeRecordDate.tMinus10.changeMaturityDate.tPlus10">
+            <recordDate>t-10</recordDate>
+            <maturityDate>t+10</maturityDate>
+        </instrument>
+
+        <agreement id="agr26612.otc.net">
+            <agreementId id="agrId">2669</agreementId>
+        </agreement>
+
+        <agreement id="bond.usd.EligibilityRule">
+            <collateralAssetClass name="bond.class">
+                <collateralAssetClassName>qtp_bond</collateralAssetClassName>
+                <collateralAssetType name="bond.type">
+                    <collateralAssetTypeName>qtp_bond_usd</collateralAssetTypeName>
+                    <!--<eligibilityRule>-->
+                        <!--<excludeInstrument>-->
+                            <!--<filter ref="26612.bond.usd.id"/>-->
+                            <!--<linkText id="26612.bond.usd.id.withmarket">26619_bond_usd_1,m1</linkText>-->
+                        <!--</excludeInstrument>-->
+                    <!--</eligibilityRule>-->
+                </collateralAssetType>
+            </collateralAssetClass>
+        </agreement>
+
+        <agreement id="bond.usd.EligibilityRule.ExcludeInstruments.bond.1">
+            <collateralAssetClass name="bond.class">
+                <collateralAssetClassName>qtp_bond</collateralAssetClassName>
+                <collateralAssetType name="bond.type">
+                    <collateralAssetTypeName>qtp_bond_usd</collateralAssetTypeName>
+                    <eligibilityRule>
+                        <excludeInstrument>
+                            <filter ref="26612.bond.usd.id"/>
+                            <linkText id="26612.bond.usd.id.withmarket">26612_bond_usd_1,m1</linkText>
+                        </excludeInstrument>
+                    </eligibilityRule>
+                </collateralAssetType>
+            </collateralAssetClass>
+        </agreement>
+
+        <agreement id="agr26612">
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Approved</statementStatus>
+         </agreement>
+
+        <substitutionEventSearch id="agr26612.return">
+            <agreementId ref="agrId"/>
+            <substitution>Return</substitution>
+        </substitutionEventSearch>
+
+        <substitutionEventDetail id="cash.usd">
+            <instrumentId ref="cash.usd1.name"/>
+        </substitutionEventDetail>
+
+        <exposureEventDetail id="subCon.agreementRequirement.-1m.pendingReview">
+            <action>Substitution Confirmation</action>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <element ref="26612.bond.usd.id.withmarket"/>
+            <callStatus>Pending Review</callStatus>
+            <eventId id="bond.event"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subReq.agreementRequirement.2m.pendingReview">
+            <action>Substitution Request</action>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <element id="26612.equity.usd.id.withmarket">26612_equity_usd_1,m1</element>
+            <callStatus>Pending Review</callStatus>
+            <eventId id="equity.event"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subCon.agreementRequirement.0m.pendingReview">
+            <action>Substitution Confirmation</action>
+            <agreementRequirement>0.00</agreementRequirement>
+            <element ref="cash.usd1.name"/>
+            <callStatus>Pending Review</callStatus>
+            <eventId id="cash.event"/>
+        </exposureEventDetail>
+
+        <bookingDetail id="bond.usd.return.0.6m">
+        <bookingInformation>
+            <bookingInformationDetail>
+                <bookingMovement>Substitution Confirmation</bookingMovement>
+                <requiredAmount>-1,000,000.00</requiredAmount>
+                <movement>Return</movement>
+                <nominalAmount>0.6m</nominalAmount>
+            </bookingInformationDetail>
+        </bookingInformation>
+    </bookingDetail>
+
+        <bookingDetail id="equity.usd.call.0.5m">
+            <instrumentSearch>
+                <instrument>
+                    <filter>26612_equity_usd_2,m2</filter>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <movement>Call</movement>
+                    <requiredAmount>1,000,000.00</requiredAmount>
+                    <nominalAmount>0.5m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="equity.usd.recall.0.9m">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <instrumentId>26612_equity_usd_1,m1</instrumentId>
+                    <movement>Recall</movement>
+                    <nominalAmount>0.9m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="bond.usd.delivery.1m">
+            <instrumentSearch>
+                <instrument>
+                    <filter>26612_bond_usd_2,m2</filter>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <instrumentId></instrumentId>
+                    <movement>Delivery</movement>
+                    <nominalAmount>1m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="cash.usd.return.0.8m">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <requiredAmount>0.00</requiredAmount>
+                    <movement>Return</movement>
+                    <instrumentId ref="cash.usd1.name"/>
+                    <nominalAmount>0.8m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="cash.usd.call.0.9m">
+            <instrumentSearch>
+                <instrument>
+                    <filter>26612_equity_usd_2,m2</filter>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Confirmation</bookingMovement>
+                    <movement>Call</movement>
+                    <instrumentId></instrumentId>
+                    <requiredAmount>0.00</requiredAmount>
+                    <nominalAmount>0.9m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <exposureManagementMessage id="overrideWarning">
+            <messageDetail>
+                <overrideWarning>true</overrideWarning>
+            </messageDetail>
+            <messageDetail>
+                <overrideWarning>true</overrideWarning>
+            </messageDetail>
+            <messageDetail>
+                <overrideWarning>true</overrideWarning>
+            </messageDetail>
+        </exposureManagementMessage>
+
+        <exposureEventDetail id="subCon.agreementRequirement.-1m.PartiallyBooked.firstLeg.0.6m.secLeg.0.5m">
+            <action>Substitution Confirmation</action>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <element ref="26612.bond.usd.id.withmarket"/>
+            <callStatus>Partially Booked</callStatus>
+            <bookedAmountFirstLeg>-600,000.00</bookedAmountFirstLeg>
+            <bookedAmountSecondLeg>500,000.00</bookedAmountSecondLeg>
+            <eventId id="bond.event"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subReq.agreementRequirement.2m.PartiallyBooked.firstLeg.0.9m.secLeg.1m">
+            <action>Substitution Request</action>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <element id="26612.equity.usd.id.withmarket">26612_equity_usd_1,m1</element>
+            <!--<callStatus>Partially Booked</callStatus>-->
+            <bookedAmountFirstLeg>900,000.00</bookedAmountFirstLeg>
+            <bookedAmountSecondLeg>-1,000,000.00</bookedAmountSecondLeg>
+            <eventId id="equity.event"/>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subCon.agreementRequirement.0m.Completed.firstLeg.0.8m.secLeg.0.9m">
+            <action>Substitution Confirmation</action>
+            <agreementRequirement>0.00</agreementRequirement>
+            <element ref="cash.usd1.name"/>
+            <callStatus>Completed</callStatus>
+            <bookedAmountFirstLeg>-800,000.00</bookedAmountFirstLeg>
+            <bookedAmountSecondLeg>900,000.00</bookedAmountSecondLeg>
+            <eventId id="cash.event"/>
+        </exposureEventDetail>
+
+        <assetBookingSummary id="asset.type.equity.usd">
+            <assetType ref="equity.usd.name"/>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="asset.type.bond.usd">
+            <assetType ref="bond.usd.name"/>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="asset.type.CASH.USD">
+            <assetType ref="cash.usd1.name"/>
+        </assetBookingSummary>
+
+        <bookingDetail id="cash.return.0.3m.linkToEvent3">
+            <bookingInformation>
+                <eventId ref="cash.event"/>
+                <bookingInformationDetail>
+                    <nominalAmount>0.3m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+            <save>save</save>
+        </bookingDetail>
+
+        <bookingDetail id="bond.return.0.4m.linkToEvent1">
+            <instrumentSearch>
+                <linkText ref="26612.bond.usd.id"/>
+                <instrumentId>
+                    <filter ref="26612.bond.usd.id"/>
+                </instrumentId>
+            </instrumentSearch>
+            <bookingInformation>
+                <eventId ref="bond.event"/>
+                <bookingInformationDetail>
+                    <nominalAmount>0.4m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+            <save>save</save>
+        </bookingDetail>
+
+        <bookingDetail id="equity.recall.0.3m.linkToEvent2">
+            <instrumentSearch>
+                <linkText ref="26612.equity.usd.id"/>
+                <instrumentId>
+                    <filter ref="26612.equity.usd.id"/>
+                </instrumentId>
+            </instrumentSearch>
+            <bookingInformation>
+                <eventId ref="equity.event"/>
+                <!--<event>Substitution Request</event>-->
+                <bookingInformationDetail>
+                    <nominalAmount>0.3m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+            <save>save</save>
+        </bookingDetail>
+
+
+
+        <feedAssetBooking id="feed.equity.call.0.1m.pending.linkToEvent1.booking13">
+            <!--<agreementId ref="agreement.id"/>-->
+            <agreementId ref="agrId"/>
+            <!--<counterparty ref="agreement.counterparty"/>-->
+            <assetClass ref="equity.name"/>
+            <assetType ref="equity.usd.name"/>
+            <instrumentID ref="26612.equity.usd.id.2"/>
+            <market>m2</market>
+            <parAmount>100000</parAmount>
+            <!--<imParAmount></imParAmount>-->
+            <movement>Call</movement>
+            <settlementDate>2099-09-09</settlementDate>
+            <!--<valuationPerc></valuationPerc>-->
+            <settlementStatus>Pending</settlementStatus>
+            <linkToEvent>true</linkToEvent>
+            <Event ref="bond.event"/>
+            <!--<description></description-->
+            <!--<description2></description2>-->
+            <!--<description3></description3>-->
+            <!--<settlementComment></settlementComment>-->
+            <!--<settlementDateAbbriviated></settlementDateAbbriviated>-->
+            <!--<creationDate></creationDate>-->
+            <!--<previousTicketId></previousTicketId>-->
+            <!--<moveDescription></moveDescription>-->
+            <!--<placeOfSettlement>place</placeOfSettlement>-->
+            <!--<linkToEvent>true</linkToEvent>-->
+            <!--<Event ref="eventId.return"/>-->
+            <!--<Model></Model>-->
+            <!--<resetDate></resetDate>-->
+            <!--<market></market>-->
+            <!--<WHT></WHT>-->
+            <!--<cashMovementType></cashMovementType>-->
+            <!--<component></component>-->
+            <!--<rehypothecated>true</rehypothecated>-->
+            <!--<assetOwner id="feed.asset.booking.asset.owner" ref="org.issuer1.lname"/>-->
+            <!--<BookingUDFFields>-->
+            <!--<udfName></udfName>-->
+            <!--<udfValue></udfValue>-->
+            <!--</BookingUDFFields>-->
+            <!--<postApprovalStatus></postApprovalStatus>-->
+        </feedAssetBooking>
+
+        <feedResult id="feed.equity.call.0.1m.pending.linkToEvent1.booking13.successToFeed">
+            <fileUploaded id="feed.equity.call.0.1m.pending.linkToEvent1.booking13.result.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedAssetBooking id="feed.bond.delivery.0.5m.pending.linkToEvent2.booking14">
+            <!--<agreementId ref="agreement.id"/>-->
+            <agreementId ref="agrId"/>
+            <!--<counterparty ref="agreement.counterparty"/>-->
+            <assetClass ref="bond.name"/>
+            <assetType ref="bond.usd.name"/>
+            <instrumentID ref="26612.bond.usd.id.2"/>
+            <market>m2</market>
+            <parAmount>500000</parAmount>
+            <!--<imParAmount></imParAmount>-->
+            <movement>Delivery</movement>
+            <settlementDate>2099-09-09</settlementDate>
+            <!--<valuationPerc></valuationPerc>-->
+            <settlementStatus>Pending</settlementStatus>
+            <linkToEvent>true</linkToEvent>
+            <Event ref="equity.event"/>
+            <!--<description></description-->
+            <!--<description2></description2>-->
+            <!--<description3></description3>-->
+            <!--<settlementComment></settlementComment>-->
+            <!--<settlementDateAbbriviated></settlementDateAbbriviated>-->
+            <!--<creationDate></creationDate>-->
+            <!--<previousTicketId></previousTicketId>-->
+            <!--<moveDescription></moveDescription>-->
+            <!--<placeOfSettlement>place</placeOfSettlement>-->
+            <!--<linkToEvent>true</linkToEvent>-->
+            <!--<Event ref="eventId.return"/>-->
+            <!--<Model></Model>-->
+            <!--<resetDate></resetDate>-->
+            <!--<market></market>-->
+            <!--<WHT></WHT>-->
+            <!--<cashMovementType></cashMovementType>-->
+            <!--<component></component>-->
+            <!--<rehypothecated>true</rehypothecated>-->
+            <!--<assetOwner id="feed.asset.booking.asset.owner" ref="org.issuer1.lname"/>-->
+            <!--<BookingUDFFields>-->
+            <!--<udfName></udfName>-->
+            <!--<udfValue></udfValue>-->
+            <!--</BookingUDFFields>-->
+            <!--<postApprovalStatus></postApprovalStatus>-->
+        </feedAssetBooking>
+
+        <feedResult id="feed.bond.delivery.0.5m.pending.linkToEvent2.booking14.successToFeed">
+            <fileUploaded id="feed.bond.delivery.0.5m.pending.linkToEvent2.booking14.result.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedAssetBooking id="feed.equity.call.0.1m.pending.linkToEvent3.booking15">
+            <!--<agreementId ref="agreement.id"/>-->
+            <agreementId ref="agrId"/>
+            <!--<counterparty ref="agreement.counterparty"/>-->
+            <assetClass ref="equity.name"/>
+            <assetType ref="equity.usd.name"/>
+            <instrumentID ref="26612.equity.usd.id.2"/>
+            <market>m2</market>
+            <parAmount>100000</parAmount>
+            <!--<imParAmount></imParAmount>-->
+            <movement>Call</movement>
+            <settlementDate>2099-09-09</settlementDate>
+            <!--<valuationPerc></valuationPerc>-->
+            <settlementStatus>Pending</settlementStatus>
+            <linkToEvent>true</linkToEvent>
+            <Event ref="cash.event"/>
+            <!--<description></description-->
+            <!--<description2></description2>-->
+            <!--<description3></description3>-->
+            <!--<settlementComment></settlementComment>-->
+            <!--<settlementDateAbbriviated></settlementDateAbbriviated>-->
+            <!--<creationDate></creationDate>-->
+            <!--<previousTicketId></previousTicketId>-->
+            <!--<moveDescription></moveDescription>-->
+            <!--<placeOfSettlement>place</placeOfSettlement>-->
+            <!--<linkToEvent>true</linkToEvent>-->
+            <!--<Event ref="eventId.return"/>-->
+            <!--<Model></Model>-->
+            <!--<resetDate></resetDate>-->
+            <!--<market></market>-->
+            <!--<WHT></WHT>-->
+            <!--<cashMovementType></cashMovementType>-->
+            <!--<component></component>-->
+            <!--<rehypothecated>true</rehypothecated>-->
+            <!--<assetOwner id="feed.asset.booking.asset.owner" ref="org.issuer1.lname"/>-->
+            <!--<BookingUDFFields>-->
+            <!--<udfName></udfName>-->
+            <!--<udfValue></udfValue>-->
+            <!--</BookingUDFFields>-->
+            <!--<postApprovalStatus></postApprovalStatus>-->
+        </feedAssetBooking>
+
+        <feedResult id="feed.equity.call.0.1m.pending.linkToEvent3.booking15.successToFeed">
+            <fileUploaded id="feed.equity.call.0.1m.pending.linkToEvent3.booking15.result.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedAssetBooking id="feed.equity.call.0.1m.pending.linkToEvent1.booking16">
+            <!--<agreementId ref="agreement.id"/>-->
+            <agreementId ref="agrId"/>
+            <!--<counterparty ref="agreement.counterparty"/>-->
+            <assetClass ref="equity.name"/>
+            <assetType ref="equity.usd.name"/>
+            <instrumentID ref="26612.equity.usd.id.2"/>
+            <market>m2</market>
+            <parAmount>100000</parAmount>
+            <!--<imParAmount></imParAmount>-->
+            <movement>Call</movement>
+            <settlementDate>2099-09-09</settlementDate>
+            <!--<valuationPerc></valuationPerc>-->
+            <settlementStatus>System Draft</settlementStatus>
+            <linkToEvent>true</linkToEvent>
+            <Event ref="bond.event"/>
+            <!--<Event>54080</Event>-->
+            <!--<description></description-->
+            <!--<description2></description2>-->
+            <!--<description3></description3>-->
+            <!--<settlementComment></settlementComment>-->
+            <!--<settlementDateAbbriviated></settlementDateAbbriviated>-->
+            <!--<creationDate></creationDate>-->
+            <!--<previousTicketId></previousTicketId>-->
+            <!--<moveDescription></moveDescription>-->
+            <!--<placeOfSettlement>place</placeOfSettlement>-->
+            <!--<linkToEvent>true</linkToEvent>-->
+            <!--<Event ref="eventId.return"/>-->
+            <!--<Model></Model>-->
+            <!--<resetDate></resetDate>-->
+            <!--<market></market>-->
+            <!--<WHT></WHT>-->
+            <!--<cashMovementType></cashMovementType>-->
+            <!--<component></component>-->
+            <!--<rehypothecated>true</rehypothecated>-->
+            <!--<assetOwner id="feed.asset.booking.asset.owner" ref="org.issuer1.lname"/>-->
+            <!--<BookingUDFFields>-->
+            <!--<udfName></udfName>-->
+            <!--<udfValue></udfValue>-->
+            <!--</BookingUDFFields>-->
+            <!--<postApprovalStatus></postApprovalStatus>-->
+        </feedAssetBooking>
+
+        <feedResult id="feed.equity.call.0.1m.pending.linkToEvent1.booking16.successToFeed">
+            <fileUploaded id="feed.equity.call.0.1m.pending.linkToEvent1.booking16.result.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedAssetBooking id="feed.bond.delivery.0.1m.pending.linkToEvent2.booking17">
+            <!--<agreementId ref="agreement.id"/>-->
+            <agreementId ref="agrId"/>
+            <!--<counterparty ref="agreement.counterparty"/>-->
+            <assetClass ref="bond.name"/>
+            <assetType ref="bond.usd.name"/>
+            <instrumentID ref="26612.bond.usd.id.2"/>
+            <market>m2</market>
+            <parAmount>100000</parAmount>
+            <!--<imParAmount></imParAmount>-->
+            <movement>Delivery</movement>
+            <settlementDate>2099-09-09</settlementDate>
+            <!--<valuationPerc></valuationPerc>-->
+            <settlementStatus>System Draft</settlementStatus>
+            <linkToEvent>true</linkToEvent>
+            <Event ref="equity.event"/>
+            <!--<Event>54079</Event>-->
+            <!--<description></description-->
+            <!--<description2></description2>-->
+            <!--<description3></description3>-->
+            <!--<settlementComment></settlementComment>-->
+            <!--<settlementDateAbbriviated></settlementDateAbbriviated>-->
+            <!--<creationDate></creationDate>-->
+            <!--<previousTicketId></previousTicketId>-->
+            <!--<moveDescription></moveDescription>-->
+            <!--<placeOfSettlement>place</placeOfSettlement>-->
+            <!--<linkToEvent>true</linkToEvent>-->
+            <!--<Event ref="eventId.return"/>-->
+            <!--<Model></Model>-->
+            <!--<resetDate></resetDate>-->
+            <!--<market></market>-->
+            <!--<WHT></WHT>-->
+            <!--<cashMovementType></cashMovementType>-->
+            <!--<component></component>-->
+            <!--<rehypothecated>true</rehypothecated>-->
+            <!--<assetOwner id="feed.asset.booking.asset.owner" ref="org.issuer1.lname"/>-->
+            <!--<BookingUDFFields>-->
+            <!--<udfName></udfName>-->
+            <!--<udfValue></udfValue>-->
+            <!--</BookingUDFFields>-->
+            <!--<postApprovalStatus></postApprovalStatus>-->
+        </feedAssetBooking>
+
+        <feedResult id="feed.bond.delivery.0.1m.pending.linkToEvent2.booking17.successToFeed">
+            <fileUploaded id="feed.bond.delivery.0.1m.pending.linkToEvent2.booking17.result.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedAssetBooking id="feed.equity.call.0.1m.pending.linkToEvent3.booking18">
+            <!--<agreementId ref="agreement.id"/>-->
+            <agreementId ref="agrId"/>
+            <!--<counterparty ref="agreement.counterparty"/>-->
+            <assetClass ref="equity.name"/>
+            <assetType ref="equity.usd.name"/>
+            <instrumentID ref="26612.equity.usd.id.2"/>
+            <market>m2</market>
+            <parAmount>100000</parAmount>
+            <!--<imParAmount></imParAmount>-->
+            <movement>Call</movement>
+            <settlementDate>2099-09-09</settlementDate>
+            <!--<valuationPerc></valuationPerc>-->
+            <settlementStatus>System Draft</settlementStatus>
+            <linkToEvent>true</linkToEvent>
+            <Event ref="cash.event"/>
+            <!--<Event>55070</Event>-->
+            <!--<description></description-->
+            <!--<description2></description2>-->
+            <!--<description3></description3>-->
+            <!--<settlementComment></settlementComment>-->
+            <!--<settlementDateAbbriviated></settlementDateAbbriviated>-->
+            <!--<creationDate></creationDate>-->
+            <!--<previousTicketId></previousTicketId>-->
+            <!--<moveDescription></moveDescription>-->
+            <!--<placeOfSettlement>place</placeOfSettlement>-->
+            <!--<linkToEvent>true</linkToEvent>-->
+            <!--<Event ref="eventId.return"/>-->
+            <!--<Model></Model>-->
+            <!--<resetDate></resetDate>-->
+            <!--<market></market>-->
+            <!--<WHT></WHT>-->
+            <!--<cashMovementType></cashMovementType>-->
+            <!--<component></component>-->
+            <!--<rehypothecated>true</rehypothecated>-->
+            <!--<assetOwner id="feed.asset.booking.asset.owner" ref="org.issuer1.lname"/>-->
+            <!--<BookingUDFFields>-->
+            <!--<udfName></udfName>-->
+            <!--<udfValue></udfValue>-->
+            <!--</BookingUDFFields>-->
+            <!--<postApprovalStatus></postApprovalStatus>-->
+        </feedAssetBooking>
+
+        <feedResult id="feed.equity.call.0.1m.pending.linkToEvent3.booking18.successToFeed">
+            <fileUploaded id="feed.equity.call.0.1m.pending.linkToEvent3.booking18.result.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <exposureEventDetail id="subCon.agreementRequirement.-1m.PartiallyBooked.firstLeg.1m.secLeg.0.6m">
+            <action>Substitution Confirmation</action>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <element ref="26612.bond.usd.id.withmarket"/>
+            <callStatus>Partially Booked</callStatus>
+            <bookedAmountFirstLeg>-1,000,000.00</bookedAmountFirstLeg>
+            <bookedAmountSecondLeg>600,000.00</bookedAmountSecondLeg>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subReq.agreementRequirement.2m.PartiallyBooked.firstLeg.1.2m.secLeg.1.5m">
+            <action>Substitution Request</action>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <element id="26612.equity.usd.id.withmarket">26612_equity_usd_1,m1</element>
+            <callStatus>Partially Booked</callStatus>
+            <bookedAmountFirstLeg>1,200,000.00</bookedAmountFirstLeg>
+            <bookedAmountSecondLeg>-1,500,000.00</bookedAmountSecondLeg>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subCon.agreementRequirement.0m.PartiallyBooked.firstLeg.1.1m.secLeg.1m">
+            <action>Substitution Confirmation</action>
+            <agreementRequirement>0.00</agreementRequirement>
+            <element ref="cash.usd1.name"/>
+            <callStatus>Partially Booked</callStatus>
+            <bookedAmountFirstLeg>-1,100,000.00</bookedAmountFirstLeg>
+            <bookedAmountSecondLeg>1,000,000.00</bookedAmountSecondLeg>
+        </exposureEventDetail>
+
+        <bookingDetail id="nominalAmount.0.1m">
+            <bookingInformation>
+                <settlementStatusInfo>
+                    <settlementStatus>Query</settlementStatus>
+                    <settlementComment>t</settlementComment>
+                </settlementStatusInfo>
+                <bookingInformationDetail>
+                    <nominalAmount>0.1m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <save>save</save>
+        </bookingDetail>
+
+        <bookingDetail id="nominalAmount.0.8m">
+            <bookingInformation>
+                <settlementStatusInfo>
+                    <settlementStatus>Query</settlementStatus>
+                    <settlementComment>t</settlementComment>
+                </settlementStatusInfo>
+                <bookingInformationDetail>
+                    <nominalAmount>0.8m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <alertHandling></alertHandling>
+            <save>save</save>
+        </bookingDetail>
+
+        <bookingDetail id="nominalAmount.0.2m">
+            <bookingInformation>
+                <settlementStatusInfo>
+                    <settlementStatus>Query</settlementStatus>
+                    <settlementComment>t</settlementComment>
+                </settlementStatusInfo>
+                <bookingInformationDetail>
+                    <nominalAmount>0.2m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+            <save>save</save>
+        </bookingDetail>
+
+        <bookingDetail id="statusChangeToPending">
+            <bookingInformation>
+                <settlementStatusInfo>
+                    <settlementStatus>Pending</settlementStatus>
+                </settlementStatusInfo>
+            </bookingInformation>
+            <save>save</save>
+        </bookingDetail>
+
+        <assetBookingSummary id="bond.return.0.4m.linkToEvent1.booking">
+            <nominalAmount>-400,000.00</nominalAmount>
+            <movement>Return</movement>
+            <assetType ref="bond.usd.name"/>
+            <instrumentId ref="26612.bond.usd.id"/>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="equity.recall.0.3m.linkToEvent2.booking">
+            <nominalAmount>300,000.00</nominalAmount>
+            <movement>Recall</movement>
+            <assetType ref="equity.usd.name"/>
+            <instrumentId ref="26612.equity.usd.id"/>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="cash.return.0.3m.linkToEvent3.booking">
+            <nominalAmount>-300,000.00</nominalAmount>
+            <movement>Return</movement>
+            <assetType ref="cash.usd1.name"/>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="booking16">
+            <nominalAmount>100,000.00</nominalAmount>
+            <movement>Call</movement>
+            <status>System Draft</status>
+            <assetType ref="equity.usd.name"/>
+            <instrumentId ref="26612.equity.usd.id.2"/>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="booking17">
+            <nominalAmount>-100,000.00</nominalAmount>
+            <movement>Delivery</movement>
+            <status>System Draft</status>
+            <assetType ref="bond.usd.name"/>
+            <instrumentId ref="26612.bond.usd.id.2"/>
+        </assetBookingSummary>
+
+        <assetBookingSummary id="booking18">
+            <nominalAmount>100,000.00</nominalAmount>
+            <movement>Call</movement>
+            <status>System Draft</status>
+            <assetType ref="equity.usd.name"/>
+            <instrumentId ref="26612.equity.usd.id.2"/>
+        </assetBookingSummary>
+
+        <exposureEventDetail id="subCon.agreementRequirement.-1m.Completed.firstLeg.0.7m.secLeg.0.7m">
+            <action>Substitution Confirmation</action>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <element ref="26612.bond.usd.id.withmarket"/>
+            <callStatus>Completed</callStatus>
+            <bookedAmountFirstLeg>-700,000.00</bookedAmountFirstLeg>
+            <bookedAmountSecondLeg>700,000.00</bookedAmountSecondLeg>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subReq.agreementRequirement.2m.Completed.firstLeg.1.7m.secLeg.1.6m">
+            <action>Substitution Request</action>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <element ref="26612.equity.usd.id.withmarket"/>
+            <callStatus>Completed</callStatus>
+            <bookedAmountFirstLeg>1,700,000.00</bookedAmountFirstLeg>
+            <bookedAmountSecondLeg>-1,600,000.00</bookedAmountSecondLeg>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="subCon.agreementRequirement.0m.Completed.firstLeg.1m.secLeg.1.1m">
+            <action>Substitution Confirmation</action>
+            <agreementRequirement>0.00</agreementRequirement>
+            <element ref="cash.usd1.name"/>
+            <callStatus>Completed</callStatus>
+            <bookedAmountFirstLeg>-1,000,000.00</bookedAmountFirstLeg>
+            <bookedAmountSecondLeg>1,100,000.00</bookedAmountSecondLeg>
+        </exposureEventDetail>
+
+    </scenarioData>
+</dataBean>

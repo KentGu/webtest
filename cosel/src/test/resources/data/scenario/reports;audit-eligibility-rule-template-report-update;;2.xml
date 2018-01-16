@@ -1,0 +1,789 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <eligibilityRulesTemplateSearch id="eligibility.rule.template.search">
+            <eligibilityRulesTemplateName>
+                <filter id="eligibility.template.name">auditEligibilityRuleTemplateWithAssetType</filter>
+                <linkText ref="eligibility.template.name" />
+            </eligibilityRulesTemplateName>
+        </eligibilityRulesTemplateSearch>
+        <eligibilityRulesTemplate  id="eligibility.rule.template.assettype.source">
+            <templateName ref="eligibility.template.name"/>
+            <collateralAssetClass name="bond">
+                <collateralAssetClassName>qtp_bond</collateralAssetClassName>
+                <collateralAssetType name="bondType">
+                    <collateralAssetTypeName>qtp_bond_usd</collateralAssetTypeName>
+                    <haircutRule>
+                        <haircutAdjustment name="bondHair1">
+                            <valuationPercentage>30</valuationPercentage>
+                        </haircutAdjustment>
+                    </haircutRule>
+                    <concentrationLimitRule name="bondC1">
+                        <rule>Instrument Holding</rule>
+                        <value>100</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule  name="bondC2">
+                        <rule>Type Holding</rule>
+                        <value>1000000</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule name="bondC3">
+                        <rule>Issuance Holding</rule>
+                        <value>20000</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule name="bondC4">
+                        <rule>Issuer Holding</rule>
+                        <value>2000000</value>
+                    </concentrationLimitRule>
+                </collateralAssetType>
+                <concentrationLimitRule name="bondClassC1">
+                    <trigger>6000</trigger>
+                    <value>4000000</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule name="bondClassC2">
+                    <trigger>7000</trigger>
+                    <value>70</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule name="bondClassC3">
+                    <trigger>8000</trigger>
+                    <value>6000000</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule name="bondClassC4">
+                    <trigger>9000</trigger>
+                    <value>80</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule name="bondClassC5">
+                    <trigger>10000</trigger>
+                    <value>7000000</value>
+                </concentrationLimitRule>
+            </collateralAssetClass>
+            <collateralAssetClass name="cash">
+                <collateralAssetClassName>qtp_cash</collateralAssetClassName>
+                <collateralAssetType name="cashType">
+                    <collateralAssetTypeName>CASH-USD</collateralAssetTypeName>
+                    <haircutRule>
+                        <haircutAdjustment name="cashHair1">
+                            <valuationPercentage>10</valuationPercentage>
+                        </haircutAdjustment>
+                    </haircutRule>
+                    <concentrationLimitRule name="cashCl1">
+                        <trigger>1000</trigger>
+                        <value>90</value>
+                    </concentrationLimitRule>
+                </collateralAssetType>
+                <concentrationLimitRule name="cashClassC1">
+                    <trigger>300</trigger>
+                    <value>50</value>
+                </concentrationLimitRule>
+            </collateralAssetClass>
+            <collateralAssetClass name="equity">
+                <collateralAssetClassName>qtp_equity</collateralAssetClassName>
+                <collateralAssetType name="equityType">
+                    <collateralAssetTypeName>qtp_equity_usd</collateralAssetTypeName>
+                    <haircutRule>
+                        <haircutAdjustment name="equityHair1">
+                            <valuationPercentage>5</valuationPercentage>
+                        </haircutAdjustment>
+                    </haircutRule>
+                    <concentrationLimitRule name="equityC1">
+                        <trigger>1000</trigger>
+                        <value>79</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule name="equityC2">
+                        <trigger>2000</trigger>
+                        <value>1000000</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule name="equityC3">
+                        <trigger>3000</trigger>
+                        <value>92</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule name="equityC4">
+                        <trigger>4000</trigger>
+                        <value>57888</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule name="equityC5">
+                        <trigger>5000</trigger>
+                        <value>67</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule name="equityC6">
+                        <trigger>6000</trigger>
+                        <value>6000000</value>
+                    </concentrationLimitRule>
+                </collateralAssetType>
+                <concentrationLimitRule name="equityClassC1">
+                    <trigger>123</trigger>
+                    <value>70</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule name="equityClassC2">
+                    <trigger>333</trigger>
+                    <value>1000000</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule name="equityClassC3">
+                    <trigger>345</trigger>
+                    <value>67</value>
+                </concentrationLimitRule>
+            </collateralAssetClass>
+            <collateralAssetClass name="commodity">
+                <collateralAssetClassName>qtp-commodity</collateralAssetClassName>
+                <collateralAssetType name="commodityType">
+                    <collateralAssetTypeName>qtp-commodity-usd</collateralAssetTypeName>
+                    <haircutRule>
+                        <haircutAdjustment name="commodityHair1">
+                            <valuationPercentage>96</valuationPercentage>
+                        </haircutAdjustment>
+                    </haircutRule>
+                    <concentrationLimitRule name="commodityC1">
+                        <trigger>45346</trigger>
+                        <value>88</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule name="commodityC2">
+                        <trigger>4534</trigger>
+                        <value>6456537</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule name="commodityC3">
+                        <trigger>6345</trigger>
+                        <value>65</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule name="commodityC4">
+                        <trigger>5347</trigger>
+                        <value>477777</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule name="commodityC5">
+                        <trigger>675</trigger>
+                        <value>77</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule name="commodityC6">
+                        <trigger>6653</trigger>
+                        <value>5645768</value>
+                    </concentrationLimitRule>
+                </collateralAssetType>
+                <concentrationLimitRule name="commodityClassC1">
+                    <trigger>5345</trigger>
+                    <value>55</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule name="commodityClassC2">
+                    <trigger>6465</trigger>
+                    <value>1000000</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule name="commodityClassC3">
+                    <trigger>563452</trigger>
+                    <value>78</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule name="commodityClassC4">
+                    <trigger>42356</trigger>
+                    <value>4636</value>
+                </concentrationLimitRule>
+            </collateralAssetClass>
+            <collateralAssetClass name="other">
+                <collateralAssetClassName>qtp_other</collateralAssetClassName>
+                <collateralAssetType name="otherType">
+                    <collateralAssetTypeName>qtp_other_usd</collateralAssetTypeName>
+                    <haircutRule>
+                        <haircutAdjustment name="otherHair1">
+                            <valuationPercentage>10</valuationPercentage>
+                        </haircutAdjustment>
+                    </haircutRule>
+                    <concentrationLimitRule name="otherC1">
+                        <trigger>1000</trigger>
+                        <value>94</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule name="otherC2">
+                        <trigger>2000</trigger>
+                        <value>69</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule name="otherC3">
+                        <trigger>3000</trigger>
+                        <value>87</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule name="otherC4">
+                        <trigger>4000</trigger>
+                        <value>58</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule name="otherC5">
+                        <trigger>5000</trigger>
+                        <value>78</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule name="otherC6">
+                        <trigger>6000</trigger>
+                        <value>4000000</value>
+                    </concentrationLimitRule>
+                </collateralAssetType>
+                <concentrationLimitRule name="otherClassC1">
+                    <trigger>3000</trigger>
+                    <value>488888</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule name="otherClassC2">
+                    <trigger>2567</trigger>
+                    <value>79</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule name="otherClassC3">
+                    <trigger>5555</trigger>
+                    <value>67888</value>
+                </concentrationLimitRule>
+            </collateralAssetClass>
+        </eligibilityRulesTemplate>
+        <eligibilityRulesTemplate id="eligibility.rule.template.assettype.update">
+            <templateName id="eligibility.template.name.update">auditERTemplateWithAssetTypeUpdate</templateName>
+            <gracePeriod>0</gracePeriod>
+            <concentrationLimitTrigger>2000</concentrationLimitTrigger>
+            <concentrationLimitBreachAdjustment>Asset Adjustment</concentrationLimitBreachAdjustment>
+            <useIssueRating>true</useIssueRating>
+            <useIssuerRating>true</useIssuerRating>
+            <applicableAgencies>true</applicableAgencies>
+            <referenceRatingAgencies>Fitch</referenceRatingAgencies>
+            <referenceRatingAgencies>MOODYS</referenceRatingAgencies>
+            <debtClassification>SUB</debtClassification>
+            <selectionOfAgenciesUse>2</selectionOfAgenciesUse>
+            <selectionofAgenciesUseDirection>Lower</selectionofAgenciesUseDirection>
+            <applicationOfRatings>Lower</applicationOfRatings>
+            <collateralAssetClass name="bond">
+                <collateralAssetClassName>qtp_bond</collateralAssetClassName>
+                <collateralAssetType name="bondType">
+                    <collateralAssetTypeName>qtp_bond_usd</collateralAssetTypeName>
+                    <applicableParty>C</applicableParty>
+                    <applicableType>VM</applicableType>
+                    <assetNote1>note1</assetNote1>
+                    <assetNote2>note2</assetNote2>
+                    <assetNote3>note3</assetNote3>
+                    <haircutRule>
+                        <haircutSchedule>
+                            <haircutRule>fixed</haircutRule>
+                            <fixedValuation>89</fixedValuation>
+                        </haircutSchedule>
+                        <haircutAdjustment remove="true">
+                            <valuationPercentage>50</valuationPercentage>
+                        </haircutAdjustment>
+                        <haircutAdjustment name="bondHair1">
+                            <type>Adjust</type>
+                            <instrumentField>InstrumentId</instrumentField>
+                            <rule>NotEqual</rule>
+                            <value>
+                                <filter>qtp-Bond-Usd-Instrument1</filter>
+                                <linkText>qtp-Bond-Usd-Instrument1(qtp_Market)</linkText>
+                            </value>
+                            <operation>Add</operation>
+                            <valuationPercentage>10</valuationPercentage>
+                        </haircutAdjustment>
+                        <haircutAdjustment>
+                            <type>Override</type>
+                            <instrumentField>Currency</instrumentField>
+                            <rule>Equal</rule>
+                            <value>
+                                <filter>USD</filter>
+                                <linkText>USD</linkText>
+                            </value>
+                            <valuationPercentage>80</valuationPercentage>
+                        </haircutAdjustment>
+                    </haircutRule>
+                    <eligibilityRule>
+                        <minimumEligibilityRating>
+                            <agency>SandP</agency>
+                            <rating>A-</rating>
+                        </minimumEligibilityRating>
+                        <minimumEligibilityRating>
+                            <agency>MOODYS</agency>
+                            <rating>B1</rating>
+                        </minimumEligibilityRating>
+                        <minimumEligibilityRating>
+                            <agency>Fitch</agency>
+                            <rating>C</rating>
+                        </minimumEligibilityRating>
+                        <ratingEligibilityMethod>OR</ratingEligibilityMethod>
+                        <minEligibilityCqs>3</minEligibilityCqs>
+                        <issueDate>01/11/2016</issueDate>
+                        <maturityBasis>Residual</maturityBasis>
+                        <maturityTimeType>Months</maturityTimeType>
+                        <maturityTimeValue>3</maturityTimeValue>
+                        <roleCorrelation>Branch</roleCorrelation>
+                        <ultimateParentCorrelation>false</ultimateParentCorrelation>
+                        <closeLinkCorrelation>false</closeLinkCorrelation>
+                        <industryCorrelation>false</industryCorrelation>
+                        <!--<udfRule>-->
+                            <!--<securityUdf></securityUdf>-->
+                            <!--<eligibilityRule></eligibilityRule>-->
+                            <!--<value></value>-->
+                        <!--</udfRule>-->
+                        <eligibleCurrency>USD</eligibleCurrency>
+                        <eligibleCountry>CANADA</eligibleCountry>
+                        <eligibleIssuer>
+                            <filter>QTP_Eligible_Issuer3</filter>
+                            <linkText>QTP_Eligible_Issuer3</linkText>
+                        </eligibleIssuer>
+                        <excludeInstrument>
+                            <filter>qtp-Bond-Usd-Instrument1</filter>
+                            <linkText>qtp-Bond-Usd-Instrument1,qtp_Market</linkText>
+                        </excludeInstrument>
+                    </eligibilityRule>
+                    <concentrationLimitRule remove="true">
+                        <rule>Country Holding</rule>
+                        <value>40.00</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule remove="true">
+                        <rule>Ultimate Parent Holding</rule>
+                        <value>60.00</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule name="bondC1">
+                        <trigger>1k</trigger>
+                        <currency>GBP</currency>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule name="bondC2">
+                        <trigger>2k</trigger>
+                        <currency>EUR</currency>
+                        <to>B2/B</to>
+                        <value>78999</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule name="bondC3">
+                        <trigger>3k</trigger>
+                        <currency>JPY</currency>
+                        <to>B3/B-</to>
+                        <value>2m</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule name="bondC4">
+                        <trigger>4k</trigger>
+                        <currency>TND</currency>
+                        <to>Ca/CC</to>
+                        <value>9m</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule>
+                        <trigger>3k</trigger>
+                        <currency>USD</currency>
+                        <rule>Ultimate Parent Holding</rule>
+                        <to>Ca/CC</to>
+                        <method>Max %</method>
+                        <value>30</value>
+                    </concentrationLimitRule>
+                </collateralAssetType>
+                <concentrationLimitRule name="bondClassC1">
+                    <trigger>2222</trigger>
+                    <currency>GBP</currency>
+                    <value>100</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule name="bondClassC2">
+                    <trigger>3444</trigger>
+                    <currency>TRL</currency>
+                    <rule>Issuer Holding</rule>
+                    <to>A2/A</to>
+                    <value>10</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule name="bondClassC3">
+                    <trigger>5555</trigger>
+                    <currency>TRL</currency>
+                    <to>A2/A</to>
+                    <value>1000000</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule name="bondClassC4">
+                    <trigger>6666</trigger>
+                    <currency>UGS</currency>
+                    <to>A2/A</to>
+                    <value>40</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule name="bondClassC5">
+                    <trigger>7777</trigger>
+                    <currency>UYP</currency>
+                    <to>A2/A</to>
+                    <method>Max %</method>
+                    <value>78</value>
+                </concentrationLimitRule>
+            </collateralAssetClass>
+            <collateralAssetClass  name="cash">
+                <collateralAssetClassName>qtp_cash</collateralAssetClassName>
+                <collateralAssetType name="cashType">
+                    <collateralAssetTypeName>qtp_cash_usd</collateralAssetTypeName>
+                    <applicableParty>C</applicableParty>
+                    <applicableType>VM</applicableType>
+                    <assetNote1>note1</assetNote1>
+                    <assetNote2>note2</assetNote2>
+                    <assetNote3>note3</assetNote3>
+                    <haircutRule>
+                        <haircutSchedule>
+                            <haircutRule>fixed</haircutRule>
+                            <fixedValuation>77</fixedValuation>
+                        </haircutSchedule>
+                        <haircutAdjustment remove="true">
+                            <valuationPercentage>50</valuationPercentage>
+                        </haircutAdjustment>
+                        <haircutAdjustment name="cashHair1">
+                            <type>Adjust</type>
+                            <instrumentField>Currency</instrumentField>
+                            <rule>Equal</rule>
+                            <value>
+                                <filter>USD</filter>
+                                <linkText>USD</linkText>
+                            </value>
+                            <value>
+                                <filter>GBP</filter>
+                                <linkText>GBP</linkText>
+                            </value>
+                            <operation>Add</operation>
+                            <valuationPercentage>30</valuationPercentage>
+                        </haircutAdjustment>
+                    </haircutRule>
+                    <concentrationLimitRule remove="true">
+                        <trigger>100</trigger>
+                        <value>1000000</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule name="cashCl1">
+                        <trigger>1111</trigger>
+                        <currency>FKP</currency>
+                        <value>80</value>
+                    </concentrationLimitRule>
+                </collateralAssetType>
+                <concentrationLimitRule remove="true">
+                    <trigger>200</trigger>
+                    <value>1000000</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule name="cashClassC1">
+                    <trigger>4555</trigger>
+                    <currency>EUR</currency>
+                    <value>60</value>
+                    <group>5</group>
+                </concentrationLimitRule>
+            </collateralAssetClass>
+            <collateralAssetClass name="equity">
+                <collateralAssetClassName>qtp_equity</collateralAssetClassName>
+                <collateralAssetType name="equityType">
+                    <collateralAssetTypeName>qtp_equity_usd</collateralAssetTypeName>
+                    <applicableParty>P</applicableParty>
+                    <applicableType>IM</applicableType>
+                    <assetNote1>note1</assetNote1>
+                    <assetNote2>note2</assetNote2>
+                    <assetNote3>note3</assetNote3>
+                    <haircutRule>
+                        <haircutSchedule>
+                            <haircutRule>fixed</haircutRule>
+                            <fixedValuation>56</fixedValuation>
+                        </haircutSchedule>
+                        <haircutAdjustment remove="true">
+                            <valuationPercentage>90</valuationPercentage>
+                        </haircutAdjustment>
+                        <haircutAdjustment name="equityHair1">
+                            <type>Adjust</type>
+                            <instrumentField>Currency</instrumentField>
+                            <rule>Equal</rule>
+                            <value>
+                                <filter>Principal Transfer Currency</filter>
+                                <linkText>Principal Transfer Currency</linkText>
+                            </value>
+                            <operation>Subtract</operation>
+                            <valuationPercentage>6</valuationPercentage>
+                        </haircutAdjustment>
+                    </haircutRule>
+                    <eligibilityRule>
+                        <minEligibilityCqs>6</minEligibilityCqs>
+                        <roleCorrelation>Branch</roleCorrelation>
+                        <ultimateParentCorrelation>false</ultimateParentCorrelation>
+                        <closeLinkCorrelation>false</closeLinkCorrelation>
+                        <industryCorrelation>false</industryCorrelation>
+                        <!--<udfRule>-->
+                        <!--<securityUdf></securityUdf>-->
+                        <!--<eligibilityRule></eligibilityRule>-->
+                        <!--<value></value>-->
+                        <!--</udfRule>-->
+                        <eligibleCurrency>USD</eligibleCurrency>
+                        <eligibleCountry>CANADA</eligibleCountry>
+                        <eligibleIssuer>
+                            <filter>QTP_Eligible_Issuer2</filter>
+                            <linkText>QTP_Eligible_Issuer2</linkText>
+                        </eligibleIssuer>
+                    </eligibilityRule>
+                    <concentrationLimitRule name="equityC1">
+                        <trigger>1111</trigger>
+                        <currency>GBP</currency>
+                        <value>78</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule name="equityC2">
+                        <trigger>2222</trigger>
+                        <currency>EUR</currency>
+                        <value>78999</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule name="equityC3">
+                        <trigger>3333</trigger>
+                        <currency>USD</currency>
+                        <to>B3/B-</to>
+                        <value>29</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule name="equityC4">
+                        <trigger>4444</trigger>
+                        <currency>TND</currency>
+                        <to>Ca/CC</to>
+                        <value>9m</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule name="equityC5">
+                        <trigger>5555</trigger>
+                        <currency>USD</currency>
+                        <to>Ca/CC</to>
+                        <value>93</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule name="equityC6">
+                        <trigger>6666</trigger>
+                        <currency>TND</currency>
+                        <to>Ca/CC</to>
+                        <value>9m</value>
+                    </concentrationLimitRule>
+                </collateralAssetType>
+                <concentrationLimitRule remove="true">
+                    <trigger>555</trigger>
+                    <value>2000000</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule remove="true">
+                    <trigger>666</trigger>
+                    <value>4000000</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule name="equityClassC1" >
+                    <trigger>2222</trigger>
+                    <currency>GBP</currency>
+                    <value>66</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule name="equityClassC2">
+                    <trigger>3444</trigger>
+                    <currency>TRL</currency>
+                    <to>A2/A</to>
+                    <value>107777</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule name="equityClassC3">
+                    <trigger>6666</trigger>
+                    <currency>UYP</currency>
+                    <to>A2/A</to>
+                    <value>60</value>
+                </concentrationLimitRule>
+            </collateralAssetClass>
+            <collateralAssetClass name="commodity">
+                <collateralAssetClassName>qtp-commodity</collateralAssetClassName>
+                <collateralAssetType name="commodityType">
+                    <collateralAssetTypeName>qtp-commodity-usd</collateralAssetTypeName>
+                    <applicableParty>C</applicableParty>
+                    <applicableParty>P</applicableParty>
+                    <applicableType>VM</applicableType>
+                    <applicableType>IM</applicableType>
+                    <assetNote1>note1</assetNote1>
+                    <assetNote2>note2</assetNote2>
+                    <assetNote3>note3</assetNote3>
+                    <haircutRule>
+                        <haircutSchedule>
+                            <haircutRule>fixed</haircutRule>
+                            <fixedValuation>56</fixedValuation>
+                        </haircutSchedule>
+                        <haircutAdjustment name="commodityHair1">
+                            <value>
+                                <filter>USD</filter>
+                                <linkText>USD</linkText>
+                            </value>
+                            <valuationPercentage>78</valuationPercentage>
+                        </haircutAdjustment>
+                        <haircutAdjustment>
+                            <type>Adjust</type>
+                            <instrumentField>Currency</instrumentField>
+                            <rule>NotEqual</rule>
+                            <value>
+                                <filter>Principal Transfer Currency</filter>
+                                <linkText>Principal Transfer Currency</linkText>
+                            </value>
+                            <operation>Subtract</operation>
+                            <valuationPercentage>6</valuationPercentage>
+                        </haircutAdjustment>
+                    </haircutRule>
+                    <eligibilityRule>
+                        <minEligibilityCqs>6</minEligibilityCqs>
+                        <roleCorrelation>Branch</roleCorrelation>
+                        <ultimateParentCorrelation>false</ultimateParentCorrelation>
+                        <closeLinkCorrelation>false</closeLinkCorrelation>
+                        <industryCorrelation>false</industryCorrelation>
+                        <!--<udfRule>-->
+                        <!--<securityUdf></securityUdf>-->
+                        <!--<eligibilityRule></eligibilityRule>-->
+                        <!--<value></value>-->
+                        <!--</udfRule>-->
+                        <eligibleCurrency>USD</eligibleCurrency>
+                        <eligibleCountry>CANADA</eligibleCountry>
+                        <eligibleIssuer>
+                            <filter>QTP_Eligible_Issuer2</filter>
+                            <linkText>QTP_Eligible_Issuer2</linkText>
+                        </eligibleIssuer>
+                    </eligibilityRule>
+                    <concentrationLimitRule name="commodityC1">
+                        <trigger>1k</trigger>
+                        <currency>GBP</currency>
+                        <to>A3/A-</to>
+                        <value>78</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule name="commodityC2">
+                        <trigger>2k</trigger>
+                        <currency>EUR</currency>
+                        <rule>Type Holding</rule>
+                        <to>B2/B</to>
+                        <value>78999</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule name="commodityC3">
+                        <trigger>3k</trigger>
+                        <currency>USD</currency>
+                        <to>B3/B-</to>
+                        <value>80</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule name="commodityC4">
+                        <trigger>4k</trigger>
+                        <currency>TND</currency>
+                        <to>Ca/CC</to>
+                        <value>9m</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule name="commodityC5">
+                        <trigger>5k</trigger>
+                        <currency>TND</currency>
+                        <to>Ca/CC</to>
+                        <value>90</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule name="commodityC6">
+                        <trigger>4k</trigger>
+                        <currency>TND</currency>
+                        <to>Ca/CC</to>
+                        <value>9m</value>
+                    </concentrationLimitRule>
+                </collateralAssetType>
+                <concentrationLimitRule remove="true">
+                    <trigger>5222</trigger>
+                    <value>99</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule name="commodityClassC1">
+                    <trigger>1111</trigger>
+                    <currency>GBP</currency>
+                    <value>66</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule name="commodityClassC2">
+                    <trigger>2222</trigger>
+                    <currency>TRL</currency>
+                    <to>A2/A</to>
+                    <value>8m</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule name="commodityClassC3">
+                    <trigger>3333</trigger>
+                    <currency>UYP</currency>
+                    <to>A2/A</to>
+                    <value>56</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule name="commodityClassC4">
+                    <trigger>4444</trigger>
+                    <currency>UYP</currency>
+                    <to>A2/A</to>
+                    <method>Max Value</method>
+                    <value>3m</value>
+                </concentrationLimitRule>
+            </collateralAssetClass>
+            <collateralAssetClass name="other">
+                <collateralAssetClassName>qtp_other</collateralAssetClassName>
+                <collateralAssetType name="otherType">
+                    <collateralAssetTypeName>qtp_other_usd</collateralAssetTypeName>
+                    <applicableParty>P</applicableParty>
+                    <applicableType>VM</applicableType>
+                    <assetNote1>note1</assetNote1>
+                    <assetNote2>note2</assetNote2>
+                    <assetNote3>note3</assetNote3>
+                    <haircutRule>
+                        <haircutSchedule>
+                            <haircutRule>fixed</haircutRule>
+                            <fixedValuation>78</fixedValuation>
+                        </haircutSchedule>
+                        <haircutAdjustment name="otherHair1">
+                            <rule>NotEqual</rule>
+                            <value>
+                                <filter>USD</filter>
+                                <linkText>USD</linkText>
+                            </value>
+                            <operation>Add</operation>
+                            <valuationPercentage>20</valuationPercentage>
+                        </haircutAdjustment>
+                        <haircutAdjustment>
+                            <type>Override</type>
+                            <instrumentField>Currency</instrumentField>
+                            <rule>Equal</rule>
+                            <value>
+                                <filter>EUR</filter>
+                                <linkText>EUR</linkText>
+                            </value>
+                            <valuationPercentage>90</valuationPercentage>
+                        </haircutAdjustment>
+                    </haircutRule>
+                    <eligibilityRule>
+                        <minEligibilityCqs>6</minEligibilityCqs>
+                        <roleCorrelation>Dealer</roleCorrelation>
+                        <ultimateParentCorrelation>false</ultimateParentCorrelation>
+                        <closeLinkCorrelation>false</closeLinkCorrelation>
+                        <industryCorrelation>false</industryCorrelation>
+                        <eligibleCurrency>USD</eligibleCurrency>
+                        <eligibleCountry>EGYPT</eligibleCountry>
+                    </eligibilityRule>
+                    <concentrationLimitRule name="otherC1">
+                        <trigger>1111</trigger>
+                        <currency>USD</currency>
+                        <to>A3/A-</to>
+                        <value>11</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule name="otherC2">
+                        <trigger>2222</trigger>
+                        <currency>USD</currency>
+                        <to>A3/A-</to>
+                        <value>22</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule name="otherC3">
+                        <trigger>3333</trigger>
+                        <currency>USD</currency>
+                        <to>A3/A-</to>
+                        <value>33</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule name="otherC4">
+                        <trigger>4444</trigger>
+                        <currency>USD</currency>
+                        <to>A3/A-</to>
+                        <value>44</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule name="otherC5">
+                        <trigger>5555</trigger>
+                        <currency>USD</currency>
+                        <to>A3/A-</to>
+                        <value>55</value>
+                    </concentrationLimitRule>
+                    <concentrationLimitRule name="otherC6">
+                        <trigger>6666</trigger>
+                        <currency>USD</currency>
+                        <to>A3/A-</to>
+                        <value>6000000</value>
+                    </concentrationLimitRule>
+                </collateralAssetType>
+                <concentrationLimitRule remove="true">
+                    <trigger>6784</trigger>
+                    <value>86</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule remove="true">
+                    <trigger>532555</trigger>
+                    <value>866666</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule name="otherClassC1">
+                    <trigger>1000</trigger>
+                    <currency>USD</currency>
+                    <value>1m</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule name="otherClassC2">
+                    <trigger>2000</trigger>
+                    <currency>USD</currency>
+                    <to>A3/A-</to>
+                    <value>20</value>
+                </concentrationLimitRule>
+                <concentrationLimitRule name="otherClassC3">
+                    <trigger>3000</trigger>
+                    <currency>USD</currency>
+                    <to>A3/A-</to>
+                    <value>3m</value>
+                </concentrationLimitRule>
+            </collateralAssetClass>
+        </eligibilityRulesTemplate>
+
+        <auditEligibilityRuleTemplateReportFilter id="audit.eligibility.rule.template.report.by.template">
+            <template ref="eligibility.template.name.update"/>
+            <startDate>t-1000</startDate>
+        </auditEligibilityRuleTemplateReportFilter>
+        <variable id="auditReportPath" />
+        <reportValidationRules id="reportRule">
+        </reportValidationRules>
+    </scenarioData>
+</dataBean>

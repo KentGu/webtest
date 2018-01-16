@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <agreementSearch id="filter.with.description">
+            <description>
+                <filter>etf_agr_audit_update</filter>
+            </description>
+        </agreementSearch>
+        <agreement id="agreement.etf">
+            <agreementDescription>etf_agr_audit_update</agreementDescription>
+            <collateralAssetClass name="className1">
+                <collateralAssetClassName>qtp_bond</collateralAssetClassName>
+                <collateralAssetType name="typeName1">
+                    <collateralAssetTypeName>qtp_bond_usd</collateralAssetTypeName>
+                </collateralAssetType>
+            </collateralAssetClass>
+        </agreement>
+        <agreement id="agreement.etf.with.all.contents.update">
+            <principal>
+                <filter>QTPPrincipal</filter>
+                <linkText>QTPPrincipal</linkText>
+            </principal>
+            <counterparty>
+                <filter>QTPCounterparty</filter>
+                <linkText>QTPCounterparty</linkText>
+            </counterparty>
+            <custodian>
+                <filter>QTPCustodian</filter>
+                <linkText>QTPCustodian</linkText>
+            </custodian>
+            <!--<businessLine>ETF</businessLine>-->
+
+            <regulatoryAgreement>true</regulatoryAgreement>
+            <agreedJurisdiction>
+                <filter>Dodd Frank</filter>
+                <linkText>Dodd Frank</linkText>
+            </agreedJurisdiction>
+            <otherJurisdiction>
+                <filter>EMIR</filter>
+                <linkText>EMIR</linkText>
+            </otherJurisdiction>
+            <individualOrders>1</individualOrders>
+            <individualOrderMessage>
+                <accept>true</accept>
+            </individualOrderMessage>
+            <agreementDescription id="agr.des">etf_agr_audit_update</agreementDescription>
+            <!--<agreementDescription id="agr.des" prefix="etf_agr" random="true"/>-->
+            <group>smoke</group>
+            <region>smoke</region>
+            <category>IR Swaps</category>
+            <collateralManager>QTPPrincipal - qtp_Label_120141015192348</collateralManager>
+            <notes>note</notes>
+            <agreementName ref="agr.des"/>
+            <externalId ref="agr.des"/>
+            <rank>1</rank>
+            <linkageSet>L1</linkageSet>
+            <principalInformation>
+                <partyBranch>QTPPrincipalBranch1</partyBranch>
+                <partyNav>1m</partyNav>
+                <partyNavCurrency>GBP</partyNavCurrency>
+                <valuationAgent>true</valuationAgent>
+            </principalInformation>
+            <counterpartyInformation>
+                <partyBranch>QTPCounterpartyBranch2</partyBranch>
+                <partyNav>2m</partyNav>
+                <partyNavCurrency>JPY</partyNavCurrency>
+                <valuationAgent>false</valuationAgent>
+            </counterpartyInformation>
+            <masterDocumentation>GMRA 1995</masterDocumentation>
+            <creditSupportDocumentation>95 ISDA CSA English Law</creditSupportDocumentation>
+            <signoffDate>T</signoffDate>
+            <reciprocity>Unilateral IM in favour of Principal</reciprocity>
+            <signoffBy>name</signoffBy>
+            <agreementDate>T</agreementDate>
+            <principalTransferCurrency>EUR</principalTransferCurrency>
+            <counterpartyTransferCurrency>EUR</counterpartyTransferCurrency>
+            <type>Title Transfer Agreement</type>
+            <rehypothecationRights>true</rehypothecationRights>
+            <signoffNotes>signoffNotes</signoffNotes>
+            <segregation>true</segregation>
+            <flush>true</flush>
+            <fxRate>qtp_FxRate</fxRate>
+            <interestLetter>Model</interestLetter>
+            <eventAggregation>Model</eventAggregation>
+            <priceSource>Default</priceSource>
+            <sendConfirmationLetterToCounterparty>true</sendConfirmationLetterToCounterparty>
+            <sendConfirmationLetterToCustodian>true</sendConfirmationLetterToCustodian>
+            <custodianInformation>
+                <primaryContact>QTPCustodian</primaryContact>
+            </custodianInformation>
+            <callFrequency>
+                <legalReviewFrequency>Daily</legalReviewFrequency>
+                <notificationTime>11.00</notificationTime>
+                <resolutionTime>10.00</resolutionTime>
+                <resolutionTimeType>Same Day</resolutionTimeType>
+            </callFrequency>
+            <timeZone>CET</timeZone>
+            <holidayCentre>HONG KONG</holidayCentre>
+            <!--<clientReleaseRequired>false</clientReleaseRequired>-->
+            <defaultTradeValuationRule>Counterparty Valuation Amount</defaultTradeValuationRule>
+            <sharesPerCreationUnit>2</sharesPerCreationUnit>
+            <tradeMappingRuleFlag>true</tradeMappingRuleFlag>
+            <tradeMappingRule>
+                <field>Trade Date</field>
+                <rule>Equal</rule>
+                <value>T</value>
+                <operator>END</operator>
+            </tradeMappingRule>
+            <agreementIA>
+            </agreementIA>
+            <tradeCalcRule>
+                <includeFailedTradeValuations>true</includeFailedTradeValuations>
+            </tradeCalcRule>
+            <product>
+                <productName>qtp_Etf</productName>
+                <exposurePercentageMTM>100</exposurePercentageMTM>
+                <includeValuation>true</includeValuation>
+                <feeCalculationMethodology>Fixed Value</feeCalculationMethodology>
+                <externalIADetail>
+                    <principalUpfronts>true</principalUpfronts>
+                    <fixedValue>1k</fixedValue>
+                </externalIADetail>
+            </product>
+
+            <interest>true</interest>
+            <interestCalculationsMethod>Compound</interestCalculationsMethod>
+            <calculationRule>Last Business Day</calculationRule>
+            <payMethod>Capitalise</payMethod>
+            <receiveMethod>Capitalise</receiveMethod>
+            <interestSettlementDate>T+2</interestSettlementDate>
+            <allowNegativeEffectiveInterestRate>true</allowNegativeEffectiveInterestRate>
+            <concentrationLimitTrigger>4k</concentrationLimitTrigger>
+            <ratingMethod>
+                <useIssuerRating>true</useIssuerRating>
+                <useIssueRating>true</useIssueRating>
+            </ratingMethod>
+            <eligibilityRulesTemplate>net_eligibility_rule</eligibilityRulesTemplate>
+            <gracePeriod>0</gracePeriod>
+            <applicableAgencies>true</applicableAgencies>
+            <collateralApplicableAgency>
+                <referenceRatingAgencies>MOODYS</referenceRatingAgencies>
+                <referenceRatingAgencies>SandP</referenceRatingAgencies>
+                <debtClassification>SUB</debtClassification>
+                <selectionOfAgencyUseValue>3</selectionOfAgencyUseValue>
+                <selectionOfAgencyUseType>Lower</selectionOfAgencyUseType>
+                <applicationOfRatings>Higher</applicationOfRatings>
+            </collateralApplicableAgency>
+
+            <collateralAssetClass name="className1">
+                <collateralAssetClassName>qtp_bond</collateralAssetClassName>
+                <collateralAssetType name="typeName1">
+                    <collateralAssetTypeName>qtp_bond_usd</collateralAssetTypeName>
+                    <templateVsAgreementEligibilityRules>Template + Agreement</templateVsAgreementEligibilityRules>
+                    <assetNote1>note1</assetNote1>
+                    <assetNote2>note2</assetNote2>
+                    <assetNote3>note3</assetNote3>
+                    <haircutRule>
+                        <haircutSchedule>
+                            <haircutRule>fixed</haircutRule>
+                            <fixedValuation>98</fixedValuation>
+                        </haircutSchedule>
+                        <haircutAdjustment>
+                            <type>Adjust</type>
+                            <instrumentField>Currency</instrumentField>
+                            <rule>Equal</rule>
+                            <value>
+                                <filter>USD</filter>
+                                <linkText>USD</linkText>
+                            </value>
+                            <operation>Add</operation>
+                            <valuationPercentage>5</valuationPercentage>
+                        </haircutAdjustment>
+                    </haircutRule>
+                    <eligibilityRule>
+                        <minimumEligibilityRating>
+                            <agency>SandP</agency>
+                            <rating>A</rating>
+                        </minimumEligibilityRating>
+                        <minimumEligibilityRating>
+                            <agency>MOODYS</agency>
+                            <rating>A1</rating>
+                        </minimumEligibilityRating>
+                        <minimumEligibilityRating>
+                            <agency>Fitch</agency>
+                            <rating>A-</rating>
+                        </minimumEligibilityRating>
+                        <ratingEligibilityMethod>OR</ratingEligibilityMethod>
+                        <minEligibilityCqs>5</minEligibilityCqs>
+                        <issueDate>T</issueDate>
+                        <maturityBasis>From Issue Date</maturityBasis>
+                        <maturityTimeValue>4</maturityTimeValue>
+                        <maturityTimeType>Days</maturityTimeType>
+                        <roleCorrelation>Branch</roleCorrelation>
+                        <ultimateParentCorrelation>true</ultimateParentCorrelation>
+                        <closeLinkCorrelation>true</closeLinkCorrelation>
+                        <industryCorrelation>true</industryCorrelation>
+                        <udfRule>
+                            <securityUdf>UDF 1</securityUdf>
+                            <eligibilityRule>Equal</eligibilityRule>
+                            <value>UDF1</value>
+                        </udfRule>
+                        <eligibleCurrency>GBP</eligibleCurrency>
+                        <eligibleCountry>CHINA</eligibleCountry>
+                        <eligibleIssuer>
+                            <filter>QTP_Eligible_Issuer</filter>
+                            <linkText>QTP_Eligible_Issuer</linkText>
+                        </eligibleIssuer>
+                    </eligibilityRule>
+                    <concentrationLimitRule>
+                        <trigger>1k</trigger>
+                        <currency>GBP</currency>
+                        <rule>Issuance Holding</rule>
+                        <to>A/A2</to>
+                        <method>Min Issuance</method>
+                        <value>1m</value>
+                        <group>1</group>
+                    </concentrationLimitRule>
+                </collateralAssetType>
+                <concentrationLimitRule>
+                    <trigger>2k</trigger>
+                    <currency>EUR</currency>
+                    <rule>Class Holding</rule>
+                    <method>Max Value</method>
+                    <value>7m</value>
+                </concentrationLimitRule>
+            </collateralAssetClass>
+
+            <principalFixedTrigger>
+                <fixedValues>
+                    <minimumTransfer>
+                        <percentageOfNAV>10</percentageOfNAV>
+                    </minimumTransfer>
+                    <roundingAmount>100</roundingAmount>
+                </fixedValues>
+            </principalFixedTrigger>
+            <counterpartyFixedTrigger>
+                <timeContingentValues>
+                    <row>
+                        <minimumTransfer>2k</minimumTransfer>
+                        <minimumTransferType>Fixed</minimumTransferType>
+                    </row>
+                </timeContingentValues>
+            </counterpartyFixedTrigger>
+
+            <additionalField>
+                <fieldName>Date</fieldName>
+                <value>date</value>
+            </additionalField>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Call/Return</direction>
+                <bucket>
+                    <filter>IM Call/Return</filter>
+                    <linkText>IM Call/Return</linkText>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Net</bookingType>
+                <direction>Delivery/Recall</direction>
+                <bucket>
+                    <filter>IM Call/Return</filter>
+                    <linkText>IM Call/Return</linkText>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter>IM Call/Return</filter>
+                    <linkText>IM Call/Return</linkText>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Interest</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter>IM Call/Return</filter>
+                    <linkText>IM Call/Return</linkText>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Fee</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter>IM Call/Return</filter>
+                    <linkText>IM Call/Return</linkText>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Fee</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter>IM Call/Return</filter>
+                    <linkText>IM Call/Return</linkText>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Cash Component</bookingType>
+                <direction>Pay</direction>
+                <bucket>
+                    <filter>IM Call/Return</filter>
+                    <linkText>IM Call/Return</linkText>
+                </bucket>
+            </settlementBucket>
+            <settlementBucket>
+                <bookingType>Cash Component</bookingType>
+                <direction>Receive</direction>
+                <bucket>
+                    <filter>IM Call/Return</filter>
+                    <linkText>IM Call/Return</linkText>
+                </bucket>
+            </settlementBucket>
+            <!--<distributionTask>-->
+                <!--<distributionTaskName>ext_freq_2</distributionTaskName>-->
+                <!--<report>Exposures</report>-->
+                <!--<frequency>Daily</frequency>-->
+                <!--<businessAdjustType>RollForward</businessAdjustType>-->
+                <!--<medium>Email</medium>-->
+                <!--<principalContact>-->
+                    <!--<primaryContact>QTPPrincipal</primaryContact>-->
+                    <!--<ccEmailContact>ALL</ccEmailContact>-->
+                <!--</principalContact>-->
+                <!--<counterpartyContact>-->
+                    <!--<primaryContact>QTPCounterparty</primaryContact>-->
+                    <!--<ccEmailContact>ALL</ccEmailContact>-->
+                <!--</counterpartyContact>-->
+            <!--</distributionTask>-->
+            <letterAndDeliveryGroupDetails>
+                <letterDistributionMedium>Email</letterDistributionMedium>
+            </letterAndDeliveryGroupDetails>
+            <payFourEyeConditions>
+                <conditionRule>Max Value</conditionRule>
+                <fixedValue>
+                    <amount>10m</amount>
+                </fixedValue>
+                <percentageOftotalExposure>30</percentageOftotalExposure>
+            </payFourEyeConditions>
+            <receiveFourEyeConditions>
+                <conditionRule>Min Value</conditionRule>
+                <fixedValue>
+                    <amount>2m</amount>
+                </fixedValue>
+                <percentageOftotalExposure>40</percentageOftotalExposure>
+            </receiveFourEyeConditions>
+            <agreementStatus>Pending</agreementStatus>
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Pending</statementStatus>
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+
+        <auditAgreementsReportFilter id="audit.agreement.by.description">
+            <agreementDescription>
+                <filter ref="agr.des"/>
+            </agreementDescription>
+            <startDate>t-1</startDate>
+        </auditAgreementsReportFilter>
+        <variable id="auditReportPath"/>
+        <reportValidationRules id="reportRule">
+
+        </reportValidationRules>
+    </scenarioData>
+</dataBean>

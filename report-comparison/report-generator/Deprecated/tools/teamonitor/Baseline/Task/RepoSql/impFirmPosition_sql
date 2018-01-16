@@ -1,0 +1,5 @@
+pre#FirmPosition_Before#select count(1) from COLFIRMPOSITION f inner join colrefdata d ON f.book = d.id and d.refdatavalue in ('Book1','Book2','Book3','Book4','Book5')
+
+post#FirmPosition_After#select count(1) from COLFIRMPOSITION f inner join colrefdata d ON f.book = d.id and d.refdatavalue in ('Book1','Book2','Book3','Book4','Book5')
+
+val#1#`expr ${FirmPosition_After} - ${FirmPosition_Before}`

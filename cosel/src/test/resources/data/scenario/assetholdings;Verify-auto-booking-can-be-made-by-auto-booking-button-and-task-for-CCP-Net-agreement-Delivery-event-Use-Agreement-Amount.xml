@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+		  xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+	<xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+	<xi:include href="../feature/assetHoldings.xml" xpointer="element(/1/1)"/>
+	<!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+	<scenarioData>
+
+		<agreement id="agr12183.notnet">
+			<agreementId id="agr12183.id">2559</agreementId>
+		</agreement>
+
+		<exposureEventDetail id="delivery.1000000">
+			<action>Delivery</action>
+			<agreementRequirement>-1,000,000.00</agreementRequirement>
+			<eventId id="agr12183.delivery.event"/>
+		</exposureEventDetail>
+
+		<marginLetter id="createDeliveryLetter">
+			<letterType>Margin Delivery</letterType>
+		</marginLetter>
+
+		<exposureEventSearch id="agr12183.confirmed">
+			<agrId ref="agr12183.id"/>
+		</exposureEventSearch>
+
+		<exposureEventDetail id="delivery.CpyAmount">
+			<action>Delivery</action>
+			<counterpartyAmount>0.00</counterpartyAmount>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="delivery.CpyAmount.1100000">
+			<action>Delivery</action>
+			<counterpartyAmount>-1100000</counterpartyAmount>
+		</exposureEventDetail>
+
+		<exposureManagementMessage id="delivery.autoBookingSuccess">
+			<messageSummary>
+				<unsuccessfulAccount>0</unsuccessfulAccount>
+				<successfulAccount>1</successfulAccount>
+			</messageSummary>
+			<messageDetail>
+				<source>Auto Book</source>
+				<message>Princ:QTPPrincipal/Cpty:QTPCounterparty/Desc:12183_1/AgrId:2559/Event:Delivery CASH-USD Delivery -1,000,000.00 auto booking created.</message>
+			</messageDetail>
+		</exposureManagementMessage>
+
+		<assetBookingSummary id="asset.type.cash.USD">
+			<assetType ref="cash.usd1.name"/>
+		</assetBookingSummary>
+
+		<assetBookingSummary id="delivery.autoBook.pendingSettlement.1000000.open">
+			<assetType ref="cash.usd1.name"/>
+			<movement>Delivery</movement>
+			<status>Pending Settlement</status>
+			<bookingSource>Auto Book</bookingSource>
+		</assetBookingSummary>
+
+		<assetBookingSummary id="delivery.autoBook.pendingSettlement.1000000.added">
+			<assetType ref="cash.usd1.name"/>
+			<movement>Delivery</movement>
+			<status>Pending Settlement</status>
+			<bookingSource>Auto Book</bookingSource>
+			<marketValue>-1,000,000.00</marketValue>
+			<collateralValue>-1,000,000.00</collateralValue>
+			<creationDate>t</creationDate>
+		</assetBookingSummary>
+		
+		<bookingDetail id="booking.delivery.1m.autoAdd">
+			<bookingInformation>
+				<!--<eventId ref="agr12183.delivery.event"/>-->
+				<bookingInformationDetail>
+					<movement>Delivery</movement>
+					<nominalAmount>-1,000,000.00</nominalAmount>
+				</bookingInformationDetail>
+				<bookingSource>Auto Book</bookingSource>
+				<settlementDate>t</settlementDate>
+				<assetNotes2>2</assetNotes2>
+				<assetNotes3>3</assetNotes3>
+			</bookingInformation>
+		</bookingDetail>
+
+		<bookingDetail id="booking.delivery.1m.cancelled">
+			<bookingInformation>
+				<settlementStatusInfo>
+					<settlementComment>t</settlementComment>
+					<settlementStatus>Cancelled</settlementStatus>
+				</settlementStatusInfo>
+			</bookingInformation>
+			<save>save</save>
+		</bookingDetail>
+
+		<!--<assetBookingSummary id="delivery.booking.pendingSettlement">-->
+			<!--<assetType ref="cash.usd1.name"/>-->
+			<!--<movement>Delivery</movement>-->
+			<!--<status>Pending Settlement</status>-->
+		<!--</assetBookingSummary>-->
+
+		<!--<bookingDetail id="delivery.booking.cancelled">-->
+			<!--<bookingInformation>-->
+				<!--<settlementStatusInfo>-->
+					<!--<settlementStatus>Cancelled</settlementStatus>-->
+					<!--<settlementComment random="true"/>-->
+				<!--</settlementStatusInfo>-->
+			<!--</bookingInformation>-->
+			<!--<save>save</save>-->
+		<!--</bookingDetail>-->
+
+		<taskSchedulerDetail id="resetEEforAgr12183">
+			<taskName>External Exposures Reset</taskName>
+			<misc1 ref="agr12183.id"/>
+		</taskSchedulerDetail>
+
+		<taskSchedulerMessage id="resetEEforAgr12183.success">
+			<message>Ext Exp Reset: Ext Exp Reset Task Initiated. [^,]*</message>
+		</taskSchedulerMessage>
+
+		<agreement id="agr12183">
+			<statementStatus>Approved</statementStatus>
+		</agreement>
+
+		<exposureEventDetail id="delivery.1000000.pendingReview">
+			<action>Delivery</action>
+			<agreementRequirement>-1,000,000.00</agreementRequirement>
+			<counterpartyAmount>0.00</counterpartyAmount>
+			<!--<callStatus>Pending Review</callStatus>-->
+			<eventId id="agr12183.delivery.event2"/>
+		</exposureEventDetail>
+
+		<exposureEventSearch id="agr12183.confirmed.2">
+			<agrId ref="agr12183.id"/>
+		</exposureEventSearch>
+
+		<exposureEventDetail id="delivery.1000000.confirmed">
+			<eventId ref="agr12183.delivery.event2"/>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="delivery.CpyAmount.confirmed">
+			<eventId ref="agr12183.delivery.event2"/>
+			<counterpartyAmount>0.00</counterpartyAmount>
+		</exposureEventDetail>
+
+		<exposureEventDetail id="delivery.CpyAmount.1100000.confirmed">
+			<eventId ref="agr12183.delivery.event2"/>
+			<counterpartyAmount>-1100000</counterpartyAmount>
+		</exposureEventDetail>
+
+		<taskSchedulerDetail id="autoBookCashforAgr12183">
+			<taskName>Auto Book Cash</taskName>
+			<misc1 ref="agr12186.id"/>
+		</taskSchedulerDetail>
+
+		<taskSchedulerMessage id="autoBookCashforAgr12183.success">
+			<message>Auto Book Cash: Auto Book Cash Task Finished with 1 successful [^,]*</message>
+		</taskSchedulerMessage>
+
+		<bookingDetail id="booking.delivery.1m.autoAddByTask">
+			<bookingInformation>
+				<eventId ref="agr12183.delivery.event2"/>
+				<bookingInformationDetail>
+					<movement>Delivery</movement>
+					<nominalAmount>-1,000,000.00</nominalAmount>
+				</bookingInformationDetail>
+				<bookingSource>Auto Book</bookingSource>
+				<settlementDate>t</settlementDate>
+				<assetNotes2>2</assetNotes2>
+				<assetNotes3>3</assetNotes3>
+			</bookingInformation>
+		</bookingDetail>
+
+	</scenarioData>
+</dataBean>

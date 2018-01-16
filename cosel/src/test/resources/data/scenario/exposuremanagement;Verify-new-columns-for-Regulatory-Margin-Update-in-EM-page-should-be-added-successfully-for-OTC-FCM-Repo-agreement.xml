@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <securitySearch id="27951.bond.usd">
+            <matured>All</matured>
+            <instrument>
+                <filter id="27951.bond.usd.id">27951_bond_usd_1</filter>
+                <!--<linkText ref="26527.bond.usd"/>-->
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="27951.bond.usd.approve">
+            <instrument ref="27951.bond.usd.id"/>
+        </securitySearchResult>
+
+        <instrument id="27951.bond.usd.changeMaturityDate.tPlus3">
+            <maturityDate>t+3</maturityDate>
+        </instrument>
+
+        <securitySearch id="27951.equity.usd">
+            <matured>All</matured>
+            <instrument>
+                <filter id="27951.equity.usd.id">27951_equity_usd_1</filter>
+                <!--<linkText ref="29482.equity.usd.id"/>-->
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="27951.equity.usd.approve">
+            <instrument ref="27951.equity.usd.id"/>
+        </securitySearchResult>
+
+        <instrument id="27951.equity.usd.changeMaturityDate.tPlus3">
+            <maturityDate>t+3</maturityDate>
+        </instrument>
+
+        <exposureEventSearch id="agr27951_1.otc.net.agr27951_3.repo.agr27951_2.octNotnet">
+            <agrId id="agrid">2622,2623,2627</agrId>
+        </exposureEventSearch>
+
+        <exposureEventDetail id="AdjustedCollateralValuePrcVM">
+            <column>Adjusted Collateral Value Prc VM</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="AdjustedCollateralValuePrcIM">
+            <column>Adjusted Collateral Value Prc IM</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="AdjustedCollateralValueCptyVM">
+            <column>Adjusted Collateral Value Cpty VM</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="AdjustedCollateralValueCptyIM">
+            <column>Adjusted Collateral Value Cpty IM</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="grossCalc">
+            <column>Gross Calc</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="agr27951_1.recall.AdjustedCollateralValueForPrcAndCpty.0">
+            <externalId id="agr1.externalID">27951_1</externalId>
+            <action>Recall</action>
+            <grossCalc>Net</grossCalc>
+            <adjustedCollateralValuePrcVM>0.00</adjustedCollateralValuePrcVM>
+            <adjustedCollateralValuePrcIM>0.00</adjustedCollateralValuePrcIM>
+            <adjustedCollateralValueCptyVM>0.00</adjustedCollateralValueCptyVM>
+            <adjustedCollateralValueCptyIM>0.00</adjustedCollateralValueCptyIM>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="agr27951_2.vmRecall.AdjustedCollateralValueForPrcVm.1m.im.3m.AdjustedCollateralValueForCpty.3m.im.2m">
+            <externalId id="agr2.externalID">27951_2</externalId>
+            <action>VM Recall</action>
+            <grossCalc>Gross(Gross)</grossCalc>
+            <adjustedCollateralValuePrcVM>1,000,000.00</adjustedCollateralValuePrcVM>
+            <adjustedCollateralValuePrcIM>3,000,000.00</adjustedCollateralValuePrcIM>
+            <adjustedCollateralValueCptyVM>-3,000,000.00</adjustedCollateralValueCptyVM>
+            <adjustedCollateralValueCptyIM>-2,000,000.00</adjustedCollateralValueCptyIM>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="agr27951_2.imRecall.AdjustedCollateralValueForPrcVm.1m.im.3m.AdjustedCollateralValueForCpty.3m.im.2m">
+            <externalId ref="agr2.externalID"/>
+            <action>IM Recall</action>
+            <grossCalc>Gross(Gross)</grossCalc>
+            <adjustedCollateralValuePrcVM>1,000,000.00</adjustedCollateralValuePrcVM>
+            <adjustedCollateralValuePrcIM>3,000,000.00</adjustedCollateralValuePrcIM>
+            <adjustedCollateralValueCptyVM>-3,000,000.00</adjustedCollateralValueCptyVM>
+            <adjustedCollateralValueCptyIM>-2,000,000.00</adjustedCollateralValueCptyIM>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="agr27951_3.call.AdjustedCollateralValueForPrcAndCpty.0">
+            <externalId id="agr3.externalID">27951_3</externalId>
+            <action>Call(Deficit)</action>
+            <grossCalc></grossCalc>
+            <adjustedCollateralValuePrcVM>0.00</adjustedCollateralValuePrcVM>
+            <adjustedCollateralValuePrcIM>0.00</adjustedCollateralValuePrcIM>
+            <adjustedCollateralValueCptyVM>0.00</adjustedCollateralValueCptyVM>
+            <adjustedCollateralValueCptyIM>0.00</adjustedCollateralValueCptyIM>
+        </exposureEventDetail>
+
+
+        <exposureEventDetail id="agr27951_1.return.AdjustedCollateralValueForPrcAndCpty.0">
+            <externalId ref="agr1.externalID"/>
+            <action>Return</action>
+            <grossCalc>Net</grossCalc>
+            <adjustedCollateralValuePrcVM>0.00</adjustedCollateralValuePrcVM>
+            <adjustedCollateralValuePrcIM>0.00</adjustedCollateralValuePrcIM>
+            <adjustedCollateralValueCptyVM>0.00</adjustedCollateralValueCptyVM>
+            <adjustedCollateralValueCptyIM>0.00</adjustedCollateralValueCptyIM>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="agr27951_2.vmReturn.AdjustedCollateralValueForPrcVm.1m.im.3m.AdjustedCollateralValueForCpty.3m.im.2m">
+            <externalId ref="agr2.externalID"/>
+            <action>VM Return</action>
+            <grossCalc>Gross(Gross)</grossCalc>
+            <adjustedCollateralValuePrcVM>1,000,000.00</adjustedCollateralValuePrcVM>
+            <adjustedCollateralValuePrcIM>3,000,000.00</adjustedCollateralValuePrcIM>
+            <adjustedCollateralValueCptyVM>-3,000,000.00</adjustedCollateralValueCptyVM>
+            <adjustedCollateralValueCptyIM>-2,000,000.00</adjustedCollateralValueCptyIM>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="agr27951_2.imReturn.AdjustedCollateralValueForPrcVm.1m.im.3m.AdjustedCollateralValueForCpty.3m.im.2m">
+            <externalId ref="agr2.externalID"/>
+            <action>IM Return</action>
+            <grossCalc>Gross(Gross)</grossCalc>
+            <adjustedCollateralValuePrcVM>1,000,000.00</adjustedCollateralValuePrcVM>
+            <adjustedCollateralValuePrcIM>3,000,000.00</adjustedCollateralValuePrcIM>
+            <adjustedCollateralValueCptyVM>-3,000,000.00</adjustedCollateralValueCptyVM>
+            <adjustedCollateralValueCptyIM>-2,000,000.00</adjustedCollateralValueCptyIM>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="agr27951_3.subReq.grossCalc.null">
+            <externalId ref="agr3.externalID"/>
+            <action>Substitution Request</action>
+            <grossCalc></grossCalc>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="agr27951_2.subReq.grossCalc.gross">
+            <externalId id="agr2.externalID"/>
+            <action>Substitution Request</action>
+            <grossCalc>Gross(Gross)</grossCalc>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="agr27951_1.subCon.grossCalc.net">
+            <externalId ref="agr1.externalID"/>
+            <action>Substitution Confirmation</action>
+            <grossCalc>Net</grossCalc>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="agr27951_3.subReq.grossCalc.null.AdjustedCollateralValueForPrcAndCpty.0">
+            <externalId ref="agr3.externalID"/>
+            <action>Substitution Request</action>
+            <grossCalc></grossCalc>
+            <adjustedCollateralValuePrcVM>0.00</adjustedCollateralValuePrcVM>
+            <adjustedCollateralValuePrcIM>0.00</adjustedCollateralValuePrcIM>
+            <adjustedCollateralValueCptyVM>0.00</adjustedCollateralValueCptyVM>
+            <adjustedCollateralValueCptyIM>0.00</adjustedCollateralValueCptyIM>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="agr27951_2.subReq.grossCalc.gross.AdjustedCollateralValueForPrcAndCpty.0">
+            <externalId id="agr2.externalID"/>
+            <action>Substitution Request</action>
+            <grossCalc>Gross(Gross)</grossCalc>
+            <adjustedCollateralValuePrcVM>0.00</adjustedCollateralValuePrcVM>
+            <adjustedCollateralValuePrcIM>0.00</adjustedCollateralValuePrcIM>
+            <adjustedCollateralValueCptyVM>0.00</adjustedCollateralValueCptyVM>
+            <adjustedCollateralValueCptyIM>0.00</adjustedCollateralValueCptyIM>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="agr27951_1.subCon.grossCalc.net.AdjustedCollateralValueForPrcAndCpty.0">
+            <externalId ref="agr1.externalID"/>
+            <action>Substitution Confirmation</action>
+            <grossCalc>Net</grossCalc>
+            <adjustedCollateralValuePrcVM>0.00</adjustedCollateralValuePrcVM>
+            <adjustedCollateralValuePrcIM>0.00</adjustedCollateralValuePrcIM>
+            <adjustedCollateralValueCptyVM>0.00</adjustedCollateralValueCptyVM>
+            <adjustedCollateralValueCptyIM>0.00</adjustedCollateralValueCptyIM>
+        </exposureEventDetail>
+
+    </scenarioData>
+</dataBean>

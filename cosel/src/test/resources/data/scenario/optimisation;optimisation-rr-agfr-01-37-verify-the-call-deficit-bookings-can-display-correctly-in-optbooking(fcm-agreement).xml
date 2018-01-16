@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/optimisation.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <agreement>
+            <agreementDescription id="agreement.description">T27536_Agreement_Description</agreementDescription>
+            <agreementId id="agreement.id">2598</agreementId>
+        </agreement>
+
+        <optimisationRule id="opt.agreement.filter.rule">
+            <ruleName id="opt.agreement.filter.rule.name">t27536_agreement_filter</ruleName>
+            <optimisationFilterRuleAttribute>
+                <attributeName>Agreement Description</attributeName>
+                <attributeDetail>
+                    <inputValue ref="agreement.description"/>
+                </attributeDetail>
+                <groupAndOr>End</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </optimisationRule>
+
+        <optimisationRule id="opt.asset.filter.rule">
+            <ruleName id="opt.asset.filter.rule.name">t27536_asset_filter</ruleName>
+            <optimisationFilterRuleAttribute>
+                <attributeName>Asset Type</attributeName>
+                <attributeDetail>
+                    <filterRuleAttributeValue>
+                        <selectOption ref="cash.usd.name"/>
+                    </filterRuleAttributeValue>
+                </attributeDetail>
+                <groupAndOr>End</groupAndOr>
+            </optimisationFilterRuleAttribute>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </optimisationRule>
+
+        <optimisationRule id="optimisation.rule">
+            <ruleName id="optimisation.rule.name">t27536_opt_rule</ruleName>
+            <dataParameters>
+                <agreementFilterRule>
+                    <filter ref="opt.agreement.filter.rule.name"/>
+                    <linkText ref="opt.agreement.filter.rule.name"/>
+                </agreementFilterRule>
+                <assetFilterRule>
+                    <filter ref="opt.asset.filter.rule.name"/>
+                    <linkText ref="opt.asset.filter.rule.name"/>
+                </assetFilterRule>
+            </dataParameters>
+            <runParameters>
+                <algorithm>Rank Allocation</algorithm>
+            </runParameters>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </optimisationRule>
+
+        <optimisationRuleDetail id="run.optimisation.rule">
+            <ruleName ref="optimisation.rule.name"/>
+            <alertHandling>
+                <accept>true</accept>
+            </alertHandling>
+        </optimisationRuleDetail>
+
+        <databaseQuery id="check.opt.agreement.pool">
+            <sqlQuery>
+                <content>SELECT AGREEMENTID,ACTIONNAME,APPLICABILITY,REQUIREMENT,CURRENCY,FXSET,RANK FROM OptAgreementPool WHERE INVOCATIONRUNID = (SELECT max(INVOCATIONRUNID) FROM OPTAGREEMENTPOOL)</content>
+            </sqlQuery>
+            <resultId id="check.opt.agreement.pool.result.id"/>
+        </databaseQuery>
+
+        <databaseQueryResult id="opt.agreement.pool.result">
+            <resultId ref="check.opt.agreement.pool.result.id"/>
+            <databaseQueryResultRow>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>AGREEMENTID</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="agreement.id"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ACTIONNAME</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>Recall</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>APPLICABILITY</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>V</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>REQUIREMENT</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>500000</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>CURRENCY</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>USD</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>FXSET</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>Standard FX Rates</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>RANK</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>1</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+            </databaseQueryResultRow>
+        </databaseQueryResult>
+
+        <databaseQuery id="check.opt.booking.pool">
+            <sqlQuery>
+                <content>SELECT AGREEMENTID,ASSETID,BOOKED,APPLICABILITY FROM OPTBOOKING WHERE INVOCATIONRUNID = (SELECT max(INVOCATIONRUNID) FROM OPTAGREEMENTPOOL)</content>
+            </sqlQuery>
+            <resultId id="check.opt.booking.pool.result.id"/>
+        </databaseQuery>
+
+        <databaseQueryResult id="opt.booking.pool.result">
+            <resultId ref="check.opt.booking.pool.result.id"/>
+            <databaseQueryResultRow>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>AGREEMENTID</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue ref="agreement.id"/>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>ASSETID</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>2</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>BOOKED</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>-500000</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+                <databaseQueryResultCell>
+                    <databaseQueryResultColumnName>APPLICABILITY</databaseQueryResultColumnName>
+                    <databaseQueryResultColumnValue>V</databaseQueryResultColumnValue>
+                </databaseQueryResultCell>
+            </databaseQueryResultRow>
+        </databaseQueryResult>
+    </scenarioData>
+</dataBean>

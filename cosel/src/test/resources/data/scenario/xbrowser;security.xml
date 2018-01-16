@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/xbrowser.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <securitySearch id="securitysearch1">
+            <instrument>
+                <!--<filter>mengli_</filter>-->
+                <!--<linkText>mengli_</linkText>-->
+                <filter ref="bond_ins1_name"/>
+                <linkText ref="bond_ins1_name"/>
+            </instrument>
+        </securitySearch>
+        <securitySearch id="securitysearch2">
+            <instrument>
+                <!--<filter>mengli_</filter>-->
+                <!--<linkText>mengli_</linkText>-->
+                <filter ref="equity_ins1_name"/>
+                <linkText ref="equity_ins1_name"/>
+            </instrument>
+        </securitySearch>
+        <securitySearch id="securitysearch3">
+            <!--<assetType ref="cash.usd.name"/>-->
+            <instrument>
+                <type>Exactly matching</type>
+                <filter ref="cash.usd.name" />
+            </instrument>
+        </securitySearch>
+        <instrument id="bond_ins1">
+            <assetClass ref="bond.name"/>
+            <assetType ref="bond.usd.name"/>
+            <instrumentId>
+                <primary>true</primary>
+                <type>CUSIP</type>
+                <value id="bond_ins1_name" random="true"  prefix="mengli_"/>
+            </instrumentId>
+            <market>m1</market>
+            <description ref="bond_ins1_name"/>
+            <issuer>
+                <filter ref="org.issuer1.sname"/>
+                <linkText ref="org.issuer1.sname"/>
+            </issuer>
+            <maturityDate>T+90</maturityDate>
+            <priceSource>
+                <priceSourceName ref="ps.default.name"/>
+                <dirtyPrice>100</dirtyPrice>
+                <lastPriceChange>T</lastPriceChange>
+                <priceDate>T</priceDate>
+            </priceSource>
+            <couponRate>100</couponRate>
+            <manuallyOverrideNextCouponDate>true</manuallyOverrideNextCouponDate>
+            <nextCouponDate>t-10</nextCouponDate>
+            <manuallyOverrideLastCouponDate>true</manuallyOverrideLastCouponDate>
+            <lastCouponDate>t-10</lastCouponDate>
+            <recordDate>t-10</recordDate>
+            <issueDate>T</issueDate>
+            <!--<finra4210MinHaircut>30</finra4210MinHaircut>-->
+            <!--<securityStatus>Approved</securityStatus>-->
+        </instrument>
+        <instrument id="equity_ins1">
+            <assetClass ref="equity.name"/>
+            <assetType ref="equity.usd.name"/>
+            <instrumentId>
+                <primary>true</primary>
+                <type>CUSIP</type>
+                <value id="equity_ins1_name" random="true" prefix="mengli_"/>
+            </instrumentId>
+            <market>m1</market>
+            <description ref="equity_ins1_name"/>
+            <issuer>
+                <filter ref="org.issuer1.sname" />
+                <linkText ref="org.issuer1.sname" />
+            </issuer>
+            <maturityDate>T+90</maturityDate>
+            <priceSource>
+                <priceSourceName ref="ps.default.name"/>
+                <dirtyPrice>1</dirtyPrice>
+                <lastPriceChange>T</lastPriceChange>
+                <priceDate>T</priceDate>
+            </priceSource>
+            <issueDate>T</issueDate>
+            <!--<securityStatus>Approved</securityStatus>-->
+        </instrument>
+        <instrument id="bond_ins2">
+            <!--<issuer>-->
+                <!--<filter ref="org.issuer1.sname"/>-->
+                <!--<linkText ref="org.issuer1.sname"/>-->
+            <!--</issuer>-->
+            <maturityDate>T+80</maturityDate>
+            <priceSource>
+                <priceSourceName ref="ps.default.name"/>
+                <dirtyPrice>200</dirtyPrice>
+            </priceSource>
+
+            <!--<securityStatus>Approved</securityStatus>-->
+        </instrument>
+        <instrument id="equity_ins2">
+            <!--<issuer>-->
+                <!--<filter ref="org.issuer1.sname"/>-->
+                <!--<linkText ref="org.issuer1.sname"/>-->
+            <!--</issuer>-->
+            <priceSource>
+                <priceSourceName ref="ps.default.name"/>
+                <dirtyPrice>2</dirtyPrice>
+            </priceSource>
+
+            <!--<securityStatus>Approved</securityStatus>-->
+        </instrument>
+        <instrument id="cash_ins1">
+            <additionalInfo1>111</additionalInfo1>
+        </instrument>
+        <securitySearchResult id="securitySearchResult1">
+            <instrument ref="bond_ins1_name" />
+        </securitySearchResult>
+        <securitySearchResult id="securitySearchResult2">
+            <instrument ref="equity_ins1_name" />
+        </securitySearchResult>
+        <securitySearchResult id="securitySearchResult3">
+            <assetType ref="cash.usd.name"/>
+            <instrument ref="cash.usd.name"/>
+        </securitySearchResult>
+    </scenarioData>
+</dataBean>

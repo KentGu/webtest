@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+
+        <agreement id="agr29033.etf">
+            <agreementId id="agrid">2654</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="model">
+            <column>Model</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="notificationStatus">
+            <column>Statement Notification Status</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="autoSend">
+            <action>Auto Send</action>
+        </exposureEventDetail>
+        
+        <agreement id="agr29033">
+            <agreementStatus>Approved</agreementStatus>
+            <statementStatus>Approved</statementStatus>
+        </agreement>
+
+        <exposureEventDetail id="o1.top.call">
+            <action>Call(Deficit)</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="o2.top.delivery">
+            <action>Delivery(Excess)</action>
+            <agreementRequirement>-2,000,000.00</agreementRequirement>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="o1.top.call.agreementRequirement.1m.pendingReview">
+            <action>Call(Deficit)</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model>o1</model>
+            <statementNotificationStatus>Not Sent</statementNotificationStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="o1.vmCall.agreementRequirement.1m.pendingReview">
+            <action>VM Call(Deficit)</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model>o1</model>
+            <statementNotificationStatus>Not Sent</statementNotificationStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="o1.cashCall.agreementRequirement.1m.pendingReview">
+            <action>Cash Call(Deficit)</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model>o1</model>
+            <statementNotificationStatus>Not Sent</statementNotificationStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="o1.feeDelivery.agreementRequirement.1m.pendingReview">
+            <action>Fee Delivery(Excess)</action>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model>o1</model>
+            <statementNotificationStatus>Not Sent</statementNotificationStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="o2.top.delivery.agreementRequirement.2m.pendingReview">
+            <action>Delivery(Excess)</action>
+            <agreementRequirement>-2,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model>o2</model>
+            <statementNotificationStatus>Not Sent</statementNotificationStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="o2.vmDelivery.agreementRequirement.2m.pendingReview">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-2,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model>o2</model>
+            <statementNotificationStatus>Not Sent</statementNotificationStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="o2.feeCall.agreementRequirement.2m.pendingReview">
+            <action>Fee Call(Deficit)</action>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model>o2</model>
+            <statementNotificationStatus>Not Sent</statementNotificationStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="o2.cashDelivery.agreementRequirement.2m.pendingReview">
+            <action>Cash Delivery(Excess)</action>
+            <agreementRequirement>-2,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model>o2</model>
+            <statementNotificationStatus>Not Sent</statementNotificationStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="o1.top.call.agreementRequirement.1m.MarginRequestIssued.sent">
+            <action>Call(Deficit)</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Margin Request Issued</callStatus>
+            <model>o1</model>
+            <statementNotificationStatus>Sent</statementNotificationStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="o1.vmCall.agreementRequirement.1m.MarginRequestIssued.sent">
+            <action>VM Call(Deficit)</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Margin Request Issued</callStatus>
+            <model>o1</model>
+            <statementNotificationStatus>Sent</statementNotificationStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="o1.cashCall.agreementRequirement.1m.MarginRequestIssued.sent">
+            <action>Cash Call(Deficit)</action>
+            <agreementRequirement>1,000,000.00</agreementRequirement>
+            <callStatus>Margin Request Issued</callStatus>
+            <model>o1</model>
+            <statementNotificationStatus>Sent</statementNotificationStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="o1.feeDelivery.agreementRequirement.1m.pendingReview.sent">
+            <action>Fee Delivery(Excess)</action>
+            <agreementRequirement>-1,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model>o1</model>
+            <statementNotificationStatus>Sent</statementNotificationStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="o2.top.delivery.agreementRequirement.2m.pendingReview.sent">
+            <action>Delivery(Excess)</action>
+            <agreementRequirement>-2,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model>o2</model>
+            <statementNotificationStatus>Sent</statementNotificationStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="o2.vmDelivery.agreementRequirement.2m.pendingReview.sent">
+            <action>VM Delivery(Excess)</action>
+            <agreementRequirement>-2,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model>o2</model>
+            <statementNotificationStatus>Sent</statementNotificationStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="o2.cashDelivery.agreementRequirement.2m.pendingReview.sent">
+            <action>Cash Delivery(Excess)</action>
+            <agreementRequirement>-2,000,000.00</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <model>o2</model>
+            <statementNotificationStatus>Sent</statementNotificationStatus>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="o2.feeCall.agreementRequirement.2m.MarginRequestIssued.sent">
+            <action>Fee Call(Deficit)</action>
+            <agreementRequirement>2,000,000.00</agreementRequirement>
+            <callStatus>Margin Request Issued</callStatus>
+            <model>o2</model>
+            <statementNotificationStatus>Sent</statementNotificationStatus>
+        </exposureEventDetail>
+
+    </scenarioData>
+</dataBean>

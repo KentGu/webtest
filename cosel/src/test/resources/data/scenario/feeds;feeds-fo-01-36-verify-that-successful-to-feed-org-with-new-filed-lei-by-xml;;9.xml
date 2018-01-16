@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/feeds.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <feedOrganisation id="feed.organisation.normal.empty.lei">
+            <orgHeader>
+                <orgCode id="feed.organisation.normal.empty.lei.code">T26091Organisation2Code1</orgCode>
+                <longName id="feed.organisation.normal.empty.lei.lname">T26091Organisation2LongName1</longName>
+                <shortName id="feed.organisation.normal.empty.lei.sname">T26091Organisation2ShortName1</shortName>
+                <LEI id="feed.organisation.normal.empty.lei.lei"></LEI>
+            </orgHeader>
+            <orgRole id="feed.organisation.normal.empty.lei.role">Branch</orgRole>
+            <region id="feed.organisation.normal.empty.lei.region">ALL</region>
+        </feedOrganisation>
+
+        <feedResult id="feed.organisation.normal.empty.lei.result">
+            <fileUploaded id="feed.organisation.normal.empty.lei.result.file"/>
+            <unsuccessfulImports>0</unsuccessfulImports>
+            <unchangedOrIgnoredImports>0</unchangedOrIgnoredImports>
+        </feedResult>
+
+        <feedStatus id="feed.organisation.normal.empty.lei.status">
+            <status>Successful</status>
+            <valuationFile ref="feed.organisation.normal.empty.lei.result.file"/>
+            <description>Organisation</description>
+            <successfulFeed>
+                <total>1</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <organisationSearch id="feed.organisation.normal.empty.lei.search">
+            <criteria>Exactly matching</criteria>
+            <type>Short Name</type>
+            <filter ref="feed.organisation.normal.empty.lei.sname"/>
+            <linkText ref="feed.organisation.normal.empty.lei.sname"/>
+        </organisationSearch>
+
+        <organisation id="check.feed.organisation.normal.empty.lei">
+            <shortName ref="feed.organisation.normal.empty.lei.sname"/>
+            <longName ref="feed.organisation.normal.empty.lei.lname"/>
+            <code ref="feed.organisation.normal.empty.lei.code"/>
+            <lei ref="feed.organisation.normal.empty.lei.lei"/>
+            <role ref="feed.organisation.normal.empty.lei.role"/>
+            <region ref="feed.organisation.normal.empty.lei.region"/>
+        </organisation>
+    </scenarioData>
+</dataBean>

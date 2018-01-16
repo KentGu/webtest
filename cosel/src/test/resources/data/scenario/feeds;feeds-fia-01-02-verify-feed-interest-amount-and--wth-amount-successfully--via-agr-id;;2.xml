@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/feeds.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <agreement>
+            <agreementId id="agreement.id">579</agreementId>
+            <agreementDescription id="agreement.description">T30638Agreement1</agreementDescription>
+            <businessLine id="agreement.business.line">OTC</businessLine>
+            <externalId id="agreement.external.id">T30638Agreement1ExternalID</externalId>
+        </agreement>
+
+        <feedInterestAmount id="feed.interest.amount">
+            <agreementId ref="agreement.id"/>
+            <legalId ref="agreement.external.id"/>
+            <eventId ref="feed.interest.amount.event.event.id"/>
+            <assetType ref="feed.interest.amount.event.cash.asset.type"/>
+            <interestSource>Net</interestSource>
+            <direction>Receive</direction>
+            <startDate>2016-11-22</startDate>
+            <endDate>2016-12-22</endDate>
+            <agreedAmount id="feed.interest.amount.agreed.interest.amount">13000.2</agreedAmount>
+            <agreedWhtAmount id="feed.interest.amount.agreed.wht.amount">-333</agreedWhtAmount>
+        </feedInterestAmount>
+
+        <feedResult id="feed.interest.amount.result">
+            <fileUploaded id="feed.interest.amount.file"/>
+            <successfullyImported>1</successfullyImported>
+        </feedResult>
+
+        <feedStatus id="feed.interest.amount.status">
+            <status>Successful</status>
+            <valuationFile ref="feed.interest.amount.file"/>
+            <description>Interest Amount</description>
+            <successfulFeed>
+                <total>1</total>
+            </successfulFeed>
+        </feedStatus>
+
+        <interestEventSearch id="feed.interest.amount.search.event">
+            <description>
+                <filter ref="agreement.description"/>
+            </description>
+            <dateRange>
+                <startDate id="feed.interest.amount.search.event.start.date">11/22/2016</startDate>
+                <endDate id="feed.interest.amount.search.event.end.date">12/22/2016</endDate>
+            </dateRange>
+        </interestEventSearch>
+
+        <interestEventDetail id="feed.interest.amount.event" name="check.interest.event">
+            <eventId id="feed.interest.amount.event.event.id">5003</eventId>
+            <description ref="agreement.description"/>
+            <cashAssetType id="feed.interest.amount.event.cash.asset.type" ref="cash.usd.name"/>
+            <startDate ref="feed.interest.amount.search.event.start.date"/>
+            <endDate ref="feed.interest.amount.search.event.end.date"/>
+            <interestSource id="feed.interest.amount.event.interest.source">Net Interest</interestSource>
+        </interestEventDetail>
+
+        <interestEventDetail id="check.feed.interest.amount.event" name="check.interest.event">
+            <eventId ref="feed.interest.amount.event.event.id"/>
+            <agreedInterestAmount ref="feed.interest.amount.agreed.interest.amount"/>
+            <agreedWHTAmount ref="feed.interest.amount.agreed.wht.amount"/>
+        </interestEventDetail>
+    </scenarioData>
+</dataBean>

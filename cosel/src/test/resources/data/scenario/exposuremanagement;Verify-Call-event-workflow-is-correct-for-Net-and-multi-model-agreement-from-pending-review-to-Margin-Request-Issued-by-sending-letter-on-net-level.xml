@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/exposureManagement.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <agreement id="agr20371.multiModel">
+            <agreementId id="agrid">2572</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="model">
+            <column>Model</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="notificationStatus">
+            <column>Statement Notification Status</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="call.net">
+            <action>Call</action>
+            <agreementRequirement>724,015.31</agreementRequirement>
+            <model></model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="call.net.agreementRequirement.724015.31">
+            <action>Call</action>
+            <agreementRequirement>724,015.31</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <sysCalculatedAmount>724,015.31</sysCalculatedAmount>
+            <statementNotificationStatus>Not Sent</statementNotificationStatus>
+            <model></model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="call.m1.agreementRequirement.3034.77">
+            <action>Call</action>
+            <agreementRequirement>3,034.77</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <sysCalculatedAmount>3,034.77</sysCalculatedAmount>
+            <statementNotificationStatus>Not Sent</statementNotificationStatus>
+            <model>m1</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="call.m2.agreementRequirement.406416.73">
+            <action>Call</action>
+            <agreementRequirement>406,416.73</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <sysCalculatedAmount>406,416.73</sysCalculatedAmount>
+            <statementNotificationStatus>Not Sent</statementNotificationStatus>
+            <model>m2</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="call.net.agreementRequirement.724015.31.event">
+            <action>Call</action>
+            <agreementRequirement>724,015.31</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <statementNotificationStatus>Not Sent</statementNotificationStatus>
+            <sysCalculatedAmount>724,015.31</sysCalculatedAmount>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="call.m1.agreementRequirement.3034.77.event">
+            <action>Call</action>
+            <agreementRequirement>3,034.77</agreementRequirement>
+            <callStatus>Pending Review</callStatus>
+            <statementNotificationStatus>Not Sent</statementNotificationStatus>
+            <sysCalculatedAmount>3,034.77</sysCalculatedAmount>
+            <model>m1</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="createLetter">
+            <action>Create Letter</action>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="AutoEmail">
+            <action>Auto Send</action>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="AutoEmailAll">
+            <action>Auto Send ALL</action>
+        </exposureEventDetail>
+
+        <marginLetter id="letterProcessing.statementNotification.fullDispute.display">
+            <portfolioDetails>
+                <letterProcessing>
+                    <letterProcessingType>Full Dispute</letterProcessingType>
+                    <letterProcessingType>Statement Notification</letterProcessingType>
+                </letterProcessing>
+            </portfolioDetails>
+            <letterType>Statement Notification</letterType>
+            <letterSetupDetails>
+            </letterSetupDetails>
+        </marginLetter>
+
+        <marginLetter id="createStatementNotificationLetter">
+            <letterType>Statement Notification</letterType>
+            <letterSetupDetails>
+                <emailAttachments>
+                <assetHoldingsandValuationReport>true</assetHoldingsandValuationReport>
+                </emailAttachments>
+            </letterSetupDetails>
+        </marginLetter>
+
+        <exposureEventDetail id="call.net.MarginRequestIssued.notificationStatusSent">
+            <action>Call</action>
+            <agreementRequirement>724,015.31</agreementRequirement>
+            <callStatus>Margin Request Issued</callStatus>
+            <sysCalculatedAmount>724,015.31</sysCalculatedAmount>
+            <statementNotificationStatus>Sent</statementNotificationStatus>
+            <model></model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="call.m1.MarginRequestIssued.notificationStatusSent">
+            <action>Call</action>
+            <agreementRequirement>3,034.77</agreementRequirement>
+            <callStatus>Margin Request Issued</callStatus>
+            <sysCalculatedAmount>3,034.77</sysCalculatedAmount>
+            <statementNotificationStatus>Sent</statementNotificationStatus>
+            <model>m1</model>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="call.m2.MarginRequestIssued.notificationStatusSent">
+            <action>Call</action>
+            <agreementRequirement>406,416.73</agreementRequirement>
+            <callStatus>Margin Request Issued</callStatus>
+            <sysCalculatedAmount>406,416.73</sysCalculatedAmount>
+            <statementNotificationStatus>Sent</statementNotificationStatus>
+            <model>m2</model>
+        </exposureEventDetail>
+
+        <exposureEventSearch id="agr20371.issued">
+            <agrId ref="agrid"/>
+        </exposureEventSearch>
+
+    </scenarioData>
+</dataBean>

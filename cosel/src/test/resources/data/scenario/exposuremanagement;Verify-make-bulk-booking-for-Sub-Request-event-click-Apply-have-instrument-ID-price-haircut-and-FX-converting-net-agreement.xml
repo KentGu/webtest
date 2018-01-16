@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+        <securitySearch id="26302.bond.usd.1">
+            <matured>All</matured>
+            <instrument>
+                <filter id="26302.bond.usd.id.1">26302_bond_usd_1</filter>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="26302.bond.usd.1.approve">
+            <instrument ref="26302.bond.usd.id.1"/>
+        </securitySearchResult>
+
+        <instrument id="26302.bond.usd.1.changeRecordDate.tPlus6.changeMaturityDate.tPlus6">
+            <recordDate>t+6</recordDate>
+            <maturityDate>t+6</maturityDate>
+        </instrument>
+
+        <agreement id="agr26302.otc.net">
+            <agreementId id="agrid">2679</agreementId>
+        </agreement>
+
+        <exposureEventDetail id="reasonForSub">
+            <column>Reason for Sub</column>
+        </exposureEventDetail>
+
+        <exposureEventDetail id="sub.request.reasonForSub.MaturityDue.element.bond.usd.1">
+            <reasonForSub>Maturity due</reasonForSub>
+            <element id="bond.usd.1">26302_bond_usd_1,m1</element>
+            <action>Substitution Request</action>
+        </exposureEventDetail>
+
+        <bookingDetail id="bulkBooking.bond.usd.1.recall.value.7.2m">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <instrumentId ref="bond.usd.1"/>
+                    <movement>Recall</movement>
+                    <value>7,200,000.00</value>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="bond.usd.1.recall.8m">
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <instrumentId ref="bond.usd.1"/>
+                    <movement>Recall</movement>
+                    <nominalAmount>8m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="bond.usd.2.delivery.1m">
+            <instrumentSearch>
+                <instrument>
+                    <filter id="bond.usd.2">26302_bond_usd_2,m2</filter>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail clickPlusButton="true">
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <movement>Delivery</movement>
+                    <nominalAmount>1m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="cash.usd.delivery.4m">
+            <instrumentSearch>
+                <instrument>
+                    <filter ref="cash.usd1.name"/>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail clickPlusButton="true">
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <bookingNumber>1.3</bookingNumber>
+                    <nominalAmount>4m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <bookingDetail id="cash.gbp.delivery.2m">
+            <instrumentSearch>
+                <instrument>
+                    <filter id="cash.gbp">CASH-GBP</filter>
+                </instrument>
+            </instrumentSearch>
+            <bookingInformation>
+                <bookingInformationDetail>
+                    <bookingMovement>Substitution Request</bookingMovement>
+                    <bookingNumber>1.4</bookingNumber>
+                    <nominalAmount>2m</nominalAmount>
+                </bookingInformationDetail>
+            </bookingInformation>
+        </bookingDetail>
+
+        <exposureManagementMessage id="overWriteWarning">
+            <messageDetail>
+                <index>1</index>
+                <message>The collateral booking cannot be completed. The net value of items booked for delivery is not equal to receipt. The difference is -800,000.00.</message>
+                <overrideWarning>true</overrideWarning>
+            </messageDetail>
+        </exposureManagementMessage>
+
+        <exposureEventDetail id="subReq.bookedAmountFirstLeg.6.4m.bookedAmountSecondLeg.-5.6m">
+            <action>Substitution Request</action>
+            <callStatus>Completed</callStatus>
+            <bookedAmountFirstLeg>6,400,000.00</bookedAmountFirstLeg>
+            <bookedAmountSecondLeg>-5,600,000.00</bookedAmountSecondLeg>
+        </exposureEventDetail>
+    </scenarioData>
+</dataBean>

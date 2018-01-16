@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <xi:include href="../feature/reports.xml" xpointer="element(/1/1)"/>
+    <scenarioData>
+
+        <taskSchedulerDetail id="task.scheduler.import.static.data">
+            <type>Task Manager</type>
+            <taskName>Import Static Data</taskName>
+            <additionalInfo id="task.scheduler.import.static.data.server.path">/home/ec2-user/TaskScheduler/ImportStaticData</additionalInfo>
+        </taskSchedulerDetail>
+
+        <feedStaticData id="task.feed.static.data">
+            <scheme_type></scheme_type>
+            <scheme></scheme>
+            <static_data_name></static_data_name>
+            <description></description>
+        </feedStaticData>
+
+        <feedStaticData id="task.feed.modified.incorrect.staging.report">
+            <rowNumber>2</rowNumber>
+            <failureReason ref="failure.reason1"/>
+            <scheme_type>Organisation</scheme_type>
+            <scheme></scheme>
+            <static_data_name></static_data_name>
+            <description></description>
+        </feedStaticData>
+
+        <feedStaticData id="task.feed.modified.correct.staging.report">
+            <rowNumber>2</rowNumber>
+            <failureReason ref="failure.reason2"/>
+            <scheme_type>Collateral</scheme_type>
+            <scheme>MasterDocumentation</scheme>
+            <static_data_name>F13658TestName3</static_data_name>
+            <description>F13658TestDesc3</description>
+        </feedStaticData>
+
+        <badStagingFeedReportFilter id="search.by.feed.static.data">
+            <feedTask>Feed Static Data</feedTask>
+        </badStagingFeedReportFilter>
+
+        <variable id="badStagingFeedReportPath"/>
+
+        <reportValidationRules id="reportRule1">
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Failure reason</fieldName>
+                    <value id="failure.reason1">[Column: 1] schemeType - Field is compulsory but no value was found | [Column: 2] scheme - Field is compulsory but no value was found | [Column: 3] name - Field is compulsory but no value was found | [Column: 4] description - Field is compulsory but no value was found</value>
+                </field>
+                <field><fieldName>scheme_type</fieldName><value></value></field>
+                <field><fieldName>scheme</fieldName><value></value></field>
+                <field><fieldName>name</fieldName><value></value></field>
+                <field><fieldName>description</fieldName><value></value></field>
+            </reportValidationRule>
+        </reportValidationRules>
+
+
+        <variable id="file.name"/>
+
+        <reportValidationRules id="reportRule2">
+            <reportValidationRule>
+                <operator>=</operator>
+                <count>1</count>
+                <field>
+                    <fieldName>Failure reason</fieldName>
+                    <value id="failure.reason2">[Column: 2] scheme - Field is compulsory but no value was found | [Column: 3] name - Field is compulsory but no value was found | [Column: 4] description - Field is compulsory but no value was found</value>
+                </field>
+                <field><fieldName>scheme_type</fieldName><value>Organisation</value></field>
+                <field><fieldName>scheme</fieldName><value></value></field>
+                <field><fieldName>name</fieldName><value></value></field>
+                <field><fieldName>description</fieldName><value></value></field>
+            </reportValidationRule>
+        </reportValidationRules>
+
+        <taskSchedulerMessage id="feed.xls.successful">
+            <message>Market Data: Import Static Data: Imported 1 Static Data from :(\S+).xls</message>
+        </taskSchedulerMessage>
+
+        <collateralStaticData id="static.data.F13658TestName3.add.to.MasterDocumentation">
+            <type>MasterDocumentation</type>
+            <dataName>F13658TestName3</dataName>
+            <description>F13658TestDesc3</description>
+            <status>enabled</status>
+        </collateralStaticData>
+
+    </scenarioData>
+</dataBean>

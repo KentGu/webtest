@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../../dataBean.xsl"?>
+<!--suppress ALL -->
+<dataBean xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:noNamespaceSchemaLocation="../../../../../../cobiz/src/main/resources/schemas/dataBean.xsd">
+    <xi:include href="../system/default.xml" xpointer="element(/1/1)"/>
+    <!--<xi:include href="../feature/f00001.xml" xpointer="element(/1/2)"/>-->
+    <scenarioData>
+        <instrument id="bondinstrument">
+            <assetClass>qtp_bond</assetClass>
+            <assetType>qtp_bond_usd</assetType>
+            <instrumentId>
+                <value id="bondinstrument.id" random="true" prefix="26852_"/>
+            </instrumentId>
+            <market>USA</market>
+            <description id="bondinstrument.des" random="true"/>
+            <issuer>
+                <filter>QTP_Eligible_Issuer4</filter>
+                <linkText>QTP_Eligible_Issuer4</linkText>
+            </issuer>
+            <maturityDate>T+100</maturityDate>
+            <currencyOfDenomination>USD</currencyOfDenomination>
+            <manuallyOverrideLastCouponDate>true</manuallyOverrideLastCouponDate>
+            <nextCouponDate>T+1</nextCouponDate>
+            <manuallyOverrideNextCouponDate>true</manuallyOverrideNextCouponDate>
+            <lastCouponDate>T</lastCouponDate>
+            <accrualBasis>Act/Act</accrualBasis>
+
+            <priceSource id="Default">
+                <priceSourceName>Default</priceSourceName>
+                <dirtyPrice>200</dirtyPrice>
+                <lastPriceChange>T</lastPriceChange>
+                <priceDate>T</priceDate>
+            </priceSource>
+
+            <priceSource id="PS1">
+                <priceSourceName>PS1</priceSourceName>
+                <dirtyPrice>100</dirtyPrice>
+                <lastPriceChange>T</lastPriceChange>
+                <priceDate>T</priceDate>
+            </priceSource>
+
+            <priceSource id="PS2">
+                <priceSourceName>PS2</priceSourceName>
+                <dirtyPrice>300</dirtyPrice>
+                <lastPriceChange>T</lastPriceChange>
+                <priceDate>T</priceDate>
+            </priceSource>
+
+            <priceSource id="PS3">
+                <priceSourceName>PS3</priceSourceName>
+                <dirtyPrice>400</dirtyPrice>
+                <lastPriceChange>T</lastPriceChange>
+                <priceDate>T</priceDate>
+            </priceSource>
+
+            <couponAccrual>2</couponAccrual>
+            <factor>1</factor>
+            <priceFactor>1</priceFactor>
+            <couponRate>0</couponRate>
+            <recordDate>T</recordDate>
+            <issueDate>T</issueDate>
+            <securityStatus>Save</securityStatus>
+
+        </instrument>
+
+        <securitySearch id="SecuritySearch">
+            <instrument>
+                <type>Starting with</type>
+                <filter ref="bondinstrument.id"/>
+            </instrument>
+        </securitySearch>
+
+        <securitySearchResult id="SearchWillBeApprovedBond">
+            <instrument ref="bondinstrument.id"/>
+        </securitySearchResult>
+
+        <securitySearchResult id="SearchSecurity">
+            <instrument ref="bondinstrument.id"/>
+        </securitySearchResult>
+
+        <instrument id="instrument.Check.CleanPrice">
+
+            <priceSource id="Default">
+                <priceSourceName>Default</priceSourceName>
+                <cleanPrice>198</cleanPrice>
+            </priceSource>
+
+            <priceSource id="PS1">
+                <priceSourceName>PS1</priceSourceName>
+                <cleanPrice>98</cleanPrice>
+            </priceSource>
+
+            <priceSource id="PS2">
+                <priceSourceName>PS2</priceSourceName>
+                <cleanPrice>298</cleanPrice>
+            </priceSource>
+
+            <priceSource id="PS3">
+                <priceSourceName>PS3</priceSourceName>
+                <cleanPrice>398</cleanPrice>
+            </priceSource>
+        </instrument>
+
+        <!--Step 2-->
+
+        <instrument id="instrument.edit">
+
+            <priceSource id="Default">
+                <priceSourceName>Default</priceSourceName>
+                <cleanPrice>203</cleanPrice>
+                <priceDate>T</priceDate>
+            </priceSource>
+
+            <priceSource id="PS1">
+                <priceSourceName>PS1</priceSourceName>
+                <cleanPrice>102</cleanPrice>
+                <priceDate>T</priceDate>
+            </priceSource>
+
+            <priceSource id="PS2">
+                <priceSourceName>PS2</priceSourceName>
+                <cleanPrice>304</cleanPrice>
+                <priceDate>T</priceDate>
+            </priceSource>
+
+            <priceSource id="PS3">
+                <priceSourceName>PS3</priceSourceName>
+                <cleanPrice>405</cleanPrice>
+                <priceDate>T</priceDate>
+            </priceSource>
+
+            <couponAccrual>2</couponAccrual>
+            <factor>1</factor>
+            <priceFactor>1</priceFactor>
+            <couponRate>0</couponRate>
+            <recordDate>T</recordDate>
+            <issueDate>T</issueDate>
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <instrument id="instrument.Check.VerifyCleanPrice">
+            <priceSource id="Default">
+                <priceSourceName>Default</priceSourceName>
+                <dirtyPrice>203.0000000</dirtyPrice>
+            </priceSource>
+
+            <priceSource id="PS1">
+                <priceSourceName>PS1</priceSourceName>
+                <dirtyPrice>102.0000000</dirtyPrice>
+            </priceSource>
+
+            <priceSource id="PS2">
+                <priceSourceName>PS2</priceSourceName>
+                <dirtyPrice>304.0000000</dirtyPrice>
+            </priceSource>
+
+            <priceSource id="PS3">
+                <priceSourceName>PS3</priceSourceName>
+                <dirtyPrice>405.0000000</dirtyPrice>
+            </priceSource>
+        </instrument>
+
+        <!--Step 3-->
+
+        <instrument id="instrument.edit.CAFactorPrice">
+            <couponAccrual>0</couponAccrual>
+            <priceFactor>0</priceFactor>
+            <factor>0</factor>
+
+            <priceSource id="Default">
+                <priceSourceName>Default</priceSourceName>
+                <dirtyPrice>203</dirtyPrice>
+                <lastPriceChange>T</lastPriceChange>
+                <priceDate>T</priceDate>
+            </priceSource>
+
+            <priceSource id="PS1">
+                <priceSourceName>PS1</priceSourceName>
+                <dirtyPrice>102.006</dirtyPrice>
+                <lastPriceChange>T</lastPriceChange>
+                <priceDate>T</priceDate>
+            </priceSource>
+
+            <priceSource id="PS2">
+                <priceSourceName>PS2</priceSourceName>
+                <dirtyPrice>304.26</dirtyPrice>
+                <lastPriceChange>T</lastPriceChange>
+                <priceDate>T</priceDate>
+            </priceSource>
+
+            <priceSource id="PS3">
+                <priceSourceName>PS3</priceSourceName>
+                <dirtyPrice>405</dirtyPrice>
+                <lastPriceChange>T</lastPriceChange>
+                <priceDate>T</priceDate>
+            </priceSource>
+
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <instrument id="instrument.Check.VerifyCleanPrice.CAFactorPrice">
+            <priceSource id="Default">
+                <priceSourceName>Default</priceSourceName>
+                <cleanPrice>203.0000000</cleanPrice>
+            </priceSource>
+
+            <priceSource id="PS1">
+                <priceSourceName>PS1</priceSourceName>
+                <cleanPrice>102.0060000</cleanPrice>
+            </priceSource>
+
+            <priceSource id="PS2">
+                <priceSourceName>PS2</priceSourceName>
+                <cleanPrice>304.2600000</cleanPrice>
+            </priceSource>
+
+            <priceSource id="PS3">
+                <priceSourceName>PS3</priceSourceName>
+                <dirtyPrice>405.0000000</dirtyPrice>
+            </priceSource>
+        </instrument>
+
+
+        <!--step 4-->
+
+        <instrument id="instrument.edit.EmptyDirtyPrice">
+
+            <priceSource id="Default">
+                <priceSourceName>Default</priceSourceName>
+                <dirtyPrice>0</dirtyPrice>
+                <lastPriceChange>T</lastPriceChange>
+                <priceDate>T</priceDate>
+            </priceSource>
+
+            <priceSource id="PS1">
+                <priceSourceName>PS1</priceSourceName>
+                <dirtyPrice>0</dirtyPrice>
+                <lastPriceChange>T</lastPriceChange>
+                <priceDate>T</priceDate>
+            </priceSource>
+
+            <priceSource id="PS2">
+                <priceSourceName>PS2</priceSourceName>
+                <dirtyPrice>0</dirtyPrice>
+                <lastPriceChange>T</lastPriceChange>
+                <priceDate>T</priceDate>
+            </priceSource>
+
+            <priceSource id="PS3">
+                <priceSourceName>PS3</priceSourceName>
+                <dirtyPrice>0</dirtyPrice>
+                <lastPriceChange>T</lastPriceChange>
+                <priceDate>T</priceDate>
+            </priceSource>
+
+            <couponAccrual>0</couponAccrual>
+            <priceFactor>100</priceFactor>
+            <factor>100</factor>
+
+            <securityStatus>Save</securityStatus>
+        </instrument>
+
+        <instrument id="instrument.Check.Verify.EmptyCleanPrice">
+
+            <priceSource id="Default">
+                <priceSourceName>Default</priceSourceName>
+                <cleanPrice>0</cleanPrice>
+            </priceSource>
+
+            <priceSource id="PS1">
+                <priceSourceName>PS1</priceSourceName>
+                <cleanPrice>0</cleanPrice>
+            </priceSource>
+
+            <priceSource id="PS2">
+                <priceSourceName>PS2</priceSourceName>
+                <cleanPrice>0</cleanPrice>
+            </priceSource>
+
+            <priceSource id="PS3">
+                <priceSourceName>PS3</priceSourceName>
+                <cleanPrice>0</cleanPrice>
+            </priceSource>
+        </instrument>
+
+
+    </scenarioData>
+
+</dataBean>
